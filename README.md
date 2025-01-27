@@ -15,8 +15,13 @@ Another translation using Babele.
 并得益于babele,无惧版本更新。
 
 
+### 已知问题
+在无2024phb的情况下，技能说明未汉化（系统限制暂时没辙）
 
 ### TODO
 workflow从汉化平台拉取最新内容并打包
 
 自动压缩并发布更新
+
+### 特别感谢
+Paratranz站 及 站主 [Bruce](https://github.com/bruceCzK)
