@@ -10,6 +10,10 @@ on:
 jobs:
   download-translation:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,6 +26,7 @@ jobs:
           curl -L -o "translation.zip" --header "Authorization: ${{ secrets.PARATRANZAPITOKEN }}" "https://paratranz.cn/api/projects/13245/artifacts/download"
           rm -rf dnd-simplified-chinese-babele-patch/translation/cn
           unzip -q -j translation.zip -d dnd-simplified-chinese-babele-patch/translation/cn
+          rm -f translation.zip
 
       - name: Update Archive
         run: zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
