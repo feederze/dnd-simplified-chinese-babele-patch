@@ -184,50 +184,50 @@
       },
       "items": {
         "Water Element": {
-          "name": "Water Element",
+          "name": "水元素",
           "description": "<p>@Embed[Compendium.dnd-players-handbook.spells.Item.phbsplConjureEle caption=false]</p>",
           "activities": {
             "Initial Save": {
-              "name": "Initial Save",
-              "condition": "a creature you can see enters the spirit’s space or starts its turn within 5 feet of the spirit"
+              "name": "初次豁免",
+              "condition": "一个你能看见的生物进入精魄的空间或在距离精魄 5 尺范围内开始其回合"
             },
             "Save while Restrained": {
-              "name": "Save while Restrained",
-              "condition": "a creature you can see enters the spirit’s space or starts its turn within 5 feet of the spirit"
+              "name": "束缚时豁免",
+              "condition": "一个你能看见的生物进入精魄的空间或在距离精魄 5 尺范围内开始其回合"
             }
           },
           "effects": {
             "Restrained": {
               "name": "束缚",
-              "description": "<p>At the start of each of its turns, the &amp;Reference[Restrained apply=false] target repeats the [[/save ability=dex]] save. On a failed save, the target takes 4d8 (plus 2d8 for each spell slot level above 5) damage of the spirit’s type. On a successful save, the target isn’t Restrained by the spirit.</p>"
+              "description": "在精魂5尺内开始其回合时，若没有生物被精魂束缚，施法者可以迫使其进行一次 [[/save ability=dex]] 豁免。失败则目标受到8d8的对应精魂类型的伤害并且直到法术结束为止，目标处于 &Reference[Restrained apply=false] 状态。在处于束缚状态的目标回合开始时，其重新豁免，失败则目标受到4d8的对应精魂类型的伤害，豁免成功则目标不再被精魂束缚。"
             }
           }
         }
       }
     },
     "Duplicate": {
-      "name": "Duplicate",
-      "tokenName": "Duplicate"
+      "name": "复制品",
+      "tokenName": "复制品"
     },
     "Invisible Sensor": {
-      "name": "Invisible Sensor",
-      "tokenName": "Invisible Sensor",
+      "name": "无形探测器",
+      "tokenName": "无形探测器",
       "effects": {
         "Invisible": {
-          "name": "Invisible",
+          "name": "隐形 Invisible",
           "description": "@Embed[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.3UU5GCTVeRDbZy9u inline]"
         },
         "Active Sense: Sight": {
-          "name": "Active Sense: Sight"
+          "name": "主动感官：视觉"
         },
         "Active Sense: Hearing": {
-          "name": "Active Sense: Hearing"
+          "name": "主动感官：听觉"
         }
       }
     },
     "Conjured Animals": {
-      "name": "Conjured Animals",
-      "tokenName": "Conjured Animals",
+      "name": "野兽精魄",
+      "tokenName": "野兽精魄",
       "description": "<p>@Embed[Compendium.dnd-players-handbook.spells.Item.phbsplConjureAni caption=false]</p>",
       "details": {
         "biography": {
@@ -236,19 +236,19 @@
       },
       "items": {
         "Pack Damage": {
-          "name": "Pack Damage",
-          "description": "<p>Whenever the pack moves within 10 feet of a creature you can see and whenever a creature you can see enters a space within 10 feet of the pack or ends its turn there, you can force that creature to make a Dexterity saving throw. On a failed save, the creature takes 3d10 Slashing damage. A creature makes this save only once per turn.</p>",
+          "name": "集群伤害",
+          "description": "<p>只要该集群移动到你所能看到的生物 10 尺范围内，或者只要你所能看到的生物进入集群 10 尺范围内的空间，或者在该空间结束其回合时，你就能迫使该生物进行一次敏捷豁免。豁免失败的话，该生物会受到 3d10 点挥砍伤害。每个回合，该生物只能进行一次此类豁免。</p>",
           "activities": {
             "save": {
-              "condition": "visible creature moves or ends its turn within 10 feet of the pack"
+              "condition": "所能看到的生物进入集群 10 尺范围内的空间"
             }
           }
         }
       }
     },
     "Beholderkin Spirit": {
-      "name": "Beholderkin Spirit",
-      "tokenName": "Aberrant Spirit",
+      "name": "眼魔灵魄",
+      "tokenName": "异怪灵魄",
       "description": "<p>@Embed[Compendium.dnd-players-handbook.spells.Item.phbsplSummonAber caption=false]</p>",
       "details": {
         "biography": {
@@ -258,27 +258,27 @@
       "items": {
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The spirit makes a number of attacks equal to half this spell’s level (round down).</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{Number of attacks}</p>",
+          "description": "<p>灵魄发动等于法术环阶一半次数的攻击（向下取整）。</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</p>",
           "activities": {
             "Activate": {
-              "name": "Activate"
+              "name": "激活"
             }
           }
         },
         "Eye Ray": {
-          "name": "Eye Ray",
-          "description": "<p> <em>Ranged Attack Roll:</em> Bonus equals your spell attack modifier, range 150 ft. <em>Hit:</em> 1d8 + 3 + the spell’s level Psychic damage.</p>",
+          "name": "<p>灵魄发动等于法术环阶一半次数的攻击（向下取整）。</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</p>",
+          "description": "<p><em>远程攻击检定：</em>加值等于你的法术攻击加值，射程150尺。<em>命中：</em>1d8+3+法术环阶的心灵伤害。</p>",
           "activities": {
             "Attack": {
-              "name": "Attack"
+              "name": "攻击"
             }
           }
         }
       }
     },
     "Mind Flayer Spirit": {
-      "name": "Mind Flayer Spirit",
-      "tokenName": "Aberrant Spirit",
+      "name": "夺心魔灵魄",
+      "tokenName": "异怪灵魄",
       "description": "<p>@Embed[Compendium.dnd-players-handbook.spells.Item.phbsplSummonAber caption=false]</p>",
       "details": {
         "biography": {
@@ -287,32 +287,32 @@
       },
       "items": {
         "Whispering Aura": {
-          "name": "Whispering Aura",
-          "description": "<p> At the start of each of the spirit’s turns, the spirit emits psionic energy if it doesn’t have the Incapacitated condition. <em>Wisdom Saving Throw:</em> DC equals your spell save DC, each creature (other than you) within 5 feet of the spirit. <em>Failure:</em> 2d6 Psychic damage.</p>",
+          "name": "低语灵光",
+          "description": "<p>只要灵魄并未失能，它就会在自己的每个回合开始时释放出灵能能量。<em>感知豁免：</em>DC等于你的法术豁免DC，灵魄5尺内的每个生物（除你之外）。<em>失败：</em>2d6心灵伤害</p>",
           "activities": {
             "save": {
-              "condition": "start of its turn"
+              "condition": "其回合开始时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The spirit makes a number of attacks equal to half this spell’s level (round down).</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{Number of attacks}</p>",
+          "name": "多重攻击",
+          "description": "<p>灵魄发动等于法术环阶一半次数的攻击（向下取整）。</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</p>",
           "activities": {
             "Activate": {
-              "name": "Activate"
+              "name": "激活"
             }
           }
         },
         "Psychic Slam": {
-          "name": "Psychic Slam",
-          "description": "<p><em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit: </em>1d8 + 3 + the spell’s level Psychic damage.</p>"
+          "name": "灵能猛击",
+          "description": "<p><em>近战攻击检定：</em>加值等于你的法术攻击加值，触及5尺。<em>命中：</em>1d8 + 3 + 法术环阶的心灵伤害。</p>"
         }
       }
     },
     "Slaad Spirit": {
-      "name": "Slaad Spirit",
-      "tokenName": "Aberrant Spirit",
+      "name": "史拉蟾族灵魄",
+      "tokenName": "异怪灵魄",
       "description": "<p>@Embed[Compendium.dnd-players-handbook.spells.Item.phbsplSummonAber caption=false]</p>",
       "details": {
         "biography": {
@@ -452,17 +452,17 @@
       },
       "items": {
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The spirit makes a number of attacks equal to half this spell’s level (round down).</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{Number of attacks}</p>",
+          "name": "多重攻击",
+          "description": "<p>灵魄发动等于法术环阶一半次数的攻击（向下取整）。</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</p>",
           "activities": {
             "Activate": {
-              "name": "Activate"
+              "name": "激活"
             }
           }
         },
         "Radiant Bow": {
-          "name": "Radiant Bow",
-          "description": "<p> <em>Ranged Attack Roll</em>: Bonus equals your spell attack modifier, range 600 ft. <em>Hit:</em> 2d6 + 2 + the spell’s level Radiant damage.</p>"
+          "name": "光耀之弓",
+          "description": "<p><em>远程攻击检定：</em>加值等于你的法术攻击加值，射程 600 尺。<em>命中：</em>2d6 + 2 + 法术环阶的光耀伤害。</p>"
         },
         "Healing Touch": {
           "name": "Healing Touch",
@@ -737,37 +737,37 @@
       "items": {
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>The spirit makes a number of [[/item Fey Blade]] attacks equal to half this spell’s level (round down).</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{Number of attacks}</p>",
+          "description": "<p>灵魄发动等于法术环阶一半次数的 [[/item 妖精之剑]] （向下取整）。</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</p>",
           "activities": {
             "Activate": {
-              "name": "Activate"
+              "name": "激活"
             }
           }
         },
         "Fey Blade": {
-          "name": "Fey Blade",
-          "description": "<p> <em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 2d6 + 3 + the spell’s level Force damage.</p>"
+          "name": "妖精之剑",
+          "description": "<p> <em>近战攻击检定：</em> 加值等于你的法术攻击调整值，触及 5 尺。<em>命中：</em> 2d6 + 3 + 法术环阶 力场伤害。</p>"
         },
         "Fey Step": {
-          "name": "Fey Step",
-          "description": "<p>The spirit magically teleports up to 30 feet to an unoccupied space it can see. Then the following effect occurs, based on the spirit’s chosen mood:</p><p><strong>Mirthful. </strong><em>Wisdom Saving Throw:</em> DC equals your spell save DC, one creature the spirit can see within 10 feet of itself. <em>Failure:</em> The target is &amp;Reference[charmed apply=false] by you and the spirit for 1 minute or until the target takes any damage.</p>",
+          "name": "妖精步伐",
+          "description": "<p>灵魄魔法地传送至多 30 尺至一处它可见的未被占据空间。随后根据所选情绪，灵魄触发以下效果之一：</p><p><strong>欢欣 Mirthful. </strong>感知豁免：DC等于你的法术豁免DC，单一灵魄 10 尺内它可见的生物。</p><div class=\"Section0\" style=\"LAYOUT-GRID:15.6pt none\"><p class=\"MsoNormal\">失败：目标受你和灵魄 &Reference[charmed apply=false] 1 分钟或直到目标受到任意伤害。</p></div>",
           "activities": {
             "Teleport and Charm": {
-              "name": "Teleport and Charm"
+              "name": "传送并魅惑"
             }
           },
           "effects": {
             "Charmed": {
-              "name": "Charmed",
-              "description": "<p>The target is &amp;Reference[charmed] by you and the spirit for 1 minute or until the target takes any damage.</p>"
+              "name": "被魅惑",
+              "description": "<p>：目标受你和灵魄 &Reference[charmed apply=false] 1 分钟或直到目标受到任意伤害。</p>"
             }
           }
         }
       }
     },
     "Tricksy Fey Spirit": {
-      "name": "Tricksy Fey Spirit",
-      "tokenName": "Fey Spirit",
+      "name": "诡诈妖精灵魄",
+      "tokenName": "妖精灵魄",
       "description": "<p>@Embed[Compendium.dnd-players-handbook.spells.Item.phbsplSummonFey0 caption=false]</p>",
       "details": {
         "biography": {
@@ -776,32 +776,32 @@
       },
       "items": {
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The spirit makes a number of [[/item Fey Blade]] attacks equal to half this spell’s level (round down).</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{Number of attacks}</p>",
+          "name": "多重攻击",
+          "description": "<p>灵魄发动等于法术环阶一半次数的 [[/item 妖精之剑]] （向下取整）。</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</p>",
           "activities": {
             "Activate": {
-              "name": "Activate"
+              "name": "激活"
             }
           }
         },
         "Fey Blade": {
-          "name": "Fey Blade",
-          "description": "<p> <em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 2d6 + 3 + the spell’s level Force damage.</p>"
+          "name": "妖精之剑",
+          "description": "<p> <em>近战攻击检定：</em> 加值等于你的法术攻击调整值，触及 5 尺。<em>命中：</em> 2d6 + 3 + 法术环阶 力场伤害。</p>"
         },
         "Fey Step": {
-          "name": "Fey Step",
-          "description": "<p>The spirit magically teleports up to 30 feet to an unoccupied space it can see. Then the following effect occurs, based on the spirit’s chosen mood:</p><p><strong>Tricksy.</strong> The spirit fills a 10-foot Cube within 5 feet of it with magical &amp;Reference[darkness], which lasts until the end of its next turn.</p>",
+          "name": "妖精步伐",
+          "description": "<p>灵魄魔法地传送至多 30 尺至一处它可见的未被占据空间。随后根据所选情绪，灵魄触发以下效果之一：</p><p><strong>诡诈 Tricksy.</strong> 灵魄令魔法 &Reference[darkness]充斥于它 5 尺内的一处 10 尺立方区域，持续直到灵魄的下一回合结束。</p>",
           "activities": {
             "Teleport and Shroud": {
-              "name": "Teleport and Shroud"
+              "name": "传送并遮蔽"
             }
           }
         }
       }
     },
     "Water Elemental Spirit": {
-      "name": "Water Elemental Spirit",
-      "tokenName": "Elemental Spirit",
+      "name": "水元素灵魄",
+      "tokenName": "元素灵魄",
       "description": "<p>@Embed[Compendium.dnd-players-handbook.spells.Item.phbsplSummonElem caption=false]</p>",
       "details": {
         "biography": {
@@ -810,27 +810,27 @@
       },
       "items": {
         "Amorphous Form": {
-          "name": "Amorphous Form",
-          "description": "<p> The spirit can move through a space as narrow as 1 inch wide without it counting as Difficult Terrain.</p>"
+          "name": "不定形态",
+          "description": "<p>灵魄能够轻松穿过最窄 1 寸宽的狭窄空间，如同其是困难地形一般。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The spirit makes a number of [[/item Slam]] attacks equal to half this spell’s level (round down).</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{Number of attacks}</p>",
+          "name": "多重攻击",
+          "description": "<p>灵魄发动等于法术环阶一半次数的 [[/item 猛击]] 攻击（向下取整）。</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</p>",
           "activities": {
             "Activate": {
-              "name": "Activate"
+              "name": "激活"
             }
           }
         },
         "Slam": {
-          "name": "Slam",
-          "description": "<p><em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d10 + 4 + the spell’s level Cold damage.</p>"
+          "name": "猛击",
+          "description": "<p><em>近战攻击检定：</em> 加值等于你的法术攻击加值，触及 5 尺。<em>命中：</em> 1d10 + 4 + 法术环阶的寒冷伤害。</p>"
         }
       }
     },
     "Demon Spirit": {
-      "name": "Demon Spirit",
-      "tokenName": "Fiendish Spirit",
+      "name": "恶魔灵魄",
+      "tokenName": "邪魔灵魄",
       "description": "<p>@Embed[Compendium.dnd-players-handbook.spells.Item.phbsplSummonFien caption=false]</p>",
       "details": {
         "biography": {
@@ -839,25 +839,25 @@
       },
       "items": {
         "Death Throes": {
-          "name": "Death Throes",
-          "description": "<p>When the spirit drops to 0 Hit Points or the spell ends, the spirit explodes. <em>Dexterity Saving Throw:</em> DC equals your spell save DC, each creature in a 10-foot Emanation originating from the spirit. <em>Failure:</em> 2d10 plus this spell’s level Fire damage. <em>Success:</em> Half damage.</p>",
+          "name": "焚身爆",
+          "description": "<p>当灵魄生命值降值 0 时，或是法术结束时，灵魄会爆炸。</p><p><em>敏捷豁免：</em>DC等于你的法术豁免DC，以灵魄为源点 10 尺光环区域内的每个生物。</p><p><em>失败：</em>2d10 + 法术环阶的火焰伤害。</p>",
           "activities": {
             "Explode": {
-              "name": "Explode",
-              "condition": "when the spirit drops to 0 Hit Points or the spell ends"
+              "name": "爆炸",
+              "condition": "当灵魄生命值降值 0 时，或是法术结束时"
             }
           }
         },
         "Magic Resistance": {
-          "name": "Magic Resistance",
-          "description": "<p> The spirit has Advantage on saving throws against spells and other magical effects.</p>"
+          "name": "魔法抗性",
+          "description": "<p>灵魄为抵抗法术和其他魔法效应而作的豁免检定具有优势。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The spirit makes a number of attacks equal to half this spell’s level (round down).</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{Number of attacks}</p>",
+          "name": "多重攻击",
+          "description": "<p>灵魄发动等于法术环阶一半次数的攻击（向下取整）。</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</p>",
           "activities": {
             "Activate": {
-              "name": "Activate"
+              "name": "激活"
             }
           }
         },
@@ -996,16 +996,16 @@
           "description": "<p>巨虫能够在困难表面上攀爬，包括倒吊在天花板上，而不需要进行属性检定。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The insect makes a number of attacks equal to half this spell’s level (round down).</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{Number of attacks}</p>",
+          "name": "多重攻击",
+          "description": "<p>灵魄发动等于法术环阶一半次数的攻击（向下取整）。</p><p>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</p>",
           "activities": {
             "Activate": {
-              "name": "Activate"
+              "name": "激活"
             }
           }
         },
         "Poison Jab": {
-          "name": "Poison Jab",
+          "name": "猛毒刺",
           "description": "<p> <em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 10 ft. <em>Hit:</em> 1d6 + 3 plus the spell’s level Piercing damage plus 1d4 Poison damage.</p>"
         },
         "Web Bolt": {
@@ -2445,11 +2445,11 @@
       "tokenName": "Skeleton",
       "items": {
         "Shortsword": {
-          "name": "Shortsword",
+          "name": "短剑",
           "description": "<p> <em>Melee Attack Roll:</em> +5, reach 5 ft. <em>Hit:</em> 6 (1d6 + 3) Piercing damage.</p>"
         },
         "Shortbow": {
-          "name": "Shortbow",
+          "name": "短弓",
           "description": "<p><em>Ranged Attack Roll: </em>+5, range 80/320 ft. <em>Hit:</em> 6 (1d6 + 3) Piercing damage.</p>"
         }
       }
@@ -2867,7 +2867,7 @@
           }
         },
         "Dagger": {
-          "name": "Dagger"
+          "name": "匕首"
         },
         "Navigator’s Tools": {
           "name": "Navigator’s Tools",
@@ -2901,10 +2901,10 @@
           "description": "<p>A set of clothes worn by travellers.</p>"
         },
         "Handaxe": {
-          "name": "Handaxe"
+          "name": "手斧"
         },
         "Greataxe": {
-          "name": "Greataxe"
+          "name": "巨斧"
         },
         "Explorer’s Pack": {
           "name": "Explorer’s Pack",
@@ -3034,7 +3034,7 @@
           "name": "Leather Armor"
         },
         "Dagger": {
-          "name": "Dagger"
+          "name": "匕首"
         },
         "Entertainer’s Pack": {
           "name": "Entertainer’s Pack",
@@ -3271,10 +3271,10 @@
           }
         },
         "Spear": {
-          "name": "Spear"
+          "name": "矛"
         },
         "Light Crossbow": {
-          "name": "Light Crossbow"
+          "name": "轻弩"
         },
         "Case, Crossbow Bolt": {
           "name": "Case, Crossbow Bolt",
@@ -3331,7 +3331,7 @@
           "description": "<p>You gain the Armor Class benefit of a Shield only if you have training with it.</p>"
         },
         "Mace": {
-          "name": "Mace"
+          "name": "硬头锤"
         },
         "Guidance": {
           "name": "Guidance",
@@ -3564,7 +3564,7 @@
           "description": "<p>You gain proficiency in any combination of three skills or tools of your choice. Choices: History, Insight, Survival</p><p><strong>Repeatable.</strong> You can take this feat more than once.</p><section class=\"secret\" id=\"secret-36vceWBnGWiMkySr\"><p><strong>Foundry Note</strong></p><p>This feature does not automatically grant the proficiencies. You can toggle the \"Edit\" mode in the <strong>\"</strong>Details\" tab of your sheet and click on the circles next to the Skills to choose your proficiencies.</p></section>"
         },
         "Sickle": {
-          "name": "Sickle"
+          "name": "镰刀"
         },
         "Carpenter’s Tools": {
           "name": "木匠工具",
@@ -3816,10 +3816,10 @@
           }
         },
         "Spear": {
-          "name": "Spear"
+          "name": "矛"
         },
         "Shortbow": {
-          "name": "Shortbow"
+          "name": "短弓"
         },
         "Arrows": {
           "name": "Arrows"
@@ -3857,13 +3857,13 @@
           "name": "Chain Mail"
         },
         "Greatsword": {
-          "name": "Greatsword"
+          "name": "巨剑"
         },
         "Flail": {
-          "name": "Flail"
+          "name": "链枷"
         },
         "Javelin": {
-          "name": "Javelin"
+          "name": "标枪"
         },
         "Dungeoneer’s Pack": {
           "name": "Dungeoneer’s Pack",
@@ -4036,7 +4036,7 @@
           }
         },
         "Shortbow": {
-          "name": "Shortbow"
+          "name": "短弓"
         },
         "Arrows": {
           "name": "Arrows"
@@ -4067,10 +4067,10 @@
           "description": "<p>A set of clothes worn by travellers.</p>"
         },
         "Spear": {
-          "name": "Spear"
+          "name": "矛"
         },
         "Dagger": {
-          "name": "Dagger"
+          "name": "匕首"
         },
         "Explorer’s Pack": {
           "name": "Explorer’s Pack",
@@ -4240,10 +4240,10 @@
           "description": "<p>You gain the Armor Class benefit of a Shield only if you have training with it.</p>"
         },
         "Longsword": {
-          "name": "Longsword"
+          "name": "长剑"
         },
         "Javelin": {
-          "name": "Javelin"
+          "name": "标枪"
         },
         "Priest’s Pack": {
           "name": "Priest’s Pack",
@@ -4364,7 +4364,7 @@
           }
         },
         "Dagger": {
-          "name": "Dagger"
+          "name": "匕首"
         },
         "Thieves’ Tools": {
           "name": "Thieves’ Tools",
@@ -4423,13 +4423,13 @@
           "name": "Studded Leather Armor"
         },
         "Scimitar": {
-          "name": "Scimitar"
+          "name": "弯刀"
         },
         "Shortsword": {
-          "name": "Shortsword"
+          "name": "短剑"
         },
         "Longbow": {
-          "name": "Longbow"
+          "name": "长弓"
         },
         "Arrows": {
           "name": "Arrows"
@@ -4608,7 +4608,7 @@
           "description": "<p>You can take the &amp;Reference[Hide] action even when you are obscured only by a creature that is at least one size larger than you.</p>"
         },
         "Dagger": {
-          "name": "Dagger"
+          "name": "匕首"
         },
         "Thieves’ Tools": {
           "name": "Thieves’ Tools",
@@ -4635,10 +4635,10 @@
           "name": "Leather Armor"
         },
         "Shortsword": {
-          "name": "Shortsword"
+          "name": "短剑"
         },
         "Shortbow": {
-          "name": "Shortbow"
+          "name": "短弓"
         },
         "Arrows": {
           "name": "Arrows"
@@ -4819,10 +4819,10 @@
           "description": "<p>Fine Clothes are made of expensive fabrics and adorned with expertly crafted details. Some events and locations admit only people wearing these clothes.</p>"
         },
         "Spear": {
-          "name": "Spear"
+          "name": "矛"
         },
         "Dagger": {
-          "name": "Dagger"
+          "name": "匕首"
         },
         "Dungeoneer’s Pack": {
           "name": "Dungeoneer’s Pack",
@@ -5061,10 +5061,10 @@
           "name": "Leather Armor"
         },
         "Sickle": {
-          "name": "Sickle"
+          "name": "镰刀"
         },
         "Dagger": {
-          "name": "Dagger"
+          "name": "匕首"
         },
         "Orb": {
           "name": "Orb"
@@ -5422,7 +5422,7 @@
           }
         },
         "Dagger": {
-          "name": "Dagger"
+          "name": "匕首"
         },
         "Robe": {
           "name": "Robe",
