@@ -1,0 +1,36 @@
+﻿on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  download-translation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: download translation from ParaTranz
+        # Note paratranz release archives once an hour
+        run: |
+          curl -L -o "translation.zip" --header "Authorization: ${{ secrets.PARATRANZAPITOKEN }}" "https://paratranz.cn/api/projects/13245/artifacts/download"
+          rm -rf dnd-simplified-chinese-babele-patch/translation/cn
+          unzip -q -j translation.zip -d dnd-simplified-chinese-babele-patch/translation/cn
+
+      - name: Update Archive
+        run: zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git status
+          git add .
+          git commit -m "Auto updating Archive"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
