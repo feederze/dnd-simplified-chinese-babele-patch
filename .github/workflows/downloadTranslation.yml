@@ -26,15 +26,14 @@ jobs:
       - name: Update Archive
         run: zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
 
-      - name: Commit changes
+      - name: Commit & push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git status
           git add .
           git commit -m "Auto updating Archive"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git commit -am "Automated commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
