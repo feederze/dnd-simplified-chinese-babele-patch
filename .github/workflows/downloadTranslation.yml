@@ -1,0 +1,53 @@
+﻿name: update Translation
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  download-translation:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: update version number
+        run: |
+          version=$(jq -r '.version' dnd-simplified-chinese-babele-patch/module.json)
+          major=$(echo $version | cut -d '.' -f 1)
+          minor=$(echo $version | cut -d '.' -f 2)
+          patch=$(echo $version | cut -d '.' -f 3)
+          patch=$((patch + 1))
+          new_version="$major.$minor.$patch"
+          jq --arg new_version "$new_version" '.version = $new_version' dnd-simplified-chinese-babele-patch/module.json > module.json.tmp
+          mv module.json.tmp dnd-simplified-chinese-babele-patch/module.json
+
+      - name: download translation from ParaTranz
+        # Note paratranz release archives once an hour
+        run: |
+          curl -L -o "translation.zip" --header "Authorization: ${{ secrets.PARATRANZAPITOKEN }}" "https://paratranz.cn/api/projects/13245/artifacts/download"
+          rm -rf dnd-simplified-chinese-babele-patch/translation/cn
+          unzip -q -j translation.zip -d dnd-simplified-chinese-babele-patch/translation/cn
+          rm -f translation.zip
+
+      - name: Update Archive
+        run: zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
+
+      - name: Commit & push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git status
+          git add .
+          git commit -am "Automated commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

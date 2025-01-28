@@ -18,7 +18,7 @@ Another translation using Babele.
 ### 已知问题
 在无2024phb的情况下，技能说明未汉化（系统限制暂时没辙）
 
-### TODO
+### ~~TODO~~ DONE
 workflow从汉化平台拉取最新内容并打包
 
 自动压缩并发布更新
