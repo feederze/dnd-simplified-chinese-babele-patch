@@ -1,5 +1,31 @@
 ﻿{
   "label": "装备",
+  "mapping": {
+    "weight": {
+      "path": "system.weight",
+      "converter": "weight"
+    },
+    "activities": {
+      "path": "system.activities",
+      "converter": "activities"
+    },
+    "sources": {
+      "path": "system.source",
+      "converter": "source"
+    },
+    "rangeActivities": {
+      "path": "system.activities",
+      "converter": "rangeActivities"
+    },
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
+    },
+    "range": {
+      "path": "system.range",
+      "converter": "range"
+    }
+  },
   "folders": {
     "Weapons": "武器",
     "Star Maps": "星图",
@@ -245,7 +271,13 @@
     },
     "Alchemist's Fire": {
       "name": "炽火胶",
-      "description": "<p>当你采取攻击动作时，你可以将一次攻击替换为投掷一瓶炼金火药。选择一个你能看到的，距离你20英尺内的生物或物体作为目标。目标必须成功通过一次敏捷豁免（DC 8加上你的敏捷修正和熟练加值）失败则会受到1d4火焰伤害并开始燃烧。</p>"
+      "description": "<p>When you take the Attack action, you can replace one of your attacks with throwing a flask of Alchemist’s Fire. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take [[/damage 1d4 type=fire]] damage and start &amp;Reference[burning].</p>",
+      "effects": {
+        "Burning.": {
+          "name": "Burning.",
+          "description": "<p>Rules reference: &amp;Reference[burning].</p>"
+        }
+      }
     },
     "Ammunition (Varies)": {
       "name": "弹药（多种）",

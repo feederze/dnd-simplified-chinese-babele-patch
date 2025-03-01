@@ -1,5 +1,19 @@
 ﻿{
   "label": "专长",
+  "mapping": {
+    "rangeActivities": {
+      "path": "system.activities",
+      "converter": "rangeActivities"
+    },
+    "activities": {
+      "path": "system.activities",
+      "converter": "activities"
+    },
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
+    }
+  },
   "folders": {
     "Epic Boon Feats": "传奇恩惠专长",
     "Fighting Style Feats": "战斗风格专长",
@@ -316,7 +330,7 @@
     },
     "Crossbow Expert": {
       "name": "强弩专家",
-      "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的敏捷提升1，最多为20。</p><p><strong>无视装填。</strong>你无视手弩、重弩和轻弩的装填词条（在这个专长里统称弩）。如果你正手持着一把弩，你即使没有空手也能够为它装填一发弹药。</p><p><strong>抵近射击。</strong>你用弩进行的攻击检定不会因你在敌人的5尺内而具有劣势。</p><p><strong>双持射击。</strong>当你发动由轻型词条所提供的追加攻击时，如果这次追加攻击是由一把具有轻型词条的弩所发动的，你就可以将你的属性调整值加入本次伤害中，前提是你没有已经将该属性调整值计入这次伤害。</p><section id=\"secret-JbCLp7Ez3Fn6zaVJ\" class=\"secret\"><p><strong>Foundry 贴士</strong></p><p>双持射击没有实现自动化，考虑使用伤害掷骰对话框中的环境加值进行代替。</p></section>"
+      "description": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase your Dexterity score by 1, to a maximum of 20.</p><p><strong>Ignore Loading.</strong> You ignore the Loading property of the Hand Crossbow, Heavy Crossbow, and Light Crossbow (all called crossbows elsewhere in this feat). If you’re holding one of them, you can load a piece of ammunition into it even if you lack a free hand.</p><p><strong>Firing in Melee.</strong> Being within 5 feet of an enemy doesn’t impose Disadvantage on your attack rolls with crossbows.</p><p><strong>Dual Wielding.</strong> When you make the extra attack of the Light property, you can add your ability modifier to the damage of the extra attack if that attack is with a crossbow that has the Light property and you aren’t already adding that modifier to the damage.</p><section class=\"secret\" id=\"secret-JbCLp7Ez3Fn6zaVJ\"><p><strong>Foundry Note</strong></p><p>The additional damage for Dual Wielding is not automatically implemented but it can be added to the Situational Bonus in the normal damage roll's dialog box.</p></section>"
     },
     "Crusher": {
       "name": "粉碎者",
@@ -381,7 +395,7 @@
     },
     "Healer": {
       "name": "医疗师",
-      "description": "<p>你获得以下增益：</p><p><strong>战地医师。</strong>如果你有@UUID[Compendium.dnd-players-handbook.equipment.Item.phbagHealersKit0]{医疗包}，你可以用一个利用动作并消耗医疗包的一次使用次数，护理一个位于你5尺内的生物。该生物可以消耗一个生命骰，然后由你来投掷它。该生物可以恢复一定的生命值，具体数值等于你所掷出的点数并额外加上你的熟练加值。</p><p><strong>治疗重掷。</strong>当你掷骰以决定用法术或此专长的战地医师增益所恢复的生命值时，如果掷出1，你可以重掷一次，但必须使用重掷的结果。</p><section class=\"secret\" id=\"secret-srSK4HzKeG6v6Fzn\"><p><strong>Foundry 贴士</strong></p><p>消耗生命骰的角色可以在自己的角色卡上减少生命骰然后告诉你其大小。你可以使用 <strong>治疗 d6</strong>，<strong>d8</strong>，<strong>d10</strong>，或 <strong>d12</strong>行为来治疗他们。</p></section>",
+      "description": "<p>You gain the following benefits.</p><p><strong>Battle Medic.</strong> If you have a @UUID[Compendium.dnd-players-handbook.equipment.Item.phbagHealersKit0]{Healer’s Kit}, you can expend one use of it and tend to a creature within 5 feet of yourself as a Utilize action. That creature can expend one of its Hit Point Dice, and you then roll that die. The creature regains a number of Hit Points equal to the roll plus your Proficiency Bonus.</p><p><strong>Healing Rerolls.</strong> Whenever you roll a die to determine the number of Hit Points you restore with a spell or with this feat’s Battle Medic benefit, you can reroll the die if it rolls a 1, and you must use the new roll.</p><section class=\"secret\" id=\"secret-srSK4HzKeG6v6Fzn\"><p><strong>Foundry Note</strong></p><p>The character expending their Hit Die can reduce it on their sheet and inform you of the hit die size. You can then use the <strong>Heal d6, d8, d10, or d12</strong> activity to heal them. The activities automatically reroll 1's.</p></section>",
       "activities": {
         "Heal d6": {
           "name": "治疗d6"
@@ -535,11 +549,17 @@
       "effects": {
         "Poisoned (Dex)": {
           "name": "中毒（敏捷）",
-          "description": "<p>当一个生物受此涂毒物品伤害时， 其必须通过一个 [[/save ability=con]] 豁免骰 (DC 8+你以此专长提升的属性的调整值+你的熟练加值)否则受2d8毒素伤害并&Reference[Poisoned] 直到你下一回合结束。</p>"
+          "description": "<p>当一个生物受此涂毒物品伤害时， 其必须通过一个 [[/save ability=con]] 豁免骰 (DC 8+你以此专长提升的属性的调整值+你的熟练加值)否则受2d8毒素伤害并&Reference[Poisoned] 直到你下一回合结束。</p>",
+          "changes": {
+            "name": ", Poisoned"
+          }
         },
         "Poisoned (Int)": {
           "name": "中毒（智力）",
-          "description": "<p><p>当一个生物受此涂毒物品伤害时， 其必须通过一个 [[/save ability=con]] 豁免骰 (DC 8+你以此专长提升的属性的调整值+你的熟练加值)否则受2d8毒素伤害并&Reference[Poisoned] 直到你下一回合结束。</p>"
+          "description": "<p><p>当一个生物受此涂毒物品伤害时， 其必须通过一个 [[/save ability=con]] 豁免骰 (DC 8+你以此专长提升的属性的调整值+你的熟练加值)否则受2d8毒素伤害并&Reference[Poisoned] 直到你下一回合结束。</p>",
+          "changes": {
+            "name": ", Poisoned"
+          }
         }
       }
     },
@@ -599,7 +619,7 @@
     },
     "Shield Master": {
       "name": "盾牌大师",
-      "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的力量提升1，最多为20。</p><p><strong>盾击。</strong>当你通过攻击动作中由近战武器发动的一次攻击，命中了位于你5尺内的生物时，如果你装备了盾牌，你就可以立即使用它来击打目标，迫使对方进行一次力量豁免检定（DC等于8+你的力量调整值+你的熟练加值）。如果豁免失败，目标将被你推离5尺远或陷入&Reference[Prone]状态（由你选择）。你只能在每个你自己的回合使用一次这个增益。</p><p><strong>介入盾牌。</strong>当你受某效应影响而需要进行敏捷豁免来减半伤害时，如果你通过了豁免检定同时正持握着一面盾牌，你就可以执行一个反应来使你不受伤害。</p><section id=\"secret-u778KRzbKiVH0Qos\" class=\"secret\"><p><strong>Foundry 注</strong></p><p><strong>盾击</strong>行为包含了一个豁免骰和可以应用倒地状态的效应。</p><p><strong>介入盾牌</strong>可以用于追踪反应消耗。</p></section>",
+      "description": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase your Strength score by 1, to a maximum of 20.</p><p><strong>Shield Bash.</strong> If you attack a creature within 5 feet of you as part of the Attack action and hit with a Melee weapon, you can immediately bash the target with your Shield if it’s equipped, forcing the target to make a Strength saving throw (DC 8 plus your Strength modifier and Proficiency Bonus). On a failed save, you either push the target 5 feet from you or cause it to have the &amp;Reference[Prone] condition (your choice). You can use this benefit only once on each of your turns.</p><p><strong>Interpose Shield.</strong> If you’re subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can take a Reaction to take no damage if you succeed on the saving throw and are holding a Shield.</p><section class=\"secret\" id=\"secret-u778KRzbKiVH0Qos\"><p><strong>Foundry Note</strong></p><p>The <strong>Shield Bash</strong> activity includes the save and an Active Effect which can apply the Prone condition.</p><p>The <strong>Interpose Shield</strong> activity can be used if you're tracking Reaction usage.</p></section>",
       "activities": {
         "Shield Bash": {
           "name": "盾击",
