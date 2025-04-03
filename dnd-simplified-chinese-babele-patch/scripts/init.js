@@ -1,3 +1,5 @@
+import {registerCustomConverters} from './converters.js';
+
 const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
 
 Hooks.on('init', () => {
@@ -26,6 +28,7 @@ function autoRegisterBabel() {
     // console.log("5r汉化被加载哩")
     if (typeof Babele !== 'undefined') {
         // console.log("有babele!")
+        registerCustomConverters(game.babele);
         game.babele.register({
             module: MODULE_ID,
             dir: "translation/cn",
@@ -42,3 +45,6 @@ Hooks.on('babele.ready', () => {
         element.getIndex();
     });
 });
+
+
+
