@@ -1,4 +1,4 @@
-import {registerCustomConverters} from './converters.js';
+import { registerAddons } from './registerAddons.js';
 
 const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
 
@@ -10,9 +10,9 @@ Hooks.on('init', () => {
         config: true,
         default: true,
         type: Boolean,
-        onChange: value => {
+        onChange: async value => {
             if (value) {
-                autoRegisterBabel();
+                await autoRegisterBabel();
             }
 
             window.location.reload();
@@ -24,11 +24,12 @@ Hooks.on('init', () => {
     }
 });
 
-function autoRegisterBabel() {
+async function autoRegisterBabel() {
     // console.log("5r汉化被加载哩")
     if (typeof Babele !== 'undefined') {
         // console.log("有babele!")
-        registerCustomConverters(game.babele);
+        //load the json file into a variable
+        await registerAddons(game.babele);
         game.babele.register({
             module: MODULE_ID,
             dir: "translation/cn",
