@@ -40,6 +40,13 @@ jobs:
           unzip -q -j translation.zip -d dnd-simplified-chinese-babele-patch/translation/cn
           rm -f translation.zip
 
+      - name: trim mapping
+        # for all files in dnd-simplified-chinese-babele-patch/translation/cn, remove the `mapping` object from the json file
+        run: |
+          for file in dnd-simplified-chinese-babele-patch/translation/cn/*.json; do
+            jq 'del(.mapping)' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+          done
+
       - name: Update Archive
         run: zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
 
