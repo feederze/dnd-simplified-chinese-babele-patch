@@ -1481,42 +1481,42 @@
       }
     },
     "Volcathar Ascension": {
-      "name": "Volcathar Ascension",
+      "name": "伏尔卡萨崛起",
       "description": "<p>Rumors are spreading through the trading village, where fear has taken root. People are barring their doors and traveling only in groups, for those who venture out alone never return. Whispers of shadows in the night and an unnamed terror have seized the hearts of the villagers. Friends, family, and even passing travelers have mysteriously vanished without a trace, leaving the community gripped by dread as the disappearances continue.</p><p>A fanatical cult, hidden in the nearby mountains, is to blame for the disappearances. Led by Father Korvan, the cult worships a young red dragon named Volcathar the Flameborn. They believe that through worship and sacrificial offerings, can bind the dragon to their will. Unknown to them, Volkathar only pretends to be controlled, fully aware of the cultist’s intentions. Knowing that the ritual will transform him into an adult dragon, he tolerates the cult’s presence. A group of adventurers are hired to investigate the disappearances. Can they traverse the treacherous terrain, rescue the captives, and stop the cult before Volcathar's power becomes unstoppable?</p><p>The clock is ticking, and every step they take brings them closer to confronting a danger far greater than they could ever have imagined.</p>",
       "caption": "Volcathar Ascension Encounter",
       "scenes": {
         "Dragon Lair": {
-          "name": "Dragon Lair",
+          "name": "巨龙巢穴",
           "notes": {
-            "Cages": "Cages",
-            "Horde": "Horde",
-            "Magma Rock": "Magma Rock",
-            "Lava": "Lava",
-            "Encounter: Volcathar Ascension": "Encounter: Volcathar Ascension",
-            "Great Hallway": "Great Hallway",
-            "Sacrifice Platform": "Sacrifice Platform"
+            "Cages": "笼子",
+            "Horde": "部落",
+            "Magma Rock": "熔岩巨岩",
+            "Lava": "熔岩",
+            "Encounter: Volcathar Ascension": "遭遇：伏尔卡萨崛起",
+            "Great Hallway": "巨廊",
+            "Sacrifice Platform": "献祭台"
           }
         },
         "Toothmaw Cliffs": {
-          "name": "Toothmaw Cliffs",
+          "name": "齿颚崖",
           "notes": {
-            "Encounter: Volcathar Ascension": "Encounter: Volcathar Ascension",
-            "Entrance": "Entrance",
-            "Rocky Spires (20ft height)": "Rocky Spires (20ft height)"
+            "Encounter: Volcathar Ascension": "遭遇：伏尔卡萨崛起",
+            "Entrance": "入口",
+            "Rocky Spires (20ft height)": "岩石尖峰（20 尺高）"
           }
         },
         "Wasteland Encounter": {
-          "name": "Wasteland Encounter",
+          "name": "荒原遭遇",
           "notes": {
-            "Encounter: Volcathar Ascension": "Encounter: Volcathar Ascension",
-            "Entrance": "Entrance"
+            "Encounter: Volcathar Ascension": "遭遇：伏尔卡萨崛起",
+            "Entrance": "入口"
           }
         }
       },
       "macros": {
         "blfx | Tokens Damage": {
-          "name": "blfx | Tokens Damage",
-          "command": "const MODULE_NAME = 'boss-loot-assets-premium';\nconst allTokens = canvas.scene.tokens; // TokenDocument\n\nif (game.system.id !== 'dnd5e') {\n  ui.notifications.warn('The macro works only for D&D 5e system!');\n  return;\n}\n\nif (!game.user.isGM) {\n  ui.notifications.warn('You do not have permission to use this macro!');\n  return;\n}\n\nif (!allTokens || allTokens.size < 1) {\n  ui.notifications.warn('There are no tokens on the map!', { console: false });\n  return;\n}\n\nconst isSequencerActive = game.modules.get('sequencer')?.active;\nconst isBlfxActive = game.modules.get('boss-loot-assets-premium')?.active;\nconst damageTypes = CONFIG.DND5E.damageTypes;\nconst damageTypeOptions = Object.entries(damageTypes)\n  .map(([key, val]) => `<option value=\"${key}\">${val.label}</option>`)\n  .join('');\nconst abilities = CONFIG.DND5E.abilities;\nconst savingThrowOptions = Object.entries(abilities)\n  .map(([key, val]) => `<option value=\"${key}\">${val.label}</option>`)\n  .join('');\n\nlet dialogContent = `\n  <label><strong>Select one or multiple tokens to apply damage.</strong></label>\n  <div style=\"display: flex; flex-direction: row; gap: 10px; margin-bottom: 10px;\">\n    <div style=\"flex: 1;\">\n      <label style=\"font-size: 0.8em;\">Damage Roll (eg: 1d6+2)</label>\n      <input type=\"text\" name=\"blfx.damage.roll\" value=\"\" style=\"width: 100%;\"/>\n    </div>\n    <div style=\"flex: 1;\">\n      <label style=\"font-size: 0.8em;\">Damage Type</label>\n      <select name=\"blfx.damage.type\" style=\"width: 100%;\">\n        <option value=\"\"></option>\n        ${damageTypeOptions}\n      </select>\n    </div>\n  </div>\n\n  <div style=\"display: flex; flex-direction: row; gap: 10px; margin-bottom: 10px;\">\n    <div style=\"flex: 1;\">\n      <label style=\"font-size: 0.8em;\">Saving Throw DC (optional)</label>\n      <input type=\"text\" name=\"blfx.saving.throw.dc\" value=\"\" style=\"width: 100%;\"/>\n    </div>\n  <div style=\"flex: 1;\">\n    <label style=\"font-size: 0.8em;\">Ability (optional)</label>\n    <select name=\"blfx.saving.throw.ability\" style=\"width: 100%;\">\n      <option value=\"\"></option>\n      ${savingThrowOptions}\n    </select>\n    </div>\n  </div>\n  \n  <div style=\"display: flex; flex-direction: column; gap: 10px; margin-top: 10px;\">`;\n\n// Loop through tokens and add each one as a selectable checkbox.\nfor (const tokenDoc of allTokens.contents) {\n  const actorHp = tokenDoc.actor.system.attributes.hp?.value;\n  const actorMaxHp = tokenDoc.actor.system.attributes.hp?.max;\n  dialogContent += `\n    <div style=\"display: flex; align-items: center; gap: 10px;\">\n      <img src=\"${tokenDoc.actor.img}\" width=\"48\" height=\"48\" style=\"border: none;\">\n      <label style=\"flex: 1;\">${tokenDoc.name} <span style=\"margin-left: 20px;\">(${actorHp} / ${actorMaxHp} HP)</span></label>\n      <input type=\"checkbox\" name=\"token-${tokenDoc.id}\" />\n    </div>\n  `;\n}\n\ndialogContent += `</div>`;\n\nlet activeDialog = null;\nfunction closeOnSceneChange() {\n  if (activeDialog?.rendered) {\n    console.log('Scene changed. Closing the BLFX Damage dialog.');\n    activeDialog.close();\n  }\n}\n\n// --------------------------------------------------------\n// DIALOG\n// --------------------------------------------------------\nfoundry.applications.api.DialogV2.wait({\n  window: { title: 'Boss Loot Damage Tool' },\n  form: { closeOnSubmit: false },\n  content: dialogContent,\n  position: { width: 450 },\n  rejectClose: false,\n\n  buttons: [\n    {\n      action: 'submit',\n      label: 'Submit',\n      default: true,\n      callback: async (event, button, dialogElement) => {\n        const data = new FormDataExtended(button.form).object;\n        // Validate data\n        if (validateData(data)) {\n          await applyDamage(data);\n        }\n      },\n    },\n  ],\n\n  render: (event, dialogElement) => {\n    activeDialog = event.target;\n    Hooks.on('canvasReady', closeOnSceneChange);\n  },\n\n  close: (event, dialogInstance) => {\n    Hooks.off('canvasReady', closeOnSceneChange);\n  },\n});\n\nfunction validateData(data) {\n  const rollDice = data['blfx.damage.roll'].trim();\n  if (!rollDice) {\n    ui.notifications.warn('Damage Roll cannot be empty!', { console: false });\n    return false;\n  }\n\n  // Validate the roll\n  if (!CONFIG.Dice.DamageRoll.validate(rollDice)) {\n    ui.notifications.warn('Enter a valid roll!', { console: false });\n    return false;\n  }\n\n  if (!data['blfx.damage.type'].trim()) {\n    ui.notifications.warn('Damage Type must be selected!', { console: false });\n    return false;\n  }\n\n  const tokenSelected = Object.keys(data).some(key => key.startsWith('token-') && data[key] === true);\n  if (!tokenSelected) {\n    ui.notifications.warn('At least one token must be selected!', { console: false });\n    return false;\n  }\n\n  if (!data['blfx.saving.throw.dc'].trim() && data['blfx.saving.throw.ability'].trim()) {\n    ui.notifications.warn('Please add a Saving Throw DC!', { console: false });\n    return false;\n  }\n\n  if (data['blfx.saving.throw.dc'].trim() && !data['blfx.saving.throw.ability'].trim()) {\n    ui.notifications.warn('Please choose a Saving Throw Ability!', { console: false });\n    return false;\n  }\n\n  return true;\n}\n\nasync function playAnimation(tokenDoc) {\n  if (isSequencerActive && isBlfxActive) {\n    await new Sequence()\n      .effect()\n      .file('blfx.spell.template.circle.wave2.blood1.splatter.red')\n      .atLocation(tokenDoc)\n      .timeRange(0, 450)\n      .fadeOut(350)\n      .randomRotation()\n      .scale(0.25)\n      .play();\n  }\n}\n\nasync function applyDamage(data) {\n  const rollFormula = data['blfx.damage.roll'].trim();\n  const rollDamageType = data['blfx.damage.type'].trim();\n  const savingThrowDc = data['blfx.saving.throw.dc'].trim();\n  const savingThrowAbility = data['blfx.saving.throw.ability'].trim();\n\n  const roll = await new CONFIG.Dice.DamageRoll(rollFormula, {}, { type: rollDamageType }).evaluate();\n  const selectedTokensIds = Object.entries(data)\n    .filter(([key, checked]) => key.startsWith('token-') && checked === true)\n    .map(([id, _]) => id.replace(/^token-/, ''));\n\n  for (const id of selectedTokensIds) {\n    const tokenDoc = await allTokens.get(id);\n    const savingThrow = await rollSavingThrow(tokenDoc.actor, savingThrowAbility, savingThrowDc);\n    let totalDamage = roll.total;\n    if (!savingThrow) totalDamage = Math.floor((totalDamage /= 2));\n\n    await roll.toMessage({\n      flavor: `<p> ${tokenDoc.name} takes ${totalDamage} ${rollDamageType} damage!</p>`,\n      speaker: ChatMessage.getSpeaker({ actor: tokenDoc.actor }),\n    });\n    await tokenDoc.actor.applyDamage([{ type: rollDamageType, value: totalDamage }]);\n    await playAnimation(tokenDoc);\n  }\n}\n\nasync function rollSavingThrow(actor, ability, dc) {\n  if (!ability || !dc) return true;\n\n  const [roll] = await actor.rollSavingThrow({ ability: ability, target: dc });\n  return roll.total < dc;\n}"
+          "name": "",
+          "command": ""
         }
       },
       "actors": {
@@ -1806,8 +1806,8 @@
               "text": "<h2 style=\"color:#9A8209\">@UUID[Item.xBm2TPzgOiGqPpIv]{Bracers of Ignition}</h2><p>@Embed[Item.xBm2TPzgOiGqPpIv caption=false cite=false classes=\"blfx-embed-no-img\"]</p>"
             },
             "Variant": {
-              "name": "Variant",
-              "text": "<h3>Rare</h3><p>@Embed[Item.xBm2TPzgOiGqPpIv caption=false cite=false classes=\"blfx-embed-no-img blfx-embed-abilities-only\"]</p><h3>Uncommon</h3><p>@Embed[Item.q71R3U4BNRaokHPk caption=false cite=false classes=\"blfx-embed-no-img blfx-embed-abilities-only\"]</p>"
+              "name": "变体",
+              "text": "<h3>珍稀</h3><p>@Embed[Item.xBm2TPzgOiGqPpIv caption=false cite=false classes=\"blfx-embed-no-img blfx-embed-abilities-only\"]</p><h3>非普通</h3><p>@Embed[Item.q71R3U4BNRaokHPk caption=false cite=false classes=\"blfx-embed-no-img blfx-embed-abilities-only\"]</p>"
             },
             "Animated Artwork": {
               "name": "动画艺术",
@@ -1827,8 +1827,8 @@
     },
     "Wrath of the Flameborn": {
       "name": "焚世者之怒",
-      "description": "<p>Volcathar, now fully transformed into an adult red dragon, is on a rampage fueled by hatred and a thirst for revenge. The adventurers’ past actions in disrupting his ritual will not go unpunished. Word spreads quickly of a monstrous red dragon terrorizing the land, leaving villages, trade caravans, and military outposts in ruins. The few survivors of these attacks speak of the dragon’s wrath, recounting how it interrogates its victims before incinerating them, demanding to know the whereabouts of a particular group of adventurers.</p><p>No longer hiding in the depths of his lair, Volcathar has taken to the skies, hunting his enemies. The threat to the region has become undeniable, and panic spreads as the destruction draws closer to civilization. Fearing for their safety, regional authorities command the adventurers to put an end to the menace, warning them that if they fail, they will be banished and held responsible for the dragon’s wrath.</p><p>With every moment that passes, Volcathar's rage grows. The adventurers must prepare for the inevitable confrontation. Can they stop the dragon before he reduces everything they hold dear to ashes?</p>",
-      "caption": "Wrath of the Flameborn Encounter",
+      "description": "<p>伏尔卡萨已彻底成长为成年红龙，并陷入仇恨与复仇的狂暴。冒险者们曾阻挠其仪式的行径必将招致清算。如今，赤色巨影在诸邦肆虐——村庄化作火湖，商队成灰烬，边陲哨所仅余熔融铁骸。零星幸存者颤抖着描述恶龙可怖的<strong>焚世者之怒</strong>：巨龙总在将受害者焚为焦炭前，逼问某支冒险者小队的踪迹。</p>  <p>昔日蛰伏巢穴的阴影已然褪去，伏尔卡萨展开遮天双翼巡狩天际。当龙焰开始舔舐城墙垛口，恐慌如野火般在城邦间蔓延。诸邦领主向冒险者们下达最终敕令：要么终结这场浩劫，要么背负“引灾入境之罪”被永久驱逐出境。</p>  <p>倒计时的沙漏正在流逝——伏尔卡萨的怒火每分每秒都在膨胀，冒险者们能否在<strong>焚世者</strong>将珍视的一切化为焦土前，终结这场始于宿怨的<strong>焚世者之怒</strong>？</p>",
+      "caption": "焚世者之怒遭遇",
       "scenes": {
         "Lava Fall": {
           "name": "熔岩瀑布",
@@ -1851,84 +1851,84 @@
       },
       "actors": {
         "Villager Female": {
-          "name": "Villager Female",
-          "tokenName": "Villager Female"
+          "name": "女性平民",
+          "tokenName": "女性平民"
         },
         "Villager Male": {
-          "name": "Villager Male",
-          "tokenName": "Villager Male"
+          "name": "男性平民",
+          "tokenName": "男性平民"
         },
         "Volcathar the Flameborn CR17": {
-          "name": "Volcathar the Flameborn CR17",
-          "tokenName": "Volcathar the Flameborn",
-          "description": "<h2><strong>Volcathar the Flameborn Quotes</strong></h2><blockquote><h3>Town Square Ambush:</h3><ol><li>\"Did you think you could hide from me, mortals? I have hunted you for months, and now, you will burn!\"</li></ol><h3>Town Square Retreat:</h3><ol><li>“I see your minions arrive, but their lives mean nothing to me. This is far from over. I will find you again!”</li><li>\"This is far from over. I will hunt you again.\"</li></ol><h3>Town Square Burning Buildings:</h3><ol><li>“You think those walls will save you? Let’s see if you burn before the roof collapses!”</li></ol><h3>During the Battle:</h3><ol><li><p>\"I have waited long for this moment. Now, you will suffer as I have.\"</p></li></ol><h3>In the Lair:</h3><ol><li>“The lava beneath your feet will be your grave.”</li><li>“You will know the true meaning of suffering before I end your pitiful existence!”</li><li>“Ah, the sweet aroma of burning flesh. It is a scent I intend to enjoy thoroughly.”</li></ol><h3>IF Wounded:</h3><ol><li>\"A lucky strike, but your death is inevitable!\"</li><li>\"Pain only fuels my rage! You will regret this, mortal!\"</li></ol><h3>If the Party Flees:</h3><ol><li>“Flee, cowards! You can run all you want, but my flames will find you again!”</li></ol><h3>Taunts and Mockery:</h3><ol><li>\"Is that all you've got? I've roasted meat more resilient than your pathetic attempts!\"</li><li>“Your defiance is amusing. Let me show you why dragons are to be feared!”</li></ol></blockquote>",
+          "name": "焚世者伏尔卡萨 CR17",
+          "tokenName": "焚世者伏尔卡萨",
+          "description": "<h2><strong>伏尔卡萨战吼</strong></h2><blockquote>    <h3>城镇广场奇袭：</h3>    <ol>        <li>“凡人，你们以为能逃过我的追猎？这数月来的逃亡，只为此刻的焚烬！”</li>    </ol>    <h3>战术撤退：</h3>    <ol>        <li>“蝼蚁的援军毫无意义...此恨未绝，天涯海角必再诛之！”</li>        <li>“这场猎杀...远未终结！”</li>    </ol>    <h3>焚毁建筑：</h3>    <ol>        <li>“尔等可听见梁柱的哀鸣？且看是屋顶先塌，还是尔等先成焦骨！”</li>    </ol>    <h3>战斗宣言：</h3>    <ol>        <li>“这积郁的怒火...便由尔等血肉浇熄！”</li>    </ol>    <h3>熔岩巢穴：</h3>    <ol>        <li>“熔岩将化作尔等的裹尸布！”</li>        <li>“在赐予解脱之前...定要尔等尝尽炼狱之苦！”</li>        <li>“血肉焦香实乃绝妙...这份愉悦，吾当细细品味”</li>    </ol>    <h3>受伤暴怒：</h3>    <ol>        <li>“垂死挣扎！结局早已注定！”</li>        <li>“痛楚...只会让龙焰愈发炽烈！”</li>    </ol>    <h3>追击宣言：</h3>    <ol>        <li>“逃吧！纵使逃至天涯海角...龙焰终将再临！”</li>    </ol>    <h3>战斗嘲讽：</h3>    <ol>        <li>“这便是凡人的全力？吾曾烤炙的岩蜥都比尔等顽强！”</li>        <li>“有趣的顽抗...此刻便让尔等知晓，何谓龙怒天威！”</li>    </ol></blockquote>",
           "items": {
             "Multiattack": {
-              "name": "Multiattack",
-              "description": "<p>The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.</p>"
+              "name": "多重攻击",
+              "description": "<p>红龙使用<strong>骇人威仪</strong>，并发动三次攻击：一次啃咬攻击与两次爪击攻击。</p>"
             },
             "Detect": {
-              "name": "Detect",
-              "description": "<section class=\"secret\" id=\"secret-VR176yE9P87N5Lvy\"><p>The dragon makes a Wisdom (Perception) check.</p></section><p>The dragon watches its surrounding...</p>"
+              "name": "侦查",
+              "description": "<section class=\"secret\" id=\"secret-VR176yE9P87N5Lvy\"><p>红龙进行一次感知（察觉）检定。</p></section><p>红龙注视着四周……</p>"
             },
             "Legendary Resistance": {
-              "name": "Legendary Resistance",
-              "description": "<p>If the Red Dragon fails a saving throw, it can choose to suceed instead.</p>"
+              "name": "传奇抗性",
+              "description": "<p>红龙豁免失败时，可以将其改为豁免成功。<.</p>"
             },
             "Fly": {
-              "name": "Fly",
-              "description": "<section class=\"secret\" id=\"secret-FlyAbility\"><p>The dragon can fly up to <strong>80 ft.</strong> using its wings. If the dragon is currently standing, activating this feature will cause it to fly. If the dragon is airborne, activating this feature will cause it to land.</p><p>If you want to use the Fly feature to toggle between fly/stand animations, you can do so from settings: Configure Settings -&gt; Boss Loot Automation -&gt; Items/Features -&gt; disable \"Use Token Elevation for Flying\".</p></section><p>The Dragon can fly up to 80 ft.</p>"
+              "name": "飞行",
+              "description": "<section class=\"secret\" id=\"secret-FlyAbility\">  <p>红龙可通过振翼获得<strong> 80 尺</strong>飞行速度。点击飞行按钮时：若当前处于地面状态将触发起飞动画；若处于空中状态将触发降落动画。</p>  <p>如需通过飞行切换起降动画，请前往设置界面进行配置：Configure Settings -> Boss Loot Automation -> Items/Features -> 禁用「Use Token Elevation for Flying」选项。</p></section><p>红龙拥有 80 尺飞行速度。</p>"
             },
             "Claw": {
-              "name": "Claw",
-              "description": "<section class=\"secret\" id=\"secret-bcLV1qZJXbOtqR3q\"><p><em>Melee Weapon Attack:</em><strong>+14 to hit</strong>, <strong>5 ft.,</strong> one target. Hit: <strong>15 (2d6 + 8) </strong><em><strong>slashing damage</strong></em>.</p><p></p></section><p>The Adult Dragon attacks with its Claw.</p>"
+              "name": "爪击",
+              "description": "<section class=\"secret\" id=\"secret-uw87NYpzt4SwqdOn\"><p><em>近战攻击检定：</em><strong>+14</strong>，<strong>触及 5 尺，</strong> 单一目标。命中：<strong>15 (2d6 + 8) </strong><em><strong>挥砍伤害</strong></em>。</p></section><p>成年红龙使用其利爪发动攻击。</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<section class=\"secret\" id=\"secret-cZ5y60UCZms3Qyn7\"><p><em>Melee Weapon Attack:</em><strong>+14 to hit</strong>, <strong>10 ft.,</strong> one target. Hit: <strong>19 (2d10 + 8) </strong><em><strong>piercing damage</strong></em> plus <strong>7 (2d6) </strong><em><strong>fire damage</strong></em>.</p><p></p></section><p>The Adult Dragon attacks with its Bite.</p>"
+              "name": "啃咬",
+              "description": "<section class=\"secret\" id=\"secret-cZ5y60UCZms3Qyn7\"><p><em>近战攻击检定：</em><strong>+14</strong>，<strong>触及 10 尺，</strong> 单一目标。命中：<strong>19 (2d10 + 8)</strong><em><strong>穿刺伤害</strong></em>。</p></section><p>成年红龙使用其利齿发动攻击。</p>"
             },
             "Tail": {
-              "name": "Tail",
-              "description": "<section class=\"secret\" id=\"secret-uw87NYpzt4SwqdOn\"><p><em>Melee Weapon Attack:</em><strong>+14 to hit,</strong>, <strong>15 ft.,</strong> one target. Hit: <strong>17 (2d8 + 8) </strong><em><strong>bludgeoning damage</strong></em>.</p><p></p></section><p>The Adult Red Dragon attacks with its Tail.</p>"
+              "name": "尾击",
+              "description": "<section class=\"secret\" id=\"secret-uw87NYpzt4SwqdOn\"><p><em>近战攻击检定：</em><strong>+14 命中，</strong>, <strong>触及 15 尺，</strong> 单一目标。命中：<strong>17 (2d8 + 8) </strong><em><strong>钝击伤害</strong></em>。</p></section><p>成年红龙使用其尾部发动攻击。</p>"
             },
             "Frightful Presence": {
-              "name": "Frightful Presence",
-              "description": "<section class=\"secret\" id=\"secret-vgq7fP9hQBkOHPg8\"><p>Each creature of the dragon's choice that is <strong>within 120 feet</strong> of the dragon and aware of it must succeed on a <strong>DC 16 Wisdom saving throw</strong> or become frightened for <strong>1 minute</strong>.</p><p>A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours .</p></section><p>Each creature of the dragon's choice that is <strong>within 120 feet</strong> of the dragon and aware of it must succeed on a Wisdom saving throw. A creature can repeat the saving throw at the end of each of its turns.</p>",
+              "name": "骇人威仪",
+              "description": "<section class=\"secret\" id=\"secret-vgq7fP9hQBkOHPg8\"><p>感知豁免检定：DC 19，红龙 120 尺范围内可意识到其存在的每个生物。失败：目标陷入恐慌状态 1 分钟。陷入恐慌的生物可在其自己回合结束时重复该豁免，成功则终止该效应。成功：该生物在 24 小时内免疫该红龙的骇人威仪。</p><p>陷入恐慌的生物在其每个回合中会采取 &Reference[dash] 动作，并沿着最安全的路线远离你，除非无处可逃。如果该生物在其回合结束时处于无法看到你的位置，它将进行一次感知豁免。豁免成功，则法术对该生物的效应结束。</p>",
               "effects": {
                 "Frightful Presence": {
-                  "name": "Frightful Presence",
-                  "description": "<p>Frightened condition</p>"
+                  "name": "骇人威仪",
+                  "description": "<p>恐慌状态</p>"
                 }
               }
             },
             "Fire Breath": {
-              "name": "Fire Breath",
-              "description": "<section class=\"secret\" id=\"secret-Ygof0YwULC6ltKn0\"><p>The dragon exhales fire in a 60-foot cone. Each creature in that area must make a <strong>DC 21 Dexterity</strong> saving throw, taking <strong>63 (18d6) </strong><em><strong>fire damage</strong></em> on a failed save, or half as much damage on a successful one.</p><p></p></section><p>The Dragon exhales fire in a 60-foot cone. Each creature in that area must make a <strong>Dexterity</strong> saving throw.</p>"
+              "name": "火焰吐息",
+              "description": "<section class=\"secret\" id=\"secret-Ygof0YwULC6ltKn0\"><p>敏捷豁免检定： <strong>DC 21 </strong>，60 尺锥状区域内的每个生物。失败：受到 <strong>63 (18d6) </strong><em><strong>火焰伤害</strong></em>，成功：半伤。</p></section><p>龙在 60 尺锥形区域内喷吐火焰。该区域内的每个生物需进行一次 <strong>敏捷</strong>豁免检定。"
             },
             "Wing Attack": {
-              "name": "Wing Attack",
-              "description": "<section class=\"secret\" id=\"secret-1n1kjGcA293X6yAT\"><p>The dragon beats its wings. <strong>Each creature within 10 feet of the dragon</strong> must succeed on a <strong>DC 22 Dexterity saving throw</strong> or take <strong>15 (2d6+8) bludgeoning</strong> damage and be <strong>knocked prone.</strong> The dragon can then <strong>fly up to half its flying speed.</strong></p></section><p>The dragon beats its wings!</p>"
+              "name": "振翅攻击",
+              "description": "<section class=\"secret\" id=\"secret-1n1kjGcA293X6yAT\"><p>红龙挥动它的翅膀。<strong>红龙 10 尺内的每个生物</strong>需进行一次<strong>DC 22 敏捷豁免检定</strong>，失败则受到<strong>15（2d6+8）钝击</strong>伤害并<strong>陷入倒地状态</strong>。红龙还可以<strong>飞行至多等于其飞行速度一半的距离</strong>。</p></section><p>红龙挥动它的翅膀！</p>"
             },
             "Tail Attack": {
-              "name": "Tail Attack",
-              "description": "<section class=\"secret\" id=\"secret-sPi1BfuWDGNdK8Kd\"><p>The dragon makes a tail attack.</p></section><p>The dragon slams its long tail against its foe!</p>"
+              "name": "扫尾攻击",
+              "description": "<section class=\"secret\" id=\"secret-sPi1BfuWDGNdK8Kd\"><p>红龙发动一次尾击攻击。</p></section><p>巨龙以粗长的尾部猛力挥扫敌人！</p>"
             }
           }
         }
       },
       "items": {
         "Dragon Fire Horn v2": {
-          "name": "Dragon Fire Horn v2",
-          "description": "<p><em>Wondrous item, very rare (requires attunement)</em></p><div class=\"block purple\" id=\"book\" style=\"background:#aa88aa55\"><p><em>\"Through dragon fire, I will rid you of your sins.\"</em></p></div><hr /><p>Even after the dragon's death, the horn continues to burn and can functions as a torch, shedding bright light in a 30ft radius and dim light for an additional 30ft. The flames cannot be extinguished by non-magical means.</p><hr /><p><strong>Dragon Fire.</strong> Once per short rest, as a bonus action, you can unleash a 30ft cone of draconic fire from the horn. Each creature in the area must make a DC 16 Dexterity saving throw, taking [[/roll 6d6]] fire damage on a failed save, or half as much damage on a successful one.</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/060-red-dragon-huge/art-transparent-background-for-journal-reward-dragon-fire-horn-600x600.webp\" alt=\"Dragon Fire Horn\" />",
+          "name": "龙炎号角 v2",
+          "description": "<p><em>奇物，极珍稀（需同调）</em></p><div class=\"block purple\" id=\"book\" style=\"background:#aa88aa55\"><p><em>\"以龙焰涤净汝等罪孽。\"</em></p></div><hr /><p>即使巨龙陨落，这支号角仍会持续燃烧，可作为永不熄灭的火把提供 30 尺明亮光照与额外30尺微光光照。非魔法手段无法熄灭其火焰。</p><hr /><p><strong>龙焰吐息。</strong> 短休后恢复 1 充能，作为一个附赠动作，释放 30 尺锥形烈焰。范围内生物需进行一次DC 16 的敏捷豁免检定。失败：受到 [[/roll 6d6]] 火焰伤害，成功：仅半伤。</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/060-red-dragon-huge/art-transparent-background-for-journal-reward-dragon-fire-horn-600x600.webp\" alt=\"Dragon Fire Horn\" />",
           "activities": {
             "Toggle Dragonfire": {
-              "name": "Toggle Dragonfire"
+              "name": "切换龙焰"
             }
           }
         }
       },
       "folders": {
-        "006 Wrath of the Flameborn": "006 Wrath of the Flameborn",
+        "006 Wrath of the Flameborn": "006 焚世者之怒",
         "Boss Loot Scenes, Premium Pack": "Boss Loot 场景，高级包",
         "Boss Loot NPCs, Premium Pack": "Boss Loot NPC，高级包",
         "Boss Loot Magic Items, Premium Pack": "Boss Loot 魔法物品，高级包",
@@ -1966,27 +1966,27 @@
             },
             "ABOUT BOSS LOOT": {
               "name": "关于 BOSS LOOT",
-              "text": "<p>Hi there, and welcome to <a href=\"https://www.patreon.com/BossLoot\">Boss Loot One-Shot Adventures</a> module! Thank you for your support!</p><p>We're a group of passionate creators who love making awesome magical items and art for Foundry VTT.</p><p>For sneak peeks, questions, bugs report join our community discussions on <a href=\"https://discord.gg/Cg8WEDbCua\">Discord</a>.</p><p>With your support, we'll be able to invest more time and resources into Boss Loot, and keep creating new interactive magical items, high-quality artwork, and animations.</p><p>Thank you!</p><p></p><a href=\"https://www.youtube.com/@BossLoot-Interactive\" target=\"_blank\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/follow-us-on-youtube-icon.jpg\" alt=\"Follow on Youtube\" width=\"217\" height=\"51\" /></a><p></p><a href=\"https://www.instagram.com/boss_loot_magic_items/\" target=\"_blank\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/follow-us-on-instagram-icon.jpg\" alt=\"Follow on Instagram\" width=\"217\" height=\"51\" /></a>"
+              "text": "<div class=\"fvtt advice\">    <p>您好！欢迎使用<a href=\"https://www.patreon.com/BossLoot\">Boss Loot One-Shot模组</a>！感谢您的支持！</p>    <p>我们是由虚拟桌宠创作者组成的团队，致力于为Foundry VTT打造精致的魔法物品与美术资产。</p>    <p>获取最新动态、问题反馈或漏洞报告，请加入<a href=\"https://discord.gg/Cg8WEDbCua\">Discord社区讨论</a>。</p>    <p>您的支持将助力我们持续产出交互式魔法物品、高清美术资源与动态动画。</p>    <p>再次感谢！</p>    <a href=\"https://www.youtube.com/@BossLoot-Interactive\" target=\"_blank\">        <img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/follow-us-on-youtube-icon.jpg\" alt=\"关注Boss Loot的Youtube频道\" width=\"217\" height=\"51\">    </a>    <a href=\"https://www.instagram.com/boss_loot_magic_items/\" target=\"_blank\">        <img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/follow-us-on-instagram-icon.jpg\" alt=\"关注Boss Loot的Instagram账号\" width=\"217\" height=\"51\">    </a></div>"
             },
             "DIFFICULTY ADJUSTMENTS": {
               "name": "难度调整",
               "text": "<p>本次遭遇战的战斗难度可动态调整，其具体强度取决于以下因素：玩家角色等级、魔法物品储备、队伍规模、战场环境、敌人数量以及每个敌人的挑战等级。</p><p>本冒险模组默认针对 4 名 12-15 级的玩家角色设计，但亦可调整为其他等级。</p><p>最简易的难度调节方式是修改怪物的生命值、护甲值或伤害值。</p>"
             },
             "BACKGROUND": {
-              "name": "BACKGROUND",
-              "text": "<p>Months ago, the adventurers tried to stop Volcathar, a young red dragon, from completing a dark ritual that would transform him into an adult. Though weakened by the ritual's interruption, Volcathar escaped into the molten caverns of his lair to rest and recover.</p><p>Transformed into a fearsome adult dragon, his power has fully matured, and his thirst for vengeance burns hotter than ever. Driven by hatred, the dragon has taken flight to track down the party. His only desire is to find them and burn them to ashes.</p><p>Word begins to spread that a dragon has been spotted flying across the land, leaving a trail of devastation in its wake. Villages, caravans, and outposts have been attacked, reduced to ruins. Survivors, few and traumatized, describe a monstrous red dragon with its scales covered in flames. Witnesses recount how the dragon interrogates its victims before incinerating them, demanding to know the whereabouts of a particular group of adventurers.</p>"
+              "name": "背景",
+              "text": "<p>数月前，冒险者们曾试图阻止青年红龙伏尔卡萨完成能使其进化为成年形态的黑暗仪式。尽管仪式中断使伏尔卡萨陷入虚弱，他仍成功逃至巢穴的熔岩洞窟中休养恢复。</p><p>如今蜕变为可怖成年红龙的伏尔卡萨已完全掌握成年期的力量，复仇渴望比熔岩更炽烈。被仇恨驱使的巨龙展开双翼，誓要猎杀冒险队伍。他唯一的执念就是将这群人找出来烧成灰烬。</p><p>各地开始流传恶龙现世的传闻——目击者称看见燃烧着烈焰的红翼掠过天空，所经之处村庄化作火湖，商队成灰烬，边陲哨所仅余熔融铁骸。零星幸存者颤抖着描述：巨龙总在将受害者焚为焦炭前，逼问某支冒险者小队的踪迹。</p>"
             },
             "BOSS": {
               "name": "BOSS",
-              "text": "<div class=\"fvtt advice\"><h1 style=\"color:#FFFFFF;background-color:#b13146;text-align:center\">VOLCATHAR THE FLAMEBORN (ADULT FORM)</h1><img src=\"modules/boss-loot-adventures-premium/artwork/060-red-dragon-huge/art-dragon-red-buning-portrait-shadow-1200x1200.webp\" style=\"max-width:50%;height:auto;border:none;float:right\" /><p><strong>Armor Class:</strong> 19 (Natural Armor)</p><p><strong>Hit Points:</strong> 300 (19d12 + 133)</p><p><strong>Speed:</strong> 40 ft., fly 80 ft., swim 40 ft.</p><p><strong>Attributes:</strong></p><ul><li><strong>Strength:</strong> 27 (+8)</li><li><strong>Dexterity:</strong> 10 (Proficient +6)</li><li><strong>Constitution:</strong> 25 (Proficient +13)</li><li><strong>Intelligence:</strong> 16 (+3)</li><li><strong>Wisdom:</strong> 13 (Proficient +7)</li><li><strong>Charisma:</strong> 21 (Proficient +11)</li></ul><p><strong>Senses:</strong> Blindsight 60 ft., Darkvision 120 ft</p><p><strong>Languages:</strong> Common, Draconic</p><p><strong>Damage Immunities:</strong> Fire</p><p><strong>Challenge:</strong> 17 (18000 XP)</p><p><strong>Appearance:</strong> Volcathar the Flameborn is an imposing dragon with dark red scales and black-edged wings. His powerful tail ends in sharp, jagged spikes.</p><h2>Actions</h2><ol><li><p><strong>Multiattack.</strong> The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.</p></li><li><p><strong>Bite. </strong>Melee Weapon Attack:+14 to hit,, 10 ft., one target. Hit: 19 (2d10 + 8) piercing damage plus 7 (2d6) fire damage.</p></li><li><p><strong>Claw. </strong>Melee Weapon Attack:+14 to hit,, 5 ft., one target. Hit: 15 (2d6 + 8) slashing damage.</p></li><li><p><strong>Tail.</strong> Melee Weapon Attack:+14 to hit,, 15 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.</p></li><li><p><strong>Frightful Presence.</strong> Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute.</p><p>A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours .</p></li><li><p><strong>Fire Breath.</strong> The dragon exhales fire in a 60ft cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 63 (18d6) fire damage on a failed save, or half as much damage on a successful one.</p></li></ol><h2>Legendary Actions</h2><ol><li><p><strong>Tail Attack. (1 Legendary Action)</strong> The dragon makes a tail attack.</p></li><li><p><strong>Wing Attack. (2 Legendary Actions) </strong>The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6+8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.</p></li><li><p><strong>Detect. (1 Legendary Action)</strong> The dragon makes a Wisdom (Perception) check.</p></li></ol><h2>Features</h2><ol><li><p><strong>Legendary Resistance.</strong> If the Red Dragon fails a saving throw, it can choose to suceed instead.</p></li></ol><h2><strong>Volcathar the Flameborn Quotes</strong></h2><blockquote><h3>Town Square Ambush:</h3><ol><li>\"Did you think you could hide from me, mortals? I have hunted you for months, and now, you will burn!\"</li></ol><h3>Town Square Retreat:</h3><ol><li>“I see your minions arrive, but their lives mean nothing to me. This is far from over. I will find you again!”</li><li>\"This is far from over. I will hunt you again.\"</li></ol><h3>Town Square Burning Buildings:</h3><ol><li>“You think those walls will save you? Let’s see if you burn before the roof collapses!”</li></ol><h3>During the Battle:</h3><ol><li><p>\"I have waited long for this moment. Now, you will suffer as I have.\"</p></li></ol><h3>In the Lair:</h3><ol><li>“The lava beneath your feet will be your grave.”</li><li>“You will know the true meaning of suffering before I end your pitiful existence!”</li><li>“Ah, the sweet aroma of burning flesh. It is a scent I intend to enjoy thoroughly.”</li></ol><h3>IF Wounded:</h3><ol><li>\"A lucky strike, but your death is inevitable!\"</li><li>\"Pain only fuels my rage! You will regret this, mortal!\"</li></ol><h3>If the Party Flees:</h3><ol><li>“Flee, cowards! You can run all you want, but my flames will find you again!”</li></ol><h3>Taunts and Mockery:</h3><ol><li>\"Is that all you've got? I've roasted meat more resilient than your pathetic attempts!\"</li><li>“Your defiance is amusing. Let me show you why dragons are to be feared!”</li></ol></blockquote></div>"
+              "text": "<div class=\"fvtt advice\">    <h1 style=\"color:#FFFFFF;background-color:#b13146;text-align:center\">焚世者伏尔卡萨（成年形态）</h1>    <img src=\"modules/boss-loot-adventures-premium/artwork/060-red-dragon-huge/art-dragon-red-buning-portrait-shadow-1200x1200.webp\" style=\"max-width: 50%；height; border: none; float: right\">    <p><strong>护甲等级：</strong> 19（天生护甲）</p>    <p><strong>生命值：</strong> 300（19d12 + 133）</p>    <p><strong>速度：</strong> 40 尺，飞行 80 尺，游泳 40 尺</p>    <p><strong>属性值：</strong></p>    <ul>        <li><strong>力量：</strong> 27（+8）</li>        <li><strong>敏捷：</strong> 10（ +6）</li>        <li><strong>体质：</strong> 25（+13）</li>        <li><strong>智力：</strong> 16（+3）</li>        <li><strong>感知：</strong> 13（+7）</li>        <li><strong>魅力：</strong> 21（+11）</li>    </ul>    <p><strong>感官：</strong> 盲视 60 尺，黑暗视觉 120 尺</p>    <p><strong>语言：</strong> 通用语，龙语</p>    <p><strong>免疫：</strong> 火焰</p>    <p><strong>挑战等级：</strong> 17（18000 XP）</p>    <p><strong>外貌：</strong>焚世者伏尔卡萨的暗红鳞片与黑曜石质感翼膜彰显威严，尾部棘刺如黑曜石锻造的利刃，龙瞳中跃动着永不熄灭的怒火。</p>    <h2>动作</h2>    <ol>        <li>            <p><strong>多重攻击。</strong> 红龙使用骇人威仪，并发动三次攻击：一次啃咬攻击与两次爪击攻击。</p>        </li>        <li>            <p><strong>啃咬。</strong> 近战攻击检定：+14 命中，触及 10 尺，单一目标。命中：19（2d10 +8）穿刺伤害，外加 7（2d6）火焰伤害。</p>        </li>        <li>            <p><strong>爪击。</strong> 近战攻击检定：+14 命中，触及 5 尺，单一目标。命中：15（2d6 +8）挥砍伤害。</p>        </li>        <li>            <p><strong>尾击。</strong> 近战攻击检定：+14 命中，触及 15 尺，单一目标。命中：17（2d8 +8）钝击伤害。</p>        </li>        <li>            <p><strong>骇人威仪。</strong> 感知豁免检定：DC 19，红龙 120 尺范围内可意识到其存在的每个生物。失败：目标陷入恐慌状态 1 分钟。陷入恐慌的生物可在其自己回合结束时重复该豁免，成功则终止该效应。成功：该生物在 24 小时内免疫该红龙的骇人威仪。</p>        </li>        <li>            <p><strong>火焰吐息。</strong> 敏捷豁免检定：DC 21，60 尺锥状区域内的每个生物。失败：63 (18d6) 火焰伤害。成功：半伤。</p>        </li>    </ol>    <h2>传奇动作</h2>    <ol>        <li>            <p><strong>尾击（消耗 1 传奇动作）。</strong> 发动一次尾击攻击。</p>        </li>        <li>            <p><strong>振翅攻击（消耗 2 传奇动作）。</strong> 红龙 10 尺内生物需进行一次 DC22 敏捷豁免检定。以该方式挥动翅膀后，红龙还可以飞行至多等于其飞行速度一半的距离。失败：受到 15（2d6+8）钝击伤害并陷入倒地状态。</p>        </li>        <li>            <p><strong>侦查（消耗 1 传奇动作）。</strong> 进行一次感知（察觉）检定。</p>        </li>    </ol>    <h2>特质</h2>    <ol>        <li>            <p><strong>传奇抗性。</strong> 红龙豁免失败时，可以将其改为豁免成功。</p>        </li>    </ol>    <h2><strong>伏尔卡萨战吼</strong></h2>    <blockquote>        <h3>城镇广场奇袭：</h3>        <ol>            <li>“凡人，你们以为能逃过我的追猎？这数月来的逃亡，只为此刻的焚烬！”</li>        </ol>        <h3>战术撤退：</h3>        <ol>            <li>“蝼蚁的援军毫无意义...此恨未绝，天涯海角必再诛之！”</li>            <li>“这场猎杀...远未终结！”</li>        </ol>        <h3>焚毁建筑：</h3>        <ol>            <li>“尔等可听见梁柱的哀鸣？且看是屋顶先塌，还是尔等先成焦骨！”</li>        </ol>        <h3>战斗宣言：</h3>        <ol>            <li>“这积郁的怒火...便由尔等血肉浇熄！”</li>        </ol>        <h3>熔岩巢穴：</h3>        <ol>            <li>“熔岩将化作尔等的裹尸布！”</li>            <li>“在赐予解脱之前...定要尔等尝尽炼狱之苦！”</li>            <li>“血肉焦香实乃绝妙...这份愉悦，吾当细细品味”</li>        </ol>        <h3>受伤暴怒：</h3>        <ol>            <li>“垂死挣扎！结局早已注定！”</li>            <li>“痛楚...只会让龙焰愈发炽烈！”</li>        </ol>        <h3>追击宣言：</h3>        <ol>            <li>“逃吧！纵使逃至天涯海角...龙焰终将再临！”</li>        </ol>        <h3>战斗嘲讽：</h3>        <ol>            <li>“这便是凡人的全力？吾曾烤炙的岩蜥都比尔等顽强！”</li>            <li>“有趣的顽抗...此刻便让尔等知晓，何谓龙怒天威！”</li>        </ol>    </blockquote></div>"
             },
             "HAZARDS": {
               "name": "危害",
               "text": "<h2><strong>熔岩规则（可选）</strong></h2><p><strong>短暂接触熔岩：</strong></p><ul> <li><p>生物肢体短暂接触熔岩（如手脚剐蹭）时，将受到<strong>10d10 点火焰伤害</strong>。该规则适用于熔岩飞溅或瞬间触碰的时候。</p></li></ul><p><strong>坠入熔岩（完全浸没）：</strong></p><ul> <li><p>生物完全坠入熔岩时，<strong>每回合承受 18d10 点火焰伤害</strong>。此数值对应熔岩高达 2400°F（1316°C）的致命高温。</p></li></ul><p><strong>邻近熔岩灼伤：</strong></p><ul> <li><p>距熔岩 5 尺内的生物，在其回合开始时因高热辐射承受<strong>1d10 点火焰伤害</strong>。处于该区域的金属盔甲会获得法术“灼热金属”效应。</p></li></ul>"
             },
             "ADVENTURE HOOKS": {
-              "name": "ADVENTURE HOOKS",
-              "text": "<p>A string of settlements, trade posts, and isolated outposts have been annihilated. Authorities suspect the attacks are connected to the adventurers, as witnesses report the dragon asking specifically for them. Fearing that their home base will be the dragon's next target, a regional lord commands the party to deal with the menace or face banishment, being blamed for bringing this catastrophe upon the region.</p>"
+              "name": "冒险引子",
+              "text": "<p>一系列聚落、贸易站与边陲哨所已被夷为平地。地方当局发现所有袭击事件均与冒险队伍存在关联——目击者证实恶龙在烈焰焚城前会指名搜寻他们的踪迹。某位担心治所将成为下个目标的地区领主，正勒令队伍立即解决这场危机，否则将以“引灾入境的罪人”之名将其驱逐。</p> "
             },
             "MAPS": {
               "name": "地图",
@@ -1994,7 +1994,7 @@
             },
             "MECHANICS": {
               "name": "机制",
-              "text": "<h3>成年红龙</h3><ul> <li><p>红龙的攻击能力（啃咬、爪击、尾击、火焰吐息、翼击）可进行自定义（如修改技能名称、伤害值、DC、射程等）。</p></li> <li><p>使用骇人威仪时，需先选择需要进行感知豁免检定的角色指示物，再激活此能力。</p></li> <li><p>使红龙飞行时，需使用飞行能力。</p></li></ul><h3>宏</h3><p>@UUID[Macro.9J4XeWh1XwqaTMO9]{blfx | 指示物伤害}。该宏可用于快速向选定标记施加伤害。<br /><strong>豁免检定DC</strong>与<strong>检定属性</strong>为可选字段。若留空，选定指示物将必定承受全额伤害。<br />适用于 @UUID[JournalEntry.eUiDyciOo4ysmMoi.JournalEntryPage.t7gYqvvH7auGWtXX]</p>"
+              "text": "<h3>成年红龙</h3><ul> <li><p>红龙的攻击能力（啃咬、爪击、尾击、火焰吐息、振翅攻击）可进行自定义（如修改能力名称、伤害值、DC、射程等）。</p></li> <li><p>使用骇人威仪时，需先选择需要进行感知豁免检定的角色指示物，再激活此能力。</p></li> <li><p>使红龙飞行时，需使用飞行能力。</p></li></ul><h3>宏</h3><p>@UUID[Macro.9J4XeWh1XwqaTMO9]{blfx | 指示物伤害}。该宏可用于快速向选定标记施加伤害。<br /><strong>豁免检定DC</strong>与<strong>检定属性</strong>为可选字段。若留空，选定指示物将必定承受全额伤害。<br />适用于 @UUID[JournalEntry.eUiDyciOo4ysmMoi.JournalEntryPage.t7gYqvvH7auGWtXX]</p>"
             },
             "REWARDS": {
               "name": "奖励",
