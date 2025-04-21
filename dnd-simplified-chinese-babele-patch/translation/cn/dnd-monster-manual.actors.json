@@ -81,16 +81,16 @@
       }
     },
     "Aarakocra Aeromancer": {
-      "name": "Aarakocra Aeromancer",
-      "tokenName": "Aarakocra Aeromancer",
-      "description": "<h1>Aarakocra</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1AB1kcMsMnE3ucAr caption=false cite=false classes=\"no-embed mm\"]</p><h2>Aarakocra Aeromancer</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.PTb2n2M73OpzYRhU caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "鸟羽人风舞术师",
+      "tokenName": "鸟羽人风舞术师",
+      "description": "<h1>鸟羽人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1AB1kcMsMnE3ucAr caption=false cite=false classes=\"no-embed mm\"]</p><h2>鸟羽人风舞术师</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.PTb2n2M73OpzYRhU caption=false cite=false classes=\"no-embed mm\"]</p>1",
       "items": {
         "Wind Staff": {
-          "name": "Wind Staff",
-          "description": "<p class=\"feature\"><em>Melee or Ranged Attack Roll:</em> [[/attack]], reach [[lookup @item.range.reach]] ft. or range [[lookup @item.range.value]] ft. <em>Hit:</em> [[/damage average]] damage.</p>"
+          "name": "风之法杖",
+          "description": "<p class=\"feature\"><em>近战或远程攻击检定：</em> [[/attack]]，触及[[lookup @item.range.reach]]尺或射程[[lookup @item.range.value]]尺。<em>命中：</em> [[/damage average]]{伤害}。</p>"
         },
         "Spellcasting": {
-          "name": "Spellcasting",
+          "name": "施法",
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMessage000]</em></p><p class=\"feature-trait\"><strong>1/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]</em></p><p class=\"feature\">The aarakocra casts <em>Feather Fall</em> in response to that spell’s trigger, using the same spellcasting ability as Spellcasting.</p>"
         },
         "Elementalism": {
@@ -98,11 +98,11 @@
           "description": "<p>You exert control over the elements, creating one of the following effects within range.</p><p><strong>Beckon Air.</strong> You create a breeze strong enough to ripple cloth, stir dust, rustle leaves, and close open doors and shutters, all in a 5-foot Cube. Doors and shutters being held open by someone or something aren’t affected.</p><p><strong>Beckon Earth.</strong> You create a thin shroud of dust or sand that covers surfaces in a 5-foot-square area, or you cause a single word to appear in your handwriting in a patch of dirt or sand.</p><p><strong>Beckon Fire.</strong> You create a thin cloud of harmless embers and colored, scented smoke in a 5-foot Cube. You choose the color and scent, and the embers can light candles, torches, or lamps in that area. The smoke’s scent lingers for 1 minute.</p><p><strong>Beckon Water.</strong> You create a spray of cool mist that lightly dampens creatures and objects in a 5-foot Cube. Alternatively, you create 1 cup of clean water either in an open container or on a surface, and the water evaporates in 1 minute.</p><p><strong>Sculpt Element.</strong> You cause dirt, sand, fire, smoke, mist, or water that can fit in a 1-foot Cube to assume a crude shape (such as that of a creature) for 1 hour.</p>",
           "activities": {
             "Beckon Element": {
-              "name": "Beckon Element",
-              "chatFlavor": "Fire and water beckoning lasts for 1 minute"
+              "name": "召唤元素",
+              "chatFlavor": "水、火召唤效果持续1分钟。"
             },
             "Sculpt Element": {
-              "name": "Sculpt Element"
+              "name": "塑形元素"
             }
           },
           "effects": {
@@ -157,8 +157,8 @@
           "description": "<p>The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFeatherFal]</em> in response to that spell’s trigger, using the same spellcasting ability as @UUID[.mmSpellcasting00].</p>"
         },
         "2Zi6nV1saGPcm4KO": {
-          "name": "Feather Fall",
-          "description": "<p>Choose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If a creature lands before the spell ends, the creature takes no damage from the fall, and the spell ends for that creature.</p>",
+          "name": "羽落术",
+          "description": "<p>指定施法距离内至多五个正坠落的生物。受术生物的坠落速度在法术持续时间内降低至每回合 60 尺。如果该生物在法术终止前落地，则其不会受到任何坠落伤害，且着地后法术对该生物的效应随即终止。</p>",
           "effects": {
             "Spell Changes": {
               "name": "Spell Changes"
@@ -166,7 +166,7 @@
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmWindStaff00000]] attacks, and it can use [[/item .mmSpellcasting00]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]{Gust of Wind}</em>.</p>",
           "activities": {
             "Use": {
@@ -177,30 +177,30 @@
       }
     },
     "Aarakocra Skirmisher": {
-      "name": "Aarakocra Skirmisher",
-      "tokenName": "Aarakocra Skirmisher",
-      "description": "<h1>Aarakocra</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1AB1kcMsMnE3ucAr caption=false cite=false classes=\"no-embed mm\"]</p><h2>Aarakocra Skirmisher</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.UC607AqpkrOUHCf6 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "鸟羽人翔空士",
+      "tokenName": "鸟羽人翔空士",
+      "description": "<h1>鸟羽人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1AB1kcMsMnE3ucAr caption=false cite=false classes=\"no-embed mm\"]</p><h2>鸟羽人翔空士</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.UC607AqpkrOUHCf6 caption=false cite=false classes=\"no-embed mm\"]</p>\\n",
       "items": {
         "Talons": {
-          "name": "Talons",
+          "name": "禽爪",
           "description": "<p>[[/attack extended]]. [[/damage average extended]], or [[/damage average activity=XNNdFG40ZJluVYJ7]] damage if the [[lookup @name lowercase]] [[lookup @activation.condition activity=XNNdFG40ZJluVYJ7]] immediately before the hit.</p>",
           "activities": {
             "Charging Attack": {
-              "name": "Charging Attack",
-              "condition": "moved 30+ feet straight toward the target"
+              "name": "冲锋攻击",
+              "condition": "向着该目标直线移动了30+尺"
             }
           }
         },
         "Wind Javelin": {
-          "name": "Wind Javelin",
-          "description": "<p class=\"feature\"><em>Melee or Ranged Attack Roll:</em> [[/attack]], reach [[lookup @item.range.reach]] ft. or range [[lookup @item.range.value]]/[[lookup @item.range.long]] ft. <em>Hit:</em> [[/damage average]] damage. <em>Hit or Miss:</em> The javelin magically returns to the [[lookup @name lowercase]]’s hand immediately after a ranged attack.</p>"
+          "name": "风之标枪",
+          "description": "<p class=\"feature\"><em>近战或远程攻击检定：</em> [[/attack]]，触及[[lookup @item.range.reach]]尺或射程[[lookup @item.range.value]]/[[lookup @item.range.long]]尺。<em>命中：</em> [[/damage average]]{伤害}。<em>命中或失手：</em>投枪在远程攻击之后立即魔法性地回到[[lookup @name lowercase]]的手中。</p>"
         }
       }
     },
     "Aberrant Cultist": {
       "name": "Aberrant Cultist",
       "tokenName": "Aberrant Cultist",
-      "description": "<h1>Cultists</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.VICfYukXoYkWJ1yn caption=false cite=false classes=\"no-embed mm\"]</p><h2>Aberrant Cultist</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.TfHVYHWtS92E2YRI caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>邪教徒</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.VICfYukXoYkWJ1yn caption=false cite=false classes=\"no-embed mm\"]</p><h2>异怪邪教徒</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.TfHVYHWtS92E2YRI caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
           "name": "Multiattack",
@@ -246,12 +246,12 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em></p>"
         },
         "Counterspell": {
-          "name": "Counterspell",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCounterspe]{Counterspell}</em> in response to that spell’s trigger, using the same spellcasting ability as Spellcasting.</p>"
+          "name": "法术反制",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCounterspe]{法术反制}</em>（触发条件见该法术），使用其施法动作的施法属性。</p>"
         },
         "ACbxovsCKcunHdN8": {
-          "name": "Counterspell",
-          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn’t expended.</p>",
+          "name": "法术反制",
+          "description": "<p>你试图打断一名正在施法的生物。该生物进行一次体质豁免。豁免失败则法术消散且毫无效果，并且用于施展法术的动作、附赠动作或反应随之浪费。如果那道法术是使用法术位施展的，则法术位并不会被消耗。</p>",
           "effects": {
             "Spell Changes": {
               "name": "Spell Changes"
@@ -263,10 +263,10 @@
           "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spelldc]] check against your spell save DC, ending the spell on a success.</p>",
           "activities": {
             "Probe Deeper": {
-              "name": "Probe Deeper"
+              "name": "深入探查"
             },
             "Sense Thoughts": {
-              "name": "Sense Thoughts"
+              "name": "感知思想"
             }
           },
           "effects": {
@@ -29829,7 +29829,7 @@
         },
         "Cold Breath": {
           "name": "冷冻吐息",
-          "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]]，[[lookup @target.template.size activity=8P7hmd3Nron4RAIv]]尺锥状区域内的每个[[lookup @target.affects.type activity=8P7hmd3Nron4RAIv]]生物。</p><p><em>失败：</em>[[/damage average]]{寒冷伤害}。</p><p><em>成功：</em>半伤。</p>"
+          "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]]，[[lookup @target.template.size activity=8P7hmd3Nron4RAIv]]尺锥状区域内的每个[[lookup @target.affects.type activity=8P7hmd3Nron4RAIv]]生物。</p><p><em>失败：</em>[[/damage average]]{伤害}。</p><p><em>成功：</em>半伤。</p>"
         },
         "Paralyzing Breath": {
           "name": "麻痹吐息",
@@ -29876,7 +29876,7 @@
         },
         "Cold Breath": {
           "name": "冷冻吐息",
-          "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]]，[[lookup @target.template.size activity=8P7hmd3Nron4RAIv]]尺锥状区域内的每个[[lookup @target.affects.type activity=8P7hmd3Nron4RAIv]]生物。</p><p><em>失败：</em>[[/damage average]]{寒冷伤害}。</p><p><em>成功：</em>半伤。</p>"
+          "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]]，[[lookup @target.template.size activity=8P7hmd3Nron4RAIv]]尺锥状区域内的每个[[lookup @target.affects.type activity=8P7hmd3Nron4RAIv]]生物。</p><p><em>失败：</em>[[/damage average]]{伤害}。</p><p><em>成功：</em>半伤。</p>"
         }
       }
     },
@@ -29904,7 +29904,7 @@
         },
         "Constrict": {
           "name": "绞缠",
-          "description": "<p><em>力量豁免检定：</em><span class=\"Heading-4\"> </span>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，[[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]]个[[lookup @name lowercase]]可见的[[lookup @range.value activity=IgOMjRxAt7UISkJq]]尺内生物。</p><p><em>失败：</em>[[/damage average]]{钝击伤害}。目标获得&amp;Reference[Grappled apply=false]状态（逃脱DC [[lookup @skills.ath.passive]]），并保持&amp;Reference[Restrained apply=false]状态直至擒抱结束。</p><p><em>成功</em>：仅受半伤。</p>",
+          "description": "<p><em>力量豁免检定：</em><span class=\"Heading-4\"> </span>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，[[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]]个[[lookup @name lowercase]]可见的[[lookup @range.value activity=IgOMjRxAt7UISkJq]]尺内生物。</p><p><em>失败：</em>[[/damage average]]{伤害}。目标获得&amp;Reference[Grappled apply=false]状态（逃脱DC [[lookup @skills.ath.passive]]），并保持&amp;Reference[Restrained apply=false]状态直至擒抱结束。</p><p><em>成功</em>：仅受半伤。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -30185,7 +30185,7 @@
         },
         "Constrict": {
           "name": "绞缠",
-          "description": "<p><em>力量豁免检定：</em><span class=\"Heading-4\"> </span>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，[[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]]个[[lookup @name lowercase]]可见的[[lookup @range.value activity=IgOMjRxAt7UISkJq]]尺内生物。</p><p><em>失败：</em>[[/damage average]]{钝击伤害}。目标获得&amp;Reference[Grappled apply=false]状态（逃脱DC [[lookup @skills.ath.passive]]），并保持&amp;Reference[Restrained apply=false]状态直至擒抱结束。</p>\\n",
+          "description": "<p><em>力量豁免检定：</em><span class=\"Heading-4\"> </span>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，[[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]]个[[lookup @name lowercase]]可见的[[lookup @range.value activity=IgOMjRxAt7UISkJq]]尺内生物。</p><p><em>失败：</em>[[/damage average]]{伤害}。目标获得&amp;Reference[Grappled apply=false]状态（逃脱DC [[lookup @skills.ath.passive]]），并保持&amp;Reference[Restrained apply=false]状态直至擒抱结束。</p>\\n",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
