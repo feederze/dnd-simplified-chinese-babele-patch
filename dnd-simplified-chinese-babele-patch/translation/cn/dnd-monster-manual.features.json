@@ -8,20 +8,20 @@
   },
   "entries": {
     "Abduct": {
-      "name": "Abduct",
-      "description": "<p>The [[lookup @name lowercase]] needn’t spend extra movement to move a creature it is grappling.</p>"
+      "name": "劫持",
+      "description": "<p> [[lookup @name lowercase]] 移动一名正被其擒抱的生物时无需额外消耗移动力。</p>"
     },
     "Aberrant Ground": {
-      "name": "Aberrant Ground",
-      "description": "<p>The ground in a [[lookup @target.template.size activity=zVznqPXgYjETqpQz]]-foot Emanation originating from the [[lookup @name]] is &amp;Reference[Difficult Terrain].</p>",
+      "name": "异变丛生",
+      "description": "<p>源自 [[lookup @name]] [[lookup @target.template.size activity=zVznqPXgYjETqpQz]] 尺光环区域内的地面视为 &Reference[Difficult Terrain]。</p>",
       "activities": {
         "Place Emanation": {
-          "name": "Place Emanation"
+          "name": "光环区域"
         }
       }
     },
     "Absorb Body": {
-      "name": "Absorb Body",
+      "name": "吞吃躯体",
       "description": "<p><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=YqWqaRXxaKFCH6P8]], one [[lookup @target.affects.special activity=YqWqaRXxaKFCH6P8]] [[lookup @target.affects.type activity=YqWqaRXxaKFCH6P8]] the [[lookup @name lowercase]] can see within 5 feet.</p><p><em>Failure:</em> The target is pulled into the [[lookup @name lowercase]]'s space and becomes grafted to its body. The [[lookup @name lowercase]] can have only one target grafted at a time.</p><p>While grafted, the target has the &amp;Reference[Restrained apply=false] condition and Disadvantage on Constitution saving throws. When the [[lookup @name lowercase]] moves, the grafted target moves with it. If [[lookup @activation.condition activity=KXQbdk3TH6uZex2L]], its body is destroyed, and the [[lookup @name lowercase]] regains [[lookup @healing.formula activity=KXQbdk3TH6uZex2L]] Hit Points.</p><p>The grafted target or a creature within 5 feet of the [[lookup @name lowercase]] can take an action to make a [[/check ability=str skill=ath dc=@abilities.str.dc format=long]]. On a successful check, the target is no longer grafted and moves to an unoccupied space within 5 feet of the [[lookup @name lowercase]].</p>",
       "activities": {
         "heal": {
@@ -36,29 +36,29 @@
       }
     },
     "Abyssal Glaive": {
-      "name": "Abyssal Glaive",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "name": "深渊长柄刀",
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Abyssal Strike": {
-      "name": "Abyssal Strike",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "name": "深渊打击",
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Acid Absorption": {
-      "name": "Acid Absorption",
+      "name": "强酸吸收",
       "description": "<p>Whenever the [[lookup @name lowercase]] is subjected to &amp;Reference[Acid] damage, it takes no damage and instead regains a number of Hit Points equal to the Acid damage dealt.</p>",
       "effects": {
         "Acid Absorption": {
-          "name": "Acid Absorption",
+          "name": "强酸吸收",
           "description": "<p>The creature is immune to Acid damage and instead regains a number of Hit Points equal to the Acid damage dealt.</p>"
         }
       }
     },
     "Acid Breath": {
-      "name": "Acid Breath",
+      "name": "强酸吐息",
       "description": "<p><em>Dexterity Saving Throw: </em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], each [[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]] in a [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]]-foot-long, [[lookup @target.template.width activity=qNI6W02jCUQbPpYE]]-foot-wide Line.</p><p><em>Failure: </em>[[/damage average]] damage.</p><p><em>Success:</em> Half damage.</p>"
     },
     "Acid Spray": {
-      "name": "Acid Spray",
+      "name": "酸液喷射",
       "description": "<p><em>Dexterity Saving Throw: </em>DC [[lookup @save.dc.value activity=20GU2JBM5zJfNPD1]], each [[lookup @target.affects.type activity=20GU2JBM5zJfNPD1]] in a [[lookup @target.template.size activity=20GU2JBM5zJfNPD1]]-[[lookup @target.template.units activity=20GU2JBM5zJfNPD1]]-long, [[lookup @target.template.width activity=20GU2JBM5zJfNPD1]]-[[lookup @target.template.units activity=20GU2JBM5zJfNPD1]]-wide [[lookup @target.template.type capitalize activity=20GU2JBM5zJfNPD1]]. <em>Failure: </em>[[/damage average]] damage. <em>Success:</em> Half damage.</p>"
     },
     "Adhesive (Object Form Only)": {
@@ -66,15 +66,15 @@
       "description": "<p class=\"feature\">The [[lookup @name lowercase]] adheres to anything that touches it. A Huge or smaller creature adhered to the [[lookup @name lowercase]] has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Ability checks made to escape this grapple have Disadvantage.</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         },
         "Escape Check": {
-          "name": "Escape Check"
+          "name": "逃脱检定"
         }
       },
       "effects": {
         "Grappled": {
-          "name": "Grappled",
+          "name": "受擒",
           "description": "<p>The target has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC). Ability checks made to escape this grapple have Disadvantage.</p>"
         }
       }
@@ -92,7 +92,7 @@
       "description": "<p>The [[lookup @name lowercase]] has Advantage on the next attack roll it makes during the current turn.</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       },
       "effects": {
@@ -161,7 +161,7 @@
       "description": "<p>The [[lookup @name lowercase]] animates [[lookup @target.affects.special activity=lydBv987ChZ7itoS]] it can see within [[lookup @range.value activity=lydBv987ChZ7itoS]] feet of itself. Each boulder uses the @UUID[Compendium.dnd-monster-manual.actors.Actor.mmGalebDuhr00000] stat block, except it has Intelligence and Charisma scores of 1 and lacks this action. The boulder takes its turn immediately after the [[lookup @name lowercase]] on the same Initiative count, and it obeys the [[lookup @name lowercase]]. A boulder remains animate for [[lookup @duration.value activity=lydBv987ChZ7itoS]] minute or until it or the [[lookup @name lowercase]] dies.</p>"
     },
     "Antennae": {
-      "name": "Antennae",
+      "name": "触角",
       "description": "<p>The [[lookup @name lowercase]] targets one [[lookup @target.affects.special activity=dcSC7EuknnM0uoqY]] object—armor or a weapon—worn or carried by a creature within [[lookup @range.value activity=dcSC7EuknnM0uoqY]] feet of itself. <em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=dcSC7EuknnM0uoqY]], the creature with the object. <em>Failure:</em> The object takes a -1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches -5. The penalty can be removed by casting the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMending000]</em> spell on the armor or weapon.</p><section class=\"secret\" id=\"secret-4QbvfWBnYI6ImcGC\"><p><strong>Foundry Note</strong></p><p>This feature also provides a <strong>Damaged</strong> Enchantment effect that will modify the targeted object. Due to the fact that the equipment penalty can be applied multiple times, the enchantment needs to be dragged from this item's Effects tab onto the target Item's sheet.</p></section>",
       "effects": {
         "Damaged: -1 AC/Attack": {
@@ -171,36 +171,36 @@
       }
     },
     "Antimagic Cone": {
-      "name": "Antimagic Cone",
+      "name": "反魔法锥域",
       "description": "<p>The [[lookup @name lowercase]]'s central eye emits an antimagic wave in a [[lookup @target.template.size activity=7vRTku30dhIyBf68]]-[[lookup @target.template.units activity=7vRTku30dhIyBf68]] [[lookup @target.template.type capitalize activity=7vRTku30dhIyBf68]]. Until the start of the beholder’s next turn, that area acts as an <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAntimagicF]</em> spell, and that area works against the [[lookup @name lowercase]]'s own Eye Rays.</p>"
     },
     "Aquatic Burst": {
-      "name": "Aquatic Burst",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &amp;Reference[Prone] condition.</p>"
+      "name": "洋流冲刷",
+      "description": "<p>[[/attack extended]]。 [[/damage average extended]]。若目标生物体型不超过大型，则其陷入 &Reference[倒地] 状态。</p>"
     },
     "Aquatic Charge": {
-      "name": "Aquatic Charge",
-      "description": "<p>The [[lookup @name lowercase]] swims up to its Swim Speed straight toward an enemy it can see.</p>",
+      "name": "水下冲锋",
+      "description": "<p> [[lookup @name lowercase]] 向一名其可见的敌人直线游动至多等于其游泳速度的距离。 </p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
     "Aquatic Lash": {
-      "name": "Aquatic Lash",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "name": "水鞭之击",
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Arcane Burst": {
-      "name": "Arcane Burst",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "name": "奥能爆发",
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Arcane Prowl": {
       "name": "Arcane Prowl",
       "description": "<p>The [[lookup @name lowercase]] can teleport up to [[lookup @range.value activity=a3RqyzU0UqzLJif0]] feet to an unoccupied space it can see, and it makes one [[/item Claw]] attack.</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
