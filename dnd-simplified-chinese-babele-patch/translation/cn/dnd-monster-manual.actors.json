@@ -29842,11 +29842,11 @@
           "effects": {
             "Incapacitated": {
               "name": "失能",
-              "description": "<p>The target has the &amp;Reference[Incapacitated apply=false] condition until the end of its next turn, when it repeats the save.</p>"
+              "description": "<p>你陷入 &Reference[Incapacitated apply=false] 状态直至下一回合结束，此时需要重复此豁免。</p>"
             },
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>The target has the &amp;Reference[Paralyzed apply=false] condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，且于其每一回合结束时重复此豁免，豁免成功则结束此效应。你将在 1 分钟后自动成功于此豁免。</p>"
             }
           }
         }
@@ -29891,7 +29891,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]]makes two [[/item .mmBite0000000000]] attacks, and it can use Spellcasting to cast <em>[[/item .mmSpellcasting00.Activity.a3zjo8tpvS7C536i]]</em> if available.</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmBite0000000000]] 攻击，并使用施法施展 <em>[[/item .mmSpellcasting00.Activity.a3zjo8tpvS7C536i]]</em>（若条件允许）。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -29912,14 +29912,14 @@
           },
           "effects": {
             "Grappled and Restrained": {
-              "name": "Grappled and Restrained",
-              "description": "<p><strong>Escape Tests (see source item for DC)</strong></p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
+              "name": "受擒并束缚",
+              "description": "<p>你陷入 &Reference[Grappled apply=false] 状态（逃脱DC 14），且你陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
             }
           }
         },
         "Poison Spray": {
           "name": "毒气喷溅",
-          "description": "<p class=\"feature\"><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=Ab1fnEh4JGShDFte]]，[[lookup @target.template.size activity=Ab1fnEh4JGShDFte]] 尺 [[lookup @target.template.type capitalize activity=Ab1fnEh4JGShDFte]] 内的每名 [[lookup @target.affects.type activity=Ab1fnEh4JGShDFte]]。</p><p class=\"feature\"><em>失败：</em>[[/damage average]] 伤害，且目标陷入 &Reference[Poisoned apply=false] 状态，直到 [[lookup @name lowercase]] 的下个回合结束。中毒期间，目标陷入 &Reference[Blinded apply=false] 状态。</p>\\n<p class=\"feature\"><em>成功：</em>仅半伤。</p>",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=Ab1fnEh4JGShDFte]]，[[lookup @target.template.size activity=Ab1fnEh4JGShDFte]] 尺锥状区域内的每名生物。</p><p class=\"feature\"><em>失败：</em>[[/damage average]] 伤害，且目标陷入 &Reference[Poisoned apply=false] 状态直至 [[lookup @name lowcase]] 的下个回合结束。中毒期间，目标陷入 &Reference[Blinded apply=false] 状态。</p><p class=\"feature\"><em>成功：</em>仅半伤。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -29928,7 +29928,7 @@
           "effects": {
             "Poisoned & Blinded": {
               "name": "中毒并目盲",
-              "description": "<p>The target has the &amp;Reference[Poisoned apply=false] condition until the end of the attacking creature's next turn. While Poisoned, the target has the &amp;Reference[Blinded apply=false] condition.</p>"
+              "description": "<p>你陷入 &Reference[Poisoned apply=false] 状态直至憎恶蛇人的下个回合结束。中毒期间，你陷入 &Reference[Blinded apply=false] 状态。</p>"
             }
           }
         },
@@ -29954,7 +29954,7 @@
               "description": "<p><span style=\"font-family:Signika, sans-serif\">目标在法术持续时间内被你&Reference[charmed apply=false]。如果你或你的盟友对目标造成伤害，则法术终止。</span></p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
@@ -29967,7 +29967,7 @@
               "description": "<p>被魅惑的你会尽其所能地执行施法者所描述的行为。施法者所暗示的行为可能会在法术持续时间内始终一直进行，而如果施法者所暗示的活动可以用更短的时间完成，则此法术会在你完成了施法者的要求后随即终止。</p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         }
@@ -30012,7 +30012,7 @@
               "description": "<p><span style=\"font-family:Signika, sans-serif\">目标在法术持续时间内被你&Reference[charmed apply=false]。如果你或你的盟友对目标造成伤害，则法术终止。</span></p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
@@ -30025,7 +30025,7 @@
               "description": "<p>被魅惑的你会尽其所能地执行施法者所描述的行为。施法者所暗示的行为可能会在法术持续时间内始终一直进行，而如果施法者所暗示的活动可以用更短的时间完成，则此法术会在你完成了施法者的要求后随即终止。</p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         }
@@ -30042,7 +30042,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] makes two attacks, using [[/item .mmBite0000000000]] or [[/item .mmPoisonRay00000]]{Poison Ray} in any combination, and it can use Spellcasting to cast <em>[[/item .mmSpellcasting00.Activity.AKHk1UYi7K8g8ct4]]</em> if available.</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 使用 [[/item .mmBite0000000000]] 或 [[/item .mmPoisonRay00000]]{毒素射线} 发动共计两次攻击，并使用施法施展 <em>[[/item .mmSpellcasting00.Activity.AKHk1UYi7K8g8ct4]]</em>（若条件允许）。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -30079,7 +30079,7 @@
               "description": "<p><span style=\"font-family:Signika, sans-serif\">目标在法术持续时间内被你&Reference[charmed apply=false]。如果你或你的盟友对目标造成伤害，则法术终止。</span></p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
@@ -30092,7 +30092,7 @@
               "description": "<p>被魅惑的你会尽其所能地执行施法者所描述的行为。施法者所暗示的行为可能会在法术持续时间内始终一直进行，而如果施法者所暗示的活动可以用更短的时间完成，则此法术会在你完成了施法者的要求后随即终止。</p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         }
@@ -30142,7 +30142,7 @@
               "description": "<p><span style=\"font-family:Signika, sans-serif\">目标在法术持续时间内被你&Reference[charmed apply=false]。如果你或你的盟友对目标造成伤害，则法术终止。</span></p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
@@ -30155,7 +30155,7 @@
               "description": "<p>被魅惑的你会尽其所能地执行施法者所描述的行为。施法者所暗示的行为可能会在法术持续时间内始终一直进行，而如果施法者所暗示的活动可以用更短的时间完成，则此法术会在你完成了施法者的要求后随即终止。</p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         }
@@ -30193,8 +30193,8 @@
           },
           "effects": {
             "Grappled and Restrained": {
-              "name": "Grappled and Restrained",
-              "description": "<p><strong>Escape Tests (see source item for DC)</strong></p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
+              "name": "受擒并束缚",
+              "description": "<p>你陷入 &Reference[Grappled apply=false] 状态（逃脱DC 13），且你陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
             }
           }
         },
@@ -30220,7 +30220,7 @@
               "description": "<p><span style=\"font-family:Signika, sans-serif\">目标在法术持续时间内被你&Reference[charmed apply=false]。如果你或你的盟友对目标造成伤害，则法术终止。</span></p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
@@ -30233,7 +30233,7 @@
               "description": "<p>被魅惑的你会尽其所能地执行施法者所描述的行为。施法者所暗示的行为可能会在法术持续时间内始终一直进行，而如果施法者所暗示的活动可以用更短的时间完成，则此法术会在你完成了施法者的要求后随即终止。</p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         }
