@@ -763,7 +763,7 @@
     "Adult Brass Dragon": {
       "name": "成年黄铜龙",
       "tokenName": "成年黄铜龙",
-      "description": "<h1>黄铜龙</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.3DDDv8e649NFyopV caption=false cite=false classes=\"no-embed mm\"]</p><h2>成年黄铜龙</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.sNzT62I9lI6DI0eu caption=false cite=false classes=\"no-embed mm\"]</p><h2>黄铜龙巢穴</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.qiYpaclDMsKS9soI caption=false cite=false]</p>",
+      "description": "<h1>黄铜龙</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.3DDDv8e649NFyopV caption=false cite=false classes=\"no-embed mm\"]</p><h2>成年黄铜龙</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.sNzT62I9lI6DI0eu caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
           "name": "传奇抗性",
@@ -955,71 +955,71 @@
       }
     },
     "Adult Bronze Dragon": {
-      "name": "Adult Bronze Dragon",
-      "tokenName": "Adult Bronze Dragon",
-      "description": "<h1>Bronze Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.LAHrPwVByV6h0Mz4 caption=false cite=false classes=\"no-embed mm\"]</p><h2>Adult Bronze Dragon</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.78f3FEWOBLP7r9Te caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "成年青铜龙",
+      "tokenName": "成年青铜龙",
+      "description": "<h1>青铜龙</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.LAHrPwVByV6h0Mz4 caption=false cite=false classes=\"no-embed mm\"]</p><h2>成年青铜龙</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.78f3FEWOBLP7r9Te caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Amphibious": {
-          "name": "Amphibious",
-          "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+          "name": "水陆两栖",
+          "description": "<p>底栖魔鱼可以在空气和水中呼吸。</p>"
         },
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "condition": "fails a saving throw"
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of (A) [[/item Repulsion Breath]] or (B) [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]{Guiding Bolt}</em> (level 2 version).</p>",
+          "name": "多重攻击",
+          "description": "<p> [[lookup @name lowercase]] 发动3次 [[/item Rend]] 攻击。其可以将其中一次攻击替换为使用（A）[[/item Repulsion Breath]]或（B）施法施展 [[/item Spellcasting]] <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]</em> (二环版本).</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Lightning Breath": {
-          "name": "Lightning Breath",
-          "description": "<p><em>Dexterity Saving Throw: </em>DC [[lookup @save.dc.value activity=LpjgVwftzGNMgTUJ]], each [[lookup @target.affects.type activity=LpjgVwftzGNMgTUJ]] in a [[lookup @target.template.size activity=LpjgVwftzGNMgTUJ]]-foot-long, [[lookup @target.template.width activity=LpjgVwftzGNMgTUJ]]-foot-wide Line.</p><p><em>Failure: </em>[[/damage average]] damage.</p><p><em>Success:</em> Half damage.</p>"
+          "name": "闪电吐息",
+          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=LpjgVwftzGNMgTUJ]]， [[lookup @target.affects.type activity=LpjgVwftzGNMgTUJ]] in a [[lookup @target.template.size activity=LpjgVwftzGNMgTUJ]]尺长，[[lookup @target.template.width activity=LpjgVwftzGNMgTUJ]]尺宽的线状区域内的每名生物。</p><p><em>失败： </em>[[/damage average]] 伤害。</p><p><em>成功：</em>半伤。</p>"
         },
         "Repulsion Breath": {
-          "name": "Repulsion Breath",
-          "description": "<p class=\"feature\"><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]], each [[lookup @target.affects.type activity=zuf9EEVj4nI1joaH]] in a [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]]-foot [[lookup @target.template.type activity=zuf9EEVj4nI1joaH]].</p><p class=\"feature\"><em>Failure:</em> The target is pushed up to 60 feet straight away from the [[lookup @name lowercase]] and has the &amp;Reference[Prone apply=false] condition.</p>",
+          "name": "斥力吐息",
+          "description": "<p class=\"feature\"><em>力量豁免检定：</em> DC [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]]， [[lookup @target.affects.type activity=zuf9EEVj4nI1joaH]] in a [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]]尺 [[lookup @target.template.type activity=zuf9EEVj4nI1joaH]尺锥状区域内的每个生物。</p><p class=\"feature\"><em>失败：</em> 目标被 [[lookup @name lowercase]] 直线推离至多60尺并陷入[Prone apply=false] 状态。</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
             "Prone": {
-              "name": "Prone",
-              "description": "<p>The target is pushed up to 30 feet straight away from the attacking creature and has the &amp;Reference[Prone apply=false] condition.</p>"
+              "name": "倒地",
+              "description": "<p>目标被攻击生物直线推离至多 30 尺，并陷入 &Reference[Prone apply=false] 状态。</p>"
             }
           }
         },
         "Spellcasting": {
-          "name": "Spellcasting",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]], +10 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]{Guiding Bolt}</em> (level 2 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShapechang]{Shapechange}</em> (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]{Speak with Animals}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]{Water Breathing}</em></p>"
+          "name": "施法",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性 （法术豁免 DC [[lookup @attributes.spelldc]], 法术攻击命中+10）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]</em> （二环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShapechang]</em>（仅野兽与类人形态，不会因此法术获得临时生命值，但无需为维持此法术而保有临时生命值或维持专注），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]</em></p>"
         },
         "Detect Magic": {
-          "name": "Detect Magic",
-          "description": "<p>For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell’s school of magic.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p>",
+          "name": "侦测魔法",
+          "description": "<p>在法术持续时间内，你感受到距你30尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被1尺厚的岩石、泥土或木头，1寸厚的金属，或薄薄一层铅阻隔。</p>",
           "activities": {
             "Cast": {
-              "name": "Cast"
+              "name": "施展"
             }
           },
           "effects": {
             "Detect Magic": {
-              "name": "Detect Magic"
+              "name": "侦测魔法"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -1027,156 +1027,156 @@
           }
         },
         "Guiding Bolt": {
-          "name": "Guiding Bolt",
-          "description": "<p>You hurl a bolt of light toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 4d6 Radiant damage, and the next attack roll made against it before the end of your next turn has Advantage.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 1.</p>",
+          "name": "光导箭",
+          "description": "<p>你向施法距离内的一名生物掷出一道光箭。对目标进行一次远程法术攻击。命中时，目标受 4d6 点光耀伤害。在你下个回合结束前，对目标发动的下一次攻击检定具有优势。</p><p><strong>升环施法：</strong>使用的法术位每比一环高一环，伤害就增加 1d6。</p>",
           "effects": {
             "Guiding Bolt": {
-              "name": "Guiding Bolt",
-              "description": "<p><span style=\"font-family:Signika, sans-serif\">The next attack roll made against the target before the end of your next turn has Advantage.</span></p>"
+              "name": "光导箭",
+              "description": "<p><span style=\"font-family:Signika, sans-serif\">在施法者下个回合结束前，对你发动的下一次攻击检定具有优势。</p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
         "Shapechange": {
-          "name": "Shapechange",
-          "description": "<p>You shape-shift into another creature for the duration or until you take a Magic action to shape-shift into a different eligible form. The new form must be of a creature that has a Challenge Rating no higher than your level or Challenge Rating. You must have seen the sort of creature before, and it can’t be a Construct or an Undead.</p><p>When you shape-shift, you gain a number of Temporary Hit Points equal to the Hit Points of the form. The spell ends early if you have no Temporary Hit Points left.</p><p>Your game statistics are replaced by the stat block of the chosen form, but you retain your creature type; alignment; personality; Intelligence, Wisdom, and Charisma scores; Hit Points; Hit Point Dice; proficiencies; and ability to communicate. If you have the Spellcasting feature, you retain it too.</p><p>Upon shape-shifting, you determine whether your equipment drops to the ground or changes in size and shape to fit the new form while you’re in it.</p>",
+          "name": "形体变化",
+          "description": "<p>在法术持续时间内，你变形为另一个生物。你可以使用魔法动作来变形为另一个符合条件的形态。新形态必须是一个挑战等级不高于你的级别或挑战等级的生物。你必须在之前见过该生物至少一次，并且它不能是构装或亡灵。</p><p>当你变形时，你获得等于新形态生命值的临时生命值。如果你没有临时生命值剩下，该法术提前结束。</p><p>你的游戏资料卡替换为选择形态的资料卡，但你保留你的生物类型、阵营、人格</p><p>智力、感知、魅力、生命值、生命骰、熟练以及交流的能力。如果你具有施法特性，你同样保留它。</p><p>在变形时，你可以决定你的装备落到地上，或者改变其尺寸和形状来适应你的新形态。</p>",
           "activities": {
             "Cast": {
-              "name": "Cast"
+              "name": "施展"
             }
           },
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
         "Speak with Animals": {
-          "name": "Speak with Animals",
-          "description": "<p>For the duration, you can comprehend and verbally communicate with Beasts, and you can use any of the Influence action’s skill options with them.</p><p>Most Beasts have little to say about topics that don’t pertain to survival or companionship, but at minimum, a Beast can give you information about nearby locations and monsters, including whatever it has perceived within the past day.</p>",
+          "name": "动物交谈",
+          "description": "<p>你在法术持续时间内获得理解野兽并用语言与其沟通的能力，并且你可以对它们使用任意交涉动作的技能选项。</p><p>大多数野兽在谈及和生存与伙伴无关的话题时能说的很少，但至少，它们能够给你提供关于周围地域和怪物的情报，包括任何它们近一日内察觉到的东西。</p>",
           "effects": {
             "Bestial Communication": {
-              "name": "Bestial Communication"
+              "name": "Speak with Animals"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
         "Thaumaturgy": {
-          "name": "Thaumaturgy",
-          "description": "<p>You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.</p><p><strong>Altered Eyes.</strong> You alter the appearance of your eyes for 1 minute.</p><p><strong>Booming Voice.</strong> Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p><p><strong>Fire Play.</strong> You cause flames to flicker, brighten, dim, or change color for 1 minute.</p><p><strong>Invisible Hand.</strong> You instantaneously cause an unlocked door or window to fly open or slam shut.</p><p><strong>Phantom Sound.</strong> You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.</p><p><strong>Tremors.</strong> You cause harmless tremors in the ground for 1 minute.</p>",
+          "name": "奇术",
+          "description": "<p>你在施法距离内显现一道次级奇迹。你在施法距离内创造下述效应之一。如果你多次施展该法术，则可以同时维持至多三个不同的持续 1 分钟的效应。</p><p><strong>改变眼睛。</strong> 你改变自己眼睛的外观，其效应持续 1 分钟。</p><p><strong>扩音。</strong> 你的声音变为一般时候的三倍，其效应持续 1 分钟。在此期间，你在 [[/check ability=cha skill=itm]] 检定上具有优势。</p><p><strong>玩火。</strong> 你使一团火焰闪烁，变亮，变暗或变色，其效应持续 1 分钟。</p><p><strong>无形之手。</strong> 你使一扇没有锁上的门或窗立即打开或关上。</p><p><strong>幻音。</strong> 你使一阵瞬时声音自施法距离内一点发出，例如雷鸣声，渡鸦叫声或不祥低语声。</p><p><strong>震动。</strong> 你在地面上引发无害的震动，其效应持续 1 分钟。</p>",
           "activities": {
             "Cast": {
-              "name": "Cast"
+              "name": "施展"
             }
           },
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
         "Detect Thoughts": {
-          "name": "Detect Thoughts",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spelldc]] check against your spell save DC, ending the spell on a success.</p>",
+          "name": "侦测思想",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
-              "name": "Probe Deeper"
+              "name": "深入探查"
             },
             "Sense Thoughts": {
-              "name": "Sense Thoughts"
+              "name": "感知思想"
             }
           },
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
         "Water Breathing": {
-          "name": "Water Breathing",
-          "description": "<p>This spell grants up to ten willing creatures of your choice within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration.</p>",
+          "name": "水下呼吸",
+          "description": "<p>在法术终止前，该法术让施法距离内你所选择的至多十个自愿生物获得在水下呼吸的能力。此外，受术者依然保有正常的呼吸能力。</p>",
           "effects": {
             "Water Breathing": {
-              "name": "Water Breathing"
+              "name": "水下呼吸"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
         "Guiding Light": {
-          "name": "Guiding Light",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] uses [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]{Guiding Bolt}</em> (level 2 version).</p>"
+          "name": "明光道标",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 使用 [[/item Spellcasting]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]</em> （二环版本）。</p>"
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
         "Thunderclap": {
-          "name": "Thunderclap",
-          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=Lq6GexegvlEVB6Dh]], each [[lookup @target.affects.type activity=Lq6GexegvlEVB6Dh]] in a [[lookup @target.template.size activity=Lq6GexegvlEVB6Dh]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]] can see within [[lookup @range.value activity=Lq6GexegvlEVB6Dh]] feet.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Deafened apply=false] condition until the end of its next turn.</p>",
+          "name": "鸣雷霆爆",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=Lq6GexegvlEVB6Dh]]，  以 [[lookup @range.value activity=Lq6GexegvlEVB6Dh]] 尺内[[lookup @name lowercase]]可见一点为中心，半径 [[lookup @target.template.size activity=Lq6GexegvlEVB6Dh]]尺球状区域内的每名[[lookup @target.affects.type activity=Lq6GexegvlEVB6Dh]]。</p><p class=\"feature\"><em>失败：</em> [[/damage average]] 伤害，且目标陷入 &amp;Reference[Deafened apply=false]状态直至其下个回合结束。</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
             "Deafened": {
-              "name": "Deafened",
-              "description": "<p>The target is &amp;Reference[Deafened apply=long] until the end of its next turn.</p>"
+              "name": "耳聋",
+              "description": "目标陷入&Reference[Deafened apply=long] 状态直至其下个回合结束。"
             }
           }
         }
       }
     },
     "Adult Copper Dragon": {
-      "name": "Adult Copper Dragon",
-      "tokenName": "Adult Copper Dragon",
-      "description": "<h1>Copper Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1gZk82d5dqtIeB4K caption=false cite=false classes=\"no-embed mm\"]</p><h2>Adult Copper Dragon</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.65HPUh59Y7xmtgsE caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "成年赤铜龙",
+      "tokenName": "成年赤铜龙",
+      "description": "<h1>赤铜龙</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1gZk82d5dqtIeB4K caption=false cite=false classes=\"no-embed mm\"]</p><h2>成年赤铜龙</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.65HPUh59Y7xmtgsE caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of (A) [[/item Slowing Breath]] or (B) [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMindSpike0]{Mind Spike}</em> (level 4 version).</p>",
+          "name": "多重攻击",
+          "description": "<p> [[lookup @name lowercase]] 发动三次 [[/item Rend]] 攻击。其可以将其中一次攻击替换为使用（A） [[/item Slowing Breath]]或 （B）施法施展[[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMindSpike0]</em> （四环版本）。</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Acid Breath": {
-          "name": "Acid Breath",
-          "description": "<p><em>Dexterity Saving Throw: </em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], each [[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]] in a [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]]-foot-long, [[lookup @target.template.width activity=qNI6W02jCUQbPpYE]]-foot-wide Line.</p><p><em>Failure: </em>[[/damage average]] damage.</p><p><em>Success:</em> [[lookup @damage.onSave capitalize activity=qNI6W02jCUQbPpYE]] damage.</p>"
+          "name": "强酸吐息",
+          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]] 尺长、[[lookup @target.template.width activity=qNI6W02jCUQbPpYE]] 尺宽的线状区域内的每名[[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]]。</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em> [[lookup @damage.onSave capitalize activity=qNI6W02jCUQbPpYE]]伤.</p>"
         },
         "Spellcasting": {
-          "name": "Spellcasting",
+          "name": "施法",
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMindSpike0]{Mind Spike}</em> (level 4 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShapechang]{Shapechange}</em> (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)</p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{Greater Restoration}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]{Major Image}</em></p>"
         },
         "Detect Magic": {
-          "name": "Detect Magic",
-          "description": "<p>For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell’s school of magic.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p>",
+          "name": "侦测魔法",
+          "description": "<p>在法术持续时间内，你感受到距你30尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被1尺厚的岩石、泥土或木头，1寸厚的金属，或薄薄一层铅阻隔。</p>",
           "activities": {
             "Cast": {
               "name": "Cast"
@@ -1263,7 +1263,7 @@
           "description": "<p class=\"feature\"><em>Charisma Saving Throw:</em> DC [[lookup @save.dc.value activity=Ttrajc4RC5Ut7pkj]], [[lookup @target.affects.labels.statblock activity=Ttrajc4RC5Ut7pkj]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=Ttrajc4RC5Ut7pkj]] feet.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage. Until the end of its next turn, the target rolls [[/r 1d6]] whenever it makes an ability check or attack roll and subtracts the number rolled from the D20 Test.</p><p class=\"feature\"><em>Failure or Success:</em> The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -1278,11 +1278,11 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] uses Spellcasting to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMindSpike0]{Mind Spike}</em> (level 4 version). The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>"
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -1304,12 +1304,12 @@
       "description": "<h1>Gold Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.96svBVkFRzy9KxVV caption=false cite=false classes=\"no-embed mm\"]</p><h2>Adult Gold Dragon</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.xU39aBETjUzCKRMu caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
@@ -1318,17 +1318,17 @@
           "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of (A) [[/item Spellcasting]] to cast <em>Guiding Bolt</em> (level 2 version) or (B) [[/item Weakening Breath]].</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Fire Breath": {
           "name": "Fire Breath",
@@ -1357,7 +1357,7 @@
         },
         "Guiding Bolt": {
           "name": "Guiding Bolt",
-          "description": "<p>You hurl a bolt of light toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 4d6 Radiant damage, and the next attack roll made against it before the end of your next turn has Advantage.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 1.</p>",
+          "description": "<p>你向施法距离内的一名生物掷出一道光箭。对目标进行一次远程法术攻击。命中时，目标受 4d6 点光耀伤害。在你下个回合结束前，对目标发动的下一次攻击检定具有优势。</p><p><strong>升环施法：</strong>使用的法术位每比一环高一环，伤害就增加 1d6。</p>",
           "effects": {
             "Guiding Bolt": {
               "name": "Guiding Bolt",
@@ -1409,7 +1409,7 @@
           "description": "<p class=\"feature\"><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=EGZ4bS4HpJkfNG9s]], each creature that isn’t currently affected by this breath in a [[lookup @target.template.size activity=EGZ4bS4HpJkfNG9s]]-foot Cone.</p><p class=\"feature\"><em>Failure:</em> The target has Disadvantage on Strength-based D20 Tests and subtracts 3 ([[/r 1d6]]) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=EGZ4bS4HpJkfNG9s]] minute, it succeeds automatically.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -1430,15 +1430,15 @@
           }
         },
         "Guiding Light": {
-          "name": "Guiding Light",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] uses [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]{Guiding Bolt}</em> (level 2 version).</p>"
+          "name": "明光道标",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 使用 [[/item Spellcasting]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]</em> （二环版本）。</p>"
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
@@ -1454,34 +1454,34 @@
           "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
         },
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMindSpike0]{Mind Spike}</em> (level 3 version).</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Poison Breath": {
           "name": "Poison Breath",
           "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=lnabW9bM51HoluPp]], each creature in a [[lookup @target.template.size activity=lnabW9bM51HoluPp]]-foot [[lookup @target.template.type capitalize activity=lnabW9bM51HoluPp]].</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage.</p><p class=\"feature\"><em>Success:</em> [[lookup @damage.onSave capitalize activity=lnabW9bM51HoluPp]] damage.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           }
         },
@@ -1541,7 +1541,7 @@
           "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=Blm8nddvCOH69bL8]], each [[lookup @target.affects.type activity=Blm8nddvCOH69bL8]] in a [[lookup @target.template.size activity=Blm8nddvCOH69bL8]]-foot-Radius Sphere centered on a point the [[lookup @name lowercase]] can see within [[lookup @range.value activity=Blm8nddvCOH69bL8]] feet.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target takes a −2 penalty to AC until the end of its next turn.</p><p class=\"feature\"><em>Failure or Success:</em> The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -1552,11 +1552,11 @@
           }
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
@@ -1568,27 +1568,27 @@
       "description": "<h1>Red Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Rx08X1mW6m5uYldI caption=false cite=false classes=\"no-embed mm\"]</p><h2>Adult Red Dragon</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.81ihWzHnwzZEfEfa caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScorchingR]{Scorching Ray}</em>.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Fire Breath": {
           "name": "Fire Breath",
@@ -1651,11 +1651,11 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] uses [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScorchingR]{Scorching Ray}</em>. The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>"
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
@@ -1667,27 +1667,27 @@
       "description": "<h1>Silver Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.REGxFxNrTLFswtA1 caption=false cite=false classes=\"no-embed mm\"]</p><h2>Adult Silver Dragon</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.PhEr0qvx0sUA4mGl caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of (A) [[/item Paralyzing Breath]] or (B) [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplIceKnife00]{Ice Knife}</em>.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Cold Breath": {
           "name": "Cold Breath",
@@ -1698,7 +1698,7 @@
           "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=r4MGqEq5U9aaseBh]], each [[lookup @target.affects.type activity=r4MGqEq5U9aaseBh]] in a [[lookup @target.template.size activity=r4MGqEq5U9aaseBh]]-foot Cone.</p><p class=\"feature\"><em>First Failure:</em> The target has the &amp;Reference[Incapacitated apply=false] condition until the end of its next turn, when it repeats the save.</p><p class=\"feature\"><em>Second Failure:</em> The target has the &amp;Reference[Paralyzed apply=false] condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -1810,11 +1810,11 @@
           }
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
@@ -1830,27 +1830,27 @@
           "description": "<p>The [[lookup @name lowercase]] can move across and climb icy surfaces without needing to make an ability check. Additionally, &amp;Reference[Difficult Terrain] composed of ice or snow doesn’t cost it extra movement.</p>"
         },
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Cold Breath": {
           "name": "Cold Breath",
@@ -1861,7 +1861,7 @@
           "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=U2i9u4ELjeLQfePP]], each [[lookup @target.affects.type activity=U2i9u4ELjeLQfePP]] in a [[lookup @target.template.size activity=U2i9u4ELjeLQfePP]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]] can see within [[lookup @range.value activity=U2i9u4ELjeLQfePP]] feet.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target’s Speed is 0 until the end of the target’s next turn.</p><p class=\"feature\"><em>Failure or Success:</em> The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -1889,11 +1889,11 @@
           }
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
@@ -1913,11 +1913,11 @@
           "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmThunderousSlam]] attacks.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
@@ -1926,13 +1926,13 @@
           "description": "<p class=\"feature\"><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=GQzr4EMMm6kkZVdC]], each Medium or smaller [[lookup @target.affects.type activity=GQzr4EMMm6kkZVdC]] in the [[lookup @name lowercase]]'s space.</p><p><em>Failure:</em> [[/damage average]] damage, and the target is pushed up to 20 feet straight away from the [[lookup @name lowercase]] and has the &amp;Reference[Prone apply=false] condition.</p><p><em>Success:</em> Half damage only.</p>",
           "activities": {
             "Save": {
-              "name": "Save",
+              "name": "豁免",
               "chatFlavor": "On Failure: Target is pushed 20 feet back."
             }
           },
           "effects": {
             "Prone": {
-              "name": "Prone",
+              "name": "倒地",
               "description": "<p>The target is pushed up to 20-ft. straight away from the attacking creature and has the &amp;Reference[Prone apply=false] condition.</p>"
             }
           }
@@ -1945,14 +1945,14 @@
       "items": {
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Claws": {
           "name": "Claws",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature and the [[lookup @name lowercase]] moved 30+ feet straight toward it immediately before the hit, the target has the &amp;Reference[Prone apply=false] condition, and the [[lookup @name lowercase]] can make one [[/item .mmBite0000000000]] attack against it.</p>",
           "effects": {
             "Prone": {
-              "name": "Prone",
+              "name": "倒地",
               "description": "<p>The target has the &amp;Reference[Prone apply=false] condition.</p>"
             }
           }
@@ -1969,30 +1969,30 @@
           "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
         },
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMelfsAcidA]{Melf's Acid Arrow}</em> (level 4 version).</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Acid Breath": {
-          "name": "Acid Breath",
+          "name": "强酸吐息",
           "description": "<p><em>Dexterity Saving Throw: </em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], each [[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]] in a [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]]-foot-long, [[lookup @target.template.width activity=qNI6W02jCUQbPpYE]]-foot-wide Line.</p><p><em>Failure: </em>[[/damage average]] damage.</p><p><em>Success:</em> Half damage.</p>"
         },
         "Spellcasting": {
@@ -2112,11 +2112,11 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFear000000]{Fear}</em>. The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>"
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
@@ -2128,30 +2128,30 @@
       "description": "<h1>Blue Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.YmY5NC1DqZVHBNX2 caption=false cite=false classes=\"no-embed mm\"]</p><h2>Ancient Blue Dragon</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.9wP9DzFRsF8qd1zv caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of [[/item Spellcasting]] to cast @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShatter000]{Shatter} (level 3 version).</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Lightning Breath": {
-          "name": "Lightning Breath",
+          "name": "闪电吐息",
           "description": "<p><em>Dexterity Saving Throw: </em>DC [[lookup @save.dc.value activity=LpjgVwftzGNMgTUJ]], each [[lookup @target.affects.type activity=LpjgVwftzGNMgTUJ]] in a [[lookup @target.template.size activity=LpjgVwftzGNMgTUJ]]-foot-long, [[lookup @target.template.width activity=LpjgVwftzGNMgTUJ]]-foot-wide Line</p><p><em>Failure: </em>[[/damage average]] damage.</p><p><em>Success:</em> Half damage.</p>"
         },
         "Spellcasting": {
@@ -2269,7 +2269,7 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] makes one [[/item Rend]] attack.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
@@ -2281,27 +2281,27 @@
       "description": "<h1>Brass Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.3DDDv8e649NFyopV caption=false cite=false classes=\"no-embed mm\"]</p><h2>Ancient Brass Dragon</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.TaM3BPlTPJMh6g8d caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of (A) [[/item Sleep Breath]] or (B) [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScorchingR]{Scorching Ray}</em> (level 3 version).</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Fire Breath": {
           "name": "Fire Breath",
@@ -2427,14 +2427,14 @@
           }
         },
         "Detect Thoughts": {
-          "name": "Detect Thoughts",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spelldc]] check against your spell save DC, ending the spell on a success.</p>",
+          "name": "侦测思想",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
-              "name": "Probe Deeper"
+              "name": "深入探查"
             },
             "Sense Thoughts": {
-              "name": "Sense Thoughts"
+              "name": "感知思想"
             }
           },
           "effects": {
@@ -2448,11 +2448,11 @@
           "description": "<p>The [[lookup @name lowercase]] uses Spellcasting to cast <em>[[/item Scorching Ray]]</em> (level 3 version).</p>"
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -2461,7 +2461,7 @@
           "description": "<p class=\"feature\"><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=g5fxAWhrpwohtETl]], [[lookup @target.affects.labels.statblock activity=g5fxAWhrpwohtETl]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=g5fxAWhrpwohtETl]] feet.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target’s Speed is halved until the end of its next turn.</p><p class=\"feature\"><em>Failure or Success:</em> The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -2483,45 +2483,45 @@
           "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
         },
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]]. It can replace one attack with a use of (A) [[/item Repulsion Breath]] or (B) [[/item Spellcasting]] to cast <em>Guiding Bolt</em> (level 2 version).</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Repulsion Breath": {
-          "name": "Repulsion Breath",
+          "name": "斥力吐息",
           "description": "<p class=\"feature\"><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]], each [[lookup @target.affects.type activity=zuf9EEVj4nI1joaH]] in a [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]]-foot Cone.</p><p class=\"feature\"><em>Failure:</em> The target is pushed up to 60 feet straight away from the [[lookup @name lowercase]] and has the &amp;Reference[Prone apply=false] condition.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
             "Prone": {
-              "name": "Prone",
+              "name": "倒地",
               "description": "<p>The target has the &amp;Reference[Prone apply=false] condition.</p>"
             }
           }
         },
         "Lightning Breath": {
-          "name": "Lightning Breath",
+          "name": "闪电吐息",
           "description": "<p><em>Dexterity Saving Throw: </em>DC [[lookup @save.dc.value activity=LpjgVwftzGNMgTUJ]], each [[lookup @target.affects.type activity=LpjgVwftzGNMgTUJ]] in a [[lookup @target.template.size activity=LpjgVwftzGNMgTUJ]]-foot-long, [[lookup @target.template.width activity=LpjgVwftzGNMgTUJ]]-foot-wide [[lookup @target.template.type capitalize activity=LpjgVwftzGNMgTUJ]].</p><p><em>Failure: </em>[[/damage average]] damage.</p><p><em>Success:</em> Half damage.</p>"
         },
         "Spellcasting": {
@@ -2547,7 +2547,7 @@
         },
         "Guiding Bolt": {
           "name": "Guiding Bolt",
-          "description": "<p>You hurl a bolt of light toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 4d6 Radiant damage, and the next attack roll made against it before the end of your next turn has Advantage.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 1.</p>",
+          "description": "<p>你向施法距离内的一名生物掷出一道光箭。对目标进行一次远程法术攻击。命中时，目标受 4d6 点光耀伤害。在你下个回合结束前，对目标发动的下一次攻击检定具有优势。</p><p><strong>升环施法：</strong>使用的法术位每比一环高一环，伤害就增加 1d6。</p>",
           "effects": {
             "Guiding Bolt": {
               "name": "Guiding Bolt",
@@ -2586,7 +2586,7 @@
         },
         "Thaumaturgy": {
           "name": "Thaumaturgy",
-          "description": "<p>You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.</p><p><strong>Altered Eyes.</strong> You alter the appearance of your eyes for 1 minute.</p><p><strong>Booming Voice.</strong> Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p><p><strong>Fire Play.</strong> You cause flames to flicker, brighten, dim, or change color for 1 minute.</p><p><strong>Invisible Hand.</strong> You instantaneously cause an unlocked door or window to fly open or slam shut.</p><p><strong>Phantom Sound.</strong> You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.</p><p><strong>Tremors.</strong> You cause harmless tremors in the ground for 1 minute.</p>",
+          "description": "<p>你在施法距离内显现一道次级奇迹。你在施法距离内创造下述效应之一。如果你多次施展该法术，则可以同时维持至多三个不同的持续 1 分钟的效应。</p><p><strong>改变眼睛。</strong> 你改变自己眼睛的外观，其效应持续 1 分钟。</p><p><strong>扩音。</strong> 你的声音变为一般时候的三倍，其效应持续 1 分钟。在此期间，你在 [[/check ability=cha skill=itm]] 检定上具有优势。</p><p><strong>玩火。</strong> 你使一团火焰闪烁，变亮，变暗或变色，其效应持续 1 分钟。</p><p><strong>无形之手。</strong> 你使一扇没有锁上的门或窗立即打开或关上。</p><p><strong>幻音。</strong> 你使一阵瞬时声音自施法距离内一点发出，例如雷鸣声，渡鸦叫声或不祥低语声。</p><p><strong>震动。</strong> 你在地面上引发无害的震动，其效应持续 1 分钟。</p>",
           "activities": {
             "Cast": {
               "name": "Cast"
@@ -2599,14 +2599,14 @@
           }
         },
         "Detect Thoughts": {
-          "name": "Detect Thoughts",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spelldc]] check against your spell save DC, ending the spell on a success.</p>",
+          "name": "侦测思想",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
-              "name": "Probe Deeper"
+              "name": "深入探查"
             },
             "Sense Thoughts": {
-              "name": "Sense Thoughts"
+              "name": "感知思想"
             }
           },
           "effects": {
@@ -2675,11 +2675,11 @@
           }
         },
         "Water Breathing": {
-          "name": "Water Breathing",
-          "description": "<p>This spell grants up to ten willing creatures of your choice within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration.</p>",
+          "name": "水下呼吸",
+          "description": "<p>在法术终止前，该法术让施法距离内你所选择的至多十个自愿生物获得在水下呼吸的能力。此外，受术者依然保有正常的呼吸能力。</p>",
           "effects": {
             "Water Breathing": {
-              "name": "Water Breathing"
+              "name": "水下呼吸"
             },
             "Spell Changes": {
               "name": "Spell Changes"
@@ -2687,30 +2687,30 @@
           }
         },
         "Guiding Light": {
-          "name": "Guiding Light",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] uses [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]{Guiding Bolt}</em> (level 2 version).</p>"
+          "name": "明光道标",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 使用 [[/item Spellcasting]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]</em> （二环版本）。</p>"
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
         "Thunderclap": {
-          "name": "Thunderclap",
-          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=Lq6GexegvlEVB6Dh]], each [[lookup @target.affects.type activity=Lq6GexegvlEVB6Dh]] in a [[lookup @target.template.size activity=Lq6GexegvlEVB6Dh]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]] can see within [[lookup @range.value activity=Lq6GexegvlEVB6Dh]] feet.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Deafened apply=false] condition until the end of its next turn.</p>",
+          "name": "鸣雷霆爆",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=Lq6GexegvlEVB6Dh]]，  以 [[lookup @range.value activity=Lq6GexegvlEVB6Dh]] 尺内[[lookup @name lowercase]]可见一点为中心，半径 [[lookup @target.template.size activity=Lq6GexegvlEVB6Dh]]尺球状区域内的每名[[lookup @target.affects.type activity=Lq6GexegvlEVB6Dh]]。</p><p class=\"feature\"><em>失败：</em> [[/damage average]] 伤害，且目标陷入 &amp;Reference[Deafened apply=false]状态直至其下个回合结束。</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
             "Deafened": {
-              "name": "Deafened",
-              "description": "<p>The target is &amp;Reference[Deafened apply=long] until the end of its next turn.</p>"
+              "name": "耳聋",
+              "description": "目标陷入&Reference[Deafened apply=long] 状态直至其下个回合结束。"
             }
           }
         }
@@ -2722,31 +2722,31 @@
       "description": "<h1>Copper Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1gZk82d5dqtIeB4K caption=false cite=false classes=\"no-embed mm\"]</p><h2>Ancient Copper Dragon</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.JZSMBqM2jcAR6Id8 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Rend]] attacks. It can replace one attack with a use of (A) [[/item Slowing Breath]] or (B) [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMindSpike0]{Mind Spike}</em> (level 5 version).</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Acid Breath": {
-          "name": "Acid Breath",
-          "description": "<p><em>Dexterity Saving Throw: </em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], each [[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]] in a [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]]-foot-long, [[lookup @target.template.width activity=qNI6W02jCUQbPpYE]]-foot-wide Line.</p><p><em>Failure: </em>[[/damage average]] damage.</p><p><em>Success:</em> [[lookup @damage.onSave capitalize activity=qNI6W02jCUQbPpYE]] damage.</p>"
+          "name": "强酸吐息",
+          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]] 尺长、[[lookup @target.template.width activity=qNI6W02jCUQbPpYE]] 尺宽的线状区域内的每名[[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]]。</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em> [[lookup @damage.onSave capitalize activity=qNI6W02jCUQbPpYE]]伤.</p>"
         },
         "Spellcasting": {
           "name": "Spellcasting",
@@ -2855,7 +2855,7 @@
           "description": "<p class=\"feature\"><em>Charisma Saving Throw:</em> DC [[lookup @save.dc.value activity=Ttrajc4RC5Ut7pkj]], [[lookup @target.affects.labels.statblock activity=Ttrajc4RC5Ut7pkj]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=Ttrajc4RC5Ut7pkj]] feet.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage. Until the end of its next turn, the target rolls [[/r 1d8]] whenever it makes an ability check or attack roll and subtracts the number rolled from the D20 Test.</p><p class=\"feature\"><em>Failure or Success:</em> The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -2870,11 +2870,11 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] uses [[/item Spellcasting]] to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMindSpike0]{Mind Spike}</em> (level 5 version). The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>"
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -2900,27 +2900,27 @@
           "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
         },
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes {count} [[/item]] attacks and uses [[/item]].</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Fire Breath": {
           "name": "Fire Breath",
@@ -2935,7 +2935,7 @@
           "description": "<p class=\"feature\"><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=EGZ4bS4HpJkfNG9s]], each creature that isn’t currently affected by this breath in a [[lookup @target.template.size activity=EGZ4bS4HpJkfNG9s]]-foot Cone.</p><p class=\"feature\"><em>Failure:</em> The target has Disadvantage on Strength-based D20 Tests and subtracts 5 ([[/r 1d10]]) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=EGZ4bS4HpJkfNG9s]] minute, it succeeds automatically.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -2956,12 +2956,12 @@
           }
         },
         "Guiding Light": {
-          "name": "Guiding Light",
+          "name": "明光道标",
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] uses Spellcasting to cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]{Guiding Bolt}</em> (level 2 version).</p>"
         },
         "Guiding Bolt": {
           "name": "Guiding Bolt",
-          "description": "<p>You hurl a bolt of light toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 4d6 Radiant damage, and the next attack roll made against it before the end of your next turn has Advantage.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 1.</p>",
+          "description": "<p>你向施法距离内的一名生物掷出一道光箭。对目标进行一次远程法术攻击。命中时，目标受 4d6 点光耀伤害。在你下个回合结束前，对目标发动的下一次攻击检定具有优势。</p><p><strong>升环施法：</strong>使用的法术位每比一环高一环，伤害就增加 1d6。</p>",
           "effects": {
             "Guiding Bolt": {
               "name": "Guiding Bolt",
@@ -2973,11 +2973,11 @@
           }
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -3063,34 +3063,34 @@
           "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
         },
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p><span style=\"font-family:'Roboto Condensed', sans-serif\">The </span>[[lookup @name lowercase]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> makes three </span><span class=\"Apple-converted-space\"> </span>[[/item .mmRend0000000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> attacks. It can replace one attack with a use of Spellcasting to cast </span><em>[[/item .mmSpellcasting00.Activity.hHQiQYfo3AV5ZW6F]]</em><span style=\"font-family:'Roboto Condensed', sans-serif\"> (level 5 version).</span></p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
-          "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "撕裂",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。</p>"
         },
         "Poison Breath": {
           "name": "Poison Breath",
           "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=lnabW9bM51HoluPp]], [[lookup @target.template.size activity=lnabW9bM51HoluPp]]尺[[lookup @target.template.type capitalize activity=lnabW9bM51HoluPp]]区域内的每名生物。</p><p class=\"feature\"><em>失败：</em> [[/damage average]] 伤害。</p><p class=\"feature\"><em>成功：</em> 半伤。</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           }
         },
@@ -3120,7 +3120,7 @@
           "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=Blm8nddvCOH69bL8]], each [[lookup @target.affects.type activity=Blm8nddvCOH69bL8]] in a [[lookup @target.template.size activity=Blm8nddvCOH69bL8]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]] can see within [[lookup @range.value activity=Blm8nddvCOH69bL8]] feet.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target takes a −2 penalty to AC until the end of its next turn.</p><p class=\"feature\"><em>Failure or Success:</em> The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -3131,11 +3131,11 @@
           }
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -3190,17 +3190,17 @@
       "description": "<h1>Red Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Rx08X1mW6m5uYldI caption=false cite=false classes=\"no-embed mm\"]</p><h2>Ancient Red Dragon</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.2rLkCQ4pLH4RKO4V caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p> [[lookup @name lowercase]]  豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item .mmRend0000000000]] attacks. It can replace one attack with a use of Spellcasting to cast [[/item .mmSpellcasting00.Activity.bXJvvKCoI0uVBG4W]] (level 3 version).</p>",
           "activities": {
             "Use": {
@@ -3247,11 +3247,11 @@
           }
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -3339,11 +3339,11 @@
           }
         },
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
+          "name": "传奇抗性",
           "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
+              "name": "耗用",
               "condition": "fails a saving throw"
             }
           }
@@ -3361,7 +3361,7 @@
           "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=r4MGqEq5U9aaseBh]], each [[lookup @target.affects.type activity=r4MGqEq5U9aaseBh]] in a [[lookup @target.template.size activity=r4MGqEq5U9aaseBh]]-foot Cone.</p><p class=\"feature\"><em>First Failure:</em> The target has the &amp;Reference[Incapacitated apply=false] condition until the end of its next turn, when it repeats the save.</p><p class=\"feature\"><em>Second Failure:</em> The target has the &amp;Reference[Paralyzed apply=false] condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           },
           "effects": {
@@ -3393,11 +3393,11 @@
           }
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -3526,11 +3526,11 @@
           "description": "<p>The [[lookup @name lowercase]] can move across and climb icy surfaces without needing to make an ability check. Additionally, &amp;Reference[Difficult Terrain] composed of ice or snow doesn’t cost it extra movement.</p>"
         },
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
+          "name": "传奇抗性",
           "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
+              "name": "耗用",
               "condition": "fails a saving throw"
             }
           }
@@ -3585,11 +3585,11 @@
           }
         },
         "Pounce": {
-          "name": "Pounce",
-          "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item Rend]] attack.</p>",
+          "name": "扑杀",
+          "description": "<p> [[lookup @name lowercase]] 移动至多等于其速度一半的距离并发动一次 [[/item Rend]] 攻击。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
