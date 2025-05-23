@@ -11103,7 +11103,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]] 使用[[/item .mmElementalFlail]] 或[[/item .mmElementalClaw0]] 发动三次攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .mmElementalFlail]] 或 [[/item .mmElementalClaw0]] 发动三次攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -11125,11 +11125,11 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]{四象法门}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{法师之手}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em></p>"
         },
         "Elemental Absorption": {
           "name": "元素吸收",
-          "description": "<p class=\"feature\"><em>Trigger:</em> The [[lookup @name lowercase]] [[lookup @activation.condition activity=5HvUimjPYvPVM4g7]]. <em>Response:</em> The [[lookup @name lowercase]] gives itself Resistance to that instance of damage and gains [[/healing temp]].</p><section id=\"secret-me52mQIKaehg7iLh\" class=\"secret\"><p><span class=\"s1\"><strong>Foundry Note</strong></span></p><p class=\"p2\">This feature also provides an <strong>Active Effect (AE)</strong> that will modify this creature's <strong>damage resistances</strong>. You can enable the damage resistance of your choice in the character sheet's effects tab.</p></section>",
+          "description": "<p class=\"feature\"><em>触发：</em>[[lookup @name lowercase]] [[lookup @activation.condition activity=5HvUimjPYvPVM4g7]]。<em>响应：</em>[[lookup @name lowercase]] 获得对该次伤害实例的抗性并获得 [[/healing temp]]。</p><section class=\"secret\" id=\"secret-me52mQIKaehg7iLh\">    <p><span class=\"s1\"><strong>Foundry Note</strong></span></p>    <p class=\"p2\">此特性还提供了一个<strong>激活效应（AE）</strong>，其将修改此生物的<strong>伤害抗性</strong>。你可以在角色卡的“效应”选项卡中启用选择的伤害抗性。</p></section>",
           "activities": {
             "heal": {
               "condition": "受到强酸、寒冷、火焰、闪电或雷鸣伤害"
@@ -11138,23 +11138,23 @@
           "effects": {
             "Resistance: Acid": {
               "name": "抗性：强酸",
-              "description": "<p>The creature has resistance to acid damage.</p>"
+              "description": "<p>你获得强酸伤害抗性。</p>"
             },
             "Resistance: Cold": {
               "name": "抗性：寒冷",
-              "description": "<p>获得寒冷伤害抗性。</p>"
+              "description": "<p>你获得寒冷伤害抗性。</p>"
             },
             "Resistance: Fire": {
               "name": "抗性：火焰",
-              "description": "<p>获得火焰伤害抗性。</p>"
+              "description": "<p>你获得火焰伤害抗性。</p>"
             },
             "Resistance: Lightning": {
               "name": "抗性：闪电",
-              "description": "<p>获得闪电伤害抗性。</p>"
+              "description": "<p>你获得闪电伤害抗性。</p>"
             },
             "Resistance: Thunder": {
               "name": "抗性：雷鸣",
-              "description": "<p>获得雷鸣伤害抗性。</p>"
+              "description": "<p>你获得雷鸣伤害抗性。</p>"
             }
           }
         },
@@ -11202,7 +11202,7 @@
         },
         "Trample": {
           "name": "践踏",
-          "description": "<p class=\"feature\"><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=QckCIpsC3BdEHycI]], [[lookup @target.affects.labels.statblock activity=QckCIpsC3BdEHycI]] within [[lookup @range.value activity=QckCIpsC3BdEHycI]] feet that has the Prone condition.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage.</p><p class=\"feature\"><em>Success:</em> Half damage.</p>",
+          "description": "<p class=\"feature\"><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=QckCIpsC3BdEHycI]]，单一 [[lookup @range.value activity=QckCIpsC3BdEHycI]] 尺内处于 &Reference[Prone apply=false] 状态的生物。</p><p class=\"feature\"><em>失败：</em> [[/damage average]] 伤害。</p><p class=\"feature\"><em>成功：</em>半伤。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -11211,7 +11211,7 @@
         },
         "Gore": {
           "name": "顶撞",
-          "description": "<p>[[/attack extended]]. [[/damage extended average]]. If the target is a [[lookup @target.affects.special activity=OeVR19Hp2kvxSNZv]] creature and the [[lookup @name lowercase]] moved 20+ feet straight toward it immediately before the hit, the target has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了 20+ 尺且目标生物体型[[lookup @target.affects.special activity=OeVR19Hp2kvxSNZv]]，则目标陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Attack": {
               "name": "攻击"
@@ -11220,7 +11220,7 @@
           "effects": {
             "Prone": {
               "name": "倒地",
-              "description": "<p>你陷入 &Reference[Prone apply=false] 状态，如果野猪使用了移动攻击的特性。</p>"
+              "description": "<p>你陷入 &Reference[Prone apply=false] 状态，如果象使用了移动攻击的特性。</p>"
             }
           }
         }
@@ -11232,7 +11232,7 @@
       "items": {
         "Ram": {
           "name": "顶撞",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=z58sUDUmqxECJgT3]] creature and the [[lookup @name lowercase]] moved 20+ feet straight toward it immediately before the hit, the target takes an extra [[/damage 1d6 bludgeoning average]] damage and has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了 20+ 尺且目标生物体型不超过大型，则目标额外受到[[/damage 1d6 bludgeoning average]]伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Moving Attack": {
               "name": "移动攻击"
@@ -11241,7 +11241,7 @@
           "effects": {
             "Prone": {
               "name": "倒地",
-              "description": "<p>目标陷入 &amp;Reference[Prone apply=false] 状态。</p>"
+              "description": "<p>你陷入 &amp;Reference[Prone apply=false] 状态。</p>"
             }
           }
         }
@@ -11250,7 +11250,7 @@
     "Empyrean": {
       "name": "至高天",
       "tokenName": "至高天",
-      "description": "<h1>Empyreans</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.EeghH4EY0e0ozOgz caption=false cite=false classes=\"no-embed mm\"]</p><h2>Empyrean</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.48cwdwrUBvwJfXPn caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>至高天</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.EeghH4EY0e0ozOgz caption=false cite=false classes=\"no-embed mm\"]</p><h2>至高天</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.48cwdwrUBvwJfXPn caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
           "name": "传奇抗性",
@@ -11268,7 +11268,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two attacks, using [[/item Sacred Weapon]] or [[/item Divine Ray]] in any combination.</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .mmSacredWeapon00]] 或 [[/item .mmDivineRay00000]]发动攻击两次攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -11277,7 +11277,7 @@
         },
         "Sacred Weapon": {
           "name": "圣洁武器",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], and the target has the &amp;Reference[Stunned apply=false] condition until the start of the [[lookup @name lowercase]]’s next turn. The target can choose not to be Stunned, in which case it takes an extra [[/damage activity=EotF3wFKQQnsLEGX]] damage that bypasses Resistance or Immunity.</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]，且目标陷入 &Reference[Stunned apply=false] 状态直至 [[lookup @name lowcase]] 的下一回合开始。目标可以选择不受震慑，改为额外受到 [[/damage activity=EotF3wFKQQnsLEGX]] 伤害（无视抗性与免疫）。</p>",
           "activities": {
             "Extra Damage": {
               "name": "额外伤害"
@@ -11286,7 +11286,7 @@
           "effects": {
             "Stunned": {
               "name": "震慑",
-              "description": "<p>The target has the &amp;Reference[Stunned apply=false] condition until the start of the [[lookup @name lowercase]]’s next turn.</p>"
+              "description": "<p>你陷入 &Reference[Stunned apply=false] 状态直至至高天的下一回合开始。</p>"
             }
           }
         },
@@ -11296,7 +11296,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCalmEmotio]{Calm Emotions}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{Greater Restoration}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswithou]{Pass without Trace}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]{Water Breathing}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommune000]{Commune}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]{Dispel Evil and Good}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em></p>"
+          "description": "<p class=\"feature\">至高天施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCalmEmotio]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswithou]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommune000]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em></p>"
         },
         "Calm Emotions": {
           "name": "安定心神",
@@ -11326,11 +11326,11 @@
         },
         "Pass without Trace": {
           "name": "行动无踪",
-          "description": "<p>You radiate a concealing aura in a 30-foot Emanation for the duration. While in the aura, you and each creature you choose have a +10 bonus to [[/check ability=dex skill=ste]] checks and leave no tracks.</p>",
+          "description": "<p>你在法术持续时间于 30 尺光环范围内散发出遮蔽灵光。位于灵光范围期间，你和每名你选择的生物在 [[/check ability=dex skill=ste]] 检定上获得 +10 加值，且不会留下任何踪迹。</p>",
           "effects": {
             "Concealed": {
-              "name": "Concealed",
-              "description": "<p>While in the aura, you and each creature you choose have a +10 bonus to [[/check ability=dex skill=ste]] checks and leave no tracks.</p>"
+              "name": "隐蔽",
+              "description": "<p>你和每名被施法者选择的生物在 [[/check ability=dex skill=ste]] 检定上获得 +10 加值，且不会留下任何踪迹。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -11338,11 +11338,11 @@
           }
         },
         "Water Breathing": {
-          "name": "Water Breathing",
-          "description": "<p>This spell grants up to ten willing creatures of your choice within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration.</p>",
+          "name": "水下呼吸",
+          "description": "<p>在法术终止前，该法术让施法距离内你能看见的至多十个自愿生物获得在水下呼吸的能力。此外，受术者依然保有正常的呼吸能力。</p>",
           "effects": {
             "Water Breathing": {
-              "name": "Water Breathing"
+              "name": "水下呼吸"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -11350,8 +11350,8 @@
           }
         },
         "Commune": {
-          "name": "Commune",
-          "description": "<p>You contact a deity or a divine proxy and ask up to three questions that can be answered with yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.</p><p>Divine beings aren’t necessarily omniscient, so you might receive “unclear” as an answer if a question pertains to information that lies beyond the deity’s knowledge. In a case where a one-word answer could be misleading or contrary to the deity’s interests, the DM might offer a short phrase as an answer instead.</p><p>If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.</p>",
+          "name": "通神术",
+          "description": "<p>你与一名神明或一名神明的代理人进行联系，并询问至多三个能以“是”或“否”回答的问题。你必须在法术结束前完成提问。你会收到每个问题的正确答案。</p><p>这些神能存在也并非全知全能，因此当问题涉及的信息超过神的认知范围时，你可能会得到一句“不确定”作为回答。另外当一个单词的回答可能引致误导或者与神的兴致相违背时，DM 可能会提供一句短语作为答案。</p><p>若你在完成一次长休前施展两次或更多次的该法术，则法术有一定的几率不给任何答复。此概率从第二次施展起每次累计25％。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -11359,14 +11359,14 @@
           }
         },
         "Dispel Evil and Good": {
-          "name": "Dispel Evil and Good",
-          "description": "<p>For the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions.</p><p><strong>Break Enchantment.</strong> As a Magic action, you touch a creature that is possessed by or has the &amp;Reference[Charmed] or &amp;Reference[Frightened] condition from one or more creatures of the types above. The target is no longer possessed, Charmed, or Frightened by such creatures.</p><p><strong>Dismissal.</strong> As a Magic action, you target one creature you can see within 5 feet of you that has one of the creature types above. The target must succeed on a Charisma saving throw or be sent back to its home plane if it isn’t there already. If they aren’t on their home plane, Undead are sent to the Shadowfell, and Fey are sent to the Feywild.</p>",
+          "name": "反制善恶",
+          "description": "<p>法术持续时间内，天族、元素、妖精、邪魔和亡灵对你的攻击检定具有劣势。你可以使用下述特殊功能之一以提前结束法术。</p><p><strong>破咒。</strong> 以一个魔法动作，你触碰一名因上述生物类型的任意生物而被其附身、陷入 &Reference[Charmed] 或 &Reference[Frightened] 状态的生物。目标不再被上述生物附身，魅惑或恐慌。</p><p><strong>驱离。</strong> 以一个魔法动作，你选择距你 5 尺内的一名可见生物，其生物类型必须是上述生物类型之一。目标必须成功于一次魅力豁免，否则，若其并未处于家园位面，则被遣送回其家园位面。对于亡灵和妖精，若它们并未处于家园位面，则亡灵会被遣送回堕影冥界，妖精则被遣送回妖精荒野。</p>",
           "activities": {
             "Dismissal": {
-              "name": "Dismissal"
+              "name": "驱离"
             },
             "Break Enchantment": {
-              "name": "Break Enchantment"
+              "name": "破咒"
             },
             "Cast": {
               "name": "施展"
@@ -11374,8 +11374,8 @@
           },
           "effects": {
             "Dispelling Evil and Good": {
-              "name": "Dispelling Evil and Good",
-              "description": "<p>For the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions: <strong>Break Enchantment</strong> or <strong>Dismissal</strong>.</p>"
+              "name": "反制善恶",
+              "description": "<p>法术持续时间内，天族、元素、妖精、邪魔和亡灵对你的攻击检定具有劣势。你可以使用下述特殊功能之一以提前结束法术：<strong>破咒</strong> 或 <strong>驱离</strong>。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -11397,18 +11397,18 @@
           }
         },
         "Bolster": {
-          "name": "Bolster",
-          "description": "<p>The [[lookup @name lowercase]] gains [[lookup @healing.formula activity=v5km8Vio4N6HgkF6]] Temporary Hit Points, and the [[lookup @name lowercase]] and each ally within [[lookup @range.value activity=v5km8Vio4N6HgkF6]] feet of it gain Advantage on D20 Tests until the end of the [[lookup @name lowercase]]'s next turn. The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>",
+          "name": "鼓舞",
+          "description": "<p>[[lookup @name lowercase]]获得 [[lookup @healing.formula activity=v5km8Vio4N6HgkF6]] 临时生命值，且[[lookup @name lowercase]]及其 [[lookup @range.value activity=v5km8Vio4N6HgkF6]] 尺内的盟友进行的D20检定具有优势，直到[[lookup @name lowercase]]的下一回合结束。此后[[lookup @name lowercase]] 直至其下个回合开始都无法再执行此动作。</p>",
           "effects": {
             "Bolstered: Test Advantage": {
-              "name": "Bolstered: Test Advantage",
-              "description": "<p>The target gains Advantage on D20 Tests until the end of the user's next turn.</p>"
+              "name": "鼓舞：检定优势",
+              "description": "<p>你进行的D20检定具有优势，直到至高天的下一回合结束。</p>"
             }
           }
         },
         "Shockwave of Glory": {
-          "name": "Shockwave of Glory",
-          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=D9xmcR92PLqyk6bZ]], each [[lookup @target.affects.type activity=D9xmcR92PLqyk6bZ]] in a [[lookup @target.template.size activity=D9xmcR92PLqyk6bZ]]-foot Emanation originating from the [[lookup @name lowercase]].</p><p><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Prone apply=false] condition.</p><p><em>Success:</em> Half damage only.</p><p><em>Failure or Success:</em> The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>",
+          "name": "荣光撼天",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=D9xmcR92PLqyk6bZ]]，源自[[lookup @name lowercase]]的 [[lookup @target.template.size activity=D9xmcR92PLqyk6bZ]] 尺光环区域内的所有生物。</p><p><em>失败：</em> [[/damage average]]伤害，且目标陷入 &Reference[Prone apply=false] 状态。</p><p><em>成功：</em> 仅半伤。</p><p><em>失败或成功：</em> [[lookup @name lowercase]] 直至其下个回合开始都无法再执行此动作。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -11422,8 +11422,8 @@
           }
         },
         "Smite": {
-          "name": "Smite",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] makes one [[/item Divine Ray]] attack.</p>",
+          "name": "圣裁",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 发动一次 [[/item .mmDivineRay00000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -11433,33 +11433,33 @@
       }
     },
     "Empyrean Iota": {
-      "name": "Empyrean Iota",
-      "tokenName": "Empyrean Iota",
-      "description": "<h1>Empyreans</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.EeghH4EY0e0ozOgz caption=false cite=false classes=\"no-embed mm\"]</p><h2>Empyrean Iota</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.UfP3XBh5DPF3cHCM caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "至高天微尘",
+      "tokenName": "至高天微尘",
+      "description": "<h1>至高天</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.EeghH4EY0e0ozOgz caption=false cite=false classes=\"no-embed mm\"]</p><h2>至高天微尘</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.UfP3XBh5DPF3cHCM caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Incorporeal Movement": {
-          "name": "Incorporeal Movement",
-          "description": "<p>The [[lookup @name lowercase]] can move through other creatures and objects as if they were &amp;Reference[Difficult Terrain]. It takes [[/damage 1d10 average type=force]] damage if it ends its turn inside an object.</p>"
+          "name": "虚体移动",
+          "description": "<p>[[lookup @name lowercase]] 可以如同穿过 &Reference[Difficult Terrain]一样穿过其他生物和物件。如果它在自己的回合结束时仍处在物件内部则受到[[/damage 1d10 average type=force]] 伤害。</p>"
         },
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>[[lookup @name lowercase]] 为抵抗法术和其它魔法效应而作的豁免检定具有优势。</p>"
         },
         "Otherworldly Strike": {
-          "name": "Otherworldly Strike",
-          "description": "<p class=\"feature\"><em>Melee or Ranged Attack Roll:</em> [[/attack]], reach [[lookup @item.range.reach]] ft. or range [[lookup @item.range.value]] ft. <em>Hit:</em> [[/damage average]] damage ([[lookup @name lowercase]]’s choice).</p>"
+          "name": "异界打击",
+          "description": "<p class=\"feature\"><em>近战或远程攻击检定：</em> [[/attack]]，触及 [[lookup @item.range.reach]] 尺或射程 [[lookup @item.range.value]] 尺</p><p class=\"feature\"><em>命中：</em> [[/damage average]]伤害（由 [[lookup @name lowercase]] 选择）</p>"
         },
         "Spellcasting": {
-          "name": "Spellcasting",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]{Bless}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLesserRest]{Lesser Restoration}</em> (as an action)</p>"
+          "name": "施法",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLesserRest]</em>（以动作施展）</p>"
         },
         "Bless": {
-          "name": "Bless",
-          "description": "<p>You bless up to three creatures within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 1.</p>",
+          "name": "祝福术",
+          "description": "<p>你祝福施法范围内至多 3 个生物。在法术终止前，每当受术目标进行攻击检定或豁免检定时，都可以在检定结果中额外加入 1d4。</p><p><strong>升环施法：</strong> 使用高于一环的法术位施展此法术时，你使用的法术位每比一环高一环，就能多指定一个生物。</p>",
           "effects": {
             "Blessed": {
-              "name": "Blessed",
-              "description": "<p>Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save.</p>"
+              "name": "祝福",
+              "description": "<p>在法术终止前，每当你进行攻击检定或豁免检定时，都可以在检定结果中额外加入 1d4。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -11467,8 +11467,8 @@
           }
         },
         "Lesser Restoration": {
-          "name": "Lesser Restoration",
-          "description": "<p>You touch a creature and end one condition on it: &amp;Reference[blinded], &amp;Reference[deafened], &amp;Reference[paralyzed], or &amp;Reference[poisoned].</p>",
+          "name": "次级复原术",
+          "description": "<p>你触碰一个生物，并终止正影响它的一种状态：&Reference[blinded]、&Reference[deafened]、&Reference[paralyzed] 或 &Reference[poisoned]。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -11476,8 +11476,8 @@
           }
         },
         "Healing Word": {
-          "name": "Healing Word",
-          "description": "<p>The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor]{Healing Word}</em>, using the same spellcasting ability as Spellcasting.</p>"
+          "name": "治愈真言",
+          "description": "<p>[[lookup @name lowercase]] 施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor]</em>，使用与施法动作相同的施法属性。</p>"
         },
         "myomZEnYjGO4ePQh": {
           "name": "治愈真言",
@@ -11493,7 +11493,7 @@
     "Erinyes": {
       "name": "罪魔",
       "tokenName": "罪魔",
-      "description": "<h1>Erinyes</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.YXZP2A00UrCViGCe caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>罪魔</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.YXZP2A00UrCViGCe caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Diabolical Restoration": {
           "name": "魔鬼复苏",
@@ -11647,7 +11647,7 @@
       "description": "<h1>Faerie Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.AqBgo4Po2QO1WBkC caption=false cite=false classes=\"no-embed mm\"]</p><h2>Faerie Dragon Adult</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.2YePImjgR84EIBWl caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>[[lookup @name lowercase]] 为抵抗法术和其它魔法效应而作的豁免检定具有优势。</p>"
         },
         "Bite": {
@@ -11670,7 +11670,7 @@
           }
         },
         "Spellcasting": {
-          "name": "Spellcasting",
+          "name": "施法",
           "description": "<p class=\"feature\"><em><strong>Spellcasting.</strong></em> The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]{Dancing Lights}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHallucinat]{Hallucinatory Terrain}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPolymorph0]{Polymorph}</em></p>"
         },
         "Superior Invisibility": {
@@ -11763,7 +11763,7 @@
       "description": "<h1>Faerie Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.AqBgo4Po2QO1WBkC caption=false cite=false classes=\"no-embed mm\"]</p><h2>Faerie Dragon Youth</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.QKc0waSu0Sdmk38v caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>[[lookup @name lowercase]] 为抵抗法术和其它魔法效应而作的豁免检定具有优势。</p>"
         },
         "Bite": {
@@ -12019,7 +12019,7 @@
           "description": "<p>The [[lookup @name lowercase]] sheds Bright Light in a 15-foot radius and Dim Light for an additional 15 feet.</p>"
         },
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>[[lookup @name lowercase]] 为抵抗法术和其它魔法效应而作的豁免检定具有优势。</p>"
         },
         "Undead Restoration": {
@@ -12042,7 +12042,7 @@
           }
         },
         "Spellcasting": {
-          "name": "Spellcasting",
+          "name": "施法",
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em></p><p class=\"feature-trait\"><strong>2/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi]{Magic Missile}</em> (level 2 version)</p><p class=\"feature-trait\"><strong>1/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]{Fireball}</em></p>"
         },
         "Fire Ray": {
