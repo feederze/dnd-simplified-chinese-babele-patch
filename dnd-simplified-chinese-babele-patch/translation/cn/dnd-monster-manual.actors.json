@@ -5846,7 +5846,7 @@
             },
             "Prone": {
               "name": "倒地",
-              "description": "若青足龙蛇死亡，你不再被束缚并可以使用 15 尺移动力逃离尸体，以 &Reference[Prone apply=false] 状态脱离。"
+              "description": "<p>若青足龙蛇死亡，你不再被束缚并可以使用 15 尺移动力逃离尸体，以 &Reference[Prone apply=false] 状态脱离。</p>"
             }
           }
         },
@@ -12288,7 +12288,7 @@
         },
         "Standing Leap": {
           "name": "立定起跳",
-          "description": "<p class=\"feature\">不论是否助跑，[[lookup @name lowercase]]都跳远至多 10 尺或跳高至高 5 尺。</p>"
+          "description": "<p class=\"feature\">不论是否助跑，[[lookup @name lowercase]]都跳远至多 20 尺或跳高至高 10 尺。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -12929,7 +12929,7 @@
       "items": {
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item Rend]] attacks.</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmRend0000000000]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -12937,18 +12937,18 @@
           }
         },
         "Rend": {
-          "name": "Rend",
+          "name": "撕裂",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
     "Giant Elk": {
-      "name": "巨麋鹿",
-      "tokenName": "巨麋鹿",
+      "name": "巨赤鹿",
+      "tokenName": "巨赤鹿",
       "items": {
         "Ram": {
-          "name": "Ram",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Huge or smaller creature and the elk moved 20+ feet straight it immediately before the hit, the target takes an extra [[/damage average activity=i9cI4yuGrjw1or1q]] and has the &amp;Reference[Prone apply=false] condition.</p>",
+          "name": "冲撞",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若[[lookup @name lowcase]]在此次攻击前立即向着该目标直线移动了至少 20 尺且目标生物体型不超过巨型，则目标额外受到 [[/damage average activity=i9cI4yuGrjw1or1q]] 伤害并陷入 &Reference[Prone apply=false]状态。</p>",
           "activities": {
             "Moving Attack": {
               "name": "移动攻击"
@@ -12972,7 +12972,7 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Illumination": {
-          "name": "Illumination",
+          "name": "照明",
           "description": "<p>[[lookup @name lowercase]] 散发出半径 10 尺的明亮光照以及额外 10 尺的微光光照。</p>"
         }
       }
@@ -12987,11 +12987,11 @@
         },
         "Standing Leap": {
           "name": "立定起跳",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]]’s Long Jump is up to 20 feet and its High Jump is up to 10 feet with or without a running start.</p>"
+          "description": "<p class=\"feature\">不论是否助跑，[[lookup @name lowercase]]都跳远至多 20 尺或跳高至高 10 尺。</p>"
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]).</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过中型，则其还会陷入 &Reference[Grappled apply=false] 受擒状态（逃脱DC [[lookup @skills.ath.passive]]）。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -13000,29 +13000,29 @@
           "effects": {
             "Grappled": {
               "name": "受擒",
-              "description": "<p>If the target has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC).</p>"
+              "description": "<p>若你的生物体型不超过中型，则你还会陷入 &Reference[Grappled apply=false] 状态（逃脱DC 11,[[/check ability=str skill=ath format=long]]）。</p>"
             }
           }
         },
         "Swallow": {
-          "name": "Swallow",
-          "description": "<p>The [[lookup @name lowercase]] swallows a [[lookup @target.affects.special activity=IPD9mDjKJEXc2uMQ]] target it is grappling. While swallowed, the target isn’t Grappled but has the &amp;Reference[Blinded apply=false] and &amp;Reference[Restrained apply=false] conditions, and it has &amp;Reference[Total Cover] against attacks and other effects outside the frog.</p><p>While swallowing the target, the [[lookup @name lowercase]] can’t use Bite, and if the [[lookup @name lowercase]] dies, the swallowed target is no longer Restrained and can escape from the corpse using 5 feet of movement, exiting with the &amp;Reference[Prone apply=false] condition.</p><p>At the end of the [[lookup @name lowercase]]’s next turn, the swallowed target takes [[/damage 2d4 acid average]] damage. If that damage doesn’t kill it, the [[lookup @name lowercase]] disgorges it, causing it to exit &amp;Reference[Prone apply=false].</p>",
+          "name": "吞咽",
+          "description": "<p>[[lookup @name lowercase]] 吞下一名 [[lookup @target.affects.special activity=IPD9mDjKJEXc2uMQ]] 的生物。在吞咽期间，目标不再受擒但会陷入 &Reference[Blinded apply=false] 和 &Reference[Restrained apply=false] 状态，并对 [[lookup @name lowername]]体外的攻击或其他效应而言处于 &Reference[Total Cover]。</p><p>在吞咽目标期间，[[lookup @name lowercase]] 无法使用啃咬，且若 [[lookup @name lowercase]] 死亡，被吞咽生物不再被束缚并可以使用 15 尺移动力逃离尸体，以 &Reference[Prone apply=false] 状态脱离。</p><p>在 [[lookup @name lowercase]] 下一回合结束时，被吞咽的目标受 [[/damage 2d4 acid average]] 伤害。若此伤害未杀死目标，则 [[lookup @name lowercase]] 将其吐出，并以 &Reference[Prone apply=false] 状态脱离。</p>",
           "activities": {
             "Damage: Swallowed": {
-              "name": "Damage: Swallowed"
+              "name": "伤害：吞咽"
             },
             "Swallowed": {
-              "name": "Swallowed"
+              "name": "吞下"
             }
           },
           "effects": {
             "Blinded, Restrained, and Total Cover": {
-              "name": "Blinded, Restrained, and Total Cover",
-              "description": "<p>While swallowed, a creature has the &amp;Reference[Blinded apply=false] and &amp;Reference[Restrained apply=false] conditions, has &amp;Reference[Total Cover apply=false] against attacks.</p>"
+              "name": "目盲，束缚并全身掩护",
+              "description": "<p>被吞咽期间，你陷入 &Reference[Blinded apply=false] 和 &Reference[Restrained apply=false] 状态，对巨蛙体外的攻击或其他效应而言处于 &Reference[Total Cover]。</p>"
             },
             "Prone": {
               "name": "倒地",
-              "description": "<p>If you are regurgitated, you fall into a space within 10 ft. and are &amp;Reference[Prone apply=false].</p>"
+              "description": "<p>若巨蛙死亡，你不再被束缚并可以使用 15 尺移动力逃离尸体，以 &Reference[Prone apply=false] 状态脱离。</p>"
             }
           }
         }
@@ -13033,8 +13033,8 @@
       "tokenName": "巨山羊",
       "items": {
         "Ram": {
-          "name": "Ram",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=z58sUDUmqxECJgT3]] creature and the [[lookup @name lowercase]] moved 20+ feet straight toward it immediately before the hit, the target takes an extra [[/damage 2d4 bludgeoning average]] damage and has the &amp;Reference[Prone apply=false] condition.</p>",
+          "name": "冲撞",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了 20+ 尺且目标生物体型不超过大型，则目标额外受到[[/damage 2d4 bludgeoning average]]伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Moving Attack": {
               "name": "移动攻击"
@@ -13058,8 +13058,8 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Rampage": {
-          "name": "Rampage",
-          "description": "<p class=\"feature\">Immediately after dealing damage to a creature that is already &amp;Reference[Bloodied], the [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/item .mmBite0000000000]] attack.</p>",
+          "name": "横行",
+          "description": "<p>[[lookup @name lowercase]]在对一名已&Reference[Bloodied]的生物造成伤害后，可以立即移动至多等于其速度一半的距离并发动一次 [[/item .mmBite0000000000]]攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -13074,7 +13074,7 @@
       "items": {
         "Spider Climb": {
           "name": "蛛行",
-          "description": "<p>The [[lookup @name lowercase]] can climb difficult surfaces, including along ceilings, without needing to make an ability check.</p>"
+          "description": "<p>[[lookup @name lowercase]] 可以在难以攀爬的表面上攀爬，包括沿着天花板移动，且不需要为此进行属性检定。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -13087,12 +13087,12 @@
       "tokenName": "巨章鱼",
       "items": {
         "Water Breathing": {
-          "name": "Water Breathing",
-          "description": "<p>The [[lookup @name lowercase]] can breathe only underwater. It can hold its breath for 1 hour outside water.</p>"
+          "name": "水下呼吸",
+          "description": "<p>[[lookup @name lowercase]] 只能在水下呼吸。其可以在空气中屏息一小时。</p>"
         },
         "Tentacles": {
-          "name": "Tentacles",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from all eight tentacles. While Grappled, the target has the &amp;Reference[Restrained apply=false] condition.</p>",
+          "name": "触须",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过中型，则其被八条触手擒抱，陷入&Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。受擒期间，目标还会陷入 &Reference[Restrained apply=false] 状态。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -13101,13 +13101,13 @@
           "effects": {
             "Grappled & Restrained": {
               "name": "受擒并束缚",
-              "description": "<p>The target has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC).While Grappled, the target has the &amp;Reference[Restrained apply=false] condition.</p>"
+              "description": "<p>你陷入 &Reference[Grappled apply=false] 状态（逃脱DC 13，[[/check ability=str skill=ath format=long]]）。受擒期间，你还会陷入 &Reference[Restrained apply=false] 状态。</p>"
             }
           }
         },
         "Ink Cloud": {
-          "name": "Ink Cloud",
-          "description": "<p><em>Trigger</em>: The [[lookup @name lowercase]] takes damage while underwater. <em>Response</em>: The [[lookup @name lowercase]] releases ink that fills a [[lookup @target.template.size activity=1MiIPcVuCpfgBIkS]]-foot Cube centered on itself, and the [[lookup @name lowercase]] moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.</p>",
+          "name": "墨水云",
+          "description": "<p><em>触发：</em>[[lookup @name lowercase]]，在水下受到伤害。</p><p><em>响应：</em> [[lookup @name lowercase]] 释放出墨水覆盖以自己为中心的 [[lookup @target.template.size activity=1MiIPcVuCpfgBIkS]]尺立方区域，且 [[lookup @name lowercase]] 移动至多等于其游泳速度的距离。该立方区域在 1 分钟内变为 &Reference[Heavily Obscured]，当有强劲水流或类似效应将墨水击散时，该效应提前结束。 </p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -13117,8 +13117,8 @@
       }
     },
     "Giant Owl": {
-      "name": "Owl",
-      "tokenName": "Owl",
+      "name": "巨猫头鹰",
+      "tokenName": "巨猫头鹰",
       "items": {
         "Flyby": {
           "name": "飞掠",
@@ -13129,12 +13129,12 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Spellcasting": {
-          "name": "Spellcasting",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no spell components and using Wisdom as the spellcasting ability:</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]{Detect Evil and Good}, @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplClairvoyan]{Clairvoyance}</em></p>"
+          "name": "施法",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需任何法术成分并使用感知作为施法属性：</p><p class=\"feature-trait\"><strong>随意：</strong><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]，@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em></p><p class=\"feature-trait\"><strong>1/日：</strong><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplClairvoyan]</em></p>"
         },
         "Detect Evil and Good": {
-          "name": "Detect Evil and Good",
-          "description": "<p>For the duration, you sense the location of any Aberration, Celestial, Elemental, Fey, Fiend, or Undead within 30 feet of yourself. You also sense whether the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHallow0000]{Hallow}</em> spell is active there and, if so, where.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p>",
+          "name": "侦测善恶",
+          "description": "<p>在法术持续时间内，你定位距你 30 尺内任何异怪、天族、元素、妖精、邪魔、亡灵。你也可以感知到范围内是否具有激活的 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHallow0000] 并确定其位置。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -13142,7 +13142,7 @@
           },
           "effects": {
             "Detect Evil and Good": {
-              "name": "Detect Evil and Good"
+              "name": "侦测善恶"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -13150,8 +13150,8 @@
           }
         },
         "Detect Magic": {
-          "name": "Detect Magic",
-          "description": "<p>For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell’s school of magic.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p>",
+          "name": "侦测魔法",
+          "description": "<p>在法术持续时间内，你感受到距你 30 尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -13159,7 +13159,7 @@
           },
           "effects": {
             "Detect Magic": {
-              "name": "Detect Magic"
+              "name": "侦测魔法"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -13167,8 +13167,8 @@
           }
         },
         "Clairvoyance": {
-          "name": "Clairvoyance",
-          "description": "<p>You create an Invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The intangible, invulnerable sensor remains in place for the duration.</p><p>When you cast the spell, choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As a Bonus Action, you can switch between seeing and hearing.</p><p>A creature that sees the sensor (such as a creature benefiting from <em>See Invisibility</em> or &amp;Reference[truesight]) sees a luminous orb about the size of your fist.</p>",
+          "name": "鹰眼术",
+          "description": "<p>你在施法距离内某处创造一个隐形的传感器，该处可以是你熟悉的地点（你曾到访过或看见过的地方），也可以是你不熟悉的显眼处（比如一扇门后，拐角位置或树林里）。这一无形体且不受伤害的传感器会在法术持续期间停留在该地。</p><p>施展该法术时，你可以选择进行观察或是聆听。你可以通过传感器以所选的感官方式感测，如同你处在传感器所在的空间。你能够以一个附赠动作在观察和聆听之间切换。</p><p>可以看见传感器的生物（例如一名生物受益于<em>识破隐形</em>或 &Reference[truesight] 时）会看到传感器是一个拳头大小的发光球体。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -13182,8 +13182,8 @@
       "tokenName": "巨鼠",
       "items": {
         "Pack Tactics": {
-          "name": "Pack Tactics",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+          "name": "集群战术",
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -13192,12 +13192,12 @@
       }
     },
     "Giant Scorpion": {
-      "name": "Giant Scorpion",
-      "tokenName": "Giant Scorpion",
+      "name": "巨蝎",
+      "tokenName": "巨蝎",
       "items": {
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmClaw0000000000]] attacks and one [[/item .mmSting000000000]] attack.</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmClaw0000000000]] 攻击和一次 [[/item .mmSting000000000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -13206,7 +13206,7 @@
         },
         "Claw": {
           "name": "爪击",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].  If the target is a Large or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two claws.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过大型，则其还会被双爪之一擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -13215,12 +13215,12 @@
           "effects": {
             "Grappled": {
               "name": "受擒",
-              "description": "<p>The target has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC).</p>"
+              "description": "<p>你陷入 &Reference[Grappled apply=false] 状态（逃脱DC 13，[[/check ability=str skill=ath format=long]]）。</p>"
             }
           }
         },
         "Sting": {
-          "name": "Sting",
+          "name": "钉刺",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
@@ -13230,8 +13230,8 @@
       "tokenName": "巨海马",
       "items": {
         "Ram": {
-          "name": "Ram",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], or [[/damage average activity=YI7aqJ7iiFSYAT7z]] damage if the seahorse moved 20+ feet straight toward the target immediately before the hit.</p>",
+          "name": "冲撞",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]],。若巨海马在此次攻击前立即向着该目标直线移动了 20+ 尺，则改为[[/damage average activity=YI7aqJ7iiFSYAT7z]]伤害。</p>",
           "activities": {
             "Moving Attack": {
               "name": "移动攻击"
@@ -13239,18 +13239,18 @@
           }
         },
         "Bubble Dash": {
-          "name": "Bubble Dash",
-          "description": "<p>While underwater, the [[lookup @name lowercase]] moves up to half its Swim Speed without provoking &amp;Reference[Opportunity Attacks].</p>",
+          "name": "泡泡疾行",
+          "description": "<p>若 [[lookup @name lowercase]] 身处水下， [[lookup @name lowercase]] 至多等于其游泳速度一半的距离且不会引发&Reference[Opportunity Attacks]{借机攻击}。</p>",
           "activities": {
             "Expand Use": {
-              "name": "Expand Use",
-              "condition": "while underwater"
+              "name": "耗用",
+              "condition": "身处水下"
             }
           }
         },
         "Water Breathing": {
-          "name": "Water Breathing",
-          "description": "<p>The [[lookup @name lowercase]] can breathe only underwater.</p>"
+          "name": "水下呼吸",
+          "description": "<p>[[lookup @name lowercase]] 只能在水下呼吸</p>"
         }
       }
     },
@@ -13259,12 +13259,12 @@
       "tokenName": "巨鲨",
       "items": {
         "Water Breathing": {
-          "name": "Water Breathing",
-          "description": "<p>The [[lookup @name lowercase]] can breathe only underwater. It can hold its breath for {duration} outside water.</p>"
+          "name": "水下呼吸",
+          "description": "<p>[[lookup @name lowercase]] 只能在水中呼吸。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmBite0000000000]] attacks.</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmBite0000000000]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -13273,10 +13273,10 @@
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p><em>Melee Attack Roll:</em> [[/attack]] ([[lookup @activation.condition activity=xWlMeXFjELfSUWX9]]), reach [[lookup @item.range.reach item=xWlMeXFjELfSUWX9]] ft. [[/damage average extended]]</p>",
+          "description": "<p><em>近战攻击检定：</em>[[/attack]] （[[lookup @activation.condition activity=xWlMeXFjELfSUWX9]]），触及 [[lookup @item.range.reach item=xWlMeXFjELfSUWX9]] 尺。[[/damage average extended]]。</p>",
           "activities": {
             "attack": {
-              "condition": "with Advantage if the target doesn’t have all its Hit Point"
+              "condition": "若目标生命值未满则有优势"
             }
           }
         }
@@ -13288,19 +13288,19 @@
       "items": {
         "Spider Climb": {
           "name": "蛛行",
-          "description": "<p>The [[lookup @name lowercase]] can climb difficult surfaces, including along ceilings, without needing to make an ability check.</p>"
+          "description": "<p>[[lookup @name lowercase]] 可以在难以攀爬的表面上攀爬，包括沿着天花板移动，且不需要为此进行属性检定。</p>"
         },
         "Web Walker": {
-          "name": "Web Walker",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] ignores movement restrictions caused by webs, and the [[lookup @name lowercase]] knows the location of any other creature in contact with the same web.</p>"
+          "name": "蛛网行者",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 在蛛网上移动时无视蛛网造成的移动限制，且与蛛网接触时，[[lookup @name lowercase]]可以知道其他与该蛛网接触生物的位置。</p>"
         },
         "Bite": {
           "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Web": {
-          "name": "Web",
-          "description": "<p class=\"feature\"><em>Dexterity Saving Throw</em>: DC [[lookup @save.dc.value activity=6iMoUgxwYlvfKTXr]], one creature the [[lookup @name lowercase]] can see within [[lookup @range.value activity=6iMoUgxwYlvfKTXr]] feet.</p><p class=\"feature\"><em>Failure</em>: The target has the &amp;Reference[Restrained apply=false] condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage).</p>",
+          "name": "蛛网",
+          "description": "<p class=\"feature\"><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=6iMoUgxwYlvfKTXr]]，单一 [[lookup @range.value activity=6iMoUgxwYlvfKTXr]] 尺内 [[lookup @name lowcase]] 可见的生物。</p><p class=\"feature\"><em>失败：目标陷入</em> &Reference[Restrained apply=false] 状态直至蛛网被摧毁（AC 10；HP 5；火焰易伤；毒素和心灵伤害免疫）。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -13308,24 +13308,24 @@
           },
           "effects": {
             "Restrained": {
-              "name": "Restrained",
-              "description": "<p>The target has the &amp;Reference[Restrained apply] condition until the web is destroyed.</p>"
+              "name": "束缚",
+              "description": "<p>你陷入 &Reference[Restrained apply=false] 状态，持续至蛛网被摧毁。</p>"
             }
           }
         }
       }
     },
     "Giant Squid": {
-      "name": "Giant Squid",
-      "tokenName": "Giant Squid",
+      "name": "巨乌贼",
+      "tokenName": "巨乌贼",
       "items": {
         "Water Breathing": {
-          "name": "Water Breathing",
-          "description": "<p>The [[lookup @name lowercase]] can breathe only underwater. It can hold its breath for {duration} outside water.</p>"
+          "name": "水下呼吸",
+          "description": "<p>[[lookup @name lowercase]] 只能在水中呼吸。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes on [[/item .mmBite0000000000]] attack and one [[/item .mmTentacle000000]] attack.</p>",
+          "description": "<p>[[lookup @name lowercase]] 发出一次 [[/item .mmBite0000000000]] 攻击和一次 [[/item .mmTentacle000000]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -13337,8 +13337,8 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Tentacle": {
-          "name": "Tentacle",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Huge or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two tentacles, and the [[lookup @name lowercase]] can pull the target up to 10 feet straight toward itself.</p>",
+          "name": "触手",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]。若目标生物体型不超过巨型，则其被两条触手之一擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且 [[lookup @name lowcase]] 可以将目标朝自身直线拉近至多 10 尺。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -13347,13 +13347,13 @@
           "effects": {
             "Grappled": {
               "name": "受擒",
-              "description": "<p><strong>Escape Tests (see origin item for DC)</strong></p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
+              "description": "<p><strong>逃脱检定（见源物品DC）</strong></p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
             }
           }
         },
         "Ink Cloud": {
-          "name": "Ink Cloud",
-          "description": "<p><em>Trigger</em>: The [[lookup @name lowercase]] takes damage while underwater. </p><p><em>Response</em>: The [[lookup @name lowercase]] releases ink that fills a [[lookup @target.template.size activity=1MiIPcVuCpfgBIkS]]-foot Cube centered on itself, and the [[lookup @name lowercase]] moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.</p>",
+          "name": "墨水云",
+          "description": "<p><em>触发：</em>[[lookup @name lowercase]]，在水下受到伤害。</p><p><em>响应：</em> [[lookup @name lowercase]] 释放出墨水覆盖以自己为中心的 [[lookup @target.template.size activity=1MiIPcVuCpfgBIkS]]尺立方区域，且 [[lookup @name lowercase]] 移动至多等于其游泳速度的距离。该立方区域在 1 分钟内变为 &Reference[Heavily Obscured]，当有强劲水流或类似效应将墨水击散时，该效应提前结束。 </p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -13361,16 +13361,16 @@
           },
           "effects": {
             "Blinded: Heavily Obscured": {
-              "name": "Blinded: Heavily Obscured",
-              "description": "<p>You have the &amp;Reference[Blinded apply=false] condition while trying to see something in a Heavily Obscured space.</p>"
+              "name": "目盲：重度遮蔽",
+              "description": "<p>若你尝试在重度遮蔽中视物，则你陷入 &Reference[Blinded apply=false] 状态。</p>"
             }
           }
         }
       }
     },
     "Giant Toad": {
-      "name": "Giant Toad",
-      "tokenName": "Giant Toad",
+      "name": "巨蟾蜍",
+      "tokenName": "巨蟾蜍",
       "items": {
         "Amphibious": {
           "name": "水陆两栖",
@@ -13378,27 +13378,27 @@
         },
         "Standing Leap": {
           "name": "立定起跳",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]]’s Long Jump is up to 20 feet and its High Jump is up to 10 feet with or without a running start.</p>"
+          "description": "<p class=\"feature\">不论是否助跑，[[lookup @name lowercase]]都跳远至多 20 尺或跳高至高 10 尺。</p>"
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]).</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过中型，则其还会陷入 &Reference[Grappled apply=false] 受擒状态（逃脱DC [[lookup @skills.ath.passive]]）。</p>",
           "effects": {
             "Grappled": {
               "name": "受擒",
-              "description": "<p>If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC).</p>"
+              "description": "<p>若你的生物体型不超过中型，则你还会陷入 &Reference[Grappled apply=false] 状态（逃脱DC 12，[[/check ability=str skill=ath format=long]]）。</p>"
             }
           }
         },
         "Swallow": {
-          "name": "Swallow",
-          "description": "<p>The [[lookup @name lowercase]] swallows a Medium or smaller target it is grappling.</p><p>While swallowed, the target isn’t Grappled but has the &amp;Reference[Blinded apply=false] and &amp;Reference[Restrained apply=false] conditions, and it has &amp;Reference[Total Cover] against attacks and other effects outside the [[lookup @name lowercase]].</p><p>In addition, the target takes [[/damage average]] damage at the end of each of the [[lookup @name lowercase]]’s turns. The [[lookup @name lowercase]] can have only one target swallowed at a time, and it can’t use Bite while it has a swallowed target.</p><p>If the [[lookup @name lowercase]] dies, a swallowed creature is no longer Restrained and can escape from the corpse using 5 feet of movement, exiting with the &amp;Reference[Prone apply=false] condition.</p>",
+          "name": "吞咽",
+          "description": "<p>[[lookup @name lowercase]] 吞下一名正被其擒抱的不超过中型的生物。</p><p>被吞咽期间，目标不再受擒但会陷入 &Reference[Blinded apply=false] 和 &Reference[Restrained apply=false] 状态，对 [[lookup @name lowercase]] 体外的攻击或其他效应而言处于 &Reference[Total Cover]。</p><p>此外，目标在 [[lookup @name lowercase]] 的回合结束时受到 [[/damage average]]伤害。[[lookup @name lowercase]] 同时能吞咽的生物数上限为一，且吞咽目标期间，其无法使用啃咬。若 [[lookup @name lowercase]]死亡，被吞咽生物不再被束缚并可以使用 15 尺移动力逃离尸体，以 &Reference[Prone apply=false] 状态脱离。</p>",
           "activities": {
             "Damage: Swallowed": {
-              "name": "Damage: Swallowed"
+              "name": "伤害：吞咽"
             },
             "Escape Corpse": {
-              "name": "Escape Corpse"
+              "name": "逃离尸体"
             },
             "Expend Use": {
               "name": "耗用"
@@ -13406,12 +13406,12 @@
           },
           "effects": {
             "Blinded, Restrained, and Total Cover": {
-              "name": "Blinded, Restrained, and Total Cover",
-              "description": "<p>While swallowed, a creature has the &amp;Reference[Blinded apply=false] and &amp;Reference[Restrained apply=false] conditions, has &amp;Reference[Total Cover apply=false] against attacks.</p>"
+              "name": "目盲，束缚并全身掩护",
+              "description": "<p>被吞咽期间，你陷入 &Reference[Blinded apply=false] 和 &Reference[Restrained apply=false] 状态，对巨蟾蜍体外的攻击或其他效应而言处于 &Reference[Total Cover]。</p>"
             },
             "Prone": {
               "name": "倒地",
-              "description": "<p>If you are regurgitated, you fall into a space within 10 ft. and are &amp;Reference[Prone apply=false].</p>"
+              "description": "<p>若巨蟾蜍死亡，你不再被束缚并可以使用 15 尺移动力逃离尸体，以 &Reference[Prone apply=false] 状态脱离。</p>"
             }
           }
         }
@@ -13432,38 +13432,38 @@
       "tokenName": "巨秃鹫",
       "items": {
         "Pack Tactics": {
-          "name": "Pack Tactics",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+          "name": "集群战术",
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Gouge": {
-          "name": "Gouge",
+          "name": "喙凿",
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]，且目标陷入 &Reference[Poisoned apply=false] 状态，持续至其下一回合结束。</p>",
           "effects": {
             "Poisoned": {
               "name": "中毒",
-              "description": "<p>The target has the &amp;Reference[Poisoned apply=false] condition until the end of its next turn.</p>"
+              "description": "<p>你陷入 &Reference[Poisoned apply=false] 状态直至下一回合结束。</p>"
             }
           }
         }
       }
     },
     "Giant Wasp": {
-      "name": "Giant Wasp",
-      "tokenName": "Giant Wasp",
+      "name": "巨黄蜂",
+      "tokenName": "巨黄蜂",
       "items": {
         "Flyby": {
           "name": "飞掠",
           "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Sting": {
-          "name": "Sting",
+          "name": "钉刺",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
     "Giant Weasel": {
-      "name": "Giant Weasel",
-      "tokenName": "Giant Weasel",
+      "name": "巨鼬",
+      "tokenName": "巨鼬",
       "items": {
         "Bite": {
           "name": "啃咬",
@@ -13477,7 +13477,7 @@
       "items": {
         "Spider Climb": {
           "name": "蛛行",
-          "description": "<p>The [[lookup @name lowercase]] can climb difficult surfaces, including along ceilings, without needing to make an ability check.</p>"
+          "description": "<p>[[lookup @name lowercase]] 可以在难以攀爬的表面上攀爬，包括沿着天花板移动，且不需要为此进行属性检定。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -13488,44 +13488,44 @@
     "Gibbering Mouther": {
       "name": "呓语之口",
       "tokenName": "呓语之口",
-      "description": "<h1>Gibbering Mouther</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.WCa9D9bIA97aX4L0 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>呓语之口</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.WCa9D9bIA97aX4L0 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Aberrant Ground": {
-          "name": "Aberrant Ground",
-          "description": "<p>The ground in a [[lookup @target.template.size activity=zVznqPXgYjETqpQz]]-foot Emanation originating from the [[lookup @name]] is &amp;Reference[Difficult Terrain].</p>",
+          "name": "异变丛生",
+          "description": "<p>源自 [[lookup @name]] 的 [[lookup @target.template.size activity=zVznqPXgYjETqpQz]] 尺光环区域内的地面视为 &Reference[Difficult Terrain]。</p>",
           "activities": {
             "Place Emanation": {
-              "name": "Place Emanation"
+              "name": "放置光环"
             }
           }
         },
         "Gibbering": {
-          "name": "Gibbering",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] babbles incoherently while it doesn’t have the Incapacitated condition.</p><p><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=PyGOI84k0PPYrru8]], any [[lookup @target.affects.type activity=PyGOI84k0PPYrru8]] that starts its turn within [[lookup @target.template.size activity=PyGOI84k0PPYrru8]] feet of the [[lookup @name lowercase]] while it is babbling.</p><p><em>Failure:</em> The target rolls [[/r 1d8]] to determine what it does during the current turn:</p><p class=\"feature-trait\"><strong>1–4.</strong> The target does nothing.</p><p class=\"feature-trait\"><strong>5–6.</strong> The target takes no action or Bonus Action and uses all its movement to move in a random direction.</p><p class=\"feature-trait\"><strong>7–8.</strong> The target makes a melee attack against a randomly determined creature within its reach or does nothing if it can’t make such an attack.</p>",
+          "name": "呓语",
+          "description": "<p class=\"feature\">只要未陷入失能状态，[[lookup @name lowercase]] 会喋喋不休无序之词。</p><p><em>感知豁免检定：</em>DC [[lookup @save.dc.value activity=PyGOI84k0PPYrru8]]，[[lookup @name lowercase]] 胡言期间，在其 [[lookup @target.template.size activity=PyGOI84k0PPYrru8]] 尺内开始自己的回合的任意生物。</p><p><em>失败：</em>目标掷 [[/r 1d8]] 以决定当前回合其执行什么行动：</p><p class=\"feature-trait\"><strong>1–4.</strong> 目标什么都不做。</p><p class=\"feature-trait\"><strong>5–6.</strong> 目标无法执行动作或附赠动作，并消耗其全部移动力向一个随机方向移动。</p><p class=\"feature-trait\"><strong>7–8.</strong> 目标随机选择其触及范围内一名的生物，对其发动一次近战攻击。若其无法发动此攻击，则什么都不做。</p>",
           "activities": {
             "Roll d8": {
-              "name": "Roll d8",
-              "roll": "Roll d8"
+              "name": "掷 d8",
+              "roll": "掷 d8"
             }
           }
         },
         "Bite": {
-          "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Prone apply=false] condition. The target dies if it is reduced to 0 Hit Points by this attack. Its body is then absorbed into the [[lookup @name]], leaving only equipment behind.</p>",
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过中型，则其陷入 &Reference[Prone apply=false] 状态。若目标因此伤害生命值降至 0，目标死亡。然后其肉体被 [[lookup @name]] 吸收，仅留下装备。</p>",
           "effects": {
             "Prone": {
-              "name": "Prone",
-              "description": "<p>If the target is a Medium or smaller creature, it has the &amp;Reference[Prone] condition.</p>"
+              "name": "倒地",
+              "description": "<p>若你的生物体型不超过中型，则你陷入 &Reference[Prone apply=false] 状态。</p>"
             }
           }
         },
         "Blinding Spittle": {
-          "name": "Blinding Spittle",
-          "description": "<p><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=JfU8KFZkAJxWtrhk]], each creature in a [[lookup @target.template.size activity=JfU8KFZkAJxWtrhk]]-foot-radius Sphere centered on a point within [[lookup @range.value activity=JfU8KFZkAJxWtrhk]] feet.</p><p><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Blinded apply=false] condition until the end of the [[lookup @name lowercase]]’s next turn.</p>",
+          "name": "致盲唾液",
+          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=JfU8KFZkAJxWtrhk]]，以 [[lookup @range.value activity=JfU8KFZkAJxWtrhk]] 尺内一点为中心的半径 [[lookup @target.template.size activity=JfU8KFZkAJxWtrhk]] 尺球状区域内的所有生物。</p><p><em>失败：</em>[[/damage average]] 伤害，目标陷入 &Reference[Blinded apply=false] 状态直至 [[lookup @name lowercase]] 的下一回合结束。</p>",
           "effects": {
             "Blinded": {
-              "name": "Blinded",
-              "description": "<p>the target has the &amp;Reference[Blinded apply=false] condition until the end of the user’s next turn.</p>"
+              "name": "目盲",
+              "description": "<p>你陷入 &Reference[Blinded apply=false] 状态，直至呓语之口的下一回合结束。</p>"
             }
           }
         }
@@ -14287,7 +14287,7 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]<span style=\"font-family:'Roboto Condensed', sans-serif\">, and the target has the &amp;Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]'s next turn.</span></p>",
           "effects": {
             "Poisoned": {
