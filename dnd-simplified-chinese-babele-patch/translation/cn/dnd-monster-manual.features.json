@@ -656,56 +656,56 @@
       "description": "<p>[[lookup @name lowercase]] 从下列效应中随机制造一种（掷 [[/r 1d4#大灾变]]）：</p><p class=\"feature-trait\"><strong>1：焚天业火。</strong><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=tUJIM74oC6JUcDJC]]，以 [[lookup @range.value activity=tUJIM74oC6JUcDJC]] 尺内[[lookup @name lowercase]]可见一点为源点半径 [[lookup @target.template.size activity=tUJIM74oC6JUcDJC]] 尺球状区域内的所有生物。<em>失败：</em> [[/damage average activity=tUJIM74oC6JUcDJC]]伤害。<em>成功：</em> 半伤。<em>失败或成功：</em> 目标开始&Reference[burning]。</p><strong>2：封冻寒潮。</strong><em>力量豁免检定：</em> DC [[lookup @save.dc.value activity=rF7ttNDNWDfvxxkl]]，[[lookup @target.template.size activity=rF7ttNDNWDfvxxkl]] 尺锥状区域内的所有生物。<em>失败：</em> [[/damage average activity=rF7ttNDNWDfvxxkl]]伤害外加[[/damage average activity=rF7ttNDNWDfvxxkl]]伤害，且目标陷入 &Reference[Prone apply=false] 状态。<em>成功：</em> 仅半伤。<em>失败或成功：</em> 目标的速度降至 0，直至其下一回合结束。</p><p class=\"feature-trait\"><strong>3：呼啸飓风。</strong> 一道暴风云覆盖以[[lookup @name lowercase]] [[lookup @range.value activity=RNZgZ52YOGGAg1zj]]尺内其可见一点为中心，半径 [[lookup @target.template.size activity=RNZgZ52YOGGAg1zj]] 尺的球状区域。暴风云持续存在 1 分钟，或是直到[[lookup @name lowercase]]再次使用大灾变时提前结束。完全位于风暴云内的生物陷入&Reference[Blinded apply=false]和&Reference[Deafened apply=false]状态且不能施展具有言语成分的法术。<em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=RNZgZ52YOGGAg1zj]]，在某个回合中首次进入暴风云或是在其中开始回合的所有生物。<em>失败：</em> [[/damage average activity=RNZgZ52YOGGAg1zj]]伤害外加[[/damage average activity=RNZgZ52YOGGAg1zj]]伤害。<em>成功：</em> 半伤。</p><p class=\"feature-trait\"><strong>4：大地巨口。</strong><em>力量豁免检定：</em> DC [[lookup @save.dc.value activity=sJ4avTypqPGWDLlD]]，以 [[lookup @range.value activity=sJ4avTypqPGWDLlD]] 尺内地面上一点为源点，[[lookup @target.template.size activity=sJ4avTypqPGWDLlD]] 尺立方区域内的每个生物。<em>失败：</em> [[/damage average activity=sJ4avTypqPGWDLlD]]伤害外加[[/damage average activity=sJ4avTypqPGWDLlD]]伤害，且目标陷入&Reference[Prone apply=false]状态并被埋入碎石之中。被埋入碎石的生物陷入&Reference[Restrained apply=false]状态，具有&Reference[Total Cover]，且&Reference[suffocating]。被埋入碎石的生物或是其 5 尺内的另一生物以一个动作进行一次[[/check ability=str skill=ath dc=@skills.ath.passive format=long]]。检定成功则该生物不再被埋入碎石。<em>成功：</em> 仅半伤。</p>",
       "activities": {
         "Clinging Flames": {
-          "name": "Clinging Flames"
+          "name": "焚天业火"
         },
         "Freezing Waves": {
-          "name": "Freezing Waves"
+          "name": "封冻寒潮"
         },
         "Raging Storm": {
-          "name": "Raging Storm"
+          "name": "呼啸飓风"
         },
         "Swallowing Earth": {
-          "name": "Swallowing Earth"
+          "name": "大地巨口"
         },
         "Buried: Escape Check": {
-          "name": "Buried: Escape Check",
-          "condition": "an action taken by the buried creature or a creature within range"
+          "name": "埋藏：逃脱检定",
+          "condition": "被埋藏生物或范围内的生物以一个动作"
         }
       },
       "effects": {
         "Clinging Flames: Burning": {
-          "name": "Clinging Flames: Burning",
+          "name": "焚天业火：燃烧",
           "description": "<p>@Embed[Compendium.dnd-players-handbook.content.JournalEntry.phbAppendixCRule.JournalEntryPage.mPBGM1vguT5IPzxT caption=false]</p>"
         },
         "Freezing Waves: Zero Speed": {
-          "name": "Freezing Waves: Zero Speed",
-          "description": "<p>The target’s Speed is reduced to 0 until the end of its next turn.</p>"
+          "name": "封冻寒潮：速度归零",
+          "description": "<p>你的速度降至 0，直至你的下一回合结束。</p>"
         },
         "Raging Storm: Blind, Deaf, Verbal Components": {
-          "name": "Raging Storm: Blind, Deaf, Verbal Components",
-          "description": "<p>Creatures entirely in the cloud have the &amp;Reference[Blinded apply=false] and &amp;Reference[Deafened apply=false] conditions and can’t cast spells with a Verbal component.</p>"
+          "name": "呼啸飓风：目盲，耳聋，禁言",
+          "description": "<p>若你完全位于风暴云内，则陷入 &Reference[Blinded apply=false] 和 &Reference[Deafened apply=false] 状态且不能施展具有言语成分的法术。</p>"
         },
         "Prone": {
           "name": "倒地",
-          "description": "<p><strong>2: Freezing Waves. </strong>The target has the &amp;Reference[Prone apply=false] condition</p><p><strong>4: Swallowing Earth.</strong> The target has the &amp;Reference[Prone apply=false] condition and is buried under rubble.</p><p></p>"
+          "description": "<p><strong>2：封冻寒潮。</strong>你陷入 &Reference[Prone apply=false] 状态</p><p><strong>4：大地巨口。</strong> 你陷入 &Reference[Prone apply=false] 状态并被埋入碎石之中。</p>"
         },
         "Swallowing Earth: Restrained, Cover, Suffocating": {
-          "name": "Swallowing Earth: Restrained, Cover, Suffocating",
-          "description": "<p>A buried target has the &amp;Reference[Restrained apply=false] condition, has &amp;Reference[Total Cover], and is &amp;Reference[suffocating]. As an action, a buried creature or another creature within 5 feet of it can make a [[/check ability=str skill=ath format=long] (see source for escape DC). On a successful check, the creature is no longer buried.</p>"
+          "name": "大地巨口：束缚，掩护，窒息",
+          "description": "<p>你被埋入碎石，陷入 &Reference[Restrained apply=false] 状态，具有 &Reference[Total Cover]，且 &Reference[suffocating]。你或是不 5 尺内的另一生物以一个动作进行一次 [[/check ability=str skill=ath format=long] （逃脱DC 18）检定。检定成功则不再被埋入碎石。</p>"
         }
       }
     },
     "Caustic Lash": {
-      "name": "Caustic Lash",
+      "name": "苛性鞭笞",
       "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Celestial Restoration": {
-      "name": "Celestial Restoration",
-      "description": "<p>If the [[lookup @name lowercase]] dies, it returns to life in [[/r 1d6#Days]] days and regains all its Hit Points unless <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]</em> is cast on its remains.</p>"
+      "name": "天界复苏",
+      "description": "<p>若 [[lookup @name lowercase]] 死亡，则除非其遗骸被施展 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]，其在 [[/r 1d6#天]] 天后重获生命并恢复全部生命值。</p>"
     },
     "Chain": {
-      "name": "Chain",
-      "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two chains, and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>",
+      "name": "锁链",
+      "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]。若目标生物体型不超过大型，则其被两条锁链之一所擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
       "effects": {
         "Grappled & Restrained": {
           "name": "Grappled & Restrained",
