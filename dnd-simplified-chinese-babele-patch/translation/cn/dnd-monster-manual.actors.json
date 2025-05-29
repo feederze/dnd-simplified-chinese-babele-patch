@@ -1708,7 +1708,7 @@
             },
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，且于其每一回合结束时重复此豁免，豁免成功则结束此效应。你将在 1 分钟后自动成功于此豁免。</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             }
           }
         },
@@ -2551,7 +2551,7 @@
           "effects": {
             "Guiding Bolt": {
               "name": "光导",
-              "description": "<p>在施法者下一回合结束前，对你发动的下一次攻击检定具有优势。</p>"
+              "description": "<p>在施法者下个回合结束前，对你发动的下一次攻击检定具有优势。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -3371,7 +3371,7 @@
             },
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，且于其每一回合结束时重复此豁免，豁免成功则结束此效应。你将在 1 分钟后自动成功于此豁免。</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             }
           }
         },
@@ -5886,7 +5886,7 @@
         },
         "Antimagic Cone": {
           "name": "反魔法锥域",
-          "description": "<p>[[lookup @name lowercase]]的主眼向 [[lookup @target.template.size activity=7vRTku30dhIyBf68]] 尺的锥形范围发出一道反魔法能量波。直到 [[lookup @name lowercase]] 的下个回合开始，此区域内效应如同<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAntimagicF]</em>，且此区域同样反制 [[lookup @name lowercase]] 自己的眼波射线。</p>"
+          "description": "<p>[[lookup @name lowercase]]的主眼向 [[lookup @target.template.size activity=7vRTku30dhIyBf68]] 尺锥状区域内发出一道反魔法能量波。此区域内如同 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAntimagicF]</em>，且此区域同样反制 [[lookup @name lowercase]] 自己的眼波射线，直至 [[lookup @name lowercase]] 的下一回合开始。</p>"
         },
         "Chomp": {
           "name": "切齿",
@@ -5908,7 +5908,7 @@
         },
         "Eye Rays": {
           "name": "眼波射线",
-          "description": "<p class=\"feature\">[[lookup @name lowcase]] 向一名位于其 120 尺内的其可见的目标从下列魔法射线中随机射出一道（掷[[/r 1d10]]，如果 [[lookup @name lowcase]] 在本回合已经使用过该射线则重新掷骰）：</p><details>    <summary><strong>眼波射线</strong></summary>    <p class=\"feature-trait\"><strong>1: 魅惑射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=dcpGMW2jBewtY5lx]]。</p>    <p><em>失败：</em> [[/damage average activity=dcpGMW2jBewtY5lx]]伤害，目标陷入 &Reference[Charmed apply=false] 状态持续 [[lookup @duration.value activity=dcpGMW2jBewtY5lx]] 小时或在其受到伤害时提前结束。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>2: 麻痹射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=EZ5rsyCFKBY3TWww]]。</p>    <p><em>失败：</em> 目标陷入 &Reference[Paralyzed apply=false] 状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。[[lookup @duration.value activity=EZ5rsyCFKBY3TWww]] 分钟后，其豁免自动成功。</p>    <p class=\"feature-trait\"><strong>3: 恐惧射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=aMfevxGsYy5swVDA]]。</p>    <p><em>失败：</em> [[/damage average activity=aMfevxGsYy5swVDA]]伤害，目标陷入 &Reference[Frightened apply=false] 状态直至其下一回合结束。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>4: 缓慢射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=lq2AtXFOVBz6IHMh]]。</p>    <p><em>失败：</em> [[/damage average activity=lq2AtXFOVBz6IHMh]]伤害。直至目标的下个回合结束，目标速度减半，无法执行&Reference[Reaction]{反应}，且目标在其回合中仅可以执行一个动作或一个附赠动作，但不能同时执行二者。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>5: 汲能射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=9srzVFm9txeDeMFf]]。</p>    <p><em>失败：</em> [[/damage average activity=9srzVFm9txeDeMFf]]伤害，目标陷入 &Reference[Poisoned apply=false] 状态直至其下个回合结束。在中毒期间，目标无法恢复生命值。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>6: 念力射线。</strong></p>    <p><em>力量豁免检定：</em> DC [[lookup @save.dc.value activity=a5zT8E1cS4yBVodK]]（如果目标的体型为超巨型则豁免自动成功）。</p>    <p><em>失败：</em> [[lookup @name lowcase]] 将目标向任意方向移动至多 [[lookup @target.template.size activity=a5zT8E1cS4yBVodK]] 尺。目标陷入 &Reference[Restrained apply=false] 状态直至 [[lookup @name lowcase]] 的下个回合开始，或在 [[lookup @name lowcase]] 陷入失能状态时提前结束。 [[lookup @name lowcase]] 还可以利用此射线对物件进行精细控制，例如操作工具、打开一扇门或打开容器。 </p>    <p class=\"feature-trait\"><strong>7: 睡眠射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=CSKrXM1Pkhlf23et]]（此豁免超巨型自动成功）。 </p>    <p><em>失败：</em> 目标陷入 &Reference[Unconscious apply=false] 状态，持续 [[lookup @duration.value activity=CSKrXM1Pkhlf23et]] 分钟。若目标受到伤害或一名目标 5 尺内的生物以一个动作唤醒其，则状态结束。 </p>    <p class=\"feature-trait\"><strong>8: 石化射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=q67AgIfRplRO2e9p]]。 <em>首次失败：</em> 目标陷入 &Reference[Unconscious apply=false] 状态，在其下个回合结束时目标若仍处于束缚则重复豁免，成功则终止其身上的该效应。 <em>再次失败：</em> 目标陷入 &Reference[Petrified apply=false] 状态取代其束缚状态。</p>    <p class=\"feature-trait\"><strong>9: 解离射线。</strong></p>    <p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=A5PdqZCq1yeIN8m4]]。</p>    <p><em>失败：</em> [[/damage average activity=A5PdqZCq1yeIN8m4]]伤害。若目标是一件非魔法物件或魔法力场造物，则其上一处 [[lookup @target.template.size activity=A5PdqZCq1yeIN8m4]] 尺立方区域内的部分被解离为尘埃。</p>    <p><em>成功：</em> 半伤。</p>    <p><em>失败或成功：</em> 若目标是一个生物且此伤害使其生命值降至 0，则该生物被解离为尘埃。</p>    <p class=\"feature-trait\"><strong>10: 死亡射线。</strong></p>    <p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=yjLvFKZIWfUCIT73]]。</p>    <p><em>失败：</em> [[/damage average activity=yjLvFKZIWfUCIT73]]伤害。</p>    <p><em>成功：</em> 半伤。</p>    <p><em>成功或失败：</em> 如果射线将目标的生命值降至 0，目标死亡。</p></details>",
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 向一名位于其 120 尺内的其可见的目标从下列魔法射线中随机射出一道（掷[[/r 1d10]]，如果 [[lookup @name lowcase]] 在本回合已经使用过该射线则重新掷骰）：</p><details>    <summary><strong>眼波射线</strong></summary>    <p class=\"feature-trait\"><strong>1：魅惑射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=dcpGMW2jBewtY5lx]]。</p>    <p><em>失败：</em> [[/damage average activity=dcpGMW2jBewtY5lx]]伤害，目标陷入 &Reference[Charmed apply=false] 状态持续 [[lookup @duration.value activity=dcpGMW2jBewtY5lx]] 小时或在其受到伤害时提前结束。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>2：麻痹射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=EZ5rsyCFKBY3TWww]]。</p>    <p><em>失败：</em> 目标陷入 &Reference[Paralyzed apply=false] 状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。[[lookup @duration.value activity=EZ5rsyCFKBY3TWww]] 分钟后，其豁免自动成功。</p>    <p class=\"feature-trait\"><strong>3：恐惧射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=aMfevxGsYy5swVDA]]。</p>    <p><em>失败：</em> [[/damage average activity=aMfevxGsYy5swVDA]]伤害，目标陷入 &Reference[Frightened apply=false] 状态直至其下一回合结束。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>4：缓慢射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=lq2AtXFOVBz6IHMh]]。</p>    <p><em>失败：</em> [[/damage average activity=lq2AtXFOVBz6IHMh]]伤害。直至目标的下个回合结束，目标速度减半，无法执行&Reference[Reaction]{反应}，且目标在其回合中仅可以执行一个动作或一个附赠动作，但不能同时执行二者。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>5：汲能射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=9srzVFm9txeDeMFf]]。</p>    <p><em>失败：</em> [[/damage average activity=9srzVFm9txeDeMFf]]伤害，目标陷入 &Reference[Poisoned apply=false] 状态直至其下个回合结束。在中毒期间，目标无法恢复生命值。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>6：念力射线。</strong></p>    <p><em>力量豁免检定：</em> DC [[lookup @save.dc.value activity=a5zT8E1cS4yBVodK]]（如果目标的体型为超巨型则豁免自动成功）。</p>    <p><em>失败：</em> [[lookup @name lowcase]] 将目标向任意方向移动至多 [[lookup @target.template.size activity=a5zT8E1cS4yBVodK]] 尺。目标陷入 &Reference[Restrained apply=false] 状态直至 [[lookup @name lowcase]] 的下个回合开始，或在 [[lookup @name lowcase]] 陷入失能状态时提前结束。 [[lookup @name lowcase]] 还可以利用此射线对物件进行精细控制，例如操作工具、打开一扇门或打开容器。 </p>    <p class=\"feature-trait\"><strong>7：睡眠射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=CSKrXM1Pkhlf23et]]（此豁免超巨型自动成功）。 </p>    <p><em>失败：</em> 目标陷入 &Reference[Unconscious apply=false] 状态，持续 [[lookup @duration.value activity=CSKrXM1Pkhlf23et]] 分钟。若目标受到伤害或一名目标 5 尺内的生物以一个动作唤醒其，则状态结束。 </p>    <p class=\"feature-trait\"><strong>8：石化射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=q67AgIfRplRO2e9p]]。 <em>首次失败：</em> 目标陷入 &Reference[Unconscious apply=false] 状态，在其下个回合结束时目标若仍处于束缚则重复豁免，成功则终止其身上的该效应。 <em>再次失败：</em> 目标陷入 &Reference[Petrified apply=false] 状态取代其束缚状态。</p>    <p class=\"feature-trait\"><strong>9：解离射线。</strong></p>    <p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=A5PdqZCq1yeIN8m4]]。</p>    <p><em>失败：</em> [[/damage average activity=A5PdqZCq1yeIN8m4]]伤害。若目标是一件非魔法物件或魔法力场造物，则其上一处 [[lookup @target.template.size activity=A5PdqZCq1yeIN8m4]] 尺立方区域内的部分被解离为尘埃。</p>    <p><em>成功：</em> 半伤。</p>    <p><em>失败或成功：</em> 若目标是一个生物且此伤害使其生命值降至 0，则该生物被解离为尘埃。</p>    <p class=\"feature-trait\"><strong>10：死亡射线。</strong></p>    <p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=yjLvFKZIWfUCIT73]]。</p>    <p><em>失败：</em> [[/damage average activity=yjLvFKZIWfUCIT73]]伤害。</p>    <p><em>成功：</em> 半伤。</p>    <p><em>成功或失败：</em> 如果射线将目标的生命值降至 0，目标死亡。</p></details>",
           "activities": {
             "Roll 1d10": {
               "name": "掷 1d10",
@@ -5972,7 +5972,7 @@
             },
             "K1dTJYj98PUwPBTZ": {
               "name": "束缚",
-              "description": "<p><em>首次失败：</em> 你陷入 &Reference[Restrained apply=false] 状态，在其下一回合结束时目标若仍处于束缚则重复豁免，成功则终止你身上的该效应。</p>"
+              "description": "<p><em>首次失败：</em> 你陷入 &Reference[Restrained apply=false] 状态，在你下一回合结束时你若仍处于束缚则重复豁免，成功则终止你身上的该效应。</p>"
             },
             "Petrified": {
               "name": "石化",
@@ -5980,11 +5980,11 @@
             },
             "Half Speed/No Reactions": {
               "name": "速度减半并无法反应",
-              "description": "<p>直至你的下一回合结束，你的速度减半，无法执行 &Reference[Reaction]{反应}，且你在自身的回合内只能执行一个动作或一个&Reference[BonusAction]{附赠动作}，但不能同时执行二者。</p>"
+              "description": "<p>直至你的下一回合结束，你的速度减半，无法执行&Reference[Reaction]{反应}，且你在自身的回合内只能执行一个动作或一个&Reference[BonusAction]{附赠动作}，但不能同时执行二者。</p>"
             },
             "Half Speed/No Reactions (Copy)": {
               "name": "请删除",
-              "description": "<p>直至你的下一回合结束，你的速度减半，无法执行 &Reference[Reaction]{反应}，且你在自身的回合内只能执行一个动作或一个&Reference[BonusAction]{附赠动作}，但不能同时执行二者。</p>"
+              "description": "<p>直至你的下一回合结束，你的速度减半，无法执行&Reference[Reaction]{反应}，且你在自身的回合内只能执行一个动作或一个&Reference[BonusAction]{附赠动作}，但不能同时执行二者。</p>"
             }
           }
         }
@@ -6014,7 +6014,7 @@
         },
         "Eye Rays": {
           "name": "眼波射线",
-          "description": "<p class=\"feature\">[[lookup @name lowcase]] 向一个距离它 120 尺内的可见目标从下列魔法射线中随机射出一道射线（掷[[/r 1d4]]，如果丧尸在本回合已经使用过该射线则重新掷骰）：</p><details>    <summary><strong>眼波射线</strong></summary>    <p class=\"feature-trait\"><strong>1: 麻痹射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=EZ5rsyCFKBY3TWww]]。</p>    <p><em>失败：</em> 目标陷入 &Reference[Paralyzed apply=false] 状态，并在每个自身回合的结束时再进行一次该豁免，豁免成功则终止该效应。在 [[lookup @duration.value activity=EZ5rsyCFKBY3TWww]] 分钟后，豁免将自动成功。</p>    <p class=\"feature-trait\"><strong>2: 恐惧射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=aMfevxGsYy5swVDA]]。</p>    <p><em>失败：</em> [[/damage average activity=aMfevxGsYy5swVDA]]伤害，目标陷入 &Reference[Frightened apply=false] 状态，直到其下个回合的结束。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>3: 汲能射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=9srzVFm9txeDeMFf]]。</p>    <p><em>失败：</em> [[/damage average activity=9srzVFm9txeDeMFf]]伤害，目标陷入 &Reference[Poisoned apply=false] 状态，直到其下个回合的结束。在中毒期间，目标不能回复生命值。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>4: 解离射线。</strong></p>    <p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=A5PdqZCq1yeIN8m4]]。</p>    <p><em>失败：</em> [[/damage average activity=A5PdqZCq1yeIN8m4]]伤害。如果目标是一个非魔法物件或魔法力场造物，则其 [[lookup @target.template.size activity=A5PdqZCq1yeIN8m4]] 尺立方体的部分被解离为尘埃。</p>    <p><em>成功：</em> [[lookup @damage.onSave capitalize activity=A5PdqZCq1yeIN8m4]]伤害。</p>    <p><em>失败或成功：</em> 若目标是一个生物且此伤害使其生命值降至 0，则该生物被解离为尘埃。</p></details>",
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 向一名位于其120尺内其可见的目标从下列魔法射线中随机射出一道（掷[[/r 1d4]]，如果 [[lookup @name lowcase]] 在本回合已经使用过该射线则重新掷骰）：</p><details>    <summary><strong>眼波射线</strong></summary>    <p class=\"feature-trait\"><strong>1：麻痹射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=EZ5rsyCFKBY3TWww]]。</p>    <p><em>失败：</em> 目标陷入 &Reference[Paralyzed apply=false] 状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。[[lookup @duration.value activity=EZ5rsyCFKBY3TWww]] 分钟后，其豁免自动成功。</p>    <p class=\"feature-trait\"><strong>2：恐惧射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=aMfevxGsYy5swVDA]]。</p>    <p><em>失败：</em> [[/damage average activity=aMfevxGsYy5swVDA]]伤害，目标陷入 &Reference[Frightened apply=false] 状态，直到其下一回合结束。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>3：汲能射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=9srzVFm9txeDeMFf]]。</p>    <p><em>失败：</em> [[/damage average activity=9srzVFm9txeDeMFf]]伤害，目标陷入 &Reference[Poisoned apply=false] 状态，直到其下一回合结束。在中毒期间，目标不能恢复生命值。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>4：解离射线。</strong></p>    <p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=A5PdqZCq1yeIN8m4]]。</p>    <p><em>失败：</em> [[/damage average activity=A5PdqZCq1yeIN8m4]]伤害。若目标是一件非魔法物件或魔法力场造物，则其上一处 [[lookup @target.template.size activity=A5PdqZCq1yeIN8m4]] 尺立方区域内的部分被解离为尘埃。</p>    <p><em>成功：</em> [[lookup @damage.onSave capitalize activity=A5PdqZCq1yeIN8m4]]伤害。</p>    <p><em>成功或失败：</em> 若目标为生物且因此伤害生命值降至0，则该生物被解离为尘埃。</p></details>",
           "activities": {
             "Roll 1d4": {
               "name": "掷 1d4",
@@ -6036,11 +6036,11 @@
           "effects": {
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在每个自身回合的结束时再进行一次该豁免，豁免成功则终止该效应。在 1 分钟后，豁免将自动成功。</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             },
             "Frightened": {
               "name": "恐慌",
-              "description": "<p>你陷入 &Reference[Frightened apply=false] 状态直到下一回合结束。</p>"
+              "description": "<p>你陷入 &Reference[Frightened apply=false] 状态直至下一回合结束。</p>"
             },
             "Poisoned": {
               "name": "中毒",
@@ -6075,7 +6075,7 @@
       "items": {
         "Greataxe": {
           "name": "巨斧",
-          "description": "<p>[[/attack extended]]。[[/damage average extended]]且目标或其5尺内的另一生物。</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]且目标或其 5 尺内的另一生物。</p>"
         },
         "Javelin": {
           "name": "标枪",
@@ -6083,7 +6083,7 @@
           "effects": {
             "Speed -5 ft.": {
               "name": "速度降低 5 尺",
-              "description": "<p>目标速度降低 5 尺直至攻击生物的下一回合开始。</p>"
+              "description": "<p>你的速度降低 5 尺直至狂战将的下一回合开始。</p>"
             }
           }
         },
@@ -6102,7 +6102,7 @@
         },
         "Frenzied Rush": {
           "name": "狂怒冲杀",
-          "description": "<p>[[lookup @name lowercase]] [[lookup @range.value activity=1t3bIyTSzFgXzzCb]] 尺内的每个盟友都可以用其 &Reference[Reaction apply=long]{反应} 移动至多等同于该盟友速度一半的距离，且不触发 &Reference[OpportunityAttacks]。同时，[[lookup @name lowercase]] 也可以移动至多等同于自身速度一半的距离，且不触发借机攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] [[lookup @range.value activity=1t3bIyTSzFgXzzCb]] 尺内的每名盟友都能够以其&Reference[Reaction apply=long]{反应}移动至多等于其自身速度一半的距离，且不会引发Reference[OpportunityAttacks]{借机攻击}。同时，[[lookup @name lowercase]] 也可以移动至多等于自身速度一半的距离，且不会引发借机攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -6154,7 +6154,7 @@
         },
         "Acid Breath": {
           "name": "强酸吐息",
-          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]]，[[lookup @target.template.size activity=qNI6W02jCUQbPpYE]] 尺长、[[lookup @target.template.width activity=qNI6W02jCUQbPpYE]] 尺宽的线状区域内的每名生物。</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em>半伤。</p>"
+          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]]，[[lookup @target.template.size activity=qNI6W02jCUQbPpYE]] 尺长、[[lookup @target.template.width activity=qNI6W02jCUQbPpYE]] 尺宽的线状区域内的所有生物。</p><p><em>失败：</em>[[/damage average]]伤害。</p><p><em>成功：</em>半伤。</p>"
         }
       }
     },
@@ -6172,7 +6172,7 @@
           "description": "<p class=\"feature\">生物以近战攻击检定命中 [[lookup @name lowercase]] 时，其受到 [[/damage average]]伤害。非魔法弹药在命中 [[lookup @name lowercase]] 并造成任意伤害后将立刻被摧毁。任何非魔法武器在对 [[lookup @name lowercase]] 造成伤害并与其接触后将积累 -1 的攻击检定减值。当此减值累计达到 -5 时该武器将被摧毁。对武器施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMending000]</em>可以移除这一减值。</p><p class=\"feature\">在 1 分钟时间里，[[lookup @name lowercase]]可以吃穿 2 尺厚度的非魔法金属或木材。</p><section class=\"secret\" id=\"secret-NtgKYdQoCuiAaxOa\">    <p><strong>Foundry Note</strong></p>    <p>该特性提供了一个<strong>攻击减值</strong>主动效应，会改变选定的武器。由于这种减值可多次施加于多个非魔法武器上，所以此主动效应需要从该物品的“效应”选项卡拖放到目标物品的武器上。</p></section>",
           "effects": {
             "Damaged: -1 Attack": {
-              "name": "伤害：攻击检定-1",
+              "name": "伤害：攻击检定 -1",
               "description": "<p>任意非魔法武器在接触到黑布丁并造成伤害到后将积累 -1 的攻击检定减值。</p>"
             }
           }
@@ -6183,11 +6183,11 @@
         },
         "Split": {
           "name": "分裂",
-          "description": "<p class=\"feature\"><em>触发：</em>若 [[lookup @name lowercase]] 体型 [[lookup @activation.condition activity=zoXFSgzmWq8frUjI]]<em>响应：</em>[[lookup @name lowercase]] 分裂为两个全新的<strong> [[lookup @name capitalize]]</strong>。每个新的 [[lookup @name lowercase]] 都比原先 [[lookup @name lowercase]] 的体型小一级，且在原[[lookup @name lowercase]] 的先攻值上行动。原[[lookup @name lowercase]] 的生命值将平均分配给两只新的 [[lookup @name lowercase]] （向下取整）。</p>",
+          "description": "<p class=\"feature\"><em>触发：</em>若 [[lookup @name lowercase]] 体型为大型或中型且具有10+生命值，当 [[lookup @name lowercase]] 进入浴血或是其将受闪电伤害或挥砍伤害时。<em>响应：</em>[[lookup @name lowercase]] 分裂为两块全新的<strong> [[lookup @name capitalize]]</strong>。每块新的 [[lookup @name lowercase]] 的体型都比原先的 [[lookup @name lowercase]] 小一级，且使用原 [[lookup @name lowercase]] 的先攻行动。原 [[lookup @name lowercase]] 生命值将平均分配给新的 [[lookup @name lowercase]] （向下取整）。</p>",
           "activities": {
             "Split": {
               "name": "分裂",
-              "condition": "为大型或中型，且具有 10+ 生命值，当布丁进入浴血状况，或当它即将受闪电伤害或挥砍伤害影响时。",
+              "condition": "为大型或中型，且具有 10+ 生命值，当黑布丁进入浴血状况，或当它即将受闪电伤害或挥砍伤害影响时。",
               "profiles": {
                 "Black Pudding": {
                   "name": "黑布丁"
@@ -6202,7 +6202,7 @@
           "effects": {
             "Damaged: -1 AC": {
               "name": "伤害：AC -1",
-              "description": "<p>目标着装的非魔法护甲提供的AC将承受 -1 的减值。若护甲的AC因减值降至 10 则其被摧毁。</p>"
+              "description": "<p>你着装的非魔法护甲提供的AC将承受 -1 的减值。若护甲的AC因减值降至 10 则其被摧毁。</p>"
             }
           }
         }
@@ -6403,7 +6403,7 @@
           "activities": {
             "HP Max Decrease": {
               "name": "减少最大生命值",
-              "roll": "减少最大生命值"
+              "roll": "减少最大生命值。"
             },
             "Red Slaad": {
               "name": "史拉红蟾",
@@ -7393,7 +7393,7 @@
           "effects": {
             "Restrained": {
               "name": "束缚",
-              "description": "<p>你陷入 &Reference[Restrained apply=false] 直至链魔下一回合结束。</p>"
+              "description": "<p>你陷入&Reference[Restrained apply=false]状态直至链魔的下一回合结束。</p>"
             }
           }
         },
@@ -11665,7 +11665,7 @@
           "effects": {
             "Incapacitated": {
               "name": "失能",
-              "description": "<p>你陷入 &Reference[Incapacitated apply=false] 状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。1 分钟后，其豁免自动成功。</p>"
+              "description": "<p>你陷入 &Reference[Incapacitated apply=false] 状状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             }
           }
         },
@@ -11781,7 +11781,7 @@
           "effects": {
             "Incapacitated": {
               "name": "失能",
-              "description": "<p>你陷入 &Reference[Incapacitated apply=false] 状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。1 分钟后，其豁免自动成功。</p>"
+              "description": "<p>你陷入 &Reference[Incapacitated apply=false] 状状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             }
           }
         },
@@ -14802,7 +14802,7 @@
           "effects": {
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在每个自身回合的结束时再进行一次该豁免，豁免成功则终止该效应。在 1 分钟后，豁免将自动成功。</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             }
           }
         }
@@ -15427,7 +15427,7 @@
           "effects": {
             "Poisoned & Paralyzed": {
               "name": "中毒和麻痹",
-              "description": "<p>你将陷入 &Reference[Poisoned apply=false] 状态，并在回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你豁免自动成功。 中毒期间，你陷入 &Reference[Paralyzed apply=false] 状态。</p>"
+              "description": "<p>你将陷入 &Reference[Poisoned apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。中毒期间，你陷入 &Reference[Paralyzed apply=false] 状态。</p>"
             },
             "Grappled": {
               "name": "受擒"
@@ -18139,7 +18139,7 @@
             },
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，且于其每一回合结束时重复此豁免，豁免成功则结束此效应。你将在 1 分钟后自动成功于此豁免。</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             },
             "Prone": {
               "name": "倒地",
@@ -19830,7 +19830,7 @@
           "effects": {
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在每个自身回合的结束时再进行一次该豁免，豁免成功则终止该效应。在 1 分钟后，豁免将自动成功。</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             }
           }
         }
@@ -19914,7 +19914,7 @@
         },
         "Mud Breath": {
           "name": "泥泞吐息",
-          "description": "<p class=\"feature\"><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=i727Jd3IBfZezMPy]], [[lookup @target.affects.labels.statblock activity=i727Jd3IBfZezMPy]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=i727Jd3IBfZezMPy]] feet.</p><p><em>Failure:</em> The target has the &amp;Reference[Restrained apply=false] condition until the end of the [[lookup @name lowercase]]’s next turn.</p>",
+          "description": "<p class=\"feature\"><em>敏捷豁免检定：</em> DC[[lookup @save.dc.value activity=i727Jd3IBfZezMPy]]，单一[[lookup @range.value activity=i727Jd3IBfZezMPy]]尺内[[lookup @name lowercase]] 可见的生物。</p><p><em>失败：</em> 目标陷入&amp;Reference[Restrained apply=false]状态，持续至 [[lookup @name lowercase]]的下个回合结束。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -19923,7 +19923,7 @@
           "effects": {
             "Restrained": {
               "name": "束缚",
-              "description": "<p>The target has the &amp;Resource[Restrained apply=false] condition until the end of the attacking creature's next turn.</p>"
+              "description": "<p>你陷入&Resource[Restrained apply=false]状态直至泥魔蝠的下一回合结束。</p>"
             }
           }
         }
@@ -19934,12 +19934,12 @@
       "tokenName": "骡",
       "items": {
         "Hooves": {
-          "name": "Hooves",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "蹄击",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Beast of Burden": {
           "name": "驼兽",
-          "description": "<p>The [[lookup @name lowercase]] counts as one size larger for the purpose of determining its carrying capacity.</p>",
+          "description": "<p> 在决定[[lookup @name lowercase]]的载重能力时，其被视为更大一级的体型。</p>",
           "effects": {
             "Beast of Burden": {
               "name": "驼兽"
@@ -19951,36 +19951,36 @@
     "Mummy": {
       "name": "木乃伊",
       "tokenName": "木乃伊",
-      "description": "<h1>Mummies</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.YuuqpbH93Kq9hizu caption=false cite=false classes=\"no-embed mm\"]</p><h2>Mummy</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.KAmNNROqkQBqQmUr caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>木乃伊</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.YuuqpbH93Kq9hizu caption=false cite=false classes=\"no-embed mm\"]</p><h2>木乃伊</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.KAmNNROqkQBqQmUr caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The mummy makes two [[/item .mmRottingFist000]] attacks and uses [[/item .mmDreadfulGlare0]].</p>",
+          "name": "多重攻击",
+          "description": "<p>木乃伊发动两次[[/item .mmRottingFist000]]攻击，并使用[[/item .mmDreadfulGlare0]]。</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rotting Fist": {
-          "name": "Rotting Fist",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is cursed. While cursed, the target can’t regain Hit Points, its Hit Point maximum doesn’t return to normal when finishing a Long Rest, and its Hit Point maximum decreases by [[/r 3d6#HP Max Decrease]]{10 (3d6)} every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack.</p>",
+          "name": "腐朽拳击",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若目标为生物，则其被诅咒。受诅咒期间，目标无法恢复生命值，也无法在完成长休时恢复生命值上限，并且诅咒每持续24小时，其生命值上限降低[[/r 3d6#HP Max Decrease]]{10 (3d6)}。若生物因此攻击生命值降至0，则其立即死亡并化为尘土。</p>",
           "activities": {
             "HP Max Decrease": {
-              "name": "HP Max Decrease",
-              "roll": "HP Max Decr."
+              "name": "减少最大生命值",
+              "roll": "减少最大生命值。"
             }
           },
           "effects": {
             "Cursed": {
-              "name": "Cursed",
-              "description": "<p>If the target is a creature, it is cursed. While cursed, the target can’t regain Hit Points, its Hit Point maximum doesn’t return to normal when finishing a Long Rest, and its Hit Point maximum decreases by [[/r 3d6#HP Max Decrease]]{10 (3d6)} every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack.</p>"
+              "name": "诅咒",
+              "description": "<p>若目标为生物，则其被诅咒。受诅咒期间，目标无法恢复生命值，也无法在完成长休时恢复生命值上限，并且诅咒每持续24小时，其生命值上限降低10（3d6）。若生物因此攻击生命值降至0，则其立即死亡并化为尘土。</p>"
             }
           }
         },
         "Dreadful Glare": {
-          "name": "Dreadful Glare",
-          "description": "<p class=\"feature\"><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=8LmlZfevSQkOxGSN]], one [[lookup @target.affects.type activity=8LmlZfevSQkOxGSN]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=8LmlZfevSQkOxGSN]] feet.</p><p><em>Failure:</em> The target has the &amp;Reference[Frightened apply=false] condition until the end of the [[lookup @name lowercase]]’s next turn.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s Dreadful Glare for 24 hours.</p>",
+          "name": "恐怖怒视",
+          "description": "<p class=\"feature\"><em>感知豁免：</em> DC[[lookup @save.dc.value activity=8LmlZfevSQkOxGSN]]单一[[lookup @range.value activity=8LmlZfevSQkOxGSN]]尺内[[lookup @name lowercase]] 可见的生物。</p><p><em>失败：</em>目标陷入&amp;Reference[Frightened apply=false]状态，直至[[lookup @name lowercase]]的下个回合结束。</p><p><em>成功：</em> 目标在24小时内免疫此[[lookup @name lowercase]]的恐怖怒视。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -19988,8 +19988,8 @@
           },
           "effects": {
             "Frightened": {
-              "name": "Frightened",
-              "description": "<p>The target has the &amp;Reference[Frightened apply=false] condition until the end of the attacking creature's next turn.</p>"
+              "name": "恐慌",
+              "description": "<p>你陷入 &Reference[Frightened apply=false] 状态，直到木乃伊的下个回合结束。</p>"
             }
           }
         }
@@ -19998,54 +19998,54 @@
     "Mummy Lord": {
       "name": "木乃伊领主",
       "tokenName": "木乃伊领主",
-      "description": "<h1>Mummies</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.YuuqpbH93Kq9hizu caption=false cite=false classes=\"no-embed mm\"]</p><h2>Mummy Lord</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.HJG9Pn70BOWbJROM caption=false cite=false classes=\"no-embed mm\"]</p><h2>Mummy Lord Lairs</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.B4XvTkWih1fYQ079 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>木乃伊</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.YuuqpbH93Kq9hizu caption=false cite=false classes=\"no-embed mm\"]</p><h2>木乃伊领主</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.HJG9Pn70BOWbJROM caption=false cite=false classes=\"no-embed mm\"]</p><h2>Mummy Lord Lairs</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.B4XvTkWih1fYQ079 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Legendary Resistance": {
-          "name": "Legendary Resistance",
-          "description": "<p>If the [[lookup @name lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+          "name": "传奇抗性",
+          "description": "<p>[[lookup @name lowercase]] 豁免失败时，可以将其改为豁免成功。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
-              "condition": "fails a saving throw"
+              "name": "耗用",
+              "condition": "豁免失败时"
             }
           }
         },
         "Undead Restoration": {
-          "name": "Undead Restoration",
-          "description": "<p>If destroyed, the  [[lookup @name lowercase]] gains a new body in 24 hours if its heart is intact, reviving with all its Hit Points. The new body appears in an unoccupied space within the  [[lookup @name lowercase]]'s lair. The heart is a Tiny object that has AC 17, HP 10, and Immunity to all damage except Fire.</p>"
+          "name": "不死再造",
+          "description": "<p>若[[lookup @name lowercase]]被摧毁且其心脏完好无损，则在24小时后获得一副新的身体并恢复全部生命值。新身体会出现在[[lookup @name lowercase]]巢穴内一处未占据空间。心脏是一个AC17，HP10且免疫所有非火焰伤害的物件。</p>"
         },
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>[[lookup @name lowercase]] 为抵抗法术和其它魔法效应而作的豁免检定具有优势。</p>"
         },
         "Rotting Fist": {
-          "name": "Rotting Fist",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is cursed. While cursed, the target can’t regain Hit Points, its Hit Point maximum doesn’t return to normal when finishing a Long Rest, and its Hit Point maximum decreases by [[/r 3d6#HP Max Decrease]]{10 (3d6)} every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack.</p>",
+          "name": "腐朽拳击",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若目标为生物，则其被诅咒。受诅咒期间，目标无法恢复生命值，也无法在完成长休时恢复生命值上限，并且诅咒每持续24小时，其生命值上限降低[[/r 3d6#HP Max Decrease]]{10 (3d6)}。若生物因此攻击生命值降至0，则其立即死亡并化为尘土。</p>",
           "activities": {
             "HP Max Decrease": {
-              "name": "HP Max Decrease",
-              "roll": "HP Max Decr."
+              "name": "减少最大生命值",
+              "roll": "减少最大生命值。"
             }
           },
           "effects": {
             "Cursed": {
-              "name": "Cursed",
-              "description": "<p>If the target is a creature, it is cursed. While cursed, the target can’t regain Hit Points, its Hit Point maximum doesn’t return to normal when finishing a Long Rest, and its Hit Point maximum decreases by [[/r 3d6#HP Max Decrease]]{10 (3d6)} every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack.</p>"
+              "name": "诅咒",
+              "description": "<p>若目标为生物，则其被诅咒。受诅咒期间，目标无法恢复生命值，也无法在完成长休时恢复生命值上限，并且诅咒每持续24小时，其生命值上限降低10（3d6）。若生物因此攻击生命值降至0，则其立即死亡并化为尘土。</p>"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes one [[/item .mmRottingFist000]] or [[/item .d6GVHcFrHv83C7eS]] attack, and it uses [[/item .mmDreadfulGlare0]].</p>",
+          "name": "多重攻击",
+          "description": "<p>[[lookup @name lowercase]]发动一次[[/item .mmRottingFist000]] 或使用 [[/item .d6GVHcFrHv83C7eS]]攻击，并使用[[/item .mmDreadfulGlare0]]。</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]], +9 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimateDea]{Animate Dead}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHarm000000]{Harm}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInsectPlag]{Insect Plague}</em> (level 7 version)</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]，法术攻击检定+9）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimateDea]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHarm000000]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInsectPlag]</em>（7环版本）</p>"
         },
         "Dispel Magic": {
           "name": "解除魔法",
@@ -20687,7 +20687,7 @@
           "description": "<p><em>触发：</em> [[lookup @name lowercase]] [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗该次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令该次攻击失手）。</p>",
           "activities": {
             "Use": {
-              "name": "Use",
+              "name": "使用",
               "roll": "Bonus AC",
               "condition": "hit by a melee attack roll while holding a weapon"
             }
@@ -20701,11 +20701,11 @@
       "description": "<h1>Nobles</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.TVskfAu471arcBTq caption=false cite=false classes=\"no-embed mm\"]</p><h2>Noble Prodigy</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.OEkcXqCvmgQD2wlj caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item .mmBeguilingStrik]] attacks.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -21060,7 +21060,7 @@
       "items": {
         "Undead Fortitude": {
           "name": "不死坚韧",
-          "description": "<p class=\"feature\">当 [[lookup @name lowercase]] 因非光耀非重击伤害生命值降至0时，其进行一次体质豁免（DC为5+所受伤害）。豁免成功则改为将 [[lookup @name lowercase]] 的生命值降至1。</p>"
+          "description": "<p>当 [[lookup @name lowercase]] 因非光耀非重击伤害导致生命值降为 0 时，其进行一次体质豁免检定（DC 为 5 + 所受伤害）。豁免成功则改为将生命值降至 1。</p>"
         },
         "Slam": {
           "name": "猛击",
@@ -21326,7 +21326,7 @@
       "items": {
         "Hooves": {
           "name": "Hooves",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
@@ -21337,14 +21337,14 @@
       "items": {
         "Shortsword": {
           "name": "Shortsword",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Uncanny Dodge": {
           "name": "Uncanny Dodge",
           "description": "<p class=\"feature\"><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=NzfYZzkrG4qJ13to]]. <em>Response:</em> The [[lookup @name lowercase]] halves the damage (round down) it takes from that attack.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
+              "name": "耗用",
               "condition": "hit by an attack roll"
             }
           }
@@ -21357,17 +21357,17 @@
       "description": "<h1>Performers</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.dtqHG194fU6sAkTi caption=false cite=false classes=\"no-embed mm\"]</p><h2>Performer Legend</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.TaaL2dxipGpa3b72 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item .mmBejeweledBaton]] attacks.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
         "Bejeweled Baton": {
           "name": "Bejeweled Baton",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Majestic Song": {
           "name": "Majestic Song",
@@ -21746,14 +21746,14 @@
         },
         "Pistol": {
           "name": "Pistol",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three attacks, using [[/item .mn8aFoITI9CPUN4B]] or [[/item .LOZZSeftLtXyiaAk]] in any combination.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -21762,7 +21762,7 @@
           "description": "<p class=\"feature\"><em>Trigger:</em> The [[lookup @name lowercase]] is hit by a melee attack roll while holding a weapon.</p><p class=\"feature\"><em>Response:</em> The [[lookup @name lowercase]] adds 4 to its AC against melee attack rolls (including the triggering attack) until the start of its next turn, possibly causing the attacks to miss.</p><section class=\"secret\" id=\"secret-ZummIe4iT49KVHOk\"><p><strong>Foundry Note</strong></p><p>This feature also provides an <strong>Active Effect (AE)</strong> that will modify this creature's <strong>Armor Class</strong> when you utilize the reaction. You can enable the AE in the effects tab of the character sheet.</p></section>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use",
+              "name": "耗用",
               "condition": "The pirate is hit by a melee attack roll while holding a weapon"
             }
           },
@@ -21946,7 +21946,7 @@
       "description": "<h1>Pixies</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.BK2fFx2HQtSJinWc caption=false cite=false classes=\"no-embed mm\"]</p><h2>Pixie</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.ujVreuOcy0MnjDAw caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
         },
         "Faerie Dust": {
@@ -22228,15 +22228,15 @@
           "description": "<p class=\"feature\">If the [[lookup @name lowercase]] dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.</p>"
         },
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Radiant Sword]] attacks or uses [[/item Holy Burst]] twice.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
@@ -22507,7 +22507,7 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] and its light have the &amp;Reference[Invisible apply=false] condition or ends that condition on itself.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           },
           "effects": {
@@ -22738,15 +22738,15 @@
       "description": "<h1>Owlbears</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.3OaVYG2opAydAD8R caption=false cite=false classes=\"no-embed mm\"]</p><h2>Primeval Owlbear</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.quH68MqJ0ntD75b8 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmRavage00000000]] attacks.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -22789,21 +22789,21 @@
       "description": "<h1>Pseudodragon</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.NhqYPD69TqlVJpKV caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmBite0000000000]] attacks.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Sting": {
           "name": "Sting",
@@ -22871,7 +22871,7 @@
         },
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
@@ -22881,11 +22881,11 @@
       "description": "<h1>Purple Worm</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.wOy1rLPfr426Wj3Q caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes one [[/item .mmBite0000000000]] attack and one [[/item .mmTailStinger000]] attack.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -22949,11 +22949,11 @@
           "description": "<p>While &amp;Reference[Bloodied], the [[lookup @name lowercase]] has Advantage on attack rolls.</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmClaw0000000000]] attacks.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -22978,17 +22978,17 @@
           "description": "<p>While &amp;Reference[Bloodied], the [[lookup @name lowercase]] has Advantage on attack rolls.</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmClaw0000000000]] attacks.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
         "Claw": {
           "name": "Claw",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Spellcasting": {
           "name": "Spellcasting",
@@ -23077,7 +23077,7 @@
       "description": "<h1>Quasit</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.5VW4pbLF5nwdO7II caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
         },
         "Rend": {
@@ -23146,11 +23146,11 @@
       "items": {
         "Greatsword": {
           "name": "Greatsword",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Longbow": {
           "name": "Longbow",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Plate Armor": {
           "name": "Plate Armor"
@@ -23160,7 +23160,7 @@
           "description": "<p>Creatures of the [[lookup @name lowercase]]'s choice in a [[lookup @target.template.size activity=N8uK4xdPCXdknRTb]]-foot Emanation originating from it have Immunity to the &amp;Reference[Charmed apply=false] and &amp;Reference[Frightened apply=false] conditions while there.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           },
           "effects": {
@@ -23171,11 +23171,11 @@
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three attacks, using [[/item .ogiSGKeLqpw2g1ek]] or [[/item .xqMyOHm4l8Kqx6K6]] in any combination.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -23250,11 +23250,11 @@
           "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item .mmCursedTouch000]] attacks.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -23425,7 +23425,7 @@
         },
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
@@ -23439,7 +23439,7 @@
         },
         "Beak": {
           "name": "Beak",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
@@ -23449,17 +23449,17 @@
       "description": "<h1>Red Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Rx08X1mW6m5uYldI caption=false cite=false classes=\"no-embed mm\"]</p><h2>Red Dragon Wyrmling</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.u7L682ldreJy4PlC caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmRend0000000000]] attacks.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
           "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Fire Breath": {
           "name": "Fire Breath",
@@ -23482,15 +23482,15 @@
           }
         },
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item Injecting Claw]] attacks.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
@@ -23744,7 +23744,7 @@
           "description": "<p>[[lookup @name lowercase]]发动两次 [[/item Tentacle]] 攻击， 使用 [[/item Reel]]，并发动两次 [[/item Bite]]攻击。</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
@@ -24194,16 +24194,16 @@
       "description": "<h1>Satyrs</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.vW03U4jAKQWpKcQB caption=false cite=false classes=\"no-embed mm\"]</p><h2>Satyr Revelmaster</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.B7bIMzFK1bTtZyAz caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes three [[/item .mmPrance00000000]] attacks.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
         },
         "Prance": {
@@ -24890,7 +24890,7 @@
           "description": "<p class=\"feature\"><em>Trigger:</em> A [[lookup @target.affects.type activity=Tlv3gcYk5KfdtV7c]] or a source of Bright Light moves within [[lookup @range.value activity=Tlv3gcYk5KfdtV7c]] feet of the [[lookup @name lowercase]]. <em>Response:</em> The [[lookup @name lowercase]] emits a shriek audible within [[lookup @target.template.size activity=Tlv3gcYk5KfdtV7c]] feet of itself for [[lookup @duration.value activity=Tlv3gcYk5KfdtV7c]] minute or until the [[lookup @name lowercase]] dies.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         }
@@ -24902,17 +24902,17 @@
       "description": "<h1>Silver Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.REGxFxNrTLFswtA1 caption=false cite=false classes=\"no-embed mm\"]</p><h2>Silver Dragon Wyrmling</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.HwVckgQCUMSXFgQx caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmRend0000000000]] attacks.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Rend": {
           "name": "Rend",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Cold Breath": {
           "name": "Cold Breath",
@@ -24946,11 +24946,11 @@
       "items": {
         "Shortsword": {
           "name": "Shortsword",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Shortbow": {
           "name": "Shortbow",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
@@ -24960,12 +24960,12 @@
       "description": "<h1>Slaadi</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.AXXqca9xNbd6xnJ6 caption=false cite=false classes=\"no-embed mm\"]</p><h2>Slaad Tadpole</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.b21ZhbjLPDZojvRz caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
         },
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
@@ -24991,7 +24991,7 @@
         },
         "Claw": {
           "name": "爪击",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Cinder Breath": {
           "name": "燃烬吐息",
@@ -25504,7 +25504,7 @@
           "description": "<p>The [[lookup @name lowercase]] can teleport up to [[lookup @range.value activity=a3RqyzU0UqzLJif0]] feet to an unoccupied space it can see, and it makes one [[/item Claw]] attack.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -25700,7 +25700,7 @@
             },
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，且于其每一回合结束时重复此豁免，豁免成功则结束此效应。你将在 1 分钟后自动成功于此豁免。</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             },
             "Prone": {
               "name": "倒地",
@@ -26287,21 +26287,21 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] can’t shape-shift.</p>"
         },
         "Magic Resistance": {
-          "name": "Magic Resistance",
+          "name": "魔法抗性",
           "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
+          "name": "多重攻击",
           "description": "<p>The [[lookup @name lowercase]] makes two attacks, using [[/item Slam]] or [[/item Force Bolt]] in any combination.</p>",
           "activities": {
             "Use": {
-              "name": "Use"
+              "name": "使用"
             }
           }
         },
         "Slam": {
           "name": "Slam",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Force Bolt": {
           "name": "Force Bolt",
@@ -26574,7 +26574,7 @@
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmRend0000000000]] attacks.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
@@ -26649,7 +26649,7 @@
           "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmVileSlime00000]] attacks.</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         },
@@ -29846,7 +29846,7 @@
             },
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，且于其每一回合结束时重复此豁免，豁免成功则结束此效应。你将在 1 分钟后自动成功于此豁免。</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
             }
           }
         }
