@@ -6492,7 +6492,7 @@
           "effects": {
             "Poisoned": {
               "name": "中毒",
-              "description": "<p class=\"feature\">你陷入 &Reference[Poisoned apply=false] 状态，直至骨魔的下一回合开始。你在中毒期间无法恢复生命值。</p>"
+              "description": "<p class=\"feature\">目标陷入 &Reference[Poisoned apply=false] 状态，直至骨魔的下一回合开始。目标在中毒期间无法恢复生命值。</p>"
             }
           }
         }
@@ -12814,7 +12814,7 @@
           "effects": {
             "Poisoned": {
               "name": "中毒",
-              "description": "<p>你陷入 &Reference[Poisoned apply=false] 状态直至巨蜈蚣的下一回合开始。</p>"
+              "description": "<p>目标陷入 &Reference[Poisoned apply=false] 状态直至巨蜈蚣的下一回合开始。</p>"
             }
           }
         }
@@ -13551,7 +13551,7 @@
           "effects": {
             "Frightened": {
               "name": "恐慌",
-              "description": "<p>你陷入 &Reference[Frightened apply=false] 直至吉斯洋基龙巫的下一回合开始。</p>"
+              "description": "<p>目标陷入 &Reference[Frightened apply=false] 直至吉斯洋基龙巫的下一回合开始。</p>"
             }
           }
         },
@@ -21039,8 +21039,8 @@
       }
     },
     "Ogre": {
-      "name": "Ogre",
-      "tokenName": "Ogre",
+      "name": "食人魔",
+      "tokenName": "食人魔",
       "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepGreatclub0]{Greatclub}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepJavelin000]{Javelins (3)}</p></div><h1>Ogres</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1Hp2MOUaAODie8ex caption=false cite=false classes=\"no-embed mm\"]</p><h2>Ogre</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.kqE5GUlHs8pLCwvw caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Greatclub": {
@@ -21325,35 +21325,35 @@
       "description": "<h1>Pegasus</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Xd0ej0BIhKo6R0WV caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Hooves": {
-          "name": "Hooves",
+          "name": "蹄击",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
     "Performer": {
-      "name": "Performer",
-      "tokenName": "Performer",
+      "name": "演艺者",
+      "tokenName": "演艺者",
       "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepShortsword]{Shortsword}</p></div><h1>Performers</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.dtqHG194fU6sAkTi caption=false cite=false classes=\"no-embed mm\"]</p><h2>Performer</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.L0h033a73MFIXIfh caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Shortsword": {
-          "name": "Shortsword",
+          "name": "短剑",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Uncanny Dodge": {
-          "name": "Uncanny Dodge",
-          "description": "<p class=\"feature\"><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=NzfYZzkrG4qJ13to]]. <em>Response:</em> The [[lookup @name lowercase]] halves the damage (round down) it takes from that attack.</p>",
+          "name": "直觉闪避",
+          "description": "<p class=\"feature\"><em>触发：</em>[[lookup @name lowercase]] [[lookup @activation.condition activity=NzfYZzkrG4qJ13to]]。<em>响应：</em>[[lookup @name lowercase]]因此次攻击受到的伤害减半（向下取整）。 </p>",
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "condition": "hit by an attack roll"
+              "condition": "被一次攻击检定命中。"
             }
           }
         }
       }
     },
     "Performer Legend": {
-      "name": "Performer Legend",
-      "tokenName": "Performer Legend",
+      "name": "演艺传奇",
+      "tokenName": "演艺传奇",
       "description": "<h1>Performers</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.dtqHG194fU6sAkTi caption=false cite=false classes=\"no-embed mm\"]</p><h2>Performer Legend</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.TaaL2dxipGpa3b72 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
@@ -21366,11 +21366,11 @@
           }
         },
         "Bejeweled Baton": {
-          "name": "Bejeweled Baton",
+          "name": "镶玉指挥杖",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Majestic Song": {
-          "name": "Majestic Song",
+          "name": "庄严之歌",
           "description": "<p class=\"feature\"><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=6TeipSZlJHOJTSZQ]], each [[lookup @target.affects.type activity=6TeipSZlJHOJTSZQ]] in a [[lookup @target.template.size activity=6TeipSZlJHOJTSZQ]]-foot-radius Sphere centered on a point within [[lookup @range.value activity=6TeipSZlJHOJTSZQ]] feet.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Charmed apply=false] or &amp;Reference[Frightened apply=false] condition ([[lookup @name lowercase]]’s choice) until the end of the [[lookup @name lowercase]]’s next turn.</p><p class=\"feature\"><em>Success:</em> Half damage only.</p>",
           "activities": {
             "Save": {
@@ -21383,7 +21383,7 @@
               "description": "<p>The target has the &amp;Reference[Charmed apply=false] condition (performer’s choice) until the end of the attacking creature's next turn.</p>"
             },
             "Frightened": {
-              "name": "Frightened",
+              "name": "恐慌",
               "description": "<p>The target has the &amp;Reference[Frightened apply=false] condition (performer’s choice) until the end of the attacking creature's next turn.</p>"
             }
           }
@@ -21393,12 +21393,12 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]{Prestidigitation}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]{Major Image}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplProjectIma]{Project Image}</em></p>"
         },
         "Warding Charm": {
-          "name": "Warding Charm",
+          "name": "魅力之佑",
           "description": "<p class=\"feature\"><em>Trigger:</em> A creature hits the [[lookup @name lowercase]] with an attack roll.</p><p class=\"feature\"><em>Response—Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=zTaurVqDcUSvviyB]], the triggering creature.</p><p class=\"feature\"><em>Failure:</em> The attack roll misses the [[lookup @name lowercase]], and the target has the &amp;Reference[Charmed apply=false] condition until the end of the [[lookup @name lowercase]]’s next turn.</p>",
           "activities": {
             "Save": {
               "name": "豁免",
-              "condition": "A creature hits the attacking creature with an attack roll."
+              "condition": "一名生物对演艺者进行攻击检定并命中。"
             }
           },
           "effects": {
@@ -21727,12 +21727,12 @@
       }
     },
     "Pirate Admiral": {
-      "name": "Pirate Admiral",
-      "tokenName": "Pirate Admiral",
+      "name": "海盗将军",
+      "tokenName": "海盗将军",
       "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepPistol0000]{Pistol}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepScimitar00]{Scimitar}</p></div><h1>Pirates</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.quXy2WM17LbbHjxu caption=false cite=false classes=\"no-embed mm\"]</p><h2>Pirate Admiral</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Yz7FHnVhJIOFDVQg caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Scimitar": {
-          "name": "Scimitar",
+          "name": "弯刀",
           "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target suffers one of the following effects of the [[lookup @name lowercase]]'s choice:</p><p><em><strong>Awestruck</strong></em>. The target has the &amp;Reference[Charmed apply=false] condition until the start of the [[lookup @name lowercase]]'s next turn.</p><p class=\"feature-trait\"><em><strong>Poison</strong></em>. The target has the &amp;Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]’s next turn.</p>",
           "effects": {
             "Charmed": {
