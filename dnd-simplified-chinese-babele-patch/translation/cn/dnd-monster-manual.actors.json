@@ -2701,7 +2701,7 @@
         },
         "Thunderclap": {
           "name": "鸣雷霆爆",
-          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=Lq6GexegvlEVB6Dh]]，  以 [[lookup @range.value activity=Lq6GexegvlEVB6Dh]] 尺内[[lookup @name lowercase]]可见一点为中心，半径 [[lookup @target.template.size activity=Lq6GexegvlEVB6Dh]]尺球状区域内的每名[[lookup @target.affects.type activity=Lq6GexegvlEVB6Dh]]。</p><p class=\"feature\"><em>失败：</em> [[/damage average]] 伤害，且目标陷入 &amp;Reference[Deafened apply=false]状态直至其下个回合结束。</p>",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=Lq6GexegvlEVB6Dh]]，  以 [[lookup @range.value activity=Lq6GexegvlEVB6Dh]] 尺内[[lookup @name lowercase]]可见一点为中心，半径 [[lookup @target.template.size activity=Lq6GexegvlEVB6Dh]]尺球状区域内的所有生物。</p><p class=\"feature\"><em>失败：</em> [[/damage average]] 伤害，且目标陷入 &amp;Reference[Deafened apply=false]状态直至其下个回合结束。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -4623,7 +4623,7 @@
           "effects": {
             "Imperceptible Barrier": {
               "name": "无形护盾",
-              "description": "<p>在你的下一回合开始前，你的 AC 具有+5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
+              "description": "<p>在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -6014,7 +6014,7 @@
         },
         "Eye Rays": {
           "name": "眼波射线",
-          "description": "<p class=\"feature\">[[lookup @name lowcase]] 向一名位于其120尺内其可见的目标从下列魔法射线中随机射出一道（掷[[/r 1d4]]，如果 [[lookup @name lowcase]] 在本回合已经使用过该射线则重新掷骰）：</p><details>    <summary><strong>眼波射线</strong></summary>    <p class=\"feature-trait\"><strong>1：麻痹射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=EZ5rsyCFKBY3TWww]]。</p>    <p><em>失败：</em> 目标陷入 &Reference[Paralyzed apply=false] 状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。[[lookup @duration.value activity=EZ5rsyCFKBY3TWww]] 分钟后，其豁免自动成功。</p>    <p class=\"feature-trait\"><strong>2：恐惧射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=aMfevxGsYy5swVDA]]。</p>    <p><em>失败：</em> [[/damage average activity=aMfevxGsYy5swVDA]]伤害，目标陷入 &Reference[Frightened apply=false] 状态，直到其下一回合结束。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>3：汲能射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=9srzVFm9txeDeMFf]]。</p>    <p><em>失败：</em> [[/damage average activity=9srzVFm9txeDeMFf]]伤害，目标陷入 &Reference[Poisoned apply=false] 状态，直到其下一回合结束。在中毒期间，目标不能恢复生命值。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>4：解离射线。</strong></p>    <p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=A5PdqZCq1yeIN8m4]]。</p>    <p><em>失败：</em> [[/damage average activity=A5PdqZCq1yeIN8m4]]伤害。若目标是一件非魔法物件或魔法力场造物，则其上一处 [[lookup @target.template.size activity=A5PdqZCq1yeIN8m4]] 尺立方区域内的部分被解离为尘埃。</p>    <p><em>成功：</em> [[lookup @damage.onSave capitalize activity=A5PdqZCq1yeIN8m4]]伤害。</p>    <p><em>成功或失败：</em> 若目标为生物且因此伤害生命值降至0，则该生物被解离为尘埃。</p></details>",
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 向一名位于其120尺内其可见的目标从下列魔法射线中随机射出一道（掷[[/r 1d4]]，如果 [[lookup @name lowcase]] 在本回合已经使用过该射线则重新掷骰）：</p><details>    <summary><strong>眼波射线</strong></summary>    <p class=\"feature-trait\"><strong>1：麻痹射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=EZ5rsyCFKBY3TWww]]。</p>    <p><em>失败：</em> 目标陷入 &Reference[Paralyzed apply=false] 状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。[[lookup @duration.value activity=EZ5rsyCFKBY3TWww]] 分钟后，其豁免自动成功。</p>    <p class=\"feature-trait\"><strong>2：恐惧射线。</strong></p>    <p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=aMfevxGsYy5swVDA]]。</p>    <p><em>失败：</em> [[/damage average activity=aMfevxGsYy5swVDA]]伤害，目标陷入 &Reference[Frightened apply=false] 状态，直到其下一回合结束。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>3：汲能射线。</strong></p>    <p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=9srzVFm9txeDeMFf]]。</p>    <p><em>失败：</em> [[/damage average activity=9srzVFm9txeDeMFf]]伤害，目标陷入 &Reference[Poisoned apply=false] 状态，直到其下一回合结束。在中毒期间，目标不能恢复生命值。</p>    <p><em>成功：</em> 仅半伤。</p>    <p class=\"feature-trait\"><strong>4：解离射线。</strong></p>    <p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=A5PdqZCq1yeIN8m4]]。</p>    <p><em>失败：</em> [[/damage average activity=A5PdqZCq1yeIN8m4]]伤害。若目标是一件非魔法物件或魔法力场造物，则其上一处 [[lookup @target.template.size activity=A5PdqZCq1yeIN8m4]] 尺立方区域内的部分被解离为尘埃。</p>    <p><em>成功：</em>半伤。</p>    <p><em>成功或失败：</em> 若目标为生物且因此伤害生命值降至0，则该生物被解离为尘埃。</p></details>",
           "activities": {
             "Roll 1d4": {
               "name": "掷 1d4",
@@ -13793,7 +13793,7 @@
           "effects": {
             "Imperceptible Barrier": {
               "name": "无形护盾",
-              "description": "<p>在你的下一回合开始前，你的 AC 具有+5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
+              "description": "<p>在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -13910,7 +13910,7 @@
           "effects": {
             "Imperceptible Barrier": {
               "name": "无形护盾",
-              "description": "<p>在你的下一回合开始前，你的 AC 具有+5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
+              "description": "<p>在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -14030,7 +14030,7 @@
           "effects": {
             "Imperceptible Barrier": {
               "name": "无形护盾",
-              "description": "<p>在你的下一回合开始前，你的 AC 具有+5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
+              "description": "<p>在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -18046,7 +18046,7 @@
           "effects": {
             "Imperceptible Barrier": {
               "name": "无形护盾",
-              "description": "<p>在你的下一回合开始前，你的 AC 具有+5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
+              "description": "<p>在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -18351,7 +18351,7 @@
           "effects": {
             "Imperceptible Barrier": {
               "name": "无形护盾",
-              "description": "<p>在你的下一回合开始前，你的 AC 具有+5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
+              "description": "<p>在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -19056,7 +19056,7 @@
       "items": {
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmClaw0000000000]]攻击和一次 [[/item .mmSnakeHair00000]]攻击，或是发动三次 [[/item .mmPoisonRay00000]]攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmClaw0000000000]] 攻击和一次 [[/item .mmSnakeHair00000]] 攻击，或是发动三次 [[/item .mmPoisonRay00000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -19077,7 +19077,7 @@
         },
         "Petrifying Gaze": {
           "name": "石化凝视",
-          "description": "<p class=\"feature\"><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=mN9aF1WkHQWLIN4B]]， [[lookup @target.template.size activity=mN9aF1WkHQWLIN4B]] 尺锥状区域内的每名生物。若 [[lookup @name lowercase]] 在锥形区域内看到自己的倒影，其也必须进行此豁免。</p><p class=\"feature\"><em>首次失败：</em>目标陷入 &Reference[Restrained apply=false] 状态，目标在下一回合结束时仍处于束缚则重复豁免，成功则终止其身上的该效应。</p><p class=\"feature\"><em>再次失败：</em>目标陷入 &Reference[Petrified apply=false] 状态替代其束缚状态。</p>",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=mN9aF1WkHQWLIN4B]]， [[lookup @target.template.size activity=mN9aF1WkHQWLIN4B]] 尺锥状区域内的所有生物。若 [[lookup @name lowercase]] 在锥形区域内看到自己的倒影，其也必须进行此豁免。</p><p class=\"feature\"><em>首次失败：</em>目标陷入 &Reference[Restrained apply=false] 状态，目标在下一回合结束时仍处于束缚则重复豁免，成功则终止其身上的该效应。</p><p class=\"feature\"><em>再次失败：</em>目标陷入 &Reference[Petrified apply=false] 状态替代其束缚状态。</p>",
           "activities": {
             "First Save": {
               "name": "首次豁免"
@@ -19114,7 +19114,7 @@
           "effects": {
             "Speed: -10 feet": {
               "name": "速度降低 10 尺",
-              "description": "<p>若目标为生物，则其速度降低10尺直至其下个回合结束。</p>"
+              "description": "<p>若你为生物，则你的速度降低 10 尺直至下一回合结束。</p>"
             }
           }
         }
@@ -19140,11 +19140,11 @@
         },
         "Aquatic Burst": {
           "name": "洋流冲刷",
-          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。若目标生物体型不超过大型，则其陷入 &Reference[倒地] 状态。</p>"
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。若目标生物体型不超过大型，则其陷入 &Reference[Prone] 状态。</p>"
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\"> [[lookup @name lowercase]]施展以下一道法术，无需材料成分并使用感知作为施法属性（法术豁免DC15 [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]{Elementalism}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]{Light}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWat]{Control Water}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateorDe]{Create or Destroy Water}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]，@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWat]，@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateorDe]</em></p>"
         },
         "Elementalism": {
           "name": "四象法门",
@@ -19207,11 +19207,11 @@
         },
         "Watery Rebuke": {
           "name": "潮浪反斥",
-          "description": "<p class=\"feature\"><em>触发：</em> 一名 [[lookup @name lowercase]] 可见的 [[lookup @target.affects.special activity=nCfH0YgOhJR2wIKd]] 进入 [[lookup @range.value activity=nCfH0YgOhJR2wIKd]] 尺之内[[lookup @name lowercase]]. <em>响应-力量豁免检定：</em> DC [[lookup @save.dc.value activity=nCfH0YgOhJR2wIKd]]，触发生物。</p><p><em>失败：</em> [[/damage average]] 伤害。若目标不超过大型，则其被  [[lookup @name lowercase]] 咒唤的水流直线推离30尺。 </p>",
+          "description": "<p class=\"feature\"><em>触发：</em> 一名[[lookup @name lowercase]] 可见的敌人进入其 [[lookup @range.value activity=nCfH0YgOhJR2wIKd]] 尺内的空间。 <em>响应—力量豁免检定：</em> DC [[lookup @save.dc.value activity=nCfH0YgOhJR2wIKd]], 触发敌人。</p><p><em>失败：</em> [[/damage average]]伤害。若目标体型不超过大型，则其被 [[lookup @name lowercase]] 咒唤而来的水流直线推开 30 尺。</p>",
           "activities": {
             "Save": {
               "name": "豁免",
-              "chatFlavor": "失败：目标直线推离30尺。"
+              "chatFlavor": "失败：目标直线推离 30 尺。"
             }
           }
         }
@@ -19228,7 +19228,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p><span style=\"font-family:'Roboto Condensed', sans-serif\"></span>[[lookup @name lowercase]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> 使用 </span>[[/item .mmBite0000000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\">，</span>[[/item .mmClaw0000000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\">, 或 </span>[[/item .mmHarpoon0000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\">发动共计两次攻击。</span></p>",
+          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .mmBite0000000000]]、[[/item .mmClaw0000000000]] 或 [[/item .mmHarpoon0000000]] 发动共计两次攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -19237,11 +19237,11 @@
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]。[[/damage average extended]]<span style=\"font-family:'Roboto Condensed', sans-serif\">，并且目标陷入 &amp;Reference[Poisoned apply=false] 状态，持续至 </span>[[lookup @name lowercase]]'s<span style=\"font-family:'Roboto Condensed', sans-serif\">的下个回合结束。</span></p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]，且目标陷入 &Reference[Poisoned apply=false] 状态，持续至 [[lookup @name lowcase]] 的下一回合结束。</p>",
           "effects": {
             "Poisoned": {
               "name": "中毒",
-              "description": "<p>你陷入 &amp;Reference[Poisoned apply=false] 状态，直至梅洛人鱼的下个回合结束。</p>"
+              "description": "<p>你陷入 &amp;Reference[Poisoned apply=false] 状态，直至梅洛人鱼的下一回合结束。</p>"
             }
           }
         },
@@ -19251,7 +19251,7 @@
         },
         "Harpoon": {
           "name": "鱼叉",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。若目标生物体型不超过大型，则 [[lookup @name lowercase]] 将目标直线拉近至多15尺。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。若目标生物体型不超过大型，则 [[lookup @name lowercase]] 将目标直线拉近至多 15 尺。</p>",
           "activities": {
             "attack": {
               "chatFlavor": "命中：将目标直线拉近至多 15 尺。"
@@ -19275,7 +19275,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]]使用 [[/item .mmClaws000000000]] 或 [[/item .mmMercurialTride]]发动共计两次攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]]使用 [[/item .mmClaws000000000]] 或 [[/item .mmMercurialTride]] 发动共计两次攻击。</p>",
           "activities": {
             "Expand Use": {
               "name": "耗用"
@@ -19293,21 +19293,21 @@
           "effects": {
             "Grappled and Restrained": {
               "name": "受擒并束缚",
-              "description": "<p>若目标生物体型不超过大型，则其陷入 &amp;Reference[Grappled apply=false] 状态 （逃脱 DC [[/check ability=str skill=ath format=long]]，见源物品DC），且目标陷入 &amp;Reference[Restrained apply=false] 状态直至擒抱结束。</p><p><strong>逃脱检定 (见源物品DC)</strong></p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
+              "description": "<p>若你的生物体型不超过大型，则你陷入 &amp;Reference[Grappled apply=false] 状态 （逃脱 DC 14，[[/check ability=str skill=ath format=long]]），且你陷入 &amp;Reference[Restrained apply=false] 状态直至擒抱结束。</p><p><strong>逃脱检定 (见源物品DC)</strong></p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
             }
           }
         },
         "Mercurial Trident": {
           "name": "变幻三叉戟",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]].。<em>命中或失手：</em> [[lookup @name lowercase]]三叉戟在远程攻击后立即魔法地回到 [[lookup @name lowercase]]爪中。</p>"
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]].。<em>命中或失手：</em> [[lookup @name lowercase]] 三叉戟在远程攻击后立即魔法地回到 [[lookup @name lowercase]] 爪中。</p>"
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCloudkill0]{死云术}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{黑暗术}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{解除魔法}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spelldc]])：</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCloudkill0]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em></p>"
         },
         "Teleport": {
           "name": "传送",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]]传送至多[[lookup @range.value activity=dnoRMdFzhUUku26D]] 尺到一处其可见的未占空间。其可以将一名正被其擒抱的生物传送至目标空间5尺内的未占据空间。</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]传送至多 [[lookup @range.value activity=dnoRMdFzhUUku26D]] 尺到一处其可见的未占空间。其可以将一名正被其擒抱的生物传送至目标空间 5 尺内的未占据空间。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -19350,7 +19350,7 @@
       "items": {
         "Adhesive (Object Form Only)": {
           "name": "粘附（仅物件形态）",
-          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 粘附在任何触碰到其的东西上。体型不超过巨型的被粘附生物陷入&amp;Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。为逃脱此擒抱进行的属性检定具有劣势。</p>",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 粘附在任何触碰到其的东西上。体型不超过巨型的被粘附生物陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。为逃脱此擒抱进行的属性检定具有劣势。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -19362,7 +19362,7 @@
           "effects": {
             "Grappled": {
               "name": "受擒",
-              "description": "<p>你陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[/check ability=str skill=ath format=long]]，为逃脱此擒抱进行的属性检定具有劣势。</p>"
+              "description": "<p>你陷入 &Reference[Grappled apply=false] 状态（逃脱DC 13，[[/check ability=str skill=ath format=long]]）。为逃脱此擒抱进行的属性检定具有劣势。</p>"
             }
           }
         },
@@ -19371,14 +19371,14 @@
           "description": "<p class=\"feature\"><em>近战攻击检定：</em> [[/attack]] （若目标因该拟身怪受擒则具有优势），触及 [[lookup @range.value activity=xWlMeXFjELfSUWX9]]尺。<em>命中：</em> [[/damage average activity=xWlMeXFjELfSUWX9]] 伤害，若目标因该拟身怪受擒则改为 [[/damage average activity=Hx8Io6Uz1mJDm4Nf]] 伤害。</p>",
           "activities": {
             "Attacked if Grappling": {
-              "name": "受擒时被攻击",
+              "name": "受擒攻击",
               "condition": "若目标因该拟身怪受擒则具有优势"
             }
           }
         },
         "Pseudopod": {
           "name": "伪足",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。 若目标生物体型不超过大型，其陷入 &amp;Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。 为逃脱此擒抱进行的属性检定具有劣势。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过大型，其陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。为逃脱此擒抱进行的属性检定具有劣势。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -19393,7 +19393,7 @@
         },
         "Shape-Shift": {
           "name": "变形",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 变形为如同中型或小型物件，并保留其游戏数据；或拟身怪变回其真实斑点形态。拟身怪着装或携带的任何装备都不会随之变化。</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 变形为如同中型或小型物件，并保留其游戏数据；或[[lookup @name lowercase]]变回其真实斑点形态。[[lookup @name lowercase]]着装或携带的任何装备都不会随之变化。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -19416,7 +19416,7 @@
         },
         "Extract Brain": {
           "name": "采脑",
-          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=DinjHW2u6r40l57Y]]， 单一正受擒于[[lookup @name lowercase]]触须的生物。</p><p><em>失败：</em> [[/damage average]] 伤害。</p><p><em>成功：</em> [[lookup @damage.onSave capitalize activity=DinjHW2u6r40l57Y]] 伤害。</p><p><em>失败或成功：</em> 若目标因此伤害生命值降至0，[[lookup @name lowercase]]杀死目标并吞食其大脑。</p>",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=DinjHW2u6r40l57Y]]， 单一正受擒于[[lookup @name lowercase]]触须的生物。</p><p><em>失败：</em> [[/damage average]] 伤害。</p><p><em>成功：</em> 半伤。</p><p><em>失败或成功：</em> 若目标因此伤害生命值降至0，[[lookup @name lowercase]]杀死目标并吞食其大脑。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -19425,7 +19425,7 @@
         },
         "Tentacles": {
           "name": "触须",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]。若目标生物体型不超过中型，则其被夺心魔的全部触须 &Reference[Stunned apply=false]  （逃脱DC14 [[lookup @check.dc.formula activity=Vo2UIgas007G3QXv]]）。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]。若目标生物体型不超过中型，则其被[[lookup @name lowercase]]的全部触须 &Reference[Stunned apply=false]  （逃脱DC [[lookup @check.dc.formula activity=Vo2UIgas007G3QXv]]）。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -19434,13 +19434,13 @@
           "effects": {
             "Stunned": {
               "name": "震慑",
-              "description": "<p>若目标生物体型不超过中型，其陷入 &amp;Reference[Stunned apply=false] 状态（逃脱 DC [[/check ability=str skill=ath format=long]]，见源物品DC）。</p>"
+              "description": "<p>若你的生物体型不超过中型，则你陷入 &amp;Reference[Stunned apply=false] 状态（逃脱 DC 14，[[/check ability=str skill=ath format=long]]）。</p>"
             }
           }
         },
         "Mind Blast": {
           "name": "心灵震爆",
-          "description": "<p class=\"feature\"><em>智力豁免检定：</em> DC [[lookup @save.dc.value activity=lHIQgEzz6hc3hjWx]]，[[lookup @target.template.size activity=lHIQgEzz6hc3hjWx]]尺锥形区域内的每名生物。</p><p><em> 失败：</em> [[/damage average]]伤害， 且目标陷入&amp;Reference[Stunned apply=false]状态直至[[lookup @name lowercase]]的下个回合结束。</p><p><em>成功：</em> 仅半伤。</p>",
+          "description": "<p class=\"feature\"><em>智力豁免检定：</em> DC [[lookup @save.dc.value activity=lHIQgEzz6hc3hjWx]]，[[lookup @target.template.size activity=lHIQgEzz6hc3hjWx]]尺锥形区域内的所有生物。</p><p><em> 失败：</em> [[/damage average]]伤害， 且目标陷入&amp;Reference[Stunned apply=false]状态直至[[lookup @name lowercase]]的下一回合结束。</p><p><em>成功：</em> 仅半伤。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -19526,14 +19526,14 @@
         },
         "Arcane Tentacles": {
           "name": "奥术触须",
-          "description": "<p>[[/attack extended]]。 [[/damage average extended]]，且 [[lookup @name lowercase]] 可以将目标传送至多30尺至一处[[lookup @name lowercase]]可见的、有足以支撑目标的表面或液体的未占据空间中。 若目标因此伤害生命值降至0， [[lookup @name lowercase]] 杀死目标并以魔法吞食其大脑。</p>"
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]，且 [[lookup @name lowercase]] 可以将目标传送至多 30 尺至一处[[lookup @name lowercase]]可见的、有足以支撑目标的表面或液体的未占据空间中。 若目标因此伤害生命值降至 0， [[lookup @name lowercase]] 杀死目标并以魔法吞食其大脑。</p>"
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需法术成分并使用智力作为施法属性（法术豁免 DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>（手是隐形的）</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplClairvoyan]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDimensionD]， @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em> （五环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]{Lightning Bolt}</em>（五环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em> （仅自身），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSending000]</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需法术成分并使用智力作为施法属性（法术豁免 DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>（手是隐形的）</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplClairvoyan]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDimensionD]， @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em> （5 环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]{Lightning Bolt}</em>（5 环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em> （仅自身），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSending000]</em></p>"
         },
         "Detect Magic": {
-          "name": "侦测魔法 detect magic",
+          "name": "侦测魔法",
           "description": "<p>在法术持续时间内，你感受到距你 30 尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p>",
           "activities": {
             "Cast": {
@@ -19542,7 +19542,7 @@
           },
           "effects": {
             "Detect Magic": {
-              "name": "侦测魔法 detect magic"
+              "name": "侦测魔法"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -19617,7 +19617,7 @@
           }
         },
         "Fireball": {
-          "name": "火球术 fireball",
+          "name": "火球术",
           "description": "<p>明亮的闪光从你的指间飞驰向施法距离内你指定的一点，并随着一声低吼迸成一片烈焰。目标点周围半径 20 尺球状区域内的每个生物必须进行一次敏捷豁免。豁免失败者将受到 8d6 点火焰伤害，豁免成功则伤害减半。</p><p>区域内所有未被着装或携带的可燃物件会开始燃烧。</p><p><strong>升环施法：</strong> 使用的法术位每比三环高一环，其伤害就增加 1d6。</p>",
           "effects": {
             "Spell Changes": {
@@ -19659,7 +19659,7 @@
         },
         "Mind Burst": {
           "name": "心灵震爆",
-          "description": "<p class=\"feature\"><em>智力豁免检定：</em> DC [[lookup @save.dc.value activity=T0ybbd1ZrLCdEXsW]]，源自[[lookup @name lowercase]]的[[lookup @target.template.size activity=T0ybbd1ZrLCdEXsW]] 尺光环区域内的每名生物。</p><p><em>失败：</em> [[/damage average]] 伤害，且目标陷入&amp;Reference[Stunned apply=false]状态直至[[lookup @name lowercase]]的下个回合结束。</p><p><em>成功：</em> [[lookup @damage.onSave capitalize activity=T0ybbd1ZrLCdEXsW]]仅半伤。</p>",
+          "description": "<p class=\"feature\"><em>智力豁免检定：</em> DC [[lookup @save.dc.value activity=T0ybbd1ZrLCdEXsW]]，源自[[lookup @name lowercase]]的 [[lookup @target.template.size activity=T0ybbd1ZrLCdEXsW]] 尺光环区域内的所有生物。</p><p><em>失败：</em> [[/damage average]] 伤害，且目标陷入&amp;Reference[Stunned apply=false]状态直至[[lookup @name lowercase]]的下一回合结束。</p><p><em>成功：</em> 仅半伤。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -19668,7 +19668,7 @@
           "effects": {
             "Stunned": {
               "name": "震慑",
-              "description": "<p>你陷入 &Reference[Stunned apply=false] 状态直至噬脑怪的下一回合结束。</p>"
+              "description": "<p>你陷入 &Reference[Stunned apply=false] 状态直至夺心魔奥术师的下一回合结束。</p>"
             }
           }
         },
@@ -19687,7 +19687,7 @@
           "effects": {
             "Imperceptible Barrier": {
               "name": "无形护盾",
-              "description": "<p>在你的下一回合开始前，你的 AC 具有+5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
+              "description": "<p>在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -19707,7 +19707,7 @@
         },
         "Gore": {
           "name": "顶撞",
-          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若巴弗灭的牛头人在此次攻击前立即向着该目标直线[[lookup @activation.condition activity=iBenqFiBu40bUxkH]]且目标生物体型[[lookup @target.affects.special activity=iBenqFiBu40bUxkH]]，则其额外受到10（3d6）穿刺伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
+          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若 [[lookup @name lowercase]] 在此次攻击前立即向着该目标直线移动了 10+ 尺且目标生物体型不超过大型，则其额外受到 10（3d6）穿刺伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Attack": {
               "name": "攻击"
@@ -19719,8 +19719,8 @@
           },
           "effects": {
             "Prone": {
-              "name": "攻击",
-              "description": "<p>你陷入 &Reference[Prone apply=false] 状态，如果其使用了移动攻击的特性。</p>"
+              "name": "倒地",
+              "description": "<p>若巴弗灭的牛头人使用了移动攻击特性且你的体型不超过大型，你陷入 &Reference[Prone apply=false] 状态。</p>"
             }
           }
         }
@@ -19733,7 +19733,7 @@
       "items": {
         "Gore": {
           "name": "顶撞",
-          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了至少20尺且目标生物体型不超过大型，则其额外受到[[/damage 2d8 piercing average]]伤害并陷入&Reference[Prone apply=false]状态。</p>",
+          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了 20+ 尺且目标生物体型不超过大型，则其额外受到 [[/damage 2d8 piercing average]]伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Attack": {
               "name": "攻击"
@@ -19744,8 +19744,8 @@
           },
           "effects": {
             "Prone": {
-              "name": "攻击",
-              "description": "<p>你陷入 &Reference[Prone apply=false] 状态，如果其使用了移动攻击的特性。</p>"
+              "name": "倒地",
+              "description": "<p>若骷髅牛头人使用了移动攻击特性且你的体型不超过大型，你陷入 &Reference[Prone apply=false] 状态。</p>"
             }
           }
         },
@@ -19761,16 +19761,16 @@
       "description": "<h1>魔冢</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Bduky50I4knEL2On caption=false cite=false classes=\"no-embed mm\"]</p><h2>魔冢·二元冢</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.TE1Wbky3XCpEP3wx caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Disintegration": {
-          "name": "裂解消亡",
-          "description": "<p>若魔冢死亡，其解体为尘埃，留下其着装或携带的任何东西。</p>"
+          "name": "解体",
+          "description": "<p>若 [[lookup @name lowercase]] 死亡，其解体为尘埃，留下其着装或携带的任何东西。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>魔冢发动两次时械剑刃攻击。</p>"
+          "description": "<p>[[lookup @name lowcase]] 发动两次 [[/item .Pc0R44kc39Pb8BXU]] 攻击。</p>"
         },
         "Clockwork Blade": {
           "name": "时械剑刃",
-          "description": "<p><em>近战或远程攻击检定：</em> +3，触及5尺或射程30尺。<em>命中：</em>4（1d6+1）力场伤害。<em>命中或失手：</em>剑刃会在被用于一次远程攻击后立即魔法性地回到魔冢手中。</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。<em>命中或失手：</em>剑刃会在被用于一次远程攻击后立即魔法性地回到 [[lookup @name lowercase]] 手中。</p>"
         }
       }
     },
@@ -19780,11 +19780,11 @@
       "description": "<h1>魔冢</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Bduky50I4knEL2On caption=false cite=false classes=\"no-embed mm\"]</p><h2>魔冢·单元冢</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.NYMFEMfR4J2Csbrx caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Gear": {
-          "name": "齿轮",
+          "name": "齿轮机关",
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Disintegration": {
-          "name": "裂解消亡",
+          "name": "解体",
           "description": "<p class=\"feature\">若[[lookup @name lowercase]]死亡，其解体为尘埃，留下其着装或携带的任何东西。</p>"
         },
         "Gear Flinger": {
@@ -19799,12 +19799,12 @@
       "description": "<h1>魔冢</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Bduky50I4knEL2On caption=false cite=false classes=\"no-embed mm\"]</p><h2>魔冢·五元冢</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.B1qI3xH98ZUFjZmF caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Disintegration": {
-          "name": "裂解消亡",
+          "name": "解体",
           "description": "<p class=\"feature\">若[[lookup @name lowercase]]死亡，其解体为尘埃，留下其着装或携带的任何东西。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]]发动五次[[/item Slam]]攻击或五次[[/item Electrical Discharge]]攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动五次 [[/item .mmSlam0000000000]] 攻击或五次 [[/item .mmElectricalDisc]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -19821,7 +19821,7 @@
         },
         "Paralysis Gas": {
           "name": "麻痹气体",
-          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=7A7cyFzvHi67yI5f]]， [[lookup @target.template.size activity=7A7cyFzvHi67yI5f]]尺锥状区域内的每名生物。</p><p class=\"feature\"><em>失败：</em>目标陷入&amp;Reference[Paralyzed apply=false]状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。1分钟后，其豁免自动成功。</p>",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=7A7cyFzvHi67yI5f]]， [[lookup @target.template.size activity=7A7cyFzvHi67yI5f]] 尺锥状区域内的所有生物。</p><p class=\"feature\"><em>失败：</em>目标陷入&amp;Reference[Paralyzed apply=false]状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。1 分钟后，其豁免自动成功。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -19842,12 +19842,12 @@
       "description": "<h1>魔冢</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Bduky50I4knEL2On caption=false cite=false classes=\"no-embed mm\"]</p><h2>魔冢·四元冢</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.H8WzE0MNWqwC1LyK caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Disintegration": {
-          "name": "裂解消亡",
+          "name": "解体",
           "description": "<p class=\"feature\">若[[lookup @name lowercase]]死亡，其解体为尘埃，留下其着装或携带的任何东西。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]]发动四次[[/item Slam]]或四次[[/item Gear Launcher]]攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动四次 [[/item .mmSlam0000000000]] 攻击或四次 [[/item .mmGearsLauncher0]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -19870,12 +19870,12 @@
       "description": "<h1>魔冢</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Bduky50I4knEL2On caption=false cite=false classes=\"no-embed mm\"]</p><h2>魔冢·三元冢</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.q4DugtflSjrOm5vl caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Disintegration": {
-          "name": "裂解消亡",
+          "name": "解体",
           "description": "<p class=\"feature\">若[[lookup @name lowercase]]死亡，其解体为尘埃，留下其着装或携带的任何东西。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]]发动三次[[/item Clockwork Spear]]攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动三次 [[/item .mmClockworkSpear]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -19894,8 +19894,8 @@
       "description": "<h1>魔蝠</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.C5AnYUB2Vhu0urqS caption=false cite=false classes=\"no-embed mm\"]</p><h2>泥魔蝠</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.YLXmbvWLnVDKveGY caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Death Burst": {
-          "name": "临终苦难",
-          "description": "<p>[[lookup @name lowercase]] [[lookup @activation.condition activity=1SfqWSp7RSyHgG4b]]爆炸。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域光环区域内的所有生物。</p><p><em>失败：</em>目标陷入&Reference[Restrained apply=false]状态，持续至魔蝠的下个回合结束。</p>",
+          "name": "自爆",
+          "description": "<p>[[lookup @name lowercase]] 在死亡时爆炸。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域光环区域内的所有生物。</p><p><em>失败：</em>目标陷入&Reference[Restrained apply=false]状态，持续至[[lookup @name lowercase]]的下一回合结束。</p>",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -19914,7 +19914,7 @@
         },
         "Mud Breath": {
           "name": "泥泞吐息",
-          "description": "<p class=\"feature\"><em>敏捷豁免检定：</em> DC[[lookup @save.dc.value activity=i727Jd3IBfZezMPy]]，单一[[lookup @range.value activity=i727Jd3IBfZezMPy]]尺内[[lookup @name lowercase]] 可见的生物。</p><p><em>失败：</em> 目标陷入&amp;Reference[Restrained apply=false]状态，持续至 [[lookup @name lowercase]]的下个回合结束。</p>",
+          "description": "<p class=\"feature\"><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=i727Jd3IBfZezMPy]]，单一 [[lookup @range.value activity=i727Jd3IBfZezMPy]] 尺内 [[lookup @name lowercase]] 可见的生物。</p><p><em>失败：</em> 目标陷入 &amp;Reference[Restrained apply=false] 状态，持续至 [[lookup @name lowercase]]的下一回合结束。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -19923,7 +19923,7 @@
           "effects": {
             "Restrained": {
               "name": "束缚",
-              "description": "<p>你陷入&Resource[Restrained apply=false]状态直至泥魔蝠的下一回合结束。</p>"
+              "description": "<p>你陷入 &Resource[Restrained apply=false] 状态直至泥魔蝠的下一回合结束。</p>"
             }
           }
         }
@@ -20738,7 +20738,7 @@
           "effects": {
             "Imperceptible Barrier": {
               "name": "无形护盾",
-              "description": "<p>在你的下一回合开始前，你的 AC 具有+5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
+              "description": "<p>在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -21571,12 +21571,12 @@
           "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Talons": {
-          "name": "利爪",
+          "name": "禽爪",
           "description": "<p>[[/attack extended]]。 [[/damage average extended]]。若类人目标因此伤害生命值降至0，[[lookup @name lowercase]]掏出目标的心脏来杀死目标。 </p>"
         },
         "Gore": {
-          "name": "顶撞",
-          "description": "<p>[[/attack extended]]. [[/damage extended average]]. <span style=\"font-family:'Roboto Condensed', sans-serif\">If the </span>[[lookup @name lowercase]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> </span>[[lookup @activation.condition activity=iBenqFiBu40bUxkH]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> straight toward the target immediately before the hit, the target takes an extra 9 (2d8) Piercing damage.</span></p>",
+          "name": "角刺",
+          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若[[lookup @name lowercase]]在此次攻击前立即向着目标直线移动了 30+ 尺，则目标额外受到9（2d8）穿刺伤害。</p>",
           "activities": {
             "Attack": {
               "name": "攻击"
@@ -21941,8 +21941,8 @@
       }
     },
     "Pixie": {
-      "name": "Pixie",
-      "tokenName": "Pixie",
+      "name": "皮克精",
+      "tokenName": "皮克精",
       "description": "<h1>Pixies</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.BK2fFx2HQtSJinWc caption=false cite=false classes=\"no-embed mm\"]</p><h2>Pixie</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.ujVreuOcy0MnjDAw caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Magic Resistance": {
@@ -23018,7 +23018,7 @@
           "effects": {
             "Imperceptible Barrier": {
               "name": "无形护盾",
-              "description": "<p>在你的下一回合开始前，你的 AC 具有+5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
+              "description": "<p>在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi] </em>的伤害。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -23541,7 +23541,7 @@
       "items": {
         "Heat Aura": {
           "name": "炽热灵光",
-          "description": "<p class=\"feature\">在每个 [[lookup @name lowercase]] 回合结束时，位于源自 [[lookup @target.template.size activity=LDcQJj3oXyPCuCaT]] 尺光环区域内的每名 [[lookup @target.affects.type activity=LDcQJj3oXyPCuCaT]] 均受到 [[/damage average]] 伤害。</p>"
+          "description": "<p class=\"feature\">在每个 [[lookup @name lowercase]] 回合结束时，位于源自 [[lookup @target.template.size activity=LDcQJj3oXyPCuCaT]] 尺光环区域内的所有生物均受到 [[/damage average]] 伤害。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -28390,7 +28390,7 @@
         },
         "Spore Bomb": {
           "name": "蕈孢炸弹",
-          "description": "<p><em>体质豁免:</em> DC [[lookup @save.dc.value activity=cmFbJQhqZiLBF9Ij]], 每个 [[lookup @target.affects.type activity=cmFbJQhqZiLBF9Ij]] 位于 [[lookup @target.template.size activity=cmFbJQhqZiLBF9Ij]]尺半径球形区域内的， [[lookup @name lowercase]] 可见的生物 [[lookup @range.value activity=cmFbJQhqZiLBF9Ij]] feet]. </p><p><em>豁免失败:</em>受到 [[/damage average]] 点伤害, 且目标陷入 &Reference[Poisoned apply=false] 状态，直到 [[lookup @name lowercase]]的下一个回合开始。 中毒期间，受影响生物无法恢复生命值。 </p><p><em>豁免成功:</em>只受到一半伤害。</p>",
+          "description": "<p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=cmFbJQhqZiLBF9Ij]], each [[lookup @target.affects.type activity=cmFbJQhqZiLBF9Ij]] in a [[lookup @target.template.size activity=cmFbJQhqZiLBF9Ij]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]] can see within [[lookup @range.value activity=cmFbJQhqZiLBF9Ij]] feet]. </p><p><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]'s next turn. While Poisoned, the target can’t regain Hit Points. </p><p><em>Success:</em> Half damage only.</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -29645,7 +29645,7 @@
         },
         "Repulsion Breath": {
           "name": "斥力吐息",
-          "description": "<p class=\"feature\"><em>力量豁免检定：</em> DC [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]], [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]] 尺锥状区域内的每个 [[lookup @target.affects.type activity=zuf9EEVj4nI1joaH]]。</p><p class=\"feature\"><em>失败：</em> 目标被 [[lookup @name lowercase]] 直线推离至多40尺并陷入 &amp;Reference[Prone apply=false] 状态。</p>",
+          "description": "<p class=\"feature\"><em>力量豁免检定：</em> DC [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]], [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]] 尺锥状区域内的所有生物。</p><p class=\"feature\"><em>失败：</em> 目标被 [[lookup @name lowercase]] 直线推离至多 40 尺并陷入 &amp;Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -29680,7 +29680,7 @@
         },
         "Acid Breath": {
           "name": "强酸吐息",
-          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]] 尺长、[[lookup @target.template.width activity=qNI6W02jCUQbPpYE]] 尺宽的线状区域内的每名[[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]]。</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em> [[lookup @damage.onSave capitalize activity=qNI6W02jCUQbPpYE]]伤.</p>"
+          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]] 尺长、[[lookup @target.template.width activity=qNI6W02jCUQbPpYE]] 尺宽的线状区域内的所有生物。</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em> 半伤。</p>"
         },
         "Slowing Breath": {
           "name": "缓速吐息",
@@ -29790,7 +29790,7 @@
         },
         "Fire Breath": {
           "name": "火焰吐息",
-          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]] 尺锥状区域内的每名 [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]]</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em> 半伤。</p>"
+          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]] 尺锥状区域内的所有生物/p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em> 半伤。</p>"
         }
       }
     },
@@ -29801,7 +29801,7 @@
       "items": {
         "Heat Aura": {
           "name": "炽热灵光",
-          "description": "<p class=\"feature\">在每个 [[lookup @name lowercase]] 回合结束时，位于源自 [[lookup @target.template.size activity=LDcQJj3oXyPCuCaT]] 尺光环区域内的每名 [[lookup @target.affects.type activity=LDcQJj3oXyPCuCaT]] 均受到 [[/damage average]] 伤害。</p>"
+          "description": "<p class=\"feature\">在每个 [[lookup @name lowercase]] 回合结束时，位于源自 [[lookup @target.template.size activity=LDcQJj3oXyPCuCaT]] 尺光环区域内的所有生物均受到 [[/damage average]] 伤害。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -29829,11 +29829,11 @@
         },
         "Cold Breath": {
           "name": "冷冻吐息",
-          "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]]，[[lookup @target.template.size activity=8P7hmd3Nron4RAIv]] 尺锥状区域内的每名 [[lookup @target.affects.type activity=8P7hmd3Nron4RAIv]]。</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em>半伤。</p>"
+          "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]]，[[lookup @target.template.size activity=8P7hmd3Nron4RAIv]] 尺锥状区域内的所有生物。</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em>半伤。</p>"
         },
         "Paralyzing Breath": {
           "name": "麻痹吐息",
-          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=r4MGqEq5U9aaseBh]]，每名 [[lookup @target.template.size activity=r4MGqEq5U9aaseBh]] 内的 [[lookup @target.affects.type activity=r4MGqEq5U9aaseBh]] 尺锥状区域。</p><p class=\"feature\"><em>首次失败：</em>目标陷入 &Reference[Incapacitated apply=false] 状态直至其下一回合结束，此时目标重复豁免。</p><p class=\"feature\"><em>再次失败：</em>目标陷入 &Reference[Paralyzed apply=false] 状态，，并在其回合结束时重复豁免，成功则终止其身上的该效应。1分钟后，其豁免自动成功。 </p>",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=r4MGqEq5U9aaseBh]]，[[lookup @target.template.size activity=r4MGqEq5U9aaseBh]] 尺锥状区域内的所有生物。</p><p class=\"feature\"><em>首次失败：</em>目标陷入 &Reference[Incapacitated apply=false] 状态直至其下一回合结束，此时其需要重复此豁免。</p><p class=\"feature\"><em>再次失败：</em>目标陷入 &Reference[Paralyzed apply=false] 状态，且于其每一回合结束时重复此豁免，豁免成功则结束此效应。目标将在 1 分钟后自动成功于此豁免。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -29876,7 +29876,7 @@
         },
         "Cold Breath": {
           "name": "冷冻吐息",
-          "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]]，[[lookup @target.template.size activity=8P7hmd3Nron4RAIv]] 尺锥状区域内的每名 [[lookup @target.affects.type activity=8P7hmd3Nron4RAIv]]。</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em>半伤。</p>"
+          "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]]，[[lookup @target.template.size activity=8P7hmd3Nron4RAIv]] 尺锥状区域内的所有生物。</p><p><em>失败：</em>[[/damage average]] 伤害。</p><p><em>成功：</em>半伤。</p>"
         }
       }
     },
