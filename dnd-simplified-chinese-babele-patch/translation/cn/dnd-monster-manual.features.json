@@ -22,7 +22,7 @@
     },
     "Absorb Body": {
       "name": "吞吃躯体",
-      "description": "<p><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=YqWqaRXxaKFCH6P8]], one [[lookup @target.affects.special activity=YqWqaRXxaKFCH6P8]] [[lookup @target.affects.type activity=YqWqaRXxaKFCH6P8]] the [[lookup @name lowercase]] can see within 5 feet.</p><p><em>Failure:</em> The target is pulled into the [[lookup @name lowercase]]'s space and becomes grafted to its body. The [[lookup @name lowercase]] can have only one target grafted at a time.</p><p>While grafted, the target has the &amp;Reference[Restrained apply=false] condition and Disadvantage on Constitution saving throws. When the [[lookup @name lowercase]] moves, the grafted target moves with it. If [[lookup @activation.condition activity=KXQbdk3TH6uZex2L]], its body is destroyed, and the [[lookup @name lowercase]] regains [[lookup @healing.formula activity=KXQbdk3TH6uZex2L]] Hit Points.</p><p>The grafted target or a creature within 5 feet of the [[lookup @name lowercase]] can take an action to make a [[/check ability=str skill=ath dc=@abilities.str.dc format=long]]. On a successful check, the target is no longer grafted and moves to an unoccupied space within 5 feet of the [[lookup @name lowercase]].</p>",
+      "description": "<p><em>力量豁免检定:</em> DC [[lookup @save.dc.value activity=YqWqaRXxaKFCH6P8]], 单一[[lookup @target.affects.special activity=YqWqaRXxaKFCH6P8]] [[lookup @target.affects.type activity=YqWqaRXxaKFCH6P8]]且[[lookup @name lowercase]]可见的生物。</p><p><em>失败:</em>目标被拉入[[lookup @name lowercase]]所在的空间并被嫁接到尸聚怪身上。[[lookup @name lowercase]]同时能嫁接的生物数上限为一。</p><p>被嫁接期间,目标陷入 &Reference[Restrained apply=false]状态且其进行的体质豁免具有劣势。当[[lookup @name lowercase]]移动时, 被嫁接目标也将一并移动。如果[[lookup @activation.condition activity=KXQbdk3TH6uZex2L]],其遗体将被摧毁，且 [[lookup @name lowercase]]恢复 [[lookup @healing.formula activity=KXQbdk3TH6uZex2L]]生命值。</p><p>被嫁接目标自身或位于[[lookup @name lowercase]] 5尺内的生物，都能够以动作进行一次 [[/check ability=str skill=ath dc=@abilities.str.dc format=long]]。检定成功则目标不再被嫁接，并移动至[[lookup @name lowercase]]5尺内的一处未占据空间。</p>",
       "activities": {
         "heal": {
           "condition": "若目标在被嫁接期间死亡"
@@ -158,7 +158,7 @@
     },
     "Animate Boulders": {
       "name": "活化石头",
-      "description": "<p>The [[lookup @name lowercase]] animates [[lookup @target.affects.special activity=lydBv987ChZ7itoS]] it can see within [[lookup @range.value activity=lydBv987ChZ7itoS]] feet of itself. Each boulder uses the @UUID[Compendium.dnd-monster-manual.actors.Actor.mmGalebDuhr00000] stat block, except it has Intelligence and Charisma scores of 1 and lacks this action. The boulder takes its turn immediately after the [[lookup @name lowercase]] on the same Initiative count, and it obeys the [[lookup @name lowercase]]. A boulder remains animate for [[lookup @duration.value activity=lydBv987ChZ7itoS]] minute or until it or the [[lookup @name lowercase]] dies.</p>"
+      "description": "<p>[[lookup @name lowercase]] 用魔法活化 [[lookup @range.value activity=lydBv987ChZ7itoS]] 尺内其可见的至多两块大石头。每块被活化的石头均使用 @UUID[Compendium.dnd-monster-manual.actors.Actor.mmGalebDuhr00000] 的数据卡，但有以下区别：石头的智力和魅力值为 1且无法说话，并缺少活化石头动作。石头服从 [[lookup @name lowercase]] 的命令，使用与 [[lookup @name lowercase]] 一样的先攻并在其回合结束后立即执行回合。石头的活化持续  [[lookup @duration.value activity=lydBv987ChZ7itoS]] 分钟，或在以下情况提前结束：其死亡时、该 [[lookup @name lowercase]] 死亡时。 </p>"
     },
     "Antennae": {
       "name": "触角",
@@ -708,17 +708,17 @@
       "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]。若目标生物体型不超过大型，则其被两条锁链之一所擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
       "effects": {
         "Grappled & Restrained": {
-          "name": "Grappled & Restrained",
-          "description": "<p>If the target is a Large or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC) from one of two chains, and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>"
+          "name": "受擒并束缚",
+          "description": "<p>如果目标的体型不超过大型则被两条锁链之一所擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[/check ability=str skill=ath format=long]]) ，陷入&Reference[Restrained apply=false] 状态直至擒抱结束。</p>"
         }
       }
     },
     "Channel Negative Energy": {
-      "name": "Channel Negative Energy",
+      "name": "引导负能量",
       "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Chaos Blade": {
-      "name": "Chaos Blade",
+      "name": "混沌刃锋",
       "description": "<p>[[/attack extended]]. [[/damage average extended]]. Until the start of the [[lookup @name lowercase]]'s next turn, the target has a condition determined by rolling 1d4: on a <strong>1</strong>, &amp;Reference[Charmed apply=false]; on a <strong>2</strong>, &amp;Reference[Frightened apply=false]; on a <strong>3</strong>, &amp;Reference[Poisoned apply=false]; or on a <strong>4</strong>, &amp;Reference[Incapacitated apply=false].</p>",
       "activities": {
         "attack": {
