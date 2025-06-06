@@ -23242,8 +23242,8 @@
       "description": "<h1>罗刹</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.DMYEpWr3wvK4RLih caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Greater Magic Resistance": {
-          "name": "强化魔法抗性",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 罗刹对抗法术和其他魔法效应时进行的豁免检定自动成功，且法术的攻击检定对其自动失手。没有[[lookup @name lowercase]]的允许， 任何法术都无法远程探查 [[lookup @name lowercase]]或是侦测其思想、生物类型或阵营。</p>"
+          "name": "高等魔法抗性",
+          "description": "<p>[[lookup @name lowcase]] 对抗法术和其他魔法效应时进行的豁免检定自动成功，且法术的攻击检定对其自动失手。没有[[lookup @name lowcase]] 的允许，任何法术都无法远程探查 [[lookup @name lowcase]]或是侦测其思想、生物类型或阵营。</p>"
         },
         "Fiendish Restoration": {
           "name": "邪魔复苏",
@@ -23264,17 +23264,17 @@
           "effects": {
             "Cursed": {
               "name": "诅咒",
-              "description": "<p>被诅咒期间，目标无法从完成短休或长休中获益。</p>"
+              "description": "<p>被诅咒期间，你无法从完成短休或长休中获益。</p>"
             }
           }
         },
         "Baleful Command": {
           "name": "恶毒命令",
-          "description": "<p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=SzU2lwdbqgoFMuBM]]，源自 [[lookup @name lowercase]]的 [[lookup @target.template.size activity=SzU2lwdbqgoFMuBM]] 尺光环区域内的所有敌人。</p><p><em>失败：</em> [[/damage average]]伤害，且目标陷入 &amp;Reference[Frightened apply=false] 与 &amp;Reference[Incapacitated apply=false] 状态直至罗刹的下一回合开始。</p>",
+          "description": "<p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=SzU2lwdbqgoFMuBM]]，源自 [[lookup @name lowercase]]的 [[lookup @target.template.size activity=SzU2lwdbqgoFMuBM]] 尺光环区域内的所有敌人。</p><p><em>失败：</em> [[/damage average]]伤害，且目标陷入 &Reference[Frightened apply=false] 与 &Reference[Incapacitated apply=false] 状态直至 [[lookup @name lowercase]] 的下一回合开始。</p>",
           "effects": {
             "Frightened & Incapacitated": {
-              "name": "恐慌与失能",
-              "description": "<p>你陷入 &amp;Reference[Frightened apply=false] 与 &amp;Reference[Incapacitated apply=false] 状态，直至罗刹的下个回合开始。</p>"
+              "name": "恐慌并失能",
+              "description": "<p>你陷入 &amp;Reference[Frightened apply=false] 与 &amp;Reference[Incapacitated apply=false] 状态，直至罗刹的下一回合开始。</p>"
             }
           }
         },
@@ -23416,8 +23416,8 @@
       }
     },
     "Rat": {
-      "name": "老鼠",
-      "tokenName": "老鼠",
+      "name": "鼠",
+      "tokenName": "鼠",
       "items": {
         "Agile": {
           "name": "机敏",
@@ -23463,7 +23463,7 @@
         },
         "Fire Breath": {
           "name": "火焰吐息",
-          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]]，[[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]] 尺锥状区域内的每名生物。</p><p><em>失败：</em>[[/damage average]]伤害。</p><p><em>成功：</em>半伤。</p>"
+          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]]，[[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]] 尺锥状区域内的所有生物。</p><p><em>失败：</em>[[/damage average]]伤害。</p><p><em>成功：</em>半伤。</p>"
         }
       }
     },
@@ -23487,7 +23487,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]]发动三次[[/item Injecting Claw]] 攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动三次 [[/item .mmInjectingClaw0]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -23495,8 +23495,8 @@
           }
         },
         "Injecting Claw": {
-          "name": "爪击",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid not cursed by a [[lookup @name lowercase]], it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=C5wp4BSKfYlbMurm]].</p><p><em>Failure:</em> The target is cursed unawares, and a minuscule slaad egg is implanted in it. Removing the curse destroys the egg.</p><p class=\"feature\">Over [[/r 2d4*10#Days egg gestates]]{2d4 × 10} days, the egg gestates. In the final 24 hours, the cursed target feels unwell; its Speed is halved, and it has Disadvantage on D20 Tests. At the end of this time, the egg turns into a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSlaadTadpole00]{Slaad Tadpole}</strong>, which chews out of the host and kills it.</p>",
+          "name": "寄生爪击",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若目标为类人且未被[[lookup @name lowercase]]诅咒，承受以下效应。</p><p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=C5wp4BSKfYlbMurm]]。</p><p><em>失败：</em>目标在不知不觉间被诅咒，且一颗史拉蟾微卵被植入其肉体。移除该诅咒将会摧毁这颗卵。</p><p class=\"feature\">卵会在 [[/r 2d4*10#完成孕育]]{2d4 × 10}天后完成孕育。诞生前 24 小时，被诅咒的目标会感到不适；它的速度减半，并且D20检定具有劣势。这段时期结束后，卵将转变为一条<strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSlaadTadpole00]{史拉蟾蝌蚪}</strong>，从宿主的体内啮食而出并将其杀死。</p>",
           "activities": {
             "Slaad Tadpole": {
               "name": "史拉蟾蝌蚪",
@@ -23510,7 +23510,7 @@
           "effects": {
             "Cursed": {
               "name": "诅咒",
-              "description": "<p>目标被诅咒缠身。</p>"
+              "description": "<p>你被诅咒缠身。</p>"
             }
           }
         }
@@ -23554,13 +23554,13 @@
           "effects": {
             "Grappled & Restrained": {
               "name": "受擒并束缚",
-              "description": "<p>If the target is a [[lookup @target.affects.special activity=xWlMeXFjELfSUWX9]] creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC), and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>"
+              "description": "<p>若你的生物体型不超过大型，则陷入 &Reference[Grappled apply=false] 状态（逃脱DC 17，[[/check ability=str skill=ath format=long]]），且你陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>"
             }
           }
         },
         "Swallow": {
           "name": "吞咽",
-          "description": "<p class=\"feature\"><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=YorssyWMumAsvzx3]], [[lookup @target.affects.special activity=YorssyWMumAsvzx3]] by the [[lookup @name lowercase]] (it can have up to two creatures swallowed at a time).</p><p class=\"feature\"><em>Failure:</em> The target is swallowed by the [[lookup @name lowercase]], and the Grappled condition ends. A swallowed creature has the &amp;Reference[Blinded apply=false] and &amp;Reference[Restrained apply=false] conditions, it has &amp;Reference[Total Cover] against attacks and other effects outside the [[lookup @name lowercase]], and it takes [[/damage average activity=zrWNjO9mkbN28spL]] damage at the start of each of the [[lookup @name lowercase]]'s turns.</p><p class=\"feature\">If the [[lookup @name lowercase]] takes 30 damage or more on a single turn from a creature inside it, the [[lookup @name lowercase]] must succeed on a [[/save format=long activity=rGeGukkm2t2fXsoy]] at the end of that turn or regurgitate all swallowed creatures, each of which falls in a space within [[lookup @range.value activity=rGeGukkm2t2fXsoy]] feet of the [[lookup @name lowercase]] and has the &amp;Reference[Prone apply=false] condition. If the [[lookup @name lowercase]] dies, any swallowed creature no longer has the Restrained condition and can escape from the corpse by using 15 feet of movement, exiting Prone.</p>",
+          "description": "<p class=\"feature\"><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=YorssyWMumAsvzx3]]，单一正受擒于 [[lookup @name lowercase]] 的生物（[[lookup @name lowercase]] 同时能吞咽的生物数上限为二）。</p><p><em>失败：</em>[[lookup @name lowercase]]吞咽目标，并结束其受擒状态。被吞咽期间，目标陷入 &Reference[Restrained apply=false] 和 &Reference[Blinded aplly=false] 状态，对 [[lookup @name lowercase]] 体外的攻击或其他效应而言处于&Reference[Total Cover]，并在每个 [[lookup @name lowercase]] 的回合开始时受到 [[/damage average activity=zrWNjO9mkbN28spL]]伤害。</p><p class=\"feature\">若一回合内 [[lookup @name lowercase]] 体内的一名生物对 [[lookup @name lowercase]] 造成至少 30 伤害，[[lookup @name lowercase]] 在该回合结束时必须成功通过一次 [[/save format=long activity=rGeGukkm2t2fXsoy]] ，否则将吐出那名生物，使其落在 [[lookup @name lowercase]] 5 尺内的空间并陷入 &Reference[Prone apply=false] 状态。若 [[lookup @name lowercase]] 死亡，被吞咽生物不再被束缚并可以使用 15 尺移动力逃离尸体，以倒地状态脱离。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -23592,7 +23592,7 @@
       "items": {
         "Regeneration": {
           "name": "再生",
-          "description": "<p>[[lookup @name lowercase]] 在其回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 生命值。若还魂鬼受到火焰或光耀伤害，则该特质在其下个回合开始时无法生效。 还魂鬼的躯体只有以0生命值开始其回合且无法再生时，才会被摧毁。</p>",
+          "description": "<p>[[lookup @name lowercase]] 在其回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 生命值。若[[lookup @name lowercase]]受到火焰或光耀伤害，则该特质在其下一回合开始时无法生效。[[lookup @name lowercase]]的躯体只有在以 0 生命值开始其回合且无法再生时才会被摧毁。</p>",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -23601,11 +23601,11 @@
         },
         "Undead Restoration": {
           "name": "亡灵复苏",
-          "description": "<p class=\"feature\">若 [[lookup @name lowercase]] 死亡，除非对其遗体施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]</em>否则其在24小时后于另一躯体上复生 。 还魂鬼复生后会活化同一存在位面中的另一具类人遗体，这会改变其外形，但不会改变其游戏数据，且还魂鬼以满生命值复活。</p>"
+          "description": "<p class=\"feature\">若 [[lookup @name lowercase]] 死亡，除非对其遗体施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]</em>，否则其在 24 小时后于另一躯体上复生。[[lookup @name lowercase]]复生后会活化同一存在位面中的另一具类人遗体，这会改变其外形，但不会改变其游戏数据，且[[lookup @name lowercase]]以满生命值复活。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .mmVengefulGlare0]] 并发动两次 [[/item .mmSlam0000000000]]攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .mmVengefulGlare0]] 并发动两次 [[/item .mmSlam0000000000]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -23618,7 +23618,7 @@
         },
         "Vengeful Glare": {
           "name": "复仇怒视",
-          "description": "<p class=\"feature\"><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=r2U9soI3vKTrXhG1]], one [[lookup @target.affects.type activity=r2U9soI3vKTrXhG1]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=r2U9soI3vKTrXhG1]] feet.</p><p><em>Failure:</em> The target has the &amp;Reference[Frightened apply=false] condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=r2U9soI3vKTrXhG1]] [[lookup @duration.units activity=r2U9soI3vKTrXhG1]], it succeeds automatically. If the Frightened target is cursed by the [[lookup @name lowercase]] (see [[/item .LuIttybjU4f7tGCs]]), the target also has the &amp;Reference[Paralyzed apply=false] condition for the duration.</p>",
+          "description": "<p class=\"feature\"><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=r2U9soI3vKTrXhG1]], 单一 [[lookup @range.value activity=r2U9soI3vKTrXhG1]] 尺内 [[lookup @name lowercase]] 可见的生物。</p><p><em>失败：</em> 目标陷入 &Reference[Frightened apply=false] 状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。[[lookup @duration.value activity=r2U9soI3vKTrXhG1]] 分钟后自动成功于此豁免。若恐慌目标被 [[lookup @name lowercase]] 诅咒（见 [[/item .LuIttybjU4f7tGCs]]），则目标还会在此期间陷入 &Reference[Paralyzed apply=false] 状态。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -23626,8 +23626,8 @@
           },
           "effects": {
             "Frightened & Paralyzed": {
-              "name": "恐慌和麻痹",
-              "description": "<p>若恐慌目标被还魂鬼诅咒 则目标还会在此期间陷入 &amp;Reference[Paralyzed apply=false] 状态.。1分钟后，其豁免自动成功。</p>"
+              "name": "恐慌并麻痹",
+              "description": "<p>若你被还魂鬼诅咒，则你还会在此期间陷入 &amp;Reference[Paralyzed apply=false] 状态。1 分钟后，豁免自动成功。</p>"
             },
             "Frightened": {
               "name": "恐慌",
@@ -23637,7 +23637,7 @@
         },
         "Vow of Revenge": {
           "name": "死仇誓言",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] curses one [[lookup @target.affects.type activity=NBJRR41fIGp8FYJh]] it can see within [[lookup @range.value activity=NBJRR41fIGp8FYJh]] feet of itself. The [[lookup @name lowercase]] knows the distance to and direction of the cursed target, even if it is on a different plane of existence. The curse ends on the target if the [[lookup @name lowercase]] uses this Bonus Action on a different creature.</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 诅咒其 [[lookup @range.value activity=NBJRR41fIGp8FYJh]] 尺内一名其可见的生物。[[lookup @name lowercase]] 将知晓自身与受诅咒目标之间的距离与方向，即使双方不在同一存在位面中亦是如此。该诅咒在 [[lookup @name lowercase]] 对另一名生物使用此附赠动作时结束。</p>",
           "activities": {
             "Curse Target": {
               "name": "诅咒目标"
@@ -23646,7 +23646,7 @@
           "effects": {
             "Cursed": {
               "name": "诅咒",
-              "description": "<p>目标被诅咒缠身。</p>"
+              "description": "<p>你被诅咒缠身。</p>"
             }
           }
         }
@@ -23658,7 +23658,7 @@
       "items": {
         "Gore": {
           "name": "顶撞",
-          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了至少 20 尺且目标生物体型不超过大型，则其额外受到[[/damage 2d6 average type=piercing]]伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
+          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若[[lookup @name lowercase]]在此次攻击前立即向着目标直线移动了 20+ 尺且目标生物体型不超过大型，则其额外受到 [[/damage 2d8 average type=piercing]]伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Attack": {
               "name": "攻击"
@@ -23670,7 +23670,7 @@
           "effects": {
             "Prone": {
               "name": "倒地",
-              "description": "<p>若猛犸使用了移动攻击特性且你的体型不超过巨型，你陷入 &Reference[Prone apply=false] 状态。</p>"
+              "description": "<p>若犀牛使用了移动攻击特性且你的体型不超过大型，你陷入 &Reference[Prone apply=false] 状态。</p>"
             }
           }
         }
