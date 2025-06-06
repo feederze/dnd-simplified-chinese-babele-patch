@@ -359,7 +359,7 @@
           "effects": {
             "Grappled": {
               "name": "受擒",
-              "description": "<p>若你生物体型不超过大型，则你会被四条触须之一擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC 15）。</p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
+              "description": "<p>若你生物体型不超过大型，则你被底栖魔鱼四条触须之一擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC 15）。</p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
             }
           }
         },
@@ -7301,7 +7301,7 @@
         },
         "Sun Ray": {
           "name": "烈阳射线",
-          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]伤害，且目标陷入 &Reference[Blinded apply=false] 状态，直至 [[lookup @name lowercase]] 的下一回合开始。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]伤害，且目标陷入 &Reference[Blinded apply=false] 状态直至 [[lookup @name lowercase]] 的下一回合开始。</p>",
           "effects": {
             "Blinded": {
               "name": "目盲",
@@ -18089,7 +18089,7 @@
         },
         "Paralyzing Touch": {
           "name": "麻痹之触",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]， 且目标陷入 &Reference[Paralyzed apply=false] 状态，直至 [[lookup @name lowercase]]的下一回合开始。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]， 且目标陷入 &Reference[Paralyzed apply=false] 状态直至 [[lookup @name lowercase]]的下一回合开始。</p>",
           "effects": {
             "Paralyzed": {
               "name": "麻痹",
@@ -23689,11 +23689,11 @@
     "Roc": {
       "name": "鹏鸟",
       "tokenName": "鹏鸟",
-      "description": "<h1>鹏鸟Roc</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.GS2JdYGVDYQ3ZqP4 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>鹏鸟</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.GS2JdYGVDYQ3ZqP4 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p><span style=\"font-family:'Roboto Condensed', sans-serif\">The </span>[[lookup @name lowercase]] <span style=\"font-family:'Roboto Condensed', sans-serif\"> 发动两次</span> [[/item .mmBeak0000000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> 攻击。其可以将其中一次攻击替换为</span> [[/item .mmTalons00000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\">攻击。</span></p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmBeak0000000000]] 攻击。其可以将其中一次攻击替换为 [[/item .mmTalons00000000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -23706,7 +23706,7 @@
         },
         "Talons": {
           "name": "禽爪",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=xdrDC5kFs6sCOFiE]] creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from both talons, and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]，若目标生物体型不超过巨型，其被[[lookup @name lowercase]]的两只禽爪擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且其受擒期间陷入 &Reference[Restrained apply=false] 状态。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -23715,7 +23715,7 @@
           "effects": {
             "Grappled & Restrained": {
               "name": "受擒并束缚",
-              "description": "<p>If the target is a [[lookup @target.affects.special activity=xdrDC5kFs6sCOFiE]] creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC) from both talons, and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>"
+              "description": "<p>若你的生物体型不超过巨型，则被鹏鸟的两只禽爪擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC 19，[[/check ability=str skill=ath format=long]]），且你受擒期间陷入 &Reference[Restrained apply=false] 状态。</p>"
             }
           }
         },
@@ -23733,7 +23733,7 @@
     "Roper": {
       "name": "石绳怪",
       "tokenName": "石绳怪",
-      "description": "<h1>树绳妖</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Tnu6KW8hvlaLqaV3 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>石绳怪</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Tnu6KW8hvlaLqaV3 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Spider Climb": {
           "name": "蛛行",
@@ -23741,7 +23741,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]]发动两次 [[/item Tentacle]] 攻击， 使用 [[/item Reel]]，并发动两次 [[/item Bite]]攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmTentacle000000]] 攻击，使用 [[/item .mmReel0000000000]]，并发动两次 [[/item .mmBite0000000000]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -23754,7 +23754,7 @@
         },
         "Tentacle": {
           "name": "触须",
-          "description": "<p>[[/attack extended]]. <em>Hit:</em> The target has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of six tentacles, and the target has the &amp;Reference[Poisoned apply=false] condition until the grapple ends.</p><p>The tentacle can be damaged, freeing a creature it has Grappled when destroyed (AC 20, HP 10, Immunity to Poison and Psychic damage). Damaging the tentacle deals no damage to the [[lookup @name lowercase]], and a destroyed tentacle regrows at the start of the [[lookup @name lowercase]]’s next turn.</p>",
+          "description": "<p>[[/attack extended]]。<em>命中：</em>目标被六条触须之一擒抱，陷入<em> </em>&Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Poisoned apply=false] 状态直至受擒状态结束。</p><p>触须可被伤害（AC 20，HP 10，免疫毒素和心灵伤害），当触须被摧毁时，受擒于该触须的生物被释放。伤害触须不会对 [[lookup @name lowercase]]造成伤害，且被摧毁的触须将在 [[lookup @name lowercase]] 的下一回合开始时重新长出。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -23763,13 +23763,13 @@
           "effects": {
             "Grappled": {
               "name": "受擒",
-              "description": "<p>若你生物体型不超过大型，则你会被四条触须之一擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC 15）。</p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
+              "description": "<p>你被石绳怪六条触须之一擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC 14）。</p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
             }
           }
         },
         "Reel": {
           "name": "拖拽",
-          "description": "<p>The [[lookup @name lowercase]] pulls each creature Grappled by it up to 30 feet straight toward it.</p>"
+          "description": "<p>[[lookup @name lowercase]] 将受擒于其的所有生物直线拉近至多 30 尺。 </p>"
         }
       }
     },
@@ -23780,7 +23780,7 @@
       "items": {
         "Iron Scent": {
           "name": "嗅铁",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 可以精准定位 [[lookup @target.affects.special activity=I1ppxiVO5CS6tKj0]] 自身[[lookup @target.template.size activity=I1ppxiVO5CS6tKj0]] 30尺内的含铁金属。</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 可以精准定位 [[lookup @target.template.size activity=I1ppxiVO5CS6tKj0]] 尺内的含铁金属。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -23789,7 +23789,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p><span style=\"font-family:'Roboto Condensed', sans-serif\"> </span>[[lookup @name lowercase]]<span style=\"font-family:'Roboto Condensed', sans-serif\">发动一次 </span>[[/item .mmBite0000000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> 攻击并使用两次</span>[[/item .mmAntennae000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\">。</span></p>",
+          "description": "<p>[[lookup @name lowercase]] 发动一次 [[/item .mmBite0000000000]] 攻击并使用两次 [[/item .mmAntennae000000]]。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -23802,17 +23802,17 @@
         },
         "Antennae": {
           "name": "触角",
-          "description": "<p>The [[lookup @name lowercase]] targets one [[lookup @target.affects.special activity=dcSC7EuknnM0uoqY]] object—armor or a weapon—worn or carried by a creature within [[lookup @range.value activity=dcSC7EuknnM0uoqY]] feet of itself.</p><p><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=dcSC7EuknnM0uoqY]], the creature with the object.</p><p><em>Failure:</em> The object takes a -1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches -5. The penalty can be removed by casting the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMending000]</em> spell on the armor or weapon.</p><section class=\"secret\" id=\"secret-4QbvfWBnYI6ImcGC\"><p><strong>Foundry Note</strong></p><p>This feature also provides a <strong>Damaged</strong> Enchantment effect that will modify the targeted object. Due to the fact that the equipment penalty can be applied multiple times, the enchantment needs to be dragged from this item's Effects tab onto the target Item's sheet.</p></section>",
+          "description": "<p>[[lookup @name lowercase]] 从位于其 [[lookup @range.value activity=dcSC7EuknnM0uoqY]] 尺内的一名生物身上，选择一件其着装或携带的[[lookup @target.affects.special activity=dcSC7EuknnM0uoqY]]物件（护甲或武器）为目标。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=dcSC7EuknnM0uoqY]]，着装或携带此物件的生物。</p><p><em>失败：</em>物件提供的AC（护甲）或进行的攻击检定（武器）获得 -1 减值。护甲AC降至 10、武器减值达到 -5 时，物件被摧毁。对护甲和武器施展法术<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMending000]</em> 可以移除该减值。</p><section class=\"secret\" id=\"secret-4QbvfWBnYI6ImcGC\">    <p><strong>Foundry Note</strong></p>    <p>该特性提供一种“<strong>受损”</strong>附魔效应，会对目标物件进行修改。由于装备减值可多次施加，所以附魔需要从该物件的“效应”选项卡拖到目标物品卡上。</p></section>",
           "effects": {
             "Damaged: -1 AC/Attack": {
-              "name": "伤害：护甲等级或攻击检定获得-1减值",
-              "description": "<p>物件提供的AC（护甲）或进行的攻击检定（武器）获得-1减值。护甲AC降至10、武器减值达到-5时，物件被摧毁。  。对护甲和武器施展法术<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMending000]</em> 可以移除该减值。</p>"
+              "name": "伤害：护甲等级或攻击检定 -1",
+              "description": "<p>物件提供的AC（护甲）或进行的攻击检定（武器）获得 -1 减值。护甲AC降至 10、武器减值达到 -5 时，物件被摧毁。对护甲和武器施展法术<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMending000]</em> 可以移除该减值。</p>"
             }
           }
         },
         "Destroy Metal": {
           "name": "摧毁金属",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] [[lookup @range.special activity=GDJtelEYYTgc9jwr]] within [[lookup @range.value activity=GDJtelEYYTgc9jwr]] feet of itself [[lookup @target.affects.special activity=GDJtelEYYTgc9jwr]]. The touch destroys a [[lookup @target.template.size activity=GDJtelEYYTgc9jwr]]-[[lookup @target.template.units activity=GDJtelEYYTgc9jwr]] [[lookup @target.template.type capitalize activity=GDJtelEYYTgc9jwr]] of the [[lookup @target.affects.type activity=GDJtelEYYTgc9jwr]].</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 触碰一件位于其 [[lookup @range.value activity=GDJtelEYYTgc9jwr]] 尺内的未被着装或携带的非魔法金属物件。此触碰将摧毁该物件上一处 [[lookup @target.template.size activity=GDJtelEYYTgc9jwr]] 尺立方区域内的部分。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -23821,7 +23821,7 @@
         },
         "Reflexive Antennae": {
           "name": "自发触角",
-          "description": "<p class=\"feature\"><em>Trigger:</em> An attack roll hits the [[lookup @name lowercase]]. <em>Response:</em> The [[lookup @name lowercase]] uses [[/item .mmAntennae000000]].</p>",
+          "description": "<p class=\"feature\"><em>触发：</em>[[lookup @name lowercase]] 被一次攻击检定命中。<em>响应：</em>[[lookup @name lowercase]] 使用 [[/item .mmAntennae000000]]。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -23870,7 +23870,7 @@
     "Sahuagin Baron": {
       "name": "鲨华男爵",
       "tokenName": "鲨华男爵",
-      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbarmBreastplat]{胸甲}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepTrident000]{三叉戟}</p></div><h1>鲨华鱼人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.6GoEsoHTiVUdeAKu caption=false cite=false classes=\"no-embed mm\"]</p><h2>鲨华男爵</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.VUSDJNlrBgC3IuEK caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbarmBreastplat]{胸甲}，@UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepTrident000]{三叉戟}</p></div><h1>鲨华鱼人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.6GoEsoHTiVUdeAKu caption=false cite=false classes=\"no-embed mm\"]</p><h2>鲨华男爵</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.VUSDJNlrBgC3IuEK caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Trident": {
           "name": "三叉戟",
@@ -23885,11 +23885,11 @@
         },
         "Limited Amphibiousness": {
           "name": "有限两栖",
-          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 可以在空气和水中呼吸，但必须至少每4小时浸入水中一次，以避免离开水后窒息。</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 可以在空气和水中呼吸，但必须至少每 4 小时浸入水中一次，以避免离开水后窒息。</p>"
         },
         "Shark Telepathy": {
           "name": "鲨心感应",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 能使用一种特殊的心灵感应，魔法性地控制其120尺内的鲨鱼。</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 能使用一种特殊的心灵感应，魔法性地控制其 120 尺内的鲨鱼。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -23902,7 +23902,7 @@
         },
         "Fiendish Blood": {
           "name": "邪魔之血",
-          "description": "<p class=\"feature\"><em>Trigger:</em> The [[lookup @name lowercase]] takes Piercing or Slashing damage.</p><p class=\"feature\"><em>Response—Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=9JNSVEpH1x9MUvsZ]], each [[lookup @target.affects.type activity=9JNSVEpH1x9MUvsZ]] of the [[lookup @name lowercase]]’s choice in a [[lookup @target.template.size activity=9JNSVEpH1x9MUvsZ]]-<span style=\"font-family:'Roboto Condensed', sans-serif\">foot </span>Emanation originating from the [[lookup @name lowercase]].</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and [[lookup @duration.special activity=9JNSVEpH1x9MUvsZ]]. While cursed, the target can’t benefit from the Invisible condition, its Speed decreases by 10 feet, and all Fiends within 120 feet of the target can sense its location regardless of interposing obstacles.</p>",
+          "description": "<p class=\"feature\"><em>触发：</em> [[lookup @name lowercase]] 受到穿刺或挥砍伤害。</p><p class=\"feature\"><em>响应—体质豁免检定：</em> DC [[lookup @save.dc.value activity=9JNSVEpH1x9MUvsZ]]，源自 [[lookup @name lowercase]] 的 [[lookup @target.template.size activity=9JNSVEpH1x9MUvsZ]] 尺光环区域内由其指定的所有生物。</p><p class=\"feature\"><em>失败：</em> [[/damage average]] 伤害，并被诅咒，持续到目标结束一次短休或长休。受诅咒期间，目标无法从隐形状态中获益，其速度下降 10 尺，且目标 120 尺范围内的所有邪魔都能感知其位置，不论是否存在障碍物。</p>",
           "activities": {
             "Save": {
               "name": "豁免",
@@ -23912,7 +23912,7 @@
           "effects": {
             "Cursed": {
               "name": "诅咒",
-              "description": "<p>目标陷入&amp;Reference[cursed apply=false] 直至完成一次短休或长休前，W受诅咒期间，目标无法从隐形状态中获益，其速度降低10尺，且位于目标120尺内的所有邪魔都能感知其位置，无论是否存在障碍物。</p>"
+              "description": "<p>你陷入 &amp;Reference[cursed apply=false] 直至完成一次短休或长休，你受诅咒期间，你无法从隐形状态中获益，你的速度降低 10 尺，且位于你 120 尺内的所有邪魔都能感知你的位置，无论是否存在障碍物。</p>"
             }
           }
         }
@@ -23929,11 +23929,11 @@
         },
         "Limited Amphibiousness": {
           "name": "有限两栖",
-          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 可以在空气和水中呼吸，但必须至少每4小时浸入水中一次，以避免离开水后窒息。</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 可以在空气和水中呼吸，但必须至少每 4 小时浸入水中一次，以避免离开水后窒息。</p>"
         },
         "Shark Telepathy": {
           "name": "鲨心感应",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 能使用一种特殊的心灵感应，魔法性地控制其120尺内的鲨鱼。</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 能使用一种特殊的心灵感应，魔法性地控制其 120 尺内的鲨鱼。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -23950,11 +23950,11 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldPerson]{Hold Person}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]{Tongues}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]]施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldPerson]，</em> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]，</em></p>"
         },
         "Fiendish Aid": {
           "name": "邪魔支援",
-          "description": "<p class=\"feature\"> [[lookup @name lowercase]]施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]{Bless}</em> 或 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor]{Healing Word}</em>，使用与施法动作相同的施法属性。 </p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]</em> 或 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor]</em>，使用与施法动作相同的施法属性。</p>"
         },
         "Bless": {
           "name": "祝福术",
@@ -24022,7 +24022,7 @@
     "Sahuagin Warrior": {
       "name": "鲨华武者",
       "tokenName": "鲨华武者",
-      "description": "<h1>鲨华鱼人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.6GoEsoHTiVUdeAKu caption=false cite=false classes=\"no-embed mm\"]</p><h2>鲨华武者Warrior</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.e7E1JhVR2AaUl70T caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>鲨华鱼人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.6GoEsoHTiVUdeAKu caption=false cite=false classes=\"no-embed mm\"]</p><h2>鲨华武者</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.e7E1JhVR2AaUl70T caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Blood Frenzy": {
           "name": "血腥狂怒",
@@ -24030,11 +24030,11 @@
         },
         "Limited Amphibiousness": {
           "name": "有限两栖",
-          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 可以在空气和水中呼吸，但必须至少每4小时浸入水中一次，以避免离开水后窒息。</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 可以在空气和水中呼吸，但必须至少每 4 小时浸入水中一次，以避免离开水后窒息。</p>"
         },
         "Shark Telepathy": {
           "name": "鲨心感应",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 能使用一种特殊的心灵感应，魔法性地控制其120尺内的鲨鱼。</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 能使用一种特殊的心灵感应，魔法性地控制其 120 尺内的鲨鱼。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -24051,7 +24051,7 @@
         },
         "Aquatic Charge": {
           "name": "水下冲锋",
-          "description": "<p> [[lookup @name lowercase]] 向一名其可见的敌人直线游动至多等于其游泳速度的距离。 </p>",
+          "description": "<p>[[lookup @name lowercase]] 向一名其可见的敌人直线游动至多等于其游泳速度的距离。 </p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -24067,15 +24067,15 @@
       "items": {
         "Fire Aura": {
           "name": "火焰灵光",
-          "description": "<p>[[lookup @name lowercase]] 回合结束时位于源自 [[lookup @name lowcase]] [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]] 尺光环内的每名生物受到 [[/damage average]] 伤害。</p>"
+          "description": "<p>[[lookup @name lowercase]] 回合结束时位于源自 [[lookup @name lowcase]] [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]] 尺光环内的所有生物受到 [[/damage average]] 伤害。</p>"
         },
         "Flame Spear": {
           "name": "烈焰长矛",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。<em>命中或失手：</em> 长矛会在被用于一次远程攻击后立即魔法性地回到[[lookup @name lowercase]]手中。</p>"
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。<em>命中或失手：</em>长矛会在被用于一次远程攻击后立即魔法性地回到[[lookup @name lowercase]]手中。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]] 发动两次[[/item .mmFlameSpear0000]] 攻击。其可以将其中一次攻击替换为使用 [[/item .mmConstrict00000]]。</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmFlameSpear0000]] 攻击。其可以将其中一次攻击替换为使用 [[/item .mmConstrict00000]]。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -24092,7 +24092,7 @@
           },
           "effects": {
             "Grappled and Restrained": {
-              "name": "擒抱并束缚",
+              "name": "受擒并束缚",
               "description": "<p>你陷入 &Reference[Grappled apply=false] 状态（逃脱DC 14），且你陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
             }
           }
@@ -24106,7 +24106,7 @@
       "items": {
         "Fire Aura": {
           "name": "火焰灵光",
-          "description": "<p>[[lookup @name lowercase]] 回合结束时位于源自 [[lookup @name lowcase]] [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]] 尺光环内的每名生物受到 [[/damage average]] 伤害。</p>"
+          "description": "<p>[[lookup @name lowercase]] 回合结束时位于源自 [[lookup @name lowcase]] [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]] 尺光环内的所有生物受到 [[/damage average]] 伤害。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -24121,7 +24121,7 @@
       "items": {
         "Fire Aura": {
           "name": "火焰灵光",
-          "description": "<p>[[lookup @name lowercase]] 回合结束时位于源自 [[lookup @name lowcase]] [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]] 尺光环内的每名生物受到 [[/damage average]] 伤害。</p>"
+          "description": "<p>在[[lookup @name lowercase]]回合结束时位于源自[[lookup @name lowercase]] 的 [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]] 尺光环区域内的由其选择的所有生物受到 [[/damage average]]伤害。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -24138,11 +24138,11 @@
         },
         "Flame Trident": {
           "name": "烈焰三叉戟",
-          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。 <em>命中或失手：</em>三叉戟会在被用于一次远程攻击后立即魔法性地回到 [[lookup @name lowercase]]手中。</p>"
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。<em>命中或失手：</em>三叉戟会在被用于一次远程攻击后立即魔法性地回到 [[lookup @name lowercase]]手中。</p>"
         },
         "Inferno Blast": {
           "name": "炎狱爆裂",
-          "description": "<p class=\"feature\"><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=ta7GjruJh1oJ4cz3]], each [[lookup @target.affects.type activity=ta7GjruJh1oJ4cz3]] in a [[lookup @target.template.size activity=ta7GjruJh1oJ4cz3]]-[[lookup @target.template.units activity=ta7GjruJh1oJ4cz3]]-radius [[lookup @target.template.type capitalize activity=ta7GjruJh1oJ4cz3]] centered on a point the [[lookup @name lowercase]] can see within [[lookup @range.value activity=ta7GjruJh1oJ4cz3]] [[lookup @range.units activity=ta7GjruJh1oJ4cz3]].</p><p class=\"feature\"><em>Failure:</em> [[/damage average activity=ta7GjruJh1oJ4cz3]] damage, and the target starts burning, taking [[/damage average activity=cuIDOQ2o3dMRhqzd]] damage at the start of each of its turns instead of the normal burning damage. The target gains 1 &amp;Reference[Exhaustion apply=false] level whenever it takes this burning damage.</p><p class=\"feature\"><em>Success:</em> Half damage only.</p><section class=\"secret\" id=\"secret-PjhZrkaxWk4OeGEf\"><p><strong>Foundry Note</strong></p><p>This feature provides an Active Effect that will modify the targeted object. Due to the fact that effect can be applied multiple times, the effect needs to be dragged from this item's Effect tab onto the target item's sheet each time the target gains a level of exhaustion after the initial level is applied.</p></section>",
+          "description": "<p class=\"feature\"><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=ta7GjruJh1oJ4cz3]]，以 [[lookup @target.template.size activity=ta7GjruJh1oJ4cz3]] 尺内[[lookup @name lowcase]] 可见的一点为中心，半径 [[lookup @target.template.size activity=ta7GjruJh1oJ4cz3]] 尺的球状区域内的所有生物。</p><p class=\"feature\"><em>失败：</em> [[/damage average activity=ta7GjruJh1oJ4cz3]]伤害，且目标开始燃烧，目标在其回合开始时受到 [[/damage average activity=cuIDOQ2o3dMRhqzd]]伤害，而非普通的燃烧伤害。每当目标承受此燃烧伤害，目标获得 1 级&Reference[Exhaustion apply=false] 等级。</p><p class=\"feature\"><em>成功：</em>仅半伤。</p><section class=\"secret\" id=\"secret-PjhZrkaxWk4OeGEf\">    <p><strong>Foundry Note</strong></p>    <p>该特性提供一项激活效应，会改变目标物件。由于效应可多次施加，所以每次目标在初始等级后再次获得力竭等级时，都得从本物件的“效应”选项卡中将效应拖到目标物件卡上。</p></section>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -24154,13 +24154,13 @@
           "effects": {
             "Exhaustion": {
               "name": "力竭",
-              "description": "<p>每当目标承受此燃烧伤害，目标获得 1 级 &amp;Reference[Exhaustion apply=false]。</p>"
+              "description": "<p>每当你承受炎狱爆裂的燃烧伤害，你获得 1 级 &amp;Reference[Exhaustion apply=false]。</p>"
             }
           }
         },
         "Blazing Movement": {
           "name": "炽烈移动",
-          "description": "<p>[[lookup @name lowercase]]移动至多等于其速度的距离且不会引发 &amp;Reference[OpportunityAttacks]。在火蜥蜴移动过程中，火焰会充斥于源自[[lookup @name lowercase]]的 [[lookup @target.template.size activity=MUbX28KmoDF9sC5b]]尺光环区域内。当光环进入一个生物所处空间时，该生物受到 [[/damage average]]伤害。 每名生物每回合仅受一次此伤害。</p>"
+          "description": "<p>[[lookup @name lowercase]] 移动至多等于其速度的距离且不会引发&Reference[OpportunityAttacks]。在[[lookup @name lowercase]]移动过程中，火焰会充斥于源自 [[lookup @name lowercase]]的 [[lookup @target.template.size activity=MUbX28KmoDF9sC5b]] 尺光环区域内。当光环进入一个生物所处空间时，该生物受到 [[/damage average]]伤害。每名生物每回合仅受一次此伤害。 </p>"
         }
       }
     },
@@ -24175,11 +24175,11 @@
         },
         "Hooves": {
           "name": "蹄击",
-          "description": "p>[[/attack extended]]。 [[/damage average extended]]。 若目标生物体型不超过中型， [[lookup @name lowercase]] 还能将其直线推离至多10尺距离。</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过中型，[[lookup @name lowercase]] 还能将其直线推离至多 10 尺距离。</p>"
         },
         "Mockery": {
           "name": "嘲讽",
-          "description": "<p class=\"feature\"><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=s5CMus4LOXBkt1Wn]], [[lookup @target.affects.labels.statblock activity=s5CMus4LOXBkt1Wn]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=s5CMus4LOXBkt1Wn]] <span style=\"font-family:'Roboto Condensed', sans-serif\">feet.</span></p><p><em>Failure:</em> [[/damage average]] damage.</p>",
+          "description": "<p class=\"feature\"><em>感知豁免检定：</em>DC [[lookup @save.dc.value activity=s5CMus4LOXBkt1Wn]], 单一 [[lookup @range.value activity=s5CMus4LOXBkt1Wn]] 尺内[[lookup @name lowercase]]可见的生物。</p><p><em>失败：</em> [[/damage average]]伤害。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -24208,17 +24208,17 @@
         },
         "Prance": {
           "name": "欢腾羊跃",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]，且目标陷入&amp;Reference[Charmed apply=false] 状态，直至[[lookup @name lowercase]]的下一回合开始。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]，且目标陷入&amp;Reference[Charmed apply=false] 状态直至[[lookup @name lowercase]]的下一回合开始。</p>",
           "effects": {
             "Charmed": {
               "name": "魅惑",
-              "description": "<p>目标陷入 the &amp;Reference[Charmed apply=false] 状态，在其受到任意伤害时结束。</p>"
+              "description": "<p>你陷入 &Reference[Charmed apply=false] 状态直至半羊人欢庆之主的下一回合开始。</p>"
             }
           }
         },
         "Fey Melody": {
           "name": "妖精旋律",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 奏唤出一段魅惑或恐慌之音。</p><p class=\"feature\"><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=ovXNUYiRFsNC9lFh]]，任意在源自的 [[lookup @name lowercase]]的 [[lookup @target.template.size activity=ovXNUYiRFsNC9lFh]]尺光环区域内开始其回合的敌人。</p><p class=\"feature\"><em>失败</em> 目标将受到歌曲的效应影响：</p><p><strong>魅惑之音</strong>。 目标陷入 &amp;Reference[Charmed apply=false] 状态持续 [[lookup @duration.value activity=mOFKBLSi65tp5u3i]] [[lookup @duration.units activity=mOFKBLSi65tp5u3i]]。魅惑期间，目标陷入&Reference[Incapacitated apply=false]状态且会用尽自身的移动力来在原地跳舞。目标身上的该效应会在其受到任意伤害时结束。</p><p><strong>恐慌之音</strong>. [[/damage average]] 伤害，且目标陷入 &amp;Reference[Frightened apply=false] 状态， [[lookup @duration.value activity=ib78HezKRQ8jxfKz]] [[lookup @duration.units activity=ib78HezKRQ8jxfKz]]持续1分钟。如果目标结束自己回合时并不处于[[lookup @name lowercase]]的视线内，目标身上的该状态将提前结束。 </p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 奏唤出一段魅惑或恐慌之音。</p><p class=\"feature\"><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=ovXNUYiRFsNC9lFh]]，源自[[lookup @name lowercase]] 的 [[lookup @target.template.size activity=ovXNUYiRFsNC9lFh]] 尺光环区域内的所有敌人。</p><p class=\"feature\"><em>失败：</em> 目标将受到歌曲的效应影响：</p><p><strong>魅惑之音。</strong> 目标陷入 &Reference[Charmed apply=false] 状态，持续 [[lookup @duration.value activity=mOFKBLSi65tp5u3i]] 分钟。魅惑期间，目标陷入 &Reference[Incapacitated apply=false] 状态，且会用尽自身的移动力来在原地跳舞。目标身上的该效应会在其受到任意伤害时结束。</p><p><strong>恐慌之音。</strong>[[/damage average]]伤害，且目标陷入 &Reference[Frightened apply=false] 状态，持续 [[lookup @duration.value activity=ib78HezKRQ8jxfKz]] 分钟。若目标结束自己回合时并不处于[[lookup @name lowercase]]的视线内，目标身上的该状态将提前结束。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -24233,7 +24233,7 @@
           "effects": {
             "Charmed & Incapacitated": {
               "name": "魅惑并失能",
-              "description": "<p>你陷入 &amp;Reference[Charmed apply=false] 状态 1 分钟。</p><p>魅惑期间，目标陷入&amp;Reference[Incapacitated apply=false] 状态且会用尽自身的移动力来在原地跳舞。</p>"
+              "description": "<p>你陷入 &amp;Reference[Charmed apply=false] 状态 1 分钟。</p><p>魅惑期间，你陷入&amp;Reference[Incapacitated apply=false] 状态且会用尽自身的移动力来在原地跳舞。</p>"
             },
             "Frightened": {
               "name": "恐慌",
@@ -24250,7 +24250,7 @@
       "items": {
         "Fearsome Claw": {
           "name": "惧怖爪",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]，且目标陷入 &amp;Reference[Frightened apply=false] 持续至[[lookup @name lowercase]]的下个回合结束。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]，且目标陷入 &Reference[Frightened apply=false] 状态直至 [[lookup @name lowercase]] 的下一回合结束。</p>",
           "effects": {
             "Frightened": {
               "name": "恐慌"
@@ -24259,7 +24259,7 @@
         },
         "Terrifying Glare": {
           "name": "惊惧凝视",
-          "description": "<p class=\"feature\"><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=KjYVnRenWyJHktzg]], one creature the [[lookup @name lowercase]] can see within [[lookup @range.value activity=KjYVnRenWyJHktzg]] feet.</p><p class=\"feature\"><em>Failure:</em> The target has the &amp;Reference[Frightened apply=false] condition until the end of the [[lookup @name lowercase]]'s next turn. While Frightened, the target has the &amp;Reference[Paralyzed apply=false] condition.</p>",
+          "description": "<p class=\"feature\"><em>感知豁免检定：</em>DC [[lookup @save.dc.value activity=KjYVnRenWyJHktzg]]，单一 [[lookup @range.value activity=KjYVnRenWyJHktzg]] 尺内 [[lookup @name lowercase]] 可见的生物。</p><p class=\"feature\"><em>失败：</em>目标陷入 &Reference[Frightened apply=false] 状态直至 [[lookup @name lowercase]] 的下一回合结束。恐慌期间，目标陷入 &Reference[Paralyzed apply=false] 状态。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -24267,8 +24267,8 @@
           },
           "effects": {
             "Frightened & Paralyzed": {
-              "name": "恐慌和麻痹",
-              "description": "<p>目标陷入 &amp;Reference[Frightened apply=false] 状态直至稻草人的下一回合结束。恐慌期间，目标陷入&Reference[Paralyzed apply=false] 状态。</p>"
+              "name": "恐慌并麻痹",
+              "description": "<p>你陷入 &amp;Reference[Frightened apply=false] 状态直至稻草人的下一回合结束。恐慌期间，你陷入&Reference[Paralyzed apply=false] 状态。</p>"
             }
           }
         }
@@ -24287,7 +24287,7 @@
     "Scout": {
       "name": "斥候",
       "tokenName": "斥候",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbarmLeatherArm]{Leather Armor}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepLongbow000]{Longbow}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepShortsword]{Shortsword}</p></div><h1>Scouts</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Ia0dhEMIJJ7PVLVn caption=false cite=false classes=\"no-embed mm\"]</p><h2>Scout</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.AXb6rgRnpN7qGWWX caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong>@UUID[Compendium.dnd-players-handbook.equipment.Item.phbarmLeatherArm]{皮甲}，@UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepLongbow000]{长弓}，@UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepShortsword]{短剑}</p></div><h1>斥候</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Ia0dhEMIJJ7PVLVn caption=false cite=false classes=\"no-embed mm\"]</p><h2>斥候</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.AXb6rgRnpN7qGWWX caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Shortsword": {
           "name": "短剑",
@@ -24302,7 +24302,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two attacks, using [[/item .jdOlqVzYs89JuqTB]] and [[/item .qhM3PIWgXdyRCeul]] in any combination.</p>",
+          "description": "<p>The [[lookup @name lowercase]] 使用 [[/item .jdOlqVzYs89JuqTB]] 和 [[/item .qhM3PIWgXdyRCeul]] 发动共计两次攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -26068,7 +26068,7 @@
         },
         "Enchanting Bow": {
           "name": "魅惑之弓",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]，且目标陷入&amp;Reference[Charmed apply=false] 状态，直至[[lookup @name lowercase]]的下一回合开始。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]，且目标陷入&amp;Reference[Charmed apply=false] 状态直至[[lookup @name lowercase]]的下一回合开始。</p>",
           "effects": {
             "Charmed": {
               "name": "被魅惑",
