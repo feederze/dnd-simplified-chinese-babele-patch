@@ -23243,15 +23243,15 @@
       "items": {
         "Greater Magic Resistance": {
           "name": "强化魔法抗性",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] automatically succeeds on saving throws against spells and other magical effects, and the attack rolls of spells automatically miss it. Without the [[lookup @name lowercase]]’s permission, no spell can observe the [[lookup @name lowercase]] remotely or detect its thoughts, creature type, or alignment.</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 罗刹对抗法术和其他魔法效应时进行的豁免检定自动成功，且法术的攻击检定对其自动失手。没有[[lookup @name lowercase]]的允许， 任何法术都无法远程探查 [[lookup @name lowercase]]或是侦测其思想、生物类型或阵营。</p>"
         },
         "Fiendish Restoration": {
-          "name": "Fiendish Restoration",
+          "name": "邪魔复苏",
           "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes three [[/item .mmCursedTouch000]] attacks.</p>",
+          "description": "<p>[[lookup @name lowercase]]发动三次 [[/item .mmCursedTouch000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -23259,32 +23259,32 @@
           }
         },
         "Cursed Touch": {
-          "name": "Cursed Touch",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest.</p>",
+          "name": "诅咒之触",
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。若目标为生物，则其被诅咒。被诅咒期间，目标无法从完成短休或长休中获益。</p>",
           "effects": {
             "Cursed": {
-              "name": "Cursed",
-              "description": "<p>While cursed, the target gains no benefit from finishing a Short or Long Rest.</p>"
+              "name": "诅咒",
+              "description": "<p>被诅咒期间，目标无法从完成短休或长休中获益。</p>"
             }
           }
         },
         "Baleful Command": {
-          "name": "Baleful Command",
-          "description": "<p><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=SzU2lwdbqgoFMuBM]], each [[lookup @target.affects.type activity=SzU2lwdbqgoFMuBM]] in a [[lookup @target.template.size activity=SzU2lwdbqgoFMuBM]]-foot Emanation originating from the [[lookup @name lowercase]].</p><p><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Frightened apply=false] and &amp;Reference[Incapacitated apply=false] conditions until the start of the [[lookup @name lowercase]]'s next turn.</p>",
+          "name": "恶毒命令",
+          "description": "<p><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=SzU2lwdbqgoFMuBM]]，源自 [[lookup @name lowercase]]的 [[lookup @target.template.size activity=SzU2lwdbqgoFMuBM]] 尺光环区域内的所有敌人。</p><p><em>失败：</em> [[/damage average]]伤害，且目标陷入 &amp;Reference[Frightened apply=false] 与 &amp;Reference[Incapacitated apply=false] 状态直至罗刹的下一回合开始。</p>",
           "effects": {
             "Frightened & Incapacitated": {
-              "name": "Frightened & Incapacitated",
-              "description": "<p>The target has the &amp;Reference[Frightened apply=false] and &amp;Reference[Incapacitated apply=false] conditions until the start of the user's next turn.</p>"
+              "name": "恐慌与失能",
+              "description": "<p>你陷入 &amp;Reference[Frightened apply=false] 与 &amp;Reference[Incapacitated apply=false] 状态，直至罗刹的下个回合开始。</p>"
             }
           }
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spelldc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]{Disguise Self}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFly0000000]{Fly}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{Invisibility}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]{Major Image}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFly0000000]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em></p>"
         },
         "Detect Magic": {
-          "name": "Detect Magic",
-          "description": "<p>For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell’s school of magic.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p>",
+          "name": "侦测魔法",
+          "description": "<p>在法术持续时间内，你感受到距你 30 尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -23292,7 +23292,7 @@
           },
           "effects": {
             "Detect Magic": {
-              "name": "Detect Magic"
+              "name": "侦测魔法"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -23300,14 +23300,14 @@
           }
         },
         "Detect Thoughts": {
-          "name": "Detect Thoughts",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spelldc]] check against your spell save DC, ending the spell on a success.</p>",
+          "name": "侦测思想",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
-              "name": "Probe Deeper"
+              "name": "深入探查"
             },
             "Sense Thoughts": {
-              "name": "Sense Thoughts"
+              "name": "感知思想"
             }
           },
           "effects": {
@@ -23317,8 +23317,8 @@
           }
         },
         "Disguise Self": {
-          "name": "Disguise Self",
-          "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.</p><p>To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv dc=@attributes.spelldc]] check against your spell save DC.</p>",
+          "name": "易容术",
+          "description": "<p>你改变自身以及随身的衣物、护甲、武器等在你身上的所有物。该效应在法术终止时结束。肉眼看来你的身高可以有 1 尺的增减，体态可胖可瘦。你必须选择一个和你肢体基础排列方式一致的形态。此外，幻术的影响范围由你决定。</p><p>此法术产生的变化无法应对物理检查。比如，你用此法术添了一顶帽子，那么现实物件会从帽子穿过去，且任何触碰帽子的人将摸不到任何东西。</p><p>如果一名生物想要分辨你是否易容，则必须使用一个研究动作研究你的外貌，并成功于一次对抗你法术豁免DC的 [[/check ability=int skill=inv]] 检定。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -23326,8 +23326,8 @@
           },
           "effects": {
             "Disguised": {
-              "name": "Disguised",
-              "description": "<p><span style=\"font-family:Signika, sans-serif\">To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv]] check against your spell save DC.</span></p>"
+              "name": "易容",
+              "description": "<p><span style=\"font-family: Signika, sans-serif\">一名生物想要分辨你是否易容，则必须使用一个研究动作研究你的外貌，并成功于一次对抗你法术豁免DC的 [[/check ability=int skill=inv]] 检定。</span></p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -23366,11 +23366,11 @@
           }
         },
         "Fly": {
-          "name": "Fly",
-          "description": "<p>You touch a willing creature. For the duration, the target gains a Fly Speed of 60 feet and can hover. When the spell ends, the target falls if it is still aloft unless it can stop the fall.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 3.</p>",
+          "name": "飞行术",
+          "description": "<p>你触碰一个自愿生物。目标在法术持续时间内获得 60 尺的飞行速度且可以悬浮。法术终止时，如果目标仍在空中则随即坠落，除非其能停止坠落。</p><p><strong>升环施法：</strong> 使用的法术位每比三环高一环，就可以额外再指定一名生物作为法术目标。</p>",
           "effects": {
             "Flight": {
-              "name": "Flight"
+              "name": "飞行"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -23378,11 +23378,11 @@
           }
         },
         "Invisibility": {
-          "name": "Invisibility",
-          "description": "<p>A creature you touch has the &amp;Reference[invisible apply=false] condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 2.</p>",
+          "name": "隐形术",
+          "description": "<p>你触碰的一个生物进入 &Reference[invisible apply=false] 状态并维持至法术终止。如果目标进行攻击检定、造成伤害或施展法术，则该法术提前终止。</p><p><strong>升环施法：</strong> 使用三环或更高法术位施展该法术时，你使用的法术位每比二环高一环，就可以额外指定一个生物作为目标。</p>",
           "effects": {
             "Invisible": {
-              "name": "Invisible",
+              "name": "隐形",
               "description": "<p>如果你进行攻击检定、造成伤害或施展法术，则该法术提前终止。</p>"
             },
             "Spell Changes": {
@@ -23391,7 +23391,7 @@
           }
         },
         "Major Image": {
-          "name": "Major Image",
+          "name": "高等幻影",
           "description": "<p>你创造一个影像，其形象来自一个大小不超过边长 20 尺立方体的物件或生物，或是其他的可视现象。影像出现在施法距离内你能看见的一处位置并在法术持续时间内维持存在。它看起来完全是真实的，并且还具有相应的声音、气味和温度。但它无法造成伤害或让人陷入任何状态。</p><p> 在该幻象施法距离内时，你可以用一个魔法动作将影像移动到施法距离内的另一个位置。影像改变位置时，你可以改变影像的外表来使它移动得更自然。例如，如果你创造了一个生物的影像并移动它，则你可以改变影像，使它看起来就像是在走路。或者你也可以让影像在不同的时间发出不同的声音，甚至可以让它参与一场对话。</p><p>由于影像可以被穿过，任何与该影像进行的物理互动都会暴露其幻象的本质。一个生物用研究动作调查影像时，它可以进行一次对抗你的法术豁免 DC 的 [[/check ability=int skill=inv dc=@attributes.spelldc]] 检定，以判定是否看穿幻象。辨出幻象的生物可以看破该影像，而影像的其他感官效应在该生物看来会变得微弱而模糊。</p><p><strong>升环施法：</strong> 使用高于三环的法术位时，法术时间持续至被解除且无需专注。</p>",
           "effects": {
             "Spell Changes": {
@@ -23400,8 +23400,8 @@
           }
         },
         "Plane Shift": {
-          "name": "Plane Shift",
-          "description": "<p>You and up to eight willing creatures who link hands in a circle are transported to a different plane of existence. You can specify a target destination in general terms, such as the City of Brass on the Elemental Plane of Fire or the palace of Dispater on the second level of the Nine Hells, and you appear in or near that destination, as determined by the DM.</p><p>Alternatively, if you know the sigil sequence of a teleportation circle on another plane of existence, this spell can take you to that circle. If the teleportation circle is too small to hold all the creatures you transported, they appear in the closest unoccupied spaces next to the circle.</p>",
+          "name": "位面转移",
+          "description": "<p>你和至多八名手牵着手形成一个圆圈的生物被输送到一个不同的存在位面。你可以概括地指名一个目的地，比如火元素位面的黄铜之城或九层地狱第二层迪斯帕特的宫殿，按照DM的判断，你将出现在目的地里或其附近。</p><p>另外，如果你知道某个处于另一位面的传送法阵的印记序列，则该法术可以把你带到该法阵处。如果该传送法阵太小而装不下所有你输送的生物，则他们会出现在离传送法阵最近的未占空间中。</p>",
           "activities": {
             "Transport": {
               "name": "输送"
@@ -23420,11 +23420,11 @@
       "tokenName": "老鼠",
       "items": {
         "Agile": {
-          "name": "Agile",
-          "description": "<p>The [[lookup @name lowercase]] doesn’t provoke an &amp;Reference[opportunityattacks]{Opportunity Attack} when it moves out of an enemy’s reach.</p>"
+          "name": "机敏",
+          "description": "<p>[[lookup @name lowercase]] 离开敌人的触及范围时不会引发。 &Reference[opportunityattacks]{借机攻击}。</p>"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
@@ -23435,7 +23435,7 @@
       "items": {
         "Mimicry": {
           "name": "拟声",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can mimic simple sounds it has heard, such as a whisper or chitter. A hearer can discern the sounds are imitations with a successful [[/check format=long]].</p>"
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] 可以模仿曾听过的简单声音，如低语声或鸟鸣声。听到该声音的生物可以成功通过一次[[/check format=long]]来发现其是模仿。</p>"
         },
         "Beak": {
           "name": "喙啄",
@@ -23462,7 +23462,7 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Fire Breath": {
-          "name": "Fire Breath",
+          "name": "火焰吐息",
           "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]]，[[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]] 尺锥状区域内的每名生物。</p><p><em>失败：</em>[[/damage average]]伤害。</p><p><em>成功：</em>半伤。</p>"
         }
       }
@@ -23470,14 +23470,14 @@
     "Red Slaad": {
       "name": "史拉红蟾",
       "tokenName": "史拉红蟾",
-      "description": "<h1>Slaadi</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.AXXqca9xNbd6xnJ6 caption=false cite=false classes=\"no-embed mm\"]</p><h2>Red Slaad</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.0xVNRpqlT9RMxLj0 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>史拉蟾</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.AXXqca9xNbd6xnJ6 caption=false cite=false classes=\"no-embed mm\"]</p><h2>史拉红蟾</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.0xVNRpqlT9RMxLj0 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Regeneration": {
-          "name": "Regeneration",
-          "description": "<p>The [[lookup @name lowercase]] regains [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] Hit Points at the start of each of its turns if it has at least 1 Hit Point.</p>",
+          "name": "再生",
+          "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
           "activities": {
             "heal": {
-              "condition": "starts its turn with at least 1 Hit Point"
+              "condition": "在其回合开始时，至少拥有 1 点生命值"
             }
           }
         },
@@ -23487,7 +23487,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes three [[/item Injecting Claw]] attacks.</p>",
+          "description": "<p>[[lookup @name lowercase]]发动三次[[/item Injecting Claw]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -23495,7 +23495,7 @@
           }
         },
         "Injecting Claw": {
-          "name": "Injecting Claw",
+          "name": "爪击",
           "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid not cursed by a [[lookup @name lowercase]], it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=C5wp4BSKfYlbMurm]].</p><p><em>Failure:</em> The target is cursed unawares, and a minuscule slaad egg is implanted in it. Removing the curse destroys the egg.</p><p class=\"feature\">Over [[/r 2d4*10#Days egg gestates]]{2d4 × 10} days, the egg gestates. In the final 24 hours, the cursed target feels unwell; its Speed is halved, and it has Disadvantage on D20 Tests. At the end of this time, the egg turns into a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSlaadTadpole00]{Slaad Tadpole}</strong>, which chews out of the host and kills it.</p>",
           "activities": {
             "Slaad Tadpole": {
@@ -23509,8 +23509,8 @@
           },
           "effects": {
             "Cursed": {
-              "name": "Cursed",
-              "description": "<p>The target is cursed.</p>"
+              "name": "诅咒",
+              "description": "<p>目标被诅咒缠身。</p>"
             }
           }
         }
@@ -23521,15 +23521,15 @@
       "tokenName": "礁鲨",
       "items": {
         "Pack Tactics": {
-          "name": "Pack Tactics",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+          "name": "集群战术",
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Water Breathing": {
-          "name": "Water Breathing",
+          "name": "水中呼吸",
           "description": "<p>[[lookup @name lowercase]] 只能在水下呼吸。</p>"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
@@ -23545,7 +23545,7 @@
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=xWlMeXFjELfSUWX9]] creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]), and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]，若目标生物体型不超过大型，其陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -23592,7 +23592,7 @@
       "items": {
         "Regeneration": {
           "name": "再生",
-          "description": "<p>The [[lookup @name lowercase]] regains [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] Hit Points at the start of each of its turns. If the revenant takes Fire or Radiant damage, this trait doesn’t function at the start of its next turn. Its body is destroyed only if it starts its turn with 0 Hit Points and doesn’t regenerate.</p>",
+          "description": "<p>[[lookup @name lowercase]] 在其回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 生命值。若还魂鬼受到火焰或光耀伤害，则该特质在其下个回合开始时无法生效。 还魂鬼的躯体只有以0生命值开始其回合且无法再生时，才会被摧毁。</p>",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -23601,11 +23601,11 @@
         },
         "Undead Restoration": {
           "name": "亡灵复苏",
-          "description": "<p class=\"feature\">If the [[lookup @name lowercase]] dies, it revives 24 hours later in a different body unless <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]{Dispel Evil and Good}</em> is cast on its corpse. If it revives, it animates a Humanoid corpse elsewhere on the same plane of existence; it now looks different but uses the same stat block and returns with all its Hit Points.</p>"
+          "description": "<p class=\"feature\">若 [[lookup @name lowercase]] 死亡，除非对其遗体施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]</em>否则其在24小时后于另一躯体上复生 。 还魂鬼复生后会活化同一存在位面中的另一具类人遗体，这会改变其外形，但不会改变其游戏数据，且还魂鬼以满生命值复活。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] uses [[/item .mmVengefulGlare0]] and makes two [[/item .mmSlam0000000000]] attacks.</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .mmVengefulGlare0]] 并发动两次 [[/item .mmSlam0000000000]]攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -23627,7 +23627,7 @@
           "effects": {
             "Frightened & Paralyzed": {
               "name": "恐慌和麻痹",
-              "description": "<p>If the attacking creature curses the Frightened target, the target also has the &amp;Reference[Paralyzed apply=false] condition for the duration. After 1 minute, it succeeds automatically.</p>"
+              "description": "<p>若恐慌目标被还魂鬼诅咒 则目标还会在此期间陷入 &amp;Reference[Paralyzed apply=false] 状态.。1分钟后，其豁免自动成功。</p>"
             },
             "Frightened": {
               "name": "恐慌",
@@ -23689,7 +23689,7 @@
     "Roc": {
       "name": "鹏鸟",
       "tokenName": "鹏鸟",
-      "description": "<h1>Roc</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.GS2JdYGVDYQ3ZqP4 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>鹏鸟Roc</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.GS2JdYGVDYQ3ZqP4 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Multiattack": {
           "name": "多重攻击",
@@ -23721,7 +23721,7 @@
         },
         "Swoop": {
           "name": "鹏落",
-          "description": "<p class=\"feature\">If the [[lookup @name lowercase]] has a creature Grappled, the [[lookup @name lowercase]] flies up to half its Fly Speed without provoking &amp;Reference[OpportunityAttacks] and drops that creature.</p>",
+          "description": "<p class=\"feature\">若[[lookup @name lowercase]]已令一名生物陷入受擒， [[lookup @name lowercase]] 飞行至多等于其飞行速度一半的距离并丢下此生物， 此移动不会引发&amp;Reference[OpportunityAttacks] 。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -23749,11 +23749,11 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Tentacle": {
-          "name": "Tentacle",
+          "name": "触须",
           "description": "<p>[[/attack extended]]. <em>Hit:</em> The target has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of six tentacles, and the target has the &amp;Reference[Poisoned apply=false] condition until the grapple ends.</p><p>The tentacle can be damaged, freeing a creature it has Grappled when destroyed (AC 20, HP 10, Immunity to Poison and Psychic damage). Damaging the tentacle deals no damage to the [[lookup @name lowercase]], and a destroyed tentacle regrows at the start of the [[lookup @name lowercase]]’s next turn.</p>",
           "activities": {
             "Escape Check": {
@@ -23762,25 +23762,25 @@
           },
           "effects": {
             "Grappled": {
-              "name": "Grappled",
-              "description": "<p><strong>Escape Tests (see origin item for DC)</strong></p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
+              "name": "受擒",
+              "description": "<p>若你生物体型不超过大型，则你会被四条触须之一擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC 15）。</p><p>[[/check skill=ath ability=str]]</p><p>[[/check skill=acr ability=dex]]</p>"
             }
           }
         },
         "Reel": {
-          "name": "Reel",
+          "name": "拖拽",
           "description": "<p>The [[lookup @name lowercase]] pulls each creature Grappled by it up to 30 feet straight toward it.</p>"
         }
       }
     },
     "Rust Monster": {
-      "name": "Rust Monster",
-      "tokenName": "Rust Monster",
-      "description": "<h1>Rust Monster</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.hetWZ4EnyqetDuMe caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "锈蚀怪",
+      "tokenName": "锈蚀怪",
+      "description": "<h1>锈蚀怪</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.hetWZ4EnyqetDuMe caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Iron Scent": {
-          "name": "Iron Scent",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can pinpoint the location of [[lookup @target.affects.special activity=I1ppxiVO5CS6tKj0]] within [[lookup @target.template.size activity=I1ppxiVO5CS6tKj0]] feet of itself.</p>",
+          "name": "嗅铁",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 可以精准定位 [[lookup @target.affects.special activity=I1ppxiVO5CS6tKj0]] 自身[[lookup @target.template.size activity=I1ppxiVO5CS6tKj0]] 30尺内的含铁金属。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -23797,7 +23797,7 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Antennae": {
