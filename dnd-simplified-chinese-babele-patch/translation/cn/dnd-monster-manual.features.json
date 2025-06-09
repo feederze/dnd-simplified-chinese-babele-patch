@@ -349,7 +349,7 @@
     },
     "Beaks": {
       "name": "喙啄",
-      "description": "<p>[[/attack extended]]。 [[/damage average extended]]， 若处于[[lookup @activation.condition activity=3m1SLqBeMGQF3UaQ]]则改为 [[/damage average activity=3m1SLqBeMGQF3UaQ]]  </p>",
+      "description": "<p>[[/attack extended]]。 [[/damage average extended]]， 若[[lookup @activation.condition activity=3m1SLqBeMGQF3UaQ]]则改为 [[/damage average activity=3m1SLqBeMGQF3UaQ]]  </p>",
       "activities": {
         "attack": {
           "condition": "集群并未浴血"
@@ -434,11 +434,11 @@
     },
     "Bites": {
       "name": "啃咬",
-      "description": "<p>[[/attack extended]]。 [[/damage average extended]]， 若处于[[lookup @activation.condition activity=3Yo83eZUNwX51AcE]] 则改为[[/damage average activity=3Yo83eZUNwX51AcE]]  </p>",
+      "description": "<p>[[/attack extended]]。 [[/damage average extended]]， 若[[lookup @activation.condition activity=3Yo83eZUNwX51AcE]] 则改为[[/damage average activity=3Yo83eZUNwX51AcE]]  </p>",
       "activities": {
         "Bloodied Attack": {
           "name": "浴血攻击",
-          "condition": "集群处于 &Reference[Bloodied]"
+          "condition": "集群处于&Reference[Bloodied]"
         }
       }
     },
@@ -511,7 +511,7 @@
     },
     "Blurred Form": {
       "name": "朦胧形态",
-      "description": "<p>除非 [[lookup @name lowercase]]状态， 否则对其进行的攻击检定具有劣势。</p>"
+      "description": "<p>除非 [[lookup @name lowercase]] 陷入失能状态，否则对其进行的攻击检定具有劣势。</p>"
     },
     "Bog Staff": {
       "name": "沼地大杖",
@@ -1115,7 +1115,7 @@
     },
     "Create Whirlwind": {
       "name": "引动龙卷旋风",
-      "description": "<p class=\"feature\">[[lookup @name lowercase]] 在 120 尺内它可见的一点，咒唤出一道龙卷风。龙卷风会覆盖半径 [[lookup @target.template.size activity=TYNKL0QDItFpbR2G]] 尺、高 [[lookup @target.template.height activity=TYNKL0QDItFpbR2G]] 尺的柱状区域，并持续 [[lookup @name lowercase]] 专注终止。[[lookup @name lowercase]] 在其回合开始时可以将龙卷风向任意方向移动至多 20 尺。每当龙卷风进入生物所处空间或生物进入龙卷风时，该生物承受以下效应。</p><p class=\"feature\"><em>力量豁免检定:</em> DC [[lookup @save.dc.value activity=TYNKL0QDItFpbR2G]]（每个生物一回合仅需进行一次此豁免，[[lookup @name lowercase]]不受影响）。</p><p class=\"feature\"><em>失败:</em> 目标在身处龙卷风内期间陷入 &Reference[Restrained apply=false] 状态，，并随龙卷风一并移动。束缚目标在其回合开始时受到[[/damage average]]伤害。目标在其回合结束时重复豁免，成功则终止其身上的该效应。</p>",
+      "description": "<p class=\"feature\">[[lookup @name lowercase]] 在 120 尺内它可见的一点，咒唤出一道龙卷风。龙卷风会覆盖半径 [[lookup @target.template.size activity=TYNKL0QDItFpbR2G]] 尺、高 [[lookup @target.template.height activity=TYNKL0QDItFpbR2G]] 尺的柱状区域，并持续 [[lookup @name lowercase]] 专注终止。[[lookup @name lowercase]] 在其回合开始时可以将龙卷风向任意方向移动至多 20 尺。每当龙卷风进入生物所处空间或生物进入龙卷风时，该生物承受以下效应。</p><p class=\"feature\"><em>力量豁免检定:</em> DC [[lookup @save.dc.value activity=TYNKL0QDItFpbR2G]]（每个生物一回合仅需进行一次此豁免，[[lookup @name lowercase]]不受影响）。</p><p class=\"feature\"><em>失败:</em> 目标在身处龙卷风内期间陷入 &Reference[Restrained apply=false] 状态，并随龙卷风一并移动。束缚目标在其回合开始时受到[[/damage average]]伤害。目标在其回合结束时重复豁免，成功则终止其身上的该效应。</p>",
       "activities": {
         "Save": {
           "name": "豁免"
@@ -2395,7 +2395,7 @@
       "effects": {
         "Grappled": {
           "name": "受擒",
-          "description": "<p>目标并被其六条树根之一缠绕陷入 &Reference[Grappled apply=false] 状态，（逃脱DC [[/check ability=str skill=ath format=long]]。</p>"
+          "description": "<p>你被施加者六条树根之一缠绕，陷入 &Reference[Grappled apply=false] 状态，（逃脱DC [[/check ability=str skill=ath format=long]]。</p>"
         }
       }
     },
