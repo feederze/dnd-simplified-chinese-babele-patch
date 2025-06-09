@@ -27929,13 +27929,13 @@
           "effects": {
             "Grappled": {
               "name": "受擒",
-              "description": "<p>若目标生物不超过中型，则其被双手之一擒抱，陷入&amp;Reference[Grappled apply=false] 状态 逃脱DC [[/check ability=str skill=ath format=long]]）。</p>"
+              "description": "<p>若你的生物不超过中型，则你被吸血鬼双手之一擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC 14，[[/check ability=str skill=ath format=long]]）。</p>"
             }
           }
         },
         "Bite (Bat or Vampire Form Only)": {
           "name": "啃咬（仅蝙蝠或吸血鬼形态）",
-          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=ngPzlEI5pVSdBv86]], one [[lookup @target.affects.type activity=ngPzlEI5pVSdBv86]] within [[lookup @range.value activity=ngPzlEI5pVSdBv86]] feet [[lookup @target.affects.special activity=ngPzlEI5pVSdBv86]].</p><p><em>Failure:</em> [[/damage average]] damage. The target’s Hit Point maximum decreases by an amount equal to the Necrotic damage taken, and the [[lookup @name lowercase]] regains Hit Points equal to that amount. A Humanoid reduced to 0 Hit Points by this damage and then buried rises the following sunset as a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmVampireSpawn00]{Vampire Spawn}</strong> under the [[lookup @name lowercase]]’s control.</p>",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=ngPzlEI5pVSdBv86]]，单一 [[lookup @range.value activity=ngPzlEI5pVSdBv86]] 尺内的自愿或陷入受擒、失能或束缚状态的生物。</p><p><em>失败：</em> [[/damage average]]伤害。目标的生命值上限承受等于所受的暗蚀伤害值的减损，且[[lookup @name lowercase]]恢复等量的生命值。因此伤害生命值降至0并在随后被埋葬的类人生物会在下次日落之时复苏为一只受[[lookup @name lowercase]]控制的<strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmVampireSpawn00]</strong>。</p>",
           "activities": {
             "Vampire Spawn Rises": {
               "name": "唤起初生吸血鬼"
@@ -27944,7 +27944,7 @@
         },
         "Charm": {
           "name": "魅惑",
-          "description": "<p>[[lookup @name lowercase]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]</em>，无需法术成分并使用魅力作为施法属性（法术豁免DC[[lookup @abilities.cha.dc]]），且其持续时间变为 [[lookup @duration.value activity=fcRXSTOlFJShCl52]] 小时。 &amp;Reference[Charmed apply=false] 的生物即 [[lookup @name lowercase]] [[/item .mmBite0000000000]]的自愿目标， 此时造成的伤害不会结束该法术。法术结束后，目标不会意识到自己被 [[lookup @name lowercase]]魅惑过。</p>"
+          "description": "<p>[[lookup @name lowercase]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]</em>，无需法术成分并使用魅力作为施法属性（法术豁免DC [[lookup @abilities.cha.dc]]），且其持续时间变为 [[lookup @duration.value activity=fcRXSTOlFJShCl52]] 小时。以此被魅惑的生物即[[lookup @name lowercase]][[/item .mmBite0000000000]]{啃咬}的自愿目标，此时造成的伤害不会结束该法术。法术结束后，目标不会意识到自己被[[lookup @name lowercase]]魅惑过。</p>"
         },
         "Charm Person": {
           "name": "魅惑类人",
@@ -27961,7 +27961,7 @@
         },
         "Shape-Shift": {
           "name": "变形",
-          "description": "<p class=\"feature\">If the [[lookup @name lowercase]] isn’t in sunlight or running water, it shape-shifts into a Tiny @UUID[Compendium.dnd-monster-manual.actors.Actor.mmBat00000000000]{bat} (Speed 5 ft., Fly Speed 30 ft.) or a Medium cloud of mist (Speed 5 ft., Fly Speed 20 ft. [hover]), or it returns to its vampire form. Anything it is wearing transforms with it.</p><p class=\"feature\">While in bat form, the [[lookup @name lowercase]] can’t speak. Its game statistics, other than its size and Speed, are unchanged.</p><p class=\"feature\">While in mist form, the [[lookup @name lowercase]] can’t take any actions, speak, or manipulate objects. It is weightless and can enter an enemy’s space and stop there. If air can pass through a space, the mist can do so, but it can’t pass through liquid. It has Resistance to all damage, except the damage it takes from sunlight.</p>",
+          "description": "<p class=\"feature\">若[[lookup @name lowercase]]未身处日光或流水中，其可变形为微型@UUID[Compendium.dnd-monster-manual.actors.Actor.mmBat00000000000]{蝙蝠}（速度 5 尺，飞行速度 30 尺）或中型迷雾云（速度 5 尺，飞行 20 尺[悬浮]），或是变回其吸血鬼形态。其携带的任何事物都会随之变形。</p><p class=\"feature\">处于蝙蝠形态期间，[[lookup @name lowercase]]不能说话。它的游戏数据（体型和速度除外）亦不会发生改变。</p><p class=\"feature\">处于迷雾形态期间，[[lookup @name lowercase]]不能执行任何动作，亦不能说话或操纵物件。迷雾没有重量且可以进入其它生物的空间并于其中停留。若空气能穿过某处空间，迷雾亦可穿过，但不能穿过液体。迷雾具有对所有伤害的抗性，除了日光造成的伤害。</p>",
           "activities": {
             "Transform Into Bat": {
               "name": "变为蝙蝠"
@@ -27970,7 +27970,7 @@
         },
         "Beguile": {
           "name": "诱骗",
-          "description": "<p> [[lookup @name lowercase]] 施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]</em>，无需法术成分并使用魅力作为施法属性（法术豁免 DC [[lookup @abilities.cha.dc]]）。  [[lookup @name lowercase]] 直至其下个回合开始都无法再执行此动作。</p>"
+          "description": "<p> [[lookup @name lowercase]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]</em>，无需法术成分并使用魅力作为施法属性（法术豁免 DC [[lookup @abilities.cha.dc]]）。[[lookup @name lowercase]] 直至其下一回合开始都无法再执行此动作。</p>"
         },
         "Command": {
           "name": "命令术",
@@ -27983,7 +27983,7 @@
         },
         "Deathless Strike": {
           "name": "不死者打击",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 移动等于其速度一半的距离，并发动一次[[/item .mmGraveStrike000]]{Grave Strike} 攻击。</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 移动等于其速度一半的距离，并发动一次 [[/item .mmGraveStrike000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -27992,14 +27992,14 @@
         },
         "Vampire Weakness": {
           "name": "吸血鬼弱点",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] has these weaknesses:</p><p class=\"feature-trait\"><strong>Forbiddance.</strong> The [[lookup @name lowercase]] can’t enter a residence without an invitation from an occupant.</p><p class=\"feature-trait\"><strong>Running Water.</strong> The [[lookup @name lowercase]] takes 20 Acid damage if it ends its turn in running water.</p><p class=\"feature-trait\"><strong>Stake to the Heart.</strong> The [[lookup @name lowercase]] is destroyed if a weapon that deals Piercing damage is driven into the [[lookup @name lowercase]]’s heart while the [[lookup @name lowercase]] has the Incapacitated condition.</p><p class=\"feature-trait\"><strong>Sunlight.</strong> The [[lookup @name lowercase]] takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 拥有以下弱点：</p><p class=\"feature-trait\"><strong>禁入。</strong> [[lookup @name lowercase]] 未得到一位居住者的邀请时无法进入相应的民宅。</p><p class=\"feature-trait\"><strong>流水。</strong> 若 [[lookup @name lowercase]] 在流水中结束回合，其受到[[/damage 20 type=acid]]伤害。</p><p class=\"feature-trait\"><strong>桩刺。</strong> [[lookup @name lowercase]] 位于其休眠地且陷入失能状态期间，若用一把造成穿刺伤害的武器钉入其心脏，其陷入麻痹状态直至该武器被移除。</p><p class=\"feature-trait\"><strong>日光 Sunlight.</strong> 若 [[lookup @name lowercase]] 在阳光下开始其回合，其受到[[/damage 20 type=radiant]]伤害。若其身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
           "activities": {
             "Damage: Running Water": {
               "name": "伤害：流水",
               "chatFlavor": "流水造成的伤害"
             },
             "Damage: Sunlight": {
-              "name": "伤害：日照",
+              "name": "伤害：日光",
               "chatFlavor": "日照造成的伤害"
             },
             "Staked to the Heart": {
@@ -28008,8 +28008,8 @@
           },
           "effects": {
             "Disadv. Attacks & Checks": {
-              "name": "劣势. 攻击和检定",
-              "description": "<p><span style=\"font-family:'Roboto Condensed', sans-serif\">若其身处阳光下，其进行的属性检定和攻击检定具有劣势。 </span></p>"
+              "name": "劣势：攻击和检定",
+              "description": "<p>若你身处阳光下，你进行的属性检定和攻击检定具有劣势。</p>"
             }
           }
         }
@@ -28018,15 +28018,15 @@
     "Vampire Familiar": {
       "name": "血仆",
       "tokenName": "血仆",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepDagger0000]{Daggers (10)}</p></div><h1>Vampires</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.y4ooBM6PNZfWH3Tv caption=false cite=false classes=\"no-embed mm\"]</p><h2>Vampire Familiar</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.iWbAQD1GN6bn7JeU caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong>@UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepDagger0000]{匕首（10）}</p></div><h1>吸血鬼</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.y4ooBM6PNZfWH3Tv caption=false cite=false classes=\"no-embed mm\"]</p><h2>血仆</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.iWbAQD1GN6bn7JeU caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Vampiric Connection": {
           "name": "血裔连结",
-          "description": "<p class=\"feature\">While the [[lookup @name lowercase]] and its vampire master are on the same plane of existence, the vampire can communicate with the [[lookup @name lowercase]] telepathically, and the vampire can perceive through the [[lookup @name lowercase]]’s senses.</p>"
+          "description": "<p class=\"feature\">若 [[lookup @name lowcase]] 与其吸血鬼尊长身处同一位面，该吸血鬼就能用心灵感应与[[lookup @name lowcase]] 交流，亦能用 [[lookup @name lowcase]] 的感官感知事物。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmUmbralDagger00]] attacks.</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmUmbralDagger00]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28035,11 +28035,11 @@
         },
         "Umbral Dagger": {
           "name": "暗影匕首",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。 若目标因该攻击生命值降至0，则目标伤势稳定但陷入 &amp;Reference[Poisoned apply=false] 状态1小时。以此法中毒期间，目标还会陷入 &amp;Reference[Paralyzed apply=false] 状态。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若目标因该攻击生命值降至 0，则目标伤势稳定但陷入 &Reference[Poisoned apply=false] 状态 1 小时。以此法中毒期间，目标还会陷入 &Reference[Paralyzed apply=false] 状态。</p>",
           "effects": {
             "Poisoned & Paralyzed": {
               "name": "中毒并麻痹",
-              "description": "<p>目标陷入 &Reference[Poisoned apply=false] 状态 1 小时。在中毒状态下，目标还会陷入 &Reference[Paralyzed apply=false] 状态。</p>"
+              "description": "<p>你陷入 &Reference[Poisoned apply=false] 状态 1 小时。中毒期间，你还会陷入 &Reference[Paralyzed apply=false] 状态。</p>"
             }
           }
         },
@@ -28060,8 +28060,8 @@
       "description": "<h1>吸血鬼</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.y4ooBM6PNZfWH3Tv caption=false cite=false classes=\"no-embed mm\"]</p><h2>吸血夜魇</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.6X4FKeIZkADH9rmW caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Sunlight Hypersensitivity": {
-          "name": "吸血夜魇",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 受到 [[/damage]] 伤害。若其身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
+          "name": "日照超敏",
+          "description": "<p class=\"feature\">若[[lookup @name lowercase]] 在阳光下开始其回合，其受到 [[/damage]]伤害。若其身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -28073,12 +28073,12 @@
           }
         },
         "Shadow Strike": {
-          "name": "暗影突袭",
+          "name": "幽影袭",
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。 目标的生命值上限减少等于其受到暗蚀伤害的数值，且 [[lookup @name lowercase]] 恢复等量生命值。</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。目标的生命值上限减少等于其受到暗蚀伤害的数值，且[[lookup @name lowcase]]恢复等量生命值。</p>"
         },
         "Shadow Stealth": {
           "name": "幽影隐匿",
@@ -28098,9 +28098,9 @@
       }
     },
     "Vampire Spawn": {
-      "name": "吸血鬼衍体",
-      "tokenName": "吸血鬼衍体",
-      "description": "<h1>Vampires</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.y4ooBM6PNZfWH3Tv caption=false cite=false classes=\"no-embed mm\"]</p><h2>Vampire Spawn</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.jMEWxA9YWC4W4aTi caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "初生吸血鬼",
+      "tokenName": "初生吸血鬼",
+      "description": "<h1>吸血鬼</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.y4ooBM6PNZfWH3Tv caption=false cite=false classes=\"no-embed mm\"]</p><h2>初生吸血鬼</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.jMEWxA9YWC4W4aTi caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Spider Climb": {
           "name": "蛛行",
@@ -28126,17 +28126,17 @@
           "effects": {
             "Grappled": {
               "name": "受擒",
-              "description": "<p>若你的生物体型不超过中型，则被双爪之一擒抱，你陷入  &amp;Reference[Grappled apply=false] 状态（逃脱DC [[/check ability=str skill=ath format=long]]）。</p>"
+              "description": "<p>若你的生物体型不超过中型，则你被初生吸血鬼双爪之一擒抱，你陷入  &amp;Reference[Grappled apply=false] 状态（逃脱DC 13，[[/check ability=str skill=ath format=long]]）。</p>"
             }
           }
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=7mBlINHfcabm0DAr]], one creature within [[lookup @range.value activity=7mBlINHfcabm0DAr]] feet that is willing or that has the Grappled, Incapacitated, or Restrained condition. </p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage. The target’s Hit Point maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains Hit Points equal to that amount.</p>"
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=7mBlINHfcabm0DAr]]，单一 [[lookup @range.value activity=7mBlINHfcabm0DAr]] 尺内的自愿或陷入受擒、失能或束缚状态的生物。</p><p class=\"feature\"><em>失败：</em> [[/damage average]]伤害。目标的生命值上限减少等于其受到暗蚀伤害的数值，且吸血鬼恢复等量生命值。</p>"
         },
         "Deathless Agility": {
           "name": "不死者机敏",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] takes the &amp;Reference[Dash] or &amp;Reference[Disengage] action.</p>",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] 执行 &amp;Reference[Dash] 或 &amp;Reference[Disengage] 动作。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28145,14 +28145,14 @@
         },
         "Vampire Weakness": {
           "name": "吸血鬼弱点",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] has these weaknesses:</p><p class=\"feature-trait\"><strong>Forbiddance.</strong> The [[lookup @name lowercase]] can’t enter a residence without an invitation from an occupant.</p><p class=\"feature-trait\"><strong>Running Water.</strong> The [[lookup @name lowercase]] takes 20 Acid damage if it ends its turn in running water.</p><p class=\"feature-trait\"><strong>Stake to the Heart.</strong> The [[lookup @name lowercase]] is destroyed if a weapon that deals Piercing damage is driven into the [[lookup @name lowercase]]’s heart while the [[lookup @name lowercase]] has the Incapacitated condition.</p><p class=\"feature-trait\"><strong>Sunlight.</strong> The [[lookup @name lowercase]] takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 拥有以下弱点：</p><p class=\"feature-trait\"><strong>禁入。</strong> [[lookup @name lowercase]] 未得到一位居住者的邀请时无法进入相应的民宅。</p><p class=\"feature-trait\"><strong>流水。</strong> 若 [[lookup @name lowercase]] 在流水中结束回合，其受到[[/damage 20 type=acid]]伤害。</p><p class=\"feature-trait\"><strong>桩刺。</strong> [[lookup @name lowercase]] 位于其休眠地且陷入失能状态期间，若用一把造成穿刺伤害的武器钉入其心脏，其陷入麻痹状态直至该武器被移除。</p><p class=\"feature-trait\"><strong>日光 Sunlight.</strong> 若 [[lookup @name lowercase]] 在阳光下开始其回合，其受到[[/damage 20 type=radiant]]伤害。若其身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
           "activities": {
             "Damage: Running Water": {
               "name": "伤害：流水",
               "chatFlavor": "流水造成的伤害"
             },
             "Damage: Sunlight": {
-              "name": "伤害：日照",
+              "name": "伤害：日光",
               "chatFlavor": "日照造成的伤害"
             },
             "Staked to the Heart": {
@@ -28162,7 +28162,7 @@
           "effects": {
             "Disadv. Attacks & Checks": {
               "name": "劣势：攻击和检定",
-              "description": "<p><span style=\"font-family:'Roboto Condensed', sans-serif\">若其身处阳光下，其进行的属性检定和攻击检定具有劣势。 </span></p>"
+              "description": "<p>若你身处阳光下，你进行的属性检定和攻击检定具有劣势。</p>"
             }
           }
         }
@@ -28185,7 +28185,7 @@
         },
         "Shadow Escape": {
           "name": "幽影遁行",
-          "description": "<p class=\"feature\">若 [[lookup @name lowercase]]在其休眠地之外生命值降至0，其立即传送回其休眠地；但若此时吸血鬼身处阳光光下或流水中，则其将被摧毁。吸血鬼一旦返回其休眠地，其陷入 &amp;Reference[Paralyzed] 状态，持续1小时，其在此后恢复1生命值。</p>",
+          "description": "<p class=\"feature\">若 [[lookup @name lowercase]]在其休眠地之外生命值降至 0，其立即传送回其休眠地；但若此时吸血鬼身处阳光光下或流水中，则其将被摧毁。吸血鬼一旦返回其休眠地，其陷入 &amp;Reference[Paralyzed] 状态，持续 1 小时，其在此后恢复 1 生命值。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28194,13 +28194,13 @@
           "effects": {
             "Paralyzed": {
               "name": "麻痹",
-              "description": "<p>吸血鬼陷入 &amp;Reference[Paralyzed apply=false] 状态，持续1小时，其在此后恢复1生命值。</p>"
+              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态 1 小时，并在此后恢复 1 点生命值</p>"
             }
           }
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 使用 [[/item .mmGraveStrike000]] 或 [[/item .mmSickeningRay00]] 共计两次攻击。</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .mmGraveStrike000]] 或 [[/item .mmSickeningRay00]] 发动共计两次攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28213,21 +28213,21 @@
         },
         "Sickening Ray": {
           "name": "灾疫射线",
-          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]，且目标陷入 &amp;Reference[Poisoned apply=false]状态直至[[lookup @name lowercase]]的下个回合开始。</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]，且目标陷入&Reference[Poisoned apply=false] 状态直至 [[lookup @name lowcase]] 的下一回合开始。</p>",
           "effects": {
             "Poisoned": {
               "name": "中毒",
-              "description": "<p>你陷入 &Reference[Poisoned apply=false] 状态直至吸血鬼的下一回合开始。</p>"
+              "description": "<p>你陷入 &Reference[Poisoned apply=false] 状态直至吸血鬼暗影尊主的下一回合开始。</p>"
             }
           }
         },
         "Hunger of Hadar": {
           "name": "哈达之欲",
-          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHungerofHa]</em> （5环版本），无需法术成分并使用魅力作为施法属性（法术豁免DC [[lookup @abilities.cha.dc]]）。</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHungerofHa]</em>（5 环版本），无需法术成分并使用魅力作为施法属性（法术豁免DC [[lookup @abilities.cha.dc]]）。</p>"
         },
         "NhHw43UmTDY3KiJ3": {
           "name": "哈达之欲",
-          "description": "<p>你打开了通往遥远国度的大门，展现其中难以名状的恐怖。以施法距离内一点为中心，一个半径 20 尺的 &Reference[Darkness] 球状区域显现并持续至该法术终止。这个球状区域是 &Reference[DifficultTerrain]，并同时发散着能在30尺内听到的不谐耳语和啜嚼噪音。任何光照，魔法或其他手段的，都无法照亮这个区域，而完全进入该区域内的生物将陷入 &Reference[Blinded] 状态。</p><p>任何在区域内开始其回合的生物将受到 2d6 点冷冻伤害。任何在区域内结束其回合的生物必须进行一次敏捷豁免，豁免失败者将因异界软体触手的触碰而受到 2d6 点强酸伤害。</p><p><strong>升环施法：</strong>使用四环或更高法术位施展该法术时，你使用的法术位每比三环高一环，造成的寒冷或者强酸伤害（由你选择）就增加1d6。</p>",
+          "description": "<p>你打开了通往遥远国度的大门，展现其中难以名状的恐怖。以施法距离内一点为中心，一个半径 20 尺的 &Reference[Darkness] 球状区域显现并持续至该法术终止。这个球状区域是 &Reference[DifficultTerrain]，并同时发散着能在 30 尺内听到的不谐耳语和啜嚼噪音。任何光照，魔法或其他手段的，都无法照亮这个区域，而完全进入该区域内的生物将陷入 &Reference[Blinded] 状态。</p><p>任何在区域内开始其回合的生物将受到 2d6 点冷冻伤害。任何在区域内结束其回合的生物必须进行一次敏捷豁免，豁免失败者将因异界软体触手的触碰而受到 2d6 点强酸伤害。</p><p><strong>升环施法：</strong>使用四环或更高法术位施展该法术时，你使用的法术位每比三环高一环，造成的寒冷或者强酸伤害（由你选择）就增加1d6。</p>",
           "activities": {
             "Open Gateway": {
               "name": "打开大门"
@@ -28247,7 +28247,7 @@
         },
         "Sanguine Drain": {
           "name": "猩红征收",
-          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=zw4GduIbxRyUVb1Y]], one [[lookup @target.affects.type activity=zw4GduIbxRyUVb1Y]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=zw4GduIbxRyUVb1Y]] [[lookup @range.units activity=zw4GduIbxRyUVb1Y]]. [[lookup @target.affects.special activity=zw4GduIbxRyUVb1Y]].</p><p><em>Failure:</em> [[/damage average]] damage. The target’s Hit Point maximum decreases by an amount equal to the damage taken, and the [[lookup @name lowercase]] regains Hit Points equal to that amount.</p>",
+          "description": "<p class=\"feature\"><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=zw4GduIbxRyUVb1Y]]，单一 [[lookup @range.value activity=zw4GduIbxRyUVb1Y]] 尺内 [[lookup @name lowercase]] 可见的非构装非亡灵生物。</p><p><em>失败：</em>[[/damage average]]伤害。目标的生命值上限减少等于其受到暗蚀伤害的数值，且[[lookup @name lowercase]]恢复等量的生命值。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -28256,7 +28256,7 @@
         },
         "Beguile": {
           "name": "诱骗",
-          "description": "<p> [[lookup @name lowercase]] 施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]</em>，无需法术成分并使用魅力作为施法属性（法术豁免 DC [[lookup @abilities.cha.dc]]）。  [[lookup @name lowercase]] 直至其下个回合开始都无法再执行此动作。</p>"
+          "description": "<p> [[lookup @name lowercase]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]</em>，无需法术成分并使用魅力作为施法属性（法术豁免 DC [[lookup @abilities.cha.dc]]）。[[lookup @name lowercase]] 直至其下一回合开始都无法再执行此动作。</p>"
         },
         "Command": {
           "name": "命令术",
@@ -28278,14 +28278,14 @@
         },
         "Vampire Weakness": {
           "name": "吸血鬼弱点",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] has these weaknesses:</p><p class=\"feature-trait\"><strong>Forbiddance.</strong> The [[lookup @name lowercase]] can’t enter a residence without an invitation from an occupant.</p><p class=\"feature-trait\"><strong>Running Water.</strong> The [[lookup @name lowercase]] takes 20 Acid damage if it ends its turn in running water.</p><p class=\"feature-trait\"><strong>Stake to the Heart.</strong> The [[lookup @name lowercase]] is destroyed if a weapon that deals Piercing damage is driven into the [[lookup @name lowercase]]’s heart while the [[lookup @name lowercase]] has the Incapacitated condition.</p><p class=\"feature-trait\"><strong>Sunlight.</strong> The [[lookup @name lowercase]] takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 拥有以下弱点：</p><p class=\"feature-trait\"><strong>禁入。</strong> [[lookup @name lowercase]] 未得到一位居住者的邀请时无法进入相应的民宅。</p><p class=\"feature-trait\"><strong>流水。</strong> 若 [[lookup @name lowercase]] 在流水中结束回合，其受到[[/damage 20 type=acid]]伤害。</p><p class=\"feature-trait\"><strong>桩刺。</strong> [[lookup @name lowercase]] 位于其休眠地且陷入失能状态期间，若用一把造成穿刺伤害的武器钉入其心脏，其陷入麻痹状态直至该武器被移除。</p><p class=\"feature-trait\"><strong>日光 Sunlight.</strong> 若 [[lookup @name lowercase]] 在阳光下开始其回合，其受到[[/damage 20 type=radiant]]伤害。若其身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
           "activities": {
             "Damage: Running Water": {
               "name": "伤害：流水",
               "chatFlavor": "流水造成的伤害"
             },
             "Damage: Sunlight": {
-              "name": "伤害：日照",
+              "name": "伤害：日光",
               "chatFlavor": "日照造成的伤害"
             },
             "Staked to the Heart": {
@@ -28294,8 +28294,8 @@
           },
           "effects": {
             "Disadv. Attacks & Checks": {
-              "name": "劣势. 攻击和检定",
-              "description": "<p><span style=\"font-family:'Roboto Condensed', sans-serif\">若其身处阳光下，其进行的属性检定和攻击检定具有劣势。 </span></p>"
+              "name": "劣势：攻击和检定",
+              "description": "<p>若你身处阳光下，你进行的属性检定和攻击检定具有劣势。</p>"
             }
           }
         }
@@ -28482,7 +28482,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Beak": {
           "name": "喙啄",
@@ -28590,47 +28590,47 @@
           },
           "effects": {
             "+4 AC": {
-              "name": "+4 AC",
-              "description": "<p>The target adds 4 to its AC against that attack, possibly causing it to miss.</p>"
+              "name": "AC+4",
+              "description": "<p>武将令其对抗那次攻击的AC+4，可能令那次攻击改为失手。</p>"
             }
           }
         }
       }
     },
     "Warrior Infantry": {
-      "name": "Warrior Infantry",
-      "tokenName": "Warrior Infantry",
-      "description": "<h1>Warriors</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.3Il3CvacAVpf6Rch caption=false cite=false classes=\"no-embed mm\"]</p><h2>Warrior Infantry</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Tg6q9tEwUMz6alIf caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "新晋武者",
+      "tokenName": "新晋武者",
+      "description": "<h1>新晋武者</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.3Il3CvacAVpf6Rch caption=false cite=false classes=\"no-embed mm\"]</p><h2>新晋武者</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Tg6q9tEwUMz6alIf caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Spear": {
-          "name": "Spear",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "矛",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         }
       }
     },
     "Warrior Veteran": {
-      "name": "Warrior Veteran",
-      "tokenName": "Warrior Veteran",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepGreatsword]{Greatsword}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepHeavyCross]{Heavy Crossbow}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbarmSplintArmo]{Splint Armor}</p></div><h1>Warriors</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.3Il3CvacAVpf6Rch caption=false cite=false classes=\"no-embed mm\"]</p><h2>Warrior Veteran</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Dqm3ro7bU8A7sM4B caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "历战武者",
+      "tokenName": "历战武者",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepGreatsword]{巨剑}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepHeavyCross]{重弩}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbarmSplintArmo]{Splint Armor}</p></div><h1>武者</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.3Il3CvacAVpf6Rch caption=false cite=false classes=\"no-embed mm\"]</p><h2>历战武者</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.Dqm3ro7bU8A7sM4B caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Greatsword": {
-          "name": "Greatsword",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "巨剑",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Heavy Crossbow": {
-          "name": "Heavy Crossbow",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "重弩",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Splint Armor": {
-          "name": "Splint Armor"
+          "name": "板条甲"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .KkRkIIhD17sL5x30]] or [[/item .0nNkeR6HNC1e2uQ3]] attacks.</p>",
+          "description": "<p> [[lookup @name lowercase]] 发动两次 [[/item .KkRkIIhD17sL5x30]] 或 [[/item .0nNkeR6HNC1e2uQ3]]攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28729,12 +28729,12 @@
           "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]), and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>",
           "activities": {
             "Escape Check": {
-              "name": "Escape Check"
+              "name": "逃脱检定"
             }
           },
           "effects": {
             "Grappled & Restrained": {
-              "name": "Grappled & Restrained",
+              "name": "受擒并束缚",
               "description": "<p>If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC), and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>"
             }
           }
@@ -28747,27 +28747,27 @@
       "items": {
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
     "Werebear": {
       "name": "熊人",
       "tokenName": "熊人",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepHandaxe000]{Handaxes (4)}</p></div><h1>Werebear</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.EMwFy85pB2e6pWOI caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepHandaxe000]{手斧(4)}</p></div><h1>熊人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.EMwFy85pB2e6pWOI caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Handaxe (Humanoid or Hybrid Form Only)": {
-          "name": "Handaxe (Humanoid or Hybrid Form Only)",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>",
+          "name": "手斧（仅人类与混合形态）",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>",
           "activities": {
             "attack": {
-              "condition": "Humanoid or Hybrid Form Only"
+              "condition": "仅人类与混合形态"
             }
           }
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two attacks, using [[/item .JIRP6xpVCOyZotXc]]{Handaxe} or [[/item .mmRend0000000000]]{Rend} in any combination. It can replace one attack with a [[/item .mmBite0000000000]]{Bite} attack.</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用[[/item .JIRP6xpVCOyZotXc]] 或 [[/item .mmRend0000000000]] 发动共计两次攻击。其可以将其中一次攻击替换为一次 [[/item .mmBite0000000000]]攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28775,14 +28775,14 @@
           }
         },
         "Bite (Bear or Hybrid Form Only)": {
-          "name": "Bite (Bear or Hybrid Form Only)",
+          "name": "啃咬（仅熊与混合形态）",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=q7leyHRdAkccDyqG]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWerebear000000]{Werebear}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s' curse for 24 hours.</p>",
           "activities": {
             "attack": {
-              "condition": "Bear or Hybrid Form Only"
+              "condition": "仅熊与混合形态"
             },
             "Become Werebear": {
-              "name": "Become Werebear"
+              "name": "变身熊人"
             }
           },
           "effects": {
@@ -28793,11 +28793,11 @@
           }
         },
         "Rend (Bear or Hybrid Form Only)": {
-          "name": "Rend (Bear or Hybrid Form Only)",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>",
+          "name": "撕裂（仅熊与混合形态）",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>",
           "activities": {
             "attack": {
-              "condition": "Bear or Hybrid Form Only"
+              "condition": "仅熊与混合形态"
             }
           }
         },
@@ -28824,7 +28824,7 @@
       "items": {
         "Javelin (Humanoid or Hybrid Form Only)": {
           "name": "Javelin (Humanoid or Hybrid Form Only)",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -28843,7 +28843,7 @@
               "name": "攻击"
             },
             "Become Wereboar": {
-              "name": "Become Wereboar"
+              "name": "变身野猪人"
             }
           },
           "effects": {
@@ -28896,7 +28896,7 @@
       "items": {
         "Hand Crossbow (Humanoid or Hybrid Form Only)": {
           "name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -28912,19 +28912,19 @@
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=HAz6jK7w7zFU77Wk]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWererat0000000]{Wererat}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s' curse for 24 hours.</p>",
           "activities": {
             "Become Wererat": {
-              "name": "Become Wererat"
+              "name": "变身鼠人"
             }
           },
           "effects": {
             "Cursed": {
               "name": "诅咒",
-              "description": "<p>The target is cursed if they fail their save.</p>"
+              "description": "<p>豁免失败目标被诅咒。</p>"
             }
           }
         },
         "Scratch": {
           "name": "抓挠",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Shape-Shift": {
           "name": "变形",
@@ -28938,13 +28938,13 @@
       }
     },
     "Weretiger": {
-      "name": "Weretiger",
-      "tokenName": "Weretiger",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepLongbow000]{Longbow}</p></div><h1>Weretiger</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1BWrTscJDUOd8yLf caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "虎人",
+      "tokenName": "虎人",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepLongbow000]{长弓}</p></div><h1>虎人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1BWrTscJDUOd8yLf caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Longbow (Humanoid or Hybrid Form Only)": {
-          "name": "Longbow (Humanoid or Hybrid Form Only)",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "长弓（仅人类与混合形态）",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -28956,23 +28956,23 @@
           }
         },
         "Bite (Tiger or Hybrid Form Only)": {
-          "name": "Bite (Tiger or Hybrid Form Only)",
+          "name": "啃咬（仅虎与混合形态）",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=jgkWL5fxyqrDPr4D]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWeretiger00000]{Weretiger}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s' curse for 24 hours.</p>",
           "activities": {
             "Become Weretiger": {
-              "name": "Become Weretiger"
+              "name": "变身虎人"
             }
           },
           "effects": {
             "Cursed": {
               "name": "诅咒",
-              "description": "<p>The target is cursed if they fail their saving throw.</p>"
+              "description": "<p>豁免检定失败目标被诅咒。</p>"
             }
           }
         },
         "Scratch": {
           "name": "抓挠",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Shape-Shift": {
           "name": "变形",
@@ -28984,7 +28984,7 @@
           }
         },
         "Prowl (Tiger or Hybrid Form Only)": {
-          "name": "Prowl (Tiger or Hybrid Form Only)",
+          "name": "抓挠（仅虎与混合形态）",
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] moves up to its Speed without provoking &amp;Reference[OpportunityAttacks]. At the end of this movement, the [[lookup @name lowercase]] can take the &amp;Reference[Hide apply=false] action.</p>",
           "activities": {
             "Expend Use": {
@@ -28995,17 +28995,17 @@
       }
     },
     "Werewolf": {
-      "name": "Werewolf",
-      "tokenName": "Werewolf",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepLongbow000]{Longbow}</p></div><h1>Werewolf</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.NPEN2rieeOcDlnvo caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "狼人",
+      "tokenName": "狼人",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepLongbow000]{长弓}</p></div><h1>狼人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.NPEN2rieeOcDlnvo caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Longbow": {
-          "name": "Longbow",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "长弓",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -29017,23 +29017,23 @@
           }
         },
         "Bite (Wolf or Hybrid Form Only)": {
-          "name": "Bite (Wolf or Hybrid Form Only)",
+          "name": "啃咬（仅狼与混合形态）",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=GBKhdBPogHNssDIa]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWerewolf000000]{Werewolf}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s curse for 24 hours.</p>",
           "activities": {
             "Become Werewolf": {
-              "name": "Become Werewolf"
+              "name": "变身狼人"
             }
           },
           "effects": {
             "Cursed": {
               "name": "诅咒",
-              "description": "<p>The target is cursed if they fail their save.</p>"
+              "description": "<p>豁免失败目标被诅咒。</p>"
             }
           }
         },
         "Scratch": {
           "name": "抓挠",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Shape-Shift": {
           "name": "变形",
@@ -29045,16 +29045,16 @@
           },
           "effects": {
             "Speed: Wolf Form": {
-              "name": "Speed: Wolf Form"
+              "name": "速度：狼形态"
             }
           }
         }
       }
     },
     "White Dragon Wyrmling": {
-      "name": "White Dragon Wyrmling",
-      "tokenName": "White Dragon Wyrmling",
-      "description": "<h1>White Dragons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.BLKyHDLfoZP7Tm9h caption=false cite=false classes=\"no-embed mm\"]</p><h2>White Dragon Wyrmling</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.EELGWO5bZ7HjIhjY caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "白龙雏龙",
+      "tokenName": "白龙雏龙",
+      "description": "<h1>白龙</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.BLKyHDLfoZP7Tm9h caption=false cite=false classes=\"no-embed mm\"]</p><h2>白龙雏龙</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.EELGWO5bZ7HjIhjY caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Ice Walk": {
           "name": "冰上行走",
@@ -29062,11 +29062,11 @@
         },
         "Rend": {
           "name": "撕裂",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmRend0000000000]] attacks.</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmRend0000000000]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -29082,7 +29082,7 @@
     "Wight": {
       "name": "尸妖",
       "tokenName": "尸妖",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbarmStuddedLea]{Studded Leather Armor}</p></div><h1>Wight</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.hnXwwafu4pEdSzWv caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbarmStuddedLea]{镶钉皮甲}</p></div><h1>尸妖</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.hnXwwafu4pEdSzWv caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Studded Leather Armor": {
           "name": "镶钉皮甲"
@@ -29102,42 +29102,42 @@
         },
         "Necrotic Sword": {
           "name": "死灵剑",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Life Drain": {
           "name": "吸取生命",
           "description": "<p class=\"feature\"><em><strong>Life Drain.</strong></em></p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=FA4Mt9cXsYfHDDcs]], one [[lookup @target.affects.type activity=FA4Mt9cXsYfHDDcs]] within [[lookup @range.value activity=FA4Mt9cXsYfHDDcs]] feet.</p><p><em>Failure:</em> [[/damage average]] damage, and the target’s Hit Point maximum decreases by an amount equal to the damage taken.</p><p class=\"feature\">A Humanoid slain by this attack rises 24 hours later as a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmZombie00000000]{Zombie}</strong> under the [[lookup @name lowercase]]’s control, unless the Humanoid is restored to life or its body is destroyed. The [[lookup @name lowercase]] can have no more than twelve zombies under its control at a time.</p>",
           "activities": {
             "Zombie Rises": {
-              "name": "Zombie Rises"
+              "name": "唤起僵尸"
             }
           }
         },
         "Necrotic Bow": {
-          "name": "Necrotic Bow",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "死灵弓",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
     "Will-o'-Wisp": {
       "name": "鬼火",
       "tokenName": "鬼火",
-      "description": "<h1>Will-o’-Wisp</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.wspNxVE4KofrKKnm caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>鬼火</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.wspNxVE4KofrKKnm caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Ephemeral": {
           "name": "Ephemeral",
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] can’t wear or carry anything.</p>"
         },
         "Illumination": {
-          "name": "Illumination",
-          "description": "<p>The [[lookup @name lowercase]] sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.</p>"
+          "name": "照明",
+          "description": "<p>[[lookup @name lowercase]] 散发出半径 20 尺的明亮光照以及额外 20 尺的微光光照。</p>"
         },
         "Incorporeal Movement": {
-          "name": "Incorporeal Movement",
-          "description": "<p>The [[lookup @name lowercase]] can move through other creatures and objects as if they were &amp;Reference[Difficult Terrain]. It takes [[/damage 1d10 average type=force]] damage if it ends its turn inside an object.</p>"
+          "name": "虚体移动",
+          "description": "<p>[[lookup @name lowercase]] 可以如同穿过 &Reference[Difficult Terrain]一样穿过其他生物和物件。如果它在自己的回合结束时仍处在物件内部则受到[[/damage 1d10 average type=force]] 伤害。</p>"
         },
         "Vanish": {
-          "name": "Vanish",
+          "name": "消失",
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] and its light have the &amp;Reference[Invisible apply=false] condition until the [[lookup @name lowercase]]'s &amp;Reference[Concentration] ends on this effect, which ends early immediately after the [[lookup @name lowercase]] makes an attack roll or uses Consume Life.</p>",
           "activities": {
             "Expend Use": {
@@ -29146,74 +29146,74 @@
           },
           "effects": {
             "Invisible": {
-              "name": "Invisible",
-              "description": "<p>The attacking creature and its light have the &amp;Reference[Invisible apply=false] condition until their Concentration ends on this effect, which ends early immediately after the wisp makes an attack roll or uses the Consume Life bonus action.</p>"
+              "name": "隐形",
+              "description": "<p>你及你的光照获得 &Reference[Invisible apply=false] 状态直至专注终止，该效应会在发动攻击或使用附赠动作后立即结束。</p>"
             }
           }
         },
         "Consume Life": {
-          "name": "Consume Life",
+          "name": "摄食生命",
           "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=1Hy8CdhpwQlLxDPq]], [[lookup @target.affects.special activity=1Hy8CdhpwQlLxDPq]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=1Hy8CdhpwQlLxDPq]] feet. that has 0 Hit Points.</p><p><em>Failure:</em> The target dies, and the [[lookup @name lowercase]] regains [[/healing average activity=1waYTjY3NAIGZgrI]].</p>",
           "activities": {
             "Save": {
               "name": "豁免"
             },
             "Wisp: Healing": {
-              "name": "Wisp: Healing"
+              "name": "鬼火：治疗"
             }
           },
           "effects": {
             "Failure: Dead": {
-              "name": "Failure: Dead",
+              "name": "失败：死亡",
               "description": "<p>The target dies if the creature that is at 0 Hit Points fails a Constitution save.</p>"
             }
           }
         },
         "Shock": {
-          "name": "Shock",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "电击",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
     },
     "Winged Kobold": {
-      "name": "Winged Kobold",
-      "tokenName": "Winged Kobold",
-      "description": "<h1>Kobolds</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.NC8c3St0SoWBP6K8 caption=false cite=false classes=\"no-embed mm\"]</p><h2>Winged Kobold</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.4kl1kLxpIC5DtwUH caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "带翼狗头人",
+      "tokenName": "带翼狗头人",
+      "description": "<h1>狗头人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.NC8c3St0SoWBP6K8 caption=false cite=false classes=\"no-embed mm\"]</p><h2>带翼狗头人</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.4kl1kLxpIC5DtwUH caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
           "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Dragon-Tooth Blade": {
-          "name": "Dragon-Tooth Blade",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
+          "name": "龙牙之刃",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Chromatic Spittle": {
-          "name": "Chromatic Spittle",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]] (type chosen by the [[lookup @name lowercase]]).</p>"
+          "name": "繁彩飞沫",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]] （伤害类型由狗头人选择 [[lookup @name lowercase]]）。</p>"
         }
       }
     },
     "Winter Wolf": {
       "name": "冬狼",
       "tokenName": "冬狼",
-      "description": "<h1>Winter Wolf</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.TtpEEuyn9BgZnkxH caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>冬狼</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.TtpEEuyn9BgZnkxH caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过大型，则其陷入 &Reference[Prone apply=false] 状态。</p>",
           "effects": {
             "Prone": {
               "name": "倒地",
-              "description": "<p>If the target is a Large or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>"
+              "description": "<p class=\"feature\">若你的体型不超过大型，则你陷入 &Reference[Prone apply=false] 状态。</p>"
             }
           }
         },
@@ -29229,15 +29229,15 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]，若目标生物体型不超过中型，则其陷入 &Reference[Prone apply=false] 状态。</p>",
           "effects": {
             "Prone": {
               "name": "倒地",
-              "description": "<p>If the target is a Medium or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>"
+              "description": "<p>若你的生物体型不超过中型，则你陷入 &Reference[Prone apply=false] 状态。</p>"
             }
           }
         }
@@ -29246,18 +29246,18 @@
     "Worg": {
       "name": "座狼",
       "tokenName": "座狼",
-      "description": "<h1>Worgs</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.9wPwyBWpNGzAL7yb caption=false cite=false classes=\"no-embed mm\"]</p><h2>Worg</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.KQj16GboSsgX6Jhe caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>座狼</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.9wPwyBWpNGzAL7yb caption=false cite=false classes=\"no-embed mm\"]</p><h2>座狼</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.KQj16GboSsgX6Jhe caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the next attack roll made against the target before the start of the [[lookup @name lowercase]]’s next turn has Advantage.</p>"
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]， 且在[[lookup @name lowercase]]的下个回合开始前，对目标进行的下次攻击检定具有优势。</p>"
         }
       }
     },
     "Wraith": {
       "name": "邪灵",
       "tokenName": "邪灵",
-      "description": "<h1>Wraith</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.MjPLUclFHalyuLor caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>邪灵</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.MjPLUclFHalyuLor caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Incorporeal Movement": {
           "name": "虚体移动",
