@@ -28318,7 +28318,7 @@
       "items": {
         "Constricting Vine": {
           "name": "藤蔓绞缠",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Until the grapple ends, the target takes [[/damage average activity=7voODpkc7vuuouqM]] damage at the start of each of its turns, and the [[lookup @name lowercase]] can’t make Constricting Vine attacks.</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。若目标生物体型不超过大型，则其陷入 &amp;Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。 目标在其回合开始时受到[[/damage average activity=7voODpkc7vuuouqM]] 伤害，且 [[lookup @name lowercase]] 无法再发动藤蔓绞缠攻击，直至擒抱结束。</p>",
           "activities": {
             "Damage: Grappled": {
               "name": "伤害：擒抱"
@@ -28333,7 +28333,7 @@
         },
         "Entangling Plants": {
           "name": "植物缠绕",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEntangle00]</em> spell, using Constitution as the spellcasting ability (spell save DC [[lookup @abilities.con.dc]]).</p>"
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEntangle00]</em> 使用体质作为施法属性（法术豁免DC [[lookup @abilities.con.dc]]）。</p>"
         },
         "Entangle": {
           "name": "纠缠术",
@@ -28341,7 +28341,7 @@
           "effects": {
             "Restrained": {
               "name": "束缚",
-              "description": "<p>A Restrained creature can take an action to make a [[/check ability=str skill=ath]] check against your spell save DC. On a success, it frees itself from the grasping plants and is no longer Restrained by them.</p>"
+              "description": "<p>陷入束缚的生物可以用其动作进行一次 [[/check ability=str skill=ath dc=@attributes.spelldc]] 检定对抗该法术的豁免DC。检定成功则成功摆脱缠绕在其身上的藤蔓并不再被其束缚。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -28405,7 +28405,7 @@
         },
         "Absorb Body": {
           "name": "吞吃躯体",
-          "description": "<p><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=YqWqaRXxaKFCH6P8]], one [[lookup @target.affects.special activity=YqWqaRXxaKFCH6P8]] [[lookup @target.affects.type activity=YqWqaRXxaKFCH6P8]] the [[lookup @name lowercase]] can see within 5 feet.</p><p><em>Failure:</em> The target is pulled into the [[lookup @name lowercase]]'s space and becomes grafted to its body. The [[lookup @name lowercase]] can have only one target grafted at a time.</p><p>While grafted, the target has the &amp;Reference[Restrained apply=false] condition and Disadvantage on Constitution saving throws. When the [[lookup @name lowercase]] moves, the grafted target moves with it. If [[lookup @activation.condition activity=KXQbdk3TH6uZex2L]], its body is destroyed, and the [[lookup @name lowercase]] regains [[lookup @healing.formula activity=KXQbdk3TH6uZex2L]] Hit Points.</p><p>The grafted target or a creature within 5 feet of the [[lookup @name lowercase]] can take an action to make a [[/check ability=str skill=ath dc=@abilities.str.dc format=long]]. On a successful check, the target is no longer grafted and moves to an unoccupied space within 5 feet of the [[lookup @name lowercase]].</p>",
+          "description": "<p><em>力量豁免检定:</em> DC [[lookup @save.dc.value activity=YqWqaRXxaKFCH6P8]], 单一[[lookup @target.affects.special activity=YqWqaRXxaKFCH6P8]] [[lookup @target.affects.type activity=YqWqaRXxaKFCH6P8]]且[[lookup @name lowercase]]可见的生物。</p><p><em>失败:</em>目标被拉入[[lookup @name lowercase]]所在的空间并被嫁接到尸聚怪身上。[[lookup @name lowercase]]同时能嫁接的生物数上限为一。</p><p>被嫁接期间,目标陷入 &Reference[Restrained apply=false]状态且其进行的体质豁免具有劣势。当[[lookup @name lowercase]]移动时, 被嫁接目标也将一并移动。如果[[lookup @activation.condition activity=KXQbdk3TH6uZex2L]],其遗体将被摧毁，且 [[lookup @name lowercase]]恢复 [[lookup @healing.formula activity=KXQbdk3TH6uZex2L]]生命值。</p><p>被嫁接目标自身或位于[[lookup @name lowercase]] 5尺内的生物，都能够以动作进行一次 [[/check ability=str skill=ath dc=@abilities.str.dc format=long]]。检定成功则目标不再被嫁接，并移动至[[lookup @name lowercase]]5尺内的一处未占据空间。</p>",
           "activities": {
             "heal": {
               "condition": "若目标在被嫁接期间死亡"
@@ -28414,7 +28414,7 @@
           "effects": {
             "Grafted: Con Saves and Restrained": {
               "name": "嫁接：体质豁免并束缚。",
-              "description": "<p>While grafted, the target has the &amp;Reference[Restrained apply=false] condition and Disadvantage on Constitution saving throws.</p><p>The grafted target or a creature within 5 feet of the grafter can take an action to make a [[/check ability=str skill=ath format=long]] (see source item for DC). On a successful check, the target is no longer grafted and moves to an unoccupied space within 5 feet of the grafter.</p>"
+              "description": "<p>被嫁接期间，目标陷入束缚 状态且其进行的体质豁免具有劣势。</p><p>被嫁接目标自身或位于尸聚怪5尺内的生物，都能够以动作进行一次[[/check ability=str skill=ath format=long]] (DC值参考源物品)。 检定成功则目标不再被嫁接，并移动至尸聚怪5尺内的一处未占据空间。 </p>"
             }
           }
         }
@@ -28470,7 +28470,7 @@
           "effects": {
             "Stunned": {
               "name": "震慑",
-              "description": "<p>The target has the &amp;Reference[Stunned apply=false]] condition until the end of the vrock’s next turn.</p>"
+              "description": "<p>且目标陷入 &amp;Reference[Stunned apply=false]] 状态，直至鹫魔的下个回合结束。</p>"
             }
           }
         }
@@ -28518,7 +28518,7 @@
       "items": {
         "Hooves": {
           "name": "蹄击",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature and the skeleton moved 20+ feet straight toward it immediately before the hit, the target has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。如果骷髅在此次攻击前立即向着目标直线移动了20+尺， 且目标生物体型不超过大型，则目标陷入&Reference[Prone apply=false]状态。</p>",
           "activities": {
             "Moving Attack": {
               "name": "移动攻击"
@@ -28543,14 +28543,14 @@
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. The [[lookup @name lowercase]] also creates one of the following effects:</p><p class=\"feature-trait\"><em><strong>Sap</strong></em>. The target has Disadvantage on its next attack roll before the start of the [[lookup @name lowercase]]'s' next turn.</p><p class=\"feature-trait\"><em><strong>Maneuver</strong></em>. One ally who can see or hear the [[lookup @name lowercase]] can take a &amp;Reference[Reaction apply=false]{Reaction} to move up to half the ally’s Speed without provoking &amp;Reference[OpportunityAttacks].</p>",
           "effects": {
             "Disadvantage": {
-              "name": "Disadvantage",
-              "description": "<p>The target has Disadvantage on its next attack roll before the start of the attacking creaturer’s next turn.</p>"
+              "name": "劣势",
+              "description": "<p>至武将的下个回合开始，目标的下次攻击检定具有劣势。</p>"
             }
           }
         },
         "Longbow": {
-          "name": "Longbow",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target’s Speed decreases by 10 feet until the end of the target’s next turn.</p>",
+          "name": "长弓",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]，且目标的速度降低10尺直至其下个回合结束。</p>",
           "effects": {
             "Speed: -10 ft.": {
               "name": "速度降低 10 尺",
@@ -28572,7 +28572,7 @@
         },
         "Tactical Charge": {
           "name": "战术突进",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] moves up to half its Speed straight toward an enemy it can see without provoking &amp;Reference[OpportunityAttacks].</p>",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 向一名其可见的敌人直线移动至多等于其速度一半的距离&amp;Reference[OpportunityAttacks]。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28580,12 +28580,12 @@
           }
         },
         "Counterattack": {
-          "name": "Counterattack",
-          "description": "<p class=\"feature\"><em>Trigger</em>: The [[lookup @name lowercase]] is hit by an attack roll.</p><p class=\"feature\"><em>Response:</em> The [[lookup @name lowercase]] adds 4 to its AC against that attack, possibly causing it to miss. On a miss, the [[lookup @name lowercase]] can make one [[/item .cWEx0aUNtgAiphWk]] or [[/item .UYIXz9iBOnpRuR1H]]Longbow attack against the attacker.</p><section class=\"secret\" id=\"secret-r0XEblGuDiHl5cWo\"><p><strong>Foundry Note</strong></p><p>This feature also provides an <strong>Active Effect (AE)</strong> that will modify this creature's <strong>Armor Class</strong> when you utilize the reaction. You can enable the AE in the effects tab of the character sheet.</p></section>",
+          "name": "反制攻击",
+          "description": "<p class=\"feature\"><em>触发</em>： [[lookup @name lowercase]] 被一次攻击检定命中。</p><p class=\"feature\"><em>响应：</em> [[lookup @name lowercase]]令其对抗那次攻击的AC+4，可能令那次攻击改为失手。若那次攻击失手，则 [[lookup @name lowercase]] 可以对攻击者发动一次 [[/item .cWEx0aUNtgAiphWk]]或 [[/item .UYIXz9iBOnpRuR1H]]攻击。</p><section class=\"secret\" id=\"secret-r0XEblGuDiHl5cWo\"><p><strong>Foundry Note</strong></p><p>特性还提供了一个<strong>激活效应（AE） </strong>当你使用反应时，其会改变此生物的 <strong>护甲等级</strong> 。你可以在角色卡的“效应”选项卡中启用该效应。</p></section>",
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "condition": "The warrior is hit by an attack roll"
+              "condition": "武者被一次攻击检定命中"
             }
           },
           "effects": {
@@ -28638,13 +28638,13 @@
           }
         },
         "Parry": {
-          "name": "Parry",
-          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]] to its AC against that attack, possibly causing it to miss.</p>",
+          "name": "格挡",
+          "description": "<p><em>触发：</em> [[lookup @name lowercase]] [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗该次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令该次攻击失手）。</p>",
           "activities": {
             "Use": {
               "name": "使用",
-              "roll": "Bonus AC",
-              "condition": "hit by a melee attack roll while holding a weapon"
+              "roll": "AC加值",
+              "condition": "被一次近战攻击检定命中（此时需持用武器）"
             }
           }
         }
@@ -28653,11 +28653,11 @@
     "Water Elemental": {
       "name": "水元素",
       "tokenName": "水元素",
-      "description": "<h1>Water Elemental</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.4bNusptShch1Vxm9 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>水元素</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.4bNusptShch1Vxm9 caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Freeze": {
           "name": "冻结",
-          "description": "<p class=\"feature\">If the [[lookup @name lowercase]] takes Cold damage, its Speed decreases by 20 feet until the end of its next turn.</p>",
+          "description": "<p class=\"feature\">若[[lookup @name lowercase]] 受到寒冷伤害，其速度降低20尺，直至其下个回合结束。</p>",
           "activities": {
             "Use": {
               "name": "使用",
@@ -28666,18 +28666,18 @@
           },
           "effects": {
             "Speed: -20 ft.": {
-              "name": "Speed: -20 ft.",
-              "description": "<p>If the attacking creature takes Cold damage, its Speed decreases by 20 feet until the end of its next turn.</p>"
+              "name": "速度降低 20 尺",
+              "description": "<p>若水元素受到寒冷伤害，其速度降低20尺，直至其下个回合结束。</p>"
             }
           }
         },
         "Water Form": {
           "name": "流水形态",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can enter an enemy’s space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so.</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 可以进入并停留在一名生物所处的空间。其可以移动穿过最窄1寸宽的空间而无需消耗额外的移动力。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmSlam0000000000]] attacks.</p>",
+          "description": "<p> [[lookup @name lowercase]] 发动两次 [[/item .mmSlam0000000000]]攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -28686,7 +28686,7 @@
         },
         "Slam": {
           "name": "猛击",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Prone] condition.</p>"
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。若目标生物体型不超过大型，则其陷入 &amp;Reference[Prone] 状态。</p>"
         },
         "Whelm": {
           "name": "淹没",
@@ -28705,7 +28705,7 @@
           "effects": {
             "Grappled & Restrained": {
               "name": "擒抱并束缚",
-              "description": "<p>If the target is a Large or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (see source item for the escape DC). Until the grapple ends, the target has the &amp;Reference[Restrained apply=false] condition, is &amp;Reference[Suffocating]{suffocating} unless it can breathe water, and takes damage (see source for damage) at the start of each of the attacking creature's turns.</p>"
+              "description": "<p>若目标生物体型不超过大型，则其陷入 &Reference[Grappled apply=false] 状态 （逃脱DC见来源条目）. 直至擒抱结束，目标陷入 &Reference[Restrained apply=false] 状态,，目标 &Reference[Suffocating]{窒息} 除非其能在水中呼吸，且目标在每个攻击生物的回合开始时受到伤害（伤害值见来源条目）。</p>"
             }
           }
         }
@@ -28714,19 +28714,19 @@
     "Water Weird": {
       "name": "水诡",
       "tokenName": "水诡",
-      "description": "<h1>Water Weird</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.hXIUJSLqt2xdkd3a caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<h1>水诡</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.hXIUJSLqt2xdkd3a caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Water Bound": {
           "name": "水体绑定",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] dies if it leaves the water to which it is bound or if that water is destroyed.</p>"
+          "description": "<p class=\"feature\">若 [[lookup @name lowercase]] 离开了那处水体或是那处水体被摧毁，水诡死亡。</p>"
         },
         "Invisible in Water": {
-          "name": "Invisible in Water",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] has the &amp;Reference[Invisible] condition while fully immersed in water.</p>"
+          "name": "水融一体",
+          "description": "<p class=\"feature\"> 若完全浸入水中，[[lookup @name lowercase]] 处于 &amp;Reference[Invisible]状态。</p>"
         },
         "Surge": {
-          "name": "Surge",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]), and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>",
+          "name": "浪涌",
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。若目标生物体型不超过中型，则其陷入 &amp;Reference[Grappled apply=false]状态（逃脱 DC [[lookup @skills.ath.passive]]），且目标陷入 &amp;Reference[Restrained apply=false] 状态，直至擒抱结束。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -28735,7 +28735,7 @@
           "effects": {
             "Grappled & Restrained": {
               "name": "受擒并束缚",
-              "description": "<p>If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC), and it has the &amp;Reference[Restrained apply=false] condition until the grapple ends.</p>"
+              "description": "<p>若目标生物体型不超过中型，则其陷入 &amp;Reference[Grappled apply=false]状态（逃脱 DC [[lookup @skills.ath.passive]]），且目标陷入 &amp;Reference[Restrained apply=false] 状态，直至擒抱结束。</p>"
             }
           }
         }
@@ -28788,7 +28788,7 @@
           "effects": {
             "Cursed": {
               "name": "诅咒",
-              "description": "<p>The target is &amp;Reference[cursed apply=false] if they fail their saving throw.</p>"
+              "description": "<p>目标被 &amp;Reference[cursed apply=false]，如果豁免检定失败。</p>"
             }
           }
         },
@@ -28803,7 +28803,7 @@
         },
         "Shape-Shift": {
           "name": "变形",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] shape-shifts into a Large bear-humanoid hybrid form or a Large bear, or it returns to its true humanoid form, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.</p><section class=\"secret\" id=\"secret-sXqQQUhRZU9Efayl\"><p><strong>Foundry Note</strong></p><p>This feature also provides an <strong>Active Effect (AE)</strong> that will modify this creature's speed in bear form. You can enable the AE in the effects tab of the character sheet.</p></section>",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 变形为类人与熊的混合形态（大型），或变回其真实的人形态。除体型以外，其各形态下游戏数据均相同。熊人着装或携带的任何装备都不会随之变化。</p><section class=\"secret\" id=\"secret-sXqQQUhRZU9Efayl\"><p><strong>Foundry Note</strong></p><p>该特性还提供了一个<strong>激活效应 （AE）</strong> 这将会改变熊形态下的速度，你可以在角色卡的“效应”选项卡中启用该效应。</p></section>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28823,7 +28823,7 @@
       "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepJavelin000]{Javelins (6)}</p></div><h1>Wereboar</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.sYgETXS9CrfFfM2w caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Javelin (Humanoid or Hybrid Form Only)": {
-          "name": "Javelin (Humanoid or Hybrid Form Only)",
+          "name": "标枪（仅人类与混合形态）",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
@@ -28836,7 +28836,7 @@
           }
         },
         "Gore  (Boar or Hybrid Form Only)": {
-          "name": "Gore  (Boar or Hybrid Form Only)",
+          "name": "顶撞（仅野猪与混合形态）",
           "description": "<p>[[/attack extended]]. [[/damage extended average]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=lS5miercc4WPdVfN]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWereboar000000]{Wereboar}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s curse for 24 hours.</p>",
           "activities": {
             "Attack": {
@@ -28849,7 +28849,7 @@
           "effects": {
             "Cursed": {
               "name": "诅咒",
-              "description": "<p>The target is &amp;Reference[cursed apply=false] if they fail their saving throw.</p>"
+              "description": "<p>目标被 &amp;Reference[cursed apply=false]，如果豁免检定失败。</p>"
             }
           }
         },
@@ -28859,11 +28859,11 @@
           "activities": {
             "Attack": {
               "name": "攻击",
-              "chatFlavor": "Boar or Hybrid Form Only"
+              "chatFlavor": "仅野猪与混合形态"
             },
             "Moving Attack": {
-              "name": "Moving Attack",
-              "condition": "Boar or Hybrid Form Only"
+              "name": "移动攻击",
+              "condition": "仅野猪与混合形态"
             }
           },
           "effects": {
@@ -28875,7 +28875,7 @@
         },
         "Shape-Shift": {
           "name": "变形",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] shape-shifts into a Medium boar-humanoid hybrid form or a Medium boar, or it returns to its true humanoid form, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.</p>",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]]变形为类人与猪的混合形态（中型），或野猪形态（小型），或变回其真实的类人形态。除体型以外，其各形态下游戏数据均相同。野猪人着装或携带的任何装备都不会随之变化。 </p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28883,7 +28883,7 @@
           },
           "effects": {
             "Speed: Boar Form": {
-              "name": "Speed: Boar Form"
+              "name": "速度：野猪形态"
             }
           }
         }
@@ -28895,7 +28895,7 @@
       "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepHandCrossb]{Hand Crossbow}</p></div><h1>Wererat</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.UqcZ61TWxqASvJRi caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Hand Crossbow (Humanoid or Hybrid Form Only)": {
-          "name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+          "name": "手弩（仅人类与混合形态）",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
@@ -28908,7 +28908,7 @@
           }
         },
         "Bite (Rat or Hybrid Form Only)": {
-          "name": "Bite (Rat or Hybrid Form Only)",
+          "name": "啃咬（仅鼠与混合形态）",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=HAz6jK7w7zFU77Wk]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWererat0000000]{Wererat}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s' curse for 24 hours.</p>",
           "activities": {
             "Become Wererat": {
@@ -28928,7 +28928,7 @@
         },
         "Shape-Shift": {
           "name": "变形",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] shape-shifts into a Medium rat-humanoid hybrid form or a Small rat, or it returns to its true humanoid form, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.</p>",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]]变形为类人与鼠的混合形态（中型），或鼠形态（小型），或变回其真实的类人形态。除体型以外，其各形态下游戏数据均相同。鼠人着装或携带的任何装备都不会随之变化。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28976,7 +28976,7 @@
         },
         "Shape-Shift": {
           "name": "变形",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] shape-shifts into a Large tiger-humanoid hybrid form or a Large tiger, or it returns to its true humanoid form, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.</p>",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 变形为类人与虎的混合形态（大型），或虎形态（大型），或变回其真实的类人形态。除体型以外，其各形态下游戏数据均相同。虎人着装或携带的任何装备都不会随之变化。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -29037,7 +29037,7 @@
         },
         "Shape-Shift": {
           "name": "变形",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] shape-shifts into a Large wolf-humanoid hybrid form or a Medium wolf, or it returns to its true humanoid form, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.</p>",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 变形为类人与狼的混合形态（大型），或狼形态（中型），或变回其真实的类人形态。除体型以外，其各形态下游戏数据均相同。狼人着装或携带的任何装备都不会随之变化。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -29125,8 +29125,8 @@
       "description": "<h1>鬼火</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.wspNxVE4KofrKKnm caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Ephemeral": {
-          "name": "Ephemeral",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can’t wear or carry anything.</p>"
+          "name": "转瞬即逝",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 无法着装或携带任何东西。</p>"
         },
         "Illumination": {
           "name": "照明",
@@ -29165,7 +29165,7 @@
           "effects": {
             "Failure: Dead": {
               "name": "失败：死亡",
-              "description": "<p>The target dies if the creature that is at 0 Hit Points fails a Constitution save.</p>"
+              "description": "<p>生命值为0的生物若体质豁免失败则目标死亡</p>"
             }
           }
         },
