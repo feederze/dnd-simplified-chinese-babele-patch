@@ -28390,7 +28390,7 @@
         },
         "Spore Bomb": {
           "name": "蕈孢炸弹",
-          "description": "<p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=cmFbJQhqZiLBF9Ij]], each [[lookup @target.affects.type activity=cmFbJQhqZiLBF9Ij]] in a [[lookup @target.template.size activity=cmFbJQhqZiLBF9Ij]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]] can see within [[lookup @range.value activity=cmFbJQhqZiLBF9Ij]] feet]. </p><p><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]'s next turn. While Poisoned, the target can’t regain Hit Points. </p><p><em>Success:</em> Half damage only.</p>",
+          "description": "<p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=cmFbJQhqZiLBF9Ij]]， 以 [[lookup @range.value activity=cmFbJQhqZiLBF9Ij]] 尺内 [[lookup @name lowercase]] 可见一点为中心，半径 [[lookup @target.template.size activity=cmFbJQhqZiLBF9Ij]]尺球状区域内的每名生物。 </p><p><em>失败：</em> [[/damage average]] 伤害，且目标陷入 &amp;Reference[Poisoned apply=false] 状态，持续至 [[lookup @name lowercase]] 的下个回合开始。中毒期间，目标无法恢复生命值。</p><p><em>成功：</em> 仅半伤。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -28421,9 +28421,9 @@
       }
     },
     "Vrock": {
-      "name": "弗洛魔",
-      "tokenName": "弗洛魔",
-      "description": "<h1>弗洛魔</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.yqpU1D8Hjb3YzIHu caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "name": "鹫魔",
+      "tokenName": "鹫魔",
+      "description": "<h1>鹫魔</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.yqpU1D8Hjb3YzIHu caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
@@ -28448,7 +28448,7 @@
         },
         "Spores": {
           "name": "孢子",
-          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=voqQeTnihpy3BTFf]], each creature in a [[lookup @target.template.size activity=voqQeTnihpy3BTFf]]-foot Emanation originating from the [[lookup @name lowercase]].</p><p class=\"feature\"><em>Failure:</em> The target has the &amp;Reference[Poisoned apply=false] condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. While Poisoned, the target takes [[/damage average activity=ukZveNVmvvtwbDj0]] at the start of each of its turns. Emptying a flask of Holy Water on the target ends the effect early.</p>",
+          "description": "<p class=\"feature\"><em>体质豁免：</em> DC [[lookup @save.dc.value activity=voqQeTnihpy3BTFf]]，源自 [[lookup @name lowercase]] 的 [[lookup @target.template.size activity=voqQeTnihpy3BTFf]] 尺光环区域内的每名生物。</p><p class=\"feature\"><em>失败：</em> 目标陷入 &amp;Reference[Poisoned apply=false] 状态，并在其回合结束重复豁免，成功则终止其身上的该效应。 中毒期间，目标在其回合开始时受到 [[/damage average activity=ukZveNVmvvtwbDj0]] 伤害。向目标泼洒一瓶圣水将提前终止该效应。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -28466,7 +28466,7 @@
         },
         "Stunning Screech": {
           "name": "震慑尖啸",
-          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=eoIikvnPayaj02oN]], each creature in a [[lookup @target.template.size activity=eoIikvnPayaj02oN]]-foot Emanation originating from the [[lookup @name lowercase]] (demons succeed automatically).</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Stunned apply=false] condition until the end of the [[lookup @name lowercase]]’s next turn.</p>",
+          "description": "<p class=\"feature\"><em>体质豁免：</em> DC [[lookup @save.dc.value activity=eoIikvnPayaj02oN]]，源自 [[lookup @name lowercase]] 的 [[lookup @target.template.size activity=eoIikvnPayaj02oN]] 尺光环区域内的每名生物（此豁免恶魔自动成功）。</p><p class=\"feature\"><em>失败：</em> [[/damage average]]伤害，且目标陷入 &amp;Reference[Stunned apply=false] 状态，直至 [[lookup @name lowercase]] 的下个回合结束。</p>",
           "effects": {
             "Stunned": {
               "name": "震慑",
@@ -28496,7 +28496,7 @@
       "items": {
         "Hooves": {
           "name": "蹄击",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature and the horse moved 20+ feet straight toward it immediately before the hit, the target takes an extra 5 (2d4) Bludgeoning damage and has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。 若 [[lookup @name lowercase]] 在此次攻击前立即向着该目标直线移动了至少 20 尺，则其额外受到5（2d4）钝击伤害，若目标体型不超过巨型，则其还会陷入 &Reference[prone] 状态。</p>",
           "activities": {
             "Moving Attack": {
               "name": "移动攻击"
@@ -28540,7 +28540,7 @@
       "items": {
         "Greatsword": {
           "name": "巨剑",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. The [[lookup @name lowercase]] also creates one of the following effects:</p><p class=\"feature-trait\"><em><strong>Sap</strong></em>. The target has Disadvantage on its next attack roll before the start of the [[lookup @name lowercase]]'s' next turn.</p><p class=\"feature-trait\"><em><strong>Maneuver</strong></em>. One ally who can see or hear the [[lookup @name lowercase]] can take a &amp;Reference[Reaction apply=false]{Reaction} to move up to half the ally’s Speed without provoking &amp;Reference[OpportunityAttacks].</p>",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。[[lookup @name lowercase]] 还将造成下列效应之一：</p><p class=\"feature-trait\"><em><strong>削弱</strong></em>。 直至 [[lookup @name lowercase]] 的下个回合开始，目标的下次攻击检定具有劣势。</p><p class=\"feature-trait\"><em><strong>机动</strong></em>。 一名能看见或听见 [[lookup @name lowercase]] 的盟友能以其 &amp;Reference[Reaction apply=false] 移动至多等于其速度一半的距离且不会引发 &amp;Reference[OpportunityAttacks]。</p>",
           "effects": {
             "Disadvantage": {
               "name": "劣势",
@@ -28690,7 +28690,7 @@
         },
         "Whelm": {
           "name": "淹没",
-          "description": "<p class=\"feature\"><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=TQchFj2VXXJgU7Lq]], each [[lookup @target.affects.type activity=TQchFj2VXXJgU7Lq]] in the [[lookup @name lowercase]]’s space.</p><p class=\"feature\"><em>Failure:</em> [[/damage average activity=TQchFj2VXXJgU7Lq]] damage. If the target is a Large or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Until the grapple ends, the target has the &amp;Reference[Restrained apply=false] condition, is &amp;Reference[suffocating]{suffocating} unless it can breathe water, and takes [[/damage average activity=khxVwH3AB0sx1qRG]] damage at the start of each of the [[lookup @name lowercase]]'s turns. The [[lookup @name lowercase]] can grapple one Large creature or up to two Medium or smaller creatures at a time with Whelm.</p><p class=\"feature\">As an action, a creature within 5 feet of the [[lookup @name lowercase]] can pull a creature out of it by succeeding on a [[/check ath dc=@skills.ath.passive format=long]].</p><p class=\"feature\"><em>Success:</em> Half damage only.</p>",
+          "description": "<p class=\"feature\"><em>力量豁免检定：</em> DC [[lookup @save.dc.value activity=TQchFj2VXXJgU7Lq]]， 位于 [[lookup @name lowercase]] 空间内的每名生物。 </p><p class=\"feature\"><em>失败：</em> [[/damage average activity=TQchFj2VXXJgU7Lq]] 伤害， 若目标生物体型不超过大型，则其陷入 &amp;Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]] ）。直至擒抱结束，目标陷入 &amp;Reference[Restrained apply=false] 状态，目标 &amp;Reference[suffocating] 除非其能在水中呼吸，且目标在 [[lookup @name lowercase]] 的回合开始时受到 [[/damage average activity=khxVwH3AB0sx1qRG]] 伤害。 [[lookup @name lowercase]] 同时能通过淹没擒抱的大型生物数上限为一，若生物不超过中型则上限为二。</p><p class=\"feature\">以一个动作， [[lookup @name lowercase]] 5尺内的生物可以通过一次成功的 [[/check ath dc=@skills.ath.passive format=long]]将一名生物拉出来。</p><p class=\"feature\"><em>成功：</em> 仅半伤。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -28776,7 +28776,7 @@
         },
         "Bite (Bear or Hybrid Form Only)": {
           "name": "啃咬（仅熊与混合形态）",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=q7leyHRdAkccDyqG]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWerebear000000]{Werebear}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s' curse for 24 hours.</p>",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。 若目标是类人生物，则其承受以下效应。</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=q7leyHRdAkccDyqG]]。</p><p><em>失败：</em> 目标被诅咒。若被诅咒目标的生命值降至0，作为代替，该生物具有10生命值，且变成受DM控制的一只 <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWerebear000000]</strong>。</p><p><em>成功：</em> 目标在24小时内免疫此 [[lookup @name lowercase]] 的诅咒。</p>",
           "activities": {
             "attack": {
               "condition": "仅熊与混合形态"
@@ -28820,7 +28820,7 @@
     "Wereboar": {
       "name": "野猪人",
       "tokenName": "野猪人",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepJavelin000]{Javelins (6)}</p></div><h1>Wereboar</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.sYgETXS9CrfFfM2w caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepJavelin000]{标枪 (6)}</p></div><h1>野猪人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.sYgETXS9CrfFfM2w caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Javelin (Humanoid or Hybrid Form Only)": {
           "name": "标枪（仅人类与混合形态）",
@@ -28828,7 +28828,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two attacks, using [[/item .hhfnX7eT1ZFun8oQ]]{Javelin} or [[/item .mmTusk0000000000]]{Tusk} in any combination. It can replace one attack with a [[/item .mmGore0000000000]]{Gore} attack.</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .hhfnX7eT1ZFun8oQ]] 或 [[/item .mmTusk0000000000]] 发动共计两次攻击。 其可以将其中一次攻击替换为一次 [[/item .mmGore0000000000]]攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28837,7 +28837,7 @@
         },
         "Gore  (Boar or Hybrid Form Only)": {
           "name": "顶撞（仅野猪与混合形态）",
-          "description": "<p>[[/attack extended]]. [[/damage extended average]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=lS5miercc4WPdVfN]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWereboar000000]{Wereboar}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s curse for 24 hours.</p>",
+          "description": "<p>[[/attack extended]]。 [[/damage extended average]]。若目标是类人生物，则其承受以下效应。</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=lS5miercc4WPdVfN]]。</p><p><em>失败：</em> 目标被诅咒。若被诅咒目标的生命值降至0，作为代替，该生物具有10生命值，且变成受DM控制的一只 <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWereboar000000]</strong> 。</p><p><em>成功：</em> 目标在24小时内免疫此 [[lookup @name lowercase]] 的诅咒。</p>",
           "activities": {
             "Attack": {
               "name": "攻击"
@@ -28855,7 +28855,7 @@
         },
         "Tusk (Boar or Hybrid Form Only)": {
           "name": "獠牙（仅野猪与混合形态）",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature and the [[lookup @name lowercase]] moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 (2d6)<span class=\"Apple-converted-space\"> </span>damage and has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。 若 [[lookup @name lowercase]] 在此次攻击前立即向着目标直线移动了 20+ 尺且目标生物体型不超过中型，则目标额外受到 7 (2d6)<span class=\"Apple-converted-space\"> </span>穿刺伤害并陷入 &amp;Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Attack": {
               "name": "攻击",
@@ -28892,7 +28892,7 @@
     "Wererat": {
       "name": "鼠人",
       "tokenName": "鼠人",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepHandCrossb]{Hand Crossbow}</p></div><h1>Wererat</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.UqcZ61TWxqASvJRi caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepHandCrossb]{手弩}</p></div><h1>鼠人</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.UqcZ61TWxqASvJRi caption=false cite=false classes=\"no-embed mm\"]</p>",
       "items": {
         "Hand Crossbow (Humanoid or Hybrid Form Only)": {
           "name": "手弩（仅人类与混合形态）",
@@ -28900,7 +28900,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] makes two attacks, using [[/item .mmScratch0000000]]{Scratch} or [[/item .hd3JZprvOwTX7QK1]]{Hand Crossbow} in any combination. It can replace one attack with a [[/item .mmBite0000000000]]{Bite} attack.</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 使用 [[/item .mmScratch0000000]] 或 [[/item .hd3JZprvOwTX7QK1]] 发动共计两次攻击。其可以将其中一次攻击替换为一次 [[/item .mmBite0000000000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28909,7 +28909,7 @@
         },
         "Bite (Rat or Hybrid Form Only)": {
           "name": "啃咬（仅鼠与混合形态）",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=HAz6jK7w7zFU77Wk]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWererat0000000]{Wererat}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s' curse for 24 hours.</p>",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。 若目标是类人生物，则其承受以下效应。</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=HAz6jK7w7zFU77Wk]]。</p><p><em>失败：</em> 目标被诅咒。若被诅咒目标的生命值降至0，作为代替，该生物具有10生命值，且变成受DM控制的一只 <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWererat0000000]</strong> 。</p><p><em>成功：</em> 目标在24小时内免疫此 [[lookup @name lowercase]] 的诅咒。</p>",
           "activities": {
             "Become Wererat": {
               "name": "变身鼠人"
@@ -28948,7 +28948,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] two attacks, using [[/item .mmScratch0000000]]{Scratch} or [[/item .Spw5gbTlI2AKsGWd]]{Longbow} in any combination. It can replace one attack with a [[/item .mmBite0000000000]]{Bite} attack.</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .mmScratch0000000]] 或 [[/item .Spw5gbTlI2AKsGWd]] 发动共计两次攻击。 其可以将其中一次攻击替换为一次[[/item .mmBite0000000000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -28957,7 +28957,7 @@
         },
         "Bite (Tiger or Hybrid Form Only)": {
           "name": "啃咬（仅虎与混合形态）",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=jgkWL5fxyqrDPr4D]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWeretiger00000]{Weretiger}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s' curse for 24 hours.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标是类人生物，则其受到下述效应。</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=jgkWL5fxyqrDPr4D]]。</p><p><em>失败：</em>目标被诅咒。若被诅咒目标的生命值降至0，作为代替，该生物具有10生命值，且变成受DM控制的一只 <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWeretiger00000]</strong>。</p><p><em>成功：</em> 目标在24小时内免疫此 [[lookup @name lowercase]] 的诅咒。</p>",
           "activities": {
             "Become Weretiger": {
               "name": "变身虎人"
@@ -28985,7 +28985,7 @@
         },
         "Prowl (Tiger or Hybrid Form Only)": {
           "name": "抓挠（仅虎与混合形态）",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] moves up to its Speed without provoking &amp;Reference[OpportunityAttacks]. At the end of this movement, the [[lookup @name lowercase]] can take the &amp;Reference[Hide apply=false] action.</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 移动至多等于其速度一半的距离且不会引发 &amp;Reference[OpportunityAttacks]。 [[lookup @name lowercase]] 可以在此次移动结束时执行 &amp;Reference[Hide apply=false] 动作。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -29009,7 +29009,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two attacks, using  [[/item .mmScratch0000000]]{Scratch} or [[/item .mYM6o8kM9SDVm45w]]{Longbow} in any combination. It can replace one attack with a  [[/item .mmBite0000000000]]{Bite} attack.</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用  [[/item .mmScratch0000000]] 或 [[/item .mYM6o8kM9SDVm45w]] 发动共计两次攻击。其可以将其中一次攻击替换为一次  [[/item .mmBite0000000000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -29018,7 +29018,7 @@
         },
         "Bite (Wolf or Hybrid Form Only)": {
           "name": "啃咬（仅狼与混合形态）",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=GBKhdBPogHNssDIa]].</p><p><em>Failure:</em> The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWerewolf000000]{Werewolf}</strong> under the DM’s control and has 10 Hit Points.</p><p><em>Success:</em> The target is immune to this [[lookup @name lowercase]]'s curse for 24 hours.</p>",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。若目标是类人生物，则其承受以下效应。</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=GBKhdBPogHNssDIa]]。</p><p><em>失败：</em> 目标被诅咒。若被诅咒目标的生命值降至0，作为代替，该生物具有10生命值，且变成受DM控制的一只 <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmWerewolf000000]</strong> 。</p><p><em>成功：</em> 目标在24小时内免疫此 [[lookup @name lowercase]] 的诅咒。</p>",
           "activities": {
             "Become Werewolf": {
               "name": "变身狼人"
@@ -29093,7 +29093,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] makes two attacks, using [[/item .mmNecroticSword0]] or [[/item .mmNecroticBow000]] in any combination. It can replace one attack with a use of [[/item .mmLifeDrain00000]].</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 使用 [[/item .mmNecroticSword0]] 或 [[/item .mmNecroticBow000]] 发动攻击两次攻击。其可以将其中一次攻击替换为使用 [[/item .mmLifeDrain00000]] 。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -29106,7 +29106,7 @@
         },
         "Life Drain": {
           "name": "吸取生命",
-          "description": "<p class=\"feature\"><em><strong>Life Drain.</strong></em></p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=FA4Mt9cXsYfHDDcs]], one [[lookup @target.affects.type activity=FA4Mt9cXsYfHDDcs]] within [[lookup @range.value activity=FA4Mt9cXsYfHDDcs]] feet.</p><p><em>Failure:</em> [[/damage average]] damage, and the target’s Hit Point maximum decreases by an amount equal to the damage taken.</p><p class=\"feature\">A Humanoid slain by this attack rises 24 hours later as a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmZombie00000000]{Zombie}</strong> under the [[lookup @name lowercase]]’s control, unless the Humanoid is restored to life or its body is destroyed. The [[lookup @name lowercase]] can have no more than twelve zombies under its control at a time.</p>",
+          "description": "<p class=\"feature\"><em><strong>吸取生命。</strong></em></p><p><em>体质豁免：</em> DC [[lookup @save.dc.value activity=FA4Mt9cXsYfHDDcs]]，单一 [[lookup @range.value activity=FA4Mt9cXsYfHDDcs]] 尺内生物。 </p><p><em>失败：</em> [[/damage average]] 暗蚀伤害，目标的生命值上限减少等于其受到伤害的数值。被此攻击杀死的类人生物会在24小时后再活化为受 [[lookup @name lowercase]] 控制的 </p><p class=\"feature\">A Humanoid slain by this attack rises 24 hours later as a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmZombie00000000]</strong> 除非该生物被复活或其尸体被摧毁。 [[lookup @name lowercase]] 以此法同时能控制的丧尸数上限为十二。 </p>",
           "activities": {
             "Zombie Rises": {
               "name": "唤起僵尸"
@@ -29138,7 +29138,7 @@
         },
         "Vanish": {
           "name": "消失",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] and its light have the &amp;Reference[Invisible apply=false] condition until the [[lookup @name lowercase]]'s &amp;Reference[Concentration] ends on this effect, which ends early immediately after the [[lookup @name lowercase]] makes an attack roll or uses Consume Life.</p>",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 及其光照获得 &amp;Reference[Invisible apply=false] 状态，持续至其 &amp;Reference[Concentration] 终止。  &amp;Reference[Invisible apply=false] 状态在 [[lookup @name lowercase]] 发动攻击或使用摄食生命后立即结束。 </p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -29153,7 +29153,7 @@
         },
         "Consume Life": {
           "name": "摄食生命",
-          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=1Hy8CdhpwQlLxDPq]], [[lookup @target.affects.special activity=1Hy8CdhpwQlLxDPq]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=1Hy8CdhpwQlLxDPq]] feet. that has 0 Hit Points.</p><p><em>Failure:</em> The target dies, and the [[lookup @name lowercase]] regains [[/healing average activity=1waYTjY3NAIGZgrI]].</p>",
+          "description": "<p class=\"feature\"><em>体质豁免：</em> DC [[lookup @save.dc.value activity=1Hy8CdhpwQlLxDPq]]， 单一 [[lookup @range.value activity=1Hy8CdhpwQlLxDPq]] 尺内 [[lookup @name lowercase]] 可见的生命值为0的生物。 </p><p><em>失败：</em> 目标死亡， [[lookup @name lowercase]] 恢复10（3d6）生命值。</p>",
           "activities": {
             "Save": {
               "name": "豁免"

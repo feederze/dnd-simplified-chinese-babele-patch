@@ -801,7 +801,7 @@
     },
     "Charging Horn": {
       "name": "冲锋角击",
-      "description": "<p>The [[lookup @name lowercase]] moves up to half its Speed without provoking &amp;Reference[Opportunity Attacks], and it makes one [[/item Radiant Horn]] attack.</p>",
+      "description": "<p>[[lookup @name lowercase]]移动至多等于其速度一半的距离且不会引发 &amp;Reference[Opportunity Attacks]，并发动一次[[/item Radiant Horn]]攻击。</p>",
       "activities": {
         "Expend Use": {
           "name": "耗用"
@@ -810,7 +810,7 @@
     },
     "Charm": {
       "name": "魅惑",
-      "description": "<p>The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]</em>, requiring no spell components and using Charisma as the spellcasting ability (spell save DC [[lookup @abilities.cha.dc]]), and the duration is [[lookup @duration.value activity=fcRXSTOlFJShCl52]] hours. The &amp;Reference[Charmed apply=false] target is a willing recipient of the [[lookup @name lowercase]]'s [[/item Bite]], the damage of which doesn’t end the spell. When the spell ends, the target is unaware it was Charmed by the [[lookup @name lowercase]].</p>"
+      "description": "<p>[[lookup @name lowercase]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]</em>，无需法术成分并使用魅力作为施法属性（法术豁免DC [[lookup @abilities.cha.dc]]），且其持续时间变为 [[lookup @duration.value activity=fcRXSTOlFJShCl52]] 小时。以此被魅惑的生物即[[lookup @name lowercase]][[/item Bite]]的自愿目标，此时造成的伤害不会结束该法术。法术结束后，目标不会意识到自己被[[lookup @name lowercase]]魅惑过。</p>"
     },
     "Charming": {
       "name": "魅惑之音",
@@ -837,7 +837,7 @@
     },
     "Chilling Gaze": {
       "name": "寒颤凝视",
-      "description": "<p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=EREXmcv7YU7T9pj6]], one creature the [[lookup @name lowercase]] can see within [[lookup @range.value activity=EREXmcv7YU7T9pj6]] feet. <em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Paralyzed apply=false] condition until the start of the [[lookup @name lowercase]]'s next turn unless the target has Immunity to Cold damage. <em>Success:</em> The target is immune to the Chilling Gaze of all yetis (but not abominable yetis) for 1 hour.</p>",
+      "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=EREXmcv7YU7T9pj6]]，单一 [[lookup @range.value activity=EREXmcv7YU7T9pj6]] 尺内 [[lookup @name lowercase]] 可见的生物。 <em>失败：</em>[[/damage average]] 伤害，且目标陷入 &Reference[Paralyzed apply=false] 状态（除非目标对寒冷伤害免疫），直至 [[lookup @name lowercase]] 的下一回合开始。 <em>成功：</em>目标在 1 小时内免疫所有雪怪（除巨恶雪怪外）的寒颤凝视。</p>",
       "effects": {
         "Paralyzed": {
           "name": "麻痹",
@@ -860,7 +860,7 @@
     },
     "Cinder Breath": {
       "name": "燃烬吐息",
-      "description": "<p><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=tb7VfYTYKzOxuE5S]], one creature the [[lookup @name lowercase]] can see within [[lookup @range.value activity=tb7VfYTYKzOxuE5S]] feet. <em>Failure:</em> The target has the &amp;Reference[Blinded apply=false] condition until the end of the [[lookup @name lowercase]]'s next turn.</p>",
+      "description": "<p><em>敏捷豁免检定： </em>DC [[lookup @save.dc.value activity=tb7VfYTYKzOxuE5S]]，单一 [[lookup @range.value activity=tb7VfYTYKzOxuE5S]] 尺内 [[lookup @name lowcase]] 可见的生物。 <em>失败：</em>目标陷入 &Reference[Blinded apply=false] 状态，直至 [[lookup @name lowercase]]的下一回合结束。</p>",
       "effects": {
         "Blinded": {
           "name": "目盲",
@@ -942,7 +942,7 @@
     },
     "Confusing Gaze": {
       "name": "困惑凝视",
-      "description": "<p class=\"feature\"><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=tvHG0MEXOUVoCLuO]], each creature in a [[lookup @target.template.size activity=tvHG0MEXOUVoCLuO]]-foot Cone. <em>Failure:</em> The target can’t take &amp;Reference[Reaction] until the start of the [[lookup @name lowercase]]’s next turn, and the target rolls [[/r 1d8]] to determine what it does on its next turn:</p><p class=\"feature-trait\"><strong>1–4.</strong> The target does nothing.</p><p class=\"feature-trait\"><strong>5–6.</strong> The target takes no action or Bonus Action and uses all its movement to move in a random direction.</p><p class=\"feature-trait\"><strong>7–8.</strong> The target makes a melee attack against a random creature within its reach or does nothing if it can’t make such an attack.</p>",
+      "description": "<p class=\"feature\"><em>感知豁免检定：</em>DC [[lookup @save.dc.value activity=tvHG0MEXOUVoCLuO]]，[[lookup @target.template.size activity=tvHG0MEXOUVoCLuO]] 尺锥状区域内的所有生物。 <em>失败：</em>目标无法使用&Reference[Reaction]直至 [[lookup @name lowercase]] 的下一回合结束。此外，目标的下一回合中，其投掷 [[/r 1d8]] 来决定自己执行什么行动：</p><p class=\"feature-trait\"><strong>1–4.</strong> 目标什么都不做。</p><p class=\"feature-trait\"><strong>5–6.</strong> 目标无法执行动作或附赠动作，并消耗其全部移动力向一个随机方向移动。</p><p class=\"feature-trait\"><strong>7–8.</strong> 目标对其触及范围内随机一名生物发动一次近战攻击。若其无法发动此攻击，则什么都不做。</p>",
       "activities": {
         "Roll 1d8": {
           "name": "骰 1d8",
@@ -951,7 +951,7 @@
       },
       "effects": {
         "No Reaction": {
-          "name": "No Reaction"
+          "name": "无法反应"
         }
       }
     },
@@ -976,7 +976,7 @@
     },
     "Conjured Dragon’s Breath": {
       "name": "咒唤龙息",
-      "description": "<p class=\"feature\"><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=kONz26XFQN0nYcDS]], each [[lookup @target.affects.type activity=kONz26XFQN0nYcDS]] in a [[lookup @target.template.size activity=kONz26XFQN0nYcDS]]-[[lookup @target.template.units activity=kONz26XFQN0nYcDS]] Cone. <em>Failure:</em> [[/damage average]] damage. <em>Success:</em> Half damage.</p>",
+      "description": "<p class=\"feature\"><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=kONz26XFQN0nYcDS]]， [[lookup @target.template.size activity=kONz26XFQN0nYcDS]] 尺锥状区域内的所有生物。 <em>失败：</em>[[/damage average]]伤害。 <em>成功：</em>半伤。</p>",
       "activities": {
         "Save": {
           "name": "豁免"
@@ -1000,7 +1000,7 @@
     },
     "Constricting Vine": {
       "name": "藤蔓绞缠",
-      "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Until the grapple ends, the target takes [[/damage average activity=7voODpkc7vuuouqM]] damage at the start of each of its turns, and the [[lookup @name lowercase]] can’t make Constricting Vine attacks.</p>",
+      "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。若目标生物体型不超过大型，则其陷入 &amp;Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。 目标在其回合开始时受到[[/damage average activity=7voODpkc7vuuouqM]] 伤害，且 [[lookup @name lowercase]] 无法再发动藤蔓绞缠攻击，直至擒抱结束。</p>",
       "activities": {
         "Damage: Grappled": {
           "name": "伤害：擒抱"
@@ -1018,7 +1018,7 @@
     },
     "Consume Life": {
       "name": "摄食生命",
-      "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=1Hy8CdhpwQlLxDPq]], [[lookup @target.affects.special activity=1Hy8CdhpwQlLxDPq]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=1Hy8CdhpwQlLxDPq]] feet. that has 0 Hit Points. <em>Failure:</em> The target dies, and the [[lookup @name lowercase]] regains [[/healing average activity=1waYTjY3NAIGZgrI]].</p>",
+      "description": "<p class=\"feature\"><em>体质豁免：</em> DC [[lookup @save.dc.value activity=1Hy8CdhpwQlLxDPq]]， 单一 [[lookup @range.value activity=1Hy8CdhpwQlLxDPq]] 尺内 [[lookup @name lowercase]] 可见的生命值为0的生物。 <em>失败：</em> 目标死亡， [[lookup @name lowercase]] 恢复10（3d6）生命值。</p>",
       "activities": {
         "Save": {
           "name": "豁免"
@@ -1030,13 +1030,13 @@
       "effects": {
         "Failure: Dead": {
           "name": "失败：死亡",
-          "description": "<p>The target dies if the creature that is at 0 Hit Points fails a Constitution save.</p>"
+          "description": "<p>生命值为0的生物若体质豁免失败则目标死亡</p>"
         }
       }
     },
     "Consume Memories": {
       "name": "吞噬记忆",
-      "description": "<p class=\"feature\"><em>Intelligence Saving Throw:</em> DC [[lookup @save.dc.value activity=uI3HDQ1grN123Or3]], [[lookup @target.affects.labels.statblock activity=uI3HDQ1grN123Or3]] within [[lookup @range.value activity=uI3HDQ1grN123Or3]] feet. [[lookup @target.affects.special activity=uI3HDQ1grN123Or3]] by the [[lookup @name lowercase]]. <em>Failure:</em> [[/damage average]] damage. <em>Success:</em> [[lookup @damage.onSave capitalize activity=uI3HDQ1grN123Or3]] damage. <em>Failure or Success:</em> The [[lookup @name lowercase]] gains the target’s memories if the target is a Humanoid and is reduced to 0 Hit Points by this action.</p>",
+      "description": "<p class=\"feature\"><em>智力豁免检定：</em>DC [[lookup @save.dc.value activity=uI3HDQ1grN123Or3]]， 单一 [[lookup @range.value activity=uI3HDQ1grN123Or3]] 尺内被 [[lookup @name lowercase]] 魅惑或受擒的生物。 <em>失败：</em>[[/damage average]] 伤害。 <em>成功：</em>半伤。 <em>失败或成功：</em>若目标为类人且其生命值被该动作被降至 0，则 [[lookup @name lowercase]] 获得目标的记忆。</p>",
       "activities": {
         "Intelligence Saving Throw": {
           "name": "智力豁免检定"
