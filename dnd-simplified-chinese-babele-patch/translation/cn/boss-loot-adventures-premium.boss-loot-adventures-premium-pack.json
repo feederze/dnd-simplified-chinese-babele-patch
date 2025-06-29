@@ -495,94 +495,94 @@
       }
     },
     "The Soulbound Knight": {
-      "name": "The Soulbound Knight",
-      "description": "<p>This encounter unfolds in a forgotten crypt, an unholy place where a stone bridge spans a swirling pool of lost souls. Whispers echo through the air, carrying the voices of the trapped and the damned. The Soulbound Knight, an undead warrior bound to eternal servitude, wields a spectral glaive known as The Harvester. He uses ethereal manipulation and tormented souls to protect the crypt and its dark secrets. Beyond the bridge rises a formidable mausoleum, its massive stone doors guarding the secrets within.</p><p>As a reward, the players can obtain The Harvester, the powerful weapon imbued with ethereal energy wielded by the Soulbound Knight.</p><p>A journal is included, containing all the details of the encounter, lore, and tactical information.</p>",
-      "caption": "The Soulbound Knight Encounter",
+      "name": "魂缚骑士",
+      "description": "<p>该遭遇发生在一座被遗忘的地穴中——这是个不洁之地，石桥横跨着翻涌迷失灵魂的漩涡。空气中回荡着低语，夹杂着被困者和受诅者的呢喃。魂缚骑士，一位受永恒奴役诅咒的亡灵战士，挥舞着名为\"收割者\"的长柄刀。他操纵以太能量并驱使受折磨的灵魂守护墓穴及其黑暗秘密。石桥后方耸立着宏伟的陵墓，厚重的石门守卫着不尽秘密。</p><p>作为奖励，玩家可获得\"收割者\"——这把由魂缚骑士使用、灌注以太能量的强力武器。</p><p>模组包含日志条目，其中记录了遭遇的所有细节、背景故事与战术信息。</p>",
+      "caption": "魂缚骑士遭遇",
       "scenes": {
         "Forgotten Crypt": {
-          "name": "Forgotten Crypt",
+          "name": "被遗忘的地穴",
           "notes": {
-            "The Soulbound Knight Journal": "The Soulbound Knight Journal",
-            "Add  Remove See Invisibility on Token": "Add  Remove See Invisibility on Token"
+            "The Soulbound Knight Journal": "魂缚骑士日志",
+            "Add  Remove See Invisibility on Token": ""
           }
         }
       },
       "macros": {
         "blfx | Add/Remove 'See Invisibility' on Token": {
-          "name": "blfx | Add/Remove 'See Invisibility' on Token",
-          "command": "const MODULE_NAME = 'boss-loot-assets-premium';\nconst allTokens = canvas.scene.tokens; // TokenDocument\n\nif (game.system.id !== 'dnd5e') {\n  ui.notifications.warn('The macro works only for D&D 5e system!');\n  return;\n}\n\nif (!game.user.isGM) {\n  ui.notifications.warn('You do not have permission to use this macro!');\n  return;\n}\n\nif (!allTokens || allTokens.size < 1) {\n  ui.notifications.warn('There are no tokens on the map!', { console: false });\n  return;\n}\n\nconst isSequencerActive = game.modules.get('sequencer')?.active;\nconst isBlfxActive = game.modules.get('boss-loot-assets-premium')?.active;\n\nlet dialogContent = `\n  <label>Select one or multiple tokens to toggle <strong>See Invisibility.</strong></label>\n  <div style=\"display: flex; flex-direction: column; gap: 10px; margin-top: 10px;\">`;\n\n// Loop through tokens and add each one as a selectable checkbox.\nfor (const tokenDoc of allTokens.contents) {\n  const seeInvisibility = tokenDoc.detectionModes.some(obj => obj.id === 'seeInvisibility');\n  const visionEnabled = tokenDoc.sight.enabled;\n  const visionDisabledLabel = visionEnabled ? '' : '<span style=\"margin-left: 20px;\">(Vision Disabled)</span>';\n  dialogContent += `\n    <div style=\"display: flex; align-items: center; gap: 10px;\">\n      <img src=\"${tokenDoc.actor.img}\" width=\"48\" height=\"48\" style=\"border: none;\">\n      <label style=\"flex: 1;\">${tokenDoc.name} ${visionDisabledLabel}</label>\n      <input type=\"checkbox\" name=\"${tokenDoc.id}\" ${seeInvisibility ? 'checked' : ''} ${!visionEnabled ? 'disabled' : ''} />\n    </div>\n  `;\n}\n\ndialogContent += `</div>`;\n\nlet activeDialog = null;\nfunction closeOnSceneChange() {\n  if (activeDialog?.rendered) {\n    console.log('Scene changed. Closing the BLFX dialog.');\n    activeDialog.close();\n  }\n}\n\n// --------------------------------------------------------\n// DIALOG\n// --------------------------------------------------------\nfoundry.applications.api.DialogV2.wait({\n  window: { title: 'Boss Loot Toggle See Invisibility' },\n  form: { closeOnSubmit: false },\n  content: dialogContent,\n  position: { width: 450 },\n  rejectClose: false,\n\n  buttons: [\n    {\n      action: 'submit',\n      label: 'Submit',\n      default: true,\n      callback: async (event, button, dialogElement) => {\n        const data = new FormDataExtended(button.form).object;\n\n        await updateTokens(data);\n      },\n    },\n    {\n      action: 'close',\n      label: 'Close',\n      callback: (event, clickedButton, dialog) => {\n        activeDialog?.close();\n      },\n    },\n  ],\n\n  render: (event, dialogElement) => {\n    activeDialog = event.target;\n    Hooks.on('canvasReady', closeOnSceneChange);\n  },\n\n  close: (event, dialogInstance) => {\n    Hooks.off('canvasReady', closeOnSceneChange);\n  },\n});\n\nasync function playAnimation(tokenDoc) {\n  if (isSequencerActive && isBlfxActive) {\n    await new Sequence()\n      .effect()\n      .file('blfx.spell.cast.impact.electric.lightning3.color3')\n      .atLocation(tokenDoc)\n      .scaleToObject(1.5)\n      .play();\n  }\n}\n\nfunction toggleDetectionMode(detectionModes, toggleMode) {\n  const modeIndex = detectionModes.findIndex(mode => mode.id === toggleMode.id);\n\n  if (modeIndex !== -1) {\n    // Remove mode if already present\n    detectionModes.splice(modeIndex, 1);\n    return { detectionModes, toggled: false };\n  } else {\n    // Add mode if not present\n    detectionModes.push(toggleMode);\n    return { detectionModes, toggled: true };\n  }\n}\n\nasync function updateTokens(result) {\n  const updates = [];\n\n  const seeInvisibilityData = {\n    id: 'seeInvisibility',\n    enabled: true,\n    range: 60,\n  };\n  for (const [tokenId, checked] of Object.entries(result)) {\n    const tokenDoc = allTokens.get(tokenId);\n    if (!tokenDoc) continue;\n\n    const seeInvisibility = tokenDoc.detectionModes.some(obj => obj.id === 'seeInvisibility');\n    // Only update if there's an actual change\n    if (seeInvisibility !== checked) {\n      const detectionModesCopy = foundry.utils.deepClone(tokenDoc.detectionModes);\n      const { detectionModes: updatedModes, toggled } = toggleDetectionMode(detectionModesCopy, seeInvisibilityData);\n      updates.push({\n        _id: tokenId,\n        detectionModes: updatedModes,\n      });\n\n      await playAnimation(tokenDoc);\n    }\n  }\n\n  // Update\n  if (updates.length > 0) {\n    await canvas.scene.updateEmbeddedDocuments('Token', updates);\n    ui.notifications.info(`Updated ${updates.length} token(s) !`, { console: false });\n  }\n}"
+          "name": "",
+          "command": ""
         }
       },
       "actors": {
         "Soul Servant CR1/4": {
-          "name": "Soul Servant CR1/4",
-          "tokenName": "Soul Servant",
-          "description": "<p>Soul Servants are the remnants of tormented spirits bound to serve more powerful undead masters. They appear as small, ghostly lights that drift silently through the air. Their touch can unleash a powerful electrical and necrotic shock.</p>",
+          "name": "灵魂仆从 CR1/4",
+          "tokenName": "灵魂仆从",
+          "description": "<p>魂仆是受折磨灵魂的残留，被束缚以侍奉更强大的亡灵主人。它们呈现为小型鬼魅光芒，在空中无声飘荡。其接触可释放强力的电击与暗蚀冲击。</p>",
           "items": {
             "Ethereal Sight": {
-              "name": "Ethereal Sight",
-              "description": "<p>The Soul Servant can see <strong>60 ft.</strong> into the Ethereal Plane when it is on the Material Plane, and vice versa.</p>"
+              "name": "以太视界",
+              "description": "<p>灵魂仆从在物质位面时可以看见身边<strong> 60 尺 </strong>以太位面的景色，在以太位面时可以看见身边 60 尺内物质位面的景色。</p>"
             },
             "Ethereal Invisibility": {
-              "name": "Ethereal Invisibility",
-              "description": "<p><strong>Ethereal Invisibility.</strong> The Soul Servant is invisible until it makes an attack.</p>"
+              "name": "以太隐形",
+              "description": "<p><strong>以太隐形。</strong>灵魂仆从处于隐形状态直至其发动一次攻击。</p>"
             },
             "Incorporeal Movement": {
-              "name": "Incorporeal Movement",
-              "description": "<section class=\"secret\" id=\"secret-BmVoH80pBSHp6J7V\"><p>The Soul Servant can move through other creatures and objects as if they were difficult terrain.</p><p>It takes <strong>[[/roll 1d10]] </strong><em><strong>force damage</strong></em> if it ends its turn inside an object.</p></section><p>The Soul Servant can move through other creatures and objects as if they were difficult terrain.</p>"
+              "name": "虚体移动",
+              "description": "<section class=\"secret\" id=\"secret-BmVoH80pBSHp6J7V\"><p>灵魂仆从可以如同穿过困难地形一样穿过其他生物和物件。</p><p>如果它在自己的回合结束时仍处在物件内部则受到<strong> [[/roll 1d10]]</strong><em><strong>点力场伤害</strong></em>。</p></section><p>灵魂仆从可以如同穿过困难地形一样穿过其他生物和物件。</p>"
             },
             "Necrotic Shock": {
-              "name": "Necrotic Shock",
-              "description": "<p><strong>Necrotic Shock.</strong> <em>Melee Spell Attack:</em> +4 to hit, reach 5 ft., one creature. <em>Hit:</em> [[/roll 1d4]] lightning damage and [[/roll 1d4]] necrotic damage. If the target is wearing metal armor, it has disadvantage on the next attack roll or ability check it makes before the end of its next turn.</p>"
+              "name": "暗蚀冲击",
+              "description": "<p><strong>Necrotic Shock.</strong> <em>近战法术攻击：</em>命中 +4，触及 5 尺，单一目标。<em>命中：</em> [[/roll 1d4]] 点闪电伤害和 [[/roll 1d4]] 点暗蚀伤害。若目标穿戴金属护甲，则其下一次攻击检定或属性检定具有劣势，直至目标下一回合结束。</p>"
             },
             "Soul Rejuvenation": {
-              "name": "Soul Rejuvenation",
-              "description": "<p><strong>Soul Rejuvenation.</strong> When the Soul Servant is reduced to 0 hit points, the Soulbound Knight is healed with [[/r 5d8 + 20]] hit points.</p><p></p>",
+              "name": "灵魂复生",
+              "description": "<p><strong>灵魂复生。</strong>当灵魂仆从的生命值降为 0 时，魂缚骑士恢复 [[/r 5d8 + 20]] 点生命值。</p><p></p>",
               "activities": {
                 "heal": {
-                  "condition": "death"
+                  "condition": "死亡"
                 }
               }
             }
           }
         },
         "Soulbound Knight CR4": {
-          "name": "Soulbound Knight CR4",
-          "tokenName": "Soulbound Knight",
-          "description": "<h2><strong>The Soulbound Knight Quotes</strong></h2><blockquote><h3>Before the Battle:</h3><ol><li>\"You trespass upon sacred ground. None shall leave unscathed.\"</li><li>\"My soul is bound to this wretched place. You will join me in eternal suffering.\"</li><li>\"The lich's will commands me, and I must obey. Prepare to face oblivion.\"</li></ol><h3>During the Battle:</h3><ol><li>\"Your fate is sealed, as was mine.\"</li><li>\"You cannot escape the ethereal grasp!\"</li><li>\"Witness the power of the Harvester!\"</li><li>\"You will find no sanctuary here.\"</li><li>\"Your struggle is futile; my minions hunger for your soul.\"</li></ol><h3>When Using Phantom Strike:</h3><ol><li>\"Behold, the realm between life and death!\"</li><li>\"Feel the touch of the ethereal!\"</li><li>\"You will know the despair of the in-between.\"</li></ol><h3>When Healing from Soul Rejuvenation:</h3><ol><li>\"Your efforts are in vain; I am restored!\"</li><li>\"The more you fight, the stronger I become!\"</li><li>\"Their sacrifice grants me strength!\"</li></ol><h3>When Using Spirit Call:</h3><ol><li>\"Beware the haunting of the lost!\"</li><li>\"Their torment shall be your end!\"</li><li>\"Face the wrath of the forsaken souls!\"</li><li>\"The souls of the forgotten shall be your doom.\"</li><li>\"Embrace the despair of those who came before.\"</li></ol><h3>When Severely Wounded:</h3><ol><li>\"The darkness... it tightens its grip.\"</li><li>\"My end is near, but so is yours!\"</li></ol><h3>When Defeated:</h3><ol><li>\"Finally... release from this torment...\"</li><li>\"The curse... is lifted... at last.\"</li><li>\"In death... I find peace...\"</li></ol></blockquote>",
+          "name": "魂缚骑士 CR4",
+          "tokenName": "魂缚骑士",
+          "description": "<h2><strong>魂缚骑士语录</strong></h2><blockquote><h3>战前：</h3><ol><li>“你闯入了圣地。无人能全身而退。”</li><li>“我的灵魂被这悲惨之地束缚。你将与我一同陷入永恒的痛苦。”</li><li>“巫妖的意志命令我，我必须服从。准备迎接毁灭吧。”</li></ol><h3>战斗中：</h3><ol><li>“你们的命运已定，就像我的一样。”</li><li>“你无法逃脱亡者的掌控！”</li><li>“见证收割者的力量！”</li><li>“这里绝无庇护。”</li><li>“停下徒劳的挣扎吧；我的仆从们渴望你的灵魂。”</li></ol><h3>使用虚幻打击时：</h3><ol><li>“看啊，生与死之间的领域！”</li><li>“感受以太的触碰！”</li><li>“你会体验到夹缝中的绝望。”</li></ol><h3>使用灵魂复生治疗时：</h3><ol><li>“你的挣扎徒劳无功；我已然重新强大！”</li><li>“你越是挣扎，我就越强大！”</li><li>“他们的牺牲让我更加强大！”</li></ol><h3>使用灵魂召唤时：</h3><ol><li>“当心被遗忘的怨灵！”</li><li>“他们的折磨将是你的终结！”</li><li>“面对被遗忘灵魂的愤怒！”</li></ol></li><li>“被遗忘者的灵魂将是你的最终宿命。”</li><li>“拥抱前人的绝望吧。”</li></ol><h3>重伤时：</h3><ol><li>“黑暗……正收紧它的魔爪。”</li><li>“我的末日将至，但你的也不远了！”</li></ol><h3>战败时：</h3><ol><li>“终于……从这折磨中解脱了……”</li><li>“诅咒……终于……解除了……”</li><li>“在死亡中……我找到了安宁……”</li></ol></blockquote>",
           "items": {
             "Plate Armor": {
-              "name": "Plate Armor",
+              "name": "板甲",
               "description": "<p>板甲由覆盖全身，且相互连接的模铸金属板组成。一套板甲包括护手、重皮靴、一顶附面甲的头盔以及在护甲底层的厚重的布甲。其锁扣和皮带结构可以将护甲重量分配到身体各处。</p>"
             },
             "Multiattack": {
-              "name": "Multiattack",
-              "description": "<p>The Soulbound Knight makes two melee attacks with his glaive, The Harvester.</p>"
+              "name": "多重攻击",
+              "description": "<p>魂缚骑士使用其长柄刀”收割者“发动两次近战攻击。</p>"
             },
             "Ethereal Sight": {
-              "name": "Ethereal Sight",
-              "description": "<p>The Soulbound Knight can see <strong>60 ft.</strong> into the Ethereal Plane when it is on the Material Plane, and vice versa.</p>"
+              "name": "以太视界",
+              "description": "<p>魂缚骑士在物质位面时可以看见身边<strong> 60 尺 </strong>以太位面的景色，在以太位面时可以看见身边 60 尺内物质位面的景色。</p>"
             },
             "Magic Resistance": {
-              "name": "Magic Resistance",
-              "description": "<p>The Soulbound Knight has<strong> advantage </strong>on saving throws against spells and other magical effects.</p>"
+              "name": "魔法抗性",
+              "description": "<p>魂缚骑士对抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "The Harvester v1 (Copy)": {
-              "name": "The Harvester v1 (Copy)",
-              "description": "<p><em>Weapon (glaive), rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"Each strike is like a dreadful whisper about the end of all life.\"</em></p></div><hr /><p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>The Harvester is a glaive with a skull atop its shaft from which the blade emerges.</p><hr /><p><strong>Dark Harvest.</strong> When striking a creature, the blade deals an additional [[/roll 1d4]] necrotic damage. If the creature dies, your next attack has advantage.</p><section id=\"bossLootPhantomStrikeAbility\"><p><strong>Phantom Strike. </strong>As an action, you can use Phantom Strike. When you hit a creature with this ability, it must make a DC 15 Charisma saving throw. On a failure, the target enters an ethereal state for 1d4 rounds, existing simultaneously on both the Ethereal and Material Planes but having minimal interaction with either. The target can see both planes and see invisible creatures within a 60ft radius. Its attacks have disadvantage, it cannot pass through walls, and it is susceptible to damage from attacks in both planes. At the end of this duration, the target reappears in the Material Plane. You can use this ability once per long rest.</p></section><section id=\"bossLootSoulReapAbility\"><p><strong>Soul Reap.</strong> Once per long rest, as an action, you can spin The Harvester releasing a burst of necrotic energy that targets all creatures within 10ft. Each creature in this area must make a DC 15 Dexterity saving throw. On a failed save, a creature takes [[/roll 1d10]] slashing damage plus [[/roll 1d8]] necrotic damage. On a successful save, a creature takes half as much damage.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/057-soulbound-knight/art-transparent-background-for-journal-the-harvester-600x600.webp\" alt=\"The Harvester\" />",
+              "name": "收割者 v1",
+              "description": "<p><em>武器（长柄刀），珍稀（需同调）</em></p> <div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"每次挥斩都如同宣告万物终末的死亡低语\"</em></p></div> <hr/> <p>使用此魔法武器进行攻击检定和伤害掷骰时，你获得 +1 加值。</p> <p>收割者是一柄长柄刀，其柄顶镶嵌骷髅头，刀刃自颅骨中延伸而出。</p> <hr/> <p><strong>黑暗收割。</strong> 收割者攻击命中生物时，额外造成[[/roll 1d4]]点暗蚀伤害。若该生物死亡，你的下一次攻击具有优势。</p> <section id=\"bossLootPhantomStrikeAbility\"><p><strong>虚幻打击。</strong> 以一个动作，你可以发动一次虚幻打击。以此能力攻击命中一名生物时，目标必须进行一次DC 15 的魅力豁免。豁免失败，目标将陷入以太状态，持续[[/roll 1d4]]轮，存在于物质位面与以太位面边缘的重叠空间，与两界的互动都极为有限。目标可以观察原位面，但是所有事物都以灰度显示，而目标也看不到 60 尺外的东西。目标攻击检定具有劣势，无法穿越实体墙壁，且受到来自两个位面攻击的伤害。持续时间结束后，目标在物质位面重现。一旦使用，该能力在下一次长休前将无法使用。</p></section> <section id=\"bossLootSoulReapAbility\"><p><strong>灵魂收割。</strong>以一个动作，你可以旋转收割者释放暗蚀能量爆发，以自身为源点，10 尺范围内的所有生物需进行一次DC 15 的敏捷豁免。豁免失败者承受[[/roll 1d10]]点挥砍伤害外加[[/roll 1d8]]点暗蚀伤害，豁免成功则伤害减半。一旦使用，该能力在下一次长休前将无法使用。</p></section> <img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/057-soulbound-knight/art-transparent-background-for-journal-the-harvester-600x600.webp\" alt=\"The Harvester\" />",
               "activities": {
                 "Phantom Strike": {
-                  "name": "Phantom Strike",
-                  "chatFlavor": "Phantom Strike"
+                  "name": "虚幻打击",
+                  "chatFlavor": "虚幻打击"
                 },
                 "Soul Reap": {
-                  "name": "Soul Reap",
-                  "chatFlavor": "Soul Reap"
+                  "name": "灵魂收割",
+                  "chatFlavor": "灵魂收割"
                 }
               },
               "effects": {
                 "Phantom Strike": {
-                  "name": "Phantom Strike"
+                  "name": "虚幻打击"
                 }
               }
             },
@@ -591,7 +591,7 @@
               "description": "<section class=\"secret\" id=\"secret-zGdb5WjuSgQNrXxj\"><p>If damage reduces the Soulbound Knight to <strong>0 hit points</strong>, it must make a <strong>Constitution</strong> saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the Soulbound Knight drops to <strong>1 hit point</strong> instead.</p></section><p>If damage reduces the Soulbound Knight to <strong>0 hit points</strong>, it must make a <strong>Constitution</strong> saving throw.</p>",
               "activities": {
                 "save": {
-                  "condition": "death",
+                  "condition": "死亡",
                   "chatFlavor": "DC of 5 + the damage taken"
                 }
               }
