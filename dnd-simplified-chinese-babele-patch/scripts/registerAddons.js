@@ -1,17 +1,25 @@
+import { MODULE_ID } from "./init.js";
+const DEBUG = false;
+
+
+function logDebug(...args) {
+    if (!DEBUG) return;
+    console.debug("[Babele汉化]", ...args);
+}
 
 export async function registerAddons(babele) {
-    // console.log("注册了effects转换器")
-    // console.log("registerCustomConverters: ");
+    logDebug("registerCustomConverters: ");
     babele.registerConverters({
         "effects": effectsConverter,
-        "advancement": advancementConverter
+        "advancement": advancementConverter,
+        "activities": activitiesConverter
     });
     await registerCustomMappings(babele)
-    // console.log("registerCustomConverters: Done");
+    logDebug("registerCustomConverters: Done");
 }
 
 async function registerCustomMappings(babele) {
-    const response = await fetch('/modules/dnd-simplified-chinese-babele-patch/rules/mapping.json');
+    const response = await fetch(`/modules/${MODULE_ID}/rules/mapping.json`);
     if (!response.ok) {
         throw new Error(`Failed to load JSON file: ${response.statusText}`);
     }
@@ -20,10 +28,14 @@ async function registerCustomMappings(babele) {
 }
 
 function effectsConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
+    logDebug("advancementConverter: originalValues:", originalValues);
+    logDebug("advancementConverter: translations:", translations);
+    if (!translations) return data;
+
     return originalValues.map(data => {
-        if (!translations) return data;
         const translation = translations[data.name];
         if (!translation) return data;
+        logDebug("advancementConverter: translation:", translation);
 
         return foundry.utils.mergeObject(
             data,
@@ -32,28 +44,62 @@ function effectsConverter(originalValues, translations, data, translatedCompendi
                 description: translation.description ?? data.description
             }
         );
-    }
-    );
+    });
 }
 
 function advancementConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
-    // console.log("advancementConverter: ", originalValues, translations, data, translatedCompendium, allTranslations);
+    logDebug("advancementConverter: originalValues:", originalValues);
+    logDebug("advancementConverter: translations:", translations);
+    if (!translations) return data;
     return originalValues.map(data => {
-        if (!translations) return data;
         const translation = translations[data.title];
         if (!translation) return data;
+        logDebug("advancementConverter: translation:", translation);
 
         return foundry.utils.mergeObject(
             data,
             {
                 configuration: foundry.utils.mergeObject(
                     data.configuration,
-                    { identifier: data.configuration.identifier ?? data.configuration.title }
+                    { identifier: data.configuration.identifier ?? data.title.slugify() }
                 ),
                 title: translation.title ?? data.title,
                 hint: translation.hint ?? data.description
             }
         );
-    }
+    });
+}
+
+function activitiesConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
+    logDebug("activitiesConverter: originalValues:", originalValues);
+    logDebug("activitiesConverter: translations:", translations);
+    if (!translations) return data;
+    return Object.fromEntries(
+        Object.entries(originalValues).map(([key, activity]) => {
+            const translation = translations[activity.name];
+            if (!translation) return [key, activity];
+            logDebug("advancementConverter: translation:", translation);
+
+            return [key, foundry.utils.mergeObject(
+                activity,
+                {
+                    name: translation.name ?? activity.name,
+                    description: translation.description ?? activity.description,
+                    hint: translation.hint ?? activity.hint,
+                    condition: translation.condition ?? activity.condition,
+                    target: foundry.utils.mergeObject(
+                        activity.target,
+                        foundry.utils.mergeObject(
+                            activity.target.affects,
+                            { special: translation.affectsSpecial ?? activity.target.affects.special }
+                        )
+                    ),
+                    range: foundry.utils.mergeObject(
+                        activity.range,
+                        { special: translation.rangeSpecial ?? activity.range.special }
+                    ),
+                }
+            )];
+        })
     );
 }

@@ -1,6 +1,6 @@
 import { registerAddons } from './registerAddons.js';
 
-const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
+export const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
 
 Hooks.on('init', () => {
     game.settings.register(MODULE_ID, 'autoRegisterBabel', {
