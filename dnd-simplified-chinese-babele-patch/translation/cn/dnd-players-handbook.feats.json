@@ -10,24 +10,24 @@
     "Boon of Combat Prowess": {
       "name": "英勇战斗之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你使你选择的一项属性值提升 1 点，最多为 30。</p><p><strong>无双锁定。</strong>当你的一次攻击检定未命中时，你可以改为命中。一旦你使用了该增益，直至你的下个回合开始时，都不能再次使用它。</p>",
-      "requirements": "Level 19"
+      "requirements": "等级 19"
     },
     "Boon of Dimensional Travel": {
       "name": "次元旅行之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你使你选择的一项属性值提升1点，最多为30。</p><p><strong>闪烁步Blink Steps。</strong>当你执行攻击动作或魔法动作后，你可以立即传送至多30尺的距离到一处你可见的未被占据的空间内。</p>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "activities": {
         "Teleport": {
           "name": "传送",
           "condition": "在执行攻击动作后立即可用",
-          "affectsSpecial": "Unocuppied space"
+          "affectsSpecial": "未占据空间"
         }
       }
     },
     "Boon of Energy Resistance": {
       "name": "能量抗性之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你使你选择的一项属性值提升1点，最多为30。</p><p><strong>能量抗性Energy Resistances。</strong>你从下列伤害类型中选择两种获得抗性：强酸、寒冷、火焰、闪电、暗蚀、毒素、心灵、光耀或雷鸣。当你完成一次长休时，你可以改变你的选择。</p><p><strong>能量重导Energy Redirection。</strong>当你受到你能量抗性增益中选择的类型的伤害时，你可以执行一个反应来将相同类型的伤害直接施加给位于你60尺内的你可见的另一名生物（它对你而言不能处于全掩护下），若你如此做，该生物需要通过一次敏捷豁免（DC等于8+你的体质调整值+你的熟练加值），否则受到2d12+你的体质调整值点伤害。</p><section class=\"secret\" id=\"secret-YvvZOk14Rk8qwLgW\"><p><strong>Foundry贴士</strong></p><p><strong>选择抗性</strong>行动的每一种抗性都有一个对应的效果，你可以将其应用到角色身上。选择新的抗性时，请确保删除或禁用“效果”选项卡中之前选择的效果。</p><p><strong>能量重导</strong>反应包括一个豁免，你可以在伤害的掷骰对话框中选择伤害类型。</p></section>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "activities": {
         "Choose Resistances": {
           "name": "选择抗性",
@@ -35,7 +35,7 @@
         },
         "Energy Redirection": {
           "name": "能量重导",
-          "affectsSpecial": "Isn't behind Total Cover"
+          "affectsSpecial": "不处于全身掩护"
         }
       },
       "effects": {
@@ -71,7 +71,7 @@
     "Boon of Fate": {
       "name": "扭曲命运之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你使你选择的一项属性值提升 1 点，最多为 30。</p><p><strong>时来运转。</strong>当你或位于你 60 尺内的另一名生物在一次D20检定中成功或失败时，你可以掷 2d4，并将掷骰结果作为加值或减值附加到d20的骰值中。一旦你使用了该增益，直至到你投掷先攻或完成一次短休或长休时，都不能再次使用它。</p><section id=\"secret-zl5SPZXJtl1mEKOl\" class=\"secret\"><p><strong>Foundry贴士</strong></p><p><strong>时来运转</strong>行动包括一个掷骰，并在短休或长休后自动恢复使用次数。但掷先攻并不会自动刷新。</p></section>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "activities": {
         "Improve Fate": {
           "name": "时来运转",
@@ -83,7 +83,7 @@
     "Boon of Fortitude": {
       "name": "超凡强韧之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你使你选择的一项属性值提升1点，最多为30。</p><p><strong>身强体壮。</strong>你的生命值上限增加40。此外，每当你恢复生命值时，你可以恢复等于你体质调整值 ([[@abilities.con.mod]])的额外生命值。一旦你以此恢复了额外生命值，直至你的下一回合开始时，都不能再如此做。</p><section id=\"secret-JgTurTuyg5ikUyQq\" class=\"secret\"><p><strong>Foundry贴士</strong></p><p>该专长包括一个会自动将加值应用到你的最大HP上的被动效果。</p><p><strong>身强体壮</strong>行动包含附加的治疗效果。</p></section>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "activities": {
         "Fortify Health": {
           "name": "身强体壮",
@@ -99,12 +99,12 @@
     "Boon of Irresistible Offense": {
       "name": "无敌攻势之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你使你选择的一项属性值（力量或敏捷）提升1点，最多为30。</p><p><strong>摧坚破甲Overcome Defenses。</strong>你造成的钝击、挥砍和穿刺伤害无视抗性。</p><p><strong>无阻打击Overwhelming Strike。</strong>当你为一次攻击检定投掷的d20骰出了20时，你可以对目标造成额外伤害，你造成的额外伤害等于你以此专长提升的属性的属性值，伤害类型与这次攻击的伤害类型相同。</p><section id=\"secret-B9D2nT6vBjWr9JMV\" class=\"secret\"><p><strong>Foundry贴士</strong></p><p>这个专长的效果没有自动化。可以使用伤害掷骰对话框中的环境加值来附加伤害。</p></section>",
-      "requirements": "Level 19"
+      "requirements": "等级 19"
     },
     "Boon of Recovery": {
       "name": "强力恢复之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你使你选择的一项属性值提升1点，最多为30。</p><p><strong>背水一战。</strong>当你的生命值将要降至0时，你可以改为降至1并恢复等于你生命值上限一半的生命值。一旦你使用了该增益，直到你完成一次长休时，都不能再次使用它。</p><p><strong>重获生机。</strong>你获得一个有着10枚d10的治疗池。以一个附赠动作，你可以消耗治疗池中任意枚骰子来恢复你的生命值。投掷全部你消耗的骰子，将它们相加，即是你以此恢复的生命值。当你完成一次长休时，你的治疗池重获所有被消耗的骰子。</p><section class=\"secret\" id=\"secret-I5DVfVmEgr5OF82Q\"><p><strong>Foundry贴士</strong></p><p><strong>背水一战</strong> 在每次长休前可以使用1次，并可获得HP上限一半的治疗效果。</p><p><strong>重获生机</strong>在每次长休前可以使用10次，代表你的治疗骰池。你可以选择要使用的次数，治疗公式会自动更新。</p></section>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "activities": {
         "Last Stand": {
           "name": "背水一战",
@@ -118,7 +118,7 @@
     "Boon of Skill": {
       "name": "博学多才之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你使你选择的一项属性值提升1点，最多为30。</p><p><strong>全能专家All-Around Adept。</strong>你获得所有技能的熟练。</p><p><strong>专精Expertise。</strong>选择一项你没有专精的技能，你获得该技能的专精。</p>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "effects": {
         "All-Around Adept": {
           "name": "全能专家"
@@ -128,7 +128,7 @@
     "Boon of Speed": {
       "name": "神行无拘之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你使你选择的一项属性值提升1点，最多为30。</p><p><strong>逃脱艺术Escape Artist。</strong>作为一个附赠动作，你可以执行 &Reference[Disengage] 动作并结束一切作用于你的擒抱状态。</p><p><strong>风驰电掣Quickness。</strong>你的速度增加30尺。</p><section class=\"secret\" id=\"secret-BTieKWSqXALMO8oH\"><p><strong>Foundry贴士</strong></p><p>此专长包含一个会自动提升你速度的被动效应。</p></section>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "effects": {
         "Boon of Speed": {
           "name": "神行无拘之恩惠"
@@ -138,7 +138,7 @@
     "Boon of Spell Recall": {
       "name": "法术溯回之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你的智力、感知或魅力提升1点，最多为30。</p><p><strong>免费施法Free Casting。</strong>每当你使用一环到四环的法术位施展法术时，投掷[[/r 1d4]]。若掷骰结果与你消耗的法术位一致，则该法术位不会被消耗。</p><section id=\"secret-KMAFFZCOzi6Cuemh\" class=\"secret\"><p><strong>Foundry贴士</strong></p><p>如果数字相同，使用法术时请自行选择‘不消耗法术位’。</p></section>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "activities": {
         "Free Cast Roll": {
           "name": "免费施法",
@@ -150,7 +150,7 @@
     "Boon of Truesight": {
       "name": "真实视觉之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你使你选择的一项属性值提升1点，最多为30。</p><p><strong>真实视觉Truesight。</strong>你具有60尺真实视觉。</p><section id=\"secret-MmPASAH8hA8METnP\" class=\"secret\"><p><strong>Foundry贴士</strong></p><p>该专长包括一个能让你拥有60尺真实视觉的被动效应。</p></section>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "effects": {
         "Boon of Truesight": {
           "name": "真实视觉之恩惠"
@@ -160,7 +160,7 @@
     "Boon of the Night Spirit": {
       "name": "暗夜精魂之恩惠",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你使你选择的一项属性值提升1点，最多为30。</p><p><strong>融身入影Merge with Shadows。</strong>身处微光光照或黑暗期间，你可以以一个附赠动作令你获得 &Reference[Invisible] 状态。隐形状态将在你执行一个动作、附赠动作或反应后立即结束。</p><p><strong>幽影化身Shadowy Form。</strong>身处微光光照或黑暗期间，你具有除心灵和光耀伤害外所有伤害的抗性。</p><section id=\"secret-fpWHPSTNYUeGtg0w\" class=\"secret\"><p><strong>Foundry贴士</strong></p><p><strong>暗夜精魂之恩惠</strong>包括了抗性，但你必须在自己角色卡的‘效应’一栏自行勾选或取消。</p><p><strong>融身入影</strong>实现了隐形状态的自动化。</p></section>",
-      "requirements": "Level 19",
+      "requirements": "等级 19",
       "activities": {
         "Merge with the Shadows": {
           "name": "融身入影"
@@ -187,7 +187,7 @@
     "Blessed Warrior": {
       "name": "受祝武士",
       "description": "<p>你学到两个自选的@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj#cantrip]{牧师戏法}。推荐选择<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidance00]{神导术}</em> and <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSacredFlam]{圣火术}</em>。所选戏法对你而言相当于圣武士法术，施法主属性为魅力。当你获得一个圣武士等级时，你可以将其中一个戏法替换为另一个牧师戏法。</p>",
-      "requirements": "Paladin"
+      "requirements": "圣武士"
     },
     "Blind Fighting": {
       "name": "盲斗",
@@ -210,7 +210,7 @@
     "Druidic Warrior": {
       "name": "德鲁伊教战士",
       "description": "<p>你可以自选两个 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU]{德鲁伊戏法}。推荐选取@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidance00]{神导术} 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplStarryWisp]{点点星芒} 。它们对你视作游侠法术，感知是你施展他们的施法关键属性。当你升级时，你可以将其中一个戏法替换为德鲁伊法术列表中的另一个戏法。</p>",
-      "requirements": "Ranger"
+      "requirements": "游侠"
     },
     "Dueling": {
       "name": "对决",
@@ -271,7 +271,7 @@
         "Grappled Damage": {
           "name": "擒抱伤害",
           "condition": "你每个回合开始时",
-          "affectsSpecial": "Grappled by you"
+          "affectsSpecial": "因你受擒"
         }
       }
     },
@@ -282,7 +282,7 @@
     "Actor": {
       "name": "演员",
       "description": "<p>  你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你的魅力提升1，最多为20。</p><p><strong>伪装Impersonation。</strong>当你伪装成一个虚拟或真实的个体期间，你在说服别人相信你就是那位个体的魅力（欺瞒或表演）检定上具有优势。</p><p><strong>拟声Mimicry。</strong>你可以模仿另一个生物的声音，包括说话方式。听见你的拟声的生物必须通过一次感知（洞悉）检定来判断声音是否是伪造的（DC等于8+你的魅力调整值+你的熟练加值）。</p><section class=\"secret\" id=\"secret-tOhwF8l7gqyVJOOB\"><p><strong>Foundry贴士</strong></p><p><strong>拟声</strong>包含一个拥有正确DC的检定。</p><p>该专长并不会让检定自动获得优势。</p></section>",
-      "requirements": "Charisma 13+",
+      "requirements": "魅力 13+",
       "activities": {
         "Mimicry": {
           "name": "拟声"
@@ -301,12 +301,12 @@
     "Athlete": {
       "name": "运动精英",
       "description": "<p> 你获得以下增益：</p><p><strong>属性值提升Ability Score Increase。</strong>你的力量、敏捷或体质提升1，最多为20。</p><p><strong>攀爬速度Climb Speed。</strong>你获得等同于你速度的攀爬速度。</p><p><strong> 鲤鱼打挺Hop Up。</strong>当你 &Reference[Prone] 时，你可以仅花5尺移动力来站起来。</p><p><strong>  跳跃Jumping。</strong>你只需移动5尺就可进行助跑的 &Reference[Long Jump]{跳远} 或 &Reference[跳高]。</p><section id=\"secret-HwMnjjLPfn97FUqL\" class=\"secret\"><p><strong>Foundry贴士</strong></p><p>该专长没有自动化。你需要自行添加攀爬速度，请打开角色卡的‘编辑’模式并且点击‘行走速度’上面的齿轮图标（就在生命栏上面）。</p></section>",
-      "requirements": "Strength or Dexterity 13+"
+      "requirements": "力量或敏捷 13+"
     },
     "Charger": {
       "name": "冲锋手",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的力量或敏捷提升 1，最多为 20。</p><p><strong> 进阶疾走。</strong>当你执行 &Reference[Dash] 动作时，对该动作而言，你的速度增长了10尺。</p><p><strong>冲锋攻击。</strong>若你在用攻击动作中的一次近战攻击检定命中一名目标前，向着该目标直线移动了至少10尺，你可以为这次攻击增添以下其中一个效果：此次攻击的伤害掷骰获得1d8的加值；或将目标推离10尺，前提是目标体型至多比你大一级。你只能在每个你自己的回合使用这个增益一次。</p><section class=\"secret\" id=\"secret-OP6Qbxc6GyD1OFcH\"><p><strong>Foundry 贴士</strong></p><p>你既可以在你的伤害掷骰对话框中添加 1d8 的环境加值，亦可以使用<strong>冲锋攻击</strong>行动然后在伤害掷骰对话框中选择伤害类型。</p></section>",
-      "requirements": "Strength or Dexterity 13+",
+      "requirements": "力量或敏捷 13+",
       "activities": {
         "Charge Attack": {
           "name": "冲锋攻击",
@@ -321,7 +321,7 @@
         "Replenishing Meal": {
           "name": "大补食膳",
           "condition": "作为短休的一部分",
-          "affectsSpecial": "Who ate the food"
+          "affectsSpecial": "吃了食物的人"
         },
         "Bolstering Treats": {
           "name": "应急零嘴"
@@ -338,7 +338,7 @@
     "Crossbow Expert": {
       "name": "强弩专家",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的敏捷提升1，最多为20。</p><p><strong>无视装填。</strong>你无视手弩、重弩和轻弩的装填词条（在这个专长里统称弩）。如果你正手持着一把弩，你即使没有空手也能够为它装填一发弹药。</p><p><strong>抵近射击。</strong>你用弩进行的攻击检定不会因你在敌人的5尺内而具有劣势。</p><p><strong>双持射击。</strong>当你发动由轻型词条所提供的追加攻击时，如果这次追加攻击是由一把具有轻型词条的弩所发动的，你就可以将你的属性调整值加入本次伤害中，前提是你没有已经将该属性调整值计入这次伤害。</p><section id=\"secret-JbCLp7Ez3Fn6zaVJ\" class=\"secret\"><p><strong>Foundry 贴士</strong></p><p>双持射击没有实现自动化，考虑使用伤害掷骰对话框中的环境加值进行代替。</p></section>",
-      "requirements": "Dexterity 13+"
+      "requirements": "敏捷 13+"
     },
     "Crusher": {
       "name": "粉碎者",
@@ -352,7 +352,7 @@
     "Defensive Duelist": {
       "name": "防御式决斗",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的敏捷提升1，最多为20。</p><p><strong>招架。</strong>如果其他生物以一次近战攻击命中你时，你正握着一把灵巧武器，则你可以通过执行反应来将你的熟练加值 (现在[[使用@prof]]) 加入到你的护甲等级中，此举可能导致本次攻击变为未命中。此后，在面对近战攻击时，你的AC都将获得这个加值，直到你的下一回合开始为止。</p><section id=\"secret-En8YXJoQaVQXOweT\" class=\"secret\"><p><strong>Foundry 贴士</strong></p><p>此特性包含一个会自动提升你AC的被动效应。</p></section>",
-      "requirements": "Dexterity 13+",
+      "requirements": "敏捷 13+",
       "activities": {
         "Parry": {
           "name": "招架"
@@ -367,7 +367,7 @@
     "Dual Wielder": {
       "name": "双持客",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的力量或敏捷提升1，最多为20。</p><p><strong>强化双持。</strong> 当你在自己的回合中执行了攻击动作，并使用具有轻型词条的武器发动了一次攻击后，你可以在同一回合中，以一个附赠动作发动一次追加攻击。这次追加攻击必须由另一把不具有双手词条的近战武器发动。追加攻击的伤害不加入你的属性调整值（除非该调整值为负数）。</p><p><strong>快速拔刀。</strong>你可以在正常只能拔出或入鞘一把武器时，同时拔出或入鞘两把非双手武器。</p><section id=\"secret-EJIyTsTmMlxQDh6V\" class=\"secret\"><p><strong>Foundry 贴士</strong></p><p>移除你属性调整值的部分并未自动化。你可以在环境加值中手动减去。</p></section>",
-      "requirements": "Strength or Dexterity 13+"
+      "requirements": "力量或敏捷 13+"
     },
     "Durable": {
       "name": "耐性",
@@ -384,7 +384,7 @@
     "Elemental Adept": {
       "name": "元素掌控",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的智力、感知或魅力提升1，最多为20。</p><p><strong>能量掌控。</strong>选择以下伤害类型之一：强酸，寒冷，火焰，闪电或雷鸣。你施展的法术无视所选伤害类型的抗性。此外，当你为你施展的造成该类型伤害的法术投掷伤害时，你可以将伤害骰中的任何1都视为2。</p><p><strong>复选。</strong>你可多次选择本专长，但你每次都必须为能量掌控选择一个不同的伤害类型。</p><section id=\"secret-9zhg6kpDIUc84DCG\" class=\"secret\"><p><strong>Foundry 贴士</strong></p><p>此专长效果未自动化。</p></section>",
-      "requirements": "Spellcasting or Pact Magic"
+      "requirements": "施法或契约魔法"
     },
     "Fey-Touched": {
       "name": "妖精触碰",
@@ -393,12 +393,12 @@
     "Grappler": {
       "name": "擒抱者",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的力量或敏捷提升1，最多为20。</p><p><strong>连擒带打。</strong>你的回合中，当你用攻击动作中的一次徒手打击命中了一个生物，你可以同时进行擒抱和造成伤害两个选项。你每回合只能使用这个增益一次。</p><p><strong>优势攻击。</strong> 你攻击被你&Reference[Grappled]的生物时的攻击检定具有优势。</p><p><strong>高速拖行。</strong> 当你移动一个被你擒抱的生物时，如果这个生物的体型和你一致或比你更小，你的速度不会减半。</p><section class=\"secret\" id=\"secret-LAjjGo55LPacAy8v\"><p><strong>Foundry 贴士</strong></p><p>优势未自动化。</p></section>",
-      "requirements": "Strength or Dexterity 13+"
+      "requirements": "力量或敏捷 13+"
     },
     "Great Weapon Master": {
       "name": "巨武器大师",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的力量提升 1，最多为 20。</p><p><strong>重武器掌握。</strong>在你的回合内，如果你通过攻击动作中的攻击检定命中了一个生物，并且这次攻击检定是由具有重型标签的武器发动的，你就可以让这把武器对目标造成一定的额外伤害。其额外伤害等于你的熟练加值。</p><p><strong>顺势斩。</strong>当你使用近战武器造成了一次重击或将一个生物的生命值降低至 0 时，你可以立即使用你的附赠动作来以相同的武器进行一次攻击。</p><section id=\"secret-Mp12ak60ZuPnUCLB\" class=\"secret\"><p><strong>Foundry 贴士</strong></p><p><strong>重武器伤害</strong>行动包含了附加伤害。</p></section>",
-      "requirements": "Strength 13+",
+      "requirements": "力量 13+",
       "activities": {
         "Heavy Weapon Damage": {
           "name": "重武器伤害",
@@ -427,7 +427,7 @@
     "Heavily Armored": {
       "name": "重甲运用",
       "description": "<p> 你获得以下增益：</p><p><strong>属性值提升。</strong>你的体质或力量提升1，最多为20。</p><p><strong>护甲受训。</strong>你获得重甲受训。</p><section id=\"secret-XrTFBiTrscuZUyTK\" class=\"secret\"><p><strong>Foundry 贴士</strong></p><p>此特性自动提供了重甲熟练项。</p></section>",
-      "requirements": "Medium Armor Training",
+      "requirements": "中甲受训",
       "effects": {
         "Heavily Armored": {
           "name": "重甲运用"
@@ -437,7 +437,7 @@
     "Heavy Armor Master": {
       "name": "重甲大师",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的体质或力量提升1，最多为20。</p><p><strong>伤害减免。</strong>当你穿着重甲被一次攻击命中时，该次攻击对你造成的任何钝击、穿刺或挥砍伤害皆减去你的熟练加值。</p><section class=\"secret\" id=\"secret-BoU0ql21IXdiGxDw\"><p><strong>Foundry 贴士</strong></p><p>此特性包含一个以你熟练加值的值来自动减少相应类型伤害的被动效应。未穿戴重甲时请手动关闭该效果。</p></section>",
-      "requirements": "Heavy Armor Training",
+      "requirements": "重甲受训",
       "effects": {
         "Heavy Armor Master": {
           "name": "重甲大师"
@@ -447,7 +447,7 @@
     "Inspiring Leader": {
       "name": "领袖之证",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的感知或魅力提升 1，最多为 20。</p><p><strong>激励演出。</strong>每当短休或长休结束时，你可以做一场激励人心的表演：演讲、歌曲或舞蹈。每当你这么做时，选择至多 6 个在周围 30 尺内观看表演的友好生物（可以包括你自己）。每个被选中的生物都可以获得一定临时生命值，其数值等于你的角色等级+你用本专长增加的属性的调整值。</p><section id=\"secret-QFS7wQGuYgNoa0uR\" class=\"secret\"><p><strong>Foundry 贴士</strong></p><p><strong>以感知激励</strong> 和 <strong>以魅力激励</strong> 行动可以让你使用对应属性提供临时生命值。</p></section>",
-      "requirements": "Wisdom or Charisma 13+",
+      "requirements": "感知或魅力 13+",
       "activities": {
         "Inspire with Wisdom": {
           "name": "以感知激励",
@@ -462,7 +462,7 @@
     "Keen Mind": {
       "name": "敏锐心灵",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的智力提升1，最多为20。</p><p><strong>轶闻知识。</strong>选择下列技能之一：奥秘，历史，调查，自然或宗教。如果你不具有所选技能的熟练，则你获得熟练；如果你已有熟练，则你获得其专精。</p><p><strong>快速研究。</strong>你可以用附赠动作进行研究动作。</p><section class=\"secret\" id=\"secret-aYFftTTqUBTDay7m\"><p><strong>Foundry 贴士</strong></p><p>此特性没有自动提供熟练和专精。你可以切换角色卡的“编辑”模式，点击技能旁的圆点，来应用所需的熟练和专精。</p></section>",
-      "requirements": "Intelligence 13+"
+      "requirements": "智力 13+"
     },
     "Lightly Armored": {
       "name": "轻甲运用",
@@ -513,7 +513,7 @@
     "Medium Armor Master": {
       "name": "中甲大师",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的力量或敏捷提升1，最多为20。</p><p><strong>灵敏着装。</strong>着装中甲时，若你的敏捷在16或以上，你的AC可以增加3点而非2点。</p><section class=\"secret\" id=\"secret-6pnyGDNgbSDB7FtT\"><p><strong>Foundry 贴士</strong></p><p>此特性包含一个+1AC的被动效应。如果你的敏捷在15以下，关闭它。</p></section>",
-      "requirements": "Medium Armor Training",
+      "requirements": "中甲受训",
       "effects": {
         "Medium Armor Master": {
           "name": "中甲大师"
@@ -523,7 +523,7 @@
     "Moderately Armored": {
       "name": "中甲运用",
       "description": "<p> 你获得以下增益：</p><p><strong>属性值提升。</strong>你的力量或敏捷提升1，最多为20。</p><p><strong>护甲受训。</strong>你获得中甲受训。</p><section class=\"secret\" id=\"secret-Q1Odcq8OF5Y3cNci\"><p><strong>Foundry 贴士</strong></p><p>此特性自动提供了中甲熟练。</p></section>",
-      "requirements": "Light Armor Training",
+      "requirements": "轻甲受训",
       "effects": {
         "Moderately Armored": {
           "name": "中甲运用"
@@ -541,7 +541,7 @@
     "Observant": {
       "name": "观察力",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的智力或感知提升1，最多为20。</p><p><strong>敏锐观察。</strong> 选择以下技能之一：洞悉、调查或察觉。如果你不具有所选技能的熟练，则你获得熟练；如果你已有熟练，则你获得专精。</p><p><strong>快速搜索。</strong>你可以用附赠动作进行搜索动作。</p><section class=\"secret\" id=\"secret-K0jqzqvXGTUKgd4V\"><p><strong>Foundry 贴士</strong></p><p>此特性没有自动提供熟练和专精。在角色卡中切换为“编辑”模式，点击技能旁的圆点来应用所需的熟练和专精。</p></section>",
-      "requirements": "Intelligence or Wisdom 13+"
+      "requirements": "智力或感知 13+"
     },
     "Piercer": {
       "name": "穿刺者",
@@ -586,7 +586,7 @@
     "Polearm Master": {
       "name": "长柄武器大师",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的敏捷或力量提升1，最多为20。</p><p><strong>长柄打击。</strong>当你使用长棍、矛或同时有重型与触及属性的武器进行攻击动作时，可以用一个附赠动作以武器的另一端发动一次近战攻击。该武器在这次攻击中的伤害骰为d4，伤害类型为钝击伤害。</p><p><strong>应激打击。</strong>当你持握长棍、矛或同时具有重型与触及属性的武器时，你可以使用反应对进入你触及范围的生物进行一次近战攻击。</p><section id=\"secret-sXGBEjProoBKCuAz\" class=\"secret\"><p><strong>Foundry 注</strong></p><p><strong>长柄打击</strong>行动可以用附赠动作进行攻击和伤害。</p><p><strong>应激打击</strong> 可以使用，如果你需要跟踪反应的使用情况。</p></section>",
-      "requirements": "Strength or Dexterity 13+",
+      "requirements": "力量或敏捷 13+",
       "activities": {
         "Pole Strike": {
           "name": "长柄打击"
@@ -603,7 +603,7 @@
     "Ritual Caster": {
       "name": "仪式施法者",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的智力、感知或魅力提升1，最多为20。</p><p><strong>仪式魔法。</strong>你选择数道具有仪式标签的一环法术，其具体数量等于你的熟练加值 (现在是 [[@prof]])。你总是准备了这几道法术，并可以用任何你拥有的法术位施展它们。施展它们的施法属性为你用此专长提升的属性。在这之后，每当你的熟练加值提升时，你可以通过这个特性多增加一道始终准备了的，带有仪式标签的一环法术。</p><p><strong>快速仪式。</strong> 你可以用通常的施法时间来施展一道仪式法术，而不需要仪式的延长施法时间。这么做不会花费你的法术位。一旦你通过这种方式施展了一道法术，直到完成一次长休前你都不能再使用这个增益。</p><section id=\"secret-k6S1sYFzUtw0k3RK\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>法术在添加后需要手动修改。</p><p><strong>快速仪式</strong>行动可以用于跟进长休间的免费使用次数。</p></section>",
-      "requirements": "Intelligence, Wisdom, or Charisma 13+",
+      "requirements": "智力、感知或魅力 13+",
       "activities": {
         "Fast Ritual Cast": {
           "name": "快速仪式施法"
@@ -617,7 +617,7 @@
     "Sentinel": {
       "name": "哨兵",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的力量或敏捷提升1，最多为20。</p><p><strong>守护者。</strong>当位于你5尺范围内的生物执行撤离动作，或通过一次攻击命中了除你以外的目标后，你可以立刻对该生物进行一次借机攻击。</p><p><strong>阻拦。</strong>你的借机攻击命中了一个生物时，该生物的速度在这个回合余下的阶段里降至0。</p><section id=\"secret-KBMBiIjYcMO6SlX6\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>此特性包含一个会让生物的速度降为0的效应。 </p></section>",
-      "requirements": "Strength or Dexterity 13+",
+      "requirements": "力量或敏捷 13+",
       "effects": {
         "Halted": {
           "name": "被阻拦"
@@ -639,12 +639,12 @@
     "Sharpshooter": {
       "name": "神射手",
       "description": "<p> 你获得以下增益：</p><p><strong>属性值提升。</strong>你的敏捷提升1，最多为20。</p><p><strong>绕过掩体。</strong>你使用武器进行的远程攻击检定无视半掩护和四分之三掩护。</p><p><strong>抵近射击。</strong>你使用远程武器进行攻击检定时，即使位于一个敌人5尺范围内也不会因此而具有劣势。</p><p><strong>长距射击。</strong> 攻击位于最大射程中的目标不会对你使用远程武器进行的攻击检定施加劣势。</p>",
-      "requirements": "Dexterity 13+"
+      "requirements": "敏捷 13+"
     },
     "Shield Master": {
       "name": "盾牌大师",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的力量提升 1，最多为 20。</p><p><strong>盾击。</strong>当你通过攻击动作中由近战武器发动的一次攻击，命中了位于你5尺内的生物时，如果你装备了盾牌，你就可以立即使用它来击打目标，迫使对方进行一次力量豁免检定（DC等于 8 + 你的力量调整值 + 你的熟练加值）。如果豁免失败，目标将被你推离 5 尺远或陷入&Reference[Prone]状态（由你选择）。你只能在每个你自己的回合使用一次这个增益。</p><p><strong>介入盾牌。</strong>当你受某效应影响而需要进行敏捷豁免来减半伤害时，如果你通过了豁免检定同时正持握着一面盾牌，你就可以执行一个反应来使你不受伤害。</p><section id=\"secret-u778KRzbKiVH0Qos\" class=\"secret\"><p><strong>Foundry 注</strong></p><p><strong>盾击</strong>行动包含了一个豁免骰和可以应用倒地状态的效应。</p><p><strong>介入盾牌</strong>可以用于追踪反应消耗。</p></section>",
-      "requirements": "Shield Training",
+      "requirements": "盾牌受训",
       "activities": {
         "Shield Bash": {
           "name": "盾击",
@@ -668,7 +668,7 @@
     "Skulker": {
       "name": "隐伏者",
       "description": "<p> 你获得以下增益：</p><p><strong>属性值提升。</strong>你的敏捷提升1，最多为20。</p><p><strong>盲视。</strong>你获得10尺距离的盲视。</p><p><strong>战争迷雾。</strong>你善于利用战斗中的混乱。你在战斗中通过执行躲藏动作所做的任何敏捷（隐匿）检定都具有优势。</p><p><strong>狙击手。</strong>如果你在隐匿中进行了攻击检定，而该次攻击未命中时，这次攻击不会暴露你的位置。</p><section class=\"secret\" id=\"secret-uYEwLh81hYSCN3nb\"><p><strong>Foundry 注</strong></p><p>此专长自动提供盲视。</p></section>",
-      "requirements": "Dexterity 13+",
+      "requirements": "敏捷 13+",
       "effects": {
         "Skulker": {
           "name": "隐伏者"
@@ -687,7 +687,7 @@
     "Speedy": {
       "name": "飙速跑者",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的敏捷或体质提升1，最多为20。</p><p><strong>速度提升。</strong> 你的&Reference[Speed]提升10尺。</p><p><strong>险地疾行。</strong> 当你在自己的回合执行疾走动作时，在这个回合余下的阶段里，困难地形不再会额外消耗你的移动力。</p><p><strong>灵活移动</strong>对你发动的借机攻击都具有劣势。</p><section class=\"secret\" id=\"secret-mmDZHieZYuvYT5LG\"><p><strong>Foundry 注</strong></p><p>此专长自动提升你10尺步行速度。如果 你需要提升其他类型的速度，那你需要手动修改。</p></section>",
-      "requirements": "Dexterity or Constitution 13+",
+      "requirements": "敏捷或体质 13+",
       "effects": {
         "Speedy": {
           "name": "飙速跑者"
@@ -697,7 +697,7 @@
     "Spell Sniper": {
       "name": "法术射手",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的智力、感知或魅力提升1，最多为20。</p><p><strong>绕过掩体。</strong>你为法术进行的攻击检定无视 &Reference[Half Cover] 和 &Reference[Three-Quarters Cover]。</p><p><strong>抵近施法。</strong>你通过法术进行攻击检定时，即使位于一个敌人5尺范围内也不会因此而具有劣势。</p><p><strong>法术增距。</strong>当你施展一个具有至少10尺射程并且需要你进行一次攻击检定的法术时，你能将这道法术的射程增长60尺。</p>",
-      "requirements": "Spellcasting or Pact Magic Feature"
+      "requirements": "施法或契约魔法"
     },
     "Tavern Brawler": {
       "name": "酒馆斗殴者",
@@ -719,15 +719,15 @@
       "activities": {
         "Telekinetic Shove: Intelligence": {
           "name": "念力推撞：智力",
-          "affectsSpecial": "You can see"
+          "affectsSpecial": "你可见的"
         },
         "Telekinetic Shove: Wisdom": {
           "name": "念力推撞：感知",
-          "affectsSpecial": "You can see"
+          "affectsSpecial": "你可见的"
         },
         "Telekinetic Shove: Charisma": {
           "name": "念力推撞：魅力",
-          "affectsSpecial": "You can see"
+          "affectsSpecial": "你可见的"
         }
       }
     },
@@ -755,7 +755,7 @@
     "War Caster": {
       "name": "战地施法者",
       "description": "<p>你获得以下增益：</p><p><strong>属性值提升。</strong>你的智力、感知或魅力提升1，最多为20。</p><p><strong>专注。</strong>你用于维持专注的体质豁免具有优势。</p><p><strong>响应法术。</strong>当一个生物因离开你的触及范围而引起你的借机攻击时，你能使用你的反应来对这个生物施展一道法术，而非发动借机攻击。这道法术的施展时间必须为一动作，且该生物必须为法术的唯一目标。</p><p><strong>姿势成分。</strong>即使你的一只手或双手都握持了武器或盾牌，你也能进行法术的姿势成分。</p><section class=\"secret\" id=\"secret-jGAKlXdMPlzHFjTa\"><p><strong>Foundry 注</strong></p><p>该专长自动使专注的体质豁免具备优势。</p></section>",
-      "requirements": "Spellcasting or Pact Magic Feature",
+      "requirements": "施法或契约魔法",
       "effects": {
         "War Caster": {
           "name": "战地施法者"
