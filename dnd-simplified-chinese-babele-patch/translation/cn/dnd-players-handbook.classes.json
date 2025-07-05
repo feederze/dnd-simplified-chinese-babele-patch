@@ -71,7 +71,7 @@
     "Blessed Strikes: Potent Spellcasting": {
       "name": "受祝击：强力施法",
       "description": "<p>你将你的感知调整值加到你用任何牧师戏法造成的伤害上。</p><section class=\"secret\" id=\"secret-bDHa7ClHZ3YPWKvs\"> <p><strong>Foundry Note</strong></p> <p>此额外伤害不会自动包含在内。</p> <p><strong>伤害</strong> 行动包含你的感知属性调整值，并允许你在掷骰对话框中选择伤害类型。</p> <p>你也可以在法术伤害掷骰对话框的 <strong>“环境加值” </strong>栏中添加 [[lookup @abilties.wis.mod]] 。</p></section>",
-      "requirements": "Cleric",
+      "requirements": "牧师",
       "activities": {
         "damage": {
           "condition": "使用任意牧师戏法造成伤害"
@@ -81,7 +81,7 @@
     "Divine Order: Protector": {
       "name": "圣职：保护者",
       "description": "<p>你已将自己奉献给以下一种神圣职能：</p><p><strong>保护者 Protcetor。 </strong> 通过战斗训练，你获得军用武器熟练与重甲受训。</p><section class=\"secret\" id=\"secret-Tsm148wTyiFWlMFv\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个被动效应，授予熟练和受训。</p></section>",
-      "requirements": "Cleric",
+      "requirements": "牧师",
       "effects": {
         "Divine Order: Protector": {
           "name": "圣职：保护者"
@@ -100,7 +100,7 @@
     "Blessed Strikes: Divine Strike": {
       "name": "受祝击：神圣打击",
       "description": "<p>每个你的回合一次，当你以一次使用武器的攻击命中了一个生物时，你对其造成额外 1d8 光耀或暗蚀伤害（由你选择）。</p><section class=\"secret\" id=\"secret-iZHQe1DZBrtcFZCk\">    <p><strong>Foundry Note</strong></p><p>当你获得 @UUID[Compendium.dnd-players-handbook.classes.Item.phbclcImprovedBl]{精通受祝击} 时，此特性的伤害会自动提升。</p></section>",
-      "requirements": "Cleric",
+      "requirements": "牧师",
       "activities": {
         "Necrotic Divine Strike": {
           "name": "暗蚀神圣打击",
@@ -115,12 +115,12 @@
     "Elemental Fury: Potent Spellcasting": {
       "name": "元素之怒：强力施法",
       "description": "<p>你将你的感知调整值加在你的以德鲁伊戏法造成的伤害上 (当前, [[lookup @abilities.wis.mod]])。</p><section class=\"secret\" id=\"secret-kC2Lr5eZe550Tams\">    <p><strong>Foundry Note</strong></p>    <p>该特性不会自动将感知属性调整值加到德鲁伊戏法上。</p></section>",
-      "requirements": "Druid"
+      "requirements": "德鲁伊"
     },
     "Elemental Fury: Primal Strike": {
       "name": "元素之怒：原力蛮击",
       "description": "<p>一回合一次，当你以一次武器攻击或荒野变形后野兽形态的攻击命中一个生物时，你可以对目标额外造成 1d8 [[/damage 1d8 type=cold]]{寒冰}, [[/damage 1d8 type=fire]]{火焰}, [[/damage 1d8 type=lightning]]{闪电} 或 [[/damage 1d8 type=thunder]]{雷鸣} 伤害（由你命中时选择）。</p><section class=\"secret\" id=\"secret-teMMREyPGTtod1kP\">   <p><strong>Foundry Note</strong></p>    <p>在你获得 @UUID[Compendium.dnd-players-handbook.classes.Item.phbdrdImprovedEl] 时，该特性所造成的伤害会自动提升。若使用该行动，你在掷骰时能够选择伤害类型。默认情况下，会采用你之前选定的伤害类型。</p></section>",
-      "requirements": "Druid",
+      "requirements": "德鲁伊",
       "activities": {
         "Primal Strike": {
           "name": "原力蛮击",
@@ -131,7 +131,7 @@
     "Primal Order: Magician": {
       "name": "原初誓约：术师",
       "description": "<p>你学会一个额外的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU#cantrip] 中的戏法。此外，你和自然的神秘连接让你在智力（奥秘或自然）检定上获得加值。加值等于你的感知调整值（最小为 1，当前 [[lookup @abilities.wis.mod]]）。</p><section class=\"secret\" id=\"secret-adiIB9wCX5zZdZ9F\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一种激活效应，能自动提升你已知法术的数量，并为你的奥秘和自然检定提供加值。</p></section>",
-      "requirements": "Druid",
+      "requirements": "德鲁伊",
       "effects": {
         "Magician": {
           "name": "术师"
@@ -141,7 +141,7 @@
     "Primal Order: Warden": {
       "name": "原初誓约：卫士",
       "description": "<p>你受到了战斗的训练，获得军用武器熟练和中甲受训。</p><section class=\"secret\" id=\"secret-hVQSjHcU93Zpf54G\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个被动效应，自动授予你军用武器熟练和中型护甲受训。</p></section>",
-      "requirements": "Druid",
+      "requirements": "德鲁伊",
       "effects": {
         "Primal Order: Warden": {
           "name": "原初誓约：卫士"
@@ -180,53 +180,53 @@
       "description": "<blockquote><p>原始狂怒的刚猛斗士</p></blockquote><h3>野蛮人核心特质 Core Barbarian Traits</h3><table><tbody><tr><th scope=\"row\"><p>关键属性</p></th><td><p>力量</p></td></tr><tr><th><p><strong>生命骰</strong></p></th><td><p>每野蛮人等级 D12</p></td></tr><tr><th><p><strong>豁免熟练</strong></p></th><td><p>力量和体质</p></td></tr><tr><th><p><strong>技能熟练</strong></p></th><td><p>从驯兽、运动、威吓、自然、察觉或生存中选择两项</p></td></tr><tr><th><p><strong>武器熟练</strong></p></th><td><p>简易武器、军用武器 </p></td></tr><tr><th><p><strong>护甲受训 Armor Training</strong></p></th><td><p>轻甲、中甲以及护盾 </p></td></tr><tr><th><p><strong>起始装备</strong></p></th><td><p>选择 A 或 B：（A）巨斧、4 把手斧、探索套组和15 GP；或（B）75 GP</p></td></tr></tbody></table><p>野蛮人是强大的战士，他们由多元宇宙的原初力量所驱动，而这股力量便是“狂暴”。野蛮人的狂暴不只是一种情感，而且是猎食者在绝境中激发的凶暴，是暴风雨般不顾一切的猛袭，也是大海中翻滚不息的波涛。</p><p>一些野蛮人将“愤怒”具象化为凶蛮的灵体，或敬仰的先祖。另一些野蛮人却认为狂暴与世界的痛苦悲伤皆有联系，还有人认为狂暴是来自狂野魔法的无情纠缠，更有些人认为，狂暴是他们内心最深处，一种自我的表达。对所有野蛮人来说，而这种狂暴不止为每个野蛮人点燃其战斗狂热，更是他们灵活闪避，抵挡伤害和增强力量的源泉。</p><p>野蛮人通常扮演着社群的保护者和领导者。他们往往只身冲向危险，只为保护他人。面对危险的勇气使野蛮人非常适合冒险。</p><h2>成为一名野蛮人...</h2><h4>作为 1 级角色</h4><ul><li>获得野蛮人核心特质表里的所有特质。 </li><li>获得野蛮人的 1 级特性（见野蛮人特性表）</li></ul><h4>作为兼职角色</h4><ul><li>获得野蛮人核心特质表里的以下能力：生命骰、军用武器熟练和盾牌的护甲受训。 </li><li>获得野蛮人的1级特性（见野蛮人特性表）。</li></ul>",
       "advancement": {
         "Rage Damage": {
-          "title": "Rage Damage"
+          "title": "狂暴伤害"
         },
         "Weapon Masteries Known": {
-          "title": "Weapon Masteries Known"
+          "title": "已知武器精通"
         },
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Primal Knowledge": {
-          "title": "Primal Knowledge",
-          "hint": "You gain proficiency in another skill of your choice from the skill list available to Barbarians at level 1."
+          "title": "原初学识",
+          "hint": "除了 1 级选择的技能以外，你可以从野蛮人技能表中额外获得 1 个技能的熟练。"
         },
         "Epic Boon": {
-          "title": "Epic Boon"
+          "title": "传奇恩惠"
         },
         "Primal Champion": {
-          "title": "Primal Champion",
-          "hint": "You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25."
+          "title": "原初斗士",
+          "hint": "你本身便是原初之力的象征。你的力量和体质各提升 4，你这两项属性的上限变为 25。"
         },
         "Brutal Strike": {
-          "title": "Brutal Strike"
+          "title": "凶蛮打击"
         },
         "Saving Throws Proficiencies": {
-          "title": "Saving Throws Proficiencies"
+          "title": "豁免熟练"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Armor Training": {
-          "title": "Armor Training"
+          "title": "护甲受训"
         },
         "Weapon Mastery": {
-          "title": "Weapon Mastery",
-          "hint": "Your training with weapons allows you to use the mastery properties of additional weapons."
+          "title": "武器精通",
+          "hint": "你对武器的训练使你能运用额外武器的精通词条。"
         },
         "Rages": {
-          "title": "Rages"
+          "title": "狂暴"
         }
       }
     },
     "Battering Roots": {
       "name": "根击千钧",
       "description": "<p>世界树的根须从你的身上延伸而出。在你的回合中，若你使用具有重型或两用属性的近战武器，该近战武器的触及范围将会增加 10 尺。当你用这样的武器命中生物时，除了武器本身的精通属性外，你还可以从<strong>推离 Push</strong>或<strong>失衡 Topple</strong>中激活一种不同的额外精通属性。精通词条另见“@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbEquipment0000.JournalEntryPage.EOW6yQHLKlXre3jn]”。</p><section class=\"secret\" id=\"secret-2uKFL0ICeFFIOlns\"> <p><strong>Foundry Note</strong></p><p>此特性包含一个激活效应，可授予你“推离”和“失衡”精通词条。</p></section>",
-      "requirements": "Path of the World Tree",
+      "requirements": "世界树道途",
       "effects": {
         "Battering Roots": {
           "name": "根击千钧"
@@ -238,14 +238,14 @@
       "description": "<blockquote>    <p>以心中汹涌澎湃的怒火，步入狂暴。</p></blockquote><p>踏上这条道路的野蛮人认为狂暴便是为了暴力。狂战士之道追求无拘的狂怒。因狂暴与怒火加持，他们在战斗的混沌快感中兴奋，舍生忘死的投入厮杀。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
     "Branches of the Tree": {
       "name": "灵树枝杈",
       "description": "<p>狂暴激活期间，每当一个你能看见的生物在你 30 尺内开始回合时，你可以用反应在该生物周围召唤出世界树的灵体树枝。目标必须进行一次力量豁免检定（DC为 8 + 你的熟练加值+ 你的力量调整值），否则将被传送到你 5 尺范围内的一处对你可见且未被占据的空间，或离你最近的一处对你可见且未被占据的空间。目标传送后，你可以将其速度降低至 0，直至当前回合结束。</p><section class=\"secret\" id=\"secret-iHFpYS3WUCeaQIVP\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一种激活效应，可施加于目标上，降低其速度。</p></section>",
-      "requirements": "Path of the World Tree",
+      "requirements": "世界树道途",
       "activities": {
         "save": {
           "condition": "狂暴激活期间，每当一个你能看见的生物在你 30 尺内开始回合时"
@@ -538,7 +538,7 @@
     "Travel Along the Tree": {
       "name": "世界树之奇旅",
       "description": "<p>作为激活狂暴的附赠动作的一部分，或是在狂暴激活期间以一个附赠动作，你可以传送到 60 尺内的未被占据的可见空间。</p><p>此外，每次狂暴期间仅一次，当你使用此特性传送时，你可以带上自身 10 尺内的至多 6 个自愿生物，并且以此方式传送的范围增加到 150 尺。每个生物都会传送到你的目标空间 10 尺内且未被占据的空间。</p>",
-      "requirements": "Path of the World Tree",
+      "requirements": "世界树道途",
       "activities": {
         "Teleport": {
           "name": "传送"
@@ -579,7 +579,7 @@
     "Vitality of the Tree": {
       "name": "圣树活力",
       "description": "<p>你的狂暴浸润着世界树的生命力。你获得以下增益：</p><p><strong>活力之潮。</strong> 当你激活狂暴时，你获得等同于你野蛮人等级的临时生命值。</p><p><strong>生命赋予。</strong> 狂暴激活期间，你可以在每个你的回合开始时赋予 10 尺内另一个生物临时生命值。掷出等同于狂暴伤害加值数量的 D6 并相加，即是该生物获得的临时生命值。当你的狂暴终止时，这些赋予的临时生命值将会消失。</p><section class=\"secret\" id=\"secret-6DP7OmiyG1ibcVqP\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含<strong>活力之潮</strong>和<strong>生命赋予</strong>的行动，可进行临时生命值掷骰。在狂暴结束时，它不会自动移除生命赋予的临时生命值。</p></section>",
-      "requirements": "Path of the World Tree",
+      "requirements": "世界树道途",
       "activities": {
         "Vitality Surge": {
           "name": "活力之潮",
@@ -606,7 +606,7 @@
       "description": "<blockquote>    <p>漫步于动物王国的奇妙世界中。</p></blockquote><p>跟随兽心道途的野蛮人将自身视作动物们的家人。他们学习与动物交流的魔法手段，他们的狂暴赋予他们超自然的力量来增强与动物们的联系。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Animal Speaker": {
           "title": "Animal Speaker",
@@ -622,7 +622,7 @@
       "description": "<blockquote>    <p>探索多元宇宙的深邃根源与繁茂分支。</p></blockquote><p>遵行世界树道途的野蛮人通过他们的狂暴与宇宙之树伊格德拉希尔（Yggdrasil）相连。这棵树生长在外层位面之间，连接着外层位面和物质位面。这些野蛮人借助世界之树的魔力获得生命力，并将其作为次元旅行的工具。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -631,7 +631,7 @@
       "description": "<blockquote>    <p>沉浸在与神性合一的至高无上的狂喜之中。</p></blockquote><p>选择狂热者道途的野蛮人可获得神或神系的恩赐。这些野蛮人将神人合一的狂想曲化为自身的狂暴，并因此获得力量。他们通常是其神灵或神系的祭司或是其信徒的盟友。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Warrior of the Gods: Pool Size": {
           "title": "Warrior of the Gods: Pool Size"
@@ -662,7 +662,7 @@
       "description": "<blockquote>    <p>以音乐、舞蹈和魔法激励人心的表演家 </p></blockquote><h3>吟游诗人核心特质</h3><table>    <tbody><tr>            <td>                <p><strong>关键属性</strong></p>            </td>            <td>                <p>魅力</p>            </td></tr><tr>            <td>                <p><strong>生命骰</strong></p>            </td>            <td>                <p>每吟游诗人等级 D8</p>          </td></tr><tr>            <td>                <p><strong>豁免熟练</strong></p>           </td>            <td>              <p>敏捷与魅力</p>            </td></tr><tr>            <td>                <p><strong>技能熟练</strong></p>           </td>           <td>                <p>任选 3 项技能（见第 1 章）</p>            </td></tr><tr>            <td>                <p><strong>武器熟练</strong></p>            </td>           <td>                <p>简易武器</p>            </td></tr><tr>            <td>                <p><strong>工具熟练</strong></p>            </td>            <td>                <p>任选 3 种乐器（见第 6 章）</p>           </td></tr><tr>            <td>                <p><strong>护甲受训</strong></p>            </td>            <td>                <p>轻甲</p>            </td></tr><tr>            <td>               <p><strong>起始装备</strong></p>            </td>            <td>                <p>选择 A 或 B：(A) 皮甲、2 把匕首、自选乐器、艺人套组和 19 GP；或(B) 90 GP</p>            </td></tr></tbody></table><p>吟游诗人通过音乐、舞蹈和诗歌施展魔法，是鼓舞他人、抚慰伤痛、打击敌人和制造幻象的能手。他们认为多元宇宙是被“说”出来的，而那原初的“创世真言”至今在各个位面回响。诗人的音乐就是对这回响的一种操控，试图将其编织成所需的法术与力量。</p><p>任何事物都可以激发他们创作出新的歌曲或故事，所以诗人往往对万事万物都具有好奇心。他们的知识广博如同大海，演奏音乐施展魔法都是信手拈来，缓和气氛也是一把好手。</p><p>吟游诗人的一生都在大地巡游中度过，他们搜集逸闻、分享故事、然后享受听众的掌声。这跟一般艺人其实没区别，只是在知识的深度，音乐技巧的层次，对魔法的触动上，吟游诗人就不能和那些普通货色相比了。</p><h3>成为一名吟游诗人...</h3><h4>作为 1 级角色</h4><ul>   <li>获得吟游诗人核心特质表里的所有特质。</li>    <li>获得吟游诗人的 1 级特性（见吟游诗人特性表）</li></ul><h4>作为兼职角色</h4><ul>    <li>获得吟游诗人核心特质表里的以下能力：生命值骰，任选一项技能熟练，任选一项乐器熟练和轻甲的护甲受训。</li>    <li>获得吟游诗人的 1 级特性（见吟游诗人特性表）。你的可用法术位见第 2 章中的兼职规则。</li></ul><p>i</p>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Max Prepared Spells": {
           "title": "Max Prepared Spells"
@@ -677,7 +677,7 @@
           "title": "Expertise"
         },
         "Epic Boon": {
-          "title": "Epic Boon"
+          "title": "传奇恩惠"
         },
         "Words of Creation": {
           "title": "Words of Creation"
@@ -686,16 +686,16 @@
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Tool Proficiencies": {
           "title": "Tool Proficiencies"
         },
         "Armor Training": {
-          "title": "Armor Training"
+          "title": "护甲受训"
         }
       }
     },
@@ -779,7 +779,7 @@
       "description": "<blockquote>    <p>舞步节律谐宇宙。</p></blockquote><p>舞蹈学院的吟游诗人认为，创世真言只用言语和歌声去表达是远远不够的；上到天体流转，下到动物蹦跳，这点点滴滴汇聚成的节奏才是创世真言的真正蕴含。这些吟游诗人勤学苦练旋转跳跃，只为和宇宙万物同频舞动，他们灵敏迅捷，舞姿优雅。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Dazzling Footwork": {
           "title": "Dazzling Footwork",
@@ -832,7 +832,7 @@
       "description": "<blockquote>    <p>织魔作惑妖精术。 </p></blockquote><p>魅心学院的起源要追溯到妖精荒野中的惑心魔法。研究这些魔法的吟游诗人们将美好与恐怖化作丝线，编织到他们的歌曲和故事之中，此中大师甚至能够披上超凡脱俗的威仪。他们的表演将调动人们对被淡忘的纯真的渴望，唤醒人们潜意识中长存的恐惧，牵扯出最铁石心肠的听众的情绪。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Beguiling Magic": {
           "title": "Beguiling Magic"
@@ -873,7 +873,7 @@
       "description": "<blockquote>    <p>博观觅识深钻法。</p></blockquote><p>逸闻学院的吟游诗人从各种渠道——例如奥术著作、神秘仪式甚至市井故事——收集咒语和奥秘。他们聚集在图书馆或是学府之中，分享彼此之间获取的知识。他们也会出席国家事务或是参加节日活动，揭露腐败、拆穿谎言、对自以为是的权威者发起嘲笑。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Bonus Proficiencies": {
           "title": "Bonus Proficiencies"
@@ -989,7 +989,7 @@
       "description": "<blockquote>    <p>颂歌独唱旧英杰</p></blockquote><p>勇气学院的吟游诗人是无畏的故事讲述者，他们的故事承载了过往伟大英雄的记忆。这些人儿在穹顶之下、篝火之侧、人群之间歌唱豪杰的功绩。他们四处旅行，用双眼记录史诗的发生，将传奇深埋心底并传承下去。他们激励新一代人勇攀高峰，达到与古老英雄同样的高度。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Martial Training": {
           "title": "Martial Training"
@@ -1064,7 +1064,7 @@
       "description": "<blockquote>    <p><em>以神力降下奇迹的教士 </em></p></blockquote><h3>牧师核心特 </h3><table>    <tbody><tr>            <td>                <p>关键属性</p>            </td>            <td>                <p>感知</p>            </td></tr><tr>            <td>               <p>生命骰 Hit Point Die</p>            </td>            <td>                <p>每牧师等级 D8</p>            </td></tr><tr>            <td>                <p>豁免熟练</p>            </td>            <td>               <p>感知与魅力</p>            </td></tr><tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从历史、洞悉、医药、游说或宗教中选择两项</p>            </td></tr><tr>            <td>                <p>武器熟练</p>            </td>            <td>                <p>简易武器</p>           </td></tr><tr>            <td>                <p>护甲受训</p>           </td>           <td>                <p>轻甲、中甲和盾牌</p>            </td></tr><tr>           <td>                <p>起始装备</p>            </td>            <td>                <p>选择 A 或 B：(A) 链衫、盾牌、长矛、圣徽、祭司套组和 7 GP；或 (B) 110 GP</p>            </td></tr></tbody></table><p>牧师们从诸神领域中汲取力量，以之展现奇迹。受到某位神祇、神系或其他不朽实体的祝福，牧师可以触及到神明所在外层位面的神圣魔法，并将其引用于协助他人，或是惩戒敌人。</p><p>他们的力量可以说是神的恩赐，所以那些赐予牧师力量的神灵或是其他永生存在，供奉他们的神殿往往是牧师会选择的去处。施展神圣魔法并不依靠研习或训练。但牧师可能会先从祈祷和仪式中学习，以帮助他们从外层位面获取神力。</p><p>并非所有神庙或神社的成员都是牧师。还有一些祭司被召唤到神庙中，只是过着简单的侍僧生活，通过祈祷和仪式而非魔法来实现他们对神明的献身。许多凡人都声称自己能为诸神代言，但很少有人能像牧师那样真中调动诸神的力量。</p><h3>成为一名牧师...</h3><h4>作为 1 级角色</h4><ul>    <li>获得牧师核心特质表里的所有特质。 </li>  <li>获得牧师的 1 级特性（见牧师特性表）。</li></ul><h4>作为兼职角色</h4><ul>    <li>获得牧师核心特质表中的生命值骰，轻甲、中甲和盾牌的护甲受训。 </li>    <li>获得牧师的1级特性（见牧师特性表）。 你的可用法术位见第 2 章中的兼职规则。</li></ul>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Channel Divinity Uses": {
           "title": "Channel Divinity Uses"
@@ -1079,7 +1079,7 @@
           "title": "Blessed Strikes"
         },
         "Epic Boon": {
-          "title": "Epic Boon"
+          "title": "传奇恩惠"
         },
         "Divine Order Choice": {
           "title": "Divine Order Choice",
@@ -1096,13 +1096,13 @@
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Armor Training": {
-          "title": "Armor Training"
+          "title": "护甲受训"
         }
       }
     },
@@ -1215,7 +1215,7 @@
       "description": "<blockquote>    <p>抚慰世界，疗愈伤痛</p></blockquote><p>生命领域专注于帮助维持多元宇宙中所有生命的 正能量。选择这一领域的牧师都是疗愈上的专家，知晓如何使用生命力治愈各种伤痛。</p><p>存在本身就依赖于与此领域相关的正能量，因此几乎所有宗教传统的牧师都可能选择此领域。该领域尤其与农业之神、医疗之神或忍耐之神以及家庭和社会之神有关。治那些投身于治愈他人的教团也十分重视这一领域的魔法。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Life Domain Spells": {
           "title": "Life Domain Spells"
@@ -1232,7 +1232,7 @@
       "description": "<blockquote>    <p>携光而来，逐尽黑暗</p></blockquote><p>光明领域致力于以神圣的力量带来烈焰与启示。踏入这一领域的牧师，其灵魂被注入了来自神明的光辉与洞察力，他们肩负驱散虚伪与燃烧黑暗的使命。</p><p>光明领域与掌管真理，警觉，美丽，洞察与革新的神明相关联。其通常的象征为太阳。某些这类的神会被描绘为太阳本身，或是驾着战车引领太阳划过天际的存在。还有一些则是不懈的哨兵之眼，时刻洞穿每一片阴影与诡计。而其中某些美与才艺的教义还会诠释艺术即灵魂晋升容器的理念。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Light Domain Spells": {
           "title": "Light Domain Spells"
@@ -1290,7 +1290,7 @@
       "description": "<blockquote>    <p>挑起闹剧，直面权威</p></blockquote><p>诡计领域提供了欺骗、幻术和隐匿的魔法。操弄这些魔法的牧师是世界中的扰乱力量，他们刺破自满，嘲弄暴君，解救囚犯，并蔑视空洞的传统。他们倾向于使用诡计和恶作剧，而非直接对抗。</p><p>诡计之神是捣乱者和煽动者，他们不断挑战神祇和凡人之间的既定秩序。他们体现了变革和社会动荡的力量，也是盗贼、无赖、赌徒、叛乱者和解放者的支持者。那些秘密行动的宗教组织，特别是那些旨在破坏压迫性政府或等级制度的组织，也会借助诡术领域的力量。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Trickery Domain Spells": {
           "title": "Trickery Domain Spells"
@@ -1317,7 +1317,7 @@
       "description": "<blockquote><p>激昂气概，击溃仇敌</p></blockquote><p>战争有许多种表现形式。它可以造就普通人成为英雄。它充满绝望与恐惧，伴随着残忍与懦弱的行为却也交织着卓越与勇气。掌握战争领域魔法的牧师在战斗中表现出色，激励他人奋勇作战，或献上暴力行为作为祈祷。</p><p>战争之神都会守望着武者们并为他们伟大的行为作出奖赏。这些神明包括荣誉和骑士精神的化身，也有破坏和掠夺的神祇。还有一些战争神明采取更中立的态度，推动战争的一切表现并支持处于任何境遇之下战士。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "War Domain Spells": {
           "title": "War Domain Spells"
@@ -1398,7 +1398,7 @@
       "description": "<blockquote>    <p>自然世界，颂之以系</p></blockquote><p>创立大地结社的秘术师和智者们守护着远古的知识与各种传统仪式。结社的德鲁伊们聚集在神树之环下或石阵之中，他们用德鲁伊语低声交流，传递着原初的秘密。结社中最睿智的成员会担任其中的首席祭司。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Lands Aid Damage": {
           "title": "Lands Aid Damage"
@@ -1410,7 +1410,7 @@
       "description": "<blockquote>    <p>荒野卫士，身化兽躯 </p></blockquote><p>这个结社的德鲁伊借月亮之力变换形体。他们聚集在满月之下分享情报，交换警示并执行仪式。</p><p>月亮结社的德鲁伊就如月亮那般善变，他们会作为野猫徘徊一晚，第二天又成为一只盘旋在树顶老鹰，再以熊的形态赶走领地中的入侵者。其德鲁伊之血充满野性。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Circle of the Moon Spells": {
           "title": "Circle of the Moon Spells"
@@ -1422,7 +1422,7 @@
       "description": "<blockquote>    <p>海潮风暴，一体同心</p></blockquote><p>海洋结社的德鲁伊们驱使着世界上海洋和风暴中狂野的自然之力。其中一些德鲁伊将自己视作自然怒火的化身，对那些掠夺自然世界的人们施以报复。而另一些德鲁伊则顺应潮汐的涨落，跟随洋流和波浪的激荡，聆听狂风的低语和怒号，从中寻求和自然的灵性统一。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Circle of the Sea Spells": {
           "title": "Circle of the Sea Spells"
@@ -1437,7 +1437,7 @@
       "description": "<blockquote>    <p>群星隐秘，求索驭力</p></blockquote><p>在无法追忆的过去，星辰结社的德鲁伊们便开始记录天穹中的图案，探索星座之间隐藏的秘密。通过理解这些秘密，这个结社的德鲁伊探索着如何驾驭宇宙的伟力。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Star Map: Guidance": {
           "title": "Star Map: Guidance",
@@ -1474,7 +1474,7 @@
       "description": "<blockquote>    <p>原初伟力的自然祭司</p></blockquote><h3>德鲁伊核心特质</h3><table>    <tbody><tr>           <td>                <p>关键属性</p>            </td>            <td>               <p>感知</p>            </td></tr><tr>            <td>               <p>生命骰</p>            </td>           <td>                <p>每德鲁伊等级 D8</p>            </td></tr><tr>            <td>                <p>豁免熟练</p>            </td>            <td>                <p>智力与感知</p>            </td></tr><tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从奥秘、驯兽、洞察、医药、自然、察觉、宗教或生存中选择两项</p>            </td></tr><tr>            <td>                <p>武器熟练项</p>            </td>            <td>                <p>简易武器</p>            </td></tr><tr>            <td>                <p>工具熟练</p>            </td>            <td>                <p>草药工具</p>            </td></tr><tr>            <td>                <p>护甲受训</p>            </td>            <td>                <p>轻甲和盾牌</p>            </td></tr><tr>            <td>                          </td>            <td>                <p>选择 A 或 B：(A)皮甲、盾牌、镰刀、德鲁伊法器（长棍）、探索套组、草药工具，以及 9 GP；或(B)：50 GP</p>            </td></tr></tbody></table><p>德鲁伊属于呼唤自然之力的古老教派。利用动物、植物和四大元素的魔力，德鲁伊们可以治愈疾病、变身动物，乃至驾驭元素施加毁灭。</p><p>德鲁伊崇敬自然至上，他们的魔法来自自然、自然神祇，或两者兼有。通常，德鲁伊会与其他德鲁伊一起进行仪式，以记录季节和自然周期的变化。</p><p>德鲁伊不仅会关注维持动植物生命的微妙生态平衡，还尤为注重人类与自然的和谐相处。德鲁伊常常守护神圣的地点或照看未受破坏的自然区域，但若世界出现重大危险时，德鲁伊会更加积极地作为冒险者参与其中，打击威胁。</p><h3>成为一名德鲁伊...</h3><h4>作为 1 级角色</h4><ul>    <li>获得德鲁伊核心特质表里的所有特质。 </li>    <li>获得德鲁伊的 1 级特性（见德鲁伊特性表） </li></ul><h4>作为兼职角色</h4><ul>    <li>获得德鲁伊核心特质表里的以下特质：生命骰、轻甲和盾牌的护甲受训。 </li>    <li>获得德鲁伊的 1 级特性（见德鲁伊特性表）。你的可用法术位见第 2 章中的兼职规则。</li></ul>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Cantrips Known": {
           "title": "Cantrips Known"
@@ -1503,7 +1503,7 @@
           "hint": "The might of the elements flows through you. You gain one of the following options of your choice."
         },
         "Epic Boon": {
-          "title": "Epic Boon"
+          "title": "传奇恩惠"
         },
         "W0d3c6X31SgnFFYM": {
           "title": "Elemental Fury"
@@ -1512,16 +1512,16 @@
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Tool Proficiencies": {
           "title": "Tool Proficiencies"
         },
         "Armor Training": {
-          "title": "Armor Training"
+          "title": "护甲受训"
         },
         "Druidic": {
           "title": "Druidic",
@@ -1830,7 +1830,7 @@
       "description": "<blockquote>    <p class=\"MsoNormal\">战技百般昭武艺</p></blockquote><p>战斗大师是研习战斗技艺的学者，他们勤学代代相传的武术。那些最负盛名的战斗大师将苦心练就的武功与史学、艺术与理 论相互结合，由此，他们往往兼备文才武略。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Superiority Dice": {
           "title": "Superiority Dice"
@@ -1868,7 +1868,7 @@
       "description": "<blockquote><p>勇冠三军彰英豪</p></blockquote><p>在对胜利的不懈追求中，勇士专注于发展自身的武勇。他们通过严酷的训练锻冶出卓绝的肉体以直面打击，跨越险境，寻觅 荣誉。无论是在角斗场之中还是血染的疆场上，勇士都只为夺得胜利之桂冠而奋战。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Fighting Style": {
           "title": "Fighting Style"
@@ -1884,7 +1884,7 @@
       "description": "<blockquote>    <p>奥法遍身附剑戟</p></blockquote><p>奥法骑士将所有战士共通的高超武技与对魔法的精妙研究融合贯通。法术补足并拓展了他们的武技，为甲胄提供额外的保护 ，并使他们能够使用爆发性的魔法同时与多个敌人鏖战。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Cantrips": {
           "title": "Cantrips"
@@ -1917,13 +1917,13 @@
       "description": "<blockquote>    <div>        <p>百兵之君，万甲之王</p>    </div></blockquote><h3>战士核心特质</h3><table>    <tbody><tr>            <td>               <p>关键属性</p>            </td>            <td>                <p>力量或敏捷</p>            </td></tr><tr>            <td>                <p>生命骰</p>            </td>            <td>                <p>每战士等级 D10</p>            </td></tr><tr>            <td>                <p>豁免熟练</p>            </td>            <td>                <p>力量与体质</p>            </td></tr><tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从体操、驯兽、运动、历史、洞悉、威吓、游说、察觉或求生中选择两项</p>            </td></tr><tr>            <td>                <p>武器熟练</p>            </td>            <td>                <p>简易武器和军用武器</p>            </td></tr><tr>            <td>                <p>护甲受训</p>            </td>            <td>                <p>轻甲、中甲、重甲和盾牌</p>            </td></tr><tr>            <td>                <p>起始装备</p>            </td>            <td>                <p>选择 A 、 B 或 C： (A) 链甲、巨剑、链枷、8 支标枪、探索套组和 4 金币 ；(B) 镶钉皮甲、弯刀、短剑、长弓、20 支箭、箭袋、探索套组和 11 GP ；(C) 155 GP</p>            </td></tr></tbody></table><p>战士往往驰骋于战场。战士可以是探险骑士，皇家斗士，精英士兵或是老练佣兵，他们熟习各种武器与护甲，他们的生活与死亡相伴，既不害怕手上染满鲜血，也不畏惧迎接死亡。<br>战士精通各种武器技艺，装备精良的战士总能在任何战斗中找到合适的武器。同样，战士对于各种盔甲也驾轻就熟。除掌握基本使用技巧外，每位战士还专精于某种特定的战斗风格。有些专攻箭术，有些专精双持武器战斗，有些则擅长于用魔法增强自己的战斗能力。泛用与专精相结合，让战士在各处都能有卓越的表现。</p><h3>成为一名战士……</h3><h4>作为 1 级角色</h4><ul>    <li>获得战士核心特质表里的所有特质。 </li>    <li>获得战士的 1 级特性（见战士特性表）</li></ul><h4>作为兼职角色</h4><ul>    <li>获得战士核心特质表里的以下特性：生命骰、军用武器熟练和轻甲、中甲及盾牌的护甲受训。 </li>    <li>获得战士的 1 级特性（见战士特性表）。</li></ul>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Action Surge": {
           "title": "Action Surge"
         },
         "Epic Boon": {
-          "title": "Epic Boon"
+          "title": "传奇恩惠"
         },
         "Indomitable": {
           "title": "Indomitable"
@@ -1935,22 +1935,22 @@
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Armor Training": {
-          "title": "Armor Training"
+          "title": "护甲受训"
         },
         "Weapon Mastery": {
-          "title": "Weapon Mastery"
+          "title": "武器精通"
         },
         "Fighting Style": {
           "title": "Fighting Style"
         },
         "Weapon Masteries Known": {
-          "title": "Weapon Masteries Known"
+          "title": "已知武器精通"
         }
       }
     },
@@ -2019,7 +2019,7 @@
       "description": "<blockquote>    <p>灵能庇体显神威</p></blockquote><p>灵能武士唤醒他们心灵中的力量以增强自身的体魄，他们将这种被称为灵能的力量注入于刀兵之中，用念动力鞭笞他们的敌人，并以精神力铸造无形壁垒抵御攻击。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Psionic Energy Die": {
           "title": "Psionic Energy Die"
@@ -2809,7 +2809,7 @@
       "description": "<blockquote>    <p>身起四象 </p></blockquote><p>武僧们修习武术以参出元素位面的力量，此谓之曰四象派。四象武者会将各种元素混杂融合，博采众长，以便在需要的时候使出需要的力量。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Manipulate Elements": {
           "title": "Manipulate Elements"
@@ -2928,7 +2928,7 @@
       "description": "<blockquote>    <p>掌执命流</p></blockquote><p>命流武者操弄着他人的命流之力。这些武僧既是云游的医者，但也能给敌人带去迅疾的死亡。他们总戴着面具，以无脸的生死使者之形象示人。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Implements of Mercy": {
           "title": "Implements of Mercy"
@@ -2940,7 +2940,7 @@
       "description": "<blockquote>    <p>超凡脱俗，武定乾坤</p></blockquote><h3>武僧核心特质</h3><table>    <tbody><tr>            <td>                <p>关键属性</p>            </td>            <td>                <p>敏捷与感知</p>            </td></tr><tr>            <td>                <p>生命骰</p>            </td>            <td>                <p>每武僧等级 D8</p>            </td></tr><tr>            <td>                <p>豁免熟练</p>            </td>            <td>                <p>力量与敏捷</p>            </td></tr><tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从体操、运动、历史、洞察、宗教或隐匿中选择两项</p>            </td></tr><tr>            <td>                <p>武器熟练</p>            </td>            <td>                <p>简易武器和具有轻型属性的军用武器</p>            </td></tr><tr>            <td>                <p>工具熟练</p>            </td>            <td>                <p>选择一种工匠工具或乐器</p>            </td></tr><tr>            <td>                <p>护甲受训</p>            </td>            <td>                <p>无</p>            </td></tr><tr>            <td>                <p>起始装备</p>            </td>            <td>                <p>选择 A 或 B：（A）短矛、 5 把匕首、所选择的工匠工具或乐器、探索套组和 11GP；（B）50 GP</p>            </td></tr></tbody></table><p>靠着严苛的战斗训练和精神修炼，武僧与多元宇宙调谐并知晓如何集中内在的力量。不同的武僧对这股力量有着不同的解读，比如说呼吸、能量、生命力、精华或自相。这股力量在武僧的手中，有时化作迅猛狂暴的武技，有时化作精巧快速的防御与速度。</p><p>武僧专注于自己体内的力量来创造各种非凡之事，甚至可以说超脱自然。不论是否手持武器，他们的攻击在如此技艺下兼具惊人的速度与力量。在武僧手中，即使是最基本的武器也能化为神兵利器。</p><p>许多武僧认为受持戒律的生活有助于维持身心专注，以此更好驾驭自身的力量。也有其他僧侣认为，沉浸在纷乱的世俗生活中才有助于增强他们的决心和纪律。</p><p>武僧通常将冒险视为对身体和精神成长的考验。他们的驱动力不仅仅是战胜怪物和寻获财宝，更是希望将自己磨练成钢筋铁骨。</p><h3>成为一名武僧...</h3><h4>作为 1 级角色</h4><ul>    <li>获得武僧核心特质表中的所有特质。</li>    <li>获得武僧的 1 级特性（见武僧特性表）。 </li></ul><h4>作为兼职角色</h4><ul>    <li>获得武僧核心特质表中的生命值骰特质。 </li>    <li>获得武僧的 1 级特性，(见武僧特性表)。 </li></ul>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Body and Mind": {
           "title": "Body and Mind"
@@ -2955,16 +2955,16 @@
           "title": "Disciplined Survivor"
         },
         "Epic Boon": {
-          "title": "Epic Boon"
+          "title": "传奇恩惠"
         },
         "Saving Throw Proficiencies": {
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Tool Proficiencies": {
           "title": "Tool Proficiencies"
@@ -3032,7 +3032,7 @@
       "description": "<blockquote>    <p>散打随心 </p></blockquote><p>散打武者是徒手战斗的大师，他们学习了推离和绊摔的技艺妨敌，并用内力保护自己免受伤害。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -3111,7 +3111,7 @@
       "description": "<blockquote>    <p>暗影藏形</p></blockquote><p>暗影武者习练隐匿与遁术，引导，积蓄和驾驭来自堕影冥界的力量。他们居于黑暗，藏于薄暮，遁于幽影，出手亦犹如幽影一般凶险。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Shadow Arts": {
           "title": "Shadow Arts"
@@ -3679,7 +3679,7 @@
       "description": "<blockquote>        <p>当仁不让知行正。</p></blockquote>        <p >圣武士立下奉献之誓，只为维护正义和秩序。他们是身披闪亮的盔甲的正派骑士形象代表，躬行着公正的教条，追寻崇高的目标。<br>追随该誓言的许多圣武士都献身于守序和善良的神，并将其的信条视作奉献的标准。他们将善良阵营的完美侍从天使视作其典范，并在头盔或盾徽上饰以天使羽翼的形象。<br>立下此誓言的圣武士都赞成以下信条：</span>        </p>        <ul >                <li ><em>实事求是，言出必行。</em></span></li>                <li ><em>锄强扶弱，临危不惧。</em></span></li>                <li ><em>荣誉为典，以身作则。</em></span></li>        </ul></div>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Oath of Devotion Spells": {
           "title": "Oath of Devotion Spells"
@@ -3691,7 +3691,7 @@
       "description": "<blockquote>    <p>砥身励行蜚声英 </p></blockquote><p>对荣耀宣誓的圣武士坚信他们将与同伴一起达成英勇的伟业，并命中注定以此取得荣耀。他们将刻苦训练，砥砺前行，从而确保当命运决定的时刻到来之际，他们都已有所准备。<br>立下此誓言的圣武士都赞成以下信条：</p><ul>    <li><em>力争上游，行胜于言。</em></li>    <li><em>无惧挑战，勇往直前。</em></li>    <li><em>振奋人心，力争荣耀。</em></li></ul>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Oath of Glory Spells": {
           "title": "Oath of Glory Spells"
@@ -3703,7 +3703,7 @@
       "description": "<blockquote>    <p>护生驱暗济世界</p></blockquote><p>古贤之誓存在的时间与精灵一族的历史那般古老。立下此誓言的圣武士珍视光明，比起荣耀、勇气和正义的准则，他们更热爱美与生命。他们在盔甲和服饰上饰以树叶、鹿角、花朵等等生机勃勃的纹样，以象征自己立下承诺保护世上的生命与光明。<br>立下此誓言的圣武士都赞成以下信条：</p><ul>    <li><em>救死扶伤，点亮希望。</em></li>    <li><em>守护光明，庇护生命。</em></li>    <li><em>乐人之乐，善济天下。</em></li></ul>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Oath of the Ancients Spells": {
           "title": "Oath of the Ancients Spells"
@@ -3715,7 +3715,7 @@
       "description": "<blockquote>    <p>铁面无情伏妖魔</p></blockquote><p>复仇之誓，是立誓惩戒那些严重罪行的庄严承诺。当邪恶势力屠杀无助居民，当暴君背离神的意志，当某个盗贼行会过于强横霸道，当恐怖巨龙横行乡野——每当这种时刻，复仇之誓的圣武士就会出现来拨乱反正。<br>立下此誓言的圣武士都赞成以下信条：</p><ul>    <li>对恶徒，绝无怜悯。</li>    <li>抗不义，追究到底。</li>    <li>遇不平，拔刀相助。</li></ul>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Oath of Vengeance Spells": {
           "title": "Oath of Vengeance Spells"
@@ -3727,7 +3727,7 @@
       "description": "<blockquote>    <p>献身发愿的无私勇者 </p></blockquote><h3>圣武士核心特质</h3><table>    <tbody><tr>            <td>                <p>关键属性</p>            </td>            <td>                <p>力量和魅力</p>            </td></tr><tr>            <td>                <p>生命骰</p>            </td>            <td>                <p>每圣武士等级 D10</p>            </td></tr><tr>            <td>                <p>豁免熟练</p>            </td>            <td>                <p>感知与魅力</p>            </td></tr><tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从运动、洞悉、威吓、医药、游说、宗教中选择两项</p>            </td></tr><tr>            <td>                <p>武器熟练</p>            </td>            <td>                <p>简易武器和军用武器</p>            </td></tr><tr>            <td>                <p>护甲受训</p>            </td>            <td>                <p>轻甲、中甲、重甲和盾牌</p>            </td></tr><tr>            <td>                <p>起始装备</p>            </td>            <td>                <p>选择 A 或 B ：(A) 链甲， 盾牌，长剑，6 支标枪， 一个圣徽，一个祭司套组和 9 GP；或（B）150 GP</p>            </td></tr></tbody></table><p>圣武士们在各自誓言的驱使下团结一致对抗邪恶势力。他们也许是在神坛前由祭司见证宣誓，或在林中圣地向自然精魄许下承诺，又或是面临绝望与灾难却只有死者见证下立约，所有这些圣武士誓言都是极强的契约。而正是誓言的伟力才让一名虔诚的战士化作身负祝福的勇者。</p><p>圣武士经年累月苦练战技，并精通各种武器与护甲。即便如此，其武力的重要性也仅次于其行使的魔力。他们以之治疗伤患，斩杀妄邪，守护清白者和所有为公义而战的同伴。</p><p>圣武士的存在本身即决定了其为冒险而生，而这种生活只会一直持续到其伤重到无法继续，否则他们总是会站在宇宙善恶大战的最前线，与邪恶殊死搏斗。在俗世中，真正受到感召成为圣武士的人比民兵团或正规军中的真正战士罕有得多。而这些勇士们受到感召时，都会义无反顾地放弃所拥有的身份地位，义无反顾的加入对抗邪恶的战斗中。</p><h3>成为一名圣武士...</h3><h4>作为 1 级角色</h4><ul>    <li>获得圣武士核心特质表里的所有特质</li>    <li>获得圣武士的 1 级特性（见圣武士特性表）</li></ul><h4>作为兼职角色</h4><ul>    <li>获得圣武士核心特质表里的以下能力：生命骰，军用武器熟练，以及轻甲，中甲和盾牌的护甲受训。</li>    <li>获得圣武士的 1 级特性（见圣武士特性表）。你的可用法术位见第 2 章中的兼职规则。</li></ul>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Aura Distance": {
           "title": "Aura Distance"
@@ -3739,25 +3739,25 @@
           "title": "Channel Divinity Uses"
         },
         "Epic Boon": {
-          "title": "Epic Boon"
+          "title": "传奇恩惠"
         },
         "Saving Throw Proficiencies": {
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Armor Training": {
-          "title": "Armor Training"
+          "title": "护甲受训"
         },
         "Fighting Style": {
           "title": "Fighting Style"
         },
         "Weapon Mastery": {
-          "title": "Weapon Mastery"
+          "title": "武器精通"
         }
       }
     },
@@ -3884,7 +3884,7 @@
       "description": "<blockquote>    <p>以奥法咒语匿影藏形</p></blockquote><p>有些游荡者会通过法术来进一步提高自己早已炉火纯青的潜行技艺，并学习各类魔法花招来辅助自己的行当。一些诡术师会利用自己的天赋去帮助自己偷盗或入室行窃，而还有一些诡术师则乐于将掌握的魔法化为恶作剧。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Max Prepared Spells": {
           "title": "Max Prepared Spells"
@@ -3914,7 +3914,7 @@
       "description": "<blockquote>    <p>践行死亡的不法技艺</p></blockquote><p>刺客的训练专注于使用潜行、毒药和伪装来以致命的效率消灭敌人。虽然一些遵循这条路线的盗贼是被雇佣的杀手、间谍或赏金猎人，但这个子职业的能力同样适用于面对各种怪物的冒险者。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Assassin's Tools": {
           "title": "Assassin's Tools",
@@ -4173,7 +4173,7 @@
       "description": "<blockquote>    <p>专精于潜行与诡计的灵巧大师</p></blockquote><h3>游荡者核心特质</h3><table>    <tbody><tr>            <td>                <p>关键属性</p>            </td>            <td>                <p>敏捷</p>            </td></tr><tr>            <td>                <p>生命骰</p>            </td>            <td>                <p>每游荡者等级 D8</p>            </td></tr><tr>            <td>                <p>豁免熟练</p>            </td>            <td>                <p>智力与敏捷</p>            </td></tr><tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从体操、运动、欺瞒、洞悉、威吓、调查、察觉、游说、巧手、隐匿中选择四项</p>            </td></tr><tr>            <td>                <p>武器熟练</p>            </td>            <td>                <p>简易武器和具有灵巧或轻型属性的军用武器</p>            </td></tr><tr>            <td>                <p>工具熟练</p>            </td>            <td>                <p>盗贼工具</p>            </td></tr><tr>            <td>                <p>护甲受训</p>            </td>            <td>                <p>轻甲</p>            </td></tr><tr>            <td>                <p>起始装备</p>            </td>            <td>                <p>(A) 皮甲，两把匕首，一把短剑，一把短弓，20 支箭，箭袋，盗贼工具，窃贼套组和 8 GP；或(B)100 GP</p>            </td></tr></tbody></table><p>游荡者依靠隐匿与技巧，并针对敌人的弱点获得优势。他们总有解决问题的诀窍。其中少数还会学习运用诡术魔法来作为其能力的补充。很多游荡者专注于潜行和骗术，而另一些则精于针对地城环境的有效技能，诸如攀爬、搜索、解除装置和开锁。</p><p>战斗时的游荡者更偏爱狡猾而非蛮横。与其用密集攻击放倒敌人，他们更喜欢进行精准打击。</p><p>有些游荡者以犯罪为生，但也有些使用其技巧打击犯罪。每当游荡者涉及律法时，那些寻常罪犯或执法官员都无法匹敌最强大游荡者的才智。</p><h3>成为一名游荡者...</h3><h4>作为 1 级角色</h4><ul>    <li>获得游荡者核心特质表里的所有特质。</li>    <li>获得游荡者的 1 级特性（见游荡者特性表）</li></ul><h4>作为兼职角色</h4><ul>    <li>获得游荡者核心特质表里的以下特质：生命骰、从游荡者技能熟练栏选择一项技能熟练、盗贼工具熟练和轻甲的护甲受训。</li>    <li>获得游荡者的 1 级特性（见@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbRogue00000000.JournalEntryPage.gJV8iDqdNhRMLi5r#class-features]{游荡者特性表}）。</li></ul>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Expertise": {
           "title": "Expertise",
@@ -4193,26 +4193,26 @@
           "hint": "Your cunning mind is exceptionally difficult to control. You gain proficiency in Wisdom and Charisma saving throws."
         },
         "Epic Boon": {
-          "title": "Epic Boon",
+          "title": "传奇恩惠",
           "hint": "You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended."
         },
         "Weapon Mastery": {
-          "title": "Weapon Mastery"
+          "title": "武器精通"
         },
         "Saving Throw Proficiencies": {
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Tool Proficiencies": {
           "title": "Tool Proficiencies"
         },
         "Armor Training": {
-          "title": "Armor Training"
+          "title": "护甲受训"
         }
       }
     },
@@ -4249,7 +4249,7 @@
       "description": "<blockquote>    <p>以念为刃屠戮敌手</p>    </blockquote><p>魂刃者利用心灵的力量来攻击和渗透，击穿阻碍他们的物理和心灵障碍。这些盗贼在体内发现了灵能力量，并利用其来完成他们的老本行。作为一个魂刃者，你的灵能可能从你还是个孩子的时候就一直困扰着你，但直到你在面临冒险的压力时才完全显露潜能。又或者，你可能找到了一个隐居的灵能修士团，花了很多年的时间学习如何显现你的力量。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Psionic Power": {
           "title": "Psionic Power",
@@ -4309,7 +4309,7 @@
       "description": "<blockquote>    <p>追秘猎宝的经典冒险家</p></blockquote><p>强盗、宝藏猎人、探险家，你是一切经典冒险者形象的缩影。这个子职不仅提高了你的灵活与隐匿技术，还为你提供了探索古老遗迹的游荡技巧，使你永远能够最大化利用藏匿其中的魔法物品。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -4354,7 +4354,7 @@
       "description": "<blockquote>    <p>与原始野兽结缘</p></blockquote><p>驯兽师，他们同这片大地有着深刻的共鸣，挥舞着原初魔法与超自然野兽形成了神秘的联系。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -4459,7 +4459,7 @@
       "description": "<blockquote>    <p>驾驭妖精的哀与乐</p></blockquote><p>或来自一位至高妖精的恩惠，或是在妖精荒野中的一次奇遇，你的身侧因那次奇遇而有妖精的魔力缠绕。无论你是怎么得到了来自妖精的魔法的，你现在是一名妖精漫游者。你轻快的笑声为受压迫者们带来欣喜的希望，你英勇的技艺直击你敌人的恐惧，你所就的伟绩乃是妖精的喜悦，你散布的恐惧乃是妖精的愤怒。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Dreadful Strike Damage": {
           "title": "Dreadful Strike Damage"
@@ -4494,7 +4494,7 @@
       "description": "<blockquote>    <p>利用阴影魔法制敌</p></blockquote><p>幽域追猎者们以至暗之地为家，驾驭着来自堕影冥界的魔法，与潜伏在黑暗中的敌人作战。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Gloom Stalker Spells": {
           "title": "Gloom Stalker Spells"
@@ -4513,7 +4513,7 @@
       "description": "<blockquote>    <p>保护自然与人民免于毁灭</p></blockquote><p>你追逐猎物直到天涯海角，运用你的猎人的本领去保护自然与人民，使其不受灾祸的毁灭。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -4592,7 +4592,7 @@
       "description": "<blockquote>    <p>充盈着原初魔法的漫游武者</p></blockquote><h3>游侠核心特质</h3><table>    <tbody><tr>            <td>                <p>关键属性</p>            </td>            <td>                <p>敏捷和感知</p>            </td></tr><tr>            <td>                <p>生命骰</p>            </td>            <td>                <p>每游侠等级 D10</p>            </td></tr><tr>            <td>                <p>豁免熟练</p>            </td>            <td>                <p>力量与敏捷</p>            </td></tr><tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从驯兽、运动、洞悉、调查、自然、察觉、隐匿和生存中选择三项</p>            </td></tr><tr>            <td>                <p>武器熟练</p>            </td>            <td>                <p>简易武器和军用武器</p>            </td></tr><tr>            <td>                <p>护甲受训</p>            </td>            <td>                <p>轻甲、中甲、重甲和盾牌</p>            </td></tr><tr>            <td>                <p>起始装备</p>            </td>            <td>                <p>选择 A 或 B ：(A) 镶钉皮甲， 弯刀，短剑，长弓，20 支箭，箭袋，德鲁伊法器（槲寄生枝条），探索套组，和 7 GP；或（B）150 GP</p>            </td></tr></tbody></table><p>离开城镇的喧嚣，即是茂密的森林和广袤的原野。也正是游侠们进行无尽守望之地。他们向掠食者们学习如何追踪猎物，并借助荒野中的灌木丛和碎石在阴影中潜行。<br>熟悉荒野的游侠们从中获得了利用大自然魔力施展法术的能力。为保护世界免受怪物和暴君的侵袭，游侠的天赋和魔法往往都需要经历刀口舔血般的磨练。</p><h3>成为一名游侠...</h3><h4>作为 1 级角色</h4><ul>    <li>获得游侠核心特质表里的所有特质。</li>    <li>获得游侠的 1 级特性（见游侠特性表）</li></ul><h4>作为兼职角色</h4><ul>    <li>获得游侠核心特质表里的以下特质：生命值骰、军用武器熟练、从游侠技能熟练栏选择一项技能熟练、轻甲、中甲与盾牌的护甲受训。</li>    <li>获得游侠的 1 级特性（见游侠特性表）。你的可用法术位见第 2 章中的兼职规则。</li></ul>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Expertise": {
           "title": "Expertise"
@@ -4604,7 +4604,7 @@
           "title": "Deft Explorer"
         },
         "Epic Boon": {
-          "title": "Epic Boon"
+          "title": "传奇恩惠"
         },
         "Hunter's Mark Damage": {
           "title": "Hunter's Mark Damage"
@@ -4616,19 +4616,19 @@
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Armor Training": {
-          "title": "Armor Training"
+          "title": "护甲受训"
         },
         "Fighting Style": {
           "title": "Fighting Style"
         },
         "Weapon Mastery": {
-          "title": "Weapon Mastery"
+          "title": "武器精通"
         }
       }
     },
@@ -4769,7 +4769,7 @@
       "description": "<blockquote>    <p>操弄非自然的灵能力量</p></blockquote><p>一种异域的影响已经缠住你的心智，赐予了你灵能力量。现在你可以使用这种力量触碰他人心智，并扭转现实。这种力量会成为他人的希望灯塔？还是会让那些体会到你心灵刺痛的人感到恐惧？</p><p>也许来自星界的心灵风暴携着灵能洗刷了你，又或者你暴露在遥远国度的扭曲影响下。甚至，你可能是被植入了一只夺心魔蝌蚪，但你并没有变成夺心魔；现在蝌蚪的心灵力量归你所有。无论你是如何获得这种力量的，你的灵能心智自此被点燃。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Psionic Spells": {
           "title": "Psionic Spells",
@@ -4829,7 +4829,7 @@
       "description": "<blockquote>    <p>引导寰宇的秩序之力</p></blockquote><p>宇宙的秩序力量已经用魔法渗透了你。这种力量来自于机械境或类似的地方——一个完全由钟表齿轮运转的位面。你或你的血统中的人可能已经卷入了魔冢的远大计划中，魔冢是居住在机械境的秩序生物。也许你的祖先以某种方式参加了伟大的魔冢远征。不管你体内的这种力量起源于何处，机械境的力量对于其他人可能显得陌生而怪异，但对你来说那是他人所无法理解的宏大和璀璨的系统的一部分。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Clockwork Spells": {
           "title": "Clockwork Spells",
@@ -4858,7 +4858,7 @@
       "description": "<blockquote>    <p>吐纳巨龙魔法 </p></blockquote><p>你的天赋魔法源于龙族的魔力。也许一条远古龙在将死之际把自己部分魔力遗留给了你的先祖，也有可能你是从一个注入了龙之魔力的地方吸取得来，还有一种可能是你触碰到了出土于龙穴，浸入龙族力量的珍宝，甚至你的祖先就是龙也说不定。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Draconic Spells": {
           "title": "Draconic Spells",
@@ -5017,7 +5017,7 @@
       "description": "<blockquote>    <p>魔力与生俱来的耀眼巫师</p></blockquote><h3>术士核心特质</h3><table>    <tbody><tr>            <td>                <p>关键属性</p>            </td>            <td>                <p>魅力</p>            </td></tr><tr>            <td>                <p>生命骰</p>            </td>            <td>                <p>每术士等级 D6</p>            </td></tr><tr>            <td>                <p>豁免熟练</p>            </td>            <td>                <p>体质与魅力</p>            </td></tr><tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从奥秘、欺瞒、洞悉、威吓、游说或宗教中选择两项</p>            </td></tr><tr>            <td>                <p>武器熟练</p>            </td>            <td>                <p>简易武器</p>            </td></tr><tr>            <td>                <p>护甲受训</p>            </td>            <td>                <p>无</p>            </td></tr><tr>            <td>                <p>起始装备</p>            </td>            <td>                <p>选择 A 或 B ：（A）短矛、2 把匕首、奥术法器（水晶）、地城套组和 28 GP；或（B）50 GP</p>            </td></tr></tbody></table><p>术士的魔法力量与生俱来，这种魔力已经融进了他们的血脉里。有些术士已经说不清他们力量起源究竟是什么，而另一些术士认为自己的力量来自于他或是家族的某些奇遇。出生时受到龙或树灵的祝福，又或者万里无云降闪电，这些事情都有可能激起术法天赋的火苗。除此之外，神明的恩赐，暴露在另一个位面的怪诞魔法下，又或是一窥现实世界的内里，也有可能赐予术士力量。不论这股力量起源如何，所造成的结果已然成为术士身上不可磨灭的印记，那便是这世代传承的涌动魔法。</p><p>术士无需学习魔法，原始而沸腾的魔力本就已是他们的一部分。但他们只需要掌握驾驭引导天生魔力的方法，以此来寻获更高效，更强力的方式去释放他们的力量。随着术士慢慢掌握他们的魔力，他们与自己的术法起源也会越发协调，最终会发展出反映其来源的独特力量。</p><p>术士是罕见的。有些家族每一代都只会出现一个术士，不多也不少。不过大多数时候，术法天赋完全是偶然出现的。拥有这种魔法力量的人很快就会发现，这种力量不喜欢保持沉默。它想要自己被使用。</p><h3>成为一名术士...</h3><h4>作为 1 级角色</h4><ul>    <li>获得术士核心特质表中的所有特质。 </li>    <li>获得术士的 1 级特性（见@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSorcerer00000.JournalEntryPage.fsqRUA4acVXH4I3O#class-features]{术士特性表}）。 </li></ul><h3>作为兼职角色</h3><ul>    <li>获得术士核心特质表中的生命值骰。 </li>    <li>获得术士的 1 级特性（见术士特性表）。 你的可用法术位见第 2 章中的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbCreatingAChar.JournalEntryPage.vcs4jfEKRxPCsgXm]{兼职规则}。</li></ul>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Max Prepared Spells": {
           "title": "Max Prepared Spells"
@@ -5030,16 +5030,16 @@
           "hint": "Because your magic flows from within, you can alter your spells to suit your needs; you gain two Metamagic options."
         },
         "Epic Boon": {
-          "title": "Epic Boon"
+          "title": "传奇恩惠"
         },
         "Saving Throw Proficiencies": {
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Sorcery Points": {
           "title": "Sorcery Points"
@@ -5126,7 +5126,7 @@
       "description": "<blockquote>    <p>释放混沌魔力</p></blockquote><p>你天生的魔力来自于与创生之秩序相生相对的混沌之狂野力量。你也许曾经暴露于某种形式的原生魔力中；也许你穿越了一扇传送门到达了混沌海，元素位面，或者神秘的遥远国度。也许你受一名强大的精类生物祝福，或被一个恶魔选中；又或许你的魔力仅仅是天生如此，没有任何明确的原因。无论事情如何发生，这种混乱的魔力已经在你体内翻涌，随时等待着释放之时。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -5135,7 +5135,7 @@
       "description": "<blockquote>    <p>与喜怒无常的妖精交易</p></blockquote><p>你的契约从妖精荒野，神秘的妖精国度处取得力量。当你选择此子职业时，你可能与某个强大的至高妖精签订了契约，比如霜冻亲王；薄暮王庭之主，空暗女王；仲夏王庭的泰坦尼亚；苍翠之王奥伯龙；愚者亲王希尔萨姆；你可能是与众多妖精们共处，结成一道好感与人情交织的复杂网络。你宗主的行为往往难以理解，有时甚至不可理喻，而其动机通常是关于寻求更强魔力，或是渴望报复老旧仇怨。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Archfey Spells": {
           "title": "Archfey Spells",
@@ -5185,7 +5185,7 @@
       "description": "<blockquote>    <p>呼唤天堂诸界之伟力 </p></blockquote><p>你的契约从众上层位面，极乐永驻之地处取得力量。当你选择此子职业时，你可能与一位至高天，一条羽蛇，一只斯芬克斯，一匹独角兽，或其它与之相似的和那些领域有着联系存在达成协议。或者，你结识了众多与你目的一致的这些天界生物。你的契约令你沐浴在照亮多元宇宙的圣洁辉光之下。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Radiant Soul": {
           "title": "Radiant Soul",
@@ -5279,7 +5279,7 @@
       "description": "<blockquote>    <p>和下层位面之物签订契约</p></blockquote><p>你的契约从众下层位面——诸类邪魔之乡处取得力量。当你选择此子职业时，你可能完成了一次交易——对方可能是一位恶魔领主，诸如狄魔高根，奥喀斯；一位大魔鬼，诸如阿斯蒙蒂斯；亦可能是一位极为强大的深狱炼魔，巴洛炎魔，尤格罗斯魔，甚至是夜鬼婆。无论如何，你的宗主的目标都是邪恶的——邪魔们追求着世间万物的堕落与毁灭，而最终连你本身也无法独善其身。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Fiend Spells": {
           "title": "Fiend Spells",
@@ -5338,7 +5338,7 @@
       "description": "<blockquote>    <p>洞见不可名状的存在与知识</p></blockquote><p>当你选择此子职业时，你可能缚身遥远国度中的不可名状之存在，或是只在传说中出现过的失落古神——诸如潜伏者关纳德；受缚之神萨瑞兹顿；暗夜巨蛇丹德尔；归来者扎贡；伟大克苏鲁；或是其它不可观测的冷漠存在。或者，你靠着骇异的学识祈唤众多此等存在之名，并择取一位，与之结合。此等存在行为无法让凡人理解，这些旧日支配者可能完全没有意识到你的存在，或是对你的存在无动于衷——但你所学的神秘知识让你得以从其身上获得魔法。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Great Old One Spells": {
           "title": "Great Old One Spells",
@@ -5493,7 +5493,7 @@
       "description": "<blockquote>    <p>自异界魔契中汲取力量的玄秘学者</p></blockquote><h3>魔契师核心特质</h3><table>    <tbody><tr>            <td>                <p>关键属性</p>            </td>            <td>                <p>魅力</p>            </td></tr><tr>            <td>                <p>生命骰</p>            </td>            <td>                <p>每魔契师等级 D8</p>            </td></tr><tr>            <td>                <p>豁免熟练</p>            </td>            <td>                <p>感知与魅力</p>            </td></tr><tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从奥秘、欺瞒、历史、威吓、调查、自然或宗教中选择两项</p>            </td></tr><tr>            <td>                <p>武器熟练</p>            </td>            <td>                <p>简易武器</p>            </td></tr><tr>            <td>                <p>护甲受训</p>            </td>            <td>                <p>轻甲</p>            </td></tr><tr>            <td>                <p>起始装备</p>            </td>            <td>                <p>选择 A 或 B ：（A）皮甲、镰刀、2 把匕首、奥术法器（宝珠）、书（玄秘学识）、学者套组、15 GP 或（B）100GP</p>            </td></tr></tbody></table><p>魔契师追寻隐于多元宇宙之下的知识。为了追寻魔法力量，起初他们会钻研大量的禁忌学识，进而知晓了吸引异界存在注目的法术，或者是便是寻觅到了能感受到异界存在的力量之地。在此之后，契术士便会与一位强大的宗主签下被束缚的契约。汲取来自天使，至高妖精，恶魔，魔鬼，鬼婆甚至遥远国度外星存在的远古学识，魔契师将这些奥法之秘拼凑起来，进而转为自己的力量。</p><p>魔契师认为他们的宗主只是一种资源，是他们获得魔法力量的手段。有些魔契师尊重、敬畏甚至热爱他们的宗主；有些人则并不那么情愿为他们的宗主服务；有些人则尝试削弱他们的宗主，即使他们所操弄的力量正是来自于他们的宗主。</p><p>一旦签下契约，魔契师对知识和力量的渴求便难以仅通过学习来满足。大部分魔契师毕生都在追求更卓越的力量和更深邃的知识，而这往往通向一条冒险之路。</p><h3>成为一名魔契师…</h3><h4>作为 1 级角色</h4><ul>    <li>获得魔契师核心特质表里的所有特质。 </li>    <li>获得魔契师的1级特性（见@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbWarlock000000.JournalEntryPage.znue6EaGDDXgeQb0#class-features]{魔契师特性表}）</li></ul><h3>作为兼职角色</h3><ul>    <li>获得魔契师核心特质表里的以下能力：生命值骰和轻甲的护甲受训。 </li>    <li>获得魔契师的1级特性（见魔契师特性表）。你的可用法术位见第 2 章中的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbCreatingAChar.JournalEntryPage.vcs4jfEKRxPCsgXm]{兼职规则} 。</li></ul>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "bwCLOdauuzoHofil": {
           "hint": "You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Warlock levels 8, 12, and 16."
@@ -5528,20 +5528,20 @@
           "hint": "In the past, you usually contacted your patron through intermediaries. Now you can communicate directly; you always have the Contact Other Plane spell prepared."
         },
         "Epic Boon": {
-          "title": "Epic Boon",
+          "title": "传奇恩惠",
           "hint": "You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended."
         },
         "Saving Throw Proficiencies": {
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         },
         "Armor Training": {
-          "title": "Armor Training"
+          "title": "护甲受训"
         }
       }
     },
@@ -5554,7 +5554,7 @@
       "description": "<blockquote>    <p>保卫同伴，放逐仇敌</p></blockquote><p>你对魔法的研究集中在阻挡、驱逐和保护的法术上——结束有害影响、消除邪恶影响和保护弱者。防护师能够驱逐恶灵、于重要地点防范魔法窥视、关闭通往其他存在位面的门扉。防护师对冒险队伍非常有价值，因为他们能够从各种敌对魔法和其他攻击中保护同伴。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Spell Breaker": {
           "title": "Spell Breaker",
@@ -5595,7 +5595,7 @@
       "description": "<blockquote>    <p>探究多元宇宙之秘</p></blockquote><p>那些寻求对过去、现在和未来有更清晰了解的人会寻求预言师的建议。作为一位预言师，你致力于揭开空间、时间与意识的面纱。你努力掌握的法术囊括识别能力、千里眼、超自然学识和预警等内容。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -5621,7 +5621,7 @@
       "description": "<blockquote>    <p>轰天震地元素奥能</p></blockquote><p>你专注于研习以魔力创造威力惊人的元素力量，诸如苦寒、灼焰、惊雷、汲电和烈酸。一些塑能师会接受军队的雇佣，充当从远处轰炸敌人的炮兵。其他人以其惊人力量保护弱小，另一些人则作为冒险者寻求自身的利益。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -5647,7 +5647,7 @@
       "description": "<blockquote>    <p>编织精妙的欺瞒法术</p></blockquote><p>你专精于能扰乱感官、迷惑心灵的魔法，而你创造的幻象足够以假乱真。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         },
         "Improved Illusions": {
           "title": "Improved Illusions"
@@ -5831,7 +5831,7 @@
       "description": "<blockquote>    <p>学术派奥术施法者</p></blockquote><h3>法师核心特质</h3><table>    <tbody>        <tr>            <td>                <p>关键属性</p>            </td>            <td>                <p>智力</p>            </td>        </tr>        <tr>            <td>                <p>生命骰</p>            </td>            <td>                <p>每法师等级 D6</p>            </td>        </tr>        <tr>            <td>                <p>豁免熟练</p>            </td>            <td>                <p>智力与感知</p>            </td>        </tr>        <tr>            <td>                <p>技能熟练</p>            </td>            <td>                <p>从奥秘、历史、洞悉、调查、医学、自然或宗教中选择两项</p>            </td>        </tr>        <tr>            <td>                <p>武器熟练</p>            </td>            <td>                <p>简易武器</p>            </td>        </tr>        <tr>            <td>                <p>护甲受训</p>            </td>            <td>                <p>无</p>            </td>        </tr>        <tr>            <td>                <p>起始装备</p>            </td>            <td>                <p>选择 A 或 B ：（A） 2 把匕首、奥术法器（长棍）、长袍、魔法书、学者套组和 5 GP；或 （B）55 GP</p>            </td>        </tr>    </tbody></table><p>所谓法师，便是对魔法运作原理钻研探索之人。喷射火焰，奥法闪电，欺诈幻象以及变换身形，这一切都可以由法师施法得来。不止如此，他们手中的魔法还可以唤来异界存在，一瞥未来明细，又或是降下护佑屏障。而最为强大的法术甚至可以点石成金，坠下陨石，打开通往异界的传送门。大多数法师都对魔法抱有学术研究的态度。他们研究魔法的理论基础，尤其是魔法学派的法术分类。毕格比、塔莎、魔邓肯和悠兰德等知名魔法师在研究的基础上发明了他们的招牌法术，如今这些法术已在多元宇宙中广泛使用。</p><p>法师最接近普通人的生活就是担任智者或讲师。还有一些法师则会出售其服务而成为预言家，服役于军队,或者甚至用其力量实施犯罪或支配他人。</p><p>不过知识与力量的诱惑足以令最不想冒险的法 师走出其安全的图书馆和实验室，前往那些废墟和失落城市中。绝大多数法师坚信远古时代的同行们掌握了一些现今已失传许久的魔法奥秘。而只要找到这些秘密，就能获得远超现有魔法的强大力量。</p><p></p><h2>成为一名法师...</h2><h4>作为 1 级角色</h4><ul>    <li>获得法师核心特质表中的所有特质。</li>    <li>获得法师的 1 级特性（见法师特性表）。</li></ul><h4>作为兼职职业</h4><ul>    <li>获得法师核心特质表中的生命值骰。</li>    <li>获得法师的 1 级特性（见@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbWizard0000000.JournalEntryPage.g7cMRWzsgAsEF7zC#class-features]{法师特性表}）。你的可用法术位见第 2 章中的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbCreatingAChar.JournalEntryPage.vcs4jfEKRxPCsgXm]{兼职规则} 。</li></ul><aside class=\"notable\">    <p><strong>扩展与替换法术书</strong></p>    <p>例如，你发现了一张记载法师法术的卷轴，然后将其抄录到你的法术书中。</p>    <p><strong>将法术抄入法术书。</strong>当你发现一道 1 环或更高环阶的法师法术时，你可以将其抄入你的法术书中，前提是，你必须能够准备该法术，且也有时间去解读和复制它。这个过程将消耗每法术环阶 2 小时的时间和每法术环阶 50 GP的资金。之后你就可以像准备法术书中的其他法术一样准备该法术了。</p>    <p><strong>复制法术书。</strong> 你可以将法术书中的法术复制到其他法术书中。这就像把一个新法术复制到你的法术书中，但速度更快，因为你已经知道如何施法了。每个法术环阶只会消耗你10 GP和 1 小时。</p><p>如果你的法术书丢了，你可以用同样的方法将你准备好的法师法术复制到新的法术书中。填写新法术书的剩余部分需要你寻找新的法术来完 成。因此，许多法师都会保留一本备用法术书。</p></aside>",
       "advancement": {
         "Class Features": {
-          "title": "Class Features"
+          "title": "职业特性"
         },
         "Max Prepared Spells": {
           "title": "Max Prepared Spells"
@@ -5844,17 +5844,17 @@
           "hint": "While studying magic, you also specialized in another field of study. Choose one of the following skills in which you have proficiency. You have Expertise in the chosen skill."
         },
         "Epic Boon": {
-          "title": "Epic Boon",
+          "title": "传奇恩惠",
           "hint": "You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Spell Recall is recommended."
         },
         "Saving Throw Proficiencies": {
           "title": "Saving Throw Proficiencies"
         },
         "Skill Proficiencies": {
-          "title": "Skill Proficiencies"
+          "title": "技能熟练"
         },
         "Weapon Proficiencies": {
-          "title": "Weapon Proficiencies"
+          "title": "武器熟练"
         }
       }
     }
