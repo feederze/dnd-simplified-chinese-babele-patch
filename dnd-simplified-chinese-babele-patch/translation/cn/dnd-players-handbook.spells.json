@@ -2631,78 +2631,78 @@
       "description": "<p>你在施法距离内创造一个魔法效应。从下述效应中选择一项。如果你多次施展该法术，则可以同时维持至多三个不同的非即时效应。</p><p><strong>感官效应。</strong> 你创造一个立即生效的，无害的感官效应，比如一束火花，一阵风，微弱音乐或古怪的臭味。</p><p><strong>玩火。</strong> 你立即点燃或熄灭一根蜡烛、一根火把或一处小篝火。</p><p><strong>清洁或弄脏。</strong> 你立即清洁或弄脏一个体积不大于 1 立方尺的物件。</p><p><strong>次级感觉。</strong> 你使一个不大于 1 立方尺的非活体物质变冷、变暖或对其调味，持续 1 小时。</p><p><strong>魔法印记。</strong> 你在一个物件或一个表面上创造一块色斑，一个小印记，或者一个徽记，持续 1 小时。</p><p><strong>次级造物。</strong> 你创造出一个非魔法小饰品或一张虚幻图像，其大小不能超过你的手掌大小，它会持续存在至下个你的回合结束为止。一个小饰品不能造成伤害，也不值任何钱。</p>"
     },
     "Prismatic Spray": {
-      "name": "Prismatic Spray",
-      "description": "<p>Eight rays of light flash from you in a 60-foot Cone. Each creature in the Cone makes a Dexterity saving throw. For each target, roll 1d8 to determine which color ray affects it, consulting the Prismatic Rays table.</p><p>@Embed[Compendium.dnd-players-handbook.tables.RollTable.phbPrismaticRays rollable=true caption=false]{Prismatic Rays}</p>",
+      "name": "虹光喷射",
+      "description": "<p>八条光线从你的手上闪出，作用于 60 尺锥形范围。每名位于锥形之中的生物进行一次敏捷豁免。为每个目标掷一次 1d8 来决定影响到它的射线种类，参照虹光射线表。</p><p>@Embed[Compendium.dnd-players-handbook.tables.RollTable.phbPrismaticRays rollable=true caption=false]{虹光射线}</p>",
       "activities": {
         "Cast": {
-          "name": "Cast"
+          "name": "施展"
         },
         "Indigo Save (Con)": {
-          "name": "Indigo Save (Con)"
+          "name": "靛光豁免（体质）"
         },
         "Violet Save (Wis)": {
-          "name": "Violet Save (Wis)"
+          "name": "紫光豁免（感知）"
         }
       },
       "effects": {
         "Petrifying (Indigo)": {
-          "name": "Petrifying (Indigo)",
-          "description": "<p>The target has the &amp;Reference[Restrained apply=false] condition and makes a [[/save ability=con format=long]] at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the &amp;Reference[Petrified] condition until it is freed by an effect like the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{Greater Restoration}</em> spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind.</p>"
+          "name": "石化（靛）",
+          "description": "<p>你陷入&Reference[Restrained apply=false]状态，且你每一回合结束进行一次[[/save ability=con format=long]]{体质豁免}。在累计三次豁免成功后，状态终止。在累计三次豁免失败后，你被转化为石头陷入&Reference[Petrified]{石化}状态，直到此状态被 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{高等复原术}</em>或类似效应解除为止。成功或失败的检定不需要连续；只要记录各情况的次数直至其中一方累计三次为止。</p>"
         },
         "Teleporting (Violet)": {
-          "name": "Teleporting (Violet)",
-          "description": "<p>The target has the &amp;Reference[Blinded apply=false] condition and makes a [[/save ability=wis format=long]] at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM’s choice).</p>"
+          "name": "传送（紫）",
+          "description": "<p>你陷入&Reference[Blinded apply=false]状态且在你的下一回合开始时进行一次 [[/save ability=wis format=long]]{感知豁免}。豁免成功，状态终止。豁免失败，状态终止，且你会被传送到另一个存在位面（由DM选择）。</p>"
         }
       }
     },
     "Prismatic Wall": {
-      "name": "Prismatic Wall",
-      "description": "<p>A shimmering, multicolored plane of light forms a vertical opaque wall—up to 90 feet long, 30 feet high, and 1 inch thick—centered on a point within range. Alternatively, you shape the wall into a globe up to 30 feet in diameter centered on a point within range. The wall lasts for the duration. If you position the wall in a space occupied by a creature, the spell ends instantly without effect.</p><p>The wall sheds &amp;Reference[BrightLight] within 100 feet and &amp;Reference[DimLight] for an additional 100 feet. You and creatures you designate when you cast the spell can pass through and be near the wall without harm. If another creature that can see the wall moves within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or have the &amp;Reference[Blinded apply=false] condition for 1 minute.</p><p>The wall consists of seven layers, each with a different color. When a creature reaches into or passes through the wall, it does so one layer at a time through all the layers. Each layer forces the creature to make a Dexterity saving throw or be affected by that layer’s properties as described in the Prismatic Layers table.</p><p>The wall, which has AC 10, can be destroyed one layer at a time, in order from red to violet, by means specific to each layer. If a layer is destroyed, it is gone for the duration. <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAntimagicF]{Antimagic Field}</em> has no effect on the wall, and <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em> can affect only the violet layer.</p><table><caption>Prismatic Layers</caption><thead><tr><td>Order</td><td>Effects</td></tr></thead><tbody><tr><td>1</td><td><strong>Red.</strong> <em>Failed Save:</em> 12d6 Fire damage. <em>Successful Save:</em> Half as much damage. <em>Additional Effects</em>: Nonmagical ranged attacks can’t pass through this layer, which is destroyed if it takes at least 25 Cold damage.</td></tr><tr><td>2</td><td><strong>Orange.</strong> <em>Failed Save:</em> 12d6 Acid damage. <em>Successful Save:</em> Half as much damage. <em>Additional Effects:</em> Magical ranged attacks can’t pass through this layer, which is destroyed by a strong wind (such as the one created by <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]{Gust of Wind}</em>).</td></tr><tr><td>3</td><td><strong>Yellow.</strong> <em>Failed Save:</em> 12d6 Lightning damage. <em>Successful Save:</em> Half as much damage. <em>Additional Effects:</em> The layer is destroyed if it takes at least 60 Force damage.</td></tr><tr><td>4</td><td><strong>Green.</strong> <em>Failed Save:</em> 12d6 Poison damage. <em>Successful Save:</em> Half as much damage. <em>Additional Effects:</em> A <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswall00]{Passwall}</em> spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer.</td></tr><tr><td>5</td><td><strong>Blue.</strong> <em>Failed Save:</em> 12d6 Cold damage. <em>Successful Save:</em> Half as much damage. <em>Additional Effects:</em> The layer is destroyed if it takes at least 25 Fire damage.</td></tr><tr><td>6</td><td><strong>Indigo.</strong> <em>Failed Save:</em> The target has the &amp;Reference[Restrained apply=false] condition and makes a [[/save ability=con dc=@attributes.spell.dc format=long]] at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the &amp;Reference[Petrified] condition until it is freed by an effect like the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{Greater Restoration}</em> spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind. <em>Additional Effects:</em> Spells can’t be cast through this layer, which is destroyed by Bright Light shed by the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDaylight00]{Daylight}</em> spell.</td></tr><tr><td>7</td><td><strong>Violet.</strong> <em>Failed Save:</em> The target has the &amp;Reference[Blinded apply=false] condition and makes a [[/save ability=wis dc=@attributes.spell.dc format=long]] at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM’s choice). <em>Additional Effects:</em> This layer is destroyed by <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em>.</td></tr></tbody></table>",
+      "name": "虹光法墙",
+      "description": "<p>以施法距离内你一点为源点，各种色彩的光芒形成光面，再组合构成一道不透明的垂直墙壁。法墙至多长 90 尺，高 30 尺，厚 1 寸。作为另一种选项，你也能以施法距离内你能看到的一点为中心，将法墙塑造成一个直径至多 30 尺的球体。法墙在持续时间内一直存在。如果你指定法墙生成的空间已被生物占据，则法术立即结束且不产生任何效应。</p><p>法墙发出 100 尺的&Reference[BrightLight]{明亮光照}，以及其外 100 尺的&Reference[DimLight]{微光光照}。施展该法术时你可以指定任意数量的生物，法墙存在期间你与所指定的生物可以穿过法墙或停留在法墙附近而不受伤害。如果其他能看见法墙的生物移动到距墙 20 尺内或在该处开始其回合，则该生物必须进行一次体质豁免，豁免失败则陷入&Reference[Blinded apply=false]{目盲}状态，持续 1 分钟。</p><p>法墙由七层组成，每层都有不同颜色。生物试图进入或穿过法墙时，将逐层穿过法墙所有的光层。其每穿过一层就必须进行一次敏捷豁免，豁免失败则受虹光光层表中所述特性影响。</p><p>法墙的 AC 为 10，可以被摧毁，不过也必须由红到紫的顺序一次一层地按照特定的方式逐层摧毁。某个光层一旦被摧毁则其在法术持续时间内保持被摧毁状态。<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAntimagicF]{反魔法场}</em>无法对法墙生效，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{解除魔法}</em>只对紫墙有效。</p><table><caption>虹光光层 Prismatic Layers</caption><thead><tr><td>顺序</td><td>效应</td></tr></thead><tbody><tr><td>1</td><td><strong>红 Red。</strong>豁免失败 ：12d6 点火焰伤害。豁免成功：半伤。额外效应：非魔法远程攻击无法。穿过此层，此层受到 25 点寒冷伤害后被摧毁。</td></tr><tr><td>2</td><td><strong>橙 Orange。</strong>豁免失败：12d6 点强酸伤害。豁免成功：半伤。额外效应 ：魔法远程攻击无法穿过此层，此层受强风（如 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]{造风术}</em>创造的风）吹袭后被摧毁。</td></tr><tr><td>3</td><td><strong>黄 Yellow。</strong>豁免失败：12d6 点闪电伤害。豁免成功：半伤。额外效应 ：此层受到 60 点力场伤害后被摧毁。</td></tr><tr><td>4</td><td><strong>绿 Green。</strong><em>豁免失败：12d6 点毒素伤害。豁免成功：半伤。额外效应 ：此层受@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswall00]{穿墙术}</em>，或者其它相同或更高环阶法术在固态表面开口的效应影响时被摧毁。</td></tr><tr><td>5</td><td><strong>蓝 Blue。</strong>豁免失败：12d6 点寒冷伤害。豁免成功：半伤。额外效应 ：此层受到 25 点火焰伤害后被摧毁。</td></tr><tr><td>6</td><td><strong>靛 Indigo。</strong>豁免失败：目标陷入 &Reference[Restrained apply=false]{目盲}状态，且其每个回合结束进行一次 [[/save ability=con dc=@attributes.spelldc format=long]]{体质豁免}。在累计三次豁免成功后，状态终止。在累计三次豁免失败后，该生物被转化为石头陷入 &Reference[Petrified]{石化}状态，直到此状态被<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{高等复原术}</em>或类似效应解除为止。成功或失败的检定不需要连续；只要记录各情况的次数直至其中一方累计三次为止。额外效应 ：法术无法穿过此层，此层受到 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDaylight00]{昼明术}</em>的明亮光照照射后被摧毁。</td></tr><tr><td>7</td><td><strong>紫 Violet。</strong><em>豁免失败：目标陷入</em> &Reference[Blinded apply=false]{目盲}状态且在下一个你的回合开始时进行一次 [[/save ability=wis dc=@attributes.spelldc format=long]]{感知豁免}。豁免成功，状态终止。豁免失败，状态终止，且该生物会被传送到另一个存在位面（由 DM 选择）。额外效应 ：此层受<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{解除魔法}</em>解除后被摧毁。</td></tr></tbody></table>",
       "activities": {
         "Create Wall": {
-          "name": "Create Wall"
+          "name": "创造法墙"
         },
         "Create Globe": {
-          "name": "Create Globe"
+          "name": "创造法球"
         },
         "Blinding Save": {
-          "name": "Blinding Save",
-          "rangeSpecial": "measured from nearest point on wall or globe"
+          "name": "目盲豁免",
+          "rangeSpecial": "刻在门或墙上的浮雕"
         },
         "Traversal Save": {
-          "name": "Traversal Save"
+          "name": "穿越豁免"
         }
       },
       "effects": {
         "Prismatic Blinding": {
-          "name": "Prismatic Blinding",
-          "description": "<p>The target has the &amp;Reference[Blinded apply=false] condition for 1 minute.</p>"
+          "name": "光层目盲",
+          "description": "<p>你陷入 &Reference[Blinded apply=false] 状态，持续 1 分钟。</p>"
         },
         "Restrained (Indigo)": {
-          "name": "Restrained (Indigo)",
-          "description": "<p>The target has the &amp;Reference[Restrained apply=false] condition and makes a [[/save ability=con dc=@attributes.spell.dc]] format=long]] at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the &amp;Reference[Petrified] condition until it is freed by an effect like the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{Greater Restoration}</em> spell.</p>"
+          "name": "束缚（靛）",
+          "description": "<p>你陷入&Reference[Restrained apply=false]状态，且每一回合结束进行一次[[/save ability=con dc=@attributes.spelldc format=long]]{体质豁免}。在累计三次豁免成功后，状态终止。在累计三次豁免失败后，你被转化为石头陷入 &Reference[Petrified] 状态，直至此状态被<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{高等复原术}</em>或类似效应解除为止。成功或失败的检定不需要连续；只要记录各情况的次数直至其中一方累计三次为止。</p>"
         },
         "Blinded (Violet)": {
-          "name": "Blinded (Violet)",
-          "description": "<p> The target has the &amp;Reference[Blinded apply=false] condition and makes a [[/save ability=wis dc=@attributes.spell.dc format=long]] at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM’s choice).</p>"
+          "name": "目盲（紫）",
+          "description": "<p>你陷入&Reference[Blinded apply=false]状态且在你的下一回合开始时进行一次 [[/save ability=wis dc=@attributes.spelldc format=long]]{感知豁免}。豁免成功，状态终止。豁免失败，状态终止，且你会被传送到另一个存在位面（由DM选择）。</p>"
         }
       }
     },
     "Produce Flame": {
-      "name": "Produce Flame",
-      "description": "<p>A flickering flame appears in your hand and remains there for the duration. While there, the flame emits no heat and ignites nothing, and it sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The spell ends if you cast it again.</p><p>Until the spell ends, you can take a Magic action to hurl fire at a creature or an object within 60 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 Fire damage.</p><p><strong>Cantrip Upgrade.</strong> The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).</p>",
+      "name": "燃火术",
+      "description": "<p>一朵摇曳的火焰出现在你手中，火焰会存在至法术持续时间结束为止。火焰在你手中期间，不会散发任何热量也不会点燃任何东西，发出 20 尺半径的&Reference[brightlight]{明亮光照}，以及其外 20 尺范围的&Reference[dimlight]{微光光照}。此法术会在你再次施展它时提前终止。</p><p>直到法术结束为止，你可以用魔法动作向 60 尺内的一名生物或一个物件丢出火焰。进行一次远程法术攻击。命中时，目标将受到 1d8 点火焰伤害。</p><p><strong>戏法强化：</strong> 到达特定等级后，此戏法的伤害将增加 1d8：5 级（2d8）、11 级（3d8）、17 级（4d8）。</p>",
       "activities": {
         "Cast": {
-          "name": "Cast"
+          "name": "施展"
         },
         "Hurl Fire": {
-          "name": "Hurl Fire"
+          "name": "投掷火焰"
         }
       }
     },
     "Programmed Illusion": {
-      "name": "Programmed Illusion",
-      "description": "<p>You create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific trigger occurs. The illusion is imperceptible until then. It must be no larger than a 30-foot Cube, and you decide when you cast the spell how the illusion behaves and what sounds it makes. This scripted performance can last up to 5 minutes.</p><p>When the trigger you specify occurs, the illusion springs into existence and performs in the manner you described. Once the illusion finishes performing, it disappears and remains dormant for 10 minutes, after which the illusion can be activated again.</p><p>The trigger can be as general or as detailed as you like, though it must be based on visual or audible phenomena that occur within 30 feet of the area. For example, you could create an illusion of yourself to appear and warn off others who attempt to open a trapped door.</p><p>Physical interaction with the image reveals it to be illusory, since things can pass through it. A creature that takes the Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature.</p>",
+      "name": "预置幻象",
+      "description": "<p>你在施法距离内创造一个物件，一名生物，或是其他可视现象的幻象，此幻象在满足特定触发条件时会被激活。该幻象在被激活前无法被察觉。幻象必须不大于 30 尺立方，且由你决定幻术如何行动和发声。这种按脚本执行的表演可以持续至多 5 分钟。</p><p>当你指定的触发条件发生时，幻象会迅速成型，并以你设定的方式运作。幻术终止运作之后，它消失并休眠 10 分钟，在休眠结束之后幻象便可再次被激活。</p><p>触发条件可以宽泛也可以按你喜好进行细化，但必须是发生在距幻象区域 30 尺内的能看到或听到的现象。例如，你可以制造一个自己的幻象，在其他人试图打开一扇卡住的门时出现并发出警告。</p><p>由于东西可以穿过幻象，任何与该幻象进行的物理互动都会暴露其幻觉本质。一名生物可以用一个&Reference[study]{研究}动作进行一次对抗你法术豁免 DC 的成功智力（调查）检定以看穿幻象。辨出幻象的生物可以看穿该影像，其产生的声响对该生物而言显得虚假。</p>",
       "activities": {
         "Create Illusion": {
           "name": "制造幻象"
@@ -2710,8 +2710,8 @@
       }
     },
     "Project Image": {
-      "name": "Project Image",
-      "description": "<p>You create an illusory copy of yourself that lasts for the duration. The copy can appear at any location within range that you have seen before, regardless of intervening obstacles. The illusion looks and sounds like you, but it is intangible. If the illusion takes any damage, it disappears, and the spell ends.</p><p>You can see through the illusion’s eyes and hear through its ears as if you were in its space. As a Magic action, you can move it up to 60 feet and make it gesture, speak, and behave in whatever way you choose. It mimics your mannerisms perfectly.</p><p>Physical interaction with the image reveals it to be illusory, since things can pass through it. A creature that takes the Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature.</p>",
+      "name": "投影术",
+      "description": "<p>你创造一个自己的幻象分身，并使其在法术持续时间内维持存在。该分身可以出现在施法距离内你曾见过的任何地点，而不论中间是否存在障碍物。该幻象看起来和听起来都与你一样，只是没有现实形体。幻象受到伤害时会立即消失，法术终止。</p><p>你可以通过分身的眼睛视物，用分身的耳朵聆听，如同你处于它的位置一样。用一个&Reference[magic]{魔法}动作，你能使分身移动至多 60 尺，而其姿态、言语和行为均按照你的指定作表现。幻象可以完美地模仿你的举止。</p><p>由于东西可以穿过幻象，任何与该幻象进行的物理互动都会暴露其幻觉本质。一名生物可以采取&Reference[study]{研究}动作进行一次对抗你法术豁免 DC 的成功智力（[[/check ability=int skill=inv dc=@attributes.spelldc]]{调查}）检定以看穿幻象。辨出幻象的生物可以看穿该影像，其产生的声响对该生物而言显得虚假。</p>",
       "activities": {
         "Create Illusion": {
           "name": "制造幻象"
@@ -2719,95 +2719,95 @@
       }
     },
     "Protection from Poison": {
-      "name": "Protection from Poison",
-      "description": "<p>You touch a creature and end the &amp;Reference[poisoned] condition on it. For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.</p>",
+      "name": "防护毒素",
+      "description": "<p>你触及一名生物并结束其陷入的&Reference[poisoned apply=false]{中毒}状态。在持续时间内，目标为避免陷入或结束中毒状态所做的豁免具有优势，且具有毒素伤害的&Reference[resistance]{抗性}。</p>",
       "effects": {
         "Poison Protection": {
-          "name": "Poison Protection",
-          "description": "<p><span style=\"font-family:Signika, sans-serif\">For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.</span></p>"
+          "name": "抵抗毒素",
+          "description": "<p>在持续时间内，你在避免陷入或结束 &Reference[poisoned] 状态的豁免上具有优势，且具有对毒素伤害的抗性。</p>"
         }
       }
     },
     "Purify Food and Drink": {
-      "name": "Purify Food and Drink",
-      "description": "<p>You remove poison and rot from nonmagical food and drink in a 5-foot-radius Sphere centered on a point within range.</p>"
+      "name": "净化饮食",
+      "description": "<p>以施法距离内一点为中心，你移除半径 5 尺球状区域内非魔法食物与饮品中的毒素和腐败。</p>"
     },
     "Raise Dead": {
-      "name": "Raise Dead",
-      "description": "<p>With a touch, you revive a dead creature if it has been dead no longer than 10 days and it wasn’t Undead when it died.</p><p>The creature returns to life with 1 Hit Point. This spell also neutralizes any poisons that affected the creature at the time of death.</p><p>This spell closes all mortal wounds, but it doesn’t restore missing body parts. If the creature is lacking body parts or organs integral for its survival—its head, for instance—the spell automatically fails.</p><p>Coming back from the dead is an ordeal. The target takes a −4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.</p>",
+      "name": "死者复活",
+      "description": "<p>你触碰一名已死，但死亡时间不超过 10 日，且死亡时并非亡灵的生物，使其回生。</p><p>生物以 1 点生命值重生。该法术同样会中和在该生物死亡时仍在生效的毒素。</p><p>该法术能治愈所有致命伤，但无法恢复失去的身体部位。如果该生物缺失了它生存所必要的身体部位或器官（比如头），则该法术自动失败。</p><p>死而复生是一个痛苦的体验。目标进行 D20 检定时具有 -4 减值。目标每完成一次长休，其减值就减少 1，直至减值变为 0。</p>",
       "activities": {
         "Revive": {
-          "name": "Revive"
+          "name": "复活"
         }
       },
       "effects": {
         "Resurrection Sickness (Day 1)": {
-          "name": "Resurrection Sickness (Day 1)",
-          "description": "<p>Coming back from the dead is an ordeal. The target takes a −4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.</p>"
+          "name": "死而复生（第 1 天）",
+          "description": "<p>死而复生是一个痛苦的体验。目标进行 D20 检定时具有 -4 减值。目标每完成一次长休，其减值就减少 1，直至减值变为 0。</p>"
         },
         "Resurrection Sickness (Day 2)": {
-          "name": "Resurrection Sickness (Day 2)",
-          "description": "<p>Coming back from the dead is an ordeal. The target takes a −4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.</p>"
+          "name": "死而复生（第 2 天）",
+          "description": "<p>死而复生是一个痛苦的体验。目标进行 D20 检定时具有 -4 减值。目标每完成一次长休，其减值就减少 1，直至减值变为 0。</p>"
         },
         "Resurrection Sickness (Day 4)": {
-          "name": "Resurrection Sickness (Day 4)",
-          "description": "<p>Coming back from the dead is an ordeal. The target takes a −4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.</p>"
+          "name": "死而复生（第 4 天）",
+          "description": "<p>死而复生是一个痛苦的体验。目标进行 D20 检定时具有 -4 减值。目标每完成一次长休，其减值就减少 1，直至减值变为 0。</p>"
         },
         "Resurrection Sickness (Day 3)": {
-          "name": "Resurrection Sickness (Day 3)",
-          "description": "<p>Coming back from the dead is an ordeal. The target takes a −4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.</p>"
+          "name": "死而复生（第 3 天）",
+          "description": "<p>死而复生是一个痛苦的体验。目标进行 D20 检定时具有 -4 减值。目标每完成一次长休，其减值就减少 1，直至减值变为 0。</p>"
         }
       }
     },
     "Rary's Telepathic Bond": {
-      "name": "Rary's Telepathic Bond",
-      "description": "<p>You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures that can’t communicate in any languages aren’t affected by this spell.</p><p>Until the spell ends, the targets can communicate telepathically through the bond whether or not they share a language. The communication is possible over any distance, though it can’t extend to other planes of existence.</p>",
+      "name": "拉瑞心灵联结",
+      "description": "<p>你使得施法距离内你选择的至多八名自愿生物在法术持续时间内建立心灵连线。不能以任何语言进行沟通的生物不受该法术影响。</p><p>直到法术终止，所有受术生物都可以通过心灵连线与其他受术生物进行心灵感应，不论他们是否语言相通。该交流方式可以跨越任意距离，但不能跨过存在位面。</p>",
       "activities": {
         "Forge Telepathic Link": {
-          "name": "Forge Telepathic Link"
+          "name": "建立心灵连线"
         }
       },
       "effects": {
         "Bonded Telepathy": {
-          "name": "Bonded Telepathy"
+          "name": "联结心灵感应"
         }
       }
     },
     "Ray of Enfeeblement": {
-      "name": "Ray of Enfeeblement",
-      "description": "<p>A beam of enervating energy shoots from you toward a creature within range. The target must make a Constitution saving throw. On a successful save, the target has Disadvantage on the next attack roll it makes until the start of your next turn.</p><p>On a failed save, the target has Disadvantage on Strength-based D20 Tests for the duration. During that time, it also subtracts 1d8 from all its damage rolls. The target repeats the save at the end of each of its turns, ending the spell on a success.</p>",
+      "name": "衰弱射线",
+      "description": "<p>你向施法距离内的一名生物射出一道让人衰弱的能量射线。目标必须进行一次体质豁免。豁免成功，则目标直到你的下个回合开始在下一次攻击掷骰上具有&Reference[disadvantage]{劣势}。</p><p>豁免失败，目标在持续时间内在使用力量属性的 D20 检定上具有劣势。同样的，在此期间，其所有的伤害掷骰获得 1d8 的减值。目标在每个其回合结束时可以重复豁免，豁免成功则法术终止。</p>",
       "effects": {
         "Brief Enfeeblement": {
-          "name": "Brief Enfeeblement",
-          "description": "<p>The target has Disadvantage on the next attack roll it makes until the start of your next turn.</p>"
+          "name": "短暂衰弱",
+          "description": "<p>你直至你的下一回合开始在下一次攻击掷骰上具有劣势。</p>"
         },
         "Enervated": {
-          "name": "Enervated",
-          "description": "<p>The target has Disadvantage on Strength-based D20 Tests for the duration. During that time, it also subtracts 1d8 from all its damage rolls. The target repeats the [[/save ability=con]] save at the end of each of its turns, ending the spell on a success.</p>"
+          "name": "无力",
+          "description": "<p>你在持续时间内在使用力量属性的 D20 检定上具有劣势。同样的，在此期间，其所有的伤害掷骰获得 1d8 的减值。目标在每个其回合结束时可以重复[[/save ability=con]]{豁免}，豁免成功则法术终止。</p>"
         }
       }
     },
     "Ray of Frost": {
-      "name": "Ray of Frost",
-      "description": "<p>A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 Cold damage, and its Speed is reduced by 10 feet until the start of your next turn.</p><p><strong>Cantrip Upgrade.</strong> The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).</p>",
+      "name": "冷冻射线",
+      "description": "<p>一道蓝白色的冰冷光束朝施法距离内的一名生物射去。对目标进行一次远程法术攻击。命中时，目标将受到 [[/damage 1d8 type=cold]]伤害，且其速度将被减少 10 尺，直到你的下一回合开始为止。</p><p><strong>戏法强化：</strong> 到达特定等级后，此戏法的伤害将增加 1d8：5 级（2d8）、11 级（3d8）、17 级（4d8）。</p>",
       "effects": {
         "Reduced Movement": {
-          "name": "Reduced Movement",
-          "description": "<p>The target's Speed is reduced by 10 feet until the start of your next turn.</p>"
+          "name": "降低速度",
+          "description": "<p>直至施法者的下一回合开始，你的速度减少 10 尺。</p>"
         }
       }
     },
     "Ray of Sickness": {
-      "name": "Ray of Sickness",
-      "description": "<p>You shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 Poison damage and has the &amp;Reference[poisoned] condition until the end of your next turn.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 1.</p>"
+      "name": "致病射线",
+      "description": "<p>你朝施法距离内一名生物射出一道绿色射线。对目标进行一次远程法术攻击。若命中，则目标受到 [[/damage 2d8 type=poison]]伤害且陷入&Reference[poisoned]{中毒}状态，直至你的下一回合结束。</p><p><strong>升环施法：</strong> 使用的法术位每比一环高一环，此法术的伤害就增加 1d8 点。</p>"
     },
     "Regenerate": {
-      "name": "Regenerate",
-      "description": "<p>A creature you touch regains 4d8 + 15 Hit Points. For the duration, the target regains [[/healing 1 type=healing]]{1 Hit Point} at the start of each of its turns, and any severed body parts regrow after 2 minutes.</p>",
+      "name": "再生术",
+      "description": "<p>一名你触及的生物恢复 4d8 + 15 点生命值。在持续时间内，目标在其每回合开始时恢复 [[/healing 1 type=healing]]{1 点生命值}，且其失去的任何身体部位都将在 2 分钟后重新长出。</p>",
       "effects": {
         "Regenerating": {
-          "name": "Regenerating",
-          "description": "<p>For the duration, the target regains [[/healing 1 type=healing]]{1 Hit Point} at the start of each of its turns, and any severed body parts regrow after 2 minutes.</p>"
+          "name": "再生",
+          "description": "<p>在持续时间内，你在每一回合开始时恢复[[/healing 1 type=healing]]{1 点生命值} ，且你失去的任何身体部位都将在 2 分钟后重新长出。</p>"
         }
       }
     },
