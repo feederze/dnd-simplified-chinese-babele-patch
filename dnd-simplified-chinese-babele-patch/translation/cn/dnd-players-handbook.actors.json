@@ -413,7 +413,7 @@
             "Temporary Healing": {
               "name": "临时生命值",
               "condition": "光耀之锤命中时",
-              "rangeSpecial": "range based on Attack target"
+              "rangeSpecial": "基于攻击目标的范围"
             }
           }
         },
@@ -444,7 +444,7 @@
         "Berserk Lashing": {
           "name": "狂怒乱击",
           "description": "<p><em>触发：</em>一个生物对灵魄造成了伤害。<em>响应：</em>灵魄对该目标发动一次 [[/item 猛击]] 攻击（若可能），或者灵魄向那个目标移动至多等于其速度一半的距离且不触发借机攻击。</p>",
-          "requirements": "Takes damage from a creature",
+          "requirements": "受到一名生物的伤害",
           "activities": {
             "utility": {
               "condition": "一个生物在其回合开始时处于范围内"
@@ -461,7 +461,7 @@
         "Heated Body": {
           "name": "灼热之躯",
           "description": "<p>当一个生物对灵魄发动近战攻击并命中，或是在擒抱灵魄、被灵魄擒抱期间开始其回合时，那个生物受到 1d10 火焰伤害。</p>",
-          "requirements": "Creature makes physical contact",
+          "requirements": "生物进行身体接触",
           "activities": {
             "damage": {
               "condition": "当一个生物对灵魄发动近战攻击并命中，或是在擒抱灵魄、被灵魄擒抱期间开始其回合时"
@@ -491,7 +491,7 @@
         "Stony Lethargy": {
           "name": "石迷昏眠",
           "description": "<p>当一个灵魄可见的生物在其 10 尺距离内开始回合时，它可以对其释放出一道魔法能量。<em>感知豁免：</em>DC等于你的法术豁免DC，被指定的生物。<em>失败：</em>目标不能进行借机攻击且速度减半，持续直至其下一回合开始。</p>",
-          "requirements": "A creature starts its turn within range",
+          "requirements": "一个生物在其回合开始时处于范围内",
           "effects": {
             "Stony Lethargy": {
               "name": "石迷昏眠",
@@ -1178,7 +1178,7 @@
           "activities": {
             "Temporary Healing": {
               "name": "临时生命值",
-              "rangeSpecial": "range based on Attack target"
+              "rangeSpecial": "基于攻击目标的范围"
             }
           }
         },
@@ -1201,7 +1201,7 @@
           "description": "<p><em>力量豁免：</em> DC 12，在蛇 5 尺内能看见的一个中型或更小的生物。<em>失败：</em> 7（3d4）钝击伤害，且目标处于 &Reference[grappled] 状态（逃脱 DC 12）。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Medium or smaller creature"
+              "affectsSpecial": "不超过中型的生物"
             }
           }
         }
@@ -1215,7 +1215,7 @@
         "Stony Lethargy": {
           "name": "石迷昏眠",
           "description": "<p>当一个灵魄可见的生物在其 10 尺距离内开始回合时，它可以对其释放出一道魔法能量。<em>感知豁免：</em>DC等于你的法术豁免DC，被指定的生物。<em>失败：</em>目标不能进行借机攻击且速度减半，持续直至其下一回合开始。</p>",
-          "requirements": "Stone Only",
+          "requirements": "仅岩石",
           "effects": {
             "Stony Lethargy": {
               "name": "石迷昏眠",
@@ -1226,7 +1226,7 @@
         "Heated Body": {
           "name": "灼热之躯",
           "description": "<p> 当一个生物对灵魄发动近战攻击并命中，或是在擒抱灵魄、被灵魄擒抱期间开始其回合时，那个生物受到 1d10 火焰伤害。</p>",
-          "requirements": "Metal Only",
+          "requirements": "仅金属",
           "activities": {
             "Contact Damage": {
               "name": "接触伤害"
@@ -1249,7 +1249,7 @@
         "Berserk Lashing": {
           "name": "狂怒乱击",
           "description": "<p><em>触发：</em>一个生物对灵魄造成了伤害。<em>响应：</em>灵魄对该目标发动一次 [[/item 猛击]] 攻击（若可能），或者灵魄向那个目标移动至多等于其速度一半的距离且不触发借机攻击。</p>",
-          "requirements": "Clay Only",
+          "requirements": "仅粘土",
           "activities": {
             "Attack or Move": {
               "name": "攻击并移动",
@@ -1319,23 +1319,23 @@
           "activities": {
             "Share Acid Resistance": {
               "name": "分享强酸抗性",
-              "affectsSpecial": "the spirit's summoner"
+              "affectsSpecial": "灵魄召唤者"
             },
             "Share Cold Resistance": {
               "name": "分享寒冷抗性",
-              "affectsSpecial": "the spirit's summoner"
+              "affectsSpecial": "灵魄召唤者"
             },
             "Share Fire Resistance": {
               "name": "分享火焰抗性",
-              "affectsSpecial": "the spirit's summoner"
+              "affectsSpecial": "灵魄召唤者"
             },
             "Share Lightning Resistance": {
               "name": "分享闪电抗性",
-              "affectsSpecial": "the spirit's summoner"
+              "affectsSpecial": "灵魄召唤者"
             },
             "Share Poison Resistance": {
               "name": "分享毒素抗性",
-              "affectsSpecial": "the spirit's summoner"
+              "affectsSpecial": "灵魄召唤者"
             }
           },
           "effects": {
@@ -1393,7 +1393,7 @@
         "Amorphous Form": {
           "name": "不定形态",
           "description": "<p>灵魄能够轻松穿过最窄 1 寸宽的狭窄空间，如同其是困难地形一般。</p>",
-          "requirements": "Air, Fire, and Water Only"
+          "requirements": "仅气、火、水"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -1430,10 +1430,10 @@
         "Trample": {
           "name": "践踏",
           "description": "<p><em>敏捷豁免：</em> DC 16，单一 5 尺内且处于倒地状态的生物。<em>失败：</em> 造成 17（2d10 + 6）钝击伤害。<em>成功：</em> 半伤。</p>",
-          "requirements": "Target is Prone",
+          "requirements": "目标陷入倒地",
           "activities": {
             "save": {
-              "affectsSpecial": "has the Prone condition"
+              "affectsSpecial": "陷入倒地状态"
             }
           }
         }
@@ -1500,7 +1500,7 @@
         "Mirthful": {
           "name": "欢欣",
           "description": "<p><em>感知豁免：</em>DC等于你的法术豁免DC，单一灵魄 10 尺内它可见的生物。<em>失败：</em>目标受你和灵魄 &Reference[charmed apply=false] 1 分钟或直到目标受到任意伤害。</p>",
-          "requirements": "Activated by Fey Step",
+          "requirements": "由妖精步伐激活",
           "effects": {
             "Charmed": {
               "name": "被魅惑",
@@ -1511,7 +1511,7 @@
         "Tricksy": {
           "name": "诡诈",
           "description": "<p>灵魄令魔法 &Reference[darkness]充斥于它 5 尺内的一处 10 尺立方区域，持续直到灵魄的下一回合结束。</p>",
-          "requirements": "Activated by Fey Step"
+          "requirements": "由妖精步伐激活"
         }
       }
     },
@@ -1523,7 +1523,7 @@
         "Death Throes": {
           "name": "焚身爆",
           "description": "<p>当灵魄生命值降值 0 时，或是法术结束时，灵魄会爆炸。</p><p><em>敏捷豁免：</em>DC等于你的法术豁免DC，以灵魄为源点 10 尺光环区域内的每个生物。</p><p><em>失败：</em>2d10 + 法术环阶的火焰伤害。</p>",
-          "requirements": "Demon Only",
+          "requirements": "仅恶魔",
           "activities": {
             "Explode": {
               "name": "爆炸",
@@ -1534,7 +1534,7 @@
         "Devil’s Sight": {
           "name": "魔鬼视界",
           "description": "<p>魔法黑暗不会阻碍灵魄的黑暗视觉。</p>",
-          "requirements": "Devil Only"
+          "requirements": "仅魔鬼"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -1663,7 +1663,7 @@
         "Web Bolt": {
           "name": "蛛网箭",
           "description": "<p><em>远程攻击检定：</em>加值等同于你的法术攻击调整值，射程 60 尺。<em>命中：</em>1d10 + 3 + 法术环阶点钝击伤害，且目标直到巨虫的下个回合开始为止速度降为 0。</p>",
-          "requirements": "Spider Only",
+          "requirements": "仅蜘蛛",
           "effects": {
             "Webbed": {
               "name": "落网",
@@ -2606,7 +2606,7 @@
         "Powerful Build": {
           "name": "身强力壮",
           "description": "<p>你为挣脱被 &Reference[Grappled] <span class=\"ne-text\">而进行的豁免检定具有优势。在决定你的载重时，你视作为体型大一级的生物。</span></p><section class=\"secret\" id=\"secret-bcUO8l5tG3FcIQVI\"><p><strong>Foundry Note</strong></p><p>此特性包含一个被动效果，在确定负重能力时会自动提升你的体型。</p></section>",
-          "requirements": "Goliath",
+          "requirements": "歌利亚",
           "effects": {
             "Powerful Build": {
               "name": "身强力壮"
@@ -2616,7 +2616,7 @@
         "Storm's Thunder": {
           "name": "驱雷掣电",
           "description": "<p>当你受到来自 60 尺内生物的伤害时，你可以用你的反应动作对该生物造成 1d8 雷鸣伤害。</p>",
-          "requirements": "Goliath (Storm Giant)",
+          "requirements": "歌利亚（风暴巨人）",
           "activities": {
             "Storm's Thunder": {
               "name": "驱雷掣电",
@@ -2797,7 +2797,7 @@
         "Rage": {
           "name": "狂暴",
           "description": "<p>你可以将名为狂暴的原初之力赋予己身，为你带来超越常规的伟力和韧性。未着装重甲时，你可以以一个附赠动作进入狂暴。</p><p>你可以进入狂暴的次数见野蛮人特性表中“狂暴次数”一栏。 (当前 [[lookup @scale.barbarian.rage]])。当你完成一次短休时，你重获一次已使用的狂暴次数；当你完成一次长休时，你重获所有已使用的狂暴次数。</p><p>你的狂暴激活期间，你将遵循以下这些规则：</p><p><strong>伤害抗性。</strong> 你具有钝击，穿刺和挥砍伤害的抗性。</p><p><strong>狂暴伤害。</strong> 当你使用力量发动一次攻击并对目标造成伤害时（无论这是一次武器攻击还是一次徒手打击），你的伤害掷骰获得额外加值，这个加值随着你的野蛮人等级提升，见野蛮人特性表中“狂暴伤害”一栏。</p><p><strong>力量优势。</strong> 你的力量检定和力量豁免具有优势。</p><p><strong>无法专注或施法。</strong> 你无法保持专注Concentration，也不能施展法术。</p><p><strong>持续时间。</strong> 狂暴持续到你的下一个回合结束，如果你穿戴重甲或陷入失能状态，狂暴提前结束。如果在你的下一回合你的狂暴仍处于激活状态，你可以执行以下选项之一令你的狂暴延长一轮：</p><ul>    <li>对敌人进行一次攻击检定。</li>    <li>迫使一名敌人进行一次豁免检定。</li>    <li>以一个附赠动作延长你的狂暴。</li></ul><p>每当狂暴被延长，都会持续到你的下一个回合结束。你可以维持狂暴至多10分钟。</p><section class=\"secret\" id=\"secret-o72MSFMdhSQC7kYa\">    <p><strong>Foundry Note</strong></p>   <p>该特性包含一个激活效应，能自动实现抗性以及额外伤害。此特性还会在短休和长休时自动恢复你的狂暴次数。</p></section>",
-          "requirements": "Barbarian",
+          "requirements": "野蛮人",
           "activities": {
             "Expend Rage": {
               "name": "释放狂暴"
@@ -2812,7 +2812,7 @@
         "Unarmored Defense": {
           "name": "无甲防御",
           "description": "<p>你未着装任何护甲期间，你的基础AC等于 10 + 你的敏捷调整值 + 你的体质调整值。你可以使用 <em>盾牌 Shield </em>而仍然从此特性获益。</p>",
-          "requirements": "Barbarian",
+          "requirements": "野蛮人",
           "effects": {
             "Unarmored Defense": {
               "name": "无甲防御"
@@ -2822,7 +2822,7 @@
         "Weapon Mastery": {
           "name": "武器精通",
           "description": "<p>你对武器的训练使你能够运用两种自选的简易或军用近战武器的精通属性，例如巨斧和手斧。</p><p>当你完成一次长休后，你可以重新演练武器技巧，来改变你所选择的其中一个武器类型。</p><p>当你获得特定的野蛮人等级时，你还可以使用更多种类武器的精通属性，具体数据见野蛮人特性表中“武器精通”一栏。</p>",
-          "requirements": "Barbarian"
+          "requirements": "野蛮人"
         },
         "Unarmed Strike": {
           "name": "徒手打击"
@@ -3026,12 +3026,12 @@
         "Otherworldly Presence": {
           "name": "异界存在",
           "description": "<p>你习得 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{奇术} 戏法。当你用此特质施展它时，这道法术的施法属性与你邪魔遗赠特性所用的属性的相同。</p><section id=\"secret-i3PjM9HLuO2Xcae7\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>当你获得此法术时，它会允许你选择你的施法关键属性。</p></section>",
-          "requirements": "Tiefling"
+          "requirements": "提夫林"
         },
         "Fiendish Legacy, Chthonic": {
           "name": "邪魔遗赠（幽冥）",
           "description": "<p>你属于一支精灵血系，并因此获得了超自然能力。</p><p>当你到达 3 级和 5 级时，你分别习得一道表格上更高级的法术；你时刻准备着这道习得的法术，且可以不消耗法术位施展此法术一次，当你完成一次长休后，你重获施展该道法术的能力。你也可以用任何你拥有的相应环阶法术位施展该道法术。</p><table><caption>木精灵血系特性</caption><thead><tr><td>1 级</td><td>3 级</td><td>5 级</td></tr></thead><tbody><tr><td>你的速度提升至 35 尺。你习得 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]{德鲁伊伎俩} 戏法。</td><td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLongstride]{大步奔行}</td><td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswithou]{行动无踪}</td></tr></tbody></table><section class=\"secret\" id=\"secret-9CEnkbCgcLTJ03JL\"><p><strong>Foundry 注</strong></p><p>在你选择种族和升级的时候会自动获得相关的特性和法术。</p></section>",
-          "requirements": "Tiefling"
+          "requirements": "提夫林"
         },
         "Entertainer": {
           "name": "艺人",
@@ -3118,7 +3118,7 @@
         "Bardic Inspiration": {
           "name": "诗人激励",
           "description": "<p>你可以通过语言、音乐或舞蹈对他人实现一种超自然的鼓舞。这种鼓舞表现为数个“诗人激励骰”，骰面为 d6 （当前， [[/lookup @scale.bard.inspiration.die]]）。</p><p><strong>使用吟游诗人激励。</strong>以一个附赠动作，你鼓舞身边 60 尺内另一个能听到你声音或能看见你的生物。该生物获得一枚诗人激励骰。一个生物在同一时间只能拥有一个诗人激励。</p><p>在接下来的 1 小时内，该生物进行 D20 检定失败时可以使用该激励骰，以将其结果加到掷骰结果中，并可能让结果转为成功。吟游诗人激励骰在掷出时消耗。</p><p><strong>使用次数。</strong>你能够赋予他人激励骰的次数等于你的魅力调整值（最少一次）。完成一次长休后，你将重获所有已消耗的诗人激励次数。</p><p><strong>在更高等级。</strong>当你达到特定吟游诗人等级时，你的诗人激励骰会发生变化，如吟游诗人特性表中“诗人激励骰”一栏所示。5 级时骰面变为 d8，10 级时骰面变为 d10，15 级时骰面变为 d12。</p><section class=\"secret\" id=\"secret-PtUXhUXS84HSdaew\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个激活效应，用于跟进角色何时拥有可使用的吟游诗人激励。</p>    <p>恢复设定为长休（在获得 @UUID[Compendium.dnd-players-handbook.classes.Item.phbbrdFontOfInsp]{激励之源} 之前）。需要时请手动调整。</p></section>",
-          "requirements": "Bard",
+          "requirements": "吟游诗人",
           "activities": {
             "Inspire": {
               "name": "激励",
@@ -3135,7 +3135,7 @@
         "Spellcasting": {
           "name": "施法",
           "description": "<p>你在你的吟游艺术中学会了如何施展法术。参见 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.mh3akteBDiLegqFK]{第 7 章} 有关施法的规则。下述信息将详述如何将这些规则应用于吟游诗人法术，吟游诗人法术详见本章后文职业描述中的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI]。</p><p><strong>戏法。</strong>你已知2个你选择的吟游诗人戏法。推荐选择 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig] </em>和 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplViciousMoc]</em></p><p>每当你获得一个吟游诗人等级时，你都能将通过此特性已知的其中一个戏法替换为另一个你所选择的吟游诗人戏法。</p><p>当你的吟游诗人等级达到4级和10级时，你都能习得另一个你所选择的吟游诗人戏法，如吟游诗人特性表中戏法一列所示。 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI] 。</p><p><strong>法术位。</strong>“吟游诗人特性”表记录了你有多少法术位用以施展 1+ 环阶的法术。当你完成一次长休时，你会重新获得所有消耗的法术位。</p><p><strong>准备 1+ 环法术。</strong>通过该特性施法前，你需要选择数个可用的 1+ 环阶法术构成准备列表。首先，从“吟游诗人法术列表“中选择四个 1 环法术。推荐选择<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]</em>、 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplColorSpray]</em>、 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDissonantW]</em> 和 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor] </em>。</p><p>准备列表上的法术数量将随着你的吟游诗人等级而增加，正如“吟游诗人特性”表中“准备法术”一栏所示。每当该数量增加时，从“吟游诗人法术列表”中选择额外的法术来添加到你的准备列表中，直到你准备列表上的法术数量与“吟游诗人特性”表中的数量相匹配。你只能准备已经获得相应环阶法术位的法术。例如，作为一个 3 级吟游诗人，你的准备法术列表应该包括六个任意组合的 1 环或 2 环法术。</p><p>如果其他的吟游诗人特性给予了额外的已准备法术，这些法术不会计入你在该特性中的准备法术数量，但是这些法术对你而言仍算作吟游诗人法术。</p><p><strong>改变你的准备法术。</strong>每当你获得一个吟游诗人等级时， 你可以将准备列表中的一个法术，替换为另一个你拥有法术位的吟游诗人法术。</p><p><strong>施法属性。</strong>魅力是你施展吟游诗人法术的施法属性。</p><p><strong>施法法器。</strong>你可以使用乐器作为吟游诗人法术的施法法器。</p>",
-          "requirements": "Bard"
+          "requirements": "吟游诗人"
         }
       }
     },
@@ -3190,12 +3190,12 @@
         "Dwarven Resilience": {
           "name": "矮人体魄",
           "description": "<p>你对毒素伤害具有抗性。在进行避免或结束中毒状态的豁免检定具有优势。</p><section id=\"secret-EDaMIgklKLK2il2D\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>角色会自动获得毒素伤害抗性，免或结束中毒状态的豁免检定优势需手动应用。</p></section>",
-          "requirements": "Dwarf"
+          "requirements": "矮人"
         },
         "Dwarven Toughness": {
           "name": "矮人刚毅",
           "description": "<p>你的生命值最大值加 1，且此后每次升级时再加 1。</p><section class=\"secret\" id=\"secret-FK9DFLudP5EzEss9\"><p><strong>Foundry 注</strong></p><p>最大生命值会自动提升。</p></section>",
-          "requirements": "Dwarf",
+          "requirements": "矮人",
           "effects": {
             "Dwarven Toughness": {
               "name": "矮人刚毅"
@@ -3205,7 +3205,7 @@
         "Stonecunning": {
           "name": "石中精妙",
           "description": "<p>以一个附赠动作，你获得 60 尺 &Reference[Tremorsense]，持续 10 分钟。你必须位于或触碰一处石质平面才能使用此震颤感知。石头可以是天然的，也可以是人工雕琢过的。</p><section class=\"secret\" id=\"secret-7BtT80083mC3Eavg\"><p><strong>Foundry 注</strong></p><p>该特性使用次数有限，包含一个能提供 60 尺震颤感知的效应。但它不会自动更新你指示物的视觉设定。</p></section>",
-          "requirements": "Dwarf",
+          "requirements": "矮人",
           "activities": {
             "Stonecunning": {
               "name": "石中精妙"
@@ -3252,7 +3252,7 @@
           "activities": {
             "Bind": {
               "name": "铐捆",
-              "affectsSpecial": "Grappled, Incapacitated, or Restrained"
+              "affectsSpecial": "受擒、失能或束缚"
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -3495,17 +3495,17 @@
         "Spellcasting": {
           "name": "施法",
           "description": "<p>你通过祈祷，冥想与奉献习得如何施法。参见 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.mh3akteBDiLegqFK]{第 7 章} 有关施法的规则。下述信息将详述如何将这些规则应用于牧师法术，牧师法术详见本章后文职业描述中的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]。</p><p><strong>戏法。</strong> 你已知牧师法术列表中 3 个你选择的戏法。推荐选择@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidance00], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSacredFlam] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]。</p><p>当你获得牧师等级时，你可以将一道已知戏法用另一道牧师戏法替换。</p><p>当你的牧师等级达到 4 级和 10 级时，你都能习得另一道你所选择的牧师戏法，如 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbCleric0000000.JournalEntryPage.acPyA6A4DQBSnuZB#class-features]特性表中戏法一列所示。</p><p><strong>法术位。</strong> 牧师特性表显示了你可用于施放 1 环及以上法术的法术位数量。你在完成一次长休时恢复所有已消耗的法术位。</p><p><strong>准备 1+ 环法术。</strong> 你准备了一系列一环或更高的法术，以供此特性施法使用。初始时，从牧师法术列表选择 4 个一环法术。推荐选择@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShieldofFa]。</p><p>你的准备列表上的法术数量将随着牧师等级而增加，正如“牧师特性”表中“准备法术”一栏所示。每当该数量增加时，从“牧师法术列表”中选择额外的法术来添加到你的准备列表中，直到你准备列表上的法术数量与“牧师特性”表中的数量相匹配。你只能准备已经获得相应环阶法术位的法术。例如，作为一个 3 级牧师，你的准备法术列表应该包括六个任意组合的 1 环或 2 环法术。</p><p>如果其他的牧师特性给予了额外的已准备法术，这些法术不会计入你在该特性中的准备法术数量，但是这些法术对你而言仍算作牧师法术。</p><p><strong>改变你的准备法术。</strong>每当你完成一次长休后，你可以更改准备法术列表，将其中的任意个法术替换为其他你拥有法术位的牧师法术。</p><p><strong>施法属性。</strong> 感知是你施展牧师法术的施法属性。</p><p><strong>施法法器。</strong>你可以使用圣徽作为牧师法术的施法法器。</p>",
-          "requirements": "Cleric"
+          "requirements": "牧师"
         },
         "Divine Order": {
           "name": "圣职",
           "description": "<p>你让自己投身于以下一种由你自己选择的神圣职能：</p><p><strong>守护者。</strong>通过战斗训练，你获得军用武器熟练与重甲受训。</p><p><strong>奇术使。</strong>你从 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]中额外获得一个戏法，此外你与神明的紧密联系使你的智力（奥秘或宗教）检定将会获得等同感知调整值的加值（至少 +1）。</p><section class=\"secret\" id=\"secret-mBkdTF86GHVjdNKD\">   <p><strong>Foundry Note</strong></p>    <p>在升级过程中，你可以选择自己偏好的选项</p></section>",
-          "requirements": "Cleric"
+          "requirements": "牧师"
         },
         "Divine Order: Protector": {
           "name": "圣职：保护者",
           "description": "<p>你已将自己奉献给以下一种神圣职能：</p><p><strong>保护者 Protcetor。 </strong> 通过战斗训练，你获得军用武器熟练与重甲受训。</p><section class=\"secret\" id=\"secret-Tsm148wTyiFWlMFv\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个被动效应，授予熟练和受训。</p></section>",
-          "requirements": "Cleric",
+          "requirements": "牧师",
           "effects": {
             "Divine Order: Protector": {
               "name": "圣职：保护者"
@@ -3569,17 +3569,17 @@
         "Resourceful": {
           "name": "适应力",
           "description": "<p>当你完成长休时，你获得英雄激励。</p>",
-          "requirements": "Human"
+          "requirements": "人类"
         },
         "Skillful": {
           "name": "技能",
           "description": "<p>你获得一项自选的技能作为熟练。</p><section id=\"secret-lvP62g2xTxkz2VN3\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>选择该种族后，系统将提示你进行选择。</p></section>",
-          "requirements": "Human"
+          "requirements": "人类"
         },
         "Versatile": {
           "name": "多才多艺",
           "description": "<p>你获得一项自选的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.otAeQs0TLHYIBNuj]{起源专长} 。推荐选择 @UUID[Compendium.dnd-players-handbook.feats.Item.phbftSkilled0000]{熟习} </p><section id=\"secret-9E1yve6WHohyBage\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>选择该种族后，系统将提示你进行选择。</p></section>",
-          "requirements": "Human"
+          "requirements": "人类"
         },
         "Skilled": {
           "name": "熟习",
@@ -3603,7 +3603,7 @@
           "activities": {
             "Stabilize": {
               "name": "稳定",
-              "affectsSpecial": "Unconscious"
+              "affectsSpecial": "昏迷"
             }
           }
         },
@@ -3816,17 +3816,17 @@
         "Spellcasting": {
           "name": "施法",
           "description": "<p>你通过研究自然的神秘伟力学会了如何施展法术。参考 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.mh3akteBDiLegqFK]{第 7 章} 的施法规则。下文为你详细说明了德鲁伊施展 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU]的规则（具体法术列表见下文德鲁伊法术列表）</p><p><strong>戏法。</strong> 你习得两个德鲁伊法术列表中的戏法。推荐选择 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplProduceFla]。</p><p>每当你获得一级德鲁伊等级，你便可以将一个已知戏法替换为另一个你所选 的德鲁伊戏法。</p><p>当你在此职业上达到 4 级和 10 级时，你习得一个额外的德鲁伊戏法，如 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbDruid00000000.JournalEntryPage.UCOh3zlvGxyk5jLr#class-features]表中戏法数量一栏所示。</p><p><strong>法术位。</strong>“德鲁伊特性”表记录了你有多少法术位用以施展 1+ 环阶的法术。当你完成一次长休时，你会重新获得所有消耗的法术位。</p><p><strong>准备 1+ 环法术。</strong> 通过该特性施法前，你需要选择数个可用的 1+ 环阶法术构成准备列表。首先，从“德鲁伊法术列表“中选择 4 个一环法术。推荐选择 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimalFrie]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThunderwav]。</p><p>你的准备列表上的法术数量将随着德鲁伊等级而增加，正如“德鲁伊特性”表中“准备法术”一栏所示。每当该数量增加时，从“德鲁伊法术列表”中选择额外的法术来添加到你的准备列表中，直到你准备列表上的法术数量与“德鲁伊特性”表中的数量相匹配。你只能准备已经获得相应环阶法术位的法术。例如，作为一个 3 级德鲁伊，你的准备法术列表应该包括六个任意组合的一环或二环法术。</p><p>如果其他的德鲁伊特性给予了额外的已准备法术，这些法术不会计入你在该特性中的准备法术数量，但是这些法术对你而言仍算作德鲁伊法术。</p><p><strong>改变你的准备法术。</strong>每当你完成一次长休后，你可以更改准备法术列表，将其中的任意个法术替换为其他你拥有法术位的德鲁伊法术。</p><p><strong>施法属性。</strong>感知是你施展德鲁伊法术的施法属性。</p><p><strong>施法法器。</strong>你可以使用德鲁伊法器作为德鲁伊法术的施法法器。</p>",
-          "requirements": "Druid"
+          "requirements": "德鲁伊"
         },
         "Druidic": {
           "name": "德鲁伊语",
           "description": "<p>你学会德鲁伊语，一门德鲁伊之间的秘密语言。在学会这门古老语言的同时，你也解锁了和动物交谈的魔法：你始终准备 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]法术。</p><p>你可以使用德鲁伊语来传递隐藏的信息。你和其他知晓这门语言的对象能够自动辨认出信息。其他人需要通过 [[/check inv 15]] 才能意识到信息的存在，但不借助魔法则无法解读</p><section class=\"secret\" id=\"secret-5uD3Qi61JX7q2Fk8\">    <p><strong>Foundry Note</strong></p>    <p>德鲁伊语和“动物交谈”在升级时会自动放入角色卡。</p></section>",
-          "requirements": "Druid"
+          "requirements": "德鲁伊"
         },
         "Primal Order": {
           "name": "原初誓约",
           "description": "<p>你将自己投身于所选择的以下一项神圣的角色之中：</p><p><strong>术师。</strong> 你学会一个额外的德鲁伊法术表中的戏法。此外，你和自然的神秘连接让你在智力（奥秘或自然）检定上获得 加值。加值等于你的感知调整值（最小为 1）。</p><p><strong>卫士。</strong> 你受到了战斗的训练，获得军用武器熟练和中甲熟练。</p><section class=\"secret\" id=\"secret-SgYOtpnQW9hL4WJ8\">    <p><strong>Foundry Note</strong></p>    <p>在升级过程中，系统会提示你进行选择。</p></section>",
-          "requirements": "Druid"
+          "requirements": "德鲁伊"
         },
         "Speak with Animals": {
           "name": "动物交谈",
@@ -3840,7 +3840,7 @@
         "Primal Order: Magician": {
           "name": "原初誓约：术师",
           "description": "<p>你学会一个额外的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU#cantrip] 中的戏法。此外，你和自然的神秘连接让你在智力（奥秘或自然）检定上获得加值。加值等于你的感知调整值（最小为 1，, 当前 [[lookup @abilities.wis.mod]]）。</p><section class=\"secret\" id=\"secret-adiIB9wCX5zZdZ9F\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一种激活效应，能自动提升你已知法术的数量，并为你的奥秘和自然检定提供加值。</p></section>",
-          "requirements": "Druid",
+          "requirements": "德鲁伊",
           "effects": {
             "Magician": {
               "name": "术师"
@@ -3895,12 +3895,12 @@
         "Dwarven Resilience": {
           "name": "矮人体魄",
           "description": "<p>你对毒素伤害具有抗性。在进行避免或结束中毒状态的豁免检定具有优势。</p><section id=\"secret-EDaMIgklKLK2il2D\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>角色会自动获得毒素伤害抗性，免或结束中毒状态的豁免检定优势需手动应用。</p></section>",
-          "requirements": "Dwarf"
+          "requirements": "矮人"
         },
         "Dwarven Toughness": {
           "name": "矮人刚毅",
           "description": "<p>你的生命值最大值加 1，且此后每次升级时再加 1。</p><section class=\"secret\" id=\"secret-FK9DFLudP5EzEss9\"><p><strong>Foundry 注</strong></p><p>最大生命值会自动提升。</p></section>",
-          "requirements": "Dwarf",
+          "requirements": "矮人",
           "effects": {
             "Dwarven Toughness": {
               "name": "矮人刚毅"
@@ -3910,7 +3910,7 @@
         "Stonecunning": {
           "name": "石中精妙",
           "description": "<p>以一个附赠动作，你获得 60 尺 &Reference[Tremorsense]，持续 10 分钟。你必须位于或触碰一处石质平面才能使用此震颤感知。石头可以是天然的，也可以是人工雕琢过的。</p><section class=\"secret\" id=\"secret-7BtT80083mC3Eavg\"><p><strong>Foundry 注</strong></p><p>该特性使用次数有限，包含一个能提供 60 尺震颤感知的效应。但它不会自动更新你指示物的视觉设定。</p></section>",
-          "requirements": "Dwarf",
+          "requirements": "矮人",
           "activities": {
             "Stonecunning": {
               "name": "石中精妙"
@@ -3949,7 +3949,7 @@
           "activities": {
             "Stabilize": {
               "name": "稳定",
-              "affectsSpecial": "Unconscious"
+              "affectsSpecial": "昏迷"
             }
           }
         },
@@ -4164,7 +4164,7 @@
         "Breath Weapon": {
           "name": "吐息武器",
           "description": "<p>每当你在自己回合内进行攻击动作时，你可以将其中一次攻击替换为释放魔法性的能量，覆盖 15 尺锥形或 30 尺长 5 尺宽的线形范围（每次吐息分别选择）。区域内的生物必须进行一次敏捷豁免检定（DC = 8 + 你的体质调整值 + 你的熟练加值）。豁免失败的生物受到 1d10 伤害，伤害类型取决于你在龙族血统特质的选择。豁免成功的生物只受到一半伤害。此伤害会在你达到 5 级（2d10），11 级（3d10）和 17 级（4d10）时提升1d10。你可以使用此吐息武器的次数等于你的熟练加值，当你完成一次长休后，你重获全部已消耗的使用次数。</p><section class=\"secret\" id=\"secret-iuhfGfxgl8GeYWBf\"><p><strong>Foundry 注</strong></p><p><strong>吐息武器 (锥形)</strong> 和 <strong>吐息武器 (线形)</strong> 行动已经设置为了对应的测量模板种类，并且包括了各种伤害类型。伤害也会随着你升级而提升。</p><p>你可以在掷骰伤害对话框中选择伤害种类。它会记住你前次的选择。你也可以在行动中编辑伤害类型从而跳过这一步骤。</p></section>",
-          "requirements": "Dragonborn",
+          "requirements": "龙裔",
           "activities": {
             "Breath Weapon (Cone)": {
               "name": "吐息武器（锥状）"
@@ -4422,7 +4422,7 @@
         "Adrenaline Rush": {
           "name": "激昂冲锋",
           "description": "<p>你能以一个附赠动作执行疾走动作。若你这样做，你还会获得与你熟练加值相等的临时生命值。你可以使用此特质次数等于你的熟练加值，当你完成一次长休后，你重获全部已消耗的使用次数。</p>",
-          "requirements": "Orc",
+          "requirements": "兽人",
           "activities": {
             "Adrenaline Rush: Dash": {
               "name": "激昂冲锋：疾走"
@@ -4432,7 +4432,7 @@
         "Relentless Endurance": {
           "name": "坚韧不屈",
           "description": "<p>当你生命值降至0而没有立即死亡时，可以改为使生命值降至1。当你使用此特质后，直到你完成一次长休为止都不能再次使用。</p>",
-          "requirements": "Orc",
+          "requirements": "兽人",
           "activities": {
             "Relentlessly Endure": {
               "name": "不屈",
@@ -4701,22 +4701,22 @@
         "Fey Ancestry": {
           "name": "精类血统",
           "description": "<p>你在进行避免或结束 &Reference[Charmed] 状态的豁免时具有优势。</p>",
-          "requirements": "Elf"
+          "requirements": "精灵"
         },
         "Keen Senses": {
           "name": "敏锐感官",
           "description": "<p>你具有洞悉、察觉或求生之一技能的熟练。</p><section id=\"secret-Tecxufp7EFDVqTEY\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>选择该种族后，系统将提示你进行选择。</p></section>",
-          "requirements": "Elf"
+          "requirements": "精灵"
         },
         "Trance": {
           "name": "出神",
           "description": "<p>你不需要睡觉，魔法也不能让你陷入睡眠。你可以用 4 小时完成长休，但期间你必须出于出神的冥想状态，在这期间你能保持意识清醒。</p>",
-          "requirements": "Elf"
+          "requirements": "精灵"
         },
         "Elven Lineage, Wood Elf": {
           "name": "精灵血系（木精灵）",
           "description": "<p>你属于一支精灵血系，并因此获得了超自然能力。</p><p>当你到达 3 级和 5 级时，你分别习得一道表格上更高级的法术；你时刻准备着这道习得的法术，且可以不消耗法术位施展此法术一次，当你完成一次长休后，你重获施展该道法术的能力。你也可以用任何你拥有的相应环阶法术位施展该道法术。</p><table><caption>木精灵血系特性</caption><thead><tr><td>1 级</td><td>3 级</td><td>5 级</td></tr></thead><tbody><tr><td>你的速度提升至 35 尺。你习得 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]{德鲁伊伎俩} 戏法。</td><td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLongstride]{大步奔行}</td><td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswithou]{行动无踪}</td></tr></tbody></table><section class=\"secret\" id=\"secret-9CEnkbCgcLTJ03JL\"><p><strong>Foundry 注</strong></p><p>在你选择种族和升级的时候会自动获得相关的特性和法术。</p></section>",
-          "requirements": "Elf (Wood)"
+          "requirements": "精灵（木精灵）"
         },
         "Studded Leather Armor": {
           "name": "镶钉皮甲"
@@ -4951,22 +4951,22 @@
         "Brave": {
           "name": "勇气",
           "description": "<p>你在进行避免或结束 &Reference[Frightened] 状态的豁免时具有优势。</p>",
-          "requirements": "Halfling"
+          "requirements": "半身人"
         },
         "Halfling Nimbleness": {
           "name": "半身人灵巧",
           "description": "<p>你可以穿越任何体形比你大的生物所在空间，但你不能在其内停下。</p>",
-          "requirements": "Halfling"
+          "requirements": "半身人"
         },
         "Luck": {
           "name": "幸运",
           "description": "<p>当你在 d20 检定的 d20 上掷出 1 时，你可以再重掷一次，但必须使用重掷的结果。</p>",
-          "requirements": "Halfling"
+          "requirements": "半身人"
         },
         "Naturally Stealthy": {
           "name": "天生善匿",
           "description": "<p>当你仅被比你大至少 1 级的生物遮蔽，你也可以进行&Reference[Hide]动作。</p>",
-          "requirements": "Halfling"
+          "requirements": "半身人"
         },
         "Dagger": {
           "name": "匕首"
@@ -5215,22 +5215,22 @@
         "Fey Ancestry": {
           "name": "精类血统",
           "description": "<p>你在进行避免或结束 &Reference[Charmed] 状态的豁免时具有优势。</p>",
-          "requirements": "Elf"
+          "requirements": "精灵"
         },
         "Keen Senses": {
           "name": "敏锐感官",
           "description": "<p>你具有洞悉、察觉或求生之一技能的熟练。</p><section id=\"secret-Tecxufp7EFDVqTEY\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>选择该种族后，系统将提示你进行选择。</p></section>",
-          "requirements": "Elf"
+          "requirements": "精灵"
         },
         "Trance": {
           "name": "出神",
           "description": "<p>你不需要睡觉，魔法也不能让你陷入睡眠。你可以用 4 小时完成长休，但期间你必须出于出神的冥想状态，在这期间你能保持意识清醒。</p>",
-          "requirements": "Elf"
+          "requirements": "精灵"
         },
         "Elven Lineage, Drow": {
           "name": "精灵血系（卓尔）",
           "description": "<p>你属于一支精灵血系，并因此获得了超自然能力。</p><p>当你到达 3 级和 5 级时，你分别习得一道表格上更高级的法术；你时刻准备着这道习得的法术，且可以不消耗法术位施展此法术一次，当你完成一次长休后，你重获施展该道法术的能力。你也可以用任何你拥有的相应环阶法术位施展该道法术。智力、感知或魅力是你用此特质施展法术时的关键属性（当你选择血系时选择属性）。</p><h3>卓尔血系特性</h3><table><thead><tr><td><p>1 级</p></td><td><p>3 级</p></td><td><p>5 级</p></td></tr></thead><tbody><tr><td><p>你的黑暗视觉提升至 120 尺。你习得 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]{舞光术} 戏法。</p></td><td><p>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]{妖火}</p></td><td><p>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{黑暗术}</p></td></tr></tbody></table><section class=\"secret\" id=\"secret-9CEnkbCgcLTJ03JL\"><p><strong>Foundry 注</strong></p><p>在你选择种族和升级的时候会自动获得相关的特性和法术。</p></section>",
-          "requirements": "Elf (Drow)"
+          "requirements": "精灵（卓尔）"
         },
         "Forgery Kit": {
           "name": "文书伪造工具",
@@ -5518,12 +5518,12 @@
         "Gnomish Cunning": {
           "name": "侏儒狡黠",
           "description": "<p>你在智力，感知与魅力豁免检定上具有优势。</p>",
-          "requirements": "Gnome"
+          "requirements": "侏儒"
         },
         "Gnomish Lineage, Rock": {
           "name": "侏儒血系（岩石）",
           "description": "<p>你习得 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMending000]{修复术} 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]{魔法伎俩} 戏法。此外，你可以花费10分钟时间，通过施展<em>魔法伎俩</em>法术来创造一个微型发条装置（AC5，1HP），比如一件玩具，一个打火机，或一个音乐盒。当你创造这个设备时，你可以从<em>魔法伎俩</em>戏法中选择一个效果来决定它的功能；当你或其他生物使用附赠动作触碰该装置并激活它时，该装置就会产生效果。如果选择的效果存在选项，则在创建时选择其中一项应用。例如，你选择法术中的点燃/熄灭效果，就要决定设备是用来点火还是熄火的；一台设备不能做到两个功能。你同时最多拥有三台这样的装置，每一个都会在被创建出来的8小时后解体消失。你也可以触摸你的一台设备，用一个操作动作将其拆除。</p>",
-          "requirements": "Gnome (Rock)"
+          "requirements": "侏儒（岩石）"
         },
         "Mending": {
           "name": "修复术",
@@ -5686,11 +5686,11 @@
           "activities": {
             "Healthy Target": {
               "name": "健康目标",
-              "affectsSpecial": "undamaged creature"
+              "affectsSpecial": "未受伤生物"
             },
             "Damaged Target": {
               "name": "受伤目标",
-              "affectsSpecial": "creature missing any of its Hit Points"
+              "affectsSpecial": "已损失任意数量生命值"
             }
           }
         },
@@ -5968,17 +5968,17 @@
         "Celestial Resistance": {
           "name": "天界抗性",
           "description": "<p>你对光耀和暗蚀伤害有&Reference[Resistance]。</p>",
-          "requirements": "Aasimar"
+          "requirements": "阿斯莫"
         },
         "Healing Hands": {
           "name": "治愈之手",
           "description": "<p>以一个魔法动作，你触碰一个生物，并掷数量等于你熟练加值的d4骰。该生物恢复等于掷骰结果总值的生命值。当你使用此特质后，直到你完成一次长休为止都不能再次使用。</p>",
-          "requirements": "Aasimar"
+          "requirements": "阿斯莫"
         },
         "Light Bearer": {
           "name": "光辉掌者",
           "description": "<p>你习得 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]{光亮术} 戏法。其施法属性为魅力。</p>",
-          "requirements": "Aasimar"
+          "requirements": "阿斯莫"
         },
         "Light": {
           "name": "光亮术",
@@ -6118,7 +6118,7 @@
             },
             "Epic Boon": {
               "title": "传奇恩惠",
-              "hint": "你获得一个传奇恩惠专长 或另一个你所选择符合条件的专长。推荐选择法术召返之恩惠。"
+              "hint": "你获得一个传奇恩惠专长或另一个你所选择符合条件的专长。推荐选择法术召返之恩惠。"
             },
             "Saving Throw Proficiencies": {
               "title": "豁免熟练"
@@ -6452,7 +6452,7 @@
           "activities": {
             "save": {
               "condition": "所有在以灵魄为源点 5 尺光环区域内开始其回合的生物（除了施法者）",
-              "affectsSpecial": "other than you"
+              "affectsSpecial": "除了你"
             }
           },
           "effects": {
