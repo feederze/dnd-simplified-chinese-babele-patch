@@ -25,7 +25,7 @@
       "description": "<p><em>力量豁免检定:</em> DC [[lookup @save.dc.value activity=YqWqaRXxaKFCH6P8]], 单一[[lookup @target.affects.special activity=YqWqaRXxaKFCH6P8]] [[lookup @target.affects.type activity=YqWqaRXxaKFCH6P8]]且[[lookup @name lowercase]]可见的生物。</p><p><em>失败:</em>目标被拉入[[lookup @name lowercase]]所在的空间并被嫁接到尸聚怪身上。[[lookup @name lowercase]]同时能嫁接的生物数上限为一。</p><p>被嫁接期间,目标陷入 &Reference[Restrained apply=false]状态且其进行的体质豁免具有劣势。当[[lookup @name lowercase]]移动时, 被嫁接目标也将一并移动。如果[[lookup @activation.condition activity=KXQbdk3TH6uZex2L]],其遗体将被摧毁，且 [[lookup @name lowercase]]恢复 [[lookup @healing.formula activity=KXQbdk3TH6uZex2L]]生命值。</p><p>被嫁接目标自身或位于[[lookup @name lowercase]] 5尺内的生物，都能够以动作进行一次 [[/check ability=str skill=ath dc=@abilities.str.dc format=long]]。检定成功则目标不再被嫁接，并移动至[[lookup @name lowercase]]5尺内的一处未占据空间。</p>",
       "activities": {
         "save": {
-          "affectsSpecial": "Medium or Small"
+          "affectsSpecial": "不超过中型"
         },
         "heal": {
           "condition": "若目标在被嫁接期间死亡"
@@ -68,7 +68,7 @@
     "Adhesive (Object Form Only)": {
       "name": "粘附（仅物件形态）",
       "description": "<p class=\"feature\"> [[lookup @name lowercase]] 粘附在任何触碰到其的东西上。体型不超过巨型的被粘附生物陷入&amp;Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。为逃脱此擒抱进行的属性检定具有劣势。</p>",
-      "requirements": "Object Form Only",
+      "requirements": "仅物件形态",
       "activities": {
         "Expend Use": {
           "name": "耗用"
@@ -171,7 +171,7 @@
       }
     },
     "Animate Trees": {
-      "name": "Animate Trees",
+      "name": "活化树木",
       "description": "<p>The [[lookup @name]] magically animates up to two trees it can see within [[lookup @range.value activity=EceTNjzjKWdrMNAy]] feet of itself. Each tree uses the <strong>Treant</strong> stat block, except it has Intelligence and Charisma scores of 1, it can't speak, and it lacks this action. The tree takes its turn immediately after the treant on the same initiative count, and it obeys the treant. A tree remains animate for 1 day or until it dies, the treant dies, or it is more than 120 feet from the treant. The tree then takes root if possible.</p>",
       "activities": {
         "summon": {
@@ -180,7 +180,7 @@
       },
       "effects": {
         "Animate Trees": {
-          "name": "Animate Trees",
+          "name": "活化树木",
           "description": "<p>The tree has Intelligence and Charisma scores of 1, can't speak, and lacks the Animate Trees action.</p>"
         }
       }
@@ -2893,7 +2893,7 @@
     },
     "Illusory Appearance": {
       "name": "幻形",
-      "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]{Disguise Self}</em>, using Constitution as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]). The spell’s duration is [[lookup @duration.value activity=qY8e7Xm7QYQDXqsd]] [[lookup @duration.units activity=qY8e7Xm7QYQDXqsd]]s.</p>"
+      "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]</em>，并使用体质作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）。该法术的持续时间为 24 小时。</p>"
     },
     "Immutable Form": {
       "name": "不变形态",
@@ -3343,7 +3343,7 @@
     },
     "Magic of the Spider Queen": {
       "name": "蜘蛛女王之魔法",
-      "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{Darkness}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]{Faerie Fire}</em>, or <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWeb0000000]{Web}</em>, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]).</p>"
+      "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]</em> 或 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWeb0000000]</em>, 无需材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）。</p>"
     },
     "Magic Resistance": {
       "name": "魔法抗性",
@@ -4270,7 +4270,7 @@
     },
     "Pummel": {
       "name": "猛砸",
-      "description": "<p class=\"feature\"><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=aae828c0Hue0XOMP]], one creature Grappled by the [[lookup @name lowercase]].</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage.</p><p class=\"feature\"><em>Success:</em> Half damage.</p>",
+      "description": "<p class=\"feature\"><em>敏捷豁免检定：</em> DC [[lookup @save.dc.value activity=aae828c0Hue0XOMP]], 单一正受擒于 [[lookup @name lowercase]] 的生物。<em>失败：</em> [[/damage average]]伤害。<em>成功：</em> 半伤。</p>",
       "activities": {
         "Save": {
           "name": "豁免",
@@ -4962,7 +4962,7 @@
     },
     "Sleep": {
       "name": "睡眠术",
-      "description": "<p>The [[lookup @name lowercase]] casts the @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000] spell, requiring no spell components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]).</p>"
+      "description": "<p>[[lookup @name lowercase]] 施展法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000] ，无需任何法术成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）。</p>"
     },
     "Sleep Breath": {
       "name": "睡眠吐息",
@@ -5132,7 +5132,7 @@
     },
     "Spellcasting": {
       "name": "施法",
-      "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no {type} components and using {ability} as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>{spell}</em></p><p class=\"feature-trait\"><strong>{count}/Day Each:</strong> <em>{spell}</em></p>"
+      "description": "<p>[[lookup @name lowercase]] 施展以下一道法术，无需任何{类型}成分并使用{属性}作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong><em>{法术}</em></p><p class=\"feature-trait\"><strong>{数量}每项1/日：</strong> <em>{法术}</em></p>"
     },
     "Spider Climb": {
       "name": "蛛行",
@@ -5184,7 +5184,7 @@
     },
     "Split": {
       "name": "分裂",
-      "description": "<p class=\"feature\"><em>Trigger:</em> While the [[lookup @name lowercase]] [[lookup @activation.condition activity=zoXFSgzmWq8frUjI]] </p><p class=\"feature\"><em>Response:</em> The [[lookup @name lowercase]] splits into two new <strong>[[lookup @name capitalize]]</strong>. Each new [[lookup @name lowercase]] is one size smaller than the original [[lookup @name lowercase]] and acts on its Initiative. The original [[lookup @name lowercase]]’s Hit Points are divided evenly between the new [[lookup @name lowercase]]s (round down).</p>",
+      "description": "<p class=\"feature\"><em>触发：</em>若 [[lookup @name lowercase]] 体型为大型或中型且具有 10+ 生命值，当 [[lookup @name lowercase]] 进入浴血或是其将受闪电伤害或挥砍伤害时。<em>响应：</em>[[lookup @name lowercase]] 分裂为两块全新的<strong> [[lookup @name capitalize]]</strong>。每块新的 [[lookup @name lowercase]] 的体型都比原先的 [[lookup @name lowercase]] 小一级，且使用原 [[lookup @name lowercase]] 的先攻行动。原 [[lookup @name lowercase]] 生命值将平均分配给新的 [[lookup @name lowercase]] （向下取整）。</p>",
       "activities": {
         "Split": {
           "name": "分裂",
