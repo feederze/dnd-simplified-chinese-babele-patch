@@ -5765,7 +5765,7 @@
         },
         "Entangle": {
           "name": "纠缠术",
-          "description": "<p>Grasping plants sprout from the ground in a 20-foot square within range. For the duration, these plants turn the ground in the area into &amp;Reference[difficultterrain]. They disappear when the spell ends.</p><p>Each creature (other than you) in the area when you cast the spell must succeed on a Strength saving throw or have the &amp;Reference[restrained apply=false] condition until the spell ends. A Restrained creature can take an action to make a [[/check ability=str skill=ath dc=@attributes.spell.dc]] check against your spell save DC. On a success, it frees itself from the grasping plants and is no longer Restrained by them.</p>",
+          "description": "<p>缠绕的植物在施法距离内从 20 尺方状区域地面中破土而出。在法术持续时间内，这片被植物覆盖的区域变为 &Reference[difficultterrain] 法术结束时，这些植物会消失。</p><p>在你施展法术时，该区域内的生物（除你之外）必须成功于一次力量豁免，否则陷入 &Reference[restrained apply=false] 的生物可以用其动作进行一次 [[/check ability=str skill=ath dc=@attributes.spelldc]] 检定对抗该法术的豁免DC。检定成功则成功摆脱缠绕在其身上的藤蔓并不再被其束缚。</p>",
           "effects": {
             "Restrained": {
               "name": "束缚",
@@ -5778,7 +5778,7 @@
         },
         "Phantasmal Killer": {
           "name": "魅影杀手",
-          "description": "<p>You tap into the nightmares of a creature you can see within range and create an illusion of its deepest fears, visible only to that creature. The target makes a Wisdom saving throw. On a failed save, the target takes 4d10 Psychic damage and has Disadvantage on ability checks and attack rolls for the duration. On a successful save, the target takes half as much damage, and the spell ends.</p><p>For the duration, the target makes a [[/save ability=wis dc=@attributes.spell.dc]] saving throw at the end of each of its turns. On a failed save, it takes the Psychic damage again. On a successful save, the spell ends.</p><p><strong>Using a Higher-Level Spell Slot.</strong>The damage increases by 1d10 for each spell slot level above 4.</p>",
+          "description": "<p>你指定施法距离内一名你可见的生物，窥探其噩梦，依此创造一道只有目标能看见的幻象。目标生物进行一次感知豁免。豁免失败时，目标受到 4d10 点心灵伤害，且在法术持续时间内在属性检定和攻击掷骰上具有劣势。豁免成功，则目标只受一半伤害，法术终止。</p><p>法术持续时间内，目标在其每回合结束时进行一次 [[/save ability=wis dc=@attributes.spelldc]] 豁免，豁免失败则再次受到心灵伤害。豁免成功则法术终止。</p><p><strong>升环施法：</strong>使用的法术位每比四环高一环，伤害就增加 1d10。</p>",
           "effects": {
             "Fears Manifested": {
               "name": "陷入噩梦",
@@ -6633,7 +6633,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]{Command}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]{Lightning Bolt}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用智力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]</em></p>"
         },
         "Mage Hand": {
           "name": "法师之手",
@@ -6669,7 +6669,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -7050,7 +7050,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +5 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]{Dancing Lights}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]{Druidcraft}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]{Ray of Sickness}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithP]{Speak with Plants}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplVitriolicS]{Vitriolic Sphere}</em></p>"
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]]施展以下一道法术，使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]，法术攻击命中 +5）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]</em></p><p class=\"feature-trait\"><strong>1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithP]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplVitriolicS]</em></p>"
         },
         "Leap": {
           "name": "跳跃",
@@ -7187,7 +7187,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAlterSelf0]{Alter Self}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]{Command}</em> (level 3 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDominatePe]{Dominate Person}</em> (level 8 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em> (self only)</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAlterSelf0]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]</em>（3 环版本）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDominatePe]</em>（8 环版本）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em>（仅限自身）</p>"
         },
         "Alter Self": {
           "name": "变身术",
@@ -7374,7 +7374,7 @@
         },
         "Trampling Charge": {
           "name": "践踏冲锋",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] moves up to its Speed without provoking &amp;Reference[OpportunityAttacks] and can move through the spaces of [[lookup @target.affects.special activity=FG9rAj3Q8UTxbGLF]]. Each [[lookup @target.affects.type activity=FG9rAj3Q8UTxbGLF]] whose space the [[lookup @name lowercase]] enters is targeted once by the following effect.</p><p class=\"feature\"><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=FG9rAj3Q8UTxbGLF]].</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 移动至多等于其速度的距离且不会引发 &Reference[OpportunityAttacks]{借机攻击} ，并且可以移动穿过 [[lookup @target.affects.special activity=FG9rAj3Q8UTxbGLF]]占据的空间。所处空间被 [[lookup @name lowercase]] 进入的所有生物都会被选为一次以下效应的目标。</p><p class=\"feature\"><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=FG9rAj3Q8UTxbGLF]].</p><p class=\"feature\"><em>失败:</em> [[/damage average]]伤害，且目标陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Save": {
               "name": "豁免",
@@ -7416,7 +7416,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]{Druidcraft}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]{Speak with Animals}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]，@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]</em></p>"
         },
         "Forest Staff": {
           "name": "森林之杖",
@@ -7839,7 +7839,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFogCloud00]{Fog Cloud}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]{Light}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWea]{Control Weather}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]{Gaseous Form}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTelekinesi]{Telekinesis}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFogCloud00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]</em></p><p class=\"feature-trait\"><strong>1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWea]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTelekinesi]</em></p>"
         },
         "Misty Step": {
           "name": "迷踪步",
@@ -8208,7 +8208,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no spell components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]{Detect Evil and Good}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShapechang]{Shapechange}</em> (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)</p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateFood]{Create Food and Water}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDream00000]{Dream}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{Greater Restoration}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]{Scrying}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000]{Sleep}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需法术成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShapechang]</em>（仅野兽或类人形态，不会因该法术获得临时生命值，也无需专注或临时生命值来维持法术）</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateFood]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDream00000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000]</em></p>"
         },
         "Detect Evil and Good": {
           "name": "侦测善恶",
@@ -8246,7 +8246,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -8438,7 +8438,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +4 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]{Light}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>2/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]{Command}</em></p><p class=\"feature-trait\"><strong>1/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldPerson]{Hold Person}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]，法术攻击命中 +4）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]</em></p><p class=\"feature-trait\"><strong>1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldPerson]</em></p>"
         },
         "Spiritual Weapon": {
           "name": "灵体武器",
@@ -8529,7 +8529,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageArmor0]{Mage Armor}</em> (included in AC), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplJallarzisS]{Jallarzi’s Storm of Radiance}</em> (level 7 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassSugges]{Mass Suggestion}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageArmor0]</em>（已计入AC），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplJallarzisS]</em>（7 环版本），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassSugges]</em></p>"
         },
         "Mage Armor": {
           "name": "法师护甲",
@@ -8627,7 +8627,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplArcaneEye0]{Arcane Eye}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLocateObje]{Locate Object}</em></p><p class=\"feature-trait\"><strong>1/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLegendLore]{Legend Lore}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplArcaneEye0]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLocateObje]</em></p><p class=\"feature-trait\"><strong>1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLegendLore]</em></p>"
         },
         "Portent": {
           "name": "预兆",
@@ -9007,7 +9007,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithD]{Speak with Dead}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @nanme lowcase]] 施展以下一道法术，使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithD]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p>"
         },
         "Spirit Wail": {
           "name": "魂灵惊嚎",
@@ -9198,7 +9198,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]{Command}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPhantomSte]{Phantom Steed}</em></p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDestructiv]{Destructive Wave}</em> (Necrotic), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em></p>",
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPhantomSte]</em></p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDestructiv]</em>（暗蚀）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em></p>",
           "activities": {
             "Destructive Wave (Necrotic)": {
               "name": "湮灭波（暗蚀）"
@@ -9297,7 +9297,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPhantomSte]{Phantom Steed}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDestructiv]{Destructive Wave}</em> (Necrotic), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em></p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPhantomSte]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDestructiv]</em>（暗蚀），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em></p>",
           "activities": {
             "Destructive Wave (Necrotic)": {
               "name": "湮灭波（暗蚀）"
@@ -9420,7 +9420,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -9459,7 +9459,7 @@
         },
         "Major Image": {
           "name": "高等幻影",
-          "description": "<p>You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot Cube. The image appears at a spot that you can see within range and lasts for the duration. It seems real, including sounds, smells, and temperature appropriate to the thing depicted, but it can’t deal damage or cause conditions.</p><p>If you are within range of the illusion, you can take a Magic action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.</p><p>Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The spell lasts until dispelled, without requiring Concentration, if cast with a level 4+ spell slot.</p>",
+          "description": "<p>你创造一个影像，其形象来自一个大小不超过边长 20 尺立方体的物件或生物，或是其他的可视现象。影像出现在施法距离内你能看见的一处位置并在法术持续时间内维持存在。它看起来完全是真实的，并且还具有相应的声音、气味和温度。但它无法造成伤害或让人陷入任何状态。</p><p> 在该幻象施法距离内时，你可以用一个魔法动作将影像移动到施法距离内的另一个位置。影像改变位置时，你可以改变影像的外表来使它移动得更自然。例如，如果你创造了一个生物的影像并移动它，则你可以改变影像，使它看起来就像是在走路。或者你也可以让影像在不同的时间发出不同的声音，甚至可以让它参与一场对话。</p><p>由于影像可以被穿过，任何与该影像进行的物理互动都会暴露其幻象的本质。一个生物用研究动作调查影像时，它可以进行一次对抗你的法术豁免 DC 的 [[/check ability=int skill=inv dc=@attributes.spelldc]] 检定，以判定是否看穿幻象。辨出幻象的生物可以看破该影像，而影像的其他感官效应在该生物看来会变得微弱而模糊。</p><p><strong>升环施法：</strong> 使用高于三环的法术位时，法术时间持续至被解除且无需专注。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -9807,7 +9807,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]{Detect Evil and Good}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShapechang]{Shapechange}</em> (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)</p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommune000]{Commune}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRaiseDead0]{Raise Dead}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShapechang]</em>（仅野兽与类人形态；不会因此获得临时生命值，但无需为维持此法术而保有临时生命值，亦无需为此维持专注）</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommune000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRaiseDead0]</em></p>"
         },
         "Detect Evil and Good": {
           "name": "侦测善恶",
@@ -10052,7 +10052,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]{Detect Evil and Good}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em></p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateFood]{Create Food and Water}</em> (can create wine instead of water), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]{Tongues}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWindWalk00]{Wind Walk}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreation00]{Creation}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]{Gaseous Form}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{Invisibility}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]{Major Image}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]]施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC17）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em></p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateFood]</em>（可将创造水替换为创造美酒）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWindWalk00]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreation00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em></p>"
         },
         "Detect Evil and Good": {
           "name": "侦测善恶",
@@ -10164,7 +10164,7 @@
         },
         "Major Image": {
           "name": "高等幻影",
-          "description": "<p>You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot Cube. The image appears at a spot that you can see within range and lasts for the duration. It seems real, including sounds, smells, and temperature appropriate to the thing depicted, but it can’t deal damage or cause conditions.</p><p>If you are within range of the illusion, you can take a Magic action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.</p><p>Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The spell lasts until dispelled, without requiring Concentration, if cast with a level 4+ spell slot.</p>",
+          "description": "<p>你创造一个影像，其形象来自一个大小不超过边长 20 尺立方体的物件或生物，或是其他的可视现象。影像出现在施法距离内你能看见的一处位置并在法术持续时间内维持存在。它看起来完全是真实的，并且还具有相应的声音、气味和温度。但它无法造成伤害或让人陷入任何状态。</p><p> 在该幻象施法距离内时，你可以用一个魔法动作将影像移动到施法距离内的另一个位置。影像改变位置时，你可以改变影像的外表来使它移动得更自然。例如，如果你创造了一个生物的影像并移动它，则你可以改变影像，使它看起来就像是在走路。或者你也可以让影像在不同的时间发出不同的声音，甚至可以让它参与一场对话。</p><p>由于影像可以被穿过，任何与该影像进行的物理互动都会暴露其幻象的本质。一个生物用研究动作调查影像时，它可以进行一次对抗你的法术豁免 DC 的 [[/check ability=int skill=inv dc=@attributes.spelldc]] 检定，以判定是否看穿幻象。辨出幻象的生物可以看破该影像，而影像的其他感官效应在该生物看来会变得微弱而模糊。</p><p><strong>升环施法：</strong> 使用高于三环的法术位时，法术时间持续至被解除且无需专注。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -10248,7 +10248,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -10388,7 +10388,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +11 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]{Ray of Sickness}</em> (level 2 version)</p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateUnde]{Create Undead}</em> (level 8 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFingerofDe]{Finger of Death}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]，法术攻击命中 +11）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]</em>（2 环版本）</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateUnde]</em>（8 环版本）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFingerofDe]</em></p>"
         },
         "Detect Magic": {
           "name": "侦测魔法",
@@ -10557,7 +10557,7 @@
         },
         "Magic of the Spider Queen": {
           "name": "蜘蛛女王之魔法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{Darkness}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]{Faerie Fire}</em>, or <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWeb0000000]{Web}</em>, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]).</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]</em> 或 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWeb0000000]</em>, 无需材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）。</p>"
         },
         "Darkness": {
           "name": "黑暗术",
@@ -10583,7 +10583,7 @@
         },
         "Web": {
           "name": "蛛网术",
-          "description": "<p>You conjure a mass of sticky webbing at a point within range. The webs fill a 20-foot Cube there for the duration. The webs are &amp;Reference[difficultterrain], and the area within them is &amp;Reference[lightlyobscured].</p><p>If the webs aren’t anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.</p><p>The first time a creature enters the webs on a turn or starts its turn there, it must succeed on a Dexterity saving throw or have the &amp;Reference[restrained] condition while in the webs or until it breaks free.</p><p>A creature Restrained by the webs can take an action to make a [[/check ability=str skill=ath dc=@attributes.spell.dc]] check against your spell save DC. If it succeeds, it is no longer Restrained.</p><p>The webs are flammable. Any 5-foot Cube of webs exposed to fire burns away in 1 round, dealing [[/damage 2d4 type=fire]] damage to any creature that starts its turn in the fire.</p>",
+          "description": "<p>你在法术范围内指定一点召唤出一大片黏黏的网状物。蛛网覆盖以该点为源点的 20 尺立方区域，并在法术持续时间内维持存在。蛛网范围内视为 &Reference[difficultterrain]，并造成 &Reference[lightlyobscured]。</p><p>如果蛛网没有被固定在两个固体中间（例如墙和树）或跨在一片地板、墙壁、天花板中间，则蛛网会自动坍塌，而导致法术在你的下一回合开始时终止。摊在平面上的蛛网深度为 5 尺。</p><p>在一个回合中首次进入蛛网，或任何在蛛网中开始其回合的生物必须进行一次敏捷豁免，否则陷入&Reference[restrained]，直至其离开蛛网或挣脱束缚。</p><p>名因蛛网陷入束缚Restrained状态的生物可以用一个动作进行一次对抗你的法术豁免DC的 [[/check ability=str skill=ath dc=@attributes.spelldc]] 检定。如果成功，则其不再被束缚 Restrained。</p><p>蛛网是可燃的。任何5尺立方区域的蛛网在遇到火焰后会在一轮内燃烧殆尽，并对火焰中开始其回合的生物造成 [[/damage 2d4 type=fire]] 火焰 伤害。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -10619,7 +10619,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]{Druidcraft}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]{Speak with Animals}</em></p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEntangle00]{Entangle}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThunderwav]{Thunderwave}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimalMess]{Animal Messenger}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLongstride]{Longstrider}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMoonbeam00]{Moonbeam}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]</em></p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEntangle00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThunderwav]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimalMess]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLongstride]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMoonbeam00]</em></p>"
         },
         "Druidcraft": {
           "name": "德鲁伊伎俩",
@@ -10649,7 +10649,7 @@
         },
         "Entangle": {
           "name": "纠缠术",
-          "description": "<p>Grasping plants sprout from the ground in a 20-foot square within range. For the duration, these plants turn the ground in the area into &amp;Reference[difficultterrain]. They disappear when the spell ends.</p><p>Each creature (other than you) in the area when you cast the spell must succeed on a Strength saving throw or have the &amp;Reference[restrained apply=false] condition until the spell ends. A Restrained creature can take an action to make a [[/check ability=str skill=ath dc=@attributes.spell.dc]] check against your spell save DC. On a success, it frees itself from the grasping plants and is no longer Restrained by them.</p>",
+          "description": "<p>缠绕的植物在施法距离内从 20 尺方状区域地面中破土而出。在法术持续时间内，这片被植物覆盖的区域变为 &Reference[difficultterrain] 法术结束时，这些植物会消失。</p><p>在你施展法术时，该区域内的生物（除你之外）必须成功于一次力量豁免，否则陷入 &Reference[restrained apply=false] 的生物可以用其动作进行一次 [[/check ability=str skill=ath dc=@attributes.spelldc]] 检定对抗该法术的豁免DC。检定成功则成功摆脱缠绕在其身上的藤蔓并不再被其束缚。</p>",
           "effects": {
             "Restrained": {
               "name": "束缚",
@@ -10743,7 +10743,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimalFrie]{Animal Friendship}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmMonst]{Charm Monster}</em> (lasts 24 hours; ends early if the dryad casts the spell again), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]{Druidcraft}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEntangle00]{Entangle}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswithou]{Pass without Trace}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimalFrie]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmMonst]</em>（持续 24 小时；于[[lookup @name lowercase]]再次释放该法术时提前结束）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEntangle00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswithou]</em></p>"
         },
         "Tree Stride": {
           "name": "林间飞跃",
@@ -10797,7 +10797,7 @@
         },
         "Entangle": {
           "name": "纠缠术",
-          "description": "<p>Grasping plants sprout from the ground in a 20-foot square within range. For the duration, these plants turn the ground in the area into &amp;Reference[difficultterrain]. They disappear when the spell ends.</p><p>Each creature (other than you) in the area when you cast the spell must succeed on a Strength saving throw or have the &amp;Reference[restrained apply=false] condition until the spell ends. A Restrained creature can take an action to make a [[/check ability=str skill=ath dc=@attributes.spell.dc]] check against your spell save DC. On a success, it frees itself from the grasping plants and is no longer Restrained by them.</p>",
+          "description": "<p>缠绕的植物在施法距离内从 20 尺方状区域地面中破土而出。在法术持续时间内，这片被植物覆盖的区域变为 &Reference[difficultterrain] 法术结束时，这些植物会消失。</p><p>在你施展法术时，该区域内的生物（除你之外）必须成功于一次力量豁免，否则陷入 &Reference[restrained apply=false] 的生物可以用其动作进行一次 [[/check ability=str skill=ath dc=@attributes.spelldc]] 检定对抗该法术的豁免DC。检定成功则成功摆脱缠绕在其身上的藤蔓并不再被其束缚。</p>",
           "effects": {
             "Restrained": {
               "name": "束缚",
@@ -10854,7 +10854,7 @@
         },
         "Sleep": {
           "name": "睡眠术",
-          "description": "<p>The [[lookup @name lowercase]] casts the @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000] spell, requiring no spell components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]).</p>"
+          "description": "<p>[[lookup @name lowercase]] 施展法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000] ，无需法术成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）。</p>"
         },
         "CF13ievxQ48W9L9w": {
           "name": "睡眠术",
@@ -10981,7 +10981,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]{Elementalism}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]{Gaseous Form}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{Invisibility}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]{Major Image}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]{Tongues}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofFire]{Wall of Fire}</em> (level 7 version)</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]]施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofFire]</em>（7 环版本）</p>"
         },
         "Detect Magic": {
           "name": "侦测魔法",
@@ -11046,7 +11046,7 @@
         },
         "Major Image": {
           "name": "高等幻影",
-          "description": "<p>You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot Cube. The image appears at a spot that you can see within range and lasts for the duration. It seems real, including sounds, smells, and temperature appropriate to the thing depicted, but it can’t deal damage or cause conditions.</p><p>If you are within range of the illusion, you can take a Magic action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.</p><p>Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The spell lasts until dispelled, without requiring Concentration, if cast with a level 4+ spell slot.</p>",
+          "description": "<p>你创造一个影像，其形象来自一个大小不超过边长 20 尺立方体的物件或生物，或是其他的可视现象。影像出现在施法距离内你能看见的一处位置并在法术持续时间内维持存在。它看起来完全是真实的，并且还具有相应的声音、气味和温度。但它无法造成伤害或让人陷入任何状态。</p><p> 在该幻象施法距离内时，你可以用一个魔法动作将影像移动到施法距离内的另一个位置。影像改变位置时，你可以改变影像的外表来使它移动得更自然。例如，如果你创造了一个生物的影像并移动它，则你可以改变影像，使它看起来就像是在走路。或者你也可以让影像在不同的时间发出不同的声音，甚至可以让它参与一场对话。</p><p>由于影像可以被穿过，任何与该影像进行的物理互动都会暴露其幻象的本质。一个生物用研究动作调查影像时，它可以进行一次对抗你的法术豁免 DC 的 [[/check ability=int skill=inv dc=@attributes.spelldc]] 检定，以判定是否看穿幻象。辨出幻象的生物可以看破该影像，而影像的其他感官效应在该生物看来会变得微弱而模糊。</p><p><strong>升环施法：</strong> 使用高于三环的法术位时，法术时间持续至被解除且无需专注。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -11259,7 +11259,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]{Elementalism}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em></p>"
         },
         "Elemental Absorption": {
           "name": "元素吸收",
@@ -11435,7 +11435,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCalmEmotio]{Calm Emotions}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{Greater Restoration}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswithou]{Pass without Trace}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]{Water Breathing}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommune000]{Commune}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]{Dispel Evil and Good}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCalmEmotio]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswithou]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommune000]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelEvil]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em></p>"
         },
         "Calm Emotions": {
           "name": "安定心神",
@@ -11592,7 +11592,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]{Bless}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLesserRest]{Lesser Restoration}</em> (as an action)</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLesserRest]</em>（以动作施展）</p>"
         },
         "Bless": {
           "name": "祝福术",
@@ -11814,7 +11814,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\"><em><strong>Spellcasting.</strong></em> The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]{Dancing Lights}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHallucinat]{Hallucinatory Terrain}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPolymorph0]{Polymorph}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHallucinat]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPolymorph0]</em></p>"
         },
         "Superior Invisibility": {
           "name": "进阶隐形",
@@ -11860,7 +11860,7 @@
         },
         "Minor Illusion": {
           "name": "次级幻象",
-          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
               "name": "制造幻象",
@@ -11882,7 +11882,7 @@
         },
         "Hallucinatory Terrain": {
           "name": "幻景",
-          "description": "<p>You make natural terrain in a 150-foot Cube in range look, sound, and smell like another sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren’t changed.</p><p>The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to notice the illusion. If the difference isn’t obvious by touch, a creature examining the illusion can take the Study action to make an [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC to disbelieve it. If a creature discerns that the terrain is illusory, the creature sees a vague image superimposed on the real terrain.</p>",
+          "description": "<p>你使施法距离内一处 150 尺立方区域内的自然地形在视觉、听觉、嗅觉上都像是另一种自然地形。因此，开阔的平原或者道路可能会变得像是一片沼泽，或是丘陵、裂谷以及其他难以通过，甚至是无法通过的地形。一个池塘可能变得看起来像一片草地，一个悬崖像是一个缓坡，或者使一条乱石沟像是一条宽阔平坦的道路。区域内经过加工的建筑、装备或生物的外表不会改变。</p><p>地形的触觉特征不会改变，所以进入这片区域的生物可能会看穿幻象。如果触觉区别不明显，一个仔细调查幻象的生物可以采取研究动作，尝试进行一次对抗法术豁免 DC 的 [[/check ability=int skill=inv dc=@attributes.spelldc]] 检定以不信。对于一个识破了幻象本体的生物，幻象看起来就像是一层模糊的图像叠加在真实地形上。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -11930,7 +11930,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]{Dancing Lights}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]</em></p>"
         },
         "Superior Invisibility": {
           "name": "进阶隐形",
@@ -11976,7 +11976,7 @@
         },
         "Minor Illusion": {
           "name": "次级幻象",
-          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
               "name": "制造幻象",
@@ -12021,7 +12021,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +7 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScorchingR]{Scorching Ray}</em> (level 5 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>2/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]{Fireball}</em> (level 6 version)</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]]施展以下一道法术，使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]，法术攻击命中 +7）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScorchingR]</em>（5 环版本），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em>（6 环版本）</p>"
         },
         "Hellish Rebuke": {
           "name": "炼狱叱喝",
@@ -12186,7 +12186,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em></p><p class=\"feature-trait\"><strong>2/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi]{Magic Missile}</em> (level 2 version)</p><p class=\"feature-trait\"><strong>1/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]{Fireball}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需姿势或材料成分并使用智力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em></p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi]</em>（2 环版本）</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em></p>"
         },
         "Fire Ray": {
           "name": "火焰射线",
@@ -14177,7 +14177,7 @@
         },
         "Phantasmal Killer": {
           "name": "魅影杀手",
-          "description": "<p>You tap into the nightmares of a creature you can see within range and create an illusion of its deepest fears, visible only to that creature. The target makes a Wisdom saving throw. On a failed save, the target takes 4d10 Psychic damage and has Disadvantage on ability checks and attack rolls for the duration. On a successful save, the target takes half as much damage, and the spell ends.</p><p>For the duration, the target makes a [[/save ability=wis dc=@attributes.spell.dc]] saving throw at the end of each of its turns. On a failed save, it takes the Psychic damage again. On a successful save, the spell ends.</p><p><strong>Using a Higher-Level Spell Slot.</strong>The damage increases by 1d10 for each spell slot level above 4.</p>",
+          "description": "<p>你指定施法距离内一名你可见的生物，窥探其噩梦，依此创造一道只有目标能看见的幻象。目标生物进行一次感知豁免。豁免失败时，目标受到 4d10 点心灵伤害，且在法术持续时间内在属性检定和攻击掷骰上具有劣势。豁免成功，则目标只受一半伤害，法术终止。</p><p>法术持续时间内，目标在其每回合结束时进行一次 [[/save ability=wis dc=@attributes.spelldc]] 豁免，豁免失败则再次受到心灵伤害。豁免成功则法术终止。</p><p><strong>升环施法：</strong>使用的法术位每比四环高一环，伤害就增加 1d10。</p>",
           "effects": {
             "Fears Manifested": {
               "name": "陷入噩梦",
@@ -14297,7 +14297,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{Darkness}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConfusion0]{Confusion}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFly0000000]{Fly}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordS]{Power Word Stun}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下法术中的一个，无需材料成分，并使用智力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConfusion0]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFly0000000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordS]</em></p>"
         },
         "Darkness": {
           "name": "黑暗术",
@@ -14361,7 +14361,7 @@
         },
         "Power Word Stun": {
           "name": "律令震慑",
-          "description": "<p>You overwhelm the mind of one creature you can see within range. If the target has 150 Hit Points or fewer, it has the Stunned condition. Otherwise, its Speed is 0 until the start of your next turn.</p><p>The &amp;Reference[Stunned apply=false] target makes a [[/save ability=con dc=@attributes.spell.dc]] saving throw at the end of each of its turns, ending the condition on itself on a success.</p>",
+          "description": "<p>你压垮施法距离内一名你可见生物的心灵。若目标生命值为 150 点或更少，则其陷入震慑状态。否则，目标的速度直至你下个回合开始变为 0。</p><p>被 &Reference[Stunned apply=false] 目标在其每回合结束时进行一次 [[/save ability=con dc=@attributes.spelldc]] 。豁免成功，则其身上的此状态终止。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -14683,7 +14683,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBlindnessD]{Blindness/Deafness}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]{Faerie Fire}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGrease0000]{Grease}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，使用智力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBlindnessD]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGrease0000]</em></p>"
         },
         "Jinx": {
           "name": "倒霉",
@@ -14697,7 +14697,7 @@
         },
         "Minor Illusion": {
           "name": "次级幻象",
-          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
               "name": "制造幻象",
@@ -15138,7 +15138,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -15177,7 +15177,7 @@
         },
         "Major Image": {
           "name": "高等幻影",
-          "description": "<p>You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot Cube. The image appears at a spot that you can see within range and lasts for the duration. It seems real, including sounds, smells, and temperature appropriate to the thing depicted, but it can’t deal damage or cause conditions.</p><p>If you are within range of the illusion, you can take a Magic action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.</p><p>Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The spell lasts until dispelled, without requiring Concentration, if cast with a level 4+ spell slot.</p>",
+          "description": "<p>你创造一个影像，其形象来自一个大小不超过边长 20 尺立方体的物件或生物，或是其他的可视现象。影像出现在施法距离内你能看见的一处位置并在法术持续时间内维持存在。它看起来完全是真实的，并且还具有相应的声音、气味和温度。但它无法造成伤害或让人陷入任何状态。</p><p> 在该幻象施法距离内时，你可以用一个魔法动作将影像移动到施法距离内的另一个位置。影像改变位置时，你可以改变影像的外表来使它移动得更自然。例如，如果你创造了一个生物的影像并移动它，则你可以改变影像，使它看起来就像是在走路。或者你也可以让影像在不同的时间发出不同的声音，甚至可以让它参与一场对话。</p><p>由于影像可以被穿过，任何与该影像进行的物理互动都会暴露其幻象的本质。一个生物用研究动作调查影像时，它可以进行一次对抗你的法术豁免 DC 的 [[/check ability=int skill=inv dc=@attributes.spelldc]] 检定，以判定是否看穿幻象。辨出幻象的生物可以看破该影像，而影像的其他感官效应在该生物看来会变得微弱而模糊。</p><p><strong>升环施法：</strong> 使用高于三环的法术位时，法术时间持续至被解除且无需专注。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -15409,7 +15409,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +4 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]{Dancing Lights}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]{Disguise Self}</em> (24-hour duration), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{Invisibility}</em> (self only, and the hag leaves no tracks while Invisible), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]{Ray of Sickness}</em> (level 3 version)</p>"
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]，法术攻击命中 +4）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]。</em>（持续 24 小时）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em>（仅自身，并且鬼婆在隐形期间不会留下任何踪迹）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]。</em>（3 环版本）</p>"
         },
         "Dancing Lights": {
           "name": "舞光术",
@@ -15430,7 +15430,7 @@
         },
         "Disguise Self": {
           "name": "易容术",
-          "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.</p><p>To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC.</p>",
+          "description": "<p>你改变自身以及随身的衣物、护甲、武器等在你身上的所有物。该效应在法术终止时结束。肉眼看来你的身高可以有 1 尺的增减，体态可胖可瘦。你必须选择一个和你肢体基础排列方式一致的形态。此外，幻术的影响范围由你决定。</p><p>此法术产生的变化无法应对物理检查。比如，你用此法术添了一顶帽子，那么现实物件会从帽子穿过去，且任何触碰帽子的人将摸不到任何东西。</p><p>如果一名生物想要分辨你是否易容，则必须使用一个研究动作研究你的外貌，并成功于一次对抗你法术豁免DC的 [[/check ability=int skill=inv]] 检定。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -15461,7 +15461,7 @@
         },
         "Minor Illusion": {
           "name": "次级幻象",
-          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
               "name": "制造幻象",
@@ -15545,7 +15545,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +6 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]{Fireball}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{Invisibility}</em> (self only)</p>",
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]，法术攻击命中 +7）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em>（仅自身）</p>",
           "activities": {
             "4awkwEg1WnDM1f5N": {
               "affectsSpecial": "self only"
@@ -15571,7 +15571,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -15883,7 +15883,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Somatic or Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplClairvoyan]{Clairvoyance}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds]{Cure Wounds}</em> (level 6 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFlameStrik]{Flame Strike}</em> (level 6 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGeas000000]{Geas}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTrueSeeing]{True Seeing}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需任何姿势或材料成分并使感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplClairvoyan]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds]</em>（6环版本）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFlameStrik]</em>（6环版本）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGeas000000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTrueSeeing]</em></p>"
         },
         "Thaumaturgy": {
           "name": "奇术",
@@ -16832,7 +16832,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]{Disguise Self}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEtherealne]{Etherealness}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDream00000]{Dream}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHypnoticPa]{Hypnotic Pattern}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEtherealne]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDream00000]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHypnoticPa]</em></p>"
         },
         "Nightmare": {
           "name": "噩梦 ",
@@ -16851,7 +16851,7 @@
         },
         "Disguise Self": {
           "name": "易容术",
-          "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.</p><p>To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC.</p>",
+          "description": "<p>你改变自身以及随身的衣物、护甲、武器等在你身上的所有物。该效应在法术终止时结束。肉眼看来你的身高可以有 1 尺的增减，体态可胖可瘦。你必须选择一个和你肢体基础排列方式一致的形态。此外，幻术的影响范围由你决定。</p><p>此法术产生的变化无法应对物理检查。比如，你用此法术添了一顶帽子，那么现实物件会从帽子穿过去，且任何触碰帽子的人将摸不到任何东西。</p><p>如果一名生物想要分辨你是否易容，则必须使用一个研究动作研究你的外貌，并成功于一次对抗你法术豁免DC的 [[/check ability=int skill=inv]] 检定。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -17569,7 +17569,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDestructiv]{Destructive Wave}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDivination]{Divination}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldMonste]{Hold Monster}</em> (level 6 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]{Scrying}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]{Tongues}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDestructiv]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDivination]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldMonste]</em>（6 环版本）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]</em></p>"
         },
         "Detect Magic": {
           "name": "侦测魔法",
@@ -17882,7 +17882,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]{Disguise Self}</em> (can appear as a Large or Medium biped), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGeas000000]{Geas}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]{Major Image}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]{Scrying}</em></p>"
+          "description": "<p class=\"feature\"> [[lookup @name lowercase]] 施展以下一道法术，无需任材料成分并使用魅力作为施法属性(法术豁免 DC [[lookup @attributes.spelldc]])：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]</em> （可易容为大型或中型两足动物），  <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGeas000000]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]</em></p>"
         },
         "Leap": {
           "name": "跳跃",
@@ -17896,7 +17896,7 @@
         },
         "Disguise Self": {
           "name": "易容术",
-          "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.</p><p>To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC.</p>",
+          "description": "<p>你改变自身以及随身的衣物、护甲、武器等在你身上的所有物。该效应在法术终止时结束。肉眼看来你的身高可以有 1 尺的增减，体态可胖可瘦。你必须选择一个和你肢体基础排列方式一致的形态。此外，幻术的影响范围由你决定。</p><p>此法术产生的变化无法应对物理检查。比如，你用此法术添了一顶帽子，那么现实物件会从帽子穿过去，且任何触碰帽子的人将摸不到任何东西。</p><p>如果一名生物想要分辨你是否易容，则必须使用一个研究动作研究你的外貌，并成功于一次对抗你法术豁免DC的 [[/check ability=int skill=inv]] 检定。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -17914,7 +17914,7 @@
         },
         "Minor Illusion": {
           "name": "次级幻象",
-          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
               "name": "制造幻象",
@@ -17949,7 +17949,7 @@
         },
         "Major Image": {
           "name": "高等幻影",
-          "description": "<p>You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot Cube. The image appears at a spot that you can see within range and lasts for the duration. It seems real, including sounds, smells, and temperature appropriate to the thing depicted, but it can’t deal damage or cause conditions.</p><p>If you are within range of the illusion, you can take a Magic action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.</p><p>Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The spell lasts until dispelled, without requiring Concentration, if cast with a level 4+ spell slot.</p>",
+          "description": "<p>你创造一个影像，其形象来自一个大小不超过边长 20 尺立方体的物件或生物，或是其他的可视现象。影像出现在施法距离内你能看见的一处位置并在法术持续时间内维持存在。它看起来完全是真实的，并且还具有相应的声音、气味和温度。但它无法造成伤害或让人陷入任何状态。</p><p> 在该幻象施法距离内时，你可以用一个魔法动作将影像移动到施法距离内的另一个位置。影像改变位置时，你可以改变影像的外表来使它移动得更自然。例如，如果你创造了一个生物的影像并移动它，则你可以改变影像，使它看起来就像是在走路。或者你也可以让影像在不同的时间发出不同的声音，甚至可以让它参与一场对话。</p><p>由于影像可以被穿过，任何与该影像进行的物理互动都会暴露其幻象的本质。一个生物用研究动作调查影像时，它可以进行一次对抗你的法术豁免 DC 的 [[/check ability=int skill=inv dc=@attributes.spelldc]] 检定，以判定是否看穿幻象。辨出幻象的生物可以看破该影像，而影像的其他感官效应在该生物看来会变得微弱而模糊。</p><p><strong>升环施法：</strong> 使用高于三环的法术位时，法术时间持续至被解除且无需专注。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -18072,7 +18072,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]{Fireball}</em> (level 5 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{Invisibility}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]{Lightning Bolt}</em> (level 5 version), <em>@UUID[Compendium.dnd-players-handbook.actors.Actor.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]{Prestidigitation}</em></p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimateDea]{Animate Dead}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDimensionD]{Dimension Door}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplChainLight]{Chain Lightning}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFingerofDe]{Finger of Death}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordK]{Power Word Kill}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]{Scrying}</em></p>",
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，使用智力作为施法属性（法术豁免 DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em>（5 环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]</em>（5 环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]</em></p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimateDea]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDimensionD]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplChainLight]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFingerofDe]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordK]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]</em></p>",
           "activities": {
             "Fireball (Lvl. 5)": {
               "name": "火球术（5 环版本）"
@@ -18101,7 +18101,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -18492,7 +18492,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]{Elementalism}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMeldintoSt]{Meld into Stone}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithP]{Speak with Plants}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpikeGrowt]{Spike Growth}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需材料成分并使用感知作为施法属性（法术豁免 DC [[lookup @attributes.spelldc]])：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMeldintoSt]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithP]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpikeGrowt]</em></p>"
         },
         "Elementalism": {
           "name": "四象法门",
@@ -18535,7 +18535,7 @@
         },
         "Spike Growth": {
           "name": "荆棘丛生",
-          "description": "<p>The ground in a 20-foot-radius Sphere centered on a point within range sprouts hard spikes and thorns. The area becomes Difficult Terrain for the duration. When a creature moves into or within the area, it takes [[/damage 2d4 type=piercing]] damage for every 5 feet it travels.</p><p>The transformation of the ground is camouflaged to look natural. Any creature that can’t see the area when the spell is cast must take a Search action and succeed on a [[/check ability=wis skill=prc dc=@attributes.spell.dc]] or [[/check ability=wis skill=sur dc=@attributes.spell.dc]] check against your spell save DC to recognize the terrain as hazardous before entering it.</p>",
+          "description": "<p>以施法距离内一点为中心周围 20 尺半径的球状区域扭曲变形，大片坚硬的棘刺破土而出。该区域在法术持续时间内视为困难地形。而生物进入该区域或在其中移动时，其每移动 5 尺就要受到 [[/damage 2d4 type=piercing]] 伤害。</p><p>法术导致的地面变形经过伪装，使其看起来并无异样。如果生物在你施展该法术时不能看见该区域，则它必须进行一次 [[/check ability=wis skill=prc dc=@attributes.spelldc]] 或 [[/check ability=wis skill=sur dc=@attributes.spelldc]] 检定，检定成功则能在进入之前发现该区域隐藏的危险</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -18611,7 +18611,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]{Light}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageArmor0]{Mage Armor}</em> (included in AC), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]{Prestidigitation}</em></p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]{Fireball}</em> (level 4 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{Invisibility}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConeofCold]{Cone of Cold}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFly0000000]{Fly}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，使用智力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageArmor0]</em>（已计入AC）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]</em></p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em>（4 环版本）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConeofCold]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFly0000000]</em></p>"
         },
         "Misty Step": {
           "name": "迷踪步",
@@ -18795,7 +18795,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +5 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]{Prestidigitation}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]{Disguise Self}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplIceKnife00]{Ice Knife}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageArmor0]{Mage Armor}</em> (included in AC), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThunderwav]{Thunderwave}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 徒施展以下一道法术，使用智力作为施法属性（法术豁免 DC [[lookup @attributes.spelldc]]，法术攻击命中 +5）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplIceKnife00]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageArmor0]</em> （已计入AC），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThunderwav]</em></p>"
         },
         "Mage Hand": {
           "name": "法师之手",
@@ -18822,7 +18822,7 @@
         },
         "Disguise Self": {
           "name": "易容术",
-          "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.</p><p>To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC.</p>",
+          "description": "<p>你改变自身以及随身的衣物、护甲、武器等在你身上的所有物。该效应在法术终止时结束。肉眼看来你的身高可以有 1 尺的增减，体态可胖可瘦。你必须选择一个和你肢体基础排列方式一致的形态。此外，幻术的影响范围由你决定。</p><p>此法术产生的变化无法应对物理检查。比如，你用此法术添了一顶帽子，那么现实物件会从帽子穿过去，且任何触碰帽子的人将摸不到任何东西。</p><p>如果一名生物想要分辨你是否易容，则必须使用一个研究动作研究你的外貌，并成功于一次对抗你法术豁免DC的 [[/check ability=int skill=inv]] 检定。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -19129,7 +19129,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateorDe]{Create or Destroy Water}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]{Detect Evil and Good}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPurifyFood]{Purify Food and Drink}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWat]{Control Water}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]{Gaseous Form}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{Invisibility}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]{Tongues}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需材料成分并使用魅力作为施法属性（法术豁免 DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>每项1/日： </strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateorDe]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPurifyFood]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWat]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]</em></p>"
         },
         "Create or Destroy Water": {
           "name": "造水术/枯水术",
@@ -19185,7 +19185,7 @@
         },
         "Control Water": {
           "name": "操控水体",
-          "description": "<p>Until the spell ends, you control any water inside an area you choose that is a Cube up to 100 feet on a side, using one of the following effects. As a Magic action on your later turns, you can repeat the same effect or choose a different one.</p><p><strong>Flood. </strong>You cause the water level of all standing water in the area to rise by as much as 20 feet. If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes. Any Huge or smaller vehicles in the wave’s path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a [[/r 1d100cs&lt;26#Vehicle is capsized]]{25 percent} chance of capsizing.</p><p>The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts.</p><p><strong>Part Water. </strong>You part water in the area and create a trench. The trench extends across the spell’s area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored.</p><p><strong>Redirect Flow. </strong>You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell’s area, it resumes its flow based on the terrain. The water continues to move in the direction you chose until the spell ends or you choose a different effect.</p><p><strong>Whirlpool. </strong>You cause a whirlpool to form in the center of the area, which must be at least 50 feet square and 25 feet deep. The whirlpool lasts until you choose a different effect or the spell ends. The whirlpool is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature in the water and within 25 feet of the whirlpool is pulled 10 feet toward it. When a creature enters the whirlpool for the first time on a turn or ends its turn there, it makes a Strength saving throw. On a failed save, the creature takes 2d8 Bludgeoning damage. On a successful save, the creature takes half as much damage. A creature can swim away from the whirlpool only if it first takes an action to pull away and succeeds on a [[/check ability=str skill=ath dc=@attributes.spell.dc]] check against your spell save DC.</p>",
+          "description": "<p>直到法术结束为止，你控制你指定的一处边长 100 尺的立方区域中的任意一处独立水体，从以下效应中选择其一生效。在你之后的每个自己回合中，你可以用一个魔法动作重复同一效应，或是选择另一效应。</p><p><strong>上涨。</strong>你使控制区域内水位上涨至多20尺。如果你指定的区域是一片大水体中的一部分，则你改为制造一片 20 尺高的波浪，并从区域的一边扑向另一边再拍下水面。波浪中任何巨型Huge或更小的载具都会被带到水浪行进的另一边。且所有巨型或更小的载具都有 [[/r 1d100cs&lt;26#Vehicle is capsized]]{25%} 的几率倾覆。</p><p>直至法术终止或你选择另一个效应前，水位的上涨情况将保持不变。如果该效应用以产生波浪，则波浪在你下一回合开始时再次进行翻打。</p><p><strong>分水。</strong>你使区域内的水体分开并形成一条水体的沟壑。沟壑从法术区域的一头延伸到另一头，而被分开的水体则在两边形成两道水墙。沟壑持续存在至法术终止或直至你选择另一个效应。该效应终止时，水流会逐渐在下一轮中将沟壑填满，直至其恢复成通常的水位。</p><p><strong>转向。</strong>你使区域内的水体向一个你自选的方向流动，即使水流需要绕过障碍，或沿着墙壁向上流，甚至流向一些不太可能的方向，区域内的水体都将遵照你指使的方向流动，但一旦其流出法术区域，则会重新基于其所在地形选择流向。水体持续向你所选方向流动，直至法术终止或直至你选择另一效应。</p><p><strong>漩涡。</strong>该效应需要水体至少为 50 尺的方形区域并且至少有 25 尺深。你在区域中央形成一个漩涡。其形态为底部宽 5 尺，顶部宽 50 尺，高 25 尺。水中任何距漩涡 25 尺内的生物或物件均被漩涡向自身拉动 10 尺。当一名生物在一个回合内第一次进入漩涡或在漩涡内结束其回合时，受影响的生物进行一次力量豁免。豁免失败则受到 2d8 点钝击伤害。豁免成功则只受一半伤害。一名生物若想以游泳方式离开漩涡，则必须先用一个动作远离漩涡并成功于一次对抗你法术豁免DC的 [[/check ability=str skill=ath dc=@attributes.spelldc]] 检定。</p>",
           "activities": {
             "Create Whirlpool": {
               "name": "创造漩涡"
@@ -19451,7 +19451,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]{Elementalism}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]{Light}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWat]{Control Water}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateorDe]{Create or Destroy Water}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplElementali]，@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLight00000]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWat]，@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCreateorDe]</em></p>"
         },
         "Elementalism": {
           "name": "四象法门",
@@ -19487,7 +19487,7 @@
         },
         "Control Water": {
           "name": "操控水体",
-          "description": "<p>Until the spell ends, you control any water inside an area you choose that is a Cube up to 100 feet on a side, using one of the following effects. As a Magic action on your later turns, you can repeat the same effect or choose a different one.</p><p><strong>Flood. </strong>You cause the water level of all standing water in the area to rise by as much as 20 feet. If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes. Any Huge or smaller vehicles in the wave’s path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a [[/r 1d100cs&lt;26#Vehicle is capsized]]{25 percent} chance of capsizing.</p><p>The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts.</p><p><strong>Part Water. </strong>You part water in the area and create a trench. The trench extends across the spell’s area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored.</p><p><strong>Redirect Flow. </strong>You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell’s area, it resumes its flow based on the terrain. The water continues to move in the direction you chose until the spell ends or you choose a different effect.</p><p><strong>Whirlpool. </strong>You cause a whirlpool to form in the center of the area, which must be at least 50 feet square and 25 feet deep. The whirlpool lasts until you choose a different effect or the spell ends. The whirlpool is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature in the water and within 25 feet of the whirlpool is pulled 10 feet toward it. When a creature enters the whirlpool for the first time on a turn or ends its turn there, it makes a Strength saving throw. On a failed save, the creature takes 2d8 Bludgeoning damage. On a successful save, the creature takes half as much damage. A creature can swim away from the whirlpool only if it first takes an action to pull away and succeeds on a [[/check ability=str skill=ath dc=@attributes.spell.dc]] check against your spell save DC.</p>",
+          "description": "<p>直到法术结束为止，你控制你指定的一处边长 100 尺的立方区域中的任意一处独立水体，从以下效应中选择其一生效。在你之后的每个自己回合中，你可以用一个魔法动作重复同一效应，或是选择另一效应。</p><p><strong>上涨。</strong>你使控制区域内水位上涨至多20尺。如果你指定的区域是一片大水体中的一部分，则你改为制造一片 20 尺高的波浪，并从区域的一边扑向另一边再拍下水面。波浪中任何巨型Huge或更小的载具都会被带到水浪行进的另一边。且所有巨型或更小的载具都有 [[/r 1d100cs&lt;26#Vehicle is capsized]]{25%} 的几率倾覆。</p><p>直至法术终止或你选择另一个效应前，水位的上涨情况将保持不变。如果该效应用以产生波浪，则波浪在你下一回合开始时再次进行翻打。</p><p><strong>分水。</strong>你使区域内的水体分开并形成一条水体的沟壑。沟壑从法术区域的一头延伸到另一头，而被分开的水体则在两边形成两道水墙。沟壑持续存在至法术终止或直至你选择另一个效应。该效应终止时，水流会逐渐在下一轮中将沟壑填满，直至其恢复成通常的水位。</p><p><strong>转向。</strong>你使区域内的水体向一个你自选的方向流动，即使水流需要绕过障碍，或沿着墙壁向上流，甚至流向一些不太可能的方向，区域内的水体都将遵照你指使的方向流动，但一旦其流出法术区域，则会重新基于其所在地形选择流向。水体持续向你所选方向流动，直至法术终止或直至你选择另一效应。</p><p><strong>漩涡。</strong>该效应需要水体至少为 50 尺的方形区域并且至少有 25 尺深。你在区域中央形成一个漩涡。其形态为底部宽 5 尺，顶部宽 50 尺，高 25 尺。水中任何距漩涡 25 尺内的生物或物件均被漩涡向自身拉动 10 尺。当一名生物在一个回合内第一次进入漩涡或在漩涡内结束其回合时，受影响的生物进行一次力量豁免。豁免失败则受到 2d8 点钝击伤害。豁免成功则只受一半伤害。一名生物若想以游泳方式离开漩涡，则必须先用一个动作远离漩涡并成功于一次对抗你法术豁免DC的 [[/check ability=str skill=ath dc=@attributes.spelldc]] 检定。</p>",
           "activities": {
             "Create Whirlpool": {
               "name": "创造漩涡"
@@ -19612,7 +19612,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCloudkill0]{Cloudkill}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{Darkness}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spelldc]])：</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCloudkill0]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em></p>"
         },
         "Teleport": {
           "name": "传送",
@@ -19737,7 +19737,7 @@
         },
         "Tentacles": {
           "name": "触须",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[grappled apply=false] condition (escape DC [[lookup @check.dc.formula activity=Vo2UIgas007G3QXv]]) from all the mind flayer's tentacles, and the target has the &amp;Reference[stunned apply=false] condition until the grapple ends.</p>",
+          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]。若目标生物体型不超过中型，则其被[[lookup @name lowercase]]的全部触须 &Reference[Stunned apply=false]  （逃脱DC [[lookup @check.dc.formula activity=Vo2UIgas007G3QXv]]）。</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -19767,7 +19767,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDominateMo]{Dominate Monster}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em> (self only)</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需法术成分并使用智力作为施法属性（法术豁免 DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDominateMo]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em>（仅自身）</p>",
           "activities": {
             "OaHLX70qD1KnpvzM": {
               "affectsSpecial": "self only"
@@ -19776,7 +19776,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -19847,7 +19847,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]{Disguise Self}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em> (the hand is Invisible)</p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplClairvoyan]{Clairvoyance}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDimensionD]{Dimension Door}, @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]{Fireball}</em> (level 5 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]{Lightning Bolt}</em> (level 5 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em> (self only), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSending000]{Sending}</em></p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需法术成分并使用智力作为施法属性（法术豁免 DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>（手是隐形的）</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplClairvoyan]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDimensionD]， @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em> （5 环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]{Lightning Bolt}</em>（5 环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em> （仅自身），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSending000]</em></p>",
           "activities": {
             "oytkzeJijaCmYRx1": {
               "affectsSpecial": "self only"
@@ -19873,7 +19873,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -19890,7 +19890,7 @@
         },
         "Disguise Self": {
           "name": "易容术",
-          "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.</p><p>To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC.</p>",
+          "description": "<p>你改变自身以及随身的衣物、护甲、武器等在你身上的所有物。该效应在法术终止时结束。肉眼看来你的身高可以有 1 尺的增减，体态可胖可瘦。你必须选择一个和你肢体基础排列方式一致的形态。此外，幻术的影响范围由你决定。</p><p>此法术产生的变化无法应对物理检查。比如，你用此法术添了一顶帽子，那么现实物件会从帽子穿过去，且任何触碰帽子的人将摸不到任何东西。</p><p>如果一名生物想要分辨你是否易容，则必须使用一个研究动作研究你的外貌，并成功于一次对抗你法术豁免DC的 [[/check ability=int skill=inv]] 检定。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -20029,7 +20029,7 @@
         },
         "Gore": {
           "name": "顶撞",
-          "description": "<p>[[/attack extended]]. [[/damage extended average]]. If the target is a [[lookup @target.affects.special activity=iBenqFiBu40bUxkH]] creature and the [[lookup @name lowercase]] [[lookup @activation.condition activity=iBenqFiBu40bUxkH]] straight toward it immediately before the hit, the target takes an extra [[/damage 3d6 type=piercing average]] damage and has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若 [[lookup @name lowercase]] 在此次攻击前立即向着该目标直线移动了 10+ 尺且目标生物体型不超过大型，则其额外受到 10（3d6）穿刺伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Attack": {
               "name": "攻击"
@@ -20094,7 +20094,7 @@
         },
         "Clockwork Blade": {
           "name": "时械剑刃",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. <em>Hit or Miss:</em> The blade magically returns to the [[lookup @name lowercase]]'s hand immediately after a ranged attack.</p>"
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。<em>命中或失手：</em>剑刃会在被用于一次远程攻击后立即魔法性地回到 [[lookup @name lowercase]] 手中。</p>"
         }
       }
     },
@@ -20370,7 +20370,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +9 to hit with spell attacks):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimateDea]{Animate Dead}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHarm000000]{Harm}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInsectPlag]{Insect Plague}</em> (level 7 version)</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需材料成分并使用感知作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]，法术攻击检定 +9）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimateDea]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHarm000000]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInsectPlag]</em>（7 环版本）</p>"
         },
         "Dispel Magic": {
           "name": "解除魔法",
@@ -20876,7 +20876,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEtherealne]{Etherealness}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi]{Magic Missile}</em> (level 4 version)</p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPhantasmal]{Phantasmal Killer}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]{Plane Shift}</em> (self only)</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需材料成分并使用智力作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplEtherealne]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi]</em>（4 环版本）</p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPhantasmal]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em>（仅自身）</p>"
         },
         "Shape-Shift": {
           "name": "变形",
@@ -20960,7 +20960,7 @@
         },
         "Phantasmal Killer": {
           "name": "魅影杀手",
-          "description": "<p>You tap into the nightmares of a creature you can see within range and create an illusion of its deepest fears, visible only to that creature. The target makes a Wisdom saving throw. On a failed save, the target takes 4d10 Psychic damage and has Disadvantage on ability checks and attack rolls for the duration. On a successful save, the target takes half as much damage, and the spell ends.</p><p>For the duration, the target makes a [[/save ability=wis dc=@attributes.spell.dc]] saving throw at the end of each of its turns. On a failed save, it takes the Psychic damage again. On a successful save, the spell ends.</p><p><strong>Using a Higher-Level Spell Slot.</strong>The damage increases by 1d10 for each spell slot level above 4.</p>",
+          "description": "<p>你指定施法距离内一名你可见的生物，窥探其噩梦，依此创造一道只有目标能看见的幻象。目标生物进行一次感知豁免。豁免失败时，目标受到 4d10 点心灵伤害，且在法术持续时间内在属性检定和攻击掷骰上具有劣势。豁免成功，则目标只受一半伤害，法术终止。</p><p>法术持续时间内，目标在其每回合结束时进行一次 [[/save ability=wis dc=@attributes.spelldc]] 豁免，豁免失败则再次受到心灵伤害。豁免成功则法术终止。</p><p><strong>升环施法：</strong>使用的法术位每比四环高一环，伤害就增加 1d10。</p>",
           "effects": {
             "Fears Manifested": {
               "name": "陷入噩梦",
@@ -21072,7 +21072,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageArmor0]{Mage Armor}</em> (included in AC), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBefuddleme]{Befuddlement}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]{Detect Thoughts}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFly0000000]{Fly}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]{Scrying}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShatter000]{Shatter}</em> (level 7 version)</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageArmor0]</em>（已计入AC）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBefuddleme]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFly0000000]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShatter000]</em>（7 环版本）</p>"
         },
         "Shield": {
           "name": "护盾术",
@@ -21125,7 +21125,7 @@
         },
         "Minor Illusion": {
           "name": "次级幻象",
-          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
               "name": "制造幻象",
@@ -21160,7 +21160,7 @@
         },
         "Detect Thoughts": {
           "name": "侦测思想",
-          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -21347,7 +21347,7 @@
         },
         "Split": {
           "name": "分裂",
-          "description": "<p class=\"feature\"><em>Trigger:</em> While the [[lookup @name lowercase]] [[lookup @activation.condition activity=zoXFSgzmWq8frUjI]] </p><p class=\"feature\"><em>Response:</em> The [[lookup @name lowercase]] splits into two new <strong>[[lookup @name capitalize]]</strong>. Each new [[lookup @name lowercase]] is one size smaller than the original [[lookup @name lowercase]] and acts on its Initiative. The original [[lookup @name lowercase]]’s Hit Points are divided evenly between the new [[lookup @name lowercase]]s (round down).</p>",
+          "description": "<p class=\"feature\"><em>触发：</em>若 [[lookup @name lowercase]] 体型为大型或中型且具有 10+ 生命值，当 [[lookup @name lowercase]] 进入浴血或是其将受闪电伤害或挥砍伤害时。<em>响应：</em>[[lookup @name lowercase]] 分裂为两块全新的<strong> [[lookup @name capitalize]]</strong>。每块新的 [[lookup @name lowercase]] 的体型都比原先的 [[lookup @name lowercase]] 小一级，且使用原 [[lookup @name lowercase]] 的先攻行动。原 [[lookup @name lowercase]] 生命值将平均分配给新的 [[lookup @name lowercase]] （向下取整）。</p>",
           "activities": {
             "Split": {
               "name": "分裂",
@@ -21480,7 +21480,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]{Charm Person}</em> (level 2 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{Darkness}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]{Gaseous Form}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000]{Sleep}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需材料成分且使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]</em>（2 环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGaseousFor]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000]</em></p>"
         },
         "Invisibility": {
           "name": "隐形术",
@@ -21742,7 +21742,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]{Mage Hand}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]{Prestidigitation}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]{Major Image}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplProjectIma]{Project Image}</em></p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplProjectIma]</em></p>"
         },
         "Warding Charm": {
           "name": "魅力之佑",
@@ -21771,7 +21771,7 @@
         },
         "Minor Illusion": {
           "name": "次级幻象",
-          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
               "name": "制造幻象",
@@ -21807,7 +21807,7 @@
         },
         "Major Image": {
           "name": "高等幻影",
-          "description": "<p>You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot Cube. The image appears at a spot that you can see within range and lasts for the duration. It seems real, including sounds, smells, and temperature appropriate to the thing depicted, but it can’t deal damage or cause conditions.</p><p>If you are within range of the illusion, you can take a Magic action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.</p><p>Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The spell lasts until dispelled, without requiring Concentration, if cast with a level 4+ spell slot.</p>",
+          "description": "<p>你创造一个影像，其形象来自一个大小不超过边长 20 尺立方体的物件或生物，或是其他的可视现象。影像出现在施法距离内你能看见的一处位置并在法术持续时间内维持存在。它看起来完全是真实的，并且还具有相应的声音、气味和温度。但它无法造成伤害或让人陷入任何状态。</p><p> 在该幻象施法距离内时，你可以用一个魔法动作将影像移动到施法距离内的另一个位置。影像改变位置时，你可以改变影像的外表来使它移动得更自然。例如，如果你创造了一个生物的影像并移动它，则你可以改变影像，使它看起来就像是在走路。或者你也可以让影像在不同的时间发出不同的声音，甚至可以让它参与一场对话。</p><p>由于影像可以被穿过，任何与该影像进行的物理互动都会暴露其幻象的本质。一个生物用研究动作调查影像时，它可以进行一次对抗你的法术豁免 DC 的 [[/check ability=int skill=inv dc=@attributes.spelldc]] 检定，以判定是否看穿幻象。辨出幻象的生物可以看破该影像，而影像的其他感官效应在该生物看来会变得微弱而模糊。</p><p><strong>升环施法：</strong> 使用高于三环的法术位时，法术时间持续至被解除且无需专注。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -21816,7 +21816,7 @@
         },
         "Project Image": {
           "name": "投影术",
-          "description": "<p>You create an illusory copy of yourself that lasts for the duration. The copy can appear at any location within range that you have seen before, regardless of intervening obstacles. The illusion looks and sounds like you, but it is intangible. If the illusion takes any damage, it disappears, and the spell ends.</p><p>You can see through the illusion’s eyes and hear through its ears as if you were in its space. As a Magic action, you can move it up to 60 feet and make it gesture, speak, and behave in whatever way you choose. It mimics your mannerisms perfectly.</p><p>Physical interaction with the image reveals it to be illusory, since things can pass through it. A creature that takes the Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature.</p>",
+          "description": "<p>你创造一个自己的幻象分身，并使其在法术持续时间内维持存在。该分身可以出现在施法距离内你曾见过的任何地点，而不论中间是否存在障碍物。该幻象看起来和听起来都与你一样，只是没有现实形体。幻象受到伤害时会立即消失，法术终止。</p><p>你可以通过分身的眼睛视物，用分身的耳朵聆听，如同你处于它的位置一样。用一个魔法动作，你能使分身移动至多 60 尺，而其姿态、言语和行为均按照你的指定作表现。幻象可以完美地模仿你的举止。</p><p>由于东西可以穿过幻象，任何与该幻象进行的物理互动都会暴露其幻觉本质。一名生物可以采取研究动作进行一次对抗你法术豁免DC的成功 [[/check ability=int skill=inv dc=@attributes.spelldc]] 检定以看穿幻象。辨出幻象的生物可以看穿该影像，其产生的声响对该生物而言显得虚假。</p>",
           "activities": {
             "Create Illusion": {
               "name": "制造幻象"
@@ -21860,15 +21860,15 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]{Minor Illusion}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]{Prestidigitation}</em></p><p class=\"feature-trait\"><strong>1/Day:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTashasHide]{Tasha’s Hideous Laughter}</em> (level 3 version)</p>"
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMinorIllus]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]</em></p><p class=\"feature-trait\"><strong>1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTashasHide]</em> （3 环版本）</p>"
         },
         "Tasha's Hideous Laughter": {
           "name": "塔莎狂笑术",
-          "description": "<p>One creature of your choice that you can see within range makes a Wisdom saving throw. On a failed save, it has the &amp;Reference[prone apply=false] and &amp;Reference[incapacitated apply=false] conditions for the duration. During that time, it laughs uncontrollably if it’s capable of laughter, and it can’t end the Prone condition on itself.</p><p>At the end of each of its turns and each time it takes damage, it makes another [[/save ability=wis dc=@attributes.spell.dc]] saving throw. The target has Advantage on the save if the save is triggered by damage. On a successful save, the spell ends.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level about 1.</p>",
+          "description": "<p>法距离内你可见的一名生物进行一次感知豁免。豁免失败，目标在持续时间内陷入 &Reference[prone apply=false] 和 &Reference[incapacitated apply=false] 状态。在此期间，若目标能够发笑，则它会不受控制地狂笑，且无法结束自身的倒地Prone状态。</p><p>目标在其每回合结束或受到伤害时，可以再进行一次 [[/save ability=wis dc=@attributes.spelldc]] 豁免。如果豁免是因受到伤害所致，则该次豁免具有优势。豁免成功，法术终止。</p><p><strong>升环施法：</strong> 使用的法术位每比一环高一环，就可以额外指定一个目标。</p>",
           "effects": {
             "Uncontrollable Laughter": {
               "name": "难抑狂笑",
-              "description": "<p>has the &amp;Reference[prone apply=false] and &amp;Reference[incapacitated apply=false] conditions for the duration. During that time, it laughs uncontrollably if it’s capable of laughter, and it can’t end the Prone condition on itself.</p><p>At the end of each of its turns and each time it takes damage, it makes another [[/save ability=wis dc=@attributes.spell.dc]] saving throw. The target has Advantage on the save if the save is triggered by damage. On a successful save, the spell ends.</p>"
+              "description": "<p>在持续时间内，目标陷入&Reference[prone apply=false]和 &Reference[incapacitated apply=false]状态。在此期间，只要它能够发笑，它就会不受控制地狂笑，并且无法结束自身的倒地状态。</p><p>在其每回合结束或受到伤害时，目标可以再进行一次[[/save ability=wis dc=@attributes.spelldc]]豁免。如果豁免是因受到伤害所致，则该次豁免具有优势。豁免成功时，法术终止。</p>"
             },
             "Spell Changes": {
               "name": "法术改动"
@@ -21877,7 +21877,7 @@
         },
         "Minor Illusion": {
           "name": "次级幻象",
-          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
               "name": "制造幻象",
