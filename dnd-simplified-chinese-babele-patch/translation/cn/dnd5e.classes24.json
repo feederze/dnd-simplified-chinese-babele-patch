@@ -1,62 +1,62 @@
 {
-  "label": "Character Classes",
+  "label": "角色职业",
   "folders": {
-    "Subclass Features": "Subclass Features",
-    "Class Features": "Class Features",
-    "Metamagic Options": "Metamagic Options",
-    "Warrior of the Open Hand": "Warrior of the Open Hand",
-    "Champion": "Champion",
-    "Eldritch Invocation Options": "Eldritch Invocation Options",
-    "Hunter": "Hunter",
-    "Circle of Land": "Circle of Land",
-    "Evoker": "Evoker",
-    "Lore": "Lore",
-    "Path of the Berserker": "Path of the Berserker",
-    "Thief": "Thief",
-    "Fiend Patron": "Fiend Patron",
-    "Life Domain": "Life Domain",
-    "Oath of Devotion": "Oath of Devotion",
-    "Draconic Sorcery": "Draconic Sorcery",
-    "Barbarian": "Barbarian",
-    "Paladin": "Paladin",
-    "Rogue": "Rogue",
-    "Wizard": "Wizard",
-    "Sorcerer": "Sorcerer",
-    "Ranger": "Ranger",
-    "Monk": "Monk",
-    "Fighter": "Fighter",
-    "Druid": "Druid",
-    "Cleric": "Cleric",
-    "Warlock": "Warlock",
-    "Bard": "Bard"
+    "Subclass Features": "子职特性",
+    "Class Features": "职业特性",
+    "Metamagic Options": "超魔法选项",
+    "Warrior of the Open Hand": "散打武者",
+    "Champion": "勇士",
+    "Eldritch Invocation Options": "魔能祈唤选项",
+    "Hunter": "猎人",
+    "Circle of Land": "大地结社",
+    "Evoker": "塑能师",
+    "Lore": "逸闻",
+    "Path of the Berserker": "狂战士道途",
+    "Thief": "盗贼",
+    "Fiend Patron": "邪魔宗主",
+    "Life Domain": "生命领域",
+    "Oath of Devotion": "奉献之誓",
+    "Draconic Sorcery": "龙族术法",
+    "Barbarian": "野蛮人",
+    "Paladin": "圣武士",
+    "Rogue": "游荡者",
+    "Wizard": "法师",
+    "Sorcerer": "术士",
+    "Ranger": "游侠",
+    "Monk": "武僧",
+    "Fighter": "战士",
+    "Druid": "德鲁伊",
+    "Cleric": "牧师",
+    "Warlock": "邪术师",
+    "Bard": "吟游诗人"
   },
   "entries": {
     "Blessed Strikes: Potent Spellcasting": {
-      "name": "Blessed Strikes: Potent Spellcasting",
-      "description": "<p>Add your Wisdom modifier to the damage you deal with any Cleric cantrip.</p><section class=\"secret\" id=\"secret-bDHa7ClHZ3YPWKvs\"><p><strong>Foundry Note</strong></p><p>This bonus damage is not automatically included in your cantrips.</p><p>You can add [[lookup @abilities.wis.mod]] to the Situational Bonus field of your cantrip's damage rolls or you can permanently add it to your cantrips by adding \"@abilities.wis.mod\" (minus the quotes) in the Bonus field.</p><p>Alternatively, the <strong>Damage</strong> activity on this feature includes your Wisdom modifier and allows you to choose the damage type in the roll's dialog box.</p></section>",
-      "requirements": "Cleric",
+      "name": "受祝击：强力施法",
+      "description": "<p>你将你的感知调整值加到你用任何牧师戏法造成的伤害上。</p><section class=\"secret\" id=\"secret-bDHa7ClHZ3YPWKvs\"> <p><strong>Foundry Note</strong></p> <p>此额外伤害不会自动包含在内。</p> <p><strong>伤害</strong> 行动包含你的感知属性调整值，并允许你在掷骰对话框中选择伤害类型。</p> <p>你也可以在法术伤害掷骰对话框的 <strong>“环境加值” </strong>栏中添加 [[lookup @abilties.wis.mod]] 。</p></section>",
+      "requirements": "牧师",
       "activities": {
         "damage": {
-          "condition": "Deal damage with any Cleric cantrip"
+          "condition": "使用任意牧师戏法造成伤害"
         }
       }
     },
     "Divine Order: Protector": {
-      "name": "Divine Order: Protector",
-      "description": "<p>You have dedicated yourself to the following sacred role:</p><p><strong>Protector.</strong> Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.</p><section id=\"secret-Tsm148wTyiFWlMFv\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>This feature includes an Active Effect which grants the proficiency and training.</p></section>",
-      "requirements": "Cleric",
+      "name": "圣职：保护者",
+      "description": "<p>你已将自己奉献给以下一种神圣职能：</p><p><strong>保护者。 </strong> 通过战斗训练，你获得军用武器熟练与重甲受训。</p><section class=\"secret\" id=\"secret-Tsm148wTyiFWlMFv\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个被动效应，授予熟练和受训。</p></section>",
+      "requirements": "牧师",
       "effects": {
         "Divine Order: Protector": {
-          "name": "Divine Order: Protector"
+          "name": "圣职：保护者"
         }
       }
     },
     "Divine Order: Thaumaturge": {
-      "name": "Divine Order: Thaumaturge",
-      "description": "<p>You have dedicated yourself to the following sacred role:</p><p><strong>Thaumaturge.</strong> You know one extra cantrip from the @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]{Cleric spell list}. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks. The bonus equals your Wisdom modifier (minimum of +1, currently [[lookup @abilities.wis.mod]]).</p><section id=\"secret-9NLpq7kfc33QLf8I\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>This feature includes an Active Effect which increases the number of cantrips you can know and grants the bonus to your Intelligence (Arcana or Religion) checks.</p></section>",
+      "name": "圣职：奇术使",
+      "description": "<p>你让自己投身于以下一种由你自己选择的神圣职能：</p><p><strong>奇术使。 </strong>你从牧师 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]学会一道额外的戏法。此外，你与神性的神秘链接使你在智力（奥秘和宗教）检定中获得等同于你感知调整值的加值（最低为 1）。</p><section class=\"secret\" id=\"secret-9NLpq7kfc33QLf8I\">    <p><strong>Foundry Note</strong></p><p>该特性包含一个被动效果，能增加你已知戏法数量，并且在智力（奥秘或宗教）检定中为你提供加值。</p></section>",
       "effects": {
         "Thaumaturge": {
-          "name": "Thaumaturge"
+          "name": "奇术使"
         }
       }
     },
