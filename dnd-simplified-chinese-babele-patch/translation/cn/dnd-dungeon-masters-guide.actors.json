@@ -200,13 +200,11 @@
       "items": {
         "Claw Attack": {
           "name": "爪击攻击",
-          "description": "<p>每只钳爪发动如下近战攻击：+8，触及 5 尺。<em>命中：</em>7（2d6）钝击伤害。</p>",
-          "requirements": "拉杆 4：上推"
+          "description": "<p>每只钳爪发动如下近战攻击：+8，触及 5 尺。<em>命中：</em>7（2d6）钝击伤害。</p>"
         },
         "Grapple Attack": {
           "name": "擒抱攻击",
           "description": "<p>每只钳爪发动如下近战攻击：+8，触及 5 尺。<em>命中：</em>目标陷入&Reference[Grappled] 状态（逃脱DC 15）。</p>",
-          "requirements": "拉杆 4：下拉",
           "activities": {
             "attack": {
               "chatFlavor": "命中时&Reference[grappled]"
@@ -363,8 +361,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>狼至少有一个未处于失能的盟友在目标生物 5 尺内时，它对该生物发动的攻击检定有优势。</p>",
-          "requirements": "目标周围 5 尺内存在盟友"
+          "description": "<p>狼至少有一个未处于失能的盟友在目标生物 5 尺内时，它对该生物发动的攻击检定有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -392,10 +389,11 @@
         "Trample": {
           "name": "践踏",
           "description": "<p><em>敏捷豁免：</em> DC 16，单一 5 尺内且处于倒地状态的生物。<em>失败：</em> 造成 17（2d10 + 6）钝击伤害。<em>成功：</em> 半伤。</p>",
-          "requirements": "目标陷入倒地",
           "activities": {
             "save": {
-              "affectsSpecial": "陷入倒地状态"
+              "affects": {
+                "special": "has the Prone condition"
+              }
             }
           }
         }
@@ -628,8 +626,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若狮子的攻击目标生物周围 5 尺范围内存在有至少一个狮子未失能的盟友，则狮子对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "目标周围 5 尺内存在盟友"
+          "description": "<p>若狮子的攻击目标生物周围 5 尺范围内存在有至少一个狮子未失能的盟友，则狮子对该生物进行的攻击检定具有优势。</p>"
         },
         "Running Leap": {
           "name": "助跑起跳",
@@ -988,8 +985,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>狼至少有一个未处于失能的盟友在目标生物 5 尺内时，它对该生物发动的攻击检定有优势。</p>",
-          "requirements": "目标周围 5 尺内存在盟友"
+          "description": "<p>狼至少有一个未处于失能的盟友在目标生物 5 尺内时，它对该生物发动的攻击检定有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -1029,8 +1025,7 @@
       "items": {
         "Undead Fortitude": {
           "name": "不死坚韧",
-          "description": "<p>当僵尸因受非光耀非重击伤害而使其生命值减至 0 时，它必须进行一次 DC 为 5＋所受伤害值的体质豁免，豁免成功则生命值降至 1。</p>",
-          "requirements": "生命值降至 0 点"
+          "description": "<p>当僵尸因受非光耀非重击伤害而使其生命值减至 0 时，它必须进行一次 DC 为 5＋所受伤害值的体质豁免，豁免成功则生命值降至 1。</p>"
         },
         "Slam": {
           "name": "猛击",
@@ -1048,7 +1043,9 @@
             "Command: Move and Attack": {
               "name": "命令：移动并攻击",
               "condition": "由已同调角色执行的附赠动作",
-              "rangeSpecial": "攻击前可以移动 30 尺"
+              "range": {
+                "special": "Can move up to 30 feet before attacking"
+              }
             }
           }
         },
@@ -1058,7 +1055,9 @@
             "Command: Move and Attack": {
               "name": "命令：移动并攻击",
               "condition": "由已同调角色执行的附赠动作",
-              "rangeSpecial": "攻击前可以移动 30 尺"
+              "range": {
+                "special": "Can move up to 30 feet before attacking"
+              }
             }
           }
         },
@@ -1068,7 +1067,9 @@
             "Command: Move and Attack": {
               "name": "命令：移动并攻击",
               "condition": "由已同调角色执行的附赠动作",
-              "rangeSpecial": "攻击前可以移动 30 尺"
+              "range": {
+                "special": "Can move up to 30 feet before attacking"
+              }
             }
           }
         },
@@ -1078,7 +1079,9 @@
             "Command: Move and Attack": {
               "name": "命令：移动并攻击",
               "condition": "由已同调角色执行的附赠动作",
-              "rangeSpecial": "攻击前可以移动 30 尺"
+              "range": {
+                "special": "Can move up to 30 feet before attacking"
+              }
             }
           }
         },
@@ -1088,7 +1091,9 @@
             "Command: Move and Attack": {
               "name": "命令：移动并攻击",
               "condition": "由已同调角色执行的附赠动作",
-              "rangeSpecial": "攻击前可以移动 30 尺"
+              "range": {
+                "special": "Can move up to 30 feet before attacking"
+              }
             }
           }
         }

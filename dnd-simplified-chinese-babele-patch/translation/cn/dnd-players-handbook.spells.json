@@ -19,7 +19,9 @@
       "description": "<p>你创造两个相连的传送门。指定地面上你能看见的两处未被占据的大型空间，其中一点在法术距离内，另一点则在你身边 10 尺内。随后将会开启一个通往两处的圆形传送门，并持续到法术结束。</p><p>传送门边缘为闪烁的二维环形，其内布满遮挡视野的迷雾，且整个垂直地悬浮在离地几寸处。传送门单面开启（由你选择），那一面即是传送门生效的一面。</p><p>任何进入其中一个传送门的东西将从另一个传送门里出现，如同两个传送门邻接一样。以一个附赠动作，你可以改变其开门的朝向。</p>",
       "activities": {
         "utility": {
-          "affectsSpecial": "大型，未占据空间"
+          "affects": {
+            "special": "Large, unoccupied spaces"
+          }
         }
       }
     },
@@ -695,7 +697,9 @@
       "activities": {
         "Teleport and Attack": {
           "name": "传送并攻击",
-          "affectsSpecial": "精魂范围内"
+          "affects": {
+            "special": "within range of spirit"
+          }
         }
       }
     },
@@ -995,11 +999,15 @@
       "activities": {
         "Dismissal": {
           "name": "驱离",
-          "affectsSpecial": "天族、元素、妖精、邪魔和亡灵"
+          "affects": {
+            "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+          }
         },
         "Break Enchantment": {
           "name": "破咒",
-          "affectsSpecial": "天族、元素、妖精、邪魔和亡灵"
+          "affects": {
+            "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+          }
         },
         "Cast": {
           "name": "施展"
@@ -1135,7 +1143,9 @@
         "Collapsing Structure Save": {
           "name": "坍塌豁免",
           "condition": "建筑生命值降为 0 时",
-          "rangeSpecial": "该建筑高度的一半"
+          "range": {
+            "special": "half of the structure's height"
+          }
         }
       },
       "effects": {
@@ -1524,7 +1534,9 @@
         "Damage Forbidden Creature": {
           "name": "伤害禁入生物",
           "condition": "所选定生物在一个回合内第一次进入法术区域或者在其内结束回合时",
-          "rangeSpecial": "在法术区域内"
+          "range": {
+            "special": "within the spell's area"
+          }
         }
       }
     },
@@ -2194,7 +2206,9 @@
         "Possess Humanoid": {
           "name": "附身类人",
           "condition": "你的灵魂附身于躯体之中",
-          "affectsSpecial": "类人"
+          "affects": {
+            "special": "target is Humanoid"
+          }
         },
         "Return from Host": {
           "name": "返回躯体"
@@ -2473,14 +2487,18 @@
         "Freeze Water": {
           "name": "冻结水面",
           "condition": "如果冰球击中某处水体",
-          "affectsSpecial": "在水面上游动的生物"
+          "affects": {
+            "special": "creatures swimming on the surface"
+          }
         },
         "Cast and Hold": {
           "name": "施展并持握"
         },
         "Throw Held Globe": {
           "name": "持球投掷",
-          "rangeSpecial": "若用投石索投掷，使用投石索的常规射程"
+          "range": {
+            "special": "if hurled with a sling, use sling's normal range"
+          }
         }
       },
       "effects": {
@@ -2667,7 +2685,9 @@
         },
         "Blinding Save": {
           "name": "目盲豁免",
-          "rangeSpecial": "刻在门或墙上的浮雕"
+          "range": {
+            "special": "measured from nearest point on wall or globe"
+          }
         },
         "Traversal Save": {
           "name": "穿越豁免"
@@ -2961,7 +2981,9 @@
         },
         "Create Sensor": {
           "name": "创造探测器",
-          "affectsSpecial": "在目标位置或目标生物 10 尺内"
+          "affects": {
+            "special": "at target location or within 10 feet of target creature"
+          }
         }
       }
     },
@@ -3273,22 +3295,30 @@
         "Turn 2: Acid Rain": {
           "name": "第 2 回合：酸雨",
           "condition": "在你的回合开始时",
-          "affectsSpecial": "云下的生物"
+          "affects": {
+            "special": "creatures under the cloud"
+          }
         },
         "Turn 3: Lightning": {
           "name": "第 3 回合：闪电",
           "condition": "在你的回合开始时",
-          "affectsSpecial": "云下的生物"
+          "affects": {
+            "special": "creatures under the cloud"
+          }
         },
         "Turn 4: Hailstones": {
           "name": "第 4 回合：冰雹",
           "condition": "在你的回合开始时",
-          "affectsSpecial": "云下的生物"
+          "affects": {
+            "special": "creatures under the cloud"
+          }
         },
         "Turn 5+: Gusts and Rain": {
           "name": "第 5+ 回合：狂风和冰雨",
           "condition": "在你的回合开始时",
-          "affectsSpecial": "云下的生物"
+          "affects": {
+            "special": "creatures under the cloud"
+          }
         }
       },
       "effects": {
@@ -3601,11 +3631,15 @@
       "activities": {
         "Healthy Target": {
           "name": "健康目标",
-          "affectsSpecial": "未受伤生物"
+          "affects": {
+            "special": "undamaged creature"
+          }
         },
         "Damaged Target": {
           "name": "受伤目标",
-          "affectsSpecial": "已损失任意数量生命值"
+          "affects": {
+            "special": "creature missing any of its Hit Points"
+          }
         }
       }
     },
@@ -3675,7 +3709,9 @@
         "Start of Turn Effects": {
           "name": "回合开始效应",
           "condition": "你的每一回合开始",
-          "rangeSpecial": "远离你"
+          "range": {
+            "special": "moves away from you"
+          }
         }
       }
     },

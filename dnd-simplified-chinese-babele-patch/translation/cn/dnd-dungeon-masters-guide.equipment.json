@@ -162,7 +162,9 @@
       "activities": {
         "Elemental Compulsion": {
           "name": "元素强令",
-          "affectsSpecial": "元素"
+          "affects": {
+            "special": "Elemental"
+          }
         }
       },
       "effects": {
@@ -521,7 +523,9 @@
           "name": "拦截攻击",
           "condition": "当一个攻击者对你周围 5 尺内的目标发动远程攻击时",
           "chatFlavor": "你成为了远程攻击的目标。",
-          "affectsSpecial": "attack roll made against target"
+          "affects": {
+            "special": "attack roll made against target"
+          }
         }
       },
       "effects": {
@@ -584,7 +588,9 @@
         "Throw": {
           "name": "投掷",
           "chatFlavor": "伤害加值：对巨人造成 1d8 力场伤害",
-          "rangeSpecial": "20 feet Normal range; 60 feet Long range"
+          "range": {
+            "special": "20 feet Normal range; 60 feet Long range"
+          }
         }
       },
       "effects": {
@@ -600,8 +606,12 @@
       "activities": {
         "Animate": {
           "name": "活化",
-          "affectsSpecial": "An unoccupied space",
-          "rangeSpecial": "As close to you as possible."
+          "affects": {
+            "special": "An unoccupied space"
+          },
+          "range": {
+            "special": "As close to you as possible."
+          }
         },
         "Render Broom Inanimate": {
           "name": "使扫帚失去魔力",
@@ -617,7 +627,9 @@
           "name": "数豆子",
           "condition": "这个沉重的布袋被找到时",
           "chatFlavor": "装着 3d4 颗干燥的豆子",
-          "affectsSpecial": "Held Bag of Beans"
+          "affects": {
+            "special": "Held Bag of Beans"
+          }
         },
         "Dump Beans": {
           "name": "倒豆子",
@@ -626,7 +638,9 @@
         "Plant Bean": {
           "name": "种豆子",
           "condition": "物件交互",
-          "affectsSpecial": "Dirt or sand"
+          "affects": {
+            "special": "Dirt or sand"
+          }
         }
       }
     },
@@ -741,7 +755,9 @@
       "activities": {
         "attack": {
           "chatFlavor": "<em>吞噬</em>被杀死生物的灵魂",
-          "affectsSpecial": "self damage if Undead"
+          "affects": {
+            "special": "self damage if Undead"
+          }
         },
         "tbt8KtzxLOPvLnaD": {
           "condition": "黑刃将决定何时施展该法术，然后该法术将在你的回合开始时对你生效。"
@@ -791,7 +807,9 @@
       "activities": {
         "Summon Warriors": {
           "name": "召唤武者",
-          "affectsSpecial": "unoccupied spaces"
+          "affects": {
+            "special": "unoccupied spaces"
+          }
         }
       }
     },
@@ -822,7 +840,9 @@
       "activities": {
         "Utilize": {
           "name": "操作",
-          "affectsSpecial": "unoccupied space as close to the broken gem as possible"
+          "affects": {
+            "special": "unoccupied space as close to the broken gem as possible"
+          }
         }
       }
     },
@@ -832,7 +852,9 @@
       "activities": {
         "1st and 2nd Command": {
           "name": "第一、第二命令语",
-          "affectsSpecial": "folded boat",
+          "affects": {
+            "special": "folded boat"
+          },
           "profiles": {
             "First Command Word (Rowboat)": {
               "name": "第一命令语（划艇）"
@@ -844,7 +866,9 @@
         },
         "3rd Command": {
           "name": "第三命令语",
-          "affectsSpecial": "unfolded Rowboat or Keelboat"
+          "affects": {
+            "special": "unfolded Rowboat or Keelboat"
+          }
         }
       }
     },
@@ -893,7 +917,9 @@
         "Vile Speech": {
           "name": "秽恶灵言",
           "chatFlavor": "你受到 [[/damage 1d12 type=psychic]] 伤害",
-          "affectsSpecial": "Fiends and Undead excluded"
+          "affects": {
+            "special": "Fiends and Undead excluded"
+          }
         }
       },
       "effects": {
@@ -955,7 +981,9 @@
       "description": "<div>    <p><em>奇物，珍稀</em></p></div><p>当你位于这件水钵 5 尺内且其中盛满水期间，你能够以一个魔法动作来召唤一只 <strong>@UUID[Compendium.dnd-dungeon-masters-guide.actors.Actor.namJz755U1EhvEJa]{水元素}</strong>。水元素会出现在距离水钵最近的未被占据的空间、理解你所说的语言、服从你的命令、使用你的先攻值并在你之后立即执行其回合。水元素会在 1 小时后，或它死亡时，或你以一个附赠动作解消时消失。直到次日黎明前，水钵都无法再以该方式进行使用。</p><p>水钵直径约 1 尺，深约半尺。它的重量为 3 磅，能装承大约 3 加仑水。</p>",
       "activities": {
         "summon": {
-          "affectsSpecial": "unoccupied space as close to the bowl as possible"
+          "affects": {
+            "special": "unoccupied space as close to the bowl as possible"
+          }
         }
       }
     },
@@ -987,7 +1015,9 @@
       "activities": {
         "Summon Warriors": {
           "name": "召唤武者",
-          "affectsSpecial": "unoccupied spaces"
+          "affects": {
+            "special": "unoccupied spaces"
+          }
         }
       },
       "effects": {
@@ -1002,7 +1032,9 @@
       "description": "<div>    <p><em>奇物，珍稀</em></p></div><p>当你位于这座火盆5尺内期间，你能够以一个魔法动作来召唤一只 <strong>@UUID[Compendium.dnd-dungeon-masters-guide.actors.Actor.8SMQl75HLjhuSeau]{火元素}</strong>。火元素会出现在距离火盆最近的未被占据的空间、理解你所说的语言、服从你的命令、使用你的先攻值并在你之后立即执行其回合。火元素会在1小时后，或它死亡时，或你以一个附赠动作解消时消失。直到次日黎明前，火盆都无法再以该方式进行使用。</p>",
       "activities": {
         "summon": {
-          "affectsSpecial": "unoccupied space as close to the brazier as possible"
+          "affects": {
+            "special": "unoccupied space as close to the brazier as possible"
+          }
         }
       }
     },
@@ -1012,7 +1044,9 @@
       "activities": {
         "Summon Warriors": {
           "name": "召唤武者",
-          "affectsSpecial": "unoccupied spaces"
+          "affects": {
+            "special": "unoccupied spaces"
+          }
         }
       },
       "effects": {
@@ -1041,8 +1075,12 @@
         },
         "Send Alone or Recall": {
           "name": "自行出发或回来",
-          "affectsSpecial": "the Broom of Flying",
-          "rangeSpecial": "a familiar destination you have named"
+          "affects": {
+            "special": "the Broom of Flying"
+          },
+          "range": {
+            "special": "a familiar destination you have named"
+          }
         }
       },
       "effects": {
@@ -1159,19 +1197,27 @@
       "activities": {
         "Activate (3 by 5 ft.)": {
           "name": "激活（3 × 5 尺）",
-          "affectsSpecial": "The Carpet of Flying"
+          "affects": {
+            "special": "The Carpet of Flying"
+          }
         },
         "Activate (4 by 6 ft.)": {
           "name": "激活（4 × 6 尺）",
-          "affectsSpecial": "The Carpet of Flying"
+          "affects": {
+            "special": "The Carpet of Flying"
+          }
         },
         "Activate (5 by 7 ft.)": {
           "name": "激活（5 × 7 尺）",
-          "affectsSpecial": "The Carpet of Flying"
+          "affects": {
+            "special": "The Carpet of Flying"
+          }
         },
         "Activate (6 by 9 ft.)": {
           "name": "激活（6 × 9 尺）",
-          "affectsSpecial": "The Carpet of Flying"
+          "affects": {
+            "special": "The Carpet of Flying"
+          }
         }
       }
     },
@@ -1218,7 +1264,9 @@
         },
         "Enlarge Cauldron": {
           "name": "扩大坩埚",
-          "affectsSpecial": "The Cauldron of Rebirth"
+          "affects": {
+            "special": "The Cauldron of Rebirth"
+          }
         }
       }
     },
@@ -1227,7 +1275,9 @@
       "description": "<div>    <p><em>奇物，珍稀</em></p></div><p>当你轻轻挥动这件香炉期间，你可以用一个魔法动作来召唤一只 <strong>@UUID[Compendium.dnd-dungeon-masters-guide.actors.Actor.banHjKDMCegbUwYE]{气元素}</strong>。气元素会出现在距离香炉最近的未被占据的空间、理解你所说的语言、服从你的命令、使用你的先攻值并在你之后立即执行其回合。气元素会在 1 小时后、或它死亡时、或你用一个附赠动作解消时消失。直到次日黎明前，香炉都无法再以该方式进行使用。</p>",
       "activities": {
         "summon": {
-          "affectsSpecial": "unoccupied space as close to the brazier as possible"
+          "affects": {
+            "special": "unoccupied space as close to the brazier as possible"
+          }
         }
       }
     },
@@ -1342,7 +1392,9 @@
         "Billow": {
           "name": "飘扬",
           "chatFlavor": "斗篷大幅度的飘扬起来。",
-          "affectsSpecial": "The Cloak of Billowing"
+          "affects": {
+            "special": "The Cloak of Billowing"
+          }
         }
       }
     },
@@ -1381,7 +1433,9 @@
       "activities": {
         "Use": {
           "name": "使用",
-          "affectsSpecial": "The Cloak of Many Fasions"
+          "affects": {
+            "special": "The Cloak of Many Fasions"
+          }
         }
       }
     },
@@ -1401,7 +1455,9 @@
         "Grip Edges": {
           "name": "抓握边缘",
           "condition": "身处微光或黑暗环境期间",
-          "affectsSpecial": "edges of the cloak"
+          "affects": {
+            "special": "edges of the cloak"
+          }
         },
         "baY1WKtwieimGXWd": {
           "condition": "身处微光或黑暗环境期间"
@@ -1512,11 +1568,15 @@
       "activities": {
         "Grow Tower": {
           "name": "长出高塔",
-          "affectsSpecial": "The adamantine"
+          "affects": {
+            "special": "The adamantine"
+          }
         },
         "Open Fortress Door": {
           "name": "打开要塞大门",
-          "affectsSpecial": "The tower's door"
+          "affects": {
+            "special": "The tower's door"
+          }
         }
       }
     },
@@ -1526,7 +1586,9 @@
       "activities": {
         "Coat Blade with Poison": {
           "name": "给刀刃涂上毒素",
-          "affectsSpecial": "The Dagger of Venom"
+          "affects": {
+            "special": "The Dagger of Venom"
+          }
         },
         "Poison Save": {
           "name": "毒素豁免"
@@ -1585,17 +1647,23 @@
         "Splash": {
           "name": "水花",
           "chatFlavor": "1 加仑的水。",
-          "affectsSpecial": "The Decanter of Endless Water"
+          "affects": {
+            "special": "The Decanter of Endless Water"
+          }
         },
         "Fountain": {
           "name": "落泉",
           "chatFlavor": "5 加仑的水",
-          "affectsSpecial": "The Decanter of Endless Water"
+          "affects": {
+            "special": "The Decanter of Endless Water"
+          }
         },
         "Geyser": {
           "name": "井喷",
           "chatFlavor": "30 加仑的水；豁免对抗&Reference[prone]",
-          "affectsSpecial": "One creature or object of your choice in the Line"
+          "affects": {
+            "special": "One creature or object of your choice in the Line"
+          }
         }
       }
     },
@@ -1606,7 +1674,9 @@
         "Count Number of Cards": {
           "name": "计数牌数",
           "chatFlavor": "你发现牌堆里少了几张牌。",
-          "affectsSpecial": "The Deck of Illusions"
+          "affects": {
+            "special": "The Deck of Illusions"
+          }
         },
         "Draw Card": {
           "name": "抽牌"
@@ -1621,7 +1691,9 @@
           "name": "检查牌组牌数",
           "roll": "牌组牌数",
           "condition": "在确定该卡组中的卡牌数量时",
-          "affectsSpecial": "The Deck of Many Things"
+          "affects": {
+            "special": "The Deck of Many Things"
+          }
         },
         "Draw Cards": {
           "name": "抽牌",
@@ -1688,18 +1760,26 @@
         "Containment": {
           "name": "封印",
           "chatFlavor": "邪魔在进行豁免检定时处于劣势。若成功将其封印，扣除 1 次该物品的使用次数。",
-          "affectsSpecial": "visible Fiend trapped within a Magic Circle",
-          "rangeSpecial": "within sight"
+          "affects": {
+            "special": "visible Fiend trapped within a Magic Circle"
+          },
+          "range": {
+            "special": "within sight"
+          }
         },
         "Ensnarement: Magic Circle": {
           "name": "迷惑：防护法阵",
           "chatFlavor": "邪魔在对抗该法术的豁免检定中具有劣势",
-          "affectsSpecial": "Chosen creature type must be Fiend"
+          "affects": {
+            "special": "Chosen creature type must be Fiend"
+          }
         },
         "Ensnarement: Planar Binding": {
           "name": "迷惑：异界誓缚",
           "chatFlavor": "邪魔在对抗该法术的豁免检定中具有劣势",
-          "affectsSpecial": "Chosen creature type must be Fiend"
+          "affects": {
+            "special": "Chosen creature type must be Fiend"
+          }
         },
         "Plane Shift (Abyss)": {
           "name": "异界传送（无底深渊）",
@@ -1713,13 +1793,17 @@
       "activities": {
         "Place Shackles": {
           "name": "戴上镣铐",
-          "affectsSpecial": "Small to Large creature with the Incapacitated condition"
+          "affects": {
+            "special": "Small to Large creature with the Incapacitated condition"
+          }
         },
         "Attempt Escape": {
           "name": "试图逃脱",
           "condition": "被次元镣铐约束着",
           "chatFlavor": "每 30 天可尝试一次",
-          "affectsSpecial": "Dimensional Shackles binding self"
+          "affects": {
+            "special": "Dimensional Shackles binding self"
+          }
         }
       },
       "effects": {
@@ -1804,7 +1888,9 @@
         "Card Effect": {
           "name": "卡牌效应",
           "condition": "你可以在抽到此卡时或直至自己死前的任何时间使用此牌的效果",
-          "affectsSpecial": "One event that has occured"
+          "affects": {
+            "special": "One event that has occured"
+          }
         }
       }
     },
@@ -1953,7 +2039,9 @@
         "Card Effect": {
           "name": "卡牌效应",
           "chatFlavor": "卡牌的效应在抽牌时即刻生效",
-          "affectsSpecial": "nearest unoccupied space"
+          "affects": {
+            "special": "nearest unoccupied space"
+          }
         }
       }
     },
@@ -1990,7 +2078,9 @@
         "Card Effect": {
           "name": "卡牌效应",
           "condition": "卡牌的效应在抽牌时即刻生效",
-          "affectsSpecial": "all magic items you wear or carry"
+          "affects": {
+            "special": "all magic items you wear or carry"
+          }
         }
       }
     },
@@ -2159,11 +2249,15 @@
       "activities": {
         "Hover as Light": {
           "name": "漂浮光亮术",
-          "affectsSpecial": "The Driftglobe"
+          "affects": {
+            "special": "The Driftglobe"
+          }
         },
         "Hover as Daylight": {
           "name": "漂浮昼明术",
-          "affectsSpecial": "The Driftglobe"
+          "affects": {
+            "special": "The Driftglobe"
+          }
         }
       }
     },
@@ -2192,11 +2286,15 @@
         },
         "Sprinkle over Water": {
           "name": "撒在水中",
-          "affectsSpecial": "water"
+          "affects": {
+            "special": "water"
+          }
         },
         "Sprinkle on Elemental": {
           "name": "撒在元素上",
-          "affectsSpecial": "Elemental composed mostly of water"
+          "affects": {
+            "special": "Elemental composed mostly of water"
+          }
         }
       }
     },
@@ -2278,7 +2376,9 @@
       "activities": {
         "Elemental Compulsion": {
           "name": "元素强令",
-          "affectsSpecial": "Elemental"
+          "affects": {
+            "special": "Elemental"
+          }
         }
       },
       "effects": {
@@ -2300,16 +2400,22 @@
         },
         "2—9: Obeys Commands": {
           "name": "2—9：遵循命令",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         },
         "10: Casts Wish": {
           "name": "10:：施展祈愿术",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         },
         "1: Attacks You": {
           "name": "1：攻击你",
           "chatFlavor": "一个敌对的 @UUID[Compendium.dnd-dungeon-masters-guide.actors.Actor.LTomFUTBrkRi0Pj5]{火巨灵} 现身了",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       }
     },
@@ -2341,19 +2447,27 @@
       "activities": {
         "Blue Sapphire": {
           "name": "蓝宝石",
-          "affectsSpecial": "unoccupied space as close to the broken gem as possible"
+          "affects": {
+            "special": "unoccupied space as close to the broken gem as possible"
+          }
         },
         "Emerald": {
           "name": "绿宝石",
-          "affectsSpecial": "unoccupied space as close to the broken gem as possible"
+          "affects": {
+            "special": "unoccupied space as close to the broken gem as possible"
+          }
         },
         "Red Corundum": {
           "name": "红刚玉",
-          "affectsSpecial": "unoccupied space as close to the broken gem as possible"
+          "affects": {
+            "special": "unoccupied space as close to the broken gem as possible"
+          }
         },
         "Yellow Diamond": {
           "name": "黄钻石",
-          "affectsSpecial": "unoccupied space as close to the broken gem as possible"
+          "affects": {
+            "special": "unoccupied space as close to the broken gem as possible"
+          }
         }
       }
     },
@@ -2390,7 +2504,9 @@
       "activities": {
         "Utilize": {
           "name": "操作",
-          "affectsSpecial": "unoccupied space as close to the broken gem as possible"
+          "affects": {
+            "special": "unoccupied space as close to the broken gem as possible"
+          }
         }
       }
     },
@@ -2405,12 +2521,16 @@
         "Arrow of Transport": {
           "name": "转移之箭",
           "chatFlavor": "自愿目标传送到距你 10 尺之内的地方",
-          "affectsSpecial": "Medium or smaller willing creature or object"
+          "affects": {
+            "special": "Medium or smaller willing creature or object"
+          }
         },
         "Energy Ladder": {
           "name": "能量梯子",
           "chatFlavor": "生成一个 60 尺高的魔法梯子",
-          "affectsSpecial": "a wall"
+          "affects": {
+            "special": "a wall"
+          }
         },
         "Energy Bow": {
           "name": "能量弓"
@@ -2797,7 +2917,9 @@
         "Necrotic Reduction": {
           "name": "暗蚀抵抗",
           "chatFlavor": "因受此伤害生命值降至 0 的生物将被转化为绿软泥",
-          "affectsSpecial": "creature you can see"
+          "affects": {
+            "special": "creature you can see"
+          }
         }
       },
       "effects": {
@@ -2930,7 +3052,9 @@
       "activities": {
         "Elemental Compulsion": {
           "name": "元素强令",
-          "affectsSpecial": "Elemental"
+          "affects": {
+            "special": "Elemental"
+          }
         }
       },
       "effects": {
@@ -3072,7 +3196,9 @@
       "description": "<p><em>参见：@UUID[Compendium.dnd-dungeon-masters-guide.equipment.Item.dmgFigurineOfWon]</em></p><p>一尊神形桀骜的青铜狮鹫雕像，可以变为一只 <strong>@UUID[Compendium.dnd-dungeon-masters-guide.actors.Actor.h052EIIUmRwJum65]{狮鹫}</strong> ，其存在至多维持 6 小时。使用后，此雕像需要经过 5 日才能再次启动。</p><section class=\"secret\" id=\"secret-CyXRwZfsh4tOiRUf\">    <p><strong>Foundry Note</strong></p>    <p>此物品的使用次数有限，用于跟进需要 5 天的充能周期。</p></section>",
       "activities": {
         "summon": {
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       }
     },
@@ -3081,7 +3207,9 @@
       "description": "<p><em>参见：@UUID[Compendium.dnd-dungeon-masters-guide.equipment.Item.dmgFigurineOfWon]</em></p><p>一尊外形类似虻的黑檀雕像，可以变为可供骑乘的 <strong>@UUID[Compendium.dnd-dungeon-masters-guide.actors.Actor.dmgGiantFly00000]{巨苍蝇}</strong> ，其存在至多维持 12 小时。使用后，此雕像需要经过 2 日才能再次启动。</p><section class=\"secret\" id=\"secret-50TFh1zOfnv1SBKO\">    <p><strong>Foundry Note</strong></p>    <p>此物品的使用次数有限，用于跟进需要 2 天的充能周期。</p></section>",
       "activities": {
         "summon": {
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       }
     },
@@ -3091,11 +3219,15 @@
       "activities": {
         "Use First Lion": {
           "name": "使用第一个狮子",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         },
         "Use Second Lion": {
           "name": "使用第二个狮子",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       }
     },
@@ -3105,20 +3237,28 @@
       "activities": {
         "Goat of Terror": {
           "name": "可怖山羊",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         },
         "Goat of Traveling": {
           "name": "苦力山羊",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         },
         "Revert or Recall Goat of Traveling": {
           "name": "客运山羊复原或召回",
           "chatFlavor": "每小时（不足 1 小时按 1 小时计）将消耗 1 充能。",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         },
         "Goat of Travail": {
           "name": "客运山羊",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       }
     },
@@ -3127,7 +3267,9 @@
       "description": "<p><em>参见：@UUID[Compendium.dnd-dungeon-masters-guide.equipment.Item.dmgFigurineOfWon]</em></p><p>这尊大理石雕像的造型是一只吼叫的大象。它可以变为一头 <strong>@UUID[Compendium.dnd-players-handbook.actors.Actor.phbmobElephant00]{象}</strong> ，存在至多维持 24 小时。使用后，雕像需要经过 7 日才能再次启动。</p><section class=\"secret\" id=\"secret-RHHx3aKcpKsHN2aK\">    <p><strong>Foundry Note</strong></p>    <p>此物品的使用次数有限，用于跟进需要 7 天的充能周期。</p></section>",
       "activities": {
         "summon": {
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       }
     },
@@ -3137,7 +3279,9 @@
       "activities": {
         "summon": {
           "chatFlavor": "[[/r 1d10cs1]]{ 10% 的概率}会无视你的命令。",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       }
     },
@@ -3146,7 +3290,9 @@
       "description": "<p><em>参见：@UUID[Compendium.dnd-dungeon-masters-guide.equipment.Item.dmgFigurineOfWon]</em></p><p>这个玛瑙狗狗雕像可以变为一只 <strong>@UUID[Compendium.dnd-players-handbook.actors.Actor.phbmobMastiff000]{獒犬 Mastiff}</strong> ，其存在至多维持 6 小时。这只獒犬智力为 8 并且会说通用语。它还具有 60 尺盲视。使用后，此雕像需要经过 7 日才能再次启动。</p><section class=\"secret\" id=\"secret-61PsF1VxjiD2gq06\">    <p><strong>Foundry Note</strong></p>    <p>此物品的使用次数有限，用于跟进需要 7 天的充能周期。</p></section>",
       "activities": {
         "summon": {
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       },
       "effects": {
@@ -3161,7 +3307,9 @@
       "description": "<p><em>参见：@UUID[Compendium.dnd-dungeon-masters-guide.equipment.Item.dmgFigurineOfWon]</em></p><p>这个蛇纹石鸮雕像可以变为一只 <strong>@UUID[Compendium.dnd-dungeon-masters-guide.actors.Actor.VVXly3ue0i3YgGrB]{巨猫头鹰}</strong> ，而其存在至多维持 8 小时。只要你和该猫头鹰在同一位面，它就可以和你通过心灵感应进行沟通。使用后，此雕像需要经过 2 日才能再次启动。</p><section class=\"secret\" id=\"secret-lvDPI4uyHQj4dE5a\">    <p><strong>Foundry Note</strong></p>    <p>此物品的使用次数有限，用于跟进需要 2 天的充能周期。</p></section>",
       "activities": {
         "summon": {
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       }
     },
@@ -3171,7 +3319,9 @@
       "activities": {
         "bO4agG7byTwFTiFg": {
           "chatFlavor": "仅能选定白银渡鸦作为目标",
-          "affectsSpecial": "The Silver Raven in raven form"
+          "affects": {
+            "special": "The Silver Raven in raven form"
+          }
         }
       }
     },
@@ -3404,8 +3554,12 @@
         "Hurl Hammer": {
           "name": "掷锤",
           "chatFlavor": "命中时：[[/save ability=con dc=17]] 对抗震慑",
-          "affectsSpecial": "Excluding self",
-          "rangeSpecial": "long range of 60 feet"
+          "affects": {
+            "special": "Excluding self"
+          },
+          "range": {
+            "special": "long range of 60 feet"
+          }
         },
         "Giants' Bane (On Crit)": {
           "name": "巨人戮者（重击时）",
@@ -3503,7 +3657,9 @@
       "activities": {
         "Diamond Light": {
           "name": "钻石辉光",
-          "affectsSpecial": "Undead"
+          "affects": {
+            "special": "Undead"
+          }
         },
         "Fire Opal Flames": {
           "name": "火欧泊烈焰"
@@ -3641,7 +3797,9 @@
       "activities": {
         "Summon Warriors": {
           "name": "召唤武者",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         }
       },
       "effects": {
@@ -3767,7 +3925,9 @@
       "activities": {
         "Throw Bands": {
           "name": "投掷铁索",
-          "affectsSpecial": "Huge or smaller you can see"
+          "affects": {
+            "special": "Huge or smaller you can see"
+          }
         },
         "Break Check": {
           "name": "破拆检定"
@@ -3800,7 +3960,9 @@
       "activities": {
         "Summon Warriors": {
           "name": "召唤武者",
-          "affectsSpecial": "unoccupied spaces"
+          "affects": {
+            "special": "unoccupied spaces"
+          }
         }
       },
       "effects": {
@@ -3978,7 +4140,9 @@
           "chatFlavor": "伤害加值：2d6 光耀伤害（对邪魔/亡灵生效）"
         },
         "save": {
-          "affectsSpecial": "Fiend or Undead"
+          "affects": {
+            "special": "Fiend or Undead"
+          }
         }
       },
       "effects": {
@@ -4470,7 +4634,9 @@
         },
         "Call Dragons": {
           "name": "呼唤巨龙",
-          "affectsSpecial": "Chromatic Dragons"
+          "affects": {
+            "special": "Chromatic Dragons"
+          }
         }
       },
       "effects": {
@@ -4576,7 +4742,9 @@
       "activities": {
         "Call Swarm of Rats": {
           "name": "召唤鼠群",
-          "affectsSpecial": "rats"
+          "affects": {
+            "special": "rats"
+          }
         },
         "Sway Rats": {
           "name": "影响老鼠"
@@ -5016,7 +5184,9 @@
       "activities": {
         "Utilize": {
           "name": "操作",
-          "affectsSpecial": "unoccupied space as close to the broken gem as possible"
+          "affects": {
+            "special": "unoccupied space as close to the broken gem as possible"
+          }
         }
       }
     },
@@ -5069,7 +5239,9 @@
       "description": "<p><em>戒指，传说（需同调）</em></p><p>着装此戒指期间，你能够以一个魔法动作从气元素位面召唤一名特定的<strong>@UUID[Compendium.dnd-dungeon-masters-guide.actors.Actor.5P1VGAZQwOilwZQf]{气巨灵}</strong>。该气巨灵将出现在位于你 120 尺内你选择的未占据空间中。只要你为之维持专注，气巨灵将持续存在，至多 1 小时，或在其生命值降至0时提前消失。</p><p>被召唤期间，气巨灵对你和你的盟友态度友好，并将服从你的命令。如果你没有下达命令，则它除在遭受攻击时自卫外不会执行任何动作。</p><p>气巨灵消失后，24 小时内你都无法再次召唤它，若该气巨灵死亡，此戒指变为非魔法的。</p><p><em>召唤气巨灵戒指</em>通常由戒指所召唤的气巨灵制造，用来作为友谊或尊重的象征赠予凡人。</p>",
       "activities": {
         "summon": {
-          "rangeSpecial": "you can see"
+          "range": {
+            "special": "you can see"
+          }
         }
       }
     },
@@ -5318,7 +5490,9 @@
       "activities": {
         "Heads": {
           "name": "正面",
-          "affectsSpecial": "you can see"
+          "affects": {
+            "special": "you can see"
+          }
         },
         "Tails": {
           "name": "反面"
@@ -5362,7 +5536,9 @@
       "description": "<p><em>奇物，极珍稀（需同调）</em></p><p>这件长袍具有 3 充能，并每日黎明时重获 1d3 已消耗的充能。着装这件长袍期间，你可以使用一个魔法动作并消耗 1 充能，让长袍不断变幻出各种耀眼的色彩图案，持续至你的下个回合结束。在此期间，长袍提供 30 尺明亮光照和额外30尺微光光照，能看到你的生物对你发动的攻击检定具有劣势。此外，长袍效应启用期间，任何处于长袍产生的明亮光照区域内且可以看到你的生物必须进行一次DC 15 的感知豁免，豁免失败则陷入震慑状态，直到长袍的效应终止。</p><section class=\"secret\" id=\"secret-fHn9nt3cSF0lOwcT\">    <p><strong>Foundry Note</strong></p>    <p><strong>变换耀眼色彩</strong>行动包含一个测量模板，可用于跟进明亮光照的区域。</p></section>",
       "activities": {
         "save": {
-          "affectsSpecial": "can see you"
+          "affects": {
+            "special": "can see you"
+          }
         },
         "Display Dazzling Hues": {
           "name": "变换耀眼色彩"
@@ -5492,7 +5668,9 @@
         },
         "Terrify": {
           "name": "惊惧",
-          "affectsSpecial": "you can see"
+          "affects": {
+            "special": "you can see"
+          }
         },
         "Button 2 Versatile Attack": {
           "name": "按钮2 变体攻击"
@@ -5531,7 +5709,9 @@
       "activities": {
         "Transport to Demiplane": {
           "name": "半位面传送",
-          "affectsSpecial": "you can see"
+          "affects": {
+            "special": "you can see"
+          }
         }
       }
     },
@@ -5819,7 +5999,9 @@
         "Summon Titan": {
           "name": "召唤泰坦",
           "chatFlavor": "泰坦对其他所有生物态度敌对，并将在生命值降至0时消失。",
-          "affectsSpecial": "unoccupied space"
+          "affects": {
+            "special": "unoccupied space"
+          }
         },
         "Scroll of Titan Summoning": {
           "name": "召唤泰坦卷轴"
@@ -5999,7 +6181,9 @@
       "activities": {
         "Summon Warriors": {
           "name": "召唤武者",
-          "affectsSpecial": "unoccupied spaces"
+          "affects": {
+            "special": "unoccupied spaces"
+          }
         }
       },
       "effects": {
@@ -6034,7 +6218,9 @@
         "Slaying Save": {
           "name": "屠杀豁免",
           "condition": "当对应类型的生物受到该弹药的伤害时",
-          "affectsSpecial": "specific creature type"
+          "affects": {
+            "special": "specific creature type"
+          }
         },
         "Ammunition of Slaying": {
           "name": "屠杀弹药"
@@ -6341,7 +6527,9 @@
       "activities": {
         "Transform into Snake": {
           "name": "变为巨蟒蛇",
-          "affectsSpecial": "Unoccupied"
+          "affects": {
+            "special": "Unoccupied"
+          }
         }
       }
     },
@@ -6535,7 +6723,9 @@
       "activities": {
         "Use": {
           "name": "使用",
-          "affectsSpecial": "body of water at least 60 feet in diameter"
+          "affects": {
+            "special": "body of water at least 60 feet in diameter"
+          }
         }
       }
     },
@@ -6690,7 +6880,9 @@
         },
         "Pure Rebuke": {
           "name": "至纯审判",
-          "rangeSpecial": "you can see"
+          "range": {
+            "special": "you can see"
+          }
         }
       },
       "effects": {
@@ -6712,7 +6904,9 @@
         },
         "Ultimate End": {
           "name": "万物终焉",
-          "rangeSpecial": "you can see"
+          "range": {
+            "special": "you can see"
+          }
         }
       },
       "effects": {
@@ -6884,7 +7078,9 @@
       "activities": {
         "Use": {
           "name": "使用",
-          "affectsSpecial": "unoccupied space on the ground"
+          "affects": {
+            "special": "unoccupied space on the ground"
+          }
         }
       }
     },
@@ -7127,7 +7323,9 @@
       "activities": {
         "Detect Secret Door/Trap": {
           "name": "侦测秘门/陷阱",
-          "affectsSpecial": "secret doors/traps"
+          "affects": {
+            "special": "secret doors/traps"
+          }
         }
       }
     },
@@ -7167,7 +7365,9 @@
       "activities": {
         "Elemental Compulsion": {
           "name": "元素强令",
-          "affectsSpecial": "Elemental"
+          "affects": {
+            "special": "Elemental"
+          }
         }
       },
       "effects": {
@@ -7388,7 +7588,9 @@
       "activities": {
         "Utilize": {
           "name": "操作",
-          "affectsSpecial": "unoccupied space as close to the broken gem as possible"
+          "affects": {
+            "special": "unoccupied space as close to the broken gem as possible"
+          }
         }
       }
     },

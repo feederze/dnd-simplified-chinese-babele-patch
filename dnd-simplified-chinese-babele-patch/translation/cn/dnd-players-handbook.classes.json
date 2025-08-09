@@ -71,7 +71,6 @@
     "Blessed Strikes: Potent Spellcasting": {
       "name": "受祝击：强力施法",
       "description": "<p>你将你的感知调整值加到你用任何牧师戏法造成的伤害上。</p><section class=\"secret\" id=\"secret-bDHa7ClHZ3YPWKvs\"> <p><strong>Foundry Note</strong></p> <p>此额外伤害不会自动包含在内。</p> <p><strong>伤害</strong> 行动包含你的感知属性调整值，并允许你在掷骰对话框中选择伤害类型。</p> <p>你也可以在法术伤害掷骰对话框的 <strong>“环境加值” </strong>栏中添加 [[lookup @abilties.wis.mod]] 。</p></section>",
-      "requirements": "牧师",
       "activities": {
         "damage": {
           "condition": "使用任意牧师戏法造成伤害"
@@ -81,7 +80,6 @@
     "Divine Order: Protector": {
       "name": "圣职：保护者",
       "description": "<p>你已将自己奉献给以下一种神圣职能：</p><p><strong>保护者 Protcetor。 </strong> 通过战斗训练，你获得军用武器熟练与重甲受训。</p><section class=\"secret\" id=\"secret-Tsm148wTyiFWlMFv\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个被动效应，授予熟练和受训。</p></section>",
-      "requirements": "牧师",
       "effects": {
         "Divine Order: Protector": {
           "name": "圣职：保护者"
@@ -100,38 +98,40 @@
     "Blessed Strikes: Divine Strike": {
       "name": "受祝击：神圣打击",
       "description": "<p>每个你的回合一次，当你以一次使用武器的攻击命中了一个生物时，你对其造成额外 1d8 光耀或暗蚀伤害（由你选择）。</p><section class=\"secret\" id=\"secret-iZHQe1DZBrtcFZCk\">    <p><strong>Foundry Note</strong></p><p>当你获得 @UUID[Compendium.dnd-players-handbook.classes.Item.phbclcImprovedBl]{精通受祝击} 时，此特性的伤害会自动提升。</p></section>",
-      "requirements": "牧师",
       "activities": {
         "Necrotic Divine Strike": {
           "name": "暗蚀神圣打击",
-          "affectsSpecial": "每个你的回合一次，当你使用武器的攻击命中了一名生物时"
+          "affects": {
+            "special": "每回合一次，当你以攻击检定命中一个生物时"
+          }
         },
         "Radiant Divine Strike": {
           "name": "光耀神圣打击",
-          "affectsSpecial": "每个你的回合一次，当你使用武器的攻击命中了一名生物时"
+          "affects": {
+            "special": "每回合一次，当你以攻击检定命中一个生物时"
+          }
         }
       }
     },
     "Elemental Fury: Potent Spellcasting": {
       "name": "元素之怒：强力施法",
-      "description": "<p>你将你的感知调整值加在你的以德鲁伊戏法造成的伤害上 (当前, [[lookup @abilities.wis.mod]])。</p><section class=\"secret\" id=\"secret-kC2Lr5eZe550Tams\">    <p><strong>Foundry Note</strong></p>    <p>该特性不会自动将感知属性调整值加到德鲁伊戏法上。</p></section>",
-      "requirements": "德鲁伊"
+      "description": "<p>你将你的感知调整值加在你的以德鲁伊戏法造成的伤害上 (当前, [[lookup @abilities.wis.mod]])。</p><section class=\"secret\" id=\"secret-kC2Lr5eZe550Tams\">    <p><strong>Foundry Note</strong></p>    <p>该特性不会自动将感知属性调整值加到德鲁伊戏法上。</p></section>"
     },
     "Elemental Fury: Primal Strike": {
       "name": "元素之怒：原力蛮击",
       "description": "<p>一回合一次，当你以一次武器攻击或荒野变形后野兽形态的攻击命中一个生物时，你可以对目标额外造成 1d8 [[/damage 1d8 type=cold]]{寒冰}, [[/damage 1d8 type=fire]]{火焰}, [[/damage 1d8 type=lightning]]{闪电} 或 [[/damage 1d8 type=thunder]]{雷鸣} 伤害（由你命中时选择）。</p><section class=\"secret\" id=\"secret-teMMREyPGTtod1kP\">   <p><strong>Foundry Note</strong></p>    <p>在你获得 @UUID[Compendium.dnd-players-handbook.classes.Item.phbdrdImprovedEl] 时，该特性所造成的伤害会自动提升。若使用该行动，你在掷骰时能够选择伤害类型。默认情况下，会采用你之前选定的伤害类型。</p></section>",
-      "requirements": "德鲁伊",
       "activities": {
         "Primal Strike": {
           "name": "原力蛮击",
-          "affectsSpecial": "每个你的回合内一次，当你以一次武器攻击或荒野变形中野兽形态的攻击命中一名生物时"
+          "affects": {
+            "special": "When you hit a creature with an attack roll using a weapon or a Beast form's attack in Wild Shape"
+          }
         }
       }
     },
     "Primal Order: Magician": {
       "name": "原初誓约：术师",
       "description": "<p>你学会一个额外的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU#cantrip] 中的戏法。此外，你和自然的神秘连接让你在智力（奥秘或自然）检定上获得加值。加值等于你的感知调整值（最小为 1，当前 [[lookup @abilities.wis.mod]]）。</p><section class=\"secret\" id=\"secret-adiIB9wCX5zZdZ9F\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一种激活效应，能自动提升你已知法术的数量，并为你的奥秘和自然检定提供加值。</p></section>",
-      "requirements": "德鲁伊",
       "effects": {
         "Magician": {
           "name": "术师"
@@ -141,7 +141,6 @@
     "Primal Order: Warden": {
       "name": "原初誓约：卫士",
       "description": "<p>你受到了战斗的训练，获得军用武器熟练和中甲受训。</p><section class=\"secret\" id=\"secret-hVQSjHcU93Zpf54G\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个被动效应，自动授予你军用武器熟练和中型护甲受训。</p></section>",
-      "requirements": "德鲁伊",
       "effects": {
         "Primal Order: Warden": {
           "name": "原初誓约：卫士"
@@ -150,13 +149,11 @@
     },
     "Animal Speaker": {
       "name": "动物语者",
-      "description": "<p>你可以施展法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBeastSense] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA] ，仅限仪式施展。感知是你这些法术的施法属性。</p><section class=\"secret\" id=\"secret-BXxC4W21QpMgqgeQ\">    <p><strong>Foundry Note</strong></p>   <p>当你升至 3 级时，这些法术会添加至你的法术栏，作为仪式施法，使用你的感知调整值。</p></section>",
-      "requirements": "兽心道途"
+      "description": "<p>你可以施展法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBeastSense] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA] ，仅限仪式施展。感知是你这些法术的施法属性。</p><section class=\"secret\" id=\"secret-BXxC4W21QpMgqgeQ\">    <p><strong>Foundry Note</strong></p>   <p>当你升至 3 级时，这些法术会添加至你的法术栏，作为仪式施法，使用你的感知调整值。</p></section>"
     },
     "Aspect of the Wilds": {
       "name": "兽之形貌",
       "description": "<p>你选择并获得以下一项。每当你完成一次长休时，你都可以改变你的选择。<p><strong>猫头鹰。</strong>你获得 60 尺黑暗视觉。如果你已经获得了黑暗视觉，则黑暗视觉范围额外增加60尺。<br>黑<strong>豹。</strong>你获得等同于你速度的攀爬速度。<br><strong>鲑鱼。</strong>你获得等同于你速度的游泳速度。</p><section class=\"secret\" id=\"secret-CKbkC1Dm8i7Nz9TV\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一项行动，其附带的激活效应可自动实现<strong>猫头鹰</strong>选项中的黑暗视觉变化。速度变化不会自动生效。</p></section>",
-      "requirements": "兽心道途",
       "activities": {
         "Owl": {
           "name": "猫头鹰"
@@ -226,7 +223,6 @@
     "Battering Roots": {
       "name": "根击千钧",
       "description": "<p>世界树的根须从你的身上延伸而出。在你的回合中，若你使用具有重型或两用属性的近战武器，该近战武器的触及范围将会增加 10 尺。当你用这样的武器命中生物时，除了武器本身的精通属性外，你还可以从<strong>推离 Push</strong>或<strong>失衡 Topple</strong>中激活一种不同的额外精通属性。精通词条另见“@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbEquipment0000.JournalEntryPage.EOW6yQHLKlXre3jn]”。</p><section class=\"secret\" id=\"secret-2uKFL0ICeFFIOlns\"> <p><strong>Foundry Note</strong></p><p>此特性包含一个激活效应，可授予你“推离”和“失衡”精通词条。</p></section>",
-      "requirements": "世界树道途",
       "effects": {
         "Battering Roots": {
           "name": "根击千钧"
@@ -245,7 +241,6 @@
     "Branches of the Tree": {
       "name": "灵树枝杈",
       "description": "<p>狂暴激活期间，每当一个你能看见的生物在你 30 尺内开始回合时，你可以用反应在该生物周围召唤出世界树的灵体树枝。目标必须进行一次力量豁免检定（DC为 8 + 你的熟练加值+ 你的力量调整值），否则将被传送到你 5 尺范围内的一处对你可见且未被占据的空间，或离你最近的一处对你可见且未被占据的空间。目标传送后，你可以将其速度降低至 0，直至当前回合结束。</p><section class=\"secret\" id=\"secret-iHFpYS3WUCeaQIVP\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一种激活效应，可施加于目标上，降低其速度。</p></section>",
-      "requirements": "世界树道途",
       "activities": {
         "save": {
           "condition": "狂暴激活期间，每当一个你能看见的生物在你 30 尺内开始回合时"
@@ -261,7 +256,6 @@
     "Brutal Strike": {
       "name": "凶蛮打击",
       "description": "<p>如果你使用了 [[/item 鲁莽攻击]]，你可以选择放弃本回合你选择的一次基于力量的攻击检定具有的所有优势（不可选择具有劣势的攻击检定）。被选择的攻击检定命中时，目标将受到 [[lookup @scale.barbarian.brutal-strike]] 的额外伤害，伤害类型与此次攻击所使用的武器或徒手打击造成的伤害类型相同，并且你可以造成一种你所选的凶蛮打击效应。</p><p><strong>巨力猛击。</strong>目标被你直线推开 15 尺距离。随后你可以立刻向该目标移动至多等于你速度一半的距离，并且不会引发 &Reference[Opportunity Attacks]。</p><p><strong>断筋猛击。 </strong>直到你的下个回合开始时，目标的移动速度降低 15 尺。</p><section class=\"secret\" id=\"secret-vLb1SoKHWW2796Ko\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个可应用于目标的腿筋猛击的激活效应。</p>    <p>当你获得精通凶残打击时，<strong>伤害</strong>行动会自动升级。</p></section>",
-      "requirements": "野蛮人",
       "activities": {
         "Brutal Strike": {
           "name": "凶蛮打击"
@@ -276,43 +270,41 @@
     },
     "Danger Sense": {
       "name": "危机感应",
-      "description": "<p>当非常事态发生时，一种不可思议的感觉降临你的心头，指引你更好的躲避危机。</p><p>只要你未处于 &Reference[Incapacitated] 状态，你的敏捷豁免检定就具有优势。</p>",
-      "requirements": "野蛮人"
+      "description": "<p>当非常事态发生时，一种不可思议的感觉降临你的心头，指引你更好的躲避危机。</p><p>只要你未处于 &Reference[Incapacitated] 状态，你的敏捷豁免检定就具有优势。</p>"
     },
     "Divine Fury": {
       "name": "神性之怒",
       "description": "<p>你可以引导神性的怒火，将其注入打击之中。你的狂暴激活期间，每个你的回合中你首次以武器或徒手打击命中的生物将受到等于1d6 + 你野蛮人等级的一半（向下取整）的额外伤害。额外伤害的伤害类型为光耀或暗蚀，在每次造成伤害时由你选择伤害类型。</p><section class=\"secret\" id=\"secret-qDE2QhFtf1aiHWmx\">    <p><strong>Foundry Note</strong></p>    <p>此特性为每种伤害类型都设有行动。</p></section>",
-      "requirements": "狂热者道途",
       "activities": {
         "Necrotic Divine Fury": {
           "name": "暗蚀神性之怒",
-          "affectsSpecial": "首次以武器或徒手打击命中"
+          "affects": {
+            "special": "First creature you hit with a weapon or an Unarmed Strike"
+          }
         },
         "Radiant Divine Fury": {
           "name": "光耀神性之怒",
-          "affectsSpecial": "首次以武器或徒手打击命中"
+          "affects": {
+            "special": "First creature you hit with a weapon or an Unarmed Strike"
+          }
         }
       }
     },
     "Epic Boon": {
       "name": "传奇恩惠",
-      "description": "<p>你获得一项传奇恩惠专长 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]{传奇恩惠} 或其他一项你选择的适用的专长。推荐选择@UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofIrresis] {无敌攻势之恩惠}。</p>",
-      "requirements": "野蛮人"
+      "description": "<p>你获得一项传奇恩惠专长 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]{传奇恩惠} 或其他一项你选择的适用的专长。推荐选择@UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofIrresis] {无敌攻势之恩惠}。</p>"
     },
     "Extra Attack": {
       "name": "额外攻击",
-      "description": "<p>当你在自己的回合执行攻击动作时，你可以发动两次攻击而非一次。</p>",
-      "requirements": "野蛮人"
+      "description": "<p>当你在自己的回合执行攻击动作时，你可以发动两次攻击而非一次。</p>"
     },
     "Fanatical Focus": {
       "name": "专心炽志",
-      "description": "<p>每个狂暴期间仅一次，若你失败于某次豁免检定，你可以重骰这次检定并在检定中获得等于你狂暴伤害的加值 （当前 [[/r @scale.barbarian.rage-damage]]），你必须使用重骰后的结果。</p>",
-      "requirements": "狂热者道途"
+      "description": "<p>每个狂暴期间仅一次，若你失败于某次豁免检定，你可以重骰这次检定并在检定中获得等于你狂暴伤害的加值 （当前 [[/r @scale.barbarian.rage-damage]]），你必须使用重骰后的结果。</p>"
     },
     "Fast Movement": {
       "name": "快速移动",
       "description": "<p>当你未着装重甲时，你的速度增加 10 尺</p><section class=\"secret\" id=\"secret-6cmMiIJhUk5cpOGz\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个被动效应，会自动提升你的移动速度。如果你穿着重甲，请禁用快速移动被动效果。</p></section>",
-      "requirements": "野蛮人",
       "effects": {
         "Fast Movement": {
           "name": "快速移动"
@@ -322,7 +314,6 @@
     "Feral Instinct": {
       "name": "野性直觉",
       "description": "<p>你的直觉变得格外敏锐。你的先攻检定具有优势。</p>",
-      "requirements": "野蛮人",
       "effects": {
         "Feral Instinct": {
           "name": "野性直觉"
@@ -331,18 +322,15 @@
     },
     "Frenzy": {
       "name": "狂怒",
-      "description": "<p>在你的回合内，当你在狂暴激活时使用鲁莽攻击，你基于力量发起的攻击将对首个命中的目标造成额外伤害。掷等同于你狂暴伤害加值数量的 d6，结果即为造成的额外伤害数值。此额外伤害与你所用武器或徒手打击造成的伤害类型相同。</p><section class=\"secret\" id=\"secret-EsDSGWYhmnmiS9Cu\">   <p><strong>Foundry Note</strong></p>    <p><strong>伤害</strong>行动会随着你等级的提升而自动升级，并且能让你在伤害掷骰的对话框中选择所要使用的伤害类型。之后，它会记住你的选择。</p></section>",
-      "requirements": "狂战士道途"
+      "description": "<p>在你的回合内，当你在狂暴激活时使用鲁莽攻击，你基于力量发起的攻击将对首个命中的目标造成额外伤害。掷等同于你狂暴伤害加值数量的 d6，结果即为造成的额外伤害数值。此额外伤害与你所用武器或徒手打击造成的伤害类型相同。</p><section class=\"secret\" id=\"secret-EsDSGWYhmnmiS9Cu\">   <p><strong>Foundry Note</strong></p>    <p><strong>伤害</strong>行动会随着你等级的提升而自动升级，并且能让你在伤害掷骰的对话框中选择所要使用的伤害类型。之后，它会记住你的选择。</p></section>"
     },
     "Improved Brutal Strike (2)": {
       "name": "强化凶蛮打击(2)",
-      "description": "<p>你的凶蛮打击造成的额外伤害增加至 2d10。此外，当你使用残暴打击特性时，你可以同时应用两种不同的残暴打击效应。</p><section class=\"secret\" id=\"secret-XCUecJBPB6amtvj9\">    <p><strong>Foundry Note</strong></p>    <p>在凶蛮打击中的伤害值会自动调整以使用这个新数值。</p></section>",
-      "requirements": "野蛮人"
+      "description": "<p>你的凶蛮打击造成的额外伤害增加至 2d10。此外，当你使用残暴打击特性时，你可以同时应用两种不同的残暴打击效应。</p><section class=\"secret\" id=\"secret-XCUecJBPB6amtvj9\">    <p><strong>Foundry Note</strong></p>    <p>在凶蛮打击中的伤害值会自动调整以使用这个新数值。</p></section>"
     },
     "Improved Brutal Strike": {
       "name": "强化凶蛮打击",
       "description": "<p>你训练出了更多种残暴的攻击方式。将以下效应加入到你的凶蛮打击选项中：</p><p><strong>震撼猛击。</strong> 目标的下一次豁免检定具有劣势，并且在你的下个回合开始前无法进行借机攻击。</p><p><strong>破势猛击。</strong> 直到你的下个回合开始，另一个生物对目标进行的下一次攻击检定将获得 +5 加值。一次攻击检定只能从一次破势猛击中获得加值。</p><section class=\"secret\" id=\"secret-5KFPx8fyh5NldmJp\">    <p><strong>Foundry Note</strong></p>    <p>该特性为每个选项都设定了一个行动，其中包含一个激活效应，用于跟进震撼和破势猛击，但不会自动执行其效果。</p></section>",
-      "requirements": "野蛮人",
       "activities": {
         "Sundering Blow": {
           "name": "震撼猛击"
@@ -364,18 +352,15 @@
     },
     "Indomitable Might": {
       "name": "不屈勇武",
-      "description": "<p>如果你进行的力量检定或力量豁免检定的总值低于你的力量值，你可以使用你的力量值替代检定总值。</p>",
-      "requirements": "野蛮人"
+      "description": "<p>如果你进行的力量检定或力量豁免检定的总值低于你的力量值，你可以使用你的力量值替代检定总值。</p>"
     },
     "Instinctive Pounce": {
       "name": "莽驰",
-      "description": "<p>作为你进入狂暴的附赠动作的一部分，你可以移动至多等同于你速度一半的距离。</p>",
-      "requirements": "野蛮人"
+      "description": "<p>作为你进入狂暴的附赠动作的一部分，你可以移动至多等同于你速度一半的距离。</p>"
     },
     "Intimidating Presence": {
       "name": "威慑之姿",
       "description": "<p>以一个附赠动作，你可以用你那令人魂消胆丧的面相，在原初之力的辅助下将恐惧打入他者内心。当你如此做时，每个位于以你为源点的 30 尺光环区域内的你所选择的生物必须进行一次感知豁免（DC等于 8 ＋ 你的力量调整值＋你的熟练加值）。豁免失败的生物陷入恐慌状态，持续 1 分钟。陷入&Reference[Frightened apply=false] 的生物在其的每个回合结束时，可以重新进行该豁免，成功则其身上的恐慌状态提前结束。</p><p>一旦你使用了该特性，直到你完成一次长休时，都不能再次使用它。你也可以消耗一次狂暴次数（无需动作）来恢复该特性的使用次数。</p><section class=\"secret\" id=\"secret-vRQdGrtACAbxH4Tm\">    <p><strong>Foundry Note</strong></p>    <p><strong>豁免</strong>行动包含一种激活效应，该效果会附加恐慌状态。</p>   <p><strong>充能</strong>行动会消耗一次狂暴使用次数，并恢复威慑之姿的使用次数。</p></section>",
-      "requirements": "狂战士道途",
       "activities": {
         "Recharge with Rage": {
           "name": "以狂暴充能"
@@ -390,7 +375,6 @@
     "Mindless Rage": {
       "name": "无我狂暴",
       "description": "<p>你在狂暴激活时对 &Reference[Charmed] 和 &Reference[Frightened] 状态免疫。如果你狂暴时正处于魅惑或恐慌，则这些状态立刻终止。</p><section class=\"secret\" id=\"secret-CnCRD0Dyvx4FFGfV\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一种激活效应，能让你对魅惑和恐慌免疫。但当你开始狂暴时，它并不会自动生效。</p></section>",
-      "requirements": "狂战士道途",
       "effects": {
         "Mindless Rage": {
           "name": "无我狂暴"
@@ -399,13 +383,11 @@
     },
     "Nature Speaker": {
       "name": "自然语者",
-      "description": "<p>你可以施展法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommunewit]{问道自然} 但只能以仪式的方式来施展。感知是你施展这些法术的施法属性。</p><section class=\"secret\" id=\"secret-Lh8GxpVm1IY5QkLL\">   <p><strong>Foundry Note</strong></p>    <p>该法术仅作为仪式法术授予你，并且已设定以感知值作为施法调整值。</p></section>",
-      "requirements": "兽心道途"
+      "description": "<p>你可以施展法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommunewit]{问道自然} 但只能以仪式的方式来施展。感知是你施展这些法术的施法属性。</p><section class=\"secret\" id=\"secret-Lh8GxpVm1IY5QkLL\">   <p><strong>Foundry Note</strong></p>    <p>该法术仅作为仪式法术授予你，并且已设定以感知值作为施法调整值。</p></section>"
     },
     "Persistent Rage": {
       "name": "持久狂暴",
       "description": "<p>当你投掷先攻时，你可以重获所有已消耗的狂暴使用次数。你以此法重获狂暴使用次数后，直至你完成一次长休，你都不能再这么做。</p><p>此外，你的狂暴是如此凶悍，现在你的狂暴总是能持续 10 分钟，无需你做任何事来延长一轮狂暴。</p><p>你陷入 &Reference[Unconscious apply=false] 状态（而不再是陷入&Reference[Incapacitated apply=false] 状态）或穿戴重甲时，你的狂暴提前结束。</p><section class=\"secret\" id=\"secret-3IS0iUbWZ04tp74k\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一个行动，在先攻掷骰时可使用，将重新充能狂暴的所有使用次数。</p></section>",
-      "requirements": "野蛮人",
       "activities": {
         "Recharge Rage on Initiative": {
           "name": "在先攻时充能狂暴",
@@ -416,7 +398,6 @@
     "Power of the Wilds": {
       "name": "兽力威能",
       "description": "<p>每当你激活狂暴时，你选择并获得以下一项。</p><p><strong>游隼。</strong>狂暴激活期间，若你未着装护甲，你获得等同于你速度的飞行速度。</p><p><strong>雄狮。</strong>狂暴激活期间，任何位于你5尺内的敌人不以你（或另一个选择该项能力的野蛮人）为目标的攻击检定具有劣势。</p><p><strong>角羊。</strong>狂暴激活期间，当你的近战攻击命中一名大型或更小体型的生物时，你可以令其陷入 &Reference[Prone] 状态。</p><section class=\"secret\" id=\"secret-xneCqbl2nZsx0YOE\">    <p><strong>Foundry Note</strong></p>    <p><strong>角羊</strong>包含一种激活效应，可施加倒地状态。</p>    <p><strong>游隼</strong>和<strong>雄狮</strong>选项是非自动化的。</p></section>",
-      "requirements": "兽心道途",
       "activities": {
         "Falcon": {
           "name": "游隼",
@@ -438,13 +419,11 @@
     },
     "Primal Champion": {
       "name": "原初斗士",
-      "description": "<p>你本身便是原初之力的象征。你的力量值和体质值各提升 4，你这两项属性的上限变为 25。</p>",
-      "requirements": "野蛮人"
+      "description": "<p>你本身便是原初之力的象征。你的力量值和体质值各提升 4，你这两项属性的上限变为 25。</p>"
     },
     "Primal Knowledge": {
       "name": "原初学识",
       "description": "<p>除了 1 级选择的技能以外，你可以从野蛮人技能表中额外获得一个技能的熟练。</p><p>此外，你的狂暴激活期间，你可以在尝试完成特定的事项时与原初之力相连。每当你使用以下技能进行一次属性检定时，你可以使用力量进行检定而非通常使用的其他属性：特技，威吓，察觉，隐匿或求生。当你使用这项能力时，你的力量值代表着一种环绕你身的原初之力，强化了你的灵敏度、气质和感知力。</p><section class=\"secret\" id=\"secret-himIRZuFGInNkZgU\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一种被动效应，若力量属性调整值高于与该技能相关联的正常属性调整值，那么该效应会使这些技能自动使用力量属性值的调整值。</p></section>",
-      "requirements": "野蛮人",
       "effects": {
         "Primal Knowledge": {
           "name": "原初学识"
@@ -454,7 +433,6 @@
     "Rage": {
       "name": "狂暴",
       "description": "<p>你可以将名为狂暴的原初之力赋予己身，为你带来超越常规的伟力和韧性。未着装重甲时，你可以以一个附赠动作进入狂暴。</p><p>你可以进入狂暴的次数见野蛮人特性表中“狂暴次数”一栏。 (当前 [[lookup @scale.barbarian.rage]])。当你完成一次短休时，你重获一次已使用的狂暴次数；当你完成一次长休时，你重获所有已使用的狂暴次数。</p><p>你的狂暴激活期间，你将遵循以下这些规则：</p><p><strong>伤害抗性。</strong> 你具有钝击，穿刺和挥砍伤害的抗性。</p><p><strong>狂暴伤害。</strong> 当你使用力量发动一次攻击并对目标造成伤害时（无论这是一次武器攻击还是一次徒手打击），你的伤害掷骰获得额外加值，这个加值随着你的野蛮人等级提升，见野蛮人特性表中“狂暴伤害”一栏。</p><p><strong>力量优势。</strong> 你的力量检定和力量豁免具有优势。</p><p><strong>无法专注或施法。</strong> 你无法保持专注Concentration，也不能施展法术。</p><p><strong>持续时间。</strong> 狂暴持续到你的下一个回合结束，如果你穿戴重甲或陷入失能状态，狂暴提前结束。如果在你的下一回合你的狂暴仍处于激活状态，你可以执行以下选项之一令你的狂暴延长一轮：</p><ul>    <li>对敌人进行一次攻击检定。</li>    <li>迫使一名敌人进行一次豁免检定。</li>    <li>以一个附赠动作延长你的狂暴。</li></ul><p>每当狂暴被延长，都会持续到你的下一个回合结束。你可以维持狂暴至多10分钟。</p><section class=\"secret\" id=\"secret-o72MSFMdhSQC7kYa\">    <p><strong>Foundry Note</strong></p>   <p>该特性包含一个激活效应，能自动实现抗性以及额外伤害。此特性还会在短休和长休时自动恢复你的狂暴次数。</p></section>",
-      "requirements": "野蛮人",
       "activities": {
         "Expend Rage": {
           "name": "进入狂暴"
@@ -469,7 +447,6 @@
     "Rage of the Gods": {
       "name": "神之狂暴",
       "description": "<p>狂暴激活期间，你可以化身为神所指名的战士行于世间。这种形态持续一分钟或直至你生命值降至 0。一旦你使用该特性，直到完成一次长休前你无法再次使用。</p><p>在此形态下，你会获得以下增益。</p><p><strong>飞行 Flight。</strong>你获得等同于你速度的飞行速度，并且可以悬浮。</p><p><strong>抗性 Resistance。</strong>你拥有对暗蚀、心灵和光耀伤害的抗性。</p><p><strong>复生 Revivification。</strong>当你 30 尺内的一名生物的生命值将要降至 0 时，你可以使用反应并消耗一次狂暴次数，令目标的生命值变为等同于你野蛮人等级的值。</p><section class=\"secret\" id=\"secret-gWvozli4SOlo3KxS\">    <p><strong>Foundry Note</strong></p>    <p><strong>神之狂暴 </strong>行动包含一项激活效应，可自动添加抗性，但不提供飞行速度。</p>    <p><strong>复生</strong>行动包含一次以野蛮人等级为基准的治疗掷骰。</p></section>",
-      "requirements": "狂热者道途",
       "activities": {
         "Revivification": {
           "name": "复生",
@@ -491,7 +468,6 @@
     "Rage of the Wilds": {
       "name": "兽性狂暴",
       "description": "<p>你的狂暴可以激发动物的原始力量。每当你激活狂暴时，你选择并获得以下一项。</p><p><strong>熊。</strong>狂暴激活期间，你获得对心灵、力场、暗蚀和光耀伤害之外所有伤害类型的抗性。</p><p><strong>鹰。</strong>当你激活狂暴时，作为狂暴的附赠动作的一部分，你可以同时执行撤离和疾走动作。狂暴激活期间，你能以一个附赠动作同时执行撤离和疾走动作。</p><p><strong>狼。</strong>狂暴激活期间，你的盟友对你 5 尺内的敌人发动的攻击检定具有优势。</p><section class=\"secret\" id=\"secret-NkFSYzGdf370PpSv\">    <p><strong>Foundry Note</strong></p>    <p>熊行动包含一种激活效应，该效应能够自动添加抗性。</p>    <p>鹰行动会用附赠动作来撤离和疾走。</p>    <p>狼行动包含一个 5 尺的目标模板，用于识别受影响的生物。</p></section>",
-      "requirements": "兽心道途",
       "activities": {
         "Eagle": {
           "name": "鹰"
@@ -512,7 +488,6 @@
     "Reckless Attack": {
       "name": "鲁莽攻击",
       "description": "<p>你可以抛弃一切对防御的顾虑来发起更加狂乱的攻击。你在自己回合中进行第一次攻击检定时，可以不顾一切地发起攻击。若如此做，直到你的下个回合开始时，你使用力量进行的攻击检定具有优势，但在此期间所有以你为目标的攻击检定也具有优势。</p><section class=\"secret\" id=\"secret-W7MI2ZVKsMQcSW6d\">    <p><strong>Foundry Note</strong></p>   <p>该特性包含一种激活效应，用于跟进你是否鲁莽，但它不会自动为你或针对你的攻击赋予优势。</p></section>",
-      "requirements": "野蛮人",
       "effects": {
         "Reckless": {
           "name": "鲁莽"
@@ -521,13 +496,11 @@
     },
     "Relentless Rage": {
       "name": "坚韧狂暴",
-      "description": "<p>你狂暴的力量让你即使身受重伤也能持续战斗。你的狂暴激活期间，如果你的生命值降至 0 且并未立即死亡，则你可以进行一次DC 10 的体质豁免。成功则你的生命值将变为你野蛮人等级的两倍。</p><p>第一次使用此特性后，每当你再次使用此特性时其体质豁免DC提高 5。当你完成一次短休或长休后其DC重置为 10。</p><section class=\"secret\" id=\"secret-GTpuSHXh1ZobcQYd\">    <p><strong>Foundry Note</strong></p>    <p>此特性在你激活时若消耗资源，其DC会自动加 5。在短休或长休后，其数值会自动重置为 10。</p></section>",
-      "requirements": "野蛮人"
+      "description": "<p>你狂暴的力量让你即使身受重伤也能持续战斗。你的狂暴激活期间，如果你的生命值降至 0 且并未立即死亡，则你可以进行一次DC 10 的体质豁免。成功则你的生命值将变为你野蛮人等级的两倍。</p><p>第一次使用此特性后，每当你再次使用此特性时其体质豁免DC提高 5。当你完成一次短休或长休后其DC重置为 10。</p><section class=\"secret\" id=\"secret-GTpuSHXh1ZobcQYd\">    <p><strong>Foundry Note</strong></p>    <p>此特性在你激活时若消耗资源，其DC会自动加 5。在短休或长休后，其数值会自动重置为 10。</p></section>"
     },
     "Retaliation": {
       "name": "报偿",
       "description": "<p>当你身边 5 尺内的生物对你造成伤害时，你可以用反应以武器或徒手打击对其发动一次近战攻击。</p>",
-      "requirements": "狂战士道途",
       "activities": {
         "Retaliate": {
           "name": "报偿",
@@ -538,14 +511,15 @@
     "Travel Along the Tree": {
       "name": "世界树之奇旅",
       "description": "<p>作为激活狂暴的附赠动作的一部分，或是在狂暴激活期间以一个附赠动作，你可以传送到 60 尺内的未被占据的可见空间。</p><p>此外，每次狂暴期间仅一次，当你使用此特性传送时，你可以带上自身 10 尺内的至多 6 个自愿生物，并且以此方式传送的范围增加到 150 尺。每个生物都会传送到你的目标空间 10 尺内且未被占据的空间。</p>",
-      "requirements": "世界树道途",
       "activities": {
         "Teleport": {
           "name": "传送"
         },
         "Extended Teleport": {
           "name": "延伸传送",
-          "affectsSpecial": "位于你 10 尺内"
+          "affects": {
+            "special": "within 10 feet of you"
+          }
         }
       }
     },
@@ -569,7 +543,6 @@
     "Unarmored Defense": {
       "name": "无甲防御",
       "description": "<p>你未着装任何护甲期间，你的基础AC等于 10 + 你的敏捷调整值 + 你的体质调整值。你可以使用盾牌而仍然从此特性获益。</p>",
-      "requirements": "野蛮人",
       "effects": {
         "Unarmored Defense": {
           "name": "无甲防御"
@@ -579,7 +552,6 @@
     "Vitality of the Tree": {
       "name": "圣树活力",
       "description": "<p>你的狂暴浸润着世界树的生命力。你获得以下增益：</p><p><strong>活力之潮。</strong> 当你激活狂暴时，你获得等同于你野蛮人等级的临时生命值。</p><p><strong>生命赋予。</strong> 狂暴激活期间，你可以在每个你的回合开始时赋予 10 尺内另一个生物临时生命值。掷出等同于狂暴伤害加值数量的 D6 并相加，即是该生物获得的临时生命值。当你的狂暴终止时，这些赋予的临时生命值将会消失。</p><section class=\"secret\" id=\"secret-6DP7OmiyG1ibcVqP\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含<strong>活力之潮</strong>和<strong>生命赋予</strong>的行动，可进行临时生命值掷骰。在狂暴结束时，它不会自动移除生命赋予的临时生命值。</p></section>",
-      "requirements": "世界树道途",
       "activities": {
         "Vitality Surge": {
           "name": "活力之潮",
@@ -593,13 +565,11 @@
     },
     "Warrior of the Gods": {
       "name": "神之勇者",
-      "description": "<p>某个神圣的存在总能使你持续不断地战斗。你拥有 4 枚 d12 所构成的治疗池，可用于治疗自己。以一个附赠动作，你从治疗池中消耗并掷出任意数量的骰子，恢复结果总数的生命值。</p><p>当你完成一次长休后，你的治疗池恢复所有已消耗的骰子。</p><p>治疗池中骰子的数量将会在你到达特定野蛮人等级时增加，分别为 6 级时 5 枚，12 级时 6 枚，17 级时 7 枚。</p><section class=\"secret\" id=\"secret-er80mQOJaHK8ww7M\">    <p><strong>Foundry Note</strong></p>    <p>此特性会自动处理治疗池的增加。该特性还允许你增加用于治疗的骰子数量。</p></section>",
-      "requirements": "狂热者道途"
+      "description": "<p>某个神圣的存在总能使你持续不断地战斗。你拥有 4 枚 d12 所构成的治疗池，可用于治疗自己。以一个附赠动作，你从治疗池中消耗并掷出任意数量的骰子，恢复结果总数的生命值。</p><p>当你完成一次长休后，你的治疗池恢复所有已消耗的骰子。</p><p>治疗池中骰子的数量将会在你到达特定野蛮人等级时增加，分别为 6 级时 5 枚，12 级时 6 枚，17 级时 7 枚。</p><section class=\"secret\" id=\"secret-er80mQOJaHK8ww7M\">    <p><strong>Foundry Note</strong></p>    <p>此特性会自动处理治疗池的增加。该特性还允许你增加用于治疗的骰子数量。</p></section>"
     },
     "Weapon Mastery": {
       "name": "武器精通",
-      "description": "<p>你对武器的训练使你能够运用两种自选的简易或军用近战武器的精通属性，例如巨斧和手斧。</p><p>当你完成一次长休后，你可以重新演练武器技巧，来改变你所选择的其中一个武器类型。</p><p>当你获得特定的野蛮人等级时，你还可以使用更多种类武器的精通属性，具体数据见野蛮人特性表中“武器精通”一栏。</p>",
-      "requirements": "野蛮人"
+      "description": "<p>你对武器的训练使你能够运用两种自选的简易或军用近战武器的精通属性，例如巨斧和手斧。</p><p>当你完成一次长休后，你可以重新演练武器技巧，来改变你所选择的其中一个武器类型。</p><p>当你获得特定的野蛮人等级时，你还可以使用更多种类武器的精通属性，具体数据见野蛮人特性表中“武器精通”一栏。</p>"
     },
     "Path of the Wild Heart": {
       "name": "兽心道途",
@@ -641,7 +611,6 @@
     "Zealous Presence": {
       "name": "狂热威仪",
       "description": "<p>以一个附赠动作，你释放一道充斥着神圣能量的战吼。你选择 60 尺范围内至多 10 个其他生物，直到你的下个回合开始前，这些生物的攻击检定与豁免检定获得优势。</p><p>一旦你使用该特性，直到完成一次长休前你无法再次使用。你也可以消耗一次狂暴次数（无需动作）来恢复该特性的使用次数。</p><section class=\"secret\" id=\"secret-jLt4ZN8yZicBocd7\">    <p><strong>Foundry Note</strong></p>    <p><strong>战吼</strong>行动包含一项激活效应，用于跟进受影响的生物，但不会自动为攻击检定和豁免检定带来优势。</p>    <p><strong>以狂暴充能</strong>会消耗一次狂暴次数，同时恢复一次此特性的使用次数。</p></section>",
-      "requirements": "狂热者道途",
       "activities": {
         "Battle Cry": {
           "name": "战吼"
@@ -702,7 +671,6 @@
     "Bardic Inspiration": {
       "name": "吟游诗人激励",
       "description": "<p>你可以通过语言、音乐或舞蹈对他人实现一种超自然的鼓舞。这种鼓舞表现为数个“诗人激励骰”，骰面为 d6 （当前， [[lookup @scale.bard.inspiration.die]]）。</p><p><strong>使用吟游诗人激励。</strong>以一个附赠动作，你鼓舞身边 60 尺内另一个能听到你声音或能看见你的生物。该生物获得一枚诗人激励骰。一个生物在同一时间只能拥有一个诗人激励。</p><p>在接下来的 1 小时内，该生物进行 D20 检定失败时可以使用该激励骰，以将其结果加到掷骰结果中，并可能让结果转为成功。吟游诗人激励骰在掷出时消耗。</p><p><strong>使用次数。</strong>你能够赋予他人激励骰的次数等于你的魅力调整值（最少一次）。完成一次长休后，你将重获所有已消耗的诗人激励次数。</p><p><strong>在更高等级。</strong>当你达到特定吟游诗人等级时，你的诗人激励骰会发生变化，如吟游诗人特性表中“诗人激励骰”一栏所示。5 级时骰面变为 d8，10 级时骰面变为 d10，15 级时骰面变为 d12。</p><section class=\"secret\" id=\"secret-PtUXhUXS84HSdaew\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个激活效应，用于跟进角色何时拥有可使用的吟游诗人激励。</p>    <p>恢复设定为长休（在获得 @UUID[Compendium.dnd-players-handbook.classes.Item.phbbrdFontOfInsp]{激励之源} 之前）。需要时请手动调整。</p></section>",
-      "requirements": "吟游诗人",
       "activities": {
         "Inspire": {
           "name": "激励",
@@ -718,13 +686,11 @@
     },
     "Battle Magic": {
       "name": "战斗魔法",
-      "description": "<p>当你施展一个施法时间为动作的法术时，你能够以一个附赠动作使用武器发动一次攻击。</p>",
-      "requirements": "勇气学院"
+      "description": "<p>当你施展一个施法时间为动作的法术时，你能够以一个附赠动作使用武器发动一次攻击。</p>"
     },
     "Beguiling Magic": {
       "name": "惑心魔法",
       "description": "<p>你始终准备了法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMirrorImag]。</p><p>此外，在你使用法术位施展一道惑控或幻术学派的法术后，你可以立即迫使一名位于你 60 尺内的你可见的生物进行一次对抗你施法DC的感知豁免检定。豁免失败则目标陷入&Reference[Charmed apply=false] 或 &Reference[Frightened apply=false] （由你选择），持续 1 分钟。目标在其的每个回合结束时，可以重新进行该豁免，成功则其身上的效应提前结束。</p><p>一旦你使用了该增益，直到你完成一次长休为止，都不能再次使用它。你也可以消耗一次诗人激励使用次数（无需动作）来重置该特性的使用次数。</p><section class=\"secret\" id=\"secret-yJ0pYJyjePrUp7wQ\">    <p><strong>Foundry Note</strong></p>    <p><strong>豁免</strong>行动包含针对魅惑和恐慌这两种状态的激活效应。</p>    <p><strong>以激励充能</strong>行动可恢复一次使用该特性的使用次数。</p>    <p>始终准备的法术会自动添加到你的角色卡中。</p></section>",
-      "requirements": "魅心学院",
       "activities": {
         "save": {
           "condition": "在你使用法术位施展一道惑控或幻术学派的法术后"
@@ -744,18 +710,15 @@
     },
     "Bonus Proficiencies": {
       "name": "附赠熟练",
-      "description": "<p>你获得任意三个自选技能的熟练项。</p>",
-      "requirements": "逸闻学院"
+      "description": "<p>你获得任意三个自选技能的熟练项。</p>"
     },
     "Combat Inspiration": {
       "name": "战斗激励",
-      "description": "<p>你知晓如何在战斗中运用你的机智来扭转战局。一个拥有你的诗人激励骰的生物可以使用它来获得以下一种效果：</p><p><strong>防御。</strong>被攻击命中时，该生物可以使用反应掷出诗人激励骰，将结果加入其 AC 中，这可能使该攻击变为失手。</p><p><strong>进攻。</strong>当该生物发动的一次攻击检定命中一个目标时，其可以立即掷出诗人激励骰，并将结果加入此次攻击对目标造成的伤害中。</p>",
-      "requirements": "勇气学院"
+      "description": "<p>你知晓如何在战斗中运用你的机智来扭转战局。一个拥有你的诗人激励骰的生物可以使用它来获得以下一种效果：</p><p><strong>防御。</strong>被攻击命中时，该生物可以使用反应掷出诗人激励骰，将结果加入其 AC 中，这可能使该攻击变为失手。</p><p><strong>进攻。</strong>当该生物发动的一次攻击检定命中一个目标时，其可以立即掷出诗人激励骰，并将结果加入此次攻击对目标造成的伤害中。</p>"
     },
     "Countercharm": {
       "name": "反迷惑",
       "description": "<p>你可以用带有力量的音符或话语来破坏影响心灵的效应。若你或位于你 30 尺内的一名生物在对抗施加魅惑或恐慌状态的效应的豁免检定中失败，你能以一个反应重骰这次豁免，这次重骰具有优势。</p>",
-      "requirements": "吟游诗人",
       "activities": {
         "utility": {
           "condition": "你或位于你 30 尺内的一名生物在对抗施加魅惑或恐慌状态的效应的豁免检定中失败"
@@ -765,7 +728,6 @@
     "Cutting Words": {
       "name": "语出惊人",
       "description": "<p>你学会运用你的妙语连珠来打断敌人，迷惑对方或影响他人的信心。当你身边 60 尺内一个你能看见的生物进行伤害掷骰，或在一次属性检定或攻击检定中成功时，你可以用反应消耗一次诗人激励次数；掷出你的诗人激励骰，并在目标的掷骰结果中减去你的激励骰结果。这将减少造成的伤害或者将成功变为失败。</p>",
-      "requirements": "逸闻学院",
       "activities": {
         "Cut with Words": {
           "name": "语出惊人",
@@ -790,7 +752,6 @@
     "Dazzling Footwork": {
       "name": "炫目舞步",
       "description": "<p>未着装护甲且未持用盾牌期间，你获得以下增益：</p><p><strong>大舞蹈家。</strong>你在任何依赖舞蹈进行的魅力（表演）检定时具有优势。</p><p><strong>无甲防御。</strong>你的护甲等级等于 10 ＋ 你的敏捷调整值 ＋ 你的魅力调整值。</p><p><strong>灵巧打击。</strong> 当你在一次动作、附赠动作或反应中消耗了你的诗人激励，作为该动作、附赠动作或反应的一部分，你可以发动一次徒手打击。</p><p><strong>诗人痛击。</strong> 你可以用敏捷代替力量进行徒手打击的攻击检定。当你以一次徒手打击造成伤害时，你可以造成等于诗人激励骰+敏捷调整值的钝击伤害，而非徒手打击原本的伤害。此效果并不会消耗你的诗人激励使用次数。</p><section class=\"secret\" id=\"secret-edFgTVLwqcuabKeK\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个被动效应，可设置你的无甲防御值，若你更愿意使用护甲，请禁用该效应。</p>    <p><strong>徒手打击</strong>行动，其伤害值由敏捷属性和吟游诗人鼓舞骰子来决定。</p></section>",
-      "requirements": "舞蹈学院",
       "activities": {
         "Unarmed Strike": {
           "name": "徒手打击"
@@ -804,23 +765,19 @@
     },
     "phbbrdEpicBoon00": {
       "name": "传奇恩惠",
-      "description": "你获得一项 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]{传奇恩惠} 或其他一项你选择的适用的专长。推荐选择@UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofSpellRe]{法术溯回之恩惠}。",
-      "requirements": "吟游诗人"
+      "description": "你获得一项 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]{传奇恩惠} 或其他一项你选择的适用的专长。推荐选择@UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofSpellRe]{法术溯回之恩惠}。"
     },
     "Expertise": {
       "name": "专精",
-      "description": "<p>你获得两项由你选择的你已熟练的技能的 &Reference[Expertise]推荐选择表演和游说，如果你具有这两项技能的熟练。</p><p>当你的吟游诗人等级为 9 级时，你额外再获得两项由你选择的你已熟练的技能的专精。</p>",
-      "requirements": "吟游诗人"
+      "description": "<p>你获得两项由你选择的你已熟练的技能的 &Reference[Expertise]推荐选择表演和游说，如果你具有这两项技能的熟练。</p><p>当你的吟游诗人等级为 9 级时，你额外再获得两项由你选择的你已熟练的技能的专精。</p>"
     },
     "phbbrdExtraAttac": {
       "name": "额外攻击",
-      "description": "<p>当你在自己的回合执行攻击动作时，你可以发动两次攻击而非一次。</p><p>此外，你可以将这些攻击中的一次，替换为施展一道施法时间为一动作的戏法。</p>",
-      "requirements": "勇气学院"
+      "description": "<p>当你在自己的回合执行攻击动作时，你可以发动两次攻击而非一次。</p><p>此外，你可以将这些攻击中的一次，替换为施展一道施法时间为一动作的戏法。</p>"
     },
     "Font of Inspiration": {
       "name": "激励之源",
       "description": "<p>现在你可以在完成短休或长休后恢复你已消耗的诗人激励次数。</p><p>此外，你可以消耗一个法术位（无需行动）来恢复一次已消耗的吟游诗人激励。</p><section class=\"secret\" id=\"secret-KgQeVfHTLTrKK1s0\">   <p><strong>Foundry Note</strong></p>    <p>你必须在角色卡中更新吟游诗人激励特性，使其在短休时恢复，因为默认情况下是长休时恢复。</p>    <p><strong>以法术位充能</strong>行动会耗费一个法术位，并赋予一次吟游诗人灵感的使用次数。</p></section>",
-      "requirements": "吟游诗人",
       "activities": {
         "Recharge with Spell Slot": {
           "name": "以法术位充能"
@@ -845,7 +802,6 @@
     "Inspiring Movement": {
       "name": "鼓舞之移",
       "description": "<p>当一个你能看见的敌人在你 5 尺内结束回合时，你可以使用反应来消耗一次吟游诗人激励，移动至多等同于你速度一半的距离（当前 [[lookup @attributes.movement.walk]]）。同时，你可以选择 30 尺内的一名盟友，该盟友也能用反应移动至多等同于其速度一半的距离。</p><p>该特性的所有移动均不会引发借机攻击。</p>",
-      "requirements": "舞蹈学院",
       "activities": {
         "Move": {
           "name": "移动",
@@ -856,7 +812,6 @@
     "Jack of All Trades": {
       "name": "万事通",
       "description": "<p>你可以将你熟练加值的一半（向下取整）添加到任何你不具备其技能熟练并无法通过其他方式应用熟练加值的属性检定中。</p><p>例如，如果你要进行力量（运动）检定，且不具有运动熟练，则你可以将熟练加值的一半添加到检定中。</p><section class=\"secret\" id=\"secret-su4PzYrZZDdS1qZg\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个被动效应，它会自动为所有未熟练技能提供一半的熟练加值。</p></section>",
-      "requirements": "吟游诗人",
       "effects": {
         "Jack of All Trades": {
           "name": "万事通"
@@ -865,8 +820,7 @@
     },
     "Leading Evasion": {
       "name": "引导闪避",
-      "description": "<p>当你受到一个允许你进行敏捷豁免来只承受一半伤害的效应影响时，你在豁免成功时不受伤害，豁免失败时只承受一半伤害。若位于你 5 尺内的其他生物同样需要进行这次敏捷豁免，你可以令他们也享受到此特性的增益。</p><p>你无法在 &Reference[Incapacitated] 状态下使用该特性。</p>",
-      "requirements": "舞蹈学院"
+      "description": "<p>当你受到一个允许你进行敏捷豁免来只承受一半伤害的效应影响时，你在豁免成功时不受伤害，豁免失败时只承受一半伤害。若位于你 5 尺内的其他生物同样需要进行这次敏捷豁免，你可以令他们也享受到此特性的增益。</p><p>你无法在 &Reference[Incapacitated] 状态下使用该特性。</p>"
     },
     "College of Lore": {
       "name": "逸闻学院",
@@ -882,23 +836,19 @@
     },
     "Magical Discoveries": {
       "name": "魔法探秘",
-      "description": "<p>你学会了两个自选法术。这些法术可以属于 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]、@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU] 或 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz] 也可以分属其中不同的法术列表。不论如何，你所选的法术必须是戏法或者是你已有法术位的法术，如 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbBard000000000.JournalEntryPage.V8pqIWlaL9GhY61t#equipment] <span class=\"ne-text\">表所示。</span></p><p>所选法术总会在你的准备列表中，并且每当你获得一个吟游诗人等级时，你可以将其中的一个法术替换为另一个符合条件的法术。</p>",
-      "requirements": "逸闻学院"
+      "description": "<p>你学会了两个自选法术。这些法术可以属于 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]、@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU] 或 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz] 也可以分属其中不同的法术列表。不论如何，你所选的法术必须是戏法或者是你已有法术位的法术，如 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbBard000000000.JournalEntryPage.V8pqIWlaL9GhY61t#equipment] <span class=\"ne-text\">表所示。</span></p><p>所选法术总会在你的准备列表中，并且每当你获得一个吟游诗人等级时，你可以将其中的一个法术替换为另一个符合条件的法术。</p>"
     },
     "Magical Secrets": {
       "name": "魔法奥秘",
-      "description": "<p>你从各种魔法典籍中了解了大量的秘法知识。当你获得吟游诗人等级（包括得到本特性的等级）且“吟游诗人特性”表中准备法术数量上升时，你可以从 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI]、 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]、@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU] 和 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz] 中选择法术来添加进准备列表。这些法术对你而言都视作吟游诗人法术。此外，当你需要替换准备法术列表时，你也可以从上述各个职业的法术列表中选择。</p>",
-      "requirements": "吟游诗人"
+      "description": "<p>你从各种魔法典籍中了解了大量的秘法知识。当你获得吟游诗人等级（包括得到本特性的等级）且“吟游诗人特性”表中准备法术数量上升时，你可以从 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI]、 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]、@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU] 和 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz] 中选择法术来添加进准备列表。这些法术对你而言都视作吟游诗人法术。此外，当你需要替换准备法术列表时，你也可以从上述各个职业的法术列表中选择。</p>"
     },
     "Mantle of Inspiration": {
       "name": "激励光环",
-      "description": "<p>你用编织入妖精魔法的歌曲或舞蹈来激发他人的活力。以一个附赠动作，你可以消耗一次吟游诗人激励，并掷出你的诗人激励骰。此时，选择你周围 60 尺内的一定数量的其他生物，其数量至多等同于你的魅力调整值（最少 1 个）。每个所选生物都会获得等同于你诗人激励骰结果两倍的临时生命值。而当一个生物获得这些临时生命值时，它可以用其反应移动至多等同于其速度的距离，此次移动不会引发借机攻击。</p>",
-      "requirements": "魅心学院"
+      "description": "<p>你用编织入妖精魔法的歌曲或舞蹈来激发他人的活力。以一个附赠动作，你可以消耗一次吟游诗人激励，并掷出你的诗人激励骰。此时，选择你周围 60 尺内的一定数量的其他生物，其数量至多等同于你的魅力调整值（最少 1 个）。每个所选生物都会获得等同于你诗人激励骰结果两倍的临时生命值。而当一个生物获得这些临时生命值时，它可以用其反应移动至多等同于其速度的距离，此次移动不会引发借机攻击。</p>"
     },
     "Mantle of Majesty": {
       "name": "威仪作锦",
       "description": "<p>你始终准备了法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]{命令术}。</p><p>以一个附赠动作，你施展 <em>命令术 </em>且无需消耗法术位，并在 1 分钟内获得超凡的美貌，或直到你的专注结束。在此期间，你可以以一个附赠动作施展 <em>命令术</em>，且无需消耗法术位。</p><p>任何被你 &Reference[Charmed] 的生物在对抗你用该特性施展的 <em>命令术</em> 时，其将在豁免检定中自动失败。</p><p>一旦使用该特性，直到你完成一次长休前将无法再次使用。你也可以消耗一个 3+ 环的法术位（无需动作）来重获该特性的使用次数。</p><section class=\"secret\" id=\"secret-MMFYPO9Is3ifsQRP\">    <p><strong>Foundry Note</strong></p>    <p><strong>以法术位恢复</strong>行动能赋予此特性额外一次使用次数。</p>    <p>始终准备的法术会自动添加到你的角色卡中。</p></section>",
-      "requirements": "魅心学院",
       "activities": {
         "Unearthly Appearance": {
           "name": "超凡美貌"
@@ -915,13 +865,11 @@
     },
     "Martial Training": {
       "name": "战争训练",
-      "description": "<p>你获得军用武器熟练以及中甲和盾牌的护甲受训。</p><p>此外，你施展@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI]{吟游诗人法术列表}中的法术时，可以使用简易或军用武器作为法器。</p><section class=\"secret\" id=\"secret-qQmpxAQoiNdYj6Hq\">    <p><strong>Foundry Note</strong></p>    <p>在角色升级时，你将自动获得使用军用武器的熟练和中型护甲和盾牌的受训。</p></section>",
-      "requirements": "勇气学院"
+      "description": "<p>你获得军用武器熟练以及中甲和盾牌的护甲受训。</p><p>此外，你施展@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI]{吟游诗人法术列表}中的法术时，可以使用简易或军用武器作为法器。</p><section class=\"secret\" id=\"secret-qQmpxAQoiNdYj6Hq\">    <p><strong>Foundry Note</strong></p>    <p>在角色升级时，你将自动获得使用军用武器的熟练和中型护甲和盾牌的受训。</p></section>"
     },
     "Peerless Skill": {
       "name": "超凡技艺",
       "description": "<p>当你进行一次属性检定或攻击检定并在检定中失败时，你可以消耗一次诗人激励使用次数，投掷诗人激励骰，并将掷骰结果加到d20中，这可能使这次检定的失败变为成功。若检定仍然失败，将不会被消耗诗人激励次数。</p>",
-      "requirements": "逸闻学院",
       "activities": {
         "utility": {
           "roll": "吟游诗人激励",
@@ -931,24 +879,23 @@
     },
     "Spellcasting": {
       "name": "施法",
-      "description": "<p>你在你的吟游艺术中学会了如何施展法术。参见 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.mh3akteBDiLegqFK]{第 7 章} 有关施法的规则。下述信息将详述如何将这些规则应用于吟游诗人法术，吟游诗人法术详见本章后文职业描述中的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI]。</p><p><strong>戏法。</strong>你已知2个你选择的吟游诗人戏法。推荐选择 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig] </em>和 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplViciousMoc]</em></p><p>每当你获得一个吟游诗人等级时，你都能将通过此特性已知的其中一个戏法替换为另一个你所选择的吟游诗人戏法。</p><p>当你的吟游诗人等级达到4级和10级时，你都能习得另一个你所选择的吟游诗人戏法，如吟游诗人特性表中戏法一列所示。 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI] 。</p><p><strong>法术位。</strong>“吟游诗人特性”表记录了你有多少法术位用以施展 1+ 环阶的法术。当你完成一次长休时，你会重新获得所有消耗的法术位。</p><p><strong>准备 1+ 环法术。</strong>通过该特性施法前，你需要选择数个可用的 1+ 环阶法术构成准备列表。首先，从“吟游诗人法术列表“中选择四个 1 环法术。推荐选择<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]</em>、 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplColorSpray]</em>、 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDissonantW]</em> 和 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor] </em>。</p><p>准备列表上的法术数量将随着你的吟游诗人等级而增加，正如“吟游诗人特性”表中“准备法术”一栏所示。每当该数量增加时，从“吟游诗人法术列表”中选择额外的法术来添加到你的准备列表中，直到你准备列表上的法术数量与“吟游诗人特性”表中的数量相匹配。你只能准备已经获得相应环阶法术位的法术。例如，作为一个 3 级吟游诗人，你的准备法术列表应该包括六个任意组合的 1 环或 2 环法术。</p><p>如果其他的吟游诗人特性给予了额外的已准备法术，这些法术不会计入你在该特性中的准备法术数量，但是这些法术对你而言仍算作吟游诗人法术。</p><p><strong>改变你的准备法术。</strong>每当你获得一个吟游诗人等级时， 你可以将准备列表中的一个法术，替换为另一个你拥有法术位的吟游诗人法术。</p><p><strong>施法属性。</strong>魅力是你施展吟游诗人法术的施法属性。</p><p><strong>施法法器。</strong>你可以使用乐器作为吟游诗人法术的施法法器。</p>",
-      "requirements": "吟游诗人"
+      "description": "<p>你在你的吟游艺术中学会了如何施展法术。参见 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.mh3akteBDiLegqFK]{第 7 章} 有关施法的规则。下述信息将详述如何将这些规则应用于吟游诗人法术，吟游诗人法术详见本章后文职业描述中的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI]。</p><p><strong>戏法。</strong>你已知2个你选择的吟游诗人戏法。推荐选择 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig] </em>和 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplViciousMoc]</em></p><p>每当你获得一个吟游诗人等级时，你都能将通过此特性已知的其中一个戏法替换为另一个你所选择的吟游诗人戏法。</p><p>当你的吟游诗人等级达到4级和10级时，你都能习得另一个你所选择的吟游诗人戏法，如吟游诗人特性表中戏法一列所示。 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.wwia6Wwo4BgE9GSI] 。</p><p><strong>法术位。</strong>“吟游诗人特性”表记录了你有多少法术位用以施展 1+ 环阶的法术。当你完成一次长休时，你会重新获得所有消耗的法术位。</p><p><strong>准备 1+ 环法术。</strong>通过该特性施法前，你需要选择数个可用的 1+ 环阶法术构成准备列表。首先，从“吟游诗人法术列表“中选择四个 1 环法术。推荐选择<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]</em>、 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplColorSpray]</em>、 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDissonantW]</em> 和 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor] </em>。</p><p>准备列表上的法术数量将随着你的吟游诗人等级而增加，正如“吟游诗人特性”表中“准备法术”一栏所示。每当该数量增加时，从“吟游诗人法术列表”中选择额外的法术来添加到你的准备列表中，直到你准备列表上的法术数量与“吟游诗人特性”表中的数量相匹配。你只能准备已经获得相应环阶法术位的法术。例如，作为一个 3 级吟游诗人，你的准备法术列表应该包括六个任意组合的 1 环或 2 环法术。</p><p>如果其他的吟游诗人特性给予了额外的已准备法术，这些法术不会计入你在该特性中的准备法术数量，但是这些法术对你而言仍算作吟游诗人法术。</p><p><strong>改变你的准备法术。</strong>每当你获得一个吟游诗人等级时， 你可以将准备列表中的一个法术，替换为另一个你拥有法术位的吟游诗人法术。</p><p><strong>施法属性。</strong>魅力是你施展吟游诗人法术的施法属性。</p><p><strong>施法法器。</strong>你可以使用乐器作为吟游诗人法术的施法法器。</p>"
     },
     "Superior Inspiration": {
       "name": "先发激励",
-      "description": "<p>当你投掷先攻时，若你的诗人激励使用次数不足两次，你重获被消耗的诗人激励使用次数到两次为止。</p>",
-      "requirements": "吟游诗人"
+      "description": "<p>当你投掷先攻时，若你的诗人激励使用次数不足两次，你重获被消耗的诗人激励使用次数到两次为止。</p>"
     },
     "Tandem Footwork": {
       "name": "协同舞步",
       "description": "<p>当你进行先攻掷骰时，若你不处于 &Reference[Incapacitated] 状态，你可以消耗一次吟游诗人激励，并掷出你的诗人激励骰；你和你 30 尺内所有能看见你或听见你声音的盟友获得先攻加值，数值等同于激励骰结果。</p><section class=\"secret\" id=\"secret-nQrxfDcx2JC1jNO2\">    <p><strong>Foundry Note</strong></p>    <p>使用此特性会消耗一次吟游诗人激励的使用次数。</p></section>",
-      "requirements": "舞蹈学院",
       "activities": {
         "Initiative Bonus": {
           "name": "先攻加值",
           "roll": "吟游诗人激励",
           "condition": "当你投掷先攻时，若你未陷入失能状态",
-          "affectsSpecial": "能听见或看见你的盟友"
+          "affects": {
+            "special": "Ally who can see or hear you"
+          }
         }
       }
     },
@@ -972,7 +919,6 @@
     "Unbreakable Majesty": {
       "name": "不破威仪",
       "description": "<p>以一个附赠动作，你可以展现出魔法加持的威严姿态，持续 1 分钟或直到你陷入 &Reference[Incapacitated] 状态。在此期间，任何生物在一个回合中首次以攻击检定命中你时，攻击者必须成功通过一次对抗你法术豁免 DC 的魅力豁免检定，否则该生物将因你的威严而退却，这次攻击将被改为失手。</p><p>一旦展现出这般威严姿态，直到你完成一次短休或长休前都无法再次使用。</p><section class=\"secret\" id=\"secret-NbhuxdzHOM4DrYtJ\">   <p><strong>Foundry Note</strong></p>    <p><strong>威仪</strong> 行动包含一个用于跟进自身姿态的激活效应以及一次豁免检定。</p>    <p><strong>豁免</strong>行动包含一次豁免检定，若您需要再次发布该豁免检定结果而无需耗费此特性的使用次数，只需将该豁免检定发送至聊天框即可。</p></section>",
-      "requirements": "魅心学院",
       "activities": {
         "Majestic Presence": {
           "name": "威仪"
@@ -998,13 +944,11 @@
     },
     "Words of Creation": {
       "name": "创生圣言",
-      "description": "<p>你掌握了创生圣言的其中两字：“生”、“死”。因此，你总是准备了法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordH] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordK]。当你施展这两道法术时，你可以选择第二个生物作为目标，那名生物必须位于第一个目标10尺内。</p><section class=\"secret\" id=\"secret-aHHp3ZnTrWPHHB7j\">   <p><strong>Foundry Note</strong></p>    <p>随着你等级的提升，这些法术会自动授予你。</p></section>",
-      "requirements": "吟游诗人"
+      "description": "<p>你掌握了创生圣言的其中两字：“生”、“死”。因此，你总是准备了法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordH] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordK]。当你施展这两道法术时，你可以选择第二个生物作为目标，那名生物必须位于第一个目标10尺内。</p><section class=\"secret\" id=\"secret-aHHp3ZnTrWPHHB7j\">   <p><strong>Foundry Note</strong></p>    <p>随着你等级的提升，这些法术会自动授予你。</p></section>"
     },
     "Avatar of Battle": {
       "name": "战争化身",
       "description": "<p>你获得对钝击、穿刺、挥砍伤害的抗性。</p><section class=\"secret\" id=\"secret-6TJyGok1Gf1bVLme\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一个被动效应，可自动提供伤害减免。</p></section>",
-      "requirements": "战争领域",
       "effects": {
         "Avatar of Battle": {
           "name": "战争化身"
@@ -1013,18 +957,15 @@
     },
     "Blessed Healer": {
       "name": "神祝医者",
-      "description": "<p>你为其他人施展的治疗法术也能治疗你自己。当你用法术位施展一道为除了你自己以外的一个或更多生物恢复生命值的法术后，你立刻恢复 2 + 法术环阶的生命值。</p><section class=\"secret\" id=\"secret-B3oOPhBUFT9dOwUQ\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一个治疗活动。根据你使用的法术环阶来设定比例值，它将为你提供一个治疗骰。</p></section>",
-      "requirements": "生命领域"
+      "description": "<p>你为其他人施展的治疗法术也能治疗你自己。当你用法术位施展一道为除了你自己以外的一个或更多生物恢复生命值的法术后，你立刻恢复 2 + 法术环阶的生命值。</p><section class=\"secret\" id=\"secret-B3oOPhBUFT9dOwUQ\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一个治疗活动。根据你使用的法术环阶来设定比例值，它将为你提供一个治疗骰。</p></section>"
     },
     "Blessed Strikes": {
       "name": "受祝击",
-      "description": "<p>你在战斗时充满神性的光辉，你选择以下其中一种效果获得：（如果你因旧书中的牧师子职而再次获得了下列选项之一，则你也只能使用你在此特性中所选的那个选项）。</p><p><strong>神圣打击。</strong>每个你的回合一次，当你使用武器攻击命中一个生物时，你可以使目标受到额外 1d8 暗蚀或光耀伤害（由你选择）。</p><p><strong>强力施法。</strong>你可以将你的感知调整值加到你牧师戏法造成的伤害中。</p><section class=\"secret\" id=\"secret-1YTjpzZamslVlTTM\">    <p><strong>Foundry Note</strong></p>    <p>在升级过程中，你可以选择自己偏好的选项。</p></section>",
-      "requirements": "牧师"
+      "description": "<p>你在战斗时充满神性的光辉，你选择以下其中一种效果获得：（如果你因旧书中的牧师子职而再次获得了下列选项之一，则你也只能使用你在此特性中所选的那个选项）。</p><p><strong>神圣打击。</strong>每个你的回合一次，当你使用武器攻击命中一个生物时，你可以使目标受到额外 1d8 暗蚀或光耀伤害（由你选择）。</p><p><strong>强力施法。</strong>你可以将你的感知调整值加到你牧师戏法造成的伤害中。</p><section class=\"secret\" id=\"secret-1YTjpzZamslVlTTM\">    <p><strong>Foundry Note</strong></p>    <p>在升级过程中，你可以选择自己偏好的选项。</p></section>"
     },
     "Blessing of the Trickster": {
       "name": "诡术祝福",
       "description": "<p>以一个魔法动作，你可以选择自己或 30 尺内一个自愿生物，所选生物在进行敏捷（隐匿）检定时具有优势。此祝福持续至你完成一次长休或直至你再次使用此特性。</p><section class=\"secret\" id=\"secret-HR9knJJry8NACRET\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一个激活效应，用于跟进祝福，但不会自动为隐匿检定提供优势，也不会在你再次使用此特性时自动结束。</p></section>",
-      "requirements": "诡术领域",
       "activities": {
         "Blessing": {
           "name": "祝福"
@@ -1040,7 +981,6 @@
     "Channel Divinity": {
       "name": "引导神力",
       "description": "<p>你能从外层位面引导神圣能量，并用其引动魔法效应。你起始时具有两种选项：神圣火花与驱散亡灵，其效果如下所示。每当你使用你的引导神力时，你选择要创造哪种效应。你会在更高的牧师等级获得更多选项。</p><p>你可以使用引导神力两次，你在完成一次短休时恢复一次使用次数，而在完成一次长休时重获所有已使用的次数。你在达到特定的牧师等级时获得额外的使用次数，具体见牧师特性表中引导神力一栏。</p><p>如果某个引导神力效应需要目标进行豁免，则其豁免DC等于本职业的施法特性中的法术豁免DC。</p><p>如果一个引导神力的效果需要豁免检定，则使用你牧师的法术豁免DC。</p><p><strong>神圣火花。</strong>以一个魔法动作，你将你的圣徽指向 30 尺内一个你可见的其他生物，并将神圣能量凝聚于该生物。投掷 1d8 + 你的感知调整值，你为该生物恢复该数值的生命或迫使其进行一次体质豁免，失败则受到等同该数值的暗蚀或光耀伤害（由你选择），成功则伤害减半（向下取整）。</p><p>神圣火花在以下牧师等级获得额外的d8骰：7级（2d8），13级（3d8）以及18级（4d8）。</p><p><strong>驱散不死生物。</strong>以一个魔法动作，你展现圣徽，斥退诸亡灵生物。你 30 尺内每个由你选择的亡灵都必须进行一次感知豁免，失败则陷入恐慌和失能状态，持续 1 分钟。在这段持续时间内，被驱散的生物会尽可能远离你。此效应在其受到伤害时提前结束，你陷入失能状态或是死亡也会结束此效应。</p><section class=\"secret\" id=\"secret-1ECtJAnUinEegKtL\">    <p><strong>Foundry Note</strong></p>    <p>该特性会在短休时自动恢复 1 次使用次数，在长休时则全部恢复。随着等级提升，使用次数会自动增加。</p>    <p><strong>神圣火花：治疗</strong>行动包含治疗效应。</p>    <p><strong>神圣火花：豁免</strong>行动包含着豁免检定。</p>    <p><strong>驱散不死生物</strong>包含一种激活效应，可施加“恐慌”和“失能”这两种状态。</p></section>",
-      "requirements": "牧师",
       "activities": {
         "Divine Spark: Heal": {
           "name": "神圣火花：治疗"
@@ -1050,7 +990,9 @@
         },
         "Turn Undead": {
           "name": "驱散不死生物",
-          "affectsSpecial": "你选择的亡灵"
+          "affects": {
+            "special": "Undead of your choice"
+          }
         }
       },
       "effects": {
@@ -1109,7 +1051,6 @@
     "Corona of Light": {
       "name": "光冕",
       "description": "<p>以一个魔法动作，你可以让自己散出一圈日光。持续一分钟或直到你将其解除（无需动作）。你将释放出半径 60 尺的明亮光照，以及其外延伸 30 尺的微光光照。身处明亮光照中的敌人，在对抗你黎明曙光和任何法术造成的火焰或光耀伤害时，豁免检定具有劣势。<br>你可以使用该特性的次数等于你的感知调整值（至少为一次）。而你将在完成一次长休后重新恢复所有的使用次数。</p><section class=\"secret\" id=\"secret-4qUkzR393EmbQxig\">    <p><strong>Foundry Note</strong></p>    <p>T该特性包含一个跟进发处 60 尺明亮光照的目标模板，以及一个用于选定受影响生物的激活效应，但不会自动施加劣势。</p></section>",
-      "requirements": "光明领域",
       "activities": {
         "Emit Aura of Sunlight": {
           "name": "散出光冕 Emit Aura of Sunlight"
@@ -1124,37 +1065,33 @@
     "Disciple of Life": {
       "name": "生命门徒",
       "description": "<p>当你消耗法术位为一个生物施展恢复生命值的法术时，该生物在你施法的回合额外恢复2+法术环阶的生命值。</p><section class=\"secret\" id=\"secret-Gy6bYP3AKuabnUlQ\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一项治疗行动。将比例值设定为施展法术的环阶，它就会为你提供一次治疗检定。</p></section>",
-      "requirements": "生命领域",
       "activities": {
         "heal": {
-          "affectsSpecial": "你消耗法术位施展法术"
+          "affects": {
+            "special": "Create you cast a healing spell on"
+          }
         }
       }
     },
     "Divine Intervention": {
       "name": "神圣干预",
-      "description": "<p>你能呼唤你所信奉的神祇或神系来代你降下干预。以一个魔法动作，你选择一道 5 环或更低的@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]（施法时间不能为 1 反应），并将该法术作为执行此动作的一部分施展，无需消耗法术位也无需对应的施法材料。直到你完成一次长休前，你都无法再次使用此特性。</p><section class=\"secret\" id=\"secret-LP7yqqobTjOqeswv\">    <p><strong>Foundry Note</strong></p>    <p>在以免费使用施放此法术时，取消勾选“消耗”框。 此特性可用于跟进可用次数。</p></section>",
-      "requirements": "牧师"
+      "description": "<p>你能呼唤你所信奉的神祇或神系来代你降下干预。以一个魔法动作，你选择一道 5 环或更低的@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]（施法时间不能为 1 反应），并将该法术作为执行此动作的一部分施展，无需消耗法术位也无需对应的施法材料。直到你完成一次长休前，你都无法再次使用此特性。</p><section class=\"secret\" id=\"secret-LP7yqqobTjOqeswv\">    <p><strong>Foundry Note</strong></p>    <p>在以免费使用施放此法术时，取消勾选“消耗”框。 此特性可用于跟进可用次数。</p></section>"
     },
     "Divine Order": {
       "name": "圣职",
-      "description": "<p>你让自己投身于以下一种由你自己选择的神圣职能：</p><p><strong>守护者。</strong>通过战斗训练，你获得军用武器熟练与重甲受训。</p><p><strong>奇术使。</strong>你从 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]中额外获得一个戏法，此外你与神明的紧密联系使你的智力（奥秘或宗教）检定将会获得等同感知调整值的加值（至少 +1）。</p><section class=\"secret\" id=\"secret-mBkdTF86GHVjdNKD\">   <p><strong>Foundry Note</strong></p>    <p>在升级过程中，你可以选择自己偏好的选项</p></section>",
-      "requirements": "牧师"
+      "description": "<p>你让自己投身于以下一种由你自己选择的神圣职能：</p><p><strong>守护者。</strong>通过战斗训练，你获得军用武器熟练与重甲受训。</p><p><strong>奇术使。</strong>你从 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]中额外获得一个戏法，此外你与神明的紧密联系使你的智力（奥秘或宗教）检定将会获得等同感知调整值的加值（至少 +1）。</p><section class=\"secret\" id=\"secret-mBkdTF86GHVjdNKD\">   <p><strong>Foundry Note</strong></p>    <p>在升级过程中，你可以选择自己偏好的选项</p></section>"
     },
     "phbclcEpicBoon00": {
       "name": "传奇恩惠",
-      "description": "<p>你获得一项传奇恩惠专长 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]或其他一项你选择的适用的专长。推荐选择 @UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofFate000]。</p>",
-      "requirements": "牧师"
+      "description": "<p>你获得一项传奇恩惠专长 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]或其他一项你选择的适用的专长。推荐选择 @UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofFate000]。</p>"
     },
     "Greater Divine Intervention": {
       "name": "进阶神圣干预",
-      "description": "<p>你能够呼唤更加强大的神圣干预。当你使用神圣干预特性时，你可以在选择法术时选择 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWish000000] 如果你这样做，你只有在完成 [[/r 2d4]] 次长休后才能再次使用神圣干预。</p><section class=\"secret\" id=\"secret-LP9WqNdaJevppYeM\">    <p><strong>Foundry Note</strong></p>    <p>此特性会消耗 1 次神圣干预的使用次数，经过一定次数的长休后，其使用次数不会自动恢复。</p></section>",
-      "requirements": "牧师"
+      "description": "<p>你能够呼唤更加强大的神圣干预。当你使用神圣干预特性时，你可以在选择法术时选择 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWish000000] 如果你这样做，你只有在完成 [[/r 2d4]] 次长休后才能再次使用神圣干预。</p><section class=\"secret\" id=\"secret-LP9WqNdaJevppYeM\">    <p><strong>Foundry Note</strong></p>    <p>此特性会消耗 1 次神圣干预的使用次数，经过一定次数的长休后，其使用次数不会自动恢复。</p></section>"
     },
     "Guided Strike": {
       "name": "导引打击",
       "description": "<p>当你或者距离你 30 尺内的一个生物在一次攻击检定中失手时，你可以消耗一次引导神力次数来让这次攻击检定获得+ 10 加值，这可能导致该次攻击命中。当你使用此特性让另一个生物的攻击检定获得此增益时，你必须使用你的反应。</p><section class=\"secret\" id=\"secret-VjIYg1WvWqp7p6Jh\">    <p><strong>Foundry Note</strong></p>    <p><strong>导引自身</strong>行动不会消耗反应。</p>    <p><strong>导引其他生物</strong>行动会消耗反应。</p></section>",
-      "requirements": "战争领域",
       "activities": {
         "Guide Yourself": {
           "name": "导引自身",
@@ -1169,7 +1106,6 @@
     "Improved Blessed Strikes": {
       "name": "精通受祝击",
       "description": "<p>你所选择的受祝击变得更加强大。</p><p><strong>神圣打击。</strong> 神圣打击的额外伤害提升至 2d8。</p><p><strong>强力施法。</strong> 当你施展一个牧师戏法并对一个生物造成伤害时，你可以为自己或他人带来活力。选择自己或距离你 60 尺内的一个生物，该生物获得等同于你感知调整值 2 倍的临时生命值。</p><section class=\"secret\" id=\"secret-UW0So7XcJyHUaivE\">    <p><strong>Foundry Note</strong></p>    <p>若选择了<strong>神圣打击</strong>，其伤害值会自动提升。若选择了<strong>强力施法</strong>，你就能在该特性上使用<strong>强力施法</strong>行动。</p></section>",
-      "requirements": "牧师",
       "activities": {
         "Potent Spellcasting: Heal": {
           "name": "强力施法：治疗",
@@ -1180,33 +1116,36 @@
     "Improved Duplicity": {
       "name": "精通分身",
       "description": "<p>你召现分身特性所创造的幻象在以下方面变得更加强力。</p><p><strong>共享干扰。</strong>当你或你的盟友对幻象 5 尺内的敌人进行攻击时，此次攻击具有优势。</p><p><strong>治愈幻象。</strong>当幻象消失时，你或你选择的 5 尺内的一名生物恢复等同于你牧师等级的生命值。</p><section class=\"secret\" id=\"secret-uap8bgfMVCz4pnet\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含<strong>治愈幻象</strong>行动，但其无法自动为幻象范围 5 尺内的生物带来优势。</p></section>",
-      "requirements": "诡术领域",
       "activities": {
         "Healing Illusion": {
           "name": "治愈幻象",
           "condition": "当幻象消失时",
-          "affectsSpecial": "位于幻象 5 尺内"
+          "affects": {
+            "special": "Within 5 feet of the duplicate"
+          }
         }
       }
     },
     "Improved Warding Flare": {
       "name": "精通守御之光",
       "description": "<p>完成一次短休或长休后都将重新恢复所有守御闪光的使用次数。</p><p>此外，每当你使用守御闪光时，你可以对被攻击的目标额外提供临时生命值，数目为 2d6 + 你的感知调整值。</p><section class=\"secret\" id=\"secret-7WmcCKWWvsv7V9NG\">    <p><strong>Foundry Note</strong></p>    <p>该特性不会自动更新守御之光，使其在短休时恢复。你必须自行编辑物品，并将恢复周期设为短休。</p>    <p><strong>治疗</strong>行动包含临时生命值的恢复。</p></section>",
-      "requirements": "光明领域",
       "activities": {
         "heal": {
-          "affectsSpecial": "触发此反应的该次攻击"
+          "affects": {
+            "special": "Target of the triggering attack"
+          }
         }
       }
     },
     "Invoke Duplicity": {
       "name": "召现分身",
       "description": "<p>以一个附赠动作，你可以消耗一次引导神力次数，选择距你 30 尺内可见且未被占据的一点，创造出一个与你别无二致的幻象。该幻象实际并无形体也并不占据所在空间。幻象将持续一分钟或直到你陷入 &Reference[Incapacitated] 状态，你也可以提前解消它（无需动作）。幻象将会完全模仿你的表情和姿势。当他存在时，你获得以下增益：</p><p><strong>施放法术。</strong>你可以如同身处幻象所在的空间一样释放法术，但需要使用自身的感官。</p><p><strong>干扰。</strong>当你和你的幻象都位于一个可以看见幻象的生物 5 尺范围内，因幻象造成的误导，你在对该生物进行的攻击检定中具有优势。</p><p><strong>转移。</strong>以一个附赠动作，你可以使幻象移动最多 30 尺至一处你能看见且未被占据的空间，但它必须维持在距离你 120 尺内。</p>",
-      "requirements": "诡术领域",
       "activities": {
         "Move Duplicate": {
           "name": "转移分身",
-          "affectsSpecial": "30 尺内"
+          "affects": {
+            "special": "within 30 feet"
+          }
         }
       }
     },
@@ -1224,8 +1163,7 @@
     },
     "Life Domain Spells": {
       "name": "生命领域法术",
-      "description": "<p>你与此神圣领域的链接使你总是准备了特定的法术。当你达到生命领域法术表中特定的牧师等级时，你总会将表中对应的法术加入准备。</p><table>    <caption>生命领域法术</caption>    <thead>        <tr>            <td>牧师等级</td>          <td>准备法术</td>        </tr>  </thead>    <tbody>     <tr>          <td>3</td>            <td>          <p>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAid0000000]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds]、<br>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLesserRest]</p>            </td>        </tr>        <tr>          <td>5</td>          <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassHealin]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRevivify00]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAuraofLife]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDeathWard0]</td>       </tr>        <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassCureWo]</td>        </tr>    </tbody></table><section class=\"secret\" id=\"secret-Z9pAhvumQlf7onuP\">    <p><strong>Foundry Note</strong></p>    <p>随着等级提升，这些法术会自动授予。</p></section>",
-      "requirements": "生命领域"
+      "description": "<p>你与此神圣领域的链接使你总是准备了特定的法术。当你达到生命领域法术表中特定的牧师等级时，你总会将表中对应的法术加入准备。</p><table>    <caption>生命领域法术</caption>    <thead>        <tr>            <td>牧师等级</td>          <td>准备法术</td>        </tr>  </thead>    <tbody>     <tr>          <td>3</td>            <td>          <p>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAid0000000]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds]、<br>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLesserRest]</p>            </td>        </tr>        <tr>          <td>5</td>          <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassHealin]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRevivify00]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAuraofLife]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDeathWard0]</td>       </tr>        <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassCureWo]</td>        </tr>    </tbody></table><section class=\"secret\" id=\"secret-Z9pAhvumQlf7onuP\">    <p><strong>Foundry Note</strong></p>    <p>随着等级提升，这些法术会自动授予。</p></section>"
     },
     "Light Domain": {
       "name": "光明领域",
@@ -1241,32 +1179,32 @@
     },
     "Light Domain Spells": {
       "name": "光明领域法术",
-      "description": "<p>光明领域致力于以神圣的力量带来烈焰与启示。踏入这一领域的牧师，其灵魂被注入了来自神明的光辉与洞察力，他们肩负驱散虚伪与燃烧黑暗的使命。</p><p>光明领域与掌管真理，警觉，美丽，洞察与革新的神明相关联。其通常的象征为太阳。某些这类的神会被描绘为太阳本身，或是驾着战车引领太阳划过天际的存在。还有一些则是不懈的哨兵之眼，时刻洞穿每一片阴影与诡计。而其中某些美与才艺的教义还会诠释艺术即灵魂晋升容器的理念。</p><table>    <caption>光明领域法术 Light Domain Spells</caption>    <thead>      <tr>            <td>牧师等级</td>           <td>准备法术</td>       </tr>    </thead>    <tbody>        <tr>          <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBurningHan]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScorchingR]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSeeInvisib]</td>      </tr>       <tr>           <td>5</td>          <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDaylight00]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</td>       </tr>       <tr>         <td>7</td>           <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplArcaneEye0]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofFire]</td>        </tr>      <tr>          <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFlameStrik]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]</td>        </tr> </tbody></table><section class=\"secret\" id=\"secret-gGmJsB1mwI4zNuDh\">    <p><strong>Foundry Note</strong></p>    <p>随着等级提升，这些法术会自动授予。</p></section>",
-      "requirements": "光明领域"
+      "description": "<p>光明领域致力于以神圣的力量带来烈焰与启示。踏入这一领域的牧师，其灵魂被注入了来自神明的光辉与洞察力，他们肩负驱散虚伪与燃烧黑暗的使命。</p><p>光明领域与掌管真理，警觉，美丽，洞察与革新的神明相关联。其通常的象征为太阳。某些这类的神会被描绘为太阳本身，或是驾着战车引领太阳划过天际的存在。还有一些则是不懈的哨兵之眼，时刻洞穿每一片阴影与诡计。而其中某些美与才艺的教义还会诠释艺术即灵魂晋升容器的理念。</p><table>    <caption>光明领域法术 Light Domain Spells</caption>    <thead>      <tr>            <td>牧师等级</td>           <td>准备法术</td>       </tr>    </thead>    <tbody>        <tr>          <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBurningHan]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScorchingR]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSeeInvisib]</td>      </tr>       <tr>           <td>5</td>          <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDaylight00]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</td>       </tr>       <tr>         <td>7</td>           <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplArcaneEye0]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofFire]</td>        </tr>      <tr>          <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFlameStrik]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]</td>        </tr> </tbody></table><section class=\"secret\" id=\"secret-gGmJsB1mwI4zNuDh\">    <p><strong>Foundry Note</strong></p>    <p>随着等级提升，这些法术会自动授予。</p></section>"
     },
     "Preserve Life": {
       "name": "维持生命",
       "description": "<p>以一个魔法动作，你展示圣徽并消耗一次引导神力来引导治疗能量恢复等于你牧师等级 5 倍的生命值。你选择身边 30 尺内处于 &Reference[Bloodied] 状态的生物作为此特性的目标（可以包括你），再为其分配从中获得的治疗能量。该特性至多将目标的生命值恢复至其上限的一半。</p><section class=\"secret\" id=\"secret-vybBdwcDQO3jMVDo\">    <p><strong>Foundry Note</strong></p>    <p><strong>治疗</strong>行动不会自动将目标获得的生命值限制为其最大生命值的50%。</p></section>",
-      "requirements": "生命领域",
       "activities": {
         "heal": {
-          "affectsSpecial": "浴血生物"
+          "affects": {
+            "special": "Blooed creatures"
+          }
         }
       }
     },
     "Radiance of the Dawn": {
       "name": "黎明曙光",
-      "description": "<p>以一个魔法动作，你展现圣徽，消耗一次引导神力次数来释放出一阵闪光，覆盖一处以你为源点的 30 尺光环区域。任何魔法 &Reference[Darkness] 例如法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00] 制造的黑暗——在该区域内都将被解除。此外，区域内你选择的所有生物都必须进行一次体质豁免。豁免失败者将受 2d10 ＋ 你牧师等级的光耀伤害，豁免成功则伤害减半。</p>",
-      "requirements": "光明领域"
+      "description": "<p>以一个魔法动作，你展现圣徽，消耗一次引导神力次数来释放出一阵闪光，覆盖一处以你为源点的 30 尺光环区域。任何魔法 &Reference[Darkness] 例如法术 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00] 制造的黑暗——在该区域内都将被解除。此外，区域内你选择的所有生物都必须进行一次体质豁免。豁免失败者将受 2d10 ＋ 你牧师等级的光耀伤害，豁免成功则伤害减半。</p>"
     },
     "Sear Undead": {
       "name": "灼净亡灵",
       "description": "<p>每当你使用驱散亡灵时，你都可以投掷等于你感知调整值枚d8（最少 1d8，当前 [[lookup @abilities.wis.mod]])，而每个在对抗驱散亡灵的豁免中失败的亡灵都将受到等同于骰值之和的光耀伤害。此伤害不会终止驱散效应。</p><section class=\"secret\" id=\"secret-VJPPRFTlu1fFg8XB\">    <p><strong>Foundry Note</strong></p>    <p>该特性可替代驱散不死生物来使用。它会消耗 1 次“引导神力”的使用次数，<strong>引导神力：驱散不死生物</strong> 行动包含豁免、激活效应以及该特性所造成的伤害掷骰。</p></section>",
-      "requirements": "牧师",
       "activities": {
         "Channel Divinity: Turn Undead": {
           "name": "引导神力：驱散不死生物",
-          "affectsSpecial": "亡灵"
+          "affects": {
+            "special": "Undead"
+          }
         }
       },
       "effects": {
@@ -1277,13 +1215,11 @@
     },
     "phbclcSpellcasti": {
       "name": "施法",
-      "description": "<p>你通过祈祷，冥想与奉献习得如何施法。参见 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.mh3akteBDiLegqFK]{第 7 章} 有关施法的规则。下述信息将详述如何将这些规则应用于牧师法术，牧师法术详见本章后文职业描述中的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]。</p><p><strong>戏法。</strong> 你已知牧师法术列表中 3 个你选择的戏法。推荐选择@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidance00], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSacredFlam] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]。</p><p>当你获得牧师等级时，你可以将一道已知戏法用另一道牧师戏法替换。</p><p>当你的牧师等级达到 4 级和 10 级时，你都能习得另一道你所选择的牧师戏法，如 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbCleric0000000.JournalEntryPage.acPyA6A4DQBSnuZB#class-features]特性表中戏法一列所示。</p><p><strong>法术位。</strong> 牧师特性表显示了你可用于施放 1 环及以上法术的法术位数量。你在完成一次长休时恢复所有已消耗的法术位。</p><p><strong>准备 1+ 环法术。</strong> 你准备了一系列一环或更高的法术，以供此特性施法使用。初始时，从牧师法术列表选择 4 个一环法术。推荐选择@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShieldofFa]。</p><p>你的准备列表上的法术数量将随着牧师等级而增加，正如“牧师特性”表中“准备法术”一栏所示。每当该数量增加时，从“牧师法术列表”中选择额外的法术来添加到你的准备列表中，直到你准备列表上的法术数量与“牧师特性”表中的数量相匹配。你只能准备已经获得相应环阶法术位的法术。例如，作为一个 3 级牧师，你的准备法术列表应该包括六个任意组合的 1 环或 2 环法术。</p><p>如果其他的牧师特性给予了额外的已准备法术，这些法术不会计入你在该特性中的准备法术数量，但是这些法术对你而言仍算作牧师法术。</p><p><strong>改变你的准备法术。</strong>每当你完成一次长休后，你可以更改准备法术列表，将其中的任意个法术替换为其他你拥有法术位的牧师法术。</p><p><strong>施法属性。</strong> 感知是你施展牧师法术的施法属性。</p><p><strong>施法法器。</strong>你可以使用圣徽作为牧师法术的施法法器。</p>",
-      "requirements": "牧师"
+      "description": "<p>你通过祈祷，冥想与奉献习得如何施法。参见 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.mh3akteBDiLegqFK]{第 7 章} 有关施法的规则。下述信息将详述如何将这些规则应用于牧师法术，牧师法术详见本章后文职业描述中的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]。</p><p><strong>戏法。</strong> 你已知牧师法术列表中 3 个你选择的戏法。推荐选择@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidance00], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSacredFlam] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]。</p><p>当你获得牧师等级时，你可以将一道已知戏法用另一道牧师戏法替换。</p><p>当你的牧师等级达到 4 级和 10 级时，你都能习得另一道你所选择的牧师戏法，如 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbCleric0000000.JournalEntryPage.acPyA6A4DQBSnuZB#class-features]特性表中戏法一列所示。</p><p><strong>法术位。</strong> 牧师特性表显示了你可用于施放 1 环及以上法术的法术位数量。你在完成一次长休时恢复所有已消耗的法术位。</p><p><strong>准备 1+ 环法术。</strong> 你准备了一系列一环或更高的法术，以供此特性施法使用。初始时，从牧师法术列表选择 4 个一环法术。推荐选择@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShieldofFa]。</p><p>你的准备列表上的法术数量将随着牧师等级而增加，正如“牧师特性”表中“准备法术”一栏所示。每当该数量增加时，从“牧师法术列表”中选择额外的法术来添加到你的准备列表中，直到你准备列表上的法术数量与“牧师特性”表中的数量相匹配。你只能准备已经获得相应环阶法术位的法术。例如，作为一个 3 级牧师，你的准备法术列表应该包括六个任意组合的 1 环或 2 环法术。</p><p>如果其他的牧师特性给予了额外的已准备法术，这些法术不会计入你在该特性中的准备法术数量，但是这些法术对你而言仍算作牧师法术。</p><p><strong>改变你的准备法术。</strong>每当你完成一次长休后，你可以更改准备法术列表，将其中的任意个法术替换为其他你拥有法术位的牧师法术。</p><p><strong>施法属性。</strong> 感知是你施展牧师法术的施法属性。</p><p><strong>施法法器。</strong>你可以使用圣徽作为牧师法术的施法法器。</p>"
     },
     "Supreme Healing": {
       "name": "极效治疗",
-      "description": "<p>当你需要用一道法术或引导神力掷一枚或多枚骰子，以决定为一个生物恢复的生命数值时，你无需掷骰，直接为每个骰子取最高值。例如，一道法术为某一生物恢复 2d6 生命值，则其结果直接取 12。</p><section class=\"secret\" id=\"secret-1Bw7MOem4xyPO17q\">    <p><strong>Foundry Note</strong></p>    <p>此特性不会自动最大化所有的掷骰结果。</p></section>",
-      "requirements": "生命领域"
+      "description": "<p>当你需要用一道法术或引导神力掷一枚或多枚骰子，以决定为一个生物恢复的生命数值时，你无需掷骰，直接为每个骰子取最高值。例如，一道法术为某一生物恢复 2d6 生命值，则其结果直接取 12。</p><section class=\"secret\" id=\"secret-1Bw7MOem4xyPO17q\">    <p><strong>Foundry Note</strong></p>    <p>此特性不会自动最大化所有的掷骰结果。</p></section>"
     },
     "Trickery Domain": {
       "name": "诡术领域",
@@ -1304,11 +1240,12 @@
     "Trickster's Transposition": {
       "name": "诡诈换位",
       "description": "<p>每当你使用附赠动作创造或移动你来自召现分身特性的幻象时，你都可以通过传送与幻象交换位置。</p><section class=\"secret\" id=\"secret-V8lO0vrA6lgQvqq7\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一个换位行动，用于跟进附赠动作的使用情况，但你得手动交换标记和幻象的位置。</p></section>",
-      "requirements": "诡术领域",
       "activities": {
         "Transpose": {
           "name": "换位",
-          "affectsSpecial": "你的分身"
+          "affects": {
+            "special": "Your duplicate"
+          }
         }
       }
     },
@@ -1327,7 +1264,6 @@
     "War God's Blessing": {
       "name": "战神祝福",
       "description": "<p>你可以使用你的引导神力来施展 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShieldofFa]或 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpiritualW]而无需消耗法术位。当你以这种方式施展其中任何一道法术时，该法术都不需要专注，且其持续时间变为1分钟，但会在你再次施展该法术、陷入失能状态或是死亡时提前结束。</p><section class=\"secret\" id=\"secret-Aj9Z4ttMu8G9e9Li\">    <p><strong>Foundry Note</strong></p>    <p>在施放法术时，取消勾选“消耗”复选框和“专注”复选框。</p></section>",
-      "requirements": "战争领域",
       "activities": {
         "Expend Channel Divinity": {
           "name": "释放引导神力"
@@ -1337,7 +1273,6 @@
     "War Priest": {
       "name": "战争祭司",
       "description": "<p>以一个附赠动作，你可以发动一次武器攻击或者徒手打击。你可以使用该附赠动作的次数等于你的感知调整值（最低为 1，当前 [[lookup @abilities.wis.mod]]），你在完成一次长休或短休后重新获得所有的使用次数。</p>",
-      "requirements": "战争领域",
       "activities": {
         "Expend Use": {
           "name": "耗用"
@@ -1346,13 +1281,11 @@
     },
     "War Domain Spells": {
       "name": "战争领域法术",
-      "description": "<p>你与这个神圣领域的联系可以确保你随时准备好某些法术。当你达到战争领域法术表中所示的牧师等级时，你将同时获得其对应的领域法术。领域法术一旦获得，将会一直在你的准备法术列表中。</p><table>    <caption>战争领域法术</caption>    <thead>        <tr>           <td>牧师等级</td>            <td>准备法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicWeapo]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShieldofFa]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpiritualW]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCrusadersM]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpiritGuar]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireShield]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFreedomofM]</td>        </tr>       <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldMonste]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSteelWindS]</td>        </tr>    </tbody></table><section class=\"secret\" id=\"secret-Qu99GvyNrwjfGfHE\">    <p><strong>Foundry Note</strong></p>    <p>随着等级提升，这些法术会自动授予。</p></section>",
-      "requirements": "战争领域"
+      "description": "<p>你与这个神圣领域的联系可以确保你随时准备好某些法术。当你达到战争领域法术表中所示的牧师等级时，你将同时获得其对应的领域法术。领域法术一旦获得，将会一直在你的准备法术列表中。</p><table>    <caption>战争领域法术</caption>    <thead>        <tr>           <td>牧师等级</td>            <td>准备法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicWeapo]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShieldofFa]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpiritualW]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCrusadersM]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpiritGuar]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireShield]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFreedomofM]</td>        </tr>       <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldMonste]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSteelWindS]</td>        </tr>    </tbody></table><section class=\"secret\" id=\"secret-Qu99GvyNrwjfGfHE\">    <p><strong>Foundry Note</strong></p>    <p>随着等级提升，这些法术会自动授予。</p></section>"
     },
     "Warding Flare": {
       "name": "守御之光",
       "description": "<p>当你身边 30 尺内一个你能看见的生物进行攻击掷骰时，你可以用你的反应在攻击完成前对攻击者闪出一道光亮，以此迫使该攻击检定具有劣势。</p><p>你可以使用该特性的次数等于你的感知调整值（至少为一次，当前 [[lookup @abilties.wis.mod]]）。而你将在完成一次长休后重新恢复所有的使用次数。</p><section class=\"secret\" id=\"secret-FVDTK9yzluaZoQ0v\">    <p><strong>Foundry Note</strong></p>    <p><strong>闪耀</strong> 行动包含一个 30 尺的光环，用于识别受影响的生物。它不会自动造成劣势。</p></section>",
-      "requirements": "光明领域",
       "activities": {
         "Flare": {
           "name": "闪耀",
@@ -1362,13 +1295,11 @@
     },
     "Aquatic Affinity": {
       "name": "水生亲和",
-      "description": "<p>你的瀚海之怒创造的灵光范围提升到 10 尺。</p><p>此外，你获得等同于你的速度的游泳速度</p><section class=\"secret\" id=\"secret-LWG2vV8HTOk84VXW\">    <p><strong>Foundry Note</strong></p>    <p>该灵光范围会自动扩大，但此特性不会自动添加游泳速度。</p></section>",
-      "requirements": "海洋结社"
+      "description": "<p>你的瀚海之怒创造的灵光范围提升到 10 尺。</p><p>此外，你获得等同于你的速度的游泳速度</p><section class=\"secret\" id=\"secret-LWG2vV8HTOk84VXW\">    <p><strong>Foundry Note</strong></p>    <p>该灵光范围会自动扩大，但此特性不会自动添加游泳速度。</p></section>"
     },
     "Archdruid": {
       "name": "大德鲁伊",
       "description": "<p>自然的生命力在你体内不断绽放，赋予你以下好处：</p><p><strong>野性常青。</strong>你骰先攻时若已耗尽荒野形态次数，则你获得 1 次荒野形态次数。</p><p><strong>万法自然。 </strong>你可以将荒野形态次转为法术环位。选择你想要消耗的次数转为一个环位，每个荒野形态次数视为一个二环法术位，比如说，你可以消耗 1 次荒野形态转变为一个二环法术位，或是消耗 2 次荒野形态转变为一个四环法术位。使用一次此能力后，你必须完成一次长休后才能再次使用此能力。</p><p><strong>长寿。 </strong>你行使的原初荒野魔力让你的衰老速度减缓。每经过 10 年的岁月，你的身体就仿佛只过了 1 年。</p><section class=\"secret\" id=\"secret-qKoW7fFZUwKC0IOG\">    <p><strong>Foundry Note</strong></p>    <p>此特性不会在掷出先攻值时自动恢复野性变形的使用次数，但它包含一项活动，激活后可恢复一次使用次数。</p>    <p><strong>万法自然</strong>行动可用于将“荒野形态”的使用次数转换为法术位。</p></section>",
-      "requirements": "德鲁伊",
       "activities": {
         "Nature Magician": {
           "name": "万法自然"
@@ -1380,13 +1311,11 @@
     },
     "Beast Spells": {
       "name": "兽形施法",
-      "description": "<p>你可以在任何荒野变形下施法。当一个法术需要消耗标有价值的材料成分或需要消耗材料成分时，你无法在荒野变形下施展。</p>",
-      "requirements": "德鲁伊"
+      "description": "<p>你可以在任何荒野变形下施法。当一个法术需要消耗标有价值的材料成分或需要消耗材料成分时，你无法在荒野变形下施展。</p>"
     },
     "Circle Forms": {
       "name": "结社形态",
       "description": "<p>你学会了如何在使用荒野变形的同时引导月之魔力，增益自身的力量，你获得以下增益：</p><p><strong>挑战等级。</strong> 你的荒野变形形态的最大挑战等级现在等于你德鲁伊等级的三分之一（向下取整, 当前 [[(floor(@classes.druid.levels / 3))]]）。</p><p><strong>护甲等级。</strong> 当你化为荒野变形形态时，如果13+你的感知调整值加起来高于野兽的护甲等级，你的护甲等级等于你13+你的感知调整值。</p><p><strong>临时生命值。</strong> 当你化为荒野变形形态时，你获得等于德鲁伊等级的三倍数量的临时生命值。</p><section class=\"secret\" id=\"secret-mYCNakmKwUlKSQaF\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一种激活效应，你在野兽形态时可利用其来自动提升你的护甲等级。它不会自动开启/关闭。</p></section>",
-      "requirements": "月亮结社",
       "effects": {
         "Circle Forms": {
           "name": "结社形态"
@@ -1455,7 +1384,6 @@
     "Cosmic Omen": {
       "name": "宇宙预兆",
       "description": "<p>每当你完成一次长休，你可以参照你的星图来寻找预兆。此时，掷一枚骰子。直到你完成下一次长休为止，你获得一个基于此掷骰结果奇偶性的特殊反应能力。</p><p><strong>吉兆(偶数)。</strong> 当你周围 30 尺内的一个可见生物进行一次 D20 检定时，你可以使用你的反应来骰一个 d6，并将结果加入到 检定结果中。</p><p><strong>凶兆 (奇数)。 </strong>当你周围 30 尺内的一个可见生物进行一次 D20 检定时，你可以使用你的反应来骰一个 d6，并将结果从检定结果中减去。</p><p>你可以使用这一反应能力的次数等同于你的感知调整值，在你完成一次长休后，你会重获全部已消耗的使用次数。</p><section class=\"secret\" id=\"secret-4KkQJd5AOz4q4G76\">    <p><strong>Foundry Note</strong></p>    <p><strong>吉兆</strong> 和 <strong>凶兆</strong>行动会消耗一次此特性的使用次数，并提供一次加或减的掷骰。</p></section>",
-      "requirements": "星辰结社",
       "activities": {
         "Weal (Even)": {
           "name": "吉兆（偶数）",
@@ -1531,23 +1459,19 @@
     },
     "Druidic": {
       "name": "德鲁伊语",
-      "description": "<p>你学会德鲁伊语，一门德鲁伊之间的秘密语言。在学会这门古老语言的同时，你也解锁了和动物交谈的魔法：你始终准备 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]法术。</p><p>你可以使用德鲁伊语来传递隐藏的信息。你和其他知晓这门语言的对象能够自动辨认出信息。其他人需要通过 [[/check inv 15]] 才能意识到信息的存在，但不借助魔法则无法解读</p><section class=\"secret\" id=\"secret-5uD3Qi61JX7q2Fk8\">    <p><strong>Foundry Note</strong></p>    <p>德鲁伊语和“动物交谈”在升级时会自动放入角色卡。</p></section>",
-      "requirements": "德鲁伊"
+      "description": "<p>你学会德鲁伊语，一门德鲁伊之间的秘密语言。在学会这门古老语言的同时，你也解锁了和动物交谈的魔法：你始终准备 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]法术。</p><p>你可以使用德鲁伊语来传递隐藏的信息。你和其他知晓这门语言的对象能够自动辨认出信息。其他人需要通过 [[/check inv 15]] 才能意识到信息的存在，但不借助魔法则无法解读</p><section class=\"secret\" id=\"secret-5uD3Qi61JX7q2Fk8\">    <p><strong>Foundry Note</strong></p>    <p>德鲁伊语和“动物交谈”在升级时会自动放入角色卡。</p></section>"
     },
     "Elemental Fury": {
       "name": "元素之怒",
-      "description": "<p>元素的力量在你身上流淌。你选择获得以下其中一种效果：</p><p><strong>强力施法。</strong> 你可以将你的感知调整值加到你德鲁伊戏法造成的伤害中。</p><p><strong>原力蛮击。</strong> 一回合一次，当你以一次武器攻击或荒野变形后野兽形态的攻击命中一个生物时，你可以对目标额外造成 1d8 [[/damage 1d8 type=cold]]{寒冷}、[[/damage 1d8 type=fire]]{火焰}、[[/damage 1d8 type=lightning]]{光耀} 或 [[/damage 1d8 type=thunder]]{雷鸣} 伤害（由你命中时选择）。</p><section class=\"secret\" id=\"secret-kkxN7n7UL9XB7kWf\">    <p><strong>Foundry Note</strong></p>    <p>在升级过程中，系统会提示你进行选择。</p></section>",
-      "requirements": "德鲁伊"
+      "description": "<p>元素的力量在你身上流淌。你选择获得以下其中一种效果：</p><p><strong>强力施法。</strong> 你可以将你的感知调整值加到你德鲁伊戏法造成的伤害中。</p><p><strong>原力蛮击。</strong> 一回合一次，当你以一次武器攻击或荒野变形后野兽形态的攻击命中一个生物时，你可以对目标额外造成 1d8 [[/damage 1d8 type=cold]]{寒冷}、[[/damage 1d8 type=fire]]{火焰}、[[/damage 1d8 type=lightning]]{光耀} 或 [[/damage 1d8 type=thunder]]{雷鸣} 伤害（由你命中时选择）。</p><section class=\"secret\" id=\"secret-kkxN7n7UL9XB7kWf\">    <p><strong>Foundry Note</strong></p>    <p>在升级过程中，系统会提示你进行选择。</p></section>"
     },
     "phbdrdEpicBoon00": {
       "name": "传奇恩惠",
-      "description": "<p>你获得一项传奇恩惠专长 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]或其他一项你选择的适用的专长。推荐选择@UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofDimensi]。</p>",
-      "requirements": "德鲁伊"
+      "description": "<p>你获得一项传奇恩惠专长 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]或其他一项你选择的适用的专长。推荐选择@UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofDimensi]。</p>"
     },
     "Full of Stars": {
       "name": "灿若繁星",
       "description": "<p>当你处于星耀形态时，你的身体部分无实质化，使你获得钝击、穿刺、与挥砍伤害的抗性。</p><section class=\"secret\" id=\"secret-Do45Z2i70UArTlES\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个激活效应，可自动添加抗性。进入星耀形态时其不会自动应用。你可以通过使用此特性并应用它，或者在角色卡的“效果”选项卡中开启激活效应来激活它。</p></section>",
-      "requirements": "星辰结社",
       "effects": {
         "Full of Stars": {
           "name": "灿若繁星"
@@ -1557,7 +1481,6 @@
     "Improved Circle Forms": {
       "name": "进阶结社形态",
       "description": "<p>当处于荒野形态时，你获得以下好处：</p><p><strong>月耀辉光。</strong>你在荒野形态中的每次攻击可以造成正常伤害类型或光耀伤害。每次攻击命中时你都可以选择。</p><p><strong>强化韧性。</strong> 你可以将你的感知调整值加到你的体质豁免检定结果中。</p><section class=\"secret\" id=\"secret-5SxAo2RPwoSrFTGC\">    <p><strong>Foundry Note</strong></p>    <p>这个特性包括一个被动效应，自动对体质豁免检定加值。</p></section>",
-      "requirements": "月亮结社",
       "effects": {
         "Improved Circle Forms": {
           "name": "进阶结社形态"
@@ -1566,23 +1489,19 @@
     },
     "Improved Elemental Fury": {
       "name": "元素神威",
-      "description": "<p>你选择的元素之怒特性变得愈发强大：</p><p><strong>强力施法。</strong> 当你施展一个施法距离为10尺及以上的德鲁伊戏法时，法术施法距离提升到 300 尺。</p><p><strong>原力蛮击。</strong> 原力蛮击的额外伤害提升到 2d8。</p><section class=\"secret\" id=\"secret-7G1qK3zQ41zJONSd\">    <p><strong>Foundry Note</strong></p>    <p>在这个等级，原力蛮击的伤害会自动提升。但此特性不会自动改变其攻击范围。</p></section>",
-      "requirements": "德鲁伊"
+      "description": "<p>你选择的元素之怒特性变得愈发强大：</p><p><strong>强力施法。</strong> 当你施展一个施法距离为10尺及以上的德鲁伊戏法时，法术施法距离提升到 300 尺。</p><p><strong>原力蛮击。</strong> 原力蛮击的额外伤害提升到 2d8。</p><section class=\"secret\" id=\"secret-7G1qK3zQ41zJONSd\">    <p><strong>Foundry Note</strong></p>    <p>在这个等级，原力蛮击的伤害会自动提升。但此特性不会自动改变其攻击范围。</p></section>"
     },
     "Circle of the Land Spells": {
       "name": "大地结社法术",
-      "description": "<p>当你结束一次长休后，选择一种地区：荒漠。极地，温带或热带。参照以下对应类型的表格，你自动将表中对应你德鲁伊等级及更低等级的法术加入准备。</p><table>    <caption>荒漠</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>结社法术</td>        </tr>    </thead>    <tbody>        <tr>           <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBlur000000]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBurningHan]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireBolt00]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBlight0000]</td>        </tr>        <tr>           <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofSton]</td>        </tr>    </tbody></table><table>    <caption>极地</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>结社法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFogCloud00]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldPerson]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofFrost]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleetStorm]</td>        </tr>       <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplIceStorm00]</td>        </tr>        <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConeofCold]</td>        </tr>    </tbody></table><table>    <caption>温带 Temperate Land</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>结社法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMistyStep0]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShockingGr]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000]</td>        </tr>       <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFreedomofM]</td>        </tr>        <tr>            <td>9</td>           <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTreeStride]</td>        </tr>    </tbody></table><table>    <caption>热带</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>结社法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAcidSplash]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWeb0000000]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplStinkingCl]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPolymorph0]</td>       </tr>        <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInsectPlag]</td>        </tr>    </tbody></table><section class=\"secret\" id=\"secret-0B8V69GLRm5swkth\">    <p><strong>Foundry Note</strong></p>    <p>此特性不会自动在已准备法术选项之间进行切换。</p></section>",
-      "requirements": "大地结社"
+      "description": "<p>当你结束一次长休后，选择一种地区：荒漠。极地，温带或热带。参照以下对应类型的表格，你自动将表中对应你德鲁伊等级及更低等级的法术加入准备。</p><table>    <caption>荒漠</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>结社法术</td>        </tr>    </thead>    <tbody>        <tr>           <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBlur000000]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBurningHan]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireBolt00]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBlight0000]</td>        </tr>        <tr>           <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofSton]</td>        </tr>    </tbody></table><table>    <caption>极地</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>结社法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFogCloud00]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldPerson]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofFrost]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleetStorm]</td>        </tr>       <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplIceStorm00]</td>        </tr>        <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConeofCold]</td>        </tr>    </tbody></table><table>    <caption>温带 Temperate Land</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>结社法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMistyStep0]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShockingGr]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSleep00000]</td>        </tr>       <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFreedomofM]</td>        </tr>        <tr>            <td>9</td>           <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTreeStride]</td>        </tr>    </tbody></table><table>    <caption>热带</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>结社法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAcidSplash]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWeb0000000]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplStinkingCl]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPolymorph0]</td>       </tr>        <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInsectPlag]</td>        </tr>    </tbody></table><section class=\"secret\" id=\"secret-0B8V69GLRm5swkth\">    <p><strong>Foundry Note</strong></p>    <p>此特性不会自动在已准备法术选项之间进行切换。</p></section>"
     },
     "Land's Aid": {
       "name": "大地之援",
-      "description": "<p>以一个魔法动作，你可以消耗一次荒野变形使用次数并且选择 60 尺内的一点。给予活力的繁花和吸取生命的荆刺在以那一点为源点的 10 尺半径球状范围同时生出。在该区域内每个你所选择的生物必须进行一次体质豁免，豁免失败时生物受到 2d6 暗蚀伤害，豁免成功时受到 半数伤害。此外，一个区域内你所选择的生物恢复 <a data-action=\"roll\">@scale.land.lands-aid </a>生命值。</p><p class=\"MsoNormal\">当你达到特定的德鲁伊等级时，伤害和治疗量会提升 1d6 : 10 级（3d6）和 14 级（4d6）。</p><section class=\"secret\" id=\"secret-T1DFK6QJjzeJsysz\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含<strong>豁免</strong>行动和<strong>治疗</strong>行动。</p>    <p><strong>治疗/伤害值</strong>会随着你的等级提升而自动增加。</p></section>",
-      "requirements": "大地结社"
+      "description": "<p>以一个魔法动作，你可以消耗一次荒野变形使用次数并且选择 60 尺内的一点。给予活力的繁花和吸取生命的荆刺在以那一点为源点的 10 尺半径球状范围同时生出。在该区域内每个你所选择的生物必须进行一次体质豁免，豁免失败时生物受到 2d6 暗蚀伤害，豁免成功时受到 半数伤害。此外，一个区域内你所选择的生物恢复 <a data-action=\"roll\">@scale.land.lands-aid </a>生命值。</p><p class=\"MsoNormal\">当你达到特定的德鲁伊等级时，伤害和治疗量会提升 1d6 : 10 级（3d6）和 14 级（4d6）。</p><section class=\"secret\" id=\"secret-T1DFK6QJjzeJsysz\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含<strong>豁免</strong>行动和<strong>治疗</strong>行动。</p>    <p><strong>治疗/伤害值</strong>会随着你的等级提升而自动增加。</p></section>"
     },
     "Lunar Form": {
       "name": "月辉形态",
       "description": "<p>月之力量充盈着你的身体，让你获得以下增益：</p><p><strong>月耀炽光。</strong> 一回合一次，你可以对一次荒野形态下的攻击命中的目标额外造成 2d10 光耀伤害。</p><p><strong>月辉同行。</strong> 当你使用月光飞步时，你还能传送另一个自愿的生物。该生物必须在你的 10 尺内，并且你将它传 送到你出现点的 10 尺内的一个你能看见的未被占据空间中。</p><section class=\"secret\" id=\"secret-6Sw7VQQgJ2Ghklrl\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一项能造成光耀伤害的行动。</p></section>",
-      "requirements": "月亮结社",
       "activities": {
         "damage": {
           "condition": "每回合一次，以荒野形态的攻击命中目标时"
@@ -1591,17 +1510,17 @@
     },
     "Circle of the Moon Spells": {
       "name": "月亮结社法术",
-      "description": "<p>当你达到月亮结社法术表中所示的德鲁伊等级时，你将同时获得其对应的结社法术。结社法术一旦获得，将会一直在你的准备法术列表中。</p><p>此外，你还可以在使用荒野形态时施放这些法术。</p><table>    <caption>月亮结社法术 Circle of the Moon Spells</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>准备法术</td>       </tr>    </thead>    <tbody>       <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMoonbeam00]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplStarryWisp]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConjureAni]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFountofMoo]</td>       </tr>        <tr>           <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassCureWo]</td>        </tr>   </tbody></table>",
-      "requirements": "月亮结社"
+      "description": "<p>当你达到月亮结社法术表中所示的德鲁伊等级时，你将同时获得其对应的结社法术。结社法术一旦获得，将会一直在你的准备法术列表中。</p><p>此外，你还可以在使用荒野形态时施放这些法术。</p><table>    <caption>月亮结社法术 Circle of the Moon Spells</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>准备法术</td>       </tr>    </thead>    <tbody>       <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMoonbeam00]、 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplStarryWisp]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConjureAni]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFountofMoo]</td>       </tr>        <tr>           <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassCureWo]</td>        </tr>   </tbody></table>"
     },
     "Moonlight Step": {
       "name": "月光飞步",
       "description": "<p>你魔法性地传送自己，在闪耀的月光之中重新出现。以一个附赠动作，你传送到 30 尺内一处你可见且未被占据的空间，并且直到该回合结束前，你的下一次攻击检定带有优势。</p><p>你可以使用此能力的次数等同于你的感知调整值（最少 1 次），长休后回复所有使用次数。你也可以消耗一个二环或以上的法术位来回复一次使用次数（无须动作）。</p><section class=\"secret\" id=\"secret-fQNfNPvTSXWuXepa\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一项行动，其附带的被动效应用于跟进你何时拥有优势，但优势未自动化。</p>    <p><strong>以法术位充能</strong>行动可用于将法术位转换为该特性的使用次数。你可以通过提升等级来选择更高级别的法术位。</p></section>",
-      "requirements": "月亮结社",
       "activities": {
         "Transport": {
           "name": "传送",
-          "affectsSpecial": "未占据空间"
+          "affects": {
+            "special": "Unoccupied space"
+          }
         },
         "Recharge with Spell Slot": {
           "name": "以法术位充能"
@@ -1616,7 +1535,6 @@
     "Natural Recovery": {
       "name": "自然恢复",
       "description": "<p>你可以施展一个你以结社法术特性准备的一环及以上法术，而无须消耗法术位，并且你必须在结束一次长休后才能再次这么做。</p><p>此外，当你结束一次短休后，你可以选择恢复消耗的法术位。法术环阶的总和等于你德鲁伊职业等级的一半（向上取整），且不能是六环或更高环阶的法术位。比如说，作为一位 6 级德鲁伊，你可以恢复环阶总和最多为 3 的法术位。你可以恢复一个三环法术位，或者一个二环和一个一环法术位，或者 3 个一环法术位。一旦你以此特性恢复过法术位，直到结束一次长休以前你无法再次这么做。</p><section class=\"secret\" id=\"secret-xLFXthYlJ7wwFlSS\">    <p><strong>Foundry Note</strong></p>    <p><strong>施法 </strong>行动可用于跟进其单次免费使用。</p>    <p><strong>恢复法术位</strong>行动并不能自动恢复法术位，但可用于跟进其自身的一次性使用。</p></section>",
-      "requirements": "大地结社",
       "activities": {
         "Cast Spell": {
           "name": "施法"
@@ -1630,7 +1548,6 @@
     "Nature's Sanctuary": {
       "name": "自然庇护",
       "description": "<p>以一个魔法动作，你可以消耗一次荒野形态次数，在距离你 120 尺内的一处 15 尺立方体内召唤出灵体树木和藤蔓。将持续存在 1 分钟或直到你陷入失能或死亡。你和你的盟友在该区域内视为半身掩护，且位于区域内的盟友会获得你自然守御特性所提供的伤害抗性。</p><p>你可以用一个附赠动作，将立方体移动至多 60 尺，但必须距你 120 尺内。</p><section class=\"secret\" id=\"secret-OyXlvV2zR9s0WXyn\">    <p><strong>Foundry Note</strong></p>    <p>该特性涵盖了每种“自然守御”地形类型的激活效应，并添加了半身掩护状态效应，该效应会自动授予相关加值。将相关效应施加于你的盟友身上。</p>    <p>但指定区域内的角色的激活效应并不会自动被添加/移除。</p>    <p>该特性包含一项行动，可用于跟进你在移动灵体树木和藤蔓时附赠动作的使用情况。</p></section>",
-      "requirements": "大地结社",
       "activities": {
         "Spectral Trees and Vines": {
           "name": "灵体树木和藤蔓"
@@ -1657,7 +1574,6 @@
     "Nature's Ward": {
       "name": "自然守御",
       "description": "<p>你免疫中毒状态，并且你具有和你目前在结社法术特性中选择的土地相关的伤害类型的抗性，如自然守御表格所示。</p><table>    <caption>自然守御</caption>    <thead>        <tr>            <td>地形</td>           <td>抗性</td>        </tr>    </thead>    <tbody>        <tr>           <td>荒漠</td>            <td>火焰</td>        </tr>        <tr>            <td>极地</td>            <td>寒冷</td>        </tr>        <tr>            <td>温带</td>            <td>光耀</td>        </tr>        <tr>            <td>热带</td>            <td>毒素</td>        </tr>    </tbody></table><section class=\"secret\" id=\"secret-0muLLDjt1zqXptme\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含毒素免疫的被动效应，以及针对每种地形类型的激活效应。你能够激活你所选地形类型的激活效应。</p></section>",
-      "requirements": "大地结社",
       "effects": {
         "Nature's Ward": {
           "name": "自然守御"
@@ -1679,15 +1595,18 @@
     "Oceanic Gift": {
       "name": "大洋慨赠",
       "description": "<p>当你使用海洋之怒时，你可以改为 60 尺内的一名生物获得海洋之怒的所有效果而不是你自己，该生物将会获得海洋之怒的所有增益。海洋之怒的效果将会使用你的法术DC和你的感知调整值。</p><p>此外，若你一次性消耗两次荒野形态而非一次，你可以让该生物和自己同时获得海洋之怒的效果。</p><section class=\"secret\" id=\"secret-eZ9lyvQjA22ulGI1\">    <p><strong>Foundry Note</strong></p>    <p>你可以用此特性来替代 <strong>瀚海之怒</strong>和 <strong>风暴之子</strong>。它包含了一项行动，可为单个光环或双倍显现提供支持。它还包含 <strong>风暴之子</strong>的激活效应，当显现第二个光环时，可同时应用于两个角色。</p></section>",
-      "requirements": "海洋结社",
       "activities": {
         "Manifest Single Emanation": {
           "name": "显现单一光环",
-          "rangeSpecial": "一名自愿生物"
+          "range": {
+            "special": "One willing creature"
+          }
         },
         "Manifest Double Emanation": {
           "name": "显现双倍光环",
-          "rangeSpecial": "一名自愿生物"
+          "range": {
+            "special": "One willing creature"
+          }
         }
       },
       "effects": {
@@ -1698,23 +1617,19 @@
     },
     "Primal Order": {
       "name": "原初誓约",
-      "description": "<p>你将自己投身于所选择的以下一项神圣的角色之中：</p><p><strong>术师。</strong> 你学会一个额外的德鲁伊法术表中的戏法。此外，你和自然的神秘连接让你在智力（奥秘或自然）检定上获得 加值。加值等于你的感知调整值（最小为 1）。</p><p><strong>卫士。</strong> 你受到了战斗的训练，获得军用武器熟练和中甲熟练。</p><section class=\"secret\" id=\"secret-SgYOtpnQW9hL4WJ8\">    <p><strong>Foundry Note</strong></p>    <p>在升级过程中，系统会提示你进行选择。</p></section>",
-      "requirements": "德鲁伊"
+      "description": "<p>你将自己投身于所选择的以下一项神圣的角色之中：</p><p><strong>术师。</strong> 你学会一个额外的德鲁伊法术表中的戏法。此外，你和自然的神秘连接让你在智力（奥秘或自然）检定上获得 加值。加值等于你的感知调整值（最小为 1）。</p><p><strong>卫士。</strong> 你受到了战斗的训练，获得军用武器熟练和中甲熟练。</p><section class=\"secret\" id=\"secret-SgYOtpnQW9hL4WJ8\">    <p><strong>Foundry Note</strong></p>    <p>在升级过程中，系统会提示你进行选择。</p></section>"
     },
     "Circle of the Sea Spells": {
       "name": "海洋结社法术",
-      "description": "<p>当你达到海洋结社法术表中所示的德鲁伊等级时，你将同时获得其对应的结社法术。结社法术一旦获得，将会一直在你的准备法术列表中。</p><table>    <caption>海洋结社法术 Circle of the Sea Spells</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>准备法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFogCloud00]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofFrost]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShatter000]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThunderwav]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWat]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplIceStorm00]</td>       </tr>        <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConjureEle]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldMonste]</td>        </tr>    </tbody></table>",
-      "requirements": "海洋结社"
+      "description": "<p>当你达到海洋结社法术表中所示的德鲁伊等级时，你将同时获得其对应的结社法术。结社法术一旦获得，将会一直在你的准备法术列表中。</p><table>    <caption>海洋结社法术 Circle of the Sea Spells</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>准备法术</td>        </tr>    </thead>    <tbody>        <tr>            <td>3</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFogCloud00]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofFrost]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShatter000]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThunderwav]</td>        </tr>        <tr>            <td>5</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]</td>        </tr>        <tr>            <td>7</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplControlWat]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplIceStorm00]</td>       </tr>        <tr>            <td>9</td>            <td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConjureEle]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldMonste]</td>        </tr>    </tbody></table>"
     },
     "phbdrdSpellcasti": {
       "name": "施法",
-      "description": "<p>你通过研究自然的神秘伟力学会了如何施展法术。参考 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.mh3akteBDiLegqFK]{第 7 章} 的施法规则。下文为你详细说明了德鲁伊施展 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU]的规则（具体法术列表见下文德鲁伊法术列表）</p><p><strong>戏法。</strong> 你习得两个德鲁伊法术列表中的戏法。推荐选择 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplProduceFla]。</p><p>每当你获得一级德鲁伊等级，你便可以将一个已知戏法替换为另一个你所选 的德鲁伊戏法。</p><p>当你在此职业上达到 4 级和 10 级时，你习得一个额外的德鲁伊戏法，如 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbDruid00000000.JournalEntryPage.UCOh3zlvGxyk5jLr#class-features]表中戏法数量一栏所示。</p><p><strong>法术位。</strong>“德鲁伊特性”表记录了你有多少法术位用以施展 1+ 环阶的法术。当你完成一次长休时，你会重新获得所有消耗的法术位。</p><p><strong>准备 1+ 环法术。</strong> 通过该特性施法前，你需要选择数个可用的 1+ 环阶法术构成准备列表。首先，从“德鲁伊法术列表“中选择 4 个一环法术。推荐选择 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimalFrie]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThunderwav]。</p><p>你的准备列表上的法术数量将随着德鲁伊等级而增加，正如“德鲁伊特性”表中“准备法术”一栏所示。每当该数量增加时，从“德鲁伊法术列表”中选择额外的法术来添加到你的准备列表中，直到你准备列表上的法术数量与“德鲁伊特性”表中的数量相匹配。你只能准备已经获得相应环阶法术位的法术。例如，作为一个 3 级德鲁伊，你的准备法术列表应该包括六个任意组合的一环或二环法术。</p><p>如果其他的德鲁伊特性给予了额外的已准备法术，这些法术不会计入你在该特性中的准备法术数量，但是这些法术对你而言仍算作德鲁伊法术。</p><p><strong>改变你的准备法术。</strong>每当你完成一次长休后，你可以更改准备法术列表，将其中的任意个法术替换为其他你拥有法术位的德鲁伊法术。</p><p><strong>施法属性。</strong>感知是你施展德鲁伊法术的施法属性。</p><p><strong>施法法器。</strong>你可以使用德鲁伊法器作为德鲁伊法术的施法法器。</p>",
-      "requirements": "德鲁伊"
+      "description": "<p>你通过研究自然的神秘伟力学会了如何施展法术。参考 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.mh3akteBDiLegqFK]{第 7 章} 的施法规则。下文为你详细说明了德鲁伊施展 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU]的规则（具体法术列表见下文德鲁伊法术列表）</p><p><strong>戏法。</strong> 你习得两个德鲁伊法术列表中的戏法。推荐选择 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplProduceFla]。</p><p>每当你获得一级德鲁伊等级，你便可以将一个已知戏法替换为另一个你所选 的德鲁伊戏法。</p><p>当你在此职业上达到 4 级和 10 级时，你习得一个额外的德鲁伊戏法，如 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbDruid00000000.JournalEntryPage.UCOh3zlvGxyk5jLr#class-features]表中戏法数量一栏所示。</p><p><strong>法术位。</strong>“德鲁伊特性”表记录了你有多少法术位用以施展 1+ 环阶的法术。当你完成一次长休时，你会重新获得所有消耗的法术位。</p><p><strong>准备 1+ 环法术。</strong> 通过该特性施法前，你需要选择数个可用的 1+ 环阶法术构成准备列表。首先，从“德鲁伊法术列表“中选择 4 个一环法术。推荐选择 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAnimalFrie]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCureWounds]、@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThunderwav]。</p><p>你的准备列表上的法术数量将随着德鲁伊等级而增加，正如“德鲁伊特性”表中“准备法术”一栏所示。每当该数量增加时，从“德鲁伊法术列表”中选择额外的法术来添加到你的准备列表中，直到你准备列表上的法术数量与“德鲁伊特性”表中的数量相匹配。你只能准备已经获得相应环阶法术位的法术。例如，作为一个 3 级德鲁伊，你的准备法术列表应该包括六个任意组合的一环或二环法术。</p><p>如果其他的德鲁伊特性给予了额外的已准备法术，这些法术不会计入你在该特性中的准备法术数量，但是这些法术对你而言仍算作德鲁伊法术。</p><p><strong>改变你的准备法术。</strong>每当你完成一次长休后，你可以更改准备法术列表，将其中的任意个法术替换为其他你拥有法术位的德鲁伊法术。</p><p><strong>施法属性。</strong>感知是你施展德鲁伊法术的施法属性。</p><p><strong>施法法器。</strong>你可以使用德鲁伊法器作为德鲁伊法术的施法法器。</p>"
     },
     "Star Map": {
       "name": "星图",
       "description": "<p>作为你天文学研究的一部分，你创造了一张星图。它是一个微型物体，可以用作你施展德鲁伊法术时的法器。你通过在星图列表上掷骰或选择一个来确定它的形态。</p><p>当你持有这张星图时，@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidance00] 和 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]总会在你的准备法术列表中。此外你可以在不消耗法术位的情况下施展 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGuidingBol]，你能够以这种方式施放光导箭的次数等同于你的感知调整值（至少 1 次）。完成一次长休后，你可以恢复所有已消耗的使用次数。</p><p>如果你丢失了星图，你可以举行一场为时 1 小时的仪式来使用魔法创造一个替代品。这一仪式可以在一场短休或长休时举行，并会摧毁先前的星图。</p><p>@Embed[Compendium.dnd-players-handbook.tables.RollTable.phbStarMapForms0 rollable]</p><section class=\"secret\" id=\"secret-fFzDByUIMXes4wxu\">    <p><strong>Foundry Note</strong></p>    <p>这些法术会自动授予你，其中包含有限使用次数的“光导箭”。不过，即便你没有星图，它们也不会自动消失。</p></section>",
-      "requirements": "星辰结社",
       "activities": {
         "Create Star Chart": {
           "name": "创造星图"
@@ -1724,7 +1639,6 @@
     "Starry Form": {
       "name": "星耀形态",
       "description": "<p>以一个附赠动作，你可以消耗一次荒野形态特性使用次数以呈现一个星耀形态，而非变化为野兽形态。</p><p>当处于星耀形态时，你保留你的游戏数据，但你的身体变得明亮；你的关节星光熠熠并有如星图一般由亮线连接。这一形态散发出 10 尺半径的明亮光照以及其外 20 尺的昏暗光照。这一形态持续 10 分钟。如果你解除它（无需动作）、失能、死亡、或再次使用此特性，它就会提前结束。</p><p>每当你化身星耀形态时，你选择以下在你身上闪耀的星座旨意；你的选择将为你在形态中提供特定的增益：</p><p><strong>射手座。</strong>一个弓箭射手的星座于你身上浮现。当你激活这个形态时，你可以进行一次远程法术攻击，对你 60 尺内的一个生物射出一发光箭。命中时，此攻击将造成等同于 1d8 + 你的感知调整值点的光耀伤害。你也可以在它结束前的后续回合中以一个附赠动作再次进行这一攻击。</p><p><strong>圣杯座。</strong>一个予命圣杯的星座于你身上浮现。当你消耗法术位施展法术时，你或你周围 30 尺内的另一生物可以恢复等同于 1d8 + 你的感知调整值 点的生命值。那个法术必须是能为生物恢复生命值的法术。</p><p><strong>巨龙座。</strong> 一个智慧巨龙的星座于你身上浮现。当你进行一次智力或感知检定，或是进行一次体质豁免来维持法术专注时，你可以将 D20 中 9 或以下的骰值视为 10。</p><section class=\"secret\" id=\"secret-sy9LLmNGifdFM21v\">   <p><strong>Foundry Note</strong></p>    <p><strong>消耗荒野形态</strong>行动会消耗荒野形态的使用次数，并提供一个跟进你星耀形态的主激活效应。它还包含 <strong>射手座</strong>、<strong>圣杯座</strong>和 <strong>巨龙座</strong>的行动。巨龙座也包含一个激活效应，不过它不会自动修正最低掷骰。</p>    <p>该特性不会自动改变光照。</p></section>",
-      "requirements": "星辰结社",
       "activities": {
         "Archer": {
           "name": "射手座"
@@ -1753,7 +1667,6 @@
     "Stormborn": {
       "name": "风暴之子",
       "description": "<p>当“海洋之怒”效果激活时，你会获得以下两个额外增益：</p><p><strong>飞行。</strong> 你获得等同于你速度的飞行速度。</p><p><strong>抗性。</strong>你可以对冷冻、闪电和雷鸣伤害具有抗性。</p><section class=\"secret\" id=\"secret-gM39tGMfj0IPiND0\">    <p><strong>Foundry Note</strong></p>    <p>你可以用此特性来替代 <strong>瀚海之怒</strong>。它包含一个激活效应，能自动添加抗性。不过，它并不会增加飞行速度。</p></section>",
-      "requirements": "海洋结社",
       "effects": {
         "Stormborn": {
           "name": "风暴之子"
@@ -1762,13 +1675,11 @@
     },
     "Twinkling Constellations": {
       "name": "闪烁星座",
-      "description": "<p>你的星耀形态星座增强了。射手座和圣杯座中的 1d8 都变成了 2d8，而在巨龙座激活期间，你将获得 20 尺的飞行速度，并且可以悬浮。</p><p>此外，每个你的回合开始时，若此时你处于在星耀形态下，你可以更改当前身上闪耀的星座。</p><section class=\"secret\" id=\"secret-HDLRpanYMEMEshIg\">    <p><strong>Foundry Note</strong></p>    <p>骰数增加会自动处理。但此特性不会自动添加飞行速度。</p></section>",
-      "requirements": "星辰结社"
+      "description": "<p>你的星耀形态星座增强了。射手座和圣杯座中的 1d8 都变成了 2d8，而在巨龙座激活期间，你将获得 20 尺的飞行速度，并且可以悬浮。</p><p>此外，每个你的回合开始时，若此时你处于在星耀形态下，你可以更改当前身上闪耀的星座。</p><section class=\"secret\" id=\"secret-HDLRpanYMEMEshIg\">    <p><strong>Foundry Note</strong></p>    <p>骰数增加会自动处理。但此特性不会自动添加飞行速度。</p></section>"
     },
     "Wild Companion": {
       "name": "荒野伙伴",
       "description": "<p>你可以召唤出一个动物外形的自然精魂来帮助自己。以一个魔法动作，你可以消耗一个法术位或一次荒野变形次数来施展 @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFindFamili]，无需任何材料成分。</p><p>当你以这种方式施展这一法术时，获得的魔宠为妖精，并且它会在你结束一次长休后消失。</p><section class=\"secret\" id=\"secret-4iYtjsPCmpeQTKY5\">    <p><strong>Foundry Note</strong></p>    <p>此特性包含一个召唤行动，可用于召唤你的荒野伙伴。激活时，你可以选择消耗一次荒野形态或一个法术位。</p>    <p>召唤物在你完成长休时不会自动消失。</p></section>",
-      "requirements": "德鲁伊",
       "activities": {
         "Summon with Spell Slot": {
           "name": "以法术位召唤"
@@ -1781,7 +1692,6 @@
     "Wild Resurgence": {
       "name": "荒野复苏",
       "description": "<p>每个你的回合一次，若你已耗尽荒野形态的次数，你可以消耗一个法术环位来获得一次荒野形态次数（无需动作）。</p><p>此外，你也可以消耗一次荒野形态使用次数来获得一个一环法术位（无需动作）。一旦你使用了此能力，直到你完成一次长休前你都不能再次使用它。</p><section class=\"secret\" id=\"secret-b0eq9t1Lkei4tN53\">    <p><strong>Foundry Note</strong></p>    <p><strong>恢复荒野形态</strong>行动会消耗一个法术位，并让你能再次使用荒野形态。</p>    <p><strong>恢复法术位</strong>行动会消耗一次荒野形态的使用次数，并赋予你一个一环法术位。</p></section>",
-      "requirements": "德鲁伊",
       "activities": {
         "Regain Spell Slot": {
           "name": "重获法术位",
@@ -1796,7 +1706,6 @@
     "Wild Shape": {
       "name": "荒野形态",
       "description": "<p>自然之力使你能够变身为野兽形态。以一个附赠动作，你可以变形为你已经学习过的动物形态（见下文“已知形态”）。你可以保持变形的小时数等同于你一半的德鲁伊等级（向下取整），直到你死亡或陷入失能，抑或是再次使用荒野形态。你也可以用一个附赠动作提前恢复成原本的形态。</p><p><strong>使用次数。</strong> 你可以使用荒野形态 2 次。短休后， 你可以恢复一次已消耗的使用次数，而完成长休后， 你可以恢复所有已消耗的使用次数。</p><p>你达到特定的德鲁伊等级时会获得额外的使用次数，如 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbDruid00000000.JournalEntryPage.UCOh3zlvGxyk5jLr#class-features]表格中荒野形态一栏所示。</p><p><strong>使用次数：</strong> [[lookup @scale.druid.wild-shape-uses]]</p><p><strong>已知形态。</strong>你一开始掌握了该特性的四种形态，从最大挑战等级1/4且没有飞行速度的野兽（见附录B的资料卡选项）之中选取。推荐 @UUID[Compendium.dnd-players-handbook.actors.Actor.phbmobRat0000000]、 @UUID[Compendium.dnd-players-handbook.actors.Actor.phbmobRidingHors]、 @UUID[Compendium.dnd-players-handbook.actors.Actor.phbmobSpider0000] 和 @UUID[Compendium.dnd-players-handbook.actors.Actor.phbmobWolf000000] 四种形态。当你结束一次长休后，你可以将一种你掌握的形态换为另一种能够选用的形态。</p><section class=\"fvtt advice\">    <figure class=\"icon\">        <img src=\"icons/vtt-512.png\">    </figure>    <article>        <h3>荒野形态自动化</h3>        <p>当你选择了想要荒野形态的生物后，你可以将其拖到你的 角色 上，选择 荒野形态 选项，FVTT 将自动更新你的角色卡。你可以在 <strong>角色卡</strong> 的顶部或通过右键单击侧边栏中的 <strong>角色</strong> 来还原转换。</p>    </article></section><p>当你达到一定的德鲁伊等级时，你的已知形态数量和这些形态的最高CR会增加，如 荒野形态 表格所示。此外，从 8 级开始，你可以采用具有 飞行速度 的形态。</p><p><strong>已知形态限制：</strong> [[lookup @scale.druid.known-forms]]</p><p><strong>已知CR限制：</strong> [[lookup @scale.druid.wild-shape]]</p><p>当选择已知形态时，如果地下城主允许，你可以查阅《怪物图鉴》或其他来源并从中选择</p><table>    <caption>荒野形态</caption>    <thead>        <tr>            <td>德鲁伊等级</td>            <td>已知形态</td>            <td>最大CR</td>            <td>飞行速度</td>        </tr>    </thead>    <tbody>        <tr>            <td>2</td>            <td>4</td>            <td>1/4</td>            <td>否</td>        </tr>        <tr>            <td>4</td>            <td>6</td>            <td>1/2</td>            <td>否</td>        </tr>        <tr>            <td>8</td>            <td>8</td>            <td>1</td>            <td>是</td>        </tr>    </tbody></table><p><strong>变形时的规则。</strong> 在变形状态下，你保留你的个性，记忆和说话的能力，并适用以下规则：</p><p><strong>临时生命值。</strong>当你进入荒野形态时，你会获得等同于你德鲁伊等级的临时生命值。</p><p><strong>游戏数据。</strong> <span class=\"ne-text\">你的游戏数据会被该野兽的数据给替代，但你保留你的生物类型，生命值，生命骰，智力，感知和魅力属性，职业特性，语言和专长。你同时还会保留你所有的技能和豁免熟练，并额外获得该野兽所具有的熟练。若该生物数据列出的技能或豁免调整值比拟的更高，则使用该生物的调整值而非你的。</span></p><p><strong>无法施法。</strong> 在变形状态下你不能施放法术，然而变形并不会中断你已施展法术的专注，也不会影响你已经施展的法术。</p><p><strong>物件。</strong>你持握物件的能力取决于变形后形态的四肢，而非你原本的，此外你需要选择你的装备是否会掉在地上、还是融入新形态、或是被新形态所穿戴。穿戴的装备效果正常，但DM将根据该生物的体系和形态以决定新形态是否可以正常穿戴你的每个装备。你的装备并不会改变形状或尺寸以符合你的新形态，任何新形态无法穿戴的装备将会掉在地上或者融入新形态。直到你解除该形态前，融入新形态的装备不会产生任何效果。</p><section class=\"secret\" id=\"secret-FZNGONDktXDnwY0x\">    <p><strong>Foundry Note</strong></p>    <p>你可以激活此特性来跟进你荒野形态的使用情况。</p>    <p>它会在短休时自动恢复一次使用次数，在长休时恢复所有使用次数。</p></section>",
-      "requirements": "德鲁伊",
       "activities": {
         "Wild Shape": {
           "name": "荒野形态"
@@ -1806,7 +1715,6 @@
     "Wrath of the Sea": {
       "name": "瀚海之怒",
       "description": "<p>以一个附赠动作，你可以消耗一次荒野型态，唤来大海的浪花，以你为原点 5 尺发散，持续 10 分钟直到你陷入失能、主动解除（无须动作）或再次使用此能力。</p><p>以召出海浪同一个附赠动作的一部分或在后续回合以附赠动作控制海浪，你可以选择浪花内的一名生物，迫使他进行一次对抗你法术DC的体质豁免，失败时将受到寒冷伤害，且目标若为大型或以下的体型，将被推离你 15 尺。该伤害等同于你感知调整值数量的 D6 骰（最少为 1）。</p><section class=\"secret\" id=\"secret-38KCytm3Ikto15P9\">    <p><strong>Foundry Note</strong></p>    <p>当你获得 @UUID[Compendium.dnd-players-handbook.classes.Item.phbdrdAquaticAff] 特性时，该光环范围会自动扩大。</p>    <p><strong>豁免</strong>行动会耗费一次使用机会，而<strong>附赠动作豁免</strong>行动则不会。</p></section>",
-      "requirements": "海洋结社",
       "activities": {
         "Bonus Action Save": {
           "name": "附赠动作豁免"
@@ -1897,7 +1805,6 @@
     "Eldritch Strike": {
       "name": "奥法打击",
       "description": "<p>你习得用武器攻击削弱敌人对你法术抵抗能力的方法。当你用武器攻击命中一个生物后，直至你的下个回合结束前，该生物在下一次对抗你的法术所进行的豁免检定具有劣势。</p><section class=\"secret\" id=\"secret-jvKDjaltxCLtjiax\">    <p><strong>Foundry Note</strong></p>    <p>该关系包含一种激活效应，可用于跟进，但不会自动应用劣势。</p></section>",
-      "requirements": "奥法骑士",
       "effects": {
         "Struck": {
           "name": "打击"
@@ -1907,10 +1814,6 @@
     "phbftrEpicBoon00": {
       "name": "传奇恩惠",
       "description": "<p>你获得一项 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]（见第 5 章）或其他一项你选择的适用的专长。推荐选择 @UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofCombatP]。</p>"
-    },
-    "phbftrExtraAttac": {
-      "name": "额外攻击",
-      "description": "<p>当你在自己的回合执行攻击动作时，你可以发动两次攻击而非一次。</p>"
     },
     "Fighter": {
       "name": "战士",
@@ -2003,7 +1906,9 @@
       "activities": {
         "Discern Strengths and Weaknesses": {
           "name": "识别长处与短处",
-          "affectsSpecial": "你可见的生物"
+          "affects": {
+            "special": "Creature you can see"
+          }
         },
         "Recharge with Superiority Die": {
           "name": "以卓越骰充能"
@@ -2105,7 +2010,6 @@
     "Tactical Master": {
       "name": "战术主宰",
       "description": "<p>每当你用武器发动攻击，且你可以使用此武器的精通词条时，你可以将此次攻击的精通属性改为推离，削弱或缓速中的一种。</p>",
-      "requirements": "战士",
       "effects": {
         "Tactial Master": {
           "name": "战术主宰"
@@ -2190,8 +2094,7 @@
     },
     "Agonizing Blast": {
       "name": "苦痛魔爆",
-      "description": "<blockquote>    <p>先决条件：2 级及以上的魔契师，知晓可造成伤害的魔契师戏法</p></blockquote><p>选择一道你已知的造成伤害的魔契师戏法。你可以将你的魅力调整值加到该法术的每次伤害投掷中。</p><p><strong>可复选。</strong>你可以多次选择本祈唤。每次这么做时，你都必须选择不同的戏法。</p><section class=\"secret\" id=\"secret-e2JfbLoZ7SLiWlcU\">    <p><strong>Foundry Note</strong></p>    <p>法术的改动需要手动完成，在法术伤害的“加值”栏中添加“@abilties.cha.mod”。</p></section>",
-      "requirements": "可造成伤害的魔契师戏法"
+      "description": "<blockquote>    <p>先决条件：2 级及以上的魔契师，知晓可造成伤害的魔契师戏法</p></blockquote><p>选择一道你已知的造成伤害的魔契师戏法。你可以将你的魅力调整值加到该法术的每次伤害投掷中。</p><p><strong>可复选。</strong>你可以多次选择本祈唤。每次这么做时，你都必须选择不同的戏法。</p><section class=\"secret\" id=\"secret-e2JfbLoZ7SLiWlcU\">    <p><strong>Foundry Note</strong></p>    <p>法术的改动需要手动完成，在法术伤害的“加值”栏中添加“@abilties.cha.mod”。</p></section>"
     },
     "Armor of Shadows": {
       "name": "幽影护甲",
@@ -2229,8 +2132,7 @@
     },
     "Devouring Blade": {
       "name": "灭世魔刃",
-      "description": "<blockquote>    <p>先决条件：12 级及以上的魔契师，具有 @UUID[Compendium.dnd-players-handbook.classes.Item.phbinvThirstingB]祈唤</p></blockquote><p>饥渴魔刃祈唤为你提供的额外攻击变为两次而非一次。</p>",
-      "requirements": "饥渴魔刃祈唤"
+      "description": "<blockquote>    <p>先决条件：12 级及以上的魔契师，具有 @UUID[Compendium.dnd-players-handbook.classes.Item.phbinvThirstingB]祈唤</p></blockquote><p>饥渴魔刃祈唤为你提供的额外攻击变为两次而非一次。</p>"
     },
     "Eldritch Mind": {
       "name": "魔能意志",
@@ -2239,7 +2141,6 @@
     "Eldritch Smite": {
       "name": "魔能斩",
       "description": "<blockquote>    <p>5 级及以上的魔契师，具有 @UUID[Compendium.dnd-players-handbook.classes.Item.phbinvPactBlade0]祈唤</p></blockquote><p>每回合一次，当你用契约武器命中一个生物时，你可以消耗一枚契约魔法特性的法术位，以此对目标造成额外 1d8 + 每法术位等级 1d8 点的力场伤害，如果目标的体型在巨型或以下，则你还可以令目标陷入 &Reference[Prone] 状态</p><section class=\"secret\" id=\"secret-AoE71IXdo0xg5OKe\">    <p><strong>Foundry Note</strong></p>    <p><strong>斩击</strong> 行动会耗费一个契约魔法的法术位，并且依据你的契约法术环阶来提升伤害值。</p></section>",
-      "requirements": "刃之魔契祈唤",
       "activities": {
         "Smite": {
           "name": "斩击",
@@ -2250,7 +2151,6 @@
     "Eldritch Spear": {
       "name": "魔能长枪",
       "description": "<blockquote>    <p>先决条件：2 级及以上的魔契师，已知一道造成伤害的魔契师戏法</p></blockquote><p>选择一道你已知的造成伤害且射程至少为10尺的魔契师戏法。当你施展此法术时，其射程增加等于你魔契师等级30倍的尺数。</p><p><strong>可复选。</strong> 你可以多次选择本祈唤。每次这么做时，你都必须选择不同的戏法。</p><section class=\"secret\" id=\"secret-7hr3xIfya7IOq7pj\">    <p><strong>Foundry Note</strong></p>    <p>使用<strong>增距</strong>附魔功能，将选定的戏法拖拽至聊天卡牌即可提升其射程，并在名称后追加魔能长枪后缀以便于识别。</p></section>",
-      "requirements": "可造成伤害的魔契师戏法",
       "activities": {
         "Increase Range": {
           "name": "增距"
@@ -2280,7 +2180,9 @@
       "activities": {
         "Gaze of Two Minds": {
           "name": "共视感官",
-          "affectsSpecial": "触碰"
+          "affects": {
+            "special": "Touch"
+          }
         }
       }
     },
@@ -2301,7 +2203,6 @@
     "Gift of the Protectors": {
       "name": "守护馈赠",
       "description": "<blockquote>    <p>先决条件：9 级及以上的魔契师，具有 @UUID[Compendium.dnd-players-handbook.classes.Item.phbinvPactTome00]祈唤</p></blockquote><p>一张新的书页出现在你的 @UUID[Compendium.dnd5e.items.Item.CwWbeQ6XyqFzbMYw]中。在你的允许之下，一个生物可以使用一个动作来将他的名字写在这一页上，这一页能包括的名字数量等于你的魅力调整值（至少为 1）。</p><p>当一个名字在这一页上的生物生命值降为 0，但是还没有完全死亡，这个生物的生命值魔法化的变为1点。每当这个魔法效应被触发，没有任何生物可以触发该效应直到你完成一次长休。</p><p>你可以使用一个魔法动作，以触摸的形式消除一个在书页上的名字。</p><section class=\"secret\" id=\"secret-VzLQ7nRPLs0fIkvE\">    <p><strong>Foundry Note</strong></p>    <p><strong>保护</strong> 行动会消耗一次行动使用次数，使用次数每次长休时恢复。</p>    <p><strong>写下名字 </strong> 行动会消耗一次物品使用次数，这能用于跟进已写下多少个名字。</p>    <p><strong>消除名字</strong> 行动会恢复物品使用次数，并允许你写下另一个名字。</p></section>",
-      "requirements": "书之魔契祈唤",
       "activities": {
         "Protect": {
           "name": "保护",
@@ -2318,7 +2219,6 @@
     "Investment of the Chain Master": {
       "name": "链主赋能",
       "description": "<blockquote><p>先决条件：5级以上魔契师，@UUID[Compendium.dnd-players-handbook.classes.Item.phbinvPactChain0]{链之魔契}祈唤</p></blockquote><p>当你施展@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFindFamili]{寻获魔宠}时，你将一定程度的魔能力量灌注给被召唤的魔宠，给予该生物以下增益：</p><p><strong>翔空或潜渊。</strong> 该魔宠获得40尺的飞行速度或游泳速度（由你选择）。</p><p><strong>迅捷打击。</strong> 你可以使用一个附赠动作，指挥你的魔宠执行攻击动作。</p><p><strong>光影注能。</strong> 当该魔宠造成钝击、穿刺或挥砍伤害时，你可以令其改为造成光耀或暗蚀伤害。</p><p><strong>你的豁免DC。</strong> 若该魔宠强迫一个生物进行豁免检定，则它使用你的法术豁免DC。</p><p><strong>抗性。</strong> 当该魔宠受到伤害时，你可以使用反应给予它对此次伤害的抗性。</p><section class=\"secret\" id=\"secret-D3vSCo0uEG4Kp1X6\"><p><strong>Foundry Note</strong></p><p><strong>具飞行能力的魔宠</strong>和<strong>具游泳能力的魔宠</strong>两种召唤方式均允许你召唤拥有对应移动能力的魔宠。这两种召唤方式均消耗一格契印法术位。</p><p><strong>赋予抗性</strong>的活动包含一个可激活的效果，使魔宠能够抵抗各种类型的伤害。在更改抗性时，请务必在角色卡的“效果”标签页中禁用或删除之前的激活效果。</p><p>该魔宠会自动使用你的法术豁免DC。</p></section>",
-      "requirements": "链之魔契祈唤",
       "activities": {
         "Find Familiar with Flight": {
           "name": "获得魔宠并赋能飞行",
@@ -2338,7 +2238,9 @@
         },
         "Invest with Resistance": {
           "name": "赋能抗性",
-          "affectsSpecial": "你的魔宠"
+          "affects": {
+            "special": "Your familiar"
+          }
         }
       },
       "effects": {
@@ -2396,7 +2298,6 @@
     "Lifedrinker": {
       "name": "饮命者",
       "description": "<blockquote>        <p>先决条件 ：9 级及以上的魔契师，具有 @UUID[Compendium.dnd-players-handbook.classes.Item.phbinvPactBlade0] 祈唤</p></blockquote><p>每回合一次，当你使用契约武器命中某个生物时，额外造成1d6 暗蚀、心灵或光耀伤害（由你选择），且你可以消耗你的一个生命骰并掷出，恢复总量为掷骰结果加上你体质调整值的生命值（至少为1点生命值）。</p><section class=\"secret\" id=\"secret-1Hta9I4donszrwIQ\">        <p><strong>Foundry Note</strong></p>        <p><strong>伤害</strong>行动可以在掷骰对话框中选择伤害的类型。它会记住你的选择，以便日后使用。</p>        <p><strong>治疗（最大生命骰）</strong> 和 <strong>治疗（最小生命骰）</strong>两项行动会消耗相应生命骰，并以包含体质调整值的方式进行治疗掷骰。只有在兼职且拥有多种生命骰类型时，你的选择才会产生影响。</p></section>",
-      "requirements": "刃之魔契祈唤",
       "activities": {
         "damage": {
           "condition": "每回合一次，当你使用契约武器命中某个生物时"
@@ -2526,7 +2427,6 @@
     "Repelling Blast": {
       "name": "斥力魔爆",
       "description": "<blockquote>    <p>先决条件: 2 级及以上的魔契师，知晓可造成伤害的魔契师戏法</p></blockquote><p>选择一道你已知的需要一次攻击检定的魔契师戏法。当你用该戏法命中了一个大型或更小的生物，你可以将目标推开至多 10 尺。</p><p><strong>可复选 Repeatable. </strong>你可以多次选择本祈唤。每次这么做时，你都必须选择不同的戏法。</p><section class=\"secret\" id=\"secret-5xV7SaKI7sGaeKvq\">    <p><strong>Foundry Note</strong></p>    <p><strong>释放斥力</strong> 行动可用于为一个法术附魔，添加“斥力”作为提示。</p></section>",
-      "requirements": "可进行攻击的魔契师戏法",
       "activities": {
         "Make Repelling": {
           "name": "释放斥力"
@@ -2544,8 +2444,7 @@
     },
     "Thirsting Blade": {
       "name": "饥渴魔刃",
-      "description": "<blockquote>    <p>先决条件： 5 级及以上的魔契师， @UUID[Compendium.dnd-players-handbook.classes.Item.phbinvPactBlade0]祈唤</p></blockquote><p>你获得而额外攻击特性（仅可使用你的契约武器）。此特性令你在自己的回合内执行攻击动作时可以用该武器攻击两次而非一次。</p>",
-      "requirements": "刃之魔契祈唤"
+      "description": "<blockquote>    <p>先决条件： 5 级及以上的魔契师， @UUID[Compendium.dnd-players-handbook.classes.Item.phbinvPactBlade0]祈唤</p></blockquote><p>你获得而额外攻击特性（仅可使用你的契约武器）。此特性令你在自己的回合内执行攻击动作时可以用该武器攻击两次而非一次。</p>"
     },
     "Visions of Distant Realms": {
       "name": "穹宇尽视",
@@ -2557,7 +2456,9 @@
       "activities": {
         "Whisper": {
           "name": "低语",
-          "affectsSpecial": "尸体"
+          "affects": {
+            "special": "Corpse"
+          }
         }
       }
     },
@@ -2704,8 +2605,12 @@
         "Redirect": {
           "name": "重新定向",
           "condition": "若被拨挡攻击的伤害减少至 0",
-          "affectsSpecial": "不位于全身掩护",
-          "rangeSpecial": "周围 5 或 60 尺内的一个你可见的生物"
+          "affects": {
+            "special": "Isn't behind Total Cover"
+          },
+          "range": {
+            "special": "5 feet for melee attacks or 60 feet for ranged attacks"
+          }
         }
       }
     },
@@ -2720,8 +2625,12 @@
         "Redirect": {
           "name": "重新定向",
           "condition": "若被拨挡攻击的伤害减少至 0",
-          "affectsSpecial": "不位于全身掩护",
-          "rangeSpecial": "周围 5 或 60 尺内的一个你可见的生物"
+          "affects": {
+            "special": "Isn't behind Total Cover"
+          },
+          "range": {
+            "special": "5 feet for melee attacks or 60 feet for ranged attacks"
+          }
         }
       }
     },
@@ -2833,10 +2742,6 @@
       "name": "反射闪避",
       "description": "<p>你在成为某一范围效应影响对象时，若该效应允许你通过成功的敏捷豁免来使伤害减半，则你在该豁免成功时不受伤害，而豁免失败时只受一半伤害。</p><p>若你陷入失能状态，则无法使用该特性。</p>"
     },
-    "phbmnkExtraAttac": {
-      "name": "额外攻击",
-      "description": "<p>当你在自己的回合执行攻击动作时，你可以发动两次攻击而非一次。</p>"
-    },
     "Fleet Step": {
       "name": "神行步",
       "description": "<p>当你以附赠动作执行除疾步如风以外的行为，你可以同时使用疾步如风，作为该附赠动作的一部分。</p>"
@@ -2868,7 +2773,9 @@
       "description": "<p>你对生命能量的掌握打开了通往命流奥义的大门。以一个魔法动作，你可以消耗 5 点功力，触碰一个死亡不超过 24 小时的生物的尸体。该生物会起死回生，并拥有相当于 4d10 + 你的感知调整值的生命值。如果该生物死前具有以下这些状态，这些状态都会在复活时被移除：目盲、耳聋、麻痹、中毒和震慑。</p><p>使用此特性后，你必须完成一次长休才能再次使用。</p><section class=\"secret\" id=\"secret-qP8GEBd6nXKTiRMj\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含每次长休一次使用次数，并包含一次治疗检定。</p></section>",
       "activities": {
         "heal": {
-          "affectsSpecial": "死亡不超过 24 小时"
+          "affects": {
+            "special": "died within the past 24 hours"
+          }
         }
       }
     },
@@ -2895,7 +2802,9 @@
       "activities": {
         "Improved Shadow Step": {
           "name": "无影步",
-          "affectsSpecial": "未占据空间"
+          "affects": {
+            "special": "Unoccupied space"
+          }
         }
       }
     },
@@ -2977,7 +2886,6 @@
     "Monk's Focus": {
       "name": "武僧武功",
       "description": "<p>通过运转玄功和习练武艺，你便得以掌握自身非凡的内在能量。功力点代表着你所能使用的这份能量。你的武僧等级决定了你拥有多少功力点，具体数据见武僧特性表中的功力点一列。</p><p>你可以消耗功力点来增强或启动特定的武僧特性。你一开始掌握三种特性：疾风连击，坚强防御，疾步如风。细节见下。</p><p>每当你消耗 1 点功力时，直到你完成一次短休或者长休前其将暂时不可以再被使用。在完成休息时，你将回复所有已消耗的功力点。</p><p>你的某些特性会要求你的目标进行豁免以对抗该特性的效果，这些特性的豁免DC为 8 + 你的感知调整值 + 你的熟练加值。</p><p><strong>疾风连击。</strong> 你可以消耗 1 点功力，以一个附赠动作发动两次徒手打击。</p><p><strong>闪转腾挪。</strong> 你能以一个附赠动作执行撤离动作。此外，你可以消耗 1 点功力，以一个附赠动作同时执行撤离与回避动作。</p><p><strong>疾步如风。</strong> 你能以一个附赠动作执行疾走动作。此外，你可以消耗 1 点功力，以一个附赠动作同时执行撤离与疾走 动作，同时使你该回合内的跳跃距离翻倍。</p><section class=\"secret\" id=\"secret-Kb8gEVefEUz6IHer\">        <p><strong>Foundry Note</strong></p>        <p><strong>疾风连击</strong>行动属于附赠动作，会消耗 1 点功力，其中包括一次以武艺骰进行的徒手打击的攻击检定和伤害，随着等级提升，其伤害会自动增加。</p>        <p><strong>闪转腾挪</strong>行动包含一个激活效应，用于跟进撤离动作。<strong>闪转腾挪（功力）</strong>行动会消耗 1 点功力，并包含一个激活效应，可添加回避状态。</p>        <p><strong>疾步如风 </strong>行动会消耗 1 点功力，并包含一个激活效应，用于跟进撤离动作。</p></section>",
-      "requirements": "武僧",
       "activities": {
         "Flurry of Blows": {
           "name": "疾风连击"
@@ -3102,7 +3010,9 @@
         "Shadow Step": {
           "name": "暗影步",
           "condition": "你处于微光光照或黑暗环境时",
-          "affectsSpecial": "未占据空间"
+          "affects": {
+            "special": "Unoccupied space"
+          }
         }
       }
     },
@@ -3287,7 +3197,9 @@
         "Directed Attack": {
           "name": "定向打击",
           "condition": "你在自己回合内执行攻击动作时",
-          "affectsSpecial": "能听见或看见你的"
+          "affects": {
+            "special": "Can see or hear you"
+          }
         }
       }
     },
@@ -3365,7 +3277,9 @@
           "name": "战技",
           "roll": "攻击加值",
           "condition": "你以攻击检定命中一个生物时",
-          "affectsSpecial": "能听见或看见你的"
+          "affects": {
+            "special": "Can see or hear you"
+          }
         }
       }
     },
@@ -3416,7 +3330,9 @@
       "description": "<p>以一个附赠动作，你可以消耗 1 枚卓越骰以鼓舞一名战友的士气。选择一名位于你 30 尺内的能看见你或听到你的盟友。该生物获得数量等于你战士等级的一半（向下取整）加卓越骰结果的临时生命值。</p>",
       "activities": {
         "heal": {
-          "affectsSpecial": "能听见或看见你的"
+          "affects": {
+            "special": "Can see or hear you"
+          }
         }
       }
     },
@@ -3435,7 +3351,9 @@
       "description": "<p>你以武器或徒手打击发动的近战攻击检定命中一个生物时，可以消耗一枚卓越骰以尝试伤害另一个生物。指定一个处于你触及范围内并且距离初始目标不超过 5 尺的生物，如果你原本的攻击检定足以命中第二个目标，则它将受到等同于你卓越骰结果的伤害。此伤害与你原本攻击 的伤害类型相同。</p><section class=\"secret\" id=\"secret-p0vnnA6PRSzYVHVf\">    <p><strong>Foundry Note</strong></p>    <p><strong>伤害</strong> 行动能让您在掷骰对话框中选定其应造成伤害的类型，并且会消耗 1 次卓越骰的使用次数。</p></section>",
       "activities": {
         "damage": {
-          "affectsSpecial": "触及范围内并且距离初始目标不超过 5 尺"
+          "affects": {
+            "special": "Within 5 feet of the original target and within your reach"
+          }
         }
       }
     },
@@ -3468,7 +3386,9 @@
       "description": "<p>作为一个魔法动作，你亮出圣徽，以神圣祷言怒斥敌人。消耗一次引导神力特性。指定至多等同于你魅力调整值的可见，且距离你 60 尺以内的生物（至少一个生物）。每个目标生物必须进行一次感知豁免，豁免失败者将在接下来的一分钟内陷入&Reference[Frightened] ，直至其受到伤害。在此恐慌状态下，目标生物只能在其回合内执行以下一种动作：移动，动作，附赠动作。</p><section class=\"secret\" id=\"secret-lu2BuwFj2pnJ367b\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含施加恐慌状态的激活效应。</p></section>",
       "activities": {
         "save": {
-          "affectsSpecial": "你可见的生物"
+          "affects": {
+            "special": "That you can see"
+          }
         }
       },
       "effects": {
@@ -3582,10 +3502,6 @@
     "phbpdnEpicBoon00": {
       "name": "传奇恩惠",
       "description": "<p>你获得一项传奇恩惠专长 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbFeats00000000.JournalEntryPage.GxfrwkJbrIvn7reC]或其他一项你选择的适用的专长。推荐选择@UUID[Compendium.dnd-players-handbook.feats.Item.phbBoonofTruesig] 。</p><section class=\"secret\" id=\"secret-KoLcW2QoxzD8LnAY\">    <p><strong>Foundry Note</strong></p>    <p>当你升级时，系统会提示你做出选择。</p></section>"
-    },
-    "phbpdnExtraAttac": {
-      "name": "额外攻击",
-      "description": "<p>当你在自己的回合执行攻击动作时，你可以发动两次攻击而非一次。</p>"
     },
     "Faithful Steed": {
       "name": "忠诚坐骑",
@@ -3970,7 +3886,9 @@
         "Trip": {
           "name": "摔绊",
           "condition": "当你的偷袭攻击造成伤害时",
-          "affectsSpecial": "不超过大型"
+          "affects": {
+            "special": "Larger or smaller"
+          }
         },
         "Cunning Sneak Attack": {
           "name": "诡诈偷袭攻击",
@@ -4102,12 +4020,16 @@
         "Psychic Whispers (Free)": {
           "name": "心灵低语（免费）",
           "roll": "灵能骰",
-          "affectsSpecial": "你可见的生物"
+          "affects": {
+            "special": "Creatures you can see"
+          }
         },
         "Psychic Whispers": {
           "name": "心灵低语",
           "roll": "灵能骰",
-          "affectsSpecial": "你可见的生物"
+          "affects": {
+            "special": "Creatures you can see"
+          }
         }
       },
       "effects": {
@@ -4240,7 +4162,9 @@
         "Psychic Teleportation": {
           "name": "心灵传送",
           "roll": "最大投掷距离",
-          "affectsSpecial": "未占据空间"
+          "affects": {
+            "special": "Unoccupied space"
+          }
         }
       }
     },
@@ -4428,10 +4352,6 @@
       "name": "专精",
       "description": "<p>选择两项你熟练但不具备专精的技能，你获得这些技能的专精。</p><section class=\"secret\" id=\"secret-8Sp7JCTIzt2U5K6u\">    <p><strong>Foundry Note</strong></p>    <p>当你升级时，系统会提示您做出选择。</p></section>"
     },
-    "phbrgrExtraAttac": {
-      "name": "额外攻击",
-      "description": "<p>当你在自己的回合执行攻击动作时，你可以发动两次攻击而非一次。</p>"
-    },
     "Favored Enemy": {
       "name": "宿敌",
       "description": "<p>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHuntersMar]总会在你的准备法术列表中。你可以不消耗法术位的情况下施展两次，完成一次长休后，你重获所有已消耗的使用次数。当你达到特定的游侠等级时， 你无需法术位便可以施展猎人印记的次数相应地增加， 游侠特性表里的宿敌列对此进行了说明。</p><section class=\"secret\" id=\"secret-cyuZuzwxsQg01vVN\">    <p><strong>Foundry Note</strong></p>    <p>该法术将在当前等级授予你，其免费使用次数将随角色等级提升自动增加。</p></section>"
@@ -4576,14 +4496,18 @@
       "activities": {
         "summon": {
           "condition": "当你结束一次长休后",
-          "affectsSpecial": "未占据空间"
+          "affects": {
+            "special": "Unoccupied"
+          }
         },
         "Command": {
           "name": "命令"
         },
         "Summon with Spell Slot": {
           "name": "以法术位召唤",
-          "affectsSpecial": "未占据空间"
+          "affects": {
+            "special": "Unoccupied"
+          }
         }
       }
     },
@@ -4652,7 +4576,9 @@
         "Shadowy Dodge": {
           "name": "如影随行",
           "condition": "当一个生物对你发动了一次攻击检定时",
-          "affectsSpecial": "未占据空间"
+          "affects": {
+            "special": "Unoccupied"
+          }
         }
       }
     },
@@ -4734,7 +4660,9 @@
       "description": "<p>每个回合内一次，当你对某个被你用猎人印记标记的生物造成伤害时，你可以额外对该生物 30 尺范围内的另一个可见生物造成先前猎人印记提供的伤害。</p><section class=\"secret\" id=\"secret-AuiRnxdHXs9cXvQV\">    <p><strong>Foundry Note</strong></p>    <p>你可将猎人印记的伤害值施加上去，或者在该特性上运用<strong>伤害</strong>行动。</p></section>",
       "activities": {
         "damage": {
-          "rangeSpecial": "被造成伤害的生物"
+          "range": {
+            "special": "Of the damaged creature"
+          }
         }
       }
     },
@@ -4985,7 +4913,9 @@
         "Prevent Advantage/Disadvantage": {
           "name": "封锁优劣势",
           "condition": "当你 60 尺内一个你可见的生物即将带着优势或是劣势进行一次检定时",
-          "affectsSpecial": "你可见的"
+          "affects": {
+            "special": "You can see"
+          }
         }
       }
     },
@@ -5086,7 +5016,9 @@
       "activities": {
         "Telepathic Speech": {
           "name": "传心谈话",
-          "affectsSpecial": "你可见的"
+          "affects": {
+            "special": "You can see"
+          }
         }
       }
     },
@@ -5390,8 +5322,12 @@
         "Dreadful Step": {
           "name": "惊惧步伐",
           "condition": "传送后",
-          "affectsSpecial": "由你选择",
-          "rangeSpecial": "你刚离开的空间"
+          "affects": {
+            "special": "That you choose"
+          },
+          "range": {
+            "special": "Of the space you just left"
+          }
         },
         "2ceGTpBbBclN3qF9": {
           "condition": "受到伤害后"
@@ -5430,7 +5366,9 @@
         "Chosen Creatures Hit Points": {
           "name": "选定生物的临时生命值",
           "condition": "每当你使用秘法回流，或是完成一次短休或长休后",
-          "affectsSpecial": "你获得临时生命值时你可见的"
+          "affects": {
+            "special": "You can see when you gain the points"
+          }
         }
       }
     },
@@ -5463,12 +5401,16 @@
         "Refreshing Step": {
           "name": "复苏步伐",
           "condition": "在你传送之后",
-          "affectsSpecial": "你可见的生物"
+          "affects": {
+            "special": "That you can see"
+          }
         },
         "Taunting Step": {
           "name": "嘲弄步伐",
           "condition": "传送后",
-          "rangeSpecial": "你刚离开的空间"
+          "range": {
+            "special": "Of the space you just left"
+          }
         }
       },
       "effects": {
@@ -5729,7 +5671,9 @@
         "Project Ward": {
           "name": "投射守御",
           "condition": "当 30 尺内一名你可见的生物受到伤害时",
-          "affectsSpecial": "你可见的生物"
+          "affects": {
+            "special": "That you can see"
+          }
         }
       }
     },

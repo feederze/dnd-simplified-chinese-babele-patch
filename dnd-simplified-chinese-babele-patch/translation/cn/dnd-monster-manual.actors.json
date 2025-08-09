@@ -45,7 +45,9 @@
           "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需法术成分并使用智力作为施法属性：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>（手是隐形的）</p><p class=\"feature-trait\"><strong>2/日：</strong><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplNondetecti]</em>（仅自身）</p>",
           "activities": {
             "SPDV1OYRR1A3RjYJ": {
-              "affectsSpecial": "self only"
+              "affects": {
+                "special": "self only"
+              }
             }
           }
         },
@@ -393,7 +395,9 @@
           "activities": {
             "Intelligence Saving Throw": {
               "name": "智力豁免检定",
-              "affectsSpecial": "that is Charmed or Grappled"
+              "affects": {
+                "special": "that is Charmed or Grappled"
+              }
             }
           }
         },
@@ -411,7 +415,9 @@
           "description": "<p class=\"feature\">若至少有一名生物魅惑或受擒于 [[lookup @name lowercase]] ，其使用 [[/item .7gP0oX3L1RKRaBGH]] 并恢复 [[/healing average]]生命值。</p>",
           "activities": {
             "heal": {
-              "affectsSpecial": "one creature Charmed or Grappled"
+              "affects": {
+                "special": "one creature Charmed or Grappled"
+              }
             }
           }
         }
@@ -730,7 +736,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -754,7 +762,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "rangeSpecial": "half its Fly Speed"
+              "range": {
+                "special": "half its Fly Speed"
+              }
             }
           }
         },
@@ -814,7 +824,9 @@
             },
             "2nd Save": {
               "name": "再次豁免",
-              "affectsSpecial": "Creatures who failed the first save"
+              "affects": {
+                "special": "Creatures who failed the first save"
+              }
             }
           },
           "effects": {
@@ -1438,7 +1450,9 @@
           "description": "<p><em>魅力豁免检定：</em>DC [[lookup @save.dc.value activity=kWKwiAYgyeKBLMNJ]]，单一 [[lookup @range.value activity=kWKwiAYgyeKBLMNJ]] 尺内 [[lookup @name lowcase]] 可见的生物。</p><p><em>失败：</em>[[/damage average]] 伤害，且目标陷入 &Reference[Incapacitated apply=false] 状态，并被转移至一处无害的半位面直至 [[lookup @name lowcase]] 的下一回合开始，此时其将重新出现在 [[lookup @name lowcase]] 于 [[lookup @range.value activity=kWKwiAYgyeKBLMNJ]] 尺内选择的一处未被占据的空间。</p><p><em>失败或成功：</em>[[lookup @name lowercase]] 直至其下一回合开始都无法再执行此动作。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "target is visible"
+              "affects": {
+                "special": "target is visible"
+              }
             }
           },
           "effects": {
@@ -1825,7 +1839,9 @@
           "activities": {
             "save": {
               "chatFlavor": "失败：目标被银龙直线推开至多 30 尺。",
-              "affectsSpecial": "target is pushed up to 30 feet straight away"
+              "affects": {
+                "special": "target is pushed up to 30 feet straight away"
+              }
             }
           }
         },
@@ -1948,7 +1964,9 @@
             "Save": {
               "name": "豁免",
               "chatFlavor": "失败：目标被直线推离至多 20 尺",
-              "affectsSpecial": "Must be in the creature's space"
+              "affects": {
+                "special": "Must be in the creature's space"
+              }
             }
           },
           "effects": {
@@ -2260,7 +2278,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -2338,7 +2358,9 @@
             },
             "2nd Save": {
               "name": "再次豁免",
-              "affectsSpecial": "Creatures who failed the first save"
+              "affects": {
+                "special": "Creatures who failed the first save"
+              }
             }
           },
           "effects": {
@@ -2689,7 +2711,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -2974,7 +2998,9 @@
           "description": "<p><em>魅力豁免检定：</em>DC [[lookup @save.dc.value activity=kWKwiAYgyeKBLMNJ]]，单一 [[lookup @range.value activity=kWKwiAYgyeKBLMNJ]] 尺内 [[lookup @name lowcase]] 可见的生物。</p><p><em>失败：</em>[[/damage average]] 伤害，且目标陷入 &Reference[Incapacitated apply=false] 状态，并被转移至一处无害的半位面直至 [[lookup @name lowcase]] 的下一回合开始，此时其将重新出现在 [[lookup @name lowcase]] 于 [[lookup @range.value activity=kWKwiAYgyeKBLMNJ]] 尺内选择的一处未被占据的空间。</p><p><em>失败或成功：</em>[[lookup @name lowercase]] 直至其下一回合开始都无法再执行此动作。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "target is visible"
+              "affects": {
+                "special": "target is visible"
+              }
             }
           },
           "effects": {
@@ -3343,7 +3369,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -3887,7 +3915,9 @@
             "Moving Attack": {
               "name": "移动攻击",
               "condition": "移动了 20+ 尺",
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             }
           }
         }
@@ -3900,8 +3930,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Slam": {
           "name": "猛击",
@@ -4030,8 +4059,7 @@
       "items": {
         "Fiendish Restoration": {
           "name": "邪魔复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside of Gehanna"
+          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -4373,7 +4401,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -4859,7 +4889,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -5266,8 +5298,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -5342,7 +5373,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "itself or a willing demon within 10 feet"
+              "affects": {
+                "special": "itself or a willing demon within 10 feet"
+              }
             }
           }
         },
@@ -5638,14 +5671,15 @@
           "activities": {
             "damage": {
               "condition": "每一回合开始时",
-              "affectsSpecial": "it is grappling or any creature grappling it"
+              "affects": {
+                "special": "it is grappling or any creature grappling it"
+              }
             }
           }
         },
         "Diabolical Restoration": {
           "name": "魔鬼复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Nine Hells"
+          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -5692,8 +5726,7 @@
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -5809,7 +5842,9 @@
             },
             "Second Save": {
               "name": "再次豁免",
-              "affectsSpecial": "Restrained creature"
+              "affects": {
+                "special": "Restrained creature"
+              }
             }
           },
           "effects": {
@@ -5900,7 +5935,9 @@
           "description": "<p><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，单一 [[lookup @range.value activity=IgOMjRxAt7UISkJq]] 尺内体型不超过大型且 [[lookup @name lowercase]] 可见的生物。</p><p><em>失败：</em>[[/damage average]]伤害，目标陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -5919,11 +5956,15 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Large or smaller creature Grappled"
+              "affects": {
+                "special": "one Large or smaller creature Grappled"
+              }
             },
             "Damage: Swallowed": {
               "name": "伤害：吞咽",
-              "affectsSpecial": "Swallowed by the behir"
+              "affects": {
+                "special": "Swallowed by the behir"
+              }
             },
             "Regurgitate: Save": {
               "name": "吐出：豁免"
@@ -6154,8 +6195,7 @@
         },
         "Bloodied Frenzy": {
           "name": "浴血狂热",
-          "description": "<p>[[lookup @name lowercase]] 在 &Reference[Bloodied] 期间进行的攻击检定与豁免检定具有优势。</p>",
-          "requirements": "While Bloodied"
+          "description": "<p>[[lookup @name lowercase]] 在 &Reference[Bloodied] 期间进行的攻击检定与豁免检定具有优势。</p>"
         }
       }
     },
@@ -6180,8 +6220,7 @@
         },
         "Bloodied Frenzy": {
           "name": "浴血狂热",
-          "description": "<p>[[lookup @name lowercase]] 在 &Reference[Bloodied] 期间进行的攻击检定与豁免检定具有优势。</p>",
-          "requirements": "While Bloodied"
+          "description": "<p>[[lookup @name lowercase]] 在 &Reference[Bloodied] 期间进行的攻击检定与豁免检定具有优势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -6337,8 +6376,7 @@
         },
         "Astral Implosion": {
           "name": "星界内爆",
-          "description": "<p>若[[lookup @name lowcase]] 降至 0 生命值，则其内爆并将其吞入体内的一切生物和物件喷进星界海。[[lookup @name lowcase]] 随即消失，只在原地留下一滩覆盖周围 600 尺的粘液。[[lookup @name lowcase]] 会在 [[/r 1d20#年]] 年内于物质位面中的某个随机世界重组。</p>",
-          "requirements": "Reduced to 0 Hit Points"
+          "description": "<p>若[[lookup @name lowcase]] 降至 0 生命值，则其内爆并将其吞入体内的一切生物和物件喷进星界海。[[lookup @name lowcase]] 随即消失，只在原地留下一滩覆盖周围 600 尺的粘液。[[lookup @name lowcase]] 会在 [[/r 1d20#年]] 年内于物质位面中的某个随机世界重组。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -6382,7 +6420,9 @@
             "Save": {
               "name": "豁免",
               "chatFlavor": "命中：令目标向黏浆直线拉近 60 尺",
-              "affectsSpecial": "one Large or smaller creature"
+              "affects": {
+                "special": "one Large or smaller creature"
+              }
             }
           },
           "effects": {
@@ -6398,7 +6438,9 @@
           "activities": {
             "Damage: Engulfed Creatures": {
               "name": "伤害：吞没生物",
-              "affectsSpecial": "to each creature engulfed by it"
+              "affects": {
+                "special": "to each creature engulfed by it"
+              }
             }
           }
         },
@@ -6428,8 +6470,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Beak": {
           "name": "喙啄",
@@ -6478,7 +6519,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -6534,8 +6574,7 @@
       "items": {
         "Bloodied Fury": {
           "name": "浴血狂怒",
-          "description": "<p>[[lookup @name lowercase]] 在&Reference[Bloodied]期间进行的攻击检定具有优势。</p>",
-          "requirements": "While Bloodied"
+          "description": "<p>[[lookup @name lowercase]] 在&Reference[Bloodied]期间进行的攻击检定具有优势。</p>"
         },
         "Gore": {
           "name": "顶撞",
@@ -6547,7 +6586,9 @@
             "Moving Attack": {
               "name": "移动攻击",
               "condition": "移动了 20+ 尺",
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             }
           },
           "effects": {
@@ -6566,8 +6607,7 @@
       "items": {
         "Diabolical Restoration": {
           "name": "魔鬼复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Nine Hells"
+          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -6717,7 +6757,9 @@
             },
             "2nd Save": {
               "name": "再次豁免",
-              "affectsSpecial": "Creatures who failed the first save"
+              "affects": {
+                "special": "Creatures who failed the first save"
+              }
             }
           },
           "effects": {
@@ -6766,7 +6808,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "rangeSpecial": "can move through the spaces of Medium or smaller creatures."
+              "range": {
+                "special": "can move through the spaces of Medium or smaller creatures."
+              }
             }
           },
           "effects": {
@@ -6898,7 +6942,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Medium or smaller creature"
+              "affects": {
+                "special": "one Medium or smaller creature"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -6975,7 +7021,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "in the creature's destination space"
+              "affects": {
+                "special": "in the creature's destination space"
+              }
             }
           },
           "effects": {
@@ -7378,7 +7426,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "Medium or smaller creatures"
+              "affects": {
+                "special": "Medium or smaller creatures"
+              }
             }
           },
           "effects": {
@@ -7472,8 +7522,7 @@
       "items": {
         "Diabolical Restoration": {
           "name": "魔鬼复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Nine Hells"
+          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -7543,8 +7592,7 @@
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -7679,8 +7727,7 @@
       "items": {
         "Acid Absorption": {
           "name": "强酸吸收",
-          "description": "<p>每当 [[lookup @name lowercase]] 受到 &Reference[Acid]{强酸}伤害，其不受伤害，改为恢复等于强酸伤害数值的生命值。</p>",
-          "requirements": "Subjected to Acid damage"
+          "description": "<p>每当 [[lookup @name lowercase]] 受到 &Reference[Acid]{强酸}伤害，其不受伤害，改为恢复等于强酸伤害数值的生命值。</p>"
         },
         "Berserk": {
           "name": "失心狂怒",
@@ -7756,7 +7803,9 @@
             "Detach Attempt": {
               "name": "解除吸附",
               "condition": "目标或处于其范围内的生物所采取的动作",
-              "affectsSpecial": "attached target"
+              "affects": {
+                "special": "attached target"
+              }
             }
           },
           "effects": {
@@ -7973,8 +8022,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -8129,7 +8177,9 @@
           "description": "<p><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，单一 [[lookup @range.value activity=IgOMjRxAt7UISkJq]] 尺内[[lookup @name lowercase]] 可见的体型不超过中型的生物。</p><p><em>失败：</em>[[/damage average]] 伤害，且目标陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -8193,7 +8243,9 @@
           "description": "<p><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，单一 [[lookup @range.value activity=IgOMjRxAt7UISkJq]] 尺内[[lookup @name lowercase]] 可见的体型[[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]]的生物。</p><p><em>失败：</em>[[/damage average]]伤害，且目标陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -8339,7 +8391,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -8636,7 +8690,9 @@
             "Roll d20": {
               "name": "掷 d20",
               "roll": "掷 d20",
-              "affectsSpecial": "or an ally"
+              "affects": {
+                "special": "or an ally"
+              }
             }
           }
         },
@@ -8742,8 +8798,7 @@
         },
         "Elemental Restoration": {
           "name": "元素重生",
-          "description": "<p class=\"feature\">若[[lookup @name lowercase]] 于土元素位面外死去，其身体会化为尘土，并于[[/r 1d4]]天后于土元素位面某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "dies outside the Elemental Plane of Earth"
+          "description": "<p class=\"feature\">若[[lookup @name lowercase]] 于土元素位面外死去，其身体会化为尘土，并于[[/r 1d4]]天后于土元素位面某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -9106,7 +9161,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "Undead"
+              "affects": {
+                "special": "Undead"
+              }
             }
           },
           "effects": {
@@ -9252,7 +9309,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "Undead"
+              "affects": {
+                "special": "Undead"
+              }
             }
           },
           "effects": {
@@ -9357,7 +9416,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -9374,7 +9432,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "shape-shifts into a Small or Medium Humanoid"
+              "affects": {
+                "special": "shape-shifts into a Small or Medium Humanoid"
+              }
             }
           }
         },
@@ -9887,8 +9947,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -9936,7 +9995,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "that isn't a worg"
+              "affects": {
+                "special": "that isn't a worg"
+              }
             }
           },
           "effects": {
@@ -9952,8 +10013,12 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "within 5 feet",
-              "rangeSpecial": "to an unoccupied space it can see"
+              "affects": {
+                "special": "within 5 feet"
+              },
+              "range": {
+                "special": "to an unoccupied space it can see"
+              }
             }
           }
         }
@@ -9966,8 +10031,7 @@
       "items": {
         "Avoidance": {
           "name": "神避",
-          "description": "<p>当 [[lookup @name lowercase]] 受到一个允许其进行豁免来只承受一半伤害的效应影响时，其豁免成功时不受伤害，豁免失败时只承受一半伤害。其无法在失能期间使用此特质。</p>",
-          "requirements": "Not Incapacitated"
+          "description": "<p>当 [[lookup @name lowercase]] 受到一个允许其进行豁免来只承受一半伤害的效应影响时，其豁免成功时不受伤害，豁免失败时只承受一半伤害。其无法在失能期间使用此特质。</p>"
         },
         "Displacement": {
           "name": "移影换位",
@@ -10005,8 +10069,7 @@
       "items": {
         "Elemental Restoration": {
           "name": "元素重生",
-          "description": "<p class=\"feature\">若 [[lookup @name lowercase]] 于气元素位面之外死去，其身体会化为薄雾，并于[[/r 1d4#天]]天后于气元素位面某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "dies outside the Elemental Plane of Air"
+          "description": "<p class=\"feature\">若 [[lookup @name lowercase]] 于气元素位面之外死去，其身体会化为薄雾，并于[[/r 1d4#天]]天后于气元素位面某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -10284,7 +10347,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             }
           }
         }
@@ -10531,8 +10596,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Web Walker": {
           "name": "蛛网行者",
@@ -10751,7 +10815,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "rangeSpecial": "Large or bigger tree"
+              "range": {
+                "special": "Large or bigger tree"
+              }
             }
           }
         },
@@ -10831,7 +10897,6 @@
         "Death Burst": {
           "name": "自爆",
           "description": "<p>[[lookup @name lowercase]] 在死亡时爆炸。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域内的所有生物。</p><p><em>失败： </em>[[/damage average]]伤害。</p><p><em>成功：</em> 半伤。</p>",
-          "requirements": "When it dies",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -10926,8 +10991,7 @@
       "items": {
         "Elemental Restoration": {
           "name": "元素重生",
-          "description": "<p class=\"feature\">若[[lookup @name lowercase]] [[lookup @item.requirements]]，其身体会化为燃尘，并于[[/r 1d4#天]]天后于火元素位面某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "dies outside the Elemental Plane of Fire"
+          "description": "<p class=\"feature\">若[[lookup @name lowercase]] [[lookup @item.requirements]]，其身体会化为燃尘，并于[[/r 1d4#天]]天后于火元素位面某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -11349,7 +11413,9 @@
           "activities": {
             "Attack": {
               "name": "攻击",
-              "affectsSpecial": "Huge or smaller"
+              "affects": {
+                "special": "Huge or smaller"
+              }
             }
           },
           "effects": {
@@ -11370,11 +11436,15 @@
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了 20+ 尺且目标生物体型不超过大型，则目标额外受到[[/damage 1d6 bludgeoning average]]伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Moving Attack": {
               "name": "移动攻击",
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             }
           },
           "effects": {
@@ -11503,11 +11573,15 @@
           "activities": {
             "Dismissal": {
               "name": "驱离",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Break Enchantment": {
               "name": "破咒",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Cast": {
               "name": "施展"
@@ -11638,8 +11712,7 @@
       "items": {
         "Diabolical Restoration": {
           "name": "魔鬼复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Nine Hells"
+          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -11676,7 +11749,6 @@
         "Entangling Rope": {
           "name": "纠缠绳",
           "description": "<p class=\"feature\"><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=n8nEah4vbrEPphNF]]，单一 [[lookup @range.value activity=n8nEah4vbrEPphNF]] 尺内 [[lookup @name lowcase]] 可见的生物。</p><p class=\"feature\"><em>失败：</em>[[/damage average]] 伤害，且目标陷入 &Reference[Restrained apply=false] 状态，持续直至魔绳被摧毁、[[lookup @name lowcase]] 使用一个附赠动作释放该生物，或是 [[lookup @name lowcase]] 再次使用纠缠绳动作。</p>",
-          "requirements": "Requires Magic Rope",
           "effects": {
             "Restrained": {
               "name": "束缚",
@@ -12238,7 +12310,6 @@
         "Death Burst": {
           "name": "自爆",
           "description": "<p>[[lookup @name lowercase]] 在死亡时爆炸。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域内的所有生物。</p><p><em>失败： </em>[[/damage average]]伤害。</p><p><em>成功：</em> 半伤。</p>",
-          "requirements": "When it dies",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -12272,7 +12343,6 @@
         "Aversion to Fire": {
           "name": "厌火",
           "description": "<p>若 [[lookup @name]] 受到火焰伤害，则进行的攻击检定和属性检定将具有劣势，直至其下一回合结束。</p>",
-          "requirements": "Takes Fire damage",
           "effects": {
             "Averse": {
               "name": "畏惧",
@@ -12292,7 +12362,9 @@
             "Calm Check": {
               "name": "清醒检定",
               "condition": "创造者以动作",
-              "affectsSpecial": "this creature"
+              "affects": {
+                "special": "this creature"
+              }
             }
           },
           "effects": {
@@ -12308,8 +12380,7 @@
         },
         "Lightning Absorption": {
           "name": "闪电吸收",
-          "description": "<p>每当 [[lookup @name lowercase]] 将受闪电伤害时，其恢复等于闪电伤害数值的生命值。</p>",
-          "requirements": "Subjected to Lightning damage"
+          "description": "<p>每当 [[lookup @name lowercase]] 将受闪电伤害时，其恢复等于闪电伤害数值的生命值。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -12369,7 +12440,9 @@
           "description": "<p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.formula activity=MD1NjuNJfDjxKGrL]]，单一 [[lookup @range.value activity=MD1NjuNJfDjxKGrL]] 尺内 [[lookup @name]] 可见的生物。</p><p><em>失败：</em> 目标被一种恶臭难闻的液体包裹，在 [[/r 1d4]] 小时内持续散发恶臭，并在恶臭持续期间陷入 &Reference[Poisoned apply=false] 状态。其他生物在身处源自被恶臭包裹生物的 5 尺光环区域内期间，也陷入中毒状态。目标可以在短休或长休期间通过洗澡来去除身上的恶臭。 </p>",
           "activities": {
             "save": {
-              "affectsSpecial": "can see"
+              "affects": {
+                "special": "can see"
+              }
             }
           },
           "effects": {
@@ -12387,8 +12460,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -12483,7 +12555,9 @@
           "activities": {
             "Temporary Healing": {
               "name": "临时生命值",
-              "affectsSpecial": "The giant or one creature of its choice that can see or hear it"
+              "affects": {
+                "special": "The giant or one creature of its choice that can see or hear it"
+              }
             }
           },
           "effects": {
@@ -12510,7 +12584,9 @@
             "Moving Attack": {
               "name": "移动攻击",
               "condition": "移动了 20+ 尺",
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             }
           }
         },
@@ -12519,7 +12595,9 @@
           "description": "<p>[[lookup @name lowercase]] 用魔法活化 [[lookup @range.value activity=lydBv987ChZ7itoS]] 尺内其可见的至多两块大石头。每块被活化的石头均使用 @UUID[Compendium.dnd-monster-manual.actors.Actor.mmGalebDuhr00000] 的数据卡，但有以下区别：石头的智力和魅力值为 1且无法说话，并缺少活化石头动作。石头服从 [[lookup @name lowercase]] 的命令，使用与 [[lookup @name lowercase]] 一样的先攻并在其回合结束后立即执行回合。石头的活化持续  [[lookup @duration.value activity=lydBv987ChZ7itoS]] 分钟，或在以下情况提前结束：其死亡时、该 [[lookup @name lowercase]] 死亡时。 </p>",
           "activities": {
             "summon": {
-              "affectsSpecial": "one or two boulders it can see"
+              "affects": {
+                "special": "one or two boulders it can see"
+              }
             }
           }
         }
@@ -12532,8 +12610,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -12558,7 +12635,6 @@
         "Death Burst": {
           "name": "自爆",
           "description": "<p>[[lookup @name lowercase]] 在死亡时爆炸。</p><p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]], 源自 [[lookup @name lowercase]] 的 [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域内的所有生物。</p><p><em>失败：</em>[[/damage average]]伤害，且目标陷入 &Reference[Poisoned apply=false] 状态 [[/r 1d12#小时]] 小时。目标会在该时间结束时死亡，且其体内会释放出 [[/r 2d4#微型气孢菌]] 个微型<strong>气孢菌</strong>（每个具有 1 生命值）。），除非此中毒状态被移除。[[lookup @name lowercase]]  [[/r 2d6#天]] 天后变为大型并具有 13 生命值。</p>",
-          "requirements": "When it dies",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -12813,7 +12889,9 @@
           "description": "<p class=\"feature\"><em>魅力豁免检定：</em>DC [[lookup @save.dc.value activity=7gmNBVjwuYTyANMe]]，单一 [[lookup @range.value activity=7gmNBVjwuYTyANMe]] 尺内 [[lookup @name lowcase]] 可见的类人生物。</p><p class=\"feature\"><em>失败：</em>目标被[[lookup @name lowcase]] 附身。[[lookup @name lowcase]] 消失，目标陷入 &Reference[Incapacitated apply=false] 状态并失去对身体的控制。现在由 [[lookup @name lowcase]] 控制身体，但是目标仍然保留自我意识。[[lookup @name lowcase]] 不能成为任意攻击、法术或其他效应的目标，针对不死生物的效应除外。[[lookup @name lowcase]] 仍然保留自己的游戏数据，但是使用附身目标的速度，以及力量、敏捷与体质调整值。附身持续至身体的生命值降至0，或在 [[lookup @name lowcase]] 以附赠动作解除附身时结束。附身结束时，[[lookup @name lowcase]] 会出现在目标 5 尺内一处未占据空间，且目标在 24 小时内免疫此[[lookup @name lowcase]] 的附身。</p><p class=\"feature\"><em>成功：</em>目标在接下来 24 小时内免疫[[lookup @name lowcase]] 的附身。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Humanioid"
+              "affects": {
+                "special": "Humanioid"
+              }
             }
           },
           "effects": {
@@ -12848,7 +12926,9 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标非亡灵且非精灵，其承受以下效应。</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=u64Kjp19EAOJoLeo]]。</p><p><em>失败：</em>目标陷入 &Reference[Paralyzed apply=false] 状态，直至其下一回合结束。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "that isn’t an Undead or elf"
+              "affects": {
+                "special": "that isn’t an Undead or elf"
+              }
             }
           },
           "effects": {
@@ -12954,8 +13034,7 @@
       "items": {
         "Bloodied Fury": {
           "name": "浴血狂怒",
-          "description": "<p>[[lookup @name lowercase]] 在&Reference[Bloodied]期间进行的攻击检定具有优势。</p>",
-          "requirements": "While Bloodied"
+          "description": "<p>[[lookup @name lowercase]] 在&Reference[Bloodied]期间进行的攻击检定具有优势。</p>"
         },
         "Gore": {
           "name": "顶撞",
@@ -12966,7 +13045,9 @@
             },
             "Moving Attack": {
               "name": "移动攻击",
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             }
           },
           "effects": {
@@ -13016,7 +13097,9 @@
           "description": "<p><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，单一 [[lookup @range.value activity=IgOMjRxAt7UISkJq]] 尺内[[lookup @name lowercase]] 可见的体型[[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]]的生物。</p><p><em>失败：</em>[[/damage average]] 伤害，且目标陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -13044,7 +13127,9 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过中型，则其还会被双爪之一擒抱，陷入&Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -13081,7 +13166,9 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标生物体型[[lookup @target.affects.special activity=xWlMeXFjELfSUWX9]] ，则其陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。受擒期间，目标还会陷入 &Reference[Restrained apply=false] 状态且不能成为 [[lookup @name lowcase]] 尾击的目标。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -13193,11 +13280,15 @@
           "activities": {
             "Damage: Swallowed": {
               "name": "伤害：吞咽",
-              "affectsSpecial": "Swallowed by the behir"
+              "affects": {
+                "special": "Swallowed by the behir"
+              }
             },
             "Swallowed": {
               "name": "吞下",
-              "affectsSpecial": "Small or smaller"
+              "affects": {
+                "special": "Small or smaller"
+              }
             }
           },
           "effects": {
@@ -13222,11 +13313,15 @@
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了 20+ 尺且目标生物体型不超过大型，则目标额外受到[[/damage 2d4 bludgeoning average]]伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Moving Attack": {
               "name": "移动攻击",
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             }
           },
           "effects": {
@@ -13311,8 +13406,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Talons": {
           "name": "禽爪",
@@ -13373,8 +13467,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -13425,18 +13518,21 @@
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]],。若巨海马在此次攻击前立即向着该目标直线移动了 20+ 尺，则改为[[/damage average activity=YI7aqJ7iiFSYAT7z]]伤害。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             },
             "Moving Attack": {
               "name": "移动攻击",
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             }
           }
         },
         "Bubble Dash": {
           "name": "泡泡急行",
           "description": "<p>若 [[lookup @name lowercase]] 身处水下，其移动至多等于其游泳速度一半的距离且不会引发&Reference[Opportunity Attacks]{借机攻击}。</p>",
-          "requirements": "While underwater",
           "activities": {
             "Expand Use": {
               "name": "耗用",
@@ -13629,8 +13725,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Gouge": {
           "name": "喙凿",
@@ -13650,8 +13745,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Sting": {
           "name": "钉刺",
@@ -13767,7 +13861,9 @@
           "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需法术成分并使用智力作为施法属性（法术豁免DC 18，法术攻击命中 +10）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>（手是隐形的）</p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplNondetecti]</em>（仅自身），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]</em></p>",
           "activities": {
             "dzcG38FYw5dEBmlQ": {
-              "affectsSpecial": "self only"
+              "affects": {
+                "special": "self only"
+              }
             }
           }
         },
@@ -13859,7 +13955,9 @@
           "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需法术成分并使用智力作为施法属性（法术豁免DC 13）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>（手是隐形的）</p><p class=\"feature-trait\"><strong>每项2/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplNondetecti]</em>（仅自身）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTelekinesi]</em></p>",
           "activities": {
             "EfpDHlduZcRFqEeb": {
-              "affectsSpecial": "self only"
+              "affects": {
+                "special": "self only"
+              }
             }
           }
         },
@@ -14254,8 +14352,7 @@
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -14291,7 +14388,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "Grappled creature"
+              "affects": {
+                "special": "Grappled creature"
+              }
             }
           }
         },
@@ -14558,7 +14657,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "that has the Rampage Bonus Action"
+              "affects": {
+                "special": "that has the Rampage Bonus Action"
+              }
             }
           }
         }
@@ -14588,7 +14689,9 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]，若[[lookup @name lowercase]] 在此次攻击前立即向着目标直线移动了 20+ 尺，则改为[[/damage average activity=kJRbpcMr4MaYs4JL]] 伤害。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             },
             "Moving Attack": {
               "name": "移动攻击"
@@ -14657,7 +14760,9 @@
             "Expend Use": {
               "name": "耗用",
               "condition": "一名地精可见的生物对其进行攻击检定。",
-              "affectsSpecial": "a Small or Medium ally"
+              "affects": {
+                "special": "a Small or Medium ally"
+              }
             }
           }
         }
@@ -14929,8 +15034,7 @@
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -14969,7 +15073,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "rangeSpecial": "half its Speed"
+              "range": {
+                "special": "half its Speed"
+              }
             }
           }
         }
@@ -15068,7 +15174,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -15112,10 +15217,14 @@
           "description": "<p class=\"feature\">史拉蟾施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC 16）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em>（仅自身）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMajorImage]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCloudkill0]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFly0000000]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em>（仅自身）, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]</em></p>",
           "activities": {
             "9pXFoeOCq2ladPd5": {
-              "affectsSpecial": "self only"
+              "affects": {
+                "special": "self only"
+              }
             },
             "TFrL5zSj1PrBmorn": {
-              "affectsSpecial": "self only"
+              "affects": {
+                "special": "self only"
+              }
             }
           }
         },
@@ -15237,7 +15346,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "shape-shifts into a Small or Medium Humanoid"
+              "affects": {
+                "special": "shape-shifts into a Small or Medium Humanoid"
+              }
             }
           }
         }
@@ -15372,7 +15483,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -15504,7 +15617,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -15548,7 +15660,9 @@
           "description": "<p class=\"feature\"> [[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]，法术攻击命中 +7）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]</em>（仅自身）</p>",
           "activities": {
             "4awkwEg1WnDM1f5N": {
-              "affectsSpecial": "self only"
+              "affects": {
+                "special": "self only"
+              }
             }
           }
         },
@@ -15623,7 +15737,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "shape-shifts into a Small or Medium Humanoid"
+              "affects": {
+                "special": "shape-shifts into a Small or Medium Humanoid"
+              }
             }
           }
         }
@@ -15656,7 +15772,9 @@
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage extended]]。如果目标生物体型[[lookup @target.affects.special activity=MEc8vUTPipCkqjyq]] ，目标将被触须怪两只触手之一擒抱，陷入 &Reference[Grappled apply=false]状态（逃脱DC [[lookup @skills.ath.passive]]）。此外，目标还将承受以下效应：</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.formula activity=MEc8vUTPipCkqjyq]]。</p><p><em>失败：</em> 目标将陷入 &Reference[Poisoned apply=false] 状态，并在其回合结束时重复豁免，成功则终止其身上的该效应。1 分钟后，其豁免自动成功。 中毒期间，目标陷入 &Reference[Paralyzed apply=false] 状态。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -15965,8 +16083,7 @@
       "items": {
         "Blight Seeds": {
           "name": "枯萎之种",
-          "description": "<p>当 [[lookup @name lowercase]] 完成一次长休时，其会把 [[/r 1d6#Seeds expelled]]颗种子播撒到 30 尺内的地面上的未占据空间。24 小时后，这些种子会成长为受 [[lookup @name lowercase]] 控制的生物。为每颗种子投掷 1d8，以决定其变为什么生物：</p><p>@Embed[Compendium.dnd-monster-manual.tables.RollTable.mmBlightSeedCrea rollable classes=\"caption-top\"]</p>",
-          "requirements": "Finishes a Long Rest"
+          "description": "<p>当 [[lookup @name lowercase]] 完成一次长休时，其会把 [[/r 1d6#Seeds expelled]]颗种子播撒到 30 尺内的地面上的未占据空间。24 小时后，这些种子会成长为受 [[lookup @name lowercase]] 控制的生物。为每颗种子投掷 1d8，以决定其变为什么生物：</p><p>@Embed[Compendium.dnd-monster-manual.tables.RollTable.mmBlightSeedCrea rollable classes=\"caption-top\"]</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -15987,7 +16104,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Huge or smaller creature"
+              "affects": {
+                "special": "one Huge or smaller creature"
+              }
             },
             "Damage: Grappled": {
               "name": "伤害：擒抱"
@@ -16081,7 +16200,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "Humanoid and Giant"
+              "affects": {
+                "special": "Humanoid and Giant"
+              }
             }
           },
           "effects": {
@@ -16103,7 +16224,9 @@
           "description": "<p class=\"feature\"><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=xmF8v1o2HyVyepb6]]，在 [[lookup @name lowcase]] 的空间中施展法术的所有生物。</p><p><em>失败：</em>该法术失败并被浪费。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "that casts a spell"
+              "affects": {
+                "special": "that casts a spell"
+              }
             }
           }
         },
@@ -16158,8 +16281,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -16219,8 +16341,7 @@
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -16304,8 +16425,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -16364,7 +16484,6 @@
         "Aura of Authority": {
           "name": "威权灵光",
           "description": "<p>只要 [[lookup @name lowercase]] 未陷入&Reference[Incapacitated apply=false]状态，则其与其身处源自 [[lookup @name lowercase]] 的 [[lookup @target.template.size activity=dE4lg9tZyXtoCb5x]] 尺光环区域内的盟友进行攻击检定与豁免时具有优势。 </p>",
-          "requirements": "Not Incapacitated",
           "activities": {
             "Expend Use": {
               "name": "耗用",
@@ -16409,7 +16528,6 @@
         "Aura of Authority": {
           "name": "威权灵光",
           "description": "<p>只要 [[lookup @name lowercase]] 未陷入&Reference[Incapacitated apply=false]状态，则其与其身处源自 [[lookup @name lowercase]] 的 [[lookup @target.template.size activity=dE4lg9tZyXtoCb5x]] 尺光环区域内的盟友进行攻击检定与豁免时具有优势。 </p>",
-          "requirements": "Not Incapacitated",
           "activities": {
             "Expend Use": {
               "name": "耗用",
@@ -16464,8 +16582,7 @@
         },
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         }
       }
     },
@@ -16526,8 +16643,7 @@
       "items": {
         "Diabolical Restoration": {
           "name": "魔鬼复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Nine Hells"
+          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -16624,8 +16740,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -16640,8 +16755,7 @@
       "items": {
         "Diabolical Restoration": {
           "name": "魔鬼复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Nine Hells"
+          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -16705,7 +16819,6 @@
         "Death Burst": {
           "name": "自爆",
           "description": "<p>[[lookup @name lowercase]] [[lookup @activation.condition activity=1SfqWSp7RSyHgG4b]]爆炸。</p><p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域内的所有生物。</p><p><em>失败： </em>[[/damage average]]伤害。</p><p><em>成功：</em> 半伤。</p>",
-          "requirements": "When it dies",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -16955,7 +17068,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Small or Medium creature within 5 feet that has the Incapacitated condition, is a Humanoid or Beast, and has 10 Hit Points or fewer."
+              "affects": {
+                "special": "one Small or Medium creature within 5 feet that has the Incapacitated condition, is a Humanoid or Beast, and has 10 Hit Points or fewer."
+              }
             }
           },
           "effects": {
@@ -17003,12 +17118,18 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "Large or smaller creature",
-              "rangeSpecial": "In the creature's space"
+              "affects": {
+                "special": "Large or smaller creature"
+              },
+              "range": {
+                "special": "In the creature's space"
+              }
             },
             "Damage: Grappled": {
               "name": "伤害：擒抱",
-              "affectsSpecial": "The creature that is grappled"
+              "affects": {
+                "special": "The creature that is grappled"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -17085,8 +17206,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -17184,8 +17304,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Rend": {
           "name": "撕裂",
@@ -17329,13 +17448,11 @@
         },
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         }
       }
     },
@@ -17392,8 +17509,12 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "Large or smaller creature",
-              "rangeSpecial": "that isn’t in the air"
+              "affects": {
+                "special": "Large or smaller creature"
+              },
+              "range": {
+                "special": "that isn’t in the air"
+              }
             }
           },
           "effects": {
@@ -17418,11 +17539,15 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Large or smaller creature Grappled"
+              "affects": {
+                "special": "one Large or smaller creature Grappled"
+              }
             },
             "Damage: Swallowed": {
               "name": "伤害：吞咽",
-              "affectsSpecial": "Swallowed by the behir"
+              "affects": {
+                "special": "Swallowed by the behir"
+              }
             },
             "Regurgitate: Save": {
               "name": "吐出：豁免"
@@ -17493,8 +17618,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Sticky Shield": {
           "name": "粘性盾牌",
@@ -17503,11 +17627,15 @@
             "Save": {
               "name": "豁免",
               "condition": "一名生物以武器进行的近战攻击检定对寇涛失手。",
-              "affectsSpecial": "the triggering creature"
+              "affects": {
+                "special": "the triggering creature"
+              }
             },
             "Free Weapon Check": {
               "name": "挣脱武器检定",
-              "affectsSpecial": "the triggering creature"
+              "affects": {
+                "special": "the triggering creature"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -17525,7 +17653,9 @@
           "description": "<p><em>敏捷豁免检定：</em> DC [[lookup @save.dc.formula activity=MxEs7KnCVGemObHx]], 单一 [[lookup @range.value activity=MxEs7KnCVGemObHx]] 尺内 [[lookup @name lowcase]] 可见的[[lookup @target.affects.special activity=MxEs7KnCVGemObHx]]的生物。</p><p><em>失败：</em> 目标陷入 &Reference[Restrained apply=false] 状态直到该捕网被破坏（AC 10；HP 5；免疫钝击，毒素和心灵伤害）。一名生物可以执行动作以进行一次 [[/skill ath 10]]检定来尝试解救自身或位于自身 5 尺内困在捕网中的其他生物，成功则摧毁捕网。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -17551,8 +17681,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -17674,7 +17803,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -17725,8 +17856,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -17760,8 +17890,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Pincer Staff": {
           "name": "钳杖",
@@ -17830,7 +17959,9 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标非亡灵且非精灵，其承受以下效应。</p><p><em>体质豁免检定：</em> DC[[lookup @save.dc.value activity=fDMRlni8W3d3QoOD]]。</p><p><em>失败：</em>目标陷入 &Reference[Paralyzed apply=false] 状态，直至其下一回合结束。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "that isn’t an Undead or elf"
+              "affects": {
+                "special": "that isn’t an Undead or elf"
+              }
             }
           },
           "effects": {
@@ -17989,7 +18120,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -18301,7 +18434,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -18346,7 +18481,9 @@
           "description": "<p class=\"feature\">[[lookup @name lowercase]] 传送至多 [[lookup @range.value activity=zvj61Na7MlcIN2xw]] 尺至一处其可见的未占据空间，位于其离开的空间 [[lookup @target.template.size activity=zvj61Na7MlcIN2xw]] 尺内的所有生物受到 [[/damage average]]伤害。</p>",
           "activities": {
             "damage": {
-              "rangeSpecial": "to an unoccupied space it can see"
+              "range": {
+                "special": "to an unoccupied space it can see"
+              }
             }
           }
         },
@@ -18398,8 +18535,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Running Leap": {
           "name": "助跑起跳",
@@ -18581,7 +18717,9 @@
           "description": "<p>[[lookup @name lowercase]] 向一名其可见的敌人直线移动至多等于其速度一半的距离。 </p>",
           "activities": {
             "utility": {
-              "rangeSpecial": "its Speed or Swim Speed"
+              "range": {
+                "special": "its Speed or Swim Speed"
+              }
             }
           }
         }
@@ -18895,7 +19033,6 @@
         "Death Burst": {
           "name": "自爆",
           "description": "<p>[[lookup @name lowercase]] 在死亡时爆炸。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域内的所有生物。</p><p><em>失败： </em>[[/damage average]]伤害。</p><p><em>成功：</em> 半伤。</p>",
-          "requirements": "When it dies",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -18920,7 +19057,6 @@
         "Death Burst": {
           "name": "自爆",
           "description": "<p>[[lookup @name lowercase]] 在死亡时爆炸。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域内的所有生物。</p><p><em>失败： </em>[[/damage average]]伤害。</p><p><em>成功：</em> 半伤。</p>",
-          "requirements": "When it dies",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -19067,8 +19203,7 @@
         },
         "Elemental Restoration": {
           "name": "元素重生",
-          "description": "p class=\"feature\">若[[lookup @name lowercase]] [[lookup @item.requirements]] 于水元素位面之外死去，其身躯会化为海水，并在[[/r 1d4#天]] 天后于水元素位面某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "dies outside the Elemental Plane of Water"
+          "description": "p class=\"feature\">若[[lookup @name lowercase]] [[lookup @item.requirements]] 于水元素位面之外死去，其身躯会化为海水，并在[[/r 1d4#天]] 天后于水元素位面某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Wishes": {
           "name": "祈愿",
@@ -19279,8 +19414,7 @@
         },
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Reactive": {
           "name": "机敏",
@@ -19304,7 +19438,9 @@
           "description": "<p><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，单一 [[lookup @range.value activity=IgOMjRxAt7UISkJq]] 尺内[[lookup @name lowercase]] 可见的体型[[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]]的生物。</p><p><em>失败：</em>[[/damage average]]伤害，且目标陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -19390,7 +19526,9 @@
             },
             "Second Save": {
               "name": "再次豁免",
-              "affectsSpecial": "Restrained creature"
+              "affects": {
+                "special": "Restrained creature"
+              }
             }
           },
           "effects": {
@@ -19519,7 +19657,9 @@
             "Save": {
               "name": "豁免",
               "chatFlavor": "失败：目标直线推离 30 尺。",
-              "affectsSpecial": "enters a space"
+              "affects": {
+                "special": "enters a space"
+              }
             }
           }
         }
@@ -19575,8 +19715,7 @@
       "items": {
         "Fiendish Restoration": {
           "name": "邪魔复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside of Gehanna"
+          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -19660,7 +19799,6 @@
         "Adhesive (Object Form Only)": {
           "name": "粘附（仅物件形态）",
           "description": "<p class=\"feature\"> [[lookup @name lowercase]] 粘附在任何触碰到其的东西上。体型不超过巨型的被粘附生物陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。为逃脱此擒抱进行的属性检定具有劣势。</p>",
-          "requirements": "Object Form Only",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -19707,7 +19845,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "Medium or Small"
+              "affects": {
+                "special": "Medium or Small"
+              }
             }
           }
         }
@@ -19731,7 +19871,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "that is Grappled by the mind flayer’s Tentacles"
+              "affects": {
+                "special": "that is Grappled by the mind flayer’s Tentacles"
+              }
             }
           }
         },
@@ -19770,7 +19912,9 @@
           "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需法术成分并使用智力作为施法属性（法术豁免 DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDominateMo]</em>， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em>（仅自身）</p>",
           "activities": {
             "OaHLX70qD1KnpvzM": {
-              "affectsSpecial": "self only"
+              "affects": {
+                "special": "self only"
+              }
             }
           }
         },
@@ -19850,7 +19994,9 @@
           "description": "<p class=\"feature\">[[lookup @name lowercase]]施展以下一道法术，无需法术成分并使用智力作为施法属性（法术豁免 DC [[lookup @attributes.spelldc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectThou]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageHand00]</em>（手是隐形的）</p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplClairvoyan]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDimensionD]， @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]</em> （5 环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLightningB]{Lightning Bolt}</em>（5 环版本）， <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPlaneShift]</em> （仅自身），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSending000]</em></p>",
           "activities": {
             "oytkzeJijaCmYRx1": {
-              "affectsSpecial": "self only"
+              "affects": {
+                "special": "self only"
+              }
             }
           }
         },
@@ -20037,7 +20183,9 @@
             "Moving Attack": {
               "name": "移动攻击",
               "condition": "移动了 10+ 尺",
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             }
           },
           "effects": {
@@ -20063,7 +20211,9 @@
             },
             "Moving Attack": {
               "name": "移动攻击",
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             }
           },
           "effects": {
@@ -20220,7 +20370,6 @@
         "Death Burst": {
           "name": "自爆",
           "description": "<p>[[lookup @name lowercase]] 在死亡时爆炸。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域内的所有生物。</p><p><em>失败：</em>目标陷入 &Reference[Restrained apply=false] 状态直至[[lookup @name lowercase]]的下一回合结束。</p>",
-          "requirements": "When it dies",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -20454,7 +20603,9 @@
             "Expend Use": {
               "name": "耗用",
               "condition": "攻击生物被一次攻击检定命中。",
-              "affectsSpecial": "to an unoccupied space it can see"
+              "affects": {
+                "special": "to an unoccupied space it can see"
+              }
             }
           },
           "effects": {
@@ -20519,8 +20670,7 @@
       "items": {
         "Sun Sickness": {
           "name": "厌日症",
-          "description": "<p>[[lookup @name lowercase]] 身处阳光下，其D20检定具有劣势。[[lookup @name lowercase]] 待在阳光下超过 1 小时就会死亡。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>[[lookup @name lowercase]] 身处阳光下，其D20检定具有劣势。[[lookup @name lowercase]] 待在阳光下超过 1 小时就会死亡。</p>"
         },
         "Slam": {
           "name": "猛击",
@@ -20564,8 +20714,7 @@
       "items": {
         "Sun Sickness": {
           "name": "厌日症",
-          "description": "<p>[[lookup @name lowercase]] 身处阳光下，其D20检定具有劣势。[[lookup @name lowercase]] 待在阳光下超过 1 小时就会死亡。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>[[lookup @name lowercase]] 身处阳光下，其D20检定具有劣势。[[lookup @name lowercase]] 待在阳光下超过 1 小时就会死亡。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -20614,7 +20763,9 @@
           "description": "<p>The [[lookup @name]] releases spores at a Medium or Small corpse within [[lookup @range.value activity=ruh9QGSrxWb57Iuf]] feet of it that wasn't a Construct or an Undead. In 24 hours, the corpse rises as a <strong>Myconid Spore Servant</strong>. The corpse stays animate for [[/r 1d4 + 1]] weeks or until destroyed, and it can't be animated again in this way.</p>",
           "activities": {
             "summon": {
-              "affectsSpecial": "Medium or Small corpse that is not a Construct or Undead"
+              "affects": {
+                "special": "Medium or Small corpse that is not a Construct or Undead"
+              }
             }
           }
         }
@@ -20638,8 +20789,7 @@
       "items": {
         "Sun Sickness": {
           "name": "厌日症",
-          "description": "<p>[[lookup @name lowercase]] 身处阳光下，其D20检定具有劣势。[[lookup @name lowercase]] 待在阳光下超过 1 小时就会死亡。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>[[lookup @name lowercase]] 身处阳光下，其D20检定具有劣势。[[lookup @name lowercase]] 待在阳光下超过 1 小时就会死亡。</p>"
         },
         "Slam": {
           "name": "猛击",
@@ -20668,8 +20818,7 @@
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -20718,7 +20867,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "within 10 feet of the triggering creature"
+              "affects": {
+                "special": "within 10 feet of the triggering creature"
+              }
             }
           }
         }
@@ -20835,7 +20986,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -20890,10 +21043,11 @@
         "Nightmare Haunting": {
           "name": "噩梦缠身",
           "description": "<p class=\"feature\">若[[lookup @name lowercase]]身处以太位面，其施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDream00000]</em>，使用与施法动作相同的施法属性。只有[[lookup @name lowercase]]能作为法术的信使，并且目标必须是一名[[lookup @name lowercase]]可见的身处物质位面的生物。若目标处于法术<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbEvilAndGoodPr]</em>效应下或身处法术<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicCircl]</em>中，法术失败并被浪费。</p><p class=\"feature\">若目标因此次<em>托梦术</em>受到伤害，目标的生命值上限减少等于此次伤害的数值。其灵魂会被困入[[lookup @name lowercase]]的灵魂袋中，并且直至目标的灵魂被释放，其无法被复活。</p>",
-          "requirements": "Requires Soul Bag",
           "activities": {
             "4GGGVhvLSrHgHdb9": {
-              "affectsSpecial": "on the Material Plane"
+              "affects": {
+                "special": "on the Material Plane"
+              }
             }
           }
         },
@@ -21220,7 +21374,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -21291,8 +21447,7 @@
       "items": {
         "Fiendish Restoration": {
           "name": "邪魔复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside of Gehanna"
+          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -21439,7 +21594,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -21569,7 +21723,9 @@
           "activities": {
             "save": {
               "condition": "每当中毒生物完成长休时",
-              "affectsSpecial": "Poisoned target"
+              "affects": {
+                "special": "Poisoned target"
+              }
             }
           },
           "effects": {
@@ -21600,7 +21756,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "each creature Grappled"
+              "affects": {
+                "special": "each creature Grappled"
+              }
             }
           },
           "effects": {
@@ -21618,8 +21776,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Talons": {
           "name": "禽爪",
@@ -21920,8 +22077,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Talons": {
           "name": "禽爪",
@@ -21937,7 +22093,9 @@
             "Moving Attack": {
               "name": "移动攻击",
               "condition": "移动了 30+ 尺",
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             }
           }
         },
@@ -22018,8 +22176,12 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "directly underneath the attacking creature",
-              "rangeSpecial": "The attacking creature falls"
+              "affects": {
+                "special": "directly underneath the attacking creature"
+              },
+              "range": {
+                "special": "The attacking creature falls"
+              }
             }
           }
         }
@@ -22193,15 +22355,16 @@
       "items": {
         "Diabolical Restoration": {
           "name": "魔鬼复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Nine Hells"
+          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Fear Aura": {
           "name": "恐惧灵光",
           "description": "<p class=\"feature\">只要未陷入失能状态，[[lookup @name lowercase]]在 [[lookup @target.template.size activity=oT8238p9jXwVy76c]] 尺光环区域内散发灵光。</p><p class=\"feature\"><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=oT8238p9jXwVy76c]]，在光环区域内开始其回合的任意敌人。</p><p class=\"feature\"><em>失败：</em> 目标陷入 &Reference[Frightened apply=false] 状态直至其下一回合开始。</p><p class=\"feature\"><em>成功：</em> 目标在 24 小时内免疫此[[lookup @name lowercase]]的恐惧灵光。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "any enemy that starts its turn in the aura"
+              "affects": {
+                "special": "any enemy that starts its turn in the aura"
+              }
             }
           },
           "effects": {
@@ -22670,11 +22833,15 @@
           "activities": {
             "Dismissal": {
               "name": "驱离",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Break Enchantment": {
               "name": "破咒",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Cast": {
               "name": "施展"
@@ -23121,7 +23288,9 @@
             "Moving Attack": {
               "name": "移动攻击",
               "condition": "移动了 20+ 尺",
-              "affectsSpecial": "Huge or smaller"
+              "affects": {
+                "special": "Huge or smaller"
+              }
             }
           },
           "effects": {
@@ -23232,8 +23401,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -23264,7 +23432,9 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]，若目标生物体型不超过大型，其陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -23287,11 +23457,15 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Large or smaller creature Grappled"
+              "affects": {
+                "special": "one Large or smaller creature Grappled"
+              }
             },
             "Damage: Swallowed": {
               "name": "伤害：吞咽",
-              "affectsSpecial": "Swallowed by the behir"
+              "affects": {
+                "special": "Swallowed by the behir"
+              }
             },
             "Regurgitate: Save": {
               "name": "吐出：豁免"
@@ -23317,8 +23491,7 @@
       "items": {
         "Bloodied Fury": {
           "name": "浴血狂怒",
-          "description": "<p>[[lookup @name lowercase]] 在&Reference[Bloodied]期间进行的攻击检定具有优势。</p>",
-          "requirements": "While Bloodied"
+          "description": "<p>[[lookup @name lowercase]] 在&Reference[Bloodied]期间进行的攻击检定具有优势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -23347,8 +23520,7 @@
       "items": {
         "Bloodied Fury": {
           "name": "浴血狂怒",
-          "description": "<p>[[lookup @name lowercase]] 在&Reference[Bloodied]期间进行的攻击检定具有优势。</p>",
-          "requirements": "While Bloodied"
+          "description": "<p>[[lookup @name lowercase]] 在&Reference[Bloodied]期间进行的攻击检定具有优势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -23571,11 +23743,15 @@
           "activities": {
             "Dismissal": {
               "name": "驱离",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Break Enchantment": {
               "name": "破咒",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Cast": {
               "name": "施展"
@@ -23622,8 +23798,7 @@
         },
         "Fiendish Restoration": {
           "name": "邪魔复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside of Gehanna"
+          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -23851,7 +24026,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -23876,7 +24050,9 @@
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若目标为类人且未被[[lookup @name lowercase]]诅咒，承受以下效应。</p><p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=C5wp4BSKfYlbMurm]]。</p><p><em>失败：</em>目标在不知不觉间被诅咒，且一颗史拉蟾微卵被植入其肉体。移除该诅咒将会摧毁这颗卵。</p><p class=\"feature\">卵会在 [[/r 2d4*10#完成孕育]]{2d4 × 10}天后完成孕育。诞生前 24 小时，被诅咒的目标会感到不适；它的速度减半，并且D20检定具有劣势。这段时期结束后，卵将转变为一条<strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSlaadTadpole00]{史拉蟾蝌蚪}</strong>，从宿主的体内啮食而出并将其杀死。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Humanoid"
+              "affects": {
+                "special": "Humanoid"
+              }
             },
             "Slaad Tadpole": {
               "name": "史拉蟾蝌蚪",
@@ -23902,8 +24078,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Water Breathing": {
           "name": "水中呼吸",
@@ -23929,7 +24104,9 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]，若目标生物体型不超过大型，其陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -23948,11 +24125,15 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Large or smaller creature Grappled"
+              "affects": {
+                "special": "one Large or smaller creature Grappled"
+              }
             },
             "Damage: Swallowed": {
               "name": "伤害：吞咽",
-              "affectsSpecial": "Swallowed by the behir"
+              "affects": {
+                "special": "Swallowed by the behir"
+              }
             },
             "Regurgitate: Save": {
               "name": "吐出：豁免"
@@ -23979,7 +24160,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>[[lookup @name lowercase]] 在其回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 生命值。若[[lookup @name lowercase]]受到火焰或光耀伤害，则该特质在其下一回合开始时无法生效。[[lookup @name lowercase]]的躯体只有在以 0 生命值开始其回合且无法再生时才会被摧毁。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -24052,7 +24232,9 @@
             },
             "Moving Attack": {
               "name": "移动攻击",
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             }
           },
           "effects": {
@@ -24097,7 +24279,9 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]，若目标生物体型不超过巨型，其被[[lookup @name lowercase]]的两只禽爪擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且其受擒期间陷入 &Reference[Restrained apply=false] 状态。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Huge or smaller"
+              "affects": {
+                "special": "Huge or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -24116,7 +24300,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "If the roc has a creature Grappled"
+              "affects": {
+                "special": "If the roc has a creature Grappled"
+              }
             }
           }
         }
@@ -24176,7 +24362,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "ferrous metal"
+              "affects": {
+                "special": "ferrous metal"
+              }
             }
           }
         },
@@ -24198,7 +24386,9 @@
           "description": "<p>[[lookup @name lowercase]] 从位于其 [[lookup @range.value activity=dcSC7EuknnM0uoqY]] 尺内的一名生物身上，选择一件其着装或携带的[[lookup @target.affects.special activity=dcSC7EuknnM0uoqY]]物件（护甲或武器）为目标。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=dcSC7EuknnM0uoqY]]，着装或携带此物件的生物。</p><p><em>失败：</em>物件提供的AC（护甲）或进行的攻击检定（武器）获得 -1 减值。护甲AC降至 10、武器减值达到 -5 时，物件被摧毁。对护甲和武器施展法术<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMending000]</em> 可以移除该减值。</p><section class=\"secret\" id=\"secret-4QbvfWBnYI6ImcGC\">    <p><strong>Foundry Note</strong></p>    <p>该特性提供一种“<strong>受损”</strong>附魔效应，会对目标物件进行修改。由于装备减值可多次施加，所以附魔需要从该物件的“效应”选项卡拖到目标物品卡上。</p></section>",
           "activities": {
             "save": {
-              "affectsSpecial": "nonmagical metal"
+              "affects": {
+                "special": "nonmagical metal"
+              }
             }
           },
           "effects": {
@@ -24214,8 +24404,12 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "that isn’t being worn or carried",
-              "rangeSpecial": "touches a nonmagical metal object"
+              "affects": {
+                "special": "that isn’t being worn or carried"
+              },
+              "range": {
+                "special": "touches a nonmagical metal object"
+              }
             }
           }
         },
@@ -24455,7 +24649,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "target is visible"
+              "affects": {
+                "special": "target is visible"
+              }
             }
           }
         }
@@ -24488,7 +24684,9 @@
           "description": "<p><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，单一 [[lookup @range.value activity=IgOMjRxAt7UISkJq]] 尺内[[lookup @name lowercase]] 可见的体型[[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]]的生物。</p><p><em>失败：</em>[[/damage average]]伤害，且目标陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -24567,7 +24765,9 @@
           "description": "<p>[[lookup @name lowercase]] 移动至多等于其速度的距离且不会引发&Reference[OpportunityAttacks]。在[[lookup @name lowercase]]移动过程中，火焰会充斥于源自 [[lookup @name lowercase]]的 [[lookup @target.template.size activity=MUbX28KmoDF9sC5b]] 尺光环区域内。当光环进入一个生物所处空间时，该生物受到 [[/damage average]]伤害。每名生物每回合仅受一次此伤害。 </p>",
           "activities": {
             "damage": {
-              "affectsSpecial": "can take this damage only once per turn"
+              "affects": {
+                "special": "can take this damage only once per turn"
+              }
             }
           }
         }
@@ -24877,7 +25077,9 @@
             },
             "Create Sensor": {
               "name": "创造探测器",
-              "affectsSpecial": "at target location or within 10 feet of target creature"
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
             }
           },
           "effects": {
@@ -24900,7 +25102,9 @@
           "description": "<p class=\"feature\"><em>感知豁免检定：</em> DC [[lookup @save.dc.value activity=FR0ETDHBas1Z5LfF]], 任何在 [[lookup @name lowercase]] [[lookup @range.value activity=FR0ETDHBas1Z5LfF]] 尺内开始其回合，并且能够看到 [[lookup @name lowercase]] 的真实形态的野兽和类人生物。</p><p class=\"feature\"><em>失败：</em> 目标陷入 &Reference[Frightened apply=false] 状态直至其下一回合开始。</p><p class=\"feature\"><em>成功：</em> 目标在 24 小时内免疫此 [[lookup @name lowercase]] 的丑恶容貌特质。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Beast or Humanoid"
+              "affects": {
+                "special": "Beast or Humanoid"
+              }
             }
           },
           "effects": {
@@ -24920,7 +25124,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Frightened creature"
+              "affects": {
+                "special": "one Frightened creature"
+              }
             }
           }
         },
@@ -24959,7 +25165,6 @@
         "Bubble Dash": {
           "name": "泡泡疾行",
           "description": "<p>若 [[lookup @name lowercase]] 身处水下，其移动至多等于其游泳速度的距离且不会引发&Reference[Opportunity Attacks]{借机攻击}。</p>",
-          "requirements": "While underwater",
           "activities": {
             "utility": {
               "condition": "身处水下"
@@ -24979,8 +25184,7 @@
         },
         "Sunlight Weakness": {
           "name": "日光弱点",
-          "description": "<p class=\"feature\">若[[lookup @name lowercase]]身处阳光下，其进行的D20检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p class=\"feature\">若[[lookup @name lowercase]]身处阳光下，其进行的D20检定具有劣势。</p>"
         },
         "Draining Swipe": {
           "name": "汲命击",
@@ -25040,8 +25244,7 @@
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Incorporeal Movement": {
           "name": "虚体移动",
@@ -25089,8 +25292,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -25210,8 +25412,7 @@
       "items": {
         "Lightning Absorption": {
           "name": "闪电吸收",
-          "description": "<p>每当 [[lookup @name lowercase]] 将受闪电伤害时，其恢复等于闪电伤害数值的生命值。</p>",
-          "requirements": "Subjected to Lightning damage"
+          "description": "<p>每当 [[lookup @name lowercase]] 将受闪电伤害时，其恢复等于闪电伤害数值的生命值。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -25232,11 +25433,15 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "Medium or smaller creature"
+              "affects": {
+                "special": "Medium or smaller creature"
+              }
             },
             "Engulfed: Damage": {
               "name": "吞没：伤害",
-              "affectsSpecial": "Engulfed creature"
+              "affects": {
+                "special": "Engulfed creature"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -25263,7 +25468,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -25401,7 +25605,6 @@
         "Death Burst": {
           "name": "自爆-错漏需修改行动",
           "description": "<p>[[lookup @name lowercase]] 在死亡时爆炸。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域内的所有生物。</p><p><em>失败：</em>目标陷入 &Reference[Blinded apply=false] 状态直至[[lookup @name lowercase]]的下一回合结束。</p>",
-          "requirements": "When it dies",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -25534,11 +25737,15 @@
           "activities": {
             "Dismissal": {
               "name": "驱离",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Break Enchantment": {
               "name": "破咒",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Cast": {
               "name": "施展"
@@ -25724,8 +25931,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Life Drain": {
           "name": "吸取生命",
@@ -25933,7 +26139,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "unoccupied space"
+              "affects": {
+                "special": "unoccupied space"
+              }
             }
           }
         },
@@ -26248,7 +26456,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "affectsSpecial": "unoccupied space"
+              "affects": {
+                "special": "unoccupied space"
+              }
             }
           }
         },
@@ -26317,8 +26527,7 @@
       "items": {
         "Flyby": {
           "name": "飞掠",
-          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
-          "requirements": "Flies out of an enemy's reach"
+          "description": "<p>[[lookup @name lowercase]] 飞行离开敌人的触及范围时不会引发 &Reference[OpportunityAttacks]{借机攻击}。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -26350,8 +26559,7 @@
       "items": {
         "Fiendish Restoration": {
           "name": "邪魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 死亡，则其在 [[/r 1d6]] 天后重获生命并恢复全部生命值。只有法术<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWish000000]</em>能阻止该特质生效。</p>",
-          "requirements": "Dies outside of Gehanna"
+          "description": "<p>若[[lookup @name lowercase]] 死亡，则其在 [[/r 1d6]] 天后重获生命并恢复全部生命值。只有法术<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWish000000]</em>能阻止该特质生效。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -26619,13 +26827,11 @@
       "items": {
         "Blurred Form": {
           "name": "朦胧形态",
-          "description": "<p>除非 [[lookup @name lowercase]] 陷入失能状态，否则对其进行的攻击检定具有劣势。</p>",
-          "requirements": "Not Incapacitated"
+          "description": "<p>除非 [[lookup @name lowercase]] 陷入失能状态，否则对其进行的攻击检定具有劣势。</p>"
         },
         "Death Burst": {
           "name": "自爆",
           "description": "<p>[[lookup @name lowercase]] 在死亡时爆炸。</p><p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]]，源自[[lookup @name lowercase]] [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]] 尺光环区域内的所有生物。</p><p><em>失败： </em>[[/damage average]]伤害。</p><p><em>成功：</em> 半伤。</p>",
-          "requirements": "When it dies",
           "activities": {
             "save": {
               "condition": "在死亡时"
@@ -26900,7 +27106,9 @@
             "Save": {
               "name": "豁免",
               "chatFlavor": "失败或成功：目标的生命值上限减少等于其受到伤害的数值。",
-              "affectsSpecial": "Charmed by the creature"
+              "affects": {
+                "special": "Charmed by the creature"
+              }
             }
           }
         },
@@ -27306,7 +27514,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "each creature and each object that isn’t being worn or carried"
+              "affects": {
+                "special": "each creature and each object that isn’t being worn or carried"
+              }
             }
           },
           "effects": {
@@ -27322,11 +27532,15 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Large or smaller creature Grappled"
+              "affects": {
+                "special": "one Large or smaller creature Grappled"
+              }
             },
             "Damage: Swallowed": {
               "name": "伤害：吞咽",
-              "affectsSpecial": "Swallowed by the behir"
+              "affects": {
+                "special": "Swallowed by the behir"
+              }
             },
             "Regurgitate: Save": {
               "name": "吐出：豁免"
@@ -27527,8 +27741,7 @@
         },
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         }
       }
     },
@@ -27550,8 +27763,7 @@
         },
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -27595,7 +27807,9 @@
           "description": "<p>The [[lookup @name]] magically animates up to two trees it can see within [[lookup @range.value activity=EceTNjzjKWdrMNAy]] feet of itself. Each tree uses the <strong>Treant</strong> stat block, except it has Intelligence and Charisma scores of 1, it can't speak, and it lacks this action. The tree takes its turn immediately after the treant on the same initiative count, and it obeys the treant. A tree remains animate for 1 day or until it dies, the treant dies, or it is more than 120 feet from the treant. The tree then takes root if possible.</p>",
           "activities": {
             "summon": {
-              "affectsSpecial": "Trees it can see within range"
+              "affects": {
+                "special": "Trees it can see within range"
+              }
             }
           },
           "effects": {
@@ -27631,7 +27845,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one Large or smaller creature"
+              "affects": {
+                "special": "one Large or smaller creature"
+              }
             },
             "Damage: Start of Turns": {
               "name": "伤害：回合开始"
@@ -27653,7 +27869,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "Grappled by the blight"
+              "affects": {
+                "special": "Grappled by the blight"
+              }
             }
           }
         }
@@ -27681,7 +27899,9 @@
             },
             "Moving Attack": {
               "name": "移动攻击",
-              "affectsSpecial": "Medium or smaller"
+              "affects": {
+                "special": "Medium or smaller"
+              }
             }
           },
           "effects": {
@@ -27710,8 +27930,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Rend": {
           "name": "撕裂",
@@ -27767,7 +27986,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -27793,7 +28011,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "rangeSpecial": "half its Speed"
+              "range": {
+                "special": "half its Speed"
+              }
             }
           }
         }
@@ -27806,7 +28026,6 @@
         "Regeneration": {
           "name": "再生",
           "description": "<p>若 [[lookup @name lowercase]] 至少拥有 1 点生命值，则其在自己的回合开始时恢复 [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] 点生命值。</p>",
-          "requirements": "At least 1 Hit Point",
           "activities": {
             "heal": {
               "condition": "在其回合开始时，至少拥有 1 点生命值"
@@ -27835,8 +28054,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Claw": {
           "name": "枯枝爪击",
@@ -27891,8 +28109,7 @@
       "items": {
         "Fiendish Restoration": {
           "name": "邪魔复苏",
-          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside of Gehanna"
+          "description": "<p>若 [[lookup @name lowercase]] 死于焦炎火狱之外，其身体会溶解成脓水，并立即在焦炎火狱某处重新生成一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -28227,11 +28444,15 @@
           "activities": {
             "Dismissal": {
               "name": "驱离",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Break Enchantment": {
               "name": "破咒",
-              "affectsSpecial": "Celestial, Elemental, Fey, Fiend, or Undead"
+              "affects": {
+                "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+              }
             },
             "Cast": {
               "name": "施展"
@@ -28296,7 +28517,9 @@
           "activities": {
             "Expend Use": {
               "name": "耗用",
-              "rangeSpecial": "half its speed"
+              "range": {
+                "special": "half its speed"
+              }
             }
           }
         },
@@ -28306,7 +28529,9 @@
           "activities": {
             "Temporary Healing": {
               "name": "临时生命值",
-              "affectsSpecial": "targets itself or one creature"
+              "affects": {
+                "special": "targets itself or one creature"
+              }
             }
           },
           "effects": {
@@ -28377,7 +28602,6 @@
         "Multiattack (Vampire Form Only)": {
           "name": "多重攻击（仅吸血鬼形态）",
           "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmGraveStrike000]] 攻击并使用 [[/item .mmBite0000000000]]。</p>",
-          "requirements": "Vampire Form Only",
           "activities": {
             "Use": {
               "name": "使用"
@@ -28407,7 +28631,9 @@
           "description": "<p class=\"feature\"><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=ngPzlEI5pVSdBv86]]，单一 [[lookup @range.value activity=ngPzlEI5pVSdBv86]] 尺内的自愿或陷入受擒、失能或束缚状态的生物。</p><p><em>失败：</em> [[/damage average]]伤害。目标的生命值上限承受等于所受的暗蚀伤害值的减损，且[[lookup @name lowercase]]恢复等量的生命值。因此伤害生命值降至0并在随后被埋葬的类人生物会在下次日落之时复苏为一只受[[lookup @name lowercase]]控制的<strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmVampireSpawn00]</strong>。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "that is willing or that has the Grappled, Incapacitated, or Restrained condition"
+              "affects": {
+                "special": "that is willing or that has the Grappled, Incapacitated, or Restrained condition"
+              }
             },
             "Vampire Spawn Rises": {
               "name": "唤起初生吸血鬼"
@@ -28533,8 +28759,7 @@
       "items": {
         "Sunlight Hypersensitivity": {
           "name": "日照超敏",
-          "description": "<p class=\"feature\">若[[lookup @name lowercase]] 在阳光下开始其回合，其受到 [[/damage]]伤害。若其身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p class=\"feature\">若[[lookup @name lowercase]] 在阳光下开始其回合，其受到 [[/damage]]伤害。若其身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -28724,7 +28949,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "that isn’t a Construct or an Undead"
+              "affects": {
+                "special": "that isn’t a Construct or an Undead"
+              }
             }
           }
         },
@@ -28882,7 +29109,9 @@
           "description": "<p><em>力量豁免检定：</em> DC [[lookup @save.dc.value activity=YqWqaRXxaKFCH6P8]]，单一 5 尺内体型不超过中型且[[lookup @name lowercase]]可见的生物。</p><p><em>失败：</em> 目标被拉入[[lookup @name lowercase]]所在的空间，并被嫁接到[[lookup @name lowercase]]身上。[[lookup @name lowercase]]同时能嫁接的生物数上限为一。</p><p>被嫁接期间，目标陷入 &Reference[Restrained apply=false] 状态且其进行的体质豁免具有劣势。当[[lookup @name lowercase]]移动时，被嫁接目标也将一并移动。若目标在被嫁接期间死亡，其遗体将被摧毁，且[[lookup @name lowercase]]恢复[[lookup @healing.formula activity=KXQbdk3TH6uZex2L]]点生命值。被嫁接目标自身或位于[[lookup @name lowercase]] 5 尺内的生物，都能够以动作进行一次[[/check ability=str skill=ath dc=@abilities.str.dc format=long]]。检定成功则目标不再被嫁接，并移动至[[lookup @name lowercase]] 5 尺内的一处未占据空间。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Medium or Small"
+              "affects": {
+                "special": "Medium or Small"
+              }
             },
             "heal": {
               "condition": "若目标在被嫁接期间死亡"
@@ -28904,8 +29133,7 @@
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -28933,7 +29161,9 @@
             },
             "Damage While Poisoned": {
               "name": "中毒时伤害",
-              "affectsSpecial": "The target that is poisoned"
+              "affects": {
+                "special": "The target that is poisoned"
+              }
             }
           },
           "effects": {
@@ -28961,8 +29191,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Beak": {
           "name": "喙啄",
@@ -29097,8 +29326,7 @@
         },
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         }
       }
     },
@@ -29184,7 +29412,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "rangeSpecial": "Inside the creature's space"
+              "range": {
+                "special": "Inside the creature's space"
+              }
             },
             "Damage: Start of Turn": {
               "name": "伤害：回合开始"
@@ -29496,8 +29726,7 @@
         },
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -29581,8 +29810,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
@@ -29650,7 +29878,9 @@
           "activities": {
             "Save": {
               "name": "豁免",
-              "affectsSpecial": "one living creature"
+              "affects": {
+                "special": "one living creature"
+              }
             },
             "Wisp: Healing": {
               "name": "鬼火：治疗"
@@ -29676,13 +29906,11 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Dragon-Tooth Blade": {
           "name": "龙牙之刃",
@@ -29701,8 +29929,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -29726,8 +29953,7 @@
       "items": {
         "Pack Tactics": {
           "name": "集群战术",
-          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>",
-          "requirements": "Ally within 5 feet of attack target"
+          "description": "<p>若 [[lookup @name lowercase]] 的攻击目标生物周围 5 尺范围内存在有至少一个 [[lookup @name lowercase]] 未失能的盟友，则 [[lookup @name lowercase]] 对该生物进行的攻击检定具有优势。</p>"
         },
         "Bite": {
           "name": "啃咬",
@@ -29763,8 +29989,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "日照敏感",
-          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
-          "requirements": "While in sunlight"
+          "description": "<p>若 [[lookup @name lowercase]] 身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>"
         },
         "Life Drain": {
           "name": "吸取生命",
@@ -29851,7 +30076,9 @@
           "description": "<p>[[lookup @name lowercase]] 向一名其可见的敌人直线移动至多等于其速度一半的距离。 </p>",
           "activities": {
             "utility": {
-              "rangeSpecial": "half its Speed or Burrow Speed"
+              "range": {
+                "special": "half its Speed or Burrow Speed"
+              }
             }
           }
         }
@@ -29913,8 +30140,7 @@
       "items": {
         "Demonic Restoration": {
           "name": "恶魔复苏",
-          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>",
-          "requirements": "Dies outside the Abyss"
+          "description": "<p>若[[lookup @name lowercase]] 于无底深渊之外死去，其身躯会化为灰烬，并立即在无底深渊某处获得一具新的身体，以满生命值复活。</p>"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
@@ -29961,7 +30187,9 @@
             "Save": {
               "name": "豁免",
               "condition": "蜡融妖被一次攻击检定命中。",
-              "rangeSpecial": "teleports to an unoccupied space it can see"
+              "range": {
+                "special": "teleports to an unoccupied space it can see"
+              }
             }
           },
           "effects": {
@@ -30108,7 +30336,9 @@
             },
             "2nd Save": {
               "name": "再次豁免",
-              "affectsSpecial": "Creatures who failed the first save"
+              "affects": {
+                "special": "Creatures who failed the first save"
+              }
             }
           },
           "effects": {
@@ -30414,7 +30644,9 @@
           "description": "<p><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，单一 [[lookup @range.value activity=IgOMjRxAt7UISkJq]] 尺内不超过大型的生物。</p><p><em>失败：</em>[[/damage average]]伤害。目标陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p><p><em>成功：</em>仅半伤。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
@@ -30698,7 +30930,9 @@
           "description": "<p><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]]，单一 [[lookup @range.value activity=IgOMjRxAt7UISkJq]] 尺内[[lookup @name lowercase]] 可见的体型[[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]]的生物。</p><p><em>失败：</em>[[/damage average]]伤害，且目标陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]），且目标陷入 &Reference[Restrained apply=false] 状态直至擒抱结束。</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "Large or smaller"
+              "affects": {
+                "special": "Large or smaller"
+              }
             },
             "Escape Check": {
               "name": "逃脱检定"
