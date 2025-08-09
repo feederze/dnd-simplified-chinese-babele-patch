@@ -46,8 +46,8 @@ jobs:
             jq 'del(.mapping)' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
           done
 
-      - name: Update Archive(beta)
-        run: zip -r beta.zip dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
+      - name: Update Archive
+        run: zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
 
       - name: Commit & push changes
         run: |
