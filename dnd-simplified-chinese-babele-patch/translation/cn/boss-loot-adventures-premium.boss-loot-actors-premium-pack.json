@@ -37,7 +37,9 @@
           "description": "<p>幽魂周边60尺内能看见它的非不死生物必须分别进行一次<strong>DC 13 的感知豁免</strong>，豁免失败者将陷入 1 分钟的恐慌状态。若豁免失败且差值为 5 或更低，则目标还将衰老 1d4×10 年。</p><p>该受恐慌目标可以在每个其自身回合结束时重复进行一次该豁免，豁免成功则终止自身的恐慌状态，而该目标也将在未来 24 小时内免疫该幽魂的恐惧面容。该衰老效应产生后的 24 小时内，可用高等复原术抵消。</p><section id=\"secret-D0U8OSR9YzACaR2k\" class=\"secret\"><p>GM Note：在使用此能力前，请确保所选择的目标都是无相应状态免疫的（即那些尚未在豁免检定中成功通过的生物）。这样做可以避免将效应再次施加给已经具有免疫特性的生物。</p></section>",
           "activities": {
             "save": {
-              "affectsSpecial": "自身"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -77,23 +79,19 @@
         },
         "Ethereal Invisibility": {
           "name": "以太隐形",
-          "description": "<p><strong>以太隐形。</strong>魂仆处于隐形状态直至其发动一次攻击。</p>",
-          "requirements": "魂仆"
+          "description": "<p><strong>以太隐形。</strong>魂仆处于隐形状态直至其发动一次攻击。</p>"
         },
         "Incorporeal Movement": {
           "name": "虚体移动",
-          "description": "<section class=\"secret\" id=\"secret-BmVoH80pBSHp6J7V\"><p>魂仆可以如同穿过困难地形一样穿过其他生物和物件。</p><p>如果它在自己的回合结束时仍处在物件内部则受到<strong> [[/roll 1d10]]</strong><em><strong>点力场伤害</strong></em>。</p></section><p>魂仆可以如同穿过困难地形一样穿过其他生物和物件。</p>",
-          "requirements": "魂仆"
+          "description": "<section class=\"secret\" id=\"secret-BmVoH80pBSHp6J7V\"><p>魂仆可以如同穿过困难地形一样穿过其他生物和物件。</p><p>如果它在自己的回合结束时仍处在物件内部则受到<strong> [[/roll 1d10]]</strong><em><strong>点力场伤害</strong></em>。</p></section><p>魂仆可以如同穿过困难地形一样穿过其他生物和物件。</p>"
         },
         "Necrotic Shock": {
           "name": "暗蚀冲击",
-          "description": "<p><strong>Necrotic Shock.</strong> <em>近战法术攻击：</em>命中 +4，触及 5 尺，单一目标。<em>命中：</em> [[/roll 1d4]] 点闪电伤害和 [[/roll 1d4]] 点暗蚀伤害。若目标穿戴金属护甲，则其下一次攻击检定或属性检定具有劣势，直至目标下一回合结束。</p>",
-          "requirements": "魂仆"
+          "description": "<p><strong>Necrotic Shock.</strong> <em>近战法术攻击：</em>命中 +4，触及 5 尺，单一目标。<em>命中：</em> [[/roll 1d4]] 点闪电伤害和 [[/roll 1d4]] 点暗蚀伤害。若目标穿戴金属护甲，则其下一次攻击检定或属性检定具有劣势，直至目标下一回合结束。</p>"
         },
         "Soul Rejuvenation": {
           "name": "灵魂复生",
           "description": "<p><strong>灵魂复生。</strong>当魂仆的生命值降为 0 时，魂缚骑士恢复 [[/r 5d8 + 20]] 点生命值。</p><p></p>",
-          "requirements": "魂仆",
           "activities": {
             "heal": {
               "condition": "死亡"
@@ -129,6 +127,9 @@
         "Dancing Lights": {
           "name": "Dancing Lights",
           "description": "<p>You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.</p><p>As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.</p>",
+          "materials": {
+            "value": "A bit of phosphorus or wychwood, or a glowworm"
+          },
           "activities": {
             "Create Lights": {
               "name": "Create Lights"
@@ -138,6 +139,9 @@
         "Darkness": {
           "name": "Darkness",
           "description": "<p>Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.</p><p>If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.</p><p>If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.</p>",
+          "materials": {
+            "value": "Bat fur and a drop of pitch or piece of coal"
+          },
           "activities": {
             "Use (Template)": {
               "name": "Use (Template)"
@@ -230,6 +234,9 @@
         "Dancing Lights": {
           "name": "Dancing Lights",
           "description": "<p>You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.</p><p>As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.</p>",
+          "materials": {
+            "value": "A bit of phosphorus or wychwood, or a glowworm"
+          },
           "activities": {
             "Create Lights": {
               "name": "Create Lights"
@@ -239,6 +246,9 @@
         "Darkness": {
           "name": "Darkness",
           "description": "<p>Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.</p><p>If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.</p><p>If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.</p>",
+          "materials": {
+            "value": "Bat fur and a drop of pitch or piece of coal"
+          },
           "activities": {
             "Use (Template)": {
               "name": "Use (Template)"
@@ -310,11 +320,17 @@
       "items": {
         "Lightning Bolt": {
           "name": "Lightning Bolt",
-          "description": "<p>A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 8d6 lightning damage on a failed save, or half as much damage on a successful one.</p><p>The lightning ignites flammable objects in the area that aren't being worn or carried.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.</p>"
+          "description": "<p>A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 8d6 lightning damage on a failed save, or half as much damage on a successful one.</p><p>The lightning ignites flammable objects in the area that aren't being worn or carried.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.</p>",
+          "materials": {
+            "value": "A bit of fur and a rod of amber, crystal, or glass"
+          }
         },
         "Mage Armor": {
           "name": "Mage Armor",
           "description": "<p>You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.</p>",
+          "materials": {
+            "value": "A piece of cured leather"
+          },
           "effects": {
             "Mage Armor": {
               "name": "Mage Armor"
@@ -338,6 +354,9 @@
         "Shield": {
           "name": "Shield",
           "description": "<p>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.</p>",
+          "activation": {
+            "condition": "Which you take when you are hit by an attack or targeted by the magic missile spell"
+          },
           "effects": {
             "Shield": {
               "name": "Shield",
@@ -356,7 +375,10 @@
         },
         "Counterspell": {
           "name": "Counterspell",
-          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.</p>"
+          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.</p>",
+          "activation": {
+            "condition": "which you take when you see a creature within 60 feet of you casting a spell"
+          }
         },
         "Greater Invisibility": {
           "name": "Greater Invisibility",
@@ -381,7 +403,9 @@
           "description": "<p>The Coward emits a wave of necrotic magic. All creatures in a 15ft radius must make a DC 14 Constitution saving throw. <span style=\"font-family:'Roboto Condensed', sans-serif\">A target takes 1d10 necrotic damage on a failed save, or half as much damage on a successful one.</span></p><p><em>Note:</em> Use this only if the Coward is left outside of the experiment.</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
@@ -495,6 +519,11 @@
         "Arms of the Void": {
           "name": "Arms of the Void",
           "description": "<p>You summon tendrils, which burst out violently around you. Each creature in a 10 ft. Emanation must make a Strength saving throw. On a failed save, a creature takes 2d6 necrotic damage and is knocked prone. On a successful save, the creature takes half damage and is not knocked prone.</p><p><strong>Using a Higher-Level Spell Slot.</strong>The damage increases by 1d6 for each spell slot level above 1.</p>",
+          "target": {
+            "affects": {
+              "special": "self"
+            }
+          },
           "effects": {
             "Prone": {
               "name": "Prone",
@@ -515,6 +544,9 @@
         "Frostguard": {
           "name": "Frostguard",
           "description": "<p>A protective barrier of frost surrounds you. You gain 5 temporary hit points for the duration. While you have these temporary hit points, whenever a creature hits you with a melee attack, the attacker suffers 2 cold damage and its speed is reduced by 10 ft. until the start of its next turn.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The Temporary Hit Points and the Cold damage both increase by 5 for each spell slot level above 1.</p>",
+          "materials": {
+            "value": "a drop of water"
+          },
           "activities": {
             "Cast": {
               "name": "Cast"
@@ -586,27 +618,14 @@
             }
           }
         },
-        "Singularity": {
-          "name": "Singularity",
-          "description": "<p>(Recharge 5-6). Creatures within 20 ft. must make a DC 15 Constitution saving throw or take 27 (6d8) force damage, or half on a success. Creatures that fail the saving throw are also blinded for 1 minute and pulled 10 ft. toward [[lookup @name]] (they can repeat the save at the end of each of their turns, ending the blinded effect on a success).</p>",
-          "activities": {
-            "save": {
-              "affectsSpecial": "self"
-            }
-          },
-          "effects": {
-            "Blinded": {
-              "name": "Blinded",
-              "description": "<p>Blinded condition from Singularity.</p>"
-            }
-          }
-        },
         "Nullfield": {
           "name": "Nullfield",
           "description": "<p>As a bonus action, [[lookup @name]] emits a gravitational anomaly in a 15 ft. radius that lasts for 1 minute or until [[lookup @name]] dies. While the field is active, creatures within the area cannot speak or cast spells with verbal components. Additionally, when a creature starts its turn in the field, it is affected by time distortion until the end of its turn. A creature affected in this way, has its speed halved, can take either an action or a bonus action on its turn, and cannot take reactions.</p>",
           "activities": {
             "utility": {
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -618,6 +637,23 @@
         "Void Blink": {
           "name": "Void Blink",
           "description": "<p>[[lookup @name ]] distorts space and momentarily vanishes, reappearing in an unoccupied space it can see within 60 ft.</p>"
+        },
+        "Singularity": {
+          "name": "Singularity",
+          "description": "<p>(Recharge 5-6). Creatures within 20 ft. must make a [[/save con 15]] saving throw or take 27 (6d8) force damage, or half on a success. Creatures that fail the saving throw are also blinded for 1 minute and pulled 10 ft. toward [[lookup @name]] (they can repeat the save at the end of each of their turns, ending the blinded effect on a success).</p>",
+          "activities": {
+            "save": {
+              "affects": {
+                "special": "self"
+              }
+            }
+          },
+          "effects": {
+            "Blinded": {
+              "name": "Blinded",
+              "description": "<p>Blinded condition from Singularity.</p>"
+            }
+          }
         }
       }
     },
@@ -655,7 +691,6 @@
         "Ogre Brutality": {
           "name": "Ogre Brutality",
           "description": "<p><strong>Ogre Brutality.</strong> <span style=\"font-family:Signika, sans-serif\">A melee attack deals one extra die of its damage when the ogre </span>hits with it.</p>",
-          "requirements": "Ogre",
           "effects": {
             "Ogre Brutality": {
               "name": "Ogre Brutality",
@@ -665,13 +700,11 @@
         },
         "Punch": {
           "name": "Punch",
-          "description": "<p><strong>Punch.</strong> Melee Weapon Attack: +6 to hit, reach 5 ft., one target. On a hit, the target takes [[/roll 1d4 + 4]] bludgeoning damage.</p>",
-          "requirements": "Ogre"
+          "description": "<p><strong>Punch.</strong> Melee Weapon Attack: +6 to hit, reach 5 ft., one target. On a hit, the target takes [[/roll 1d4 + 4]] bludgeoning damage.</p>"
         },
         "Throw Rock": {
           "name": "Throw Rock",
-          "description": "<p><strong>Throw Rock.</strong> Ranged Attack: +6 to hit, range 30/120 ft., one target. On a hit, the target takes [[/roll 1d6 + 4]] bludgeoning damage.</p>",
-          "requirements": "Ogre"
+          "description": "<p><strong>Throw Rock.</strong> Ranged Attack: +6 to hit, range 30/120 ft., one target. On a hit, the target takes [[/roll 1d6 + 4]] bludgeoning damage.</p>"
         },
         "Bladed Whip": {
           "name": "Bladed Whip",
@@ -680,6 +713,129 @@
             "Prone": {
               "name": "Prone",
               "description": "<p>Prone Condition from Whip Trip.</p>"
+            }
+          }
+        }
+      }
+    },
+    "Shur-Axar CR15": {
+      "name": "Shur-Axar CR15",
+      "tokenName": "Shur-Axar",
+      "description": "<h1>Recovered Inscription</h1><p>“It appeared above the plaza, unannounced, slowly descending. A perfect form with no intention. The High Oracles called it the Silent God. The learned ones named it the Shur-Axar (The Pale Avatar). The people watched, prayed, and panicked.</p><p>Days passed. No voice, no flame, no judgment. And yet, we began to unravel. Words lost their weight. Fathers no longer knew their daughters. Guilds forgot their purpose. Even the stars in our charts shifted, or vanished entirely.</p><p>A war followed, not with the being, but with each other. Faith against fear. Doctrine against memory. We fought to define it, and in doing so, lost ourselves more completely.</p><p>When the last conclave of mages attempted to strike it, out of desperation or clarity, it responded. Not in anger, but in correction.</p><p>Now there is nothing, and the names of our cities scatter like ash. I write only what I can still remember: it did not want. It did not ask. It only was.</p><p>And so, we are no longer.”</p><h1>Shur-Axar, the Second Avatar</h1><p>Shur-Axar is the second known manifestation of Axarum, a cosmic force that exists beyond time, and memory. It is not a being in the traditional sense, but a projection—an imprint of Axarum’s presence into reality. Whereas the first avatar, Zal’murak, is a herald that weakens identity and distorts memory, Shur-Axar is the deeper convergence: a point of collapse where reality forgets how to hold shape.</p><p>Shur-Axar has no desires and no intention. It does not act until provoked. But its very presence unravels memories decay in its vicinity. Some believe it is not a being, but the echo of a truth too vast to name.</p><p>Shur-Axar’s appearances are often catastrophic. It is drawn to regions of high cognitive density—places where life, knowledge, or magical resonance accumulate. While it can be forced to retreat, its connection to Axarum ensures it will eventually return—unless the orbit itself is severed.</p><p>Some cults revere it as a divine correction. Others view it as a cosmic anomaly to be studied, contained, or destroyed. But none who have confronted it speak with certainty. In most cases, they simply no longer speak at all.</p>",
+      "items": {
+        "Memory Erosion Field": {
+          "name": "Memory Erosion Field",
+          "description": "<p>Creatures within 2 miles (2 km) of [[lookup @name]] location must succeed on a [[/save int 11]] saving throw at dawn or lose one minor memory (such as a name, location, or personal event). For every additional day [[lookup @name]] remains, the DC increases by 1 and the radius expands by 2 mile (2 km) (up to a maximum of DC 15 and 10 miles (10 km)).</p><p>A creature that fails this save three times forgets a major part of its identity (such as its purpose, family, or class features) until cured by greater restoration or wish. Memories lost this way cannot be recovered by lesser restoration or remove curse.</p><p>Magical means of detecting or recording information (such as <em>sending, divination, or scribe</em> spells) within the field suffer a 50% chance of failure or deliver incomplete results.</p>",
+          "activities": {
+            "Int Save DC 11 (2 Miles)": {
+              "name": "Int Save DC 11 (2 Miles)"
+            },
+            "Int Save DC 12 (4 Miles)": {
+              "name": "Int Save DC 12 (4 Miles)"
+            },
+            "Int Save DC 13 (6 Miles)": {
+              "name": "Int Save DC 13 (6 Miles)"
+            },
+            "Int Save DC 14 (8 Miles)": {
+              "name": "Int Save DC 14 (8 Miles)"
+            },
+            "Int Save DC 15  (10  Miles)": {
+              "name": "Int Save DC 15  (10  Miles)"
+            }
+          }
+        },
+        "Cycle of Return": {
+          "name": "Cycle of Return",
+          "description": "<p>[[lookup @name]] cannot be permanently destroyed. If reduced to 0 hit points, its body dissipates, leaving no corpse behind.</p><p>After 88 days, [[lookup @name]] re-manifests at a location of abundant life or strong magical resonance within the same plane. The new manifestation retains no memory of the previous encounter but resumes its existence as if uninterrupted.</p><p>Only a wish spell followed by a gate spell cast in unison during its moment of dispersal can sever its connection to the cosmic cycle and prevent its return.</p>"
+        },
+        "Folded Perception": {
+          "name": "Folded Perception",
+          "description": "<p>Folded Perception. [[lookup @name]] sees through darkness, invisibility, illusions, and magical concealment within 60 ft. It cannot be blinded.</p>"
+        },
+        "Hovering Form": {
+          "name": "Hovering Form",
+          "description": "<p>Hovering Form. [[lookup @name]] is unaffected by gravity, can hover even while unconscious, and moves over any terrain or surface without making contact.</p>"
+        },
+        "Oblivion Response": {
+          "name": "Oblivion Response",
+          "description": "<p>[[lookup @name]] does not initiate violence and ignores creatures unless directly harmed or subjected to hostile magic or abilities. If attacked or targeted by a harmful effect, it marks the aggressor as a threat and will retaliate with full force until the target is destroyed, rendered unconscious, or otherwise removed.</p><p>While pursuing a marked threat, [[lookup @name]] disregards collateral damage—any creature, structure, or obstacle in its path may be affected by its abilities without hesitation or distinction.</p>"
+        },
+        "Singularity Projection": {
+          "name": "Singularity Projection",
+          "description": "<p>[[lookup @name]] can make up to three Singularity Beam attacks as part of a single action.</p>"
+        },
+        "Memory Refraction": {
+          "name": "Memory Refraction",
+          "description": "<p>[[lookup @name]] targets up to two creatures it can see within 60 ft. Each target must succeed on a [[/save wis 19]] saving throw or become confused about their allies for 1 minute. While affected, a creature treats its own allies as enemies and prioritizes them when choosing targets for attacks, spells, or abilities.</p><p>[[lookup @name]] must maintain concentration on this effect (as if concentrating on a spell).</p><p>An affected creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. A creature that succeeds on its initial save is immune to this ability for 24 hours.</p>",
+          "effects": {
+            "Memory Refraction": {
+              "name": "Memory Refraction",
+              "description": "<p>While affected, a creature treats its own allies as enemies and prioritizes them when choosing targets for attacks, spells, or abilities.</p>"
+            }
+          }
+        },
+        "Mindfracture Aura": {
+          "name": "Mindfracture Aura",
+          "description": "<p>As a bonus action, [[lookup @name]] emits a mindfracture aura in a 30 ft radius that lasts for 1 minute or until [[lookup @name]] is reduced to 0 hit points. While the field is active, any creature that starts its turn within the area must succeed on a [[/save wis 18]] saving throw or become disoriented until the start of its next turn. While disoriented, the creature subtracts 1d4 from all attack rolls and saving throws.</p><section class=\"secret\" id=\"secret-RvjeUqbFiQZuCZUq\"><p>This ability only works after the Aura Active Effect is applied to [[lookup @name]]</p></section>",
+          "activities": {
+            "save": {
+              "affects": {
+                "special": "self"
+              }
+            },
+            "Activate Aura": {
+              "name": "Activate Aura"
+            }
+          },
+          "effects": {
+            "Aura": {
+              "name": "Aura",
+              "description": "<p>This AE activates the animation for Mindfracture Aura.</p>"
+            },
+            "Disoriented": {
+              "name": "Disoriented",
+              "description": "<p>This creature is disoriented by Mindfracture Aura and has a 1d4 penalty to attack rolls and saving throws.</p>"
+            }
+          }
+        },
+        "Singularity Beam": {
+          "name": "Singularity Beam",
+          "description": "<p>+11 to hit, range 90 ft., one target. Hit: 22 (5d8) force damage + 11 (2d10) radiant damage.</p>"
+        },
+        "Lightscatter Beam": {
+          "name": "Lightscatter Beam",
+          "description": "<p>+11 to hit, range 90 ft., one target. Hit: 22 (5d8) force damage + 11 (2d10) radiant damage. On a hit, the target must also succeed on a [[/save int 18]] saving throw or forget one known language (chosen at random) for 1 hour.</p>",
+          "effects": {
+            "Language Amnesia": {
+              "name": "Language Amnesia",
+              "description": "<p>You've forgotten one random known language for 1 hour.</p>"
+            }
+          }
+        },
+        "Fracture Step": {
+          "name": "Fracture Step",
+          "description": "<p>[[lookup @name]] teleports up to 60 ft. to an unoccupied space it can see, leaving behind a gravitational ripple in a 15 ft. radius. The area becomes difficult terrain until the start of its next turn.</p><section class=\"secret\" id=\"secret-RvjeUqbFiQZuCZUq\"><p>This ability only works after the Fracture Step Active Effect is applied to [[lookup @name]]</p></section>",
+          "effects": {
+            "Fracture Step": {
+              "name": "Fracture Step",
+              "description": "<p>Gravitational ripple from Fracture Step. The area is considered difficult terrain.</p>"
+            }
+          }
+        },
+        "Axaric Radiance": {
+          "name": "Axaric Radiance",
+          "description": "<p>Lines of light emanate outward from [[lookup @name]] in a 15 ft. radius. Each creature in the area must make a [[/save con 19]] saving throw. On a failed save, a creature takes 17 (3d10) radiant damage and is blinded until the end of its next turn. On a successful save, the creature takes half damage and is not blinded.</p><p>This light bypasses magical and nonmagical darkness.</p>",
+          "activities": {
+            "save": {
+              "affects": {
+                "special": "self"
+              }
+            }
+          },
+          "effects": {
+            "Blinded": {
+              "name": "Blinded",
+              "description": "<p>Blinded condition from Axaric Radiance.</p>"
             }
           }
         }
@@ -833,23 +989,19 @@
         },
         "Infernal Glide": {
           "name": "Infernal Glide",
-          "description": "<p><strong>Infernal Glide</strong>. The Flame Tyrant can move up to half its speed.</p>",
-          "requirements": "The Flame Tyrant"
+          "description": "<p><strong>Infernal Glide</strong>. The Flame Tyrant can move up to half its speed.</p>"
         },
         "Fire Tornado": {
           "name": "Fire Tornado",
-          "description": "<p><strong>Fire Tornado</strong>. The Flame Tyrant creates a tornado of fire in a 10ft radius, 30ft high cylinder centered on a point he can see within range. The inferno whips up the terrain, melting or burning the ground and filling the air with ash and embers. For the next minute, the area within the cylinder becomes difficult terrain.</p>",
-          "requirements": "The Flame Tyrant"
+          "description": "<p><strong>Fire Tornado</strong>. The Flame Tyrant creates a tornado of fire in a 10ft radius, 30ft high cylinder centered on a point he can see within range. The inferno whips up the terrain, melting or burning the ground and filling the air with ash and embers. For the next minute, the area within the cylinder becomes difficult terrain.</p>"
         },
         "Fire Wall": {
           "name": "Fire Wall",
-          "description": "<p><strong>Fire Wall</strong>. The Flame Tyrant creates a wall of fire in a 20ft long, 10ft high, and 5ft thick rectangle. When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 3d8 fire damage, or half as much damage on a successful save. A creature takes the same damage when it enters the wall for the first time on a turn or starts its turn there.</p>",
-          "requirements": "The Flame Tyrant"
+          "description": "<p><strong>Fire Wall</strong>. The Flame Tyrant creates a wall of fire in a 20ft long, 10ft high, and 5ft thick rectangle. When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 3d8 fire damage, or half as much damage on a successful save. A creature takes the same damage when it enters the wall for the first time on a turn or starts its turn there.</p>"
         },
         "Pyroblast Retaliation": {
           "name": "Pyroblast Retaliation",
           "description": "<p><strong>Pyroblast Retaliation</strong>. The Flame Tyrant can cast Pyroblast at a creature he can see.</p>",
-          "requirements": "The Flame Tyrant",
           "effects": {
             "Ablazed": {
               "name": "Ablazed",
@@ -859,13 +1011,11 @@
         },
         "Molten Resurgence": {
           "name": "Molten Resurgence",
-          "description": "<p><strong>Molten Resurgence (1/Long Rest). </strong>As a bonus action, the Flame Tyrant can submerge himself into a pool of lava or magma and regain hit points equal to half of his max current hit point total.</p>",
-          "requirements": "The Flame Tyrant"
+          "description": "<p><strong>Molten Resurgence (1/Long Rest). </strong>As a bonus action, the Flame Tyrant can submerge himself into a pool of lava or magma and regain hit points equal to half of his max current hit point total.</p>"
         },
         "Pyroblast": {
           "name": "Pyroblast",
           "description": "<p><strong>Pyroblast.</strong> As an action, The Flame Tyrant can target a creature within 120ft that it can see. The creature must make a Dexterity saving throw or take 2d8 fire damage. On a failed save, the target is also set ablaze, taking an additional 1d4 fire damage at the start of each of its turns until it takes an action to extinguish the flames.</p>",
-          "requirements": "The Flame Tyrant",
           "effects": {
             "Ablazed": {
               "name": "Ablazed",
@@ -876,10 +1026,11 @@
         "Inferno Wave": {
           "name": "Inferno Wave",
           "description": "<p><strong>Inferno Wave (Recharge 5-6).</strong> As an action, the Flame Tyrant slams the ground, causing waves of intense heat to ripple outward, igniting the ground with flames that persist for 1 minute. All creatures within a 15-foot radius, as well as any creature that enters the area for the duration, must make a Dexterity saving throw. On a failed save, a creature becomes vulnerable to fire damage for as long as it remains in the area. A creature that successfully saves is not affected by the vulnerability.</p>",
-          "requirements": "The Flame Tyrant",
           "activities": {
             "save": {
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -891,8 +1042,7 @@
         },
         "Infernal Explosion": {
           "name": "Infernal Explosion",
-          "description": "<p><strong>Infernal Explosion (Recharge 5-6)</strong>. The Flame Tyrant casts a fireball at a point he can see within range. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes 8d6 fire damage on a failed save, or half as much damage on a successful one.</p>",
-          "requirements": "The Flame Tyrant"
+          "description": "<p><strong>Infernal Explosion (Recharge 5-6)</strong>. The Flame Tyrant casts a fireball at a point he can see within range. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes 8d6 fire damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "Pyro Head - The Infernal Crown": {
           "name": "Pyro Head - The Infernal Crown",
@@ -907,7 +1057,6 @@
         "Flame Shield": {
           "name": "Flame Shield",
           "description": "<p><strong>Flame Shield</strong>. As a bonus action, The Flame Tyrant creates a shield of fire around himself. Until the spell ends, any creature within 5 feet that hits him with a melee attack takes 1d8 fire damage.</p><section class=\"secret\" id=\"secret-CMbVG92kymxBFokl\"><p>@UUID[JournalEntry.h4xwWxuPNwv2MLgC.JournalEntryPage.JHVo9WVWJWIqFrSJ]{How it works}</p></section>",
-          "requirements": "The Flame Tyrant",
           "activities": {
             "Cast": {
               "name": "Cast"
@@ -928,18 +1077,18 @@
         "Death Nova": {
           "name": "Death Nova",
           "description": "<p><strong>Death Nova</strong>. When the Flame Elemental dies, it explodes in a burst of fire. Each creature within 5 ft. of it must make a DC 11 Dexterity saving throw, taking 1d6 fire damage on a failed save, or half as much damage on a successful one.</p>",
-          "requirements": "The Flame Elemental",
           "activities": {
             "save": {
               "condition": "death",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
         "Flames Breath": {
           "name": "Flames Breath",
-          "description": "<p><strong>Flames Breath</strong>. The Flame Elemental can breath flames to a creature within 5 ft. The creature must make a DC 11 Dexterity saving throw, taking 2d6 fire damage on a failed save, or half as much on a successful save.</p>",
-          "requirements": "The Flame Tyrant"
+          "description": "<p><strong>Flames Breath</strong>. The Flame Elemental can breath flames to a creature within 5 ft. The creature must make a DC 11 Dexterity saving throw, taking 2d6 fire damage on a failed save, or half as much on a successful save.</p>"
         }
       }
     },
@@ -961,7 +1110,9 @@
           "activities": {
             "save": {
               "condition": "dead",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
@@ -989,7 +1140,6 @@
         "Ogre Brutality": {
           "name": "Ogre Brutality",
           "description": "<p><strong>Ogre Brutality.</strong> <span style=\"font-family:Signika, sans-serif\">A melee attack deals one extra die of its damage when the ogre </span>hits with it.</p>",
-          "requirements": "Ogre",
           "effects": {
             "Ogre Brutality": {
               "name": "Ogre Brutality",
@@ -999,13 +1149,11 @@
         },
         "Punch": {
           "name": "Punch",
-          "description": "<p><strong>Punch.</strong> Melee Weapon Attack: +6 to hit, reach 5 ft., one target. On a hit, the target takes [[/roll 1d4 + 4]] bludgeoning damage.</p>",
-          "requirements": "Ogre"
+          "description": "<p><strong>Punch.</strong> Melee Weapon Attack: +6 to hit, reach 5 ft., one target. On a hit, the target takes [[/roll 1d4 + 4]] bludgeoning damage.</p>"
         },
         "Throw Rock": {
           "name": "Throw Rock",
-          "description": "<p><strong>Throw Rock.</strong> Ranged Attack: +6 to hit, range 30/120 ft., one target. On a hit, the target takes [[/roll 1d6 + 4]] bludgeoning damage.</p>",
-          "requirements": "Ogre"
+          "description": "<p><strong>Throw Rock.</strong> Ranged Attack: +6 to hit, range 30/120 ft., one target. On a hit, the target takes [[/roll 1d6 + 4]] bludgeoning damage.</p>"
         },
         "Ogre’s Headbutt": {
           "name": "Ogre’s Headbutt",
@@ -1036,7 +1184,9 @@
           "activities": {
             "damage": {
               "condition": "Turn Start",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
@@ -1089,8 +1239,7 @@
         },
         "Obsidian Grip": {
           "name": "Obsidian Grip",
-          "description": "<p><strong>Obsidian Grip.</strong> The Sentinel cannot be disarmed by any means, including spells or abilities that would force it to drop its weapon.</p>",
-          "requirements": "Obsidian Sentinel"
+          "description": "<p><strong>Obsidian Grip.</strong> The Sentinel cannot be disarmed by any means, including spells or abilities that would force it to drop its weapon.</p>"
         },
         "Magic Resistance": {
           "name": "Magic Resistance",
@@ -1118,7 +1267,9 @@
           "activities": {
             "Dreadful Protector": {
               "name": "Dreadful Protector",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -1157,6 +1308,9 @@
         "Dancing Lights": {
           "name": "Dancing Lights",
           "description": "<p>You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.</p><p>As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.</p>",
+          "materials": {
+            "value": "A bit of phosphorus or wychwood, or a glowworm"
+          },
           "activities": {
             "Create Lights": {
               "name": "Create Lights"
@@ -1166,6 +1320,9 @@
         "Darkness": {
           "name": "Darkness",
           "description": "<p>Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.</p><p>If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.</p><p>If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.</p>",
+          "materials": {
+            "value": "Bat fur and a drop of pitch or piece of coal"
+          },
           "activities": {
             "Use (Template)": {
               "name": "Use (Template)"
@@ -1284,7 +1441,9 @@
           "description": "<section id=\"secret-tLZqgWTiXozWkKuc\" class=\"secret\"><p>The [[lookup @name lowercase]] spews infectious rot in a 20ft cone. Each creature in that area must make a DC 15 Constitution saving throw, taking 18 (6d6) poison damage and becoming poisoned for 1 minute on a failed save, or half as much damage and not poisoned on a successful one. Poisoned targets repeat the save at the end of each turn, ending the condition on a success.</p></section><p>The [[lookup @name lowercase]] spews infectious rot in a 20ft cone.</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -1374,7 +1533,9 @@
           "description": "<section class=\"secret\" id=\"secret-1n1kjGcA293X6yAT\"><p>The dragon beats its wings. <strong>Each creature within 10 feet of the dragon</strong> must succeed on a <strong>DC 22 Dexterity saving throw</strong> or take <strong>15 (2d6+8) bludgeoning</strong> damage and be <strong>knocked prone.</strong> The dragon can then <strong>fly up to half its flying speed.</strong></p></section><p>The dragon beats its wings!</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
@@ -1403,7 +1564,9 @@
           "activities": {
             "damage": {
               "condition": "Turn Start",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
@@ -1466,6 +1629,9 @@
         "Dancing Lights": {
           "name": "Dancing Lights",
           "description": "<p>You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.</p><p>As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.</p>",
+          "materials": {
+            "value": "A bit of phosphorus or wychwood, or a glowworm"
+          },
           "activities": {
             "Create Lights": {
               "name": "Create Lights"
@@ -1475,6 +1641,9 @@
         "Darkness": {
           "name": "Darkness",
           "description": "<p>Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.</p><p>If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.</p><p>If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.</p>",
+          "materials": {
+            "value": "Bat fur and a drop of pitch or piece of coal"
+          },
           "activities": {
             "Use (Template)": {
               "name": "Use (Template)"
@@ -1535,7 +1704,9 @@
           "activities": {
             "save": {
               "condition": "dead",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
@@ -1575,7 +1746,6 @@
         "Soulbound Fortitude": {
           "name": "Soulbound Fortitude",
           "description": "<section class=\"secret\" id=\"secret-zGdb5WjuSgQNrXxj\"><p>If damage reduces the Soulbound Knight to <strong>0 hit points</strong>, it must make a <strong>Constitution</strong> saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the Soulbound Knight drops to <strong>1 hit point</strong> instead.</p></section><p>If damage reduces the Soulbound Knight to <strong>0 hit points</strong>, it must make a <strong>Constitution</strong> saving throw.</p>",
-          "requirements": "Soulbound Knight",
           "activities": {
             "save": {
               "condition": "death",
@@ -1585,18 +1755,15 @@
         },
         "Soul Sacrifice": {
           "name": "Soul Sacrifice",
-          "description": "<p><strong>Soul Sacrifice.</strong> As a bonus action, the Soulbound Knight can destroy one of his Soul Servants to activate Soul Rejuvenation.</p>",
-          "requirements": "Soulbound Knight"
+          "description": "<p><strong>Soul Sacrifice.</strong> As a bonus action, the Soulbound Knight can destroy one of his Soul Servants to activate Soul Rejuvenation.</p>"
         },
         "Spirit Call": {
           "name": "Spirit Call",
-          "description": "<p><strong>Spirit Call.</strong> As a bonus action, the Soulbound Knight can command two souls from the swirling pool to attack his enemies.</p>",
-          "requirements": "Soulbound Knight"
+          "description": "<p><strong>Spirit Call.</strong> As a bonus action, the Soulbound Knight can command two souls from the swirling pool to attack his enemies.</p>"
         },
         "Empowered Phantom Strike": {
           "name": "Empowered Phantom Strike",
           "description": "<p><strong>Empowered Phantom Strike.</strong> The Soulbound Knight can use Phantom Strike again if no target is affected by etherealness.</p>",
-          "requirements": "Soulbound Knight",
           "activities": {
             "Phantom Strike": {
               "name": "Phantom Strike",
@@ -1612,12 +1779,13 @@
         "Empowered Soul Reap": {
           "name": "Empowered Soul Reap",
           "description": "<p><strong>Empowered Soul Reap.</strong> This ability recharges on a roll of 5-6 on a d6.</p>",
-          "requirements": "Soulbound Knight",
           "activities": {
             "Soul Reap": {
               "name": "Soul Reap",
               "chatFlavor": "Soul Reap",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
@@ -1632,7 +1800,9 @@
             "Soul Reap": {
               "name": "Soul Reap",
               "chatFlavor": "Soul Reap",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -1705,7 +1875,9 @@
           "description": "<p><em>Wondrous item, rare (requires attunement)</em></p><div class=\"block purple\" id=\"book\" style=\"background:#aa88aa55\"><p><em>\"There's no flame like dragonfire.\"</em></p><p><em>\"There's no heat like dragon's breath.\"</em></p><p><em>\"There’s no burn like dragon’s fury.\"</em></p></div><hr /><p>These bracers are crafted from the red scales of a young red dragon. The scales retain their innate heat, yet they are comfortable to wear.</p><hr /><p><strong>Fiery Strikes.</strong> While wearing these bracers, your unarmed strikes and melee weapon attacks deal an additional [[/roll 1d4]] fire damage.</p><p><strong>Scorching Eruption.</strong> Once per long rest, as an action, you can slam the bracers together to release a wave of fiery energy. All creatures within a 10ft radius must make a DC 14 Dexterity saving throw, taking [[/roll 4d6]] fire damage on a failed save, or half as much on a success.</p><img src=\"modules/boss-loot-adventures-premium/artwork/059-red-dragon/art-static-bracers-of-ignition-1200x1200.webp\" alt=\"Bracers of Ignition\" />",
           "activities": {
             "save": {
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -1785,7 +1957,9 @@
           "description": "<p><em>Wisdom Saving Throw:</em> DC 12, each creature in a 15-foot Emanation originating from the [[lookup @name lowercase]] that can see the [[lookup @name lowercase]].</p><p class=\"feature\"><em>Failure:</em> The target has the &amp;Reference[Frightened apply=false] condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.</p>",
           "activities": {
             "save": {
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -1802,6 +1976,14 @@
         "Detect Thoughts": {
           "name": "Detect Thoughts",
           "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spelldc]] check against your spell save DC, ending the spell on a success.</p>",
+          "materials": {
+            "value": "1 Copper Piece"
+          },
+          "target": {
+            "affects": {
+              "special": "self"
+            }
+          },
           "activities": {
             "Probe Deeper": {
               "name": "Probe Deeper"
@@ -1821,7 +2003,9 @@
           "description": "<p>The [[lookup @name lowercase]] shape-shifts into a Medium or Smaller Humanoid, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed.</p><section class=\"secret\" id=\"secret-HBGLsGqQVoymFjTo\"><p><strong>Note:</strong> To revert to the original form, either:</p><ul><li><p>target your own token and use the ability,</p></li><li><p>use the ability with no target selected,</p></li><li><p>or use the ability on the same target into which you previously transformed.</p></li></ul><p>When shapeshifting, the following token properties are copied from the target: <strong>token image, token disposition, and token ring.</strong></p><p>When reverting, the original token properties are restored from the Prototype Token. If you wish to customize the default appearance or settings of the token, make sure to update its Prototype Token as well.</p></section>",
           "activities": {
             "utility": {
-              "affectsSpecial": "Medium or Smaller"
+              "affects": {
+                "special": "Medium or Smaller"
+              }
             }
           }
         }
@@ -1869,7 +2053,6 @@
         "Flame Shield": {
           "name": "Flame Shield",
           "description": "<p><strong>Flame Shield</strong>. As a bonus action, The Flame Tyrant creates a shield of fire around himself. Until the spell ends, any creature within 5 feet that hits him with a melee attack takes 1d8 fire damage.</p>",
-          "requirements": "The Flame Tyrant",
           "activities": {
             "Damage": {
               "name": "Damage"
@@ -1886,13 +2069,11 @@
         },
         "Molten Resurgence": {
           "name": "Molten Resurgence",
-          "description": "<p><strong>Molten Resurgence (1/Long Rest). </strong>As a bonus action, the Flame Tyrant can submerge himself into a pool of lava or magma and regain hit points equal to half of his max current hit point total.</p>",
-          "requirements": "The Flame Tyrant"
+          "description": "<p><strong>Molten Resurgence (1/Long Rest). </strong>As a bonus action, the Flame Tyrant can submerge himself into a pool of lava or magma and regain hit points equal to half of his max current hit point total.</p>"
         },
         "Pyroblast": {
           "name": "Pyroblast",
           "description": "<p><strong>Pyroblast.</strong> As an action, The Flame Tyrant can target a creature within 120ft that it can see. The creature must make a Dexterity saving throw or take 2d8 fire damage. On a failed save, the target is also set ablaze, taking an additional 1d4 fire damage at the start of each of its turns until it takes an action to extinguish the flames.</p>",
-          "requirements": "The Flame Tyrant",
           "effects": {
             "Pyroblast": {
               "name": "Pyroblast",
@@ -1902,16 +2083,16 @@
         },
         "Infernal Explosion": {
           "name": "Infernal Explosion",
-          "description": "<p><strong>Infernal Explosion (Recharge 5-6)</strong>. The Flame Tyrant casts a fireball at a point he can see within range. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes 8d6 fire damage on a failed save, or half as much damage on a successful one.</p>",
-          "requirements": "The Flame Tyrant"
+          "description": "<p><strong>Infernal Explosion (Recharge 5-6)</strong>. The Flame Tyrant casts a fireball at a point he can see within range. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes 8d6 fire damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "Inferno Wave": {
           "name": "Inferno Wave",
           "description": "<p><strong>Inferno Wave (Recharge 5-6).</strong> As an action, the Flame Tyrant slams the ground, causing waves of intense heat to ripple outward, igniting the ground with flames that persist for 1 minute. All creatures within a 15-foot radius, as well as any creature that enters the area for the duration, must make a Dexterity saving throw. On a failed save, a creature becomes vulnerable to fire damage for as long as it remains in the area. A creature that successfully saves is not affected by the vulnerability.</p>",
-          "requirements": "The Flame Tyrant",
           "activities": {
             "save": {
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -1958,7 +2139,9 @@
           "description": "<p><em>Wondrous item, rare (requires attunement)</em></p><div class=\"block purple\" id=\"book\" style=\"background:#aa88aa55\"><p><em>\"There's no flame like dragonfire.\"</em></p><p><em>\"There's no heat like dragon's breath.\"</em></p><p><em>\"There’s no burn like dragon’s fury.\"</em></p></div><hr /><p>These bracers are crafted from the red scales of a young red dragon. The scales retain their innate heat, yet they are comfortable to wear.</p><hr /><p><strong>Fiery Strikes.</strong> While wearing these bracers, your unarmed strikes and melee weapon attacks deal an additional [[/roll 1d4]] fire damage.</p><p><strong>Scorching Eruption.</strong> Once per long rest, as an action, you can slam the bracers together to release a wave of fiery energy. All creatures within a 10ft radius must make a DC 14 Dexterity saving throw, taking [[/roll 4d6]] fire damage on a failed save, or half as much on a success.</p><img src=\"modules/boss-loot-adventures-premium/artwork/059-red-dragon/art-static-bracers-of-ignition-1200x1200.webp\" alt=\"Bracers of Ignition\" />",
           "activities": {
             "save": {
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           },
           "effects": {
@@ -2009,6 +2192,9 @@
         "Dancing Lights": {
           "name": "Dancing Lights",
           "description": "<p>You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.</p><p>As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.</p>",
+          "materials": {
+            "value": "A bit of phosphorus or wychwood, or a glowworm"
+          },
           "activities": {
             "Create Lights": {
               "name": "Create Lights"
@@ -2018,6 +2204,9 @@
         "Darkness": {
           "name": "Darkness",
           "description": "<p>Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.</p><p>If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.</p><p>If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.</p>",
+          "materials": {
+            "value": "Bat fur and a drop of pitch or piece of coal"
+          },
           "activities": {
             "Use (Template)": {
               "name": "Use (Template)"
@@ -2106,7 +2295,9 @@
           "activities": {
             "save": {
               "condition": "dead",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
@@ -2140,7 +2331,9 @@
           "activities": {
             "save": {
               "condition": "dead",
-              "affectsSpecial": "self"
+              "affects": {
+                "special": "self"
+              }
             }
           }
         },
