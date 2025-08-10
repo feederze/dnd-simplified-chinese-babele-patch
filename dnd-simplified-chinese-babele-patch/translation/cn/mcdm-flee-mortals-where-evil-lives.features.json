@@ -1,0 +1,2736 @@
+{
+  "label": "Features",
+  "folders": {
+    "Hag Coven Features": "Hag Coven Features",
+    "Lair Actions": "Lair Actions",
+    "Mystic Connection": "Mystic Connection",
+    "Bird": "Bird",
+    "Powers": "Powers",
+    "Bear": "Bear",
+    "Fiend Traits": "Fiend Traits",
+    "Ancestry Features": "Ancestry Features",
+    "Retainer Features": "Retainer Features",
+    "Cat": "Cat",
+    "Animal Optional Features": "Animal Optional Features",
+    "Companion Features": "Companion Features",
+    "Environment Traits": "Environment Traits",
+    "Insect": "Insect",
+    "Ancestries": "Ancestries"
+  },
+  "entries": {
+    "Earthen Strength": {
+      "name": "Earthen Strength",
+      "description": "<p>As a bonus action, your limbs grow dense and swing with incredible force for 1 minute. For the duration, when you hit a creature no more than one size category larger or smaller than you with a melee weapon attack, the creature is also knocked &amp;Reference[prone]. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Earthen Strength": {
+          "name": "Earthen Strength"
+        }
+      }
+    },
+    "Poisoned Blade": {
+      "name": "Poisoned Blade",
+      "description": "<p>As a bonus action, the sneak covers a dagger in a special poison, which lasts for 1 hour or until the sneak hits a creature with a signature attack. A creature hit with the poisoned dagger must make a [[/save]] saving throw. On a failed save, the target takes [[/damage]] damage and is &amp;reference[poisoned] for 1 minute (save ends at the end of turn). On a successful save, the target takes only half as much damage and isn't poisoned.</p><fieldset><legend>Foundry Note</legend><p>The enchantment should only be applied to the sneak's signature attack.</p></fieldset>",
+      "activities": {
+        "Coat Dagger": {
+          "name": "Coat Dagger",
+          "affects": {
+            "special": "The signature attack weapon of the target."
+          }
+        },
+        "Coated Poison Save": {
+          "name": "Coated Poison Save",
+          "condition": "On a hit.",
+          "affects": {
+            "special": "The creature hit by the attack."
+          }
+        }
+      },
+      "effects": {
+        "Poisoned Blade": {
+          "name": "Poisoned Blade",
+          "description": "<p>Your dagger is coated in a special poison, lasting 1 hour or until you hit a creature with a signature attack. If hit by the dagger, a creature must make a Constitution saving throw, taking poison damage and becoming poisoned for 1 minute (save ends at end of turn), or half damage and not poisoned on a success.</p>"
+        }
+      }
+    },
+    "Bite Attack": {
+      "name": "Bite Attack",
+      "description": "<p>The [[lookup @name lowercase]] can use their teeth to make unarmed strikes using Strength or Dexterity ([[lookup @name lowercase]]'s choice) for the attack roll. When the [[lookup @name lowercase]] hits with their teeth, the strike deals 1d6 + the [[lookup @name lowercase]]'s Strength or Dexterity modifier piercing damage, instead of the bludgeoning damage normal for an unarmed strike.</p>"
+    },
+    "Lair Actions: Ruined Keep": {
+      "name": "Lair Actions: Ruined Keep",
+      "description": "<p>On initiative count 20 (losing initiative ties), the ruined keep creature can take one of the following lair actions; the ruined keep creature can't take the same lair action two rounds in a row: </p><p><strong>Crumbling Rubble.</strong> Pieces of the structure crumble into three 5-foot cubes within 30 feet of the ruined keep creature. Creatures in those areas must succeed on a DC 12 plus [[lookup @prof.flat]] Dexterity saving throw or take [[lookup @prof.flat]]d6 bludgeoning damage. Those areas become difficult terrain. </p><p><strong>Express Descent.</strong> The ruined keep creature collapses a 5-foot-square section of floor within 30 feet of them, opening a hole to the floor below. A Medium or smaller creature in that area must succeed on a DC 12 plus [[lookup @prof.flat]] Dexterity saving throw or fall through the floor. </p><p><strong>Swaying Structure.</strong> Old timber and decrepit stone sways, shifts, and lurches. Each other creature within 60 feet of the ruined keep creature must succeed on a DC 12 plus [[lookup @prof.flat]] Strength saving throw or fall &amp;Reference[prone]. Flying creatures automatically succeed on this saving throw.</p>",
+      "activities": {
+        "Crumbling Rubble": {
+          "name": "Crumbling Rubble"
+        },
+        "Express Descent": {
+          "name": "Express Descent"
+        },
+        "Swaying Structure": {
+          "name": "Swaying Structure"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Thrashing Tail": {
+      "name": "Thrashing Tail",
+      "description": "<p>As an action, the hunter makes a signature attack against a Large or smaller creature. On a hit, the target must succeed on a [[/save]] saving throw or fall &amp;reference[prone]. While the hunter is within 5 feet of this prone target, the target can't stand up unless they use an action to make a [[/check]] check. On a success, the target can stand up.</p>",
+      "activities": {
+        "Stand Up Check": {
+          "name": "Stand Up Check",
+          "condition": "When the target attempts to stand up.",
+          "affects": {
+            "special": "The target trying to stand up."
+          }
+        }
+      }
+    },
+    "Liquefied Meal": {
+      "name": "Liquefied Meal",
+      "description": "<p>The wyvern pounces on a Large or smaller creature within 5 feet of them, attempting to melt their prey's flesh with acid and drink it. The target must succeed on a [[/save]] saving throw or fall &amp;Reference[prone] and take [[/damage]] damage. The wyvern gains temporary hit points equal to the acid damage dealt.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Large or smaller"
+          }
+        }
+      }
+    },
+    "Relentless Rush": {
+      "name": "Relentless Rush",
+      "description": "<p>When the blacksmith isn't incapacitated and they take damage but aren't killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits, the blacksmith regains twice their PB hit points.</p>",
+      "activities": {
+        "heal": {
+          "condition": "When the attack made with this feature hits."
+        }
+      }
+    },
+    "Melting Grasp": {
+      "name": "Melting Grasp",
+      "description": "<p>When the bastion hits a creature with a signature attack, the creature takes an extra [[lookup @prof.flat]]d4 fire damage. If the target is wielding a mundane metal weapon, the bastion partially melts the target's weapon, giving it a permanent −2 penalty to attack and damage rolls. If the target is wielding a supernatural metal weapon, the penalty lasts for 1 hour instead.</p>",
+      "activities": {
+        "Mundane Weapon Penalty": {
+          "name": "Mundane Weapon Penalty",
+          "condition": "When the bastion hits a creature with a signature attack.",
+          "affects": {
+            "special": "A mundane metal weapon."
+          }
+        },
+        "Supernatural Weapon Penalty": {
+          "name": "Supernatural Weapon Penalty",
+          "condition": "When the bastion hits a creature with a signature attack.",
+          "affects": {
+            "special": "A supernatural metal weapon."
+          }
+        },
+        "Use + Extra Damage": {
+          "name": "Use + Extra Damage",
+          "condition": "When the bastion hits a creature with a signature attack."
+        }
+      },
+      "effects": {
+        "Melting Grasp - Mundane": {
+          "name": "Melting Grasp - Mundane"
+        },
+        "Melting Grasp - Supernatural": {
+          "name": "Melting Grasp - Supernatural"
+        }
+      }
+    },
+    "True Name": {
+      "name": "True Name",
+      "description": "<p>If a creature the [[lookup @name lowercase]] can hear within 60 feet of them speaks the [[lookup @name lowercase]]'s true name aloud, the [[lookup @name lowercase]] loses their damage resistances, damage immunities, and Devilish Charm reaction for 24 hours.</p><fieldset><legend>Foundry Note</legend><p>This feature comes with a passive Effect, toggle it \"On\" when the monster hears its name to remove damage resistances and immunities.</p></fieldset>",
+      "effects": {
+        "True Name": {
+          "name": "True Name",
+          "description": "<p>The creature's true name has been spoken, they lose their damage resistances, damage immunities, and Devilish Charm reaction for 24 hours.</p>"
+        }
+      }
+    },
+    "Lair Actions: Xaantikorijek": {
+      "name": "Lair Actions: Xaantikorijek",
+      "description": "<p>When fighting inside his lair, Xaantikorijek can take lair actions. On initiative count 20 (losing initiative ties), he can take one lair action to cause one of the following effects; he can't use the same lair action two rounds in a row:</p><p><strong>Echoing Roar.</strong> Xaantikorijek lets out a roar that reverberates within his lair. Each enemy in the lair must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.</p><p><strong>Quicksand.</strong> Xaantikorijek magically transmutes a 20-foot-square section of ground centered on a point he can see within 120 feet of him, turning it into shifting quicksand. Until the end of initiative count 20 on the next round, that area is difficult terrain, and creatures who start their turn in that area or enter it for the first time on a turn become &amp;Reference[restrained]. A creature can use their action to make a [[/check strength 15]] check, freeing themself or a creature they can reach on a success. If a creature is still restrained in this way when the ground returns to normal, they remain restrained and the DC to escape increases to [[/check strength 20]]{20}.</p><p><strong>Wyrm's Memories.</strong> Xaantikorijek taps into his recollections of lost magic and chooses one creature he can see within the lair. Xaantikorijek divines the significant secrets and details of that creature's life. In addition, Xaantikorijek has advantage on attack rolls against the target until the end of initiative count 20 on the following round.</p>",
+      "activities": {
+        "Echoing Roar": {
+          "name": "Echoing Roar"
+        },
+        "Quicksand": {
+          "name": "Quicksand"
+        },
+        "Wyrm's Memories": {
+          "name": "Wyrm's Memories"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        },
+        "Memorized": {
+          "name": "Memorized",
+          "description": "<p>Xaantikorijek has advantage on attack rolls against you until the end of initiative count 20 on the next round.</p>"
+        }
+      }
+    },
+    "Call of the Dead": {
+      "name": "Call of the Dead",
+      "description": "<p>When the sycophant hits a creature with a signature attack, the target must also succeed on a [[/save]] saving throw or be &amp;reference[frightened] of the sycophant for 1 minute (save ends at end of turn).</p>",
+      "activities": {
+        "save": {
+          "condition": "When the retainer hits a creature with a signature attack.",
+          "affects": {
+            "special": "The creature hit by the attack."
+          }
+        }
+      }
+    },
+    "Storm of Talons": {
+      "name": "Storm of Talons",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed without provoking opportunity attacks, then they can dive onto one creature within 5 feet of them. The target must make a DC [[lookup @save.dc.value activity=9rAX8IDpkPN3GR5s]] Dexterity saving throw. On a failed save, the target takes [[lookup @prof.flat]]d10 slashing damage and is &amp;Reference[blinded] until the end of the [[lookup @name lowercase]]'s next turn. On a successful save, the target takes half as much damage and isn't blinded.</p>"
+    },
+    "Vanish for One": {
+      "name": "Vanish for One",
+      "description": "<p><em>2nd-Order Telepathy Power</em></p><p>You obscure yourself in the sight of a creature you can see within range. The target must succeed on a Wisdom saving throw or you become &amp;reference[invisible] to them for the duration (save ends at end of turn). This effect ends early if you attack the creature, deal damage to them, or create an effect that forces them to make a saving throw.</p><p><strong>Increased Order.</strong> When you manifest this power, you can increase its order by 1 to make its manifestation time 1 bonus action.</p>",
+      "activities": {
+        "Vanish for One": {
+          "name": "Vanish for One"
+        },
+        "Vanish for One: Increased Order (Bonus Action)": {
+          "name": "Vanish for One: Increased Order (Bonus Action)"
+        }
+      }
+    },
+    "Aerial Pursuit": {
+      "name": "Aerial Pursuit",
+      "description": "<p>When the bird starts their turn in the air, they can triple their flying speed until the end of their turn. If they descend at least 30 feet on that turn, they have advantage on the next attack they make before the end of their turn. (Replaces the High-Speed Dive trait.)</p>",
+      "activities": {
+        "utility": {
+          "condition": "When starting their turn in the air."
+        }
+      }
+    },
+    "Adhesive Pseudopods": {
+      "name": "Adhesive Pseudopods",
+      "description": "<p>The [[lookup @name lowercase]] attempts to adhere to each creature of their choice within 5 feet of them. Each target must succeed on a [[/save]] saving throw or be &amp;reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]).</p>"
+    },
+    "Adept Climber": {
+      "name": "Adept Climber",
+      "description": "<p>The bear has a climbing speed of 25 feet.</p>",
+      "effects": {
+        "Adept Climber": {
+          "name": "Adept Climber",
+          "description": "<p>You have a climbing speed of 25 feet.</p>"
+        }
+      }
+    },
+    "Lair Actions: Forzaantilirys": {
+      "name": "Lair Actions: Forzaantilirys",
+      "description": "<p>When fighting inside her lair, Forzaantilirys can take lair actions. On initiative count 20 (losing initiative ties), she can take one lair action to cause one of the following effects; she can't use the same lair action two rounds in a row:</p><p><strong>Flaming Step.</strong> Forzaantilirys momentarily vanishes in a burst of flame and teleports to an unoccupied space she can see within 30 feet of her. Each creature within 5 feet of the space Forzaantilirys left must succeed on a [[/save activity=QNglKIr6nYMQWPZZ]] saving throw or take [[/damage average activity=QNglKIr6nYMQWPZZ]] damage.</p><p><strong>Hard Light.</strong> Forzaantilirys causes pummeling light to erupt in a 30-foot-radius sphere centered on a point she can see within 120 feet of her. Each creature in that area must make a [[/save activity=i3RcrjrOQanY3yfO]] saving throw or take [[/damage average activity=i3RcrjrOQanY3yfO]] damage and be moved up to 20 feet in any horizontal direction.</p><p><strong>Inflame.</strong> Forzaantilirys infuses fiery rage into one creature she can see within 120 feet of her. The creature must make a [[save activity=CD1fMQvPwxxFSkDj]] saving throw. On a failed save, the target takes [[/damage average activity=CD1fMQvPwxxFSkDj]] damage, and until the end of their next turn, they have advantage on attack rolls and attacks against them have advantage.</p>",
+      "activities": {
+        "Flaming Step": {
+          "name": "Flaming Step"
+        },
+        "Hard Light": {
+          "name": "Hard Light"
+        },
+        "Inflame": {
+          "name": "Inflame"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        },
+        "Inflamed": {
+          "name": "Inflamed",
+          "description": "<p>Until the end of your next turn, you have advantage on attack rolls, and attacks against you have advantage.</p>"
+        }
+      }
+    },
+    "Food Grab": {
+      "name": "Food Grab",
+      "description": "<p>When the fledgling hits a Medium or smaller creature with a signature attack, the target is also &amp;reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]). The fledgling then moves up to their fly speed without provoking opportunity attacks (no action required). While grappling the target, the fledgling can't attack another creature.</p>",
+      "activities": {
+        "Consume Usage": {
+          "name": "Consume Usage",
+          "condition": "When the retainer hits a Medium or smaller creature with a signature attack.",
+          "affects": {
+            "special": "The creature hit by the attack."
+          }
+        }
+      }
+    },
+    "Essence Drainer": {
+      "name": "Essence Drainer",
+      "description": "<p>When you hit a creature with an attack, you can deal an extra 2d6 damage. You regain hit points equal to the extra damage dealt. You can use deal this extra damage a number of times equal to your proficiency bonus, regaining all uses when you finish a long rest.</p>"
+    },
+    "Gobbling Bite": {
+      "name": "Gobbling Bite",
+      "description": "<p>The [[lookup @name lowercase]] makes a signature attack with advantage. On a hit, the attack deals an extra [[lookup @prof]] necrotic damage, and the [[lookup @name lowercase]] regains hit points equal to the necrotic damage dealt.</p>"
+    },
+    "Heat Seeker": {
+      "name": "Heat Seeker",
+      "description": "<p>As an action, the tactician makes a signature attack but doesn't make an attack roll for it. Instead, the attack automatically hits, and each ally within 30 feet of the target can use their reaction to move up to their speed toward the target.</p>",
+      "activities": {
+        "Consume Usage": {
+          "name": "Consume Usage",
+          "range": {
+            "special": "The signature attack's target is the range's origin."
+          }
+        }
+      }
+    },
+    "Harpy Song": {
+      "name": "Harpy Song",
+      "description": "<p>As an action, the fledgling starts singing for 1 minute. Each creature within 60 feet of the fledgling who can hear them and who understands Common or Giant must succeed on a [[/save]] saving throw or be &amp;reference[charmed] by the fledgling until they can't hear the fledgling singing anymore. While charmed in this way, a creature can't willingly harm any of the fledgling's allies.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Must be able to hear the retainer and understand Common or Giant."
+          }
+        }
+      }
+    },
+    "Wide Sweep": {
+      "name": "Wide Sweep",
+      "description": "<p>As an action, the basher sweeps their spiked club in an enormous circle, making a signature attack against each enemy within 10 feet of them. This attack has a +[[lookup @prof]] bonus to its attack and damage rolls, and if it hits a Large or smaller creature, the basher can push the target up to 10 feet away from them.</p><fieldset><legend>Foundry Note</legend><p>The activity on this feature can be used to grant an effect to the retainer to temporarily give it a PB bonus to attack and damage rolls.</p></fieldset>",
+      "effects": {
+        "Wide Sweep": {
+          "name": "Wide Sweep"
+        }
+      }
+    },
+    "Crafty": {
+      "name": "Crafty",
+      "description": "<p>The [[lookup @name lowercase]] doesn't provoke opportunity attacks when they move out of an enemy's reach.</p>"
+    },
+    "Tongue Grab": {
+      "name": "Tongue Grab",
+      "description": "<p>The [[lookup @name lowercase]] makes a signature attack. On a hit, the target is also &amp;Reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]). Until this grapple ends, the target is &amp;Reference[restrained] and the [[lookup @name lowercase]] can't make a signature attack against another target.</p>"
+    },
+    "Low-Light Senses": {
+      "name": "Low-Light Senses",
+      "description": "<p>The [[lookup @name lowercase]] gains &amp;Reference[blindsight] or &amp;Reference[darkvision] out to a range of 60 feet.</p>",
+      "effects": {
+        "Darkvision": {
+          "name": "Darkvision"
+        },
+        "Blindsight": {
+          "name": "Blindsight"
+        }
+      }
+    },
+    "Night Hunter": {
+      "name": "Night Hunter",
+      "description": "<p>The bird has darkvision out to a range of 120 feet and has a +5 bonus to Dexterity (Stealth) checks.</p>",
+      "effects": {
+        "Night Hunter": {
+          "name": "Night Hunter",
+          "description": "<p>You have darkvision out to a range of 120 feet and a +5 bonus to Dexterity (Stealth) checks.</p>"
+        }
+      }
+    },
+    "Eruption": {
+      "name": "Eruption",
+      "description": "<p>As an action, the bastion erupts, shooting a 30-foot cone of earth and lava from their head. Each creature in that area must make a [[/save]] saving throw. On a failed save, a target takes [[/damage]] damage and is knocked &amp;reference[prone]. On a successful save, a target takes half as much damage and is not knocked prone. The lava spreads around corners and ignites flammable objects in that area that aren't being worn or carried.</p>"
+    },
+    "Lair Actions: Tomb": {
+      "name": "Lair Actions: Tomb",
+      "description": "<p>On initiative count 20 (losing initiative ties), the tomb creature can take one of the following lair actions; the tomb creature can't take the same lair action two rounds in a row:</p><p><strong>Chorus of Torment.</strong> The tomb creature commands the souls of the dead to wail. Each creature within 120 feet of the tomb creature must succeed on a DC 12 plus [[lookup @prof.flat]] Wisdom saving throw or be &amp;Reference[frightened] of the tomb creature until the end of initiative count 20 on the next round.</p><p><strong>Desecrated Ground.</strong> The tomb creature draws in ambient necrotic power and gains 2 × [[lookup @prof]] temporary hit points. These temporary hit points last until the end of initiative count 20 on the next round.</p><p><strong>Grave Grasp.</strong> The corpses and souls of the restless dead attempt to drag the living into their graves. All ground within 60 feet of the tomb creature becomes difficult terrain until the end of initiative count 20 on the next round. Undead creatures ignore this difficult terrain.</p>",
+      "activities": {
+        "Chorus of Torment": {
+          "name": "Chorus of Torment"
+        },
+        "Desecrated Ground": {
+          "name": "Desecrated Ground"
+        },
+        "Grave Grasp": {
+          "name": "Grave Grasp"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Dream Spores": {
+      "name": "Dream Spores",
+      "description": "<p><em>5th-Order Telepathy Power</em></p><p>You release a burst of psionic spores. Each creature you can see within 30 feet of you must succeed on an [[/save]] saving throw or be &amp;reference[charmed] by you for the duration. While charmed in this way, a creature must use their movement during their turn to move within 10 feet of you by the safest available route.</p><p>A creature charmed in this way can repeat the saving throw whenever they take damage, ending the effect on themself on a success.</p>"
+    },
+    "Enraged Barrage": {
+      "name": "Enraged Barrage",
+      "description": "<p>As an action, the warden makes a signature attack. Each ally within 30 feet of them who can see them can use a reaction to make a weapon attack, cast a cantrip with a casting time of 1 action, or manifest a 1st-order power with a manifestation time of 1 action.</p>",
+      "activities": {
+        "utility": {
+          "affects": {
+            "special": "Can see the monster."
+          }
+        }
+      }
+    },
+    "Lair Actions: Medusa": {
+      "name": "Lair Actions: Medusa",
+      "description": "<p>When fighting inside their lair, a medusa can take lair actions. On initiative count 20 (losing initiative ties), the medusa can take one lair action to cause one of the following effects; the medusa can't use the same lair action two rounds in a row:</p><p><strong>Venom Shower.</strong> Black venom rains down in a 10-foot-radius, 40-foot-high cylinder centered on a point the medusa can see within 90 feet of them. Each creature in that area must succeed on a [[/save activity=IyArTlR8LAG4MNlX]] saving throw or be &amp;Reference[poisoned] until the end of initiative count 20 on the next round.</p><p><strong>Shadowstep.</strong> The medusa teleports up to 30 feet to an unoccupied space they can see.</p><p><strong>Stony Wail.</strong> The statues in the medusa's lair scream in pain. Each enemy within 60 feet of the medusa who can hear them must succeed on a [[/save activity=cRdiksuXlRvRMSss]] saving throw or be &amp;Reference[frightened] of the medusa until the end of initiative count 20 on the next round.</p>",
+      "activities": {
+        "Venom Shower": {
+          "name": "Venom Shower"
+        },
+        "Shadowstep": {
+          "name": "Shadowstep"
+        },
+        "Stony Wail": {
+          "name": "Stony Wail"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Tunnel-Adapted": {
+      "name": "Tunnel-Adapted",
+      "description": "<p>Without squeezing, the [[lookup @name lowercase]] can move through spaces large enough for a creature one size smaller than them.</p>"
+    },
+    "Mind Splinter": {
+      "name": "Mind Splinter",
+      "description": "<p><em>1st-Order Telepathy Power</em></p><p>You attempt to erase your image from the mind of a creature within range. Make a ranged power attack against the target. On a hit, the target takes 1d6 psychic damage, and you become &amp;reference[invisible] to them until the start of your next turn.</p><p>This power's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>"
+    },
+    "Drown": {
+      "name": "Drown",
+      "description": "<p>As an action, the apprentice chooses three creatures the apprentice can see within 60 feet of them. Each target feels as though their lungs are filling with water and must make a [[/save]] saving throw. A creature who can breathe water or who doesn't need air automatically succeeds on this saving throw. On a failed save, a target takes [[/damage]] damage, and for 1 minute, they can't speak, their speed is halved, and they are &amp;reference[dazed apply=false] (save ends at end of turn). On a successful save, the target takes half as much damage and suffers no other effect. Another creature within 5 feet of a target can use their action to make a DC 10 plus [[lookup @prof.flat]] Strength (Athletics) or Intelligence (Medicine) check, ending the effect on a success.</p>",
+      "effects": {
+        "Drowning": {
+          "name": "Drowning",
+          "description": "<p>You cannot speak, your speed is halved, and you are dazed (save ends at end of turn). Another creature can use an action to make a Strength (Athletics) or Intelligence (Medicine) check to end this effect.</p>"
+        }
+      }
+    },
+    "Explosion": {
+      "name": "Explosion",
+      "description": "<p>As an action, the tactician hurls a ball of fire at a point they can see within 120 feet of them. The ball explodes in a 20-foot-radius sphere, forcing each enemy in that area to make a [[/save]] saving throw. On a failed save, a creature takes [[/damage]] damage and is pushed 20 feet away from the center of the area. On a successful save, a creature takes half as much damage and isn't pushed. The fire spreads around corners and ignites flammable objects in the area that aren't being worn or carried.</p>"
+    },
+    "Desert Dweller": {
+      "name": "Desert Dweller",
+      "description": "<p>The wildcat ignores difficult terrain created by dirt and sand. They can tolerate temperatures as high as 120° Fahrenheit, and they don't need to drink water as long as they have fresh food.</p>"
+    },
+    "Shield Bash": {
+      "name": "Shield Bash",
+      "description": "<p>The decanus attempts to topple a Medium or smaller creature within 5 feet of them. The target must succeed on a [[/save]] saving throw or be knocked &amp;reference[prone]. Succeed or fail, the decanus then makes two signature attacks against any creature within reach.</p>"
+    },
+    "Ruin Climber": {
+      "name": "Ruin Climber",
+      "description": "<p>The [[lookup @name lowercase]] creature has a climbing speed equal to their walking speed.</p>",
+      "effects": {
+        "Ruin Climber": {
+          "name": "Ruin Climber"
+        }
+      }
+    },
+    "Retch": {
+      "name": "Retch",
+      "description": "<p>The [[lookup @name lowercase]] regurgitates garbage in a 15-foot cone. Each creature in that area must make a DC [[lookup @save.dc.value activity=GJK2DtQmWUfdgAuS]] Constitution saving throw. On a failed save, a creature takes [[lookup @prof.flat]]d6 poison damage and is &amp;Reference[poisoned]. On a successful save, a creature takes half as much damage and isn't poisoned.</p>"
+    },
+    "Shredding Claws": {
+      "name": "Shredding Claws",
+      "description": "<p>The [[lookup @name lowercase]] makes three signature Claw attacks against the same target. The target must succeed on a DC [[lookup @save.dc.value activity=fqxtTdPvsTxLjWQg]] Charisma saving throw or be &amp;Reference[frightened] of the [[lookup @name lowercase]] for 1 minute (save ends at end of turn).</p>"
+    },
+    "Lair Actions: Underground": {
+      "name": "Lair Actions: Underground",
+      "description": "<p>On initiative count 20 (losing initiative ties), the underground creature can take one of the following lair actions; the underground creature can't take the same lair action two rounds in a row:</p><p><strong>Cloud of Darkness.</strong> The underground creature creates a 20-foot-radius area of magical darkness centered on a point they can see within 60 feet of them. The underground creature can see through the darkness, which lasts until the end of initiative count 20 on the next round unless ended early by the <em>dispel magic</em> spell. Other creatures with darkvision can't see through this darkness, and light can't illuminate it unless created by a spell of 3rd level or higher.</p><p><strong>Feasting Call.</strong> The underground creature lets out a frenzied cry. Until the end of initiative count 20 on the next round, each ally within 300 feet of the underground creature who can hear them becomes enraged. While enraged, a creature has advantage on melee weapon attack rolls, and attack rolls against them have advantage.</p><p><strong>Treacherous Ground.</strong> The underground creature causes a tremor in the ground. Each creature within 30 feet of them must succeed on a DC 12 plus [[lookup @prof.flat]] Strength saving throw or be knocked &amp;Reference[prone].</p>",
+      "activities": {
+        "Cloud of Darkness": {
+          "name": "Cloud of Darkness"
+        },
+        "Feasting Call": {
+          "name": "Feasting Call"
+        },
+        "Treacherous Ground": {
+          "name": "Treacherous Ground"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        },
+        "Enraged": {
+          "name": "Enraged",
+          "description": "<p>You have advantage on melee weapon attack rolls, and attack rolls against you have advantage.</p>"
+        }
+      }
+    },
+    "Spined Skin": {
+      "name": "Spined Skin",
+      "description": "<p>As a bonus action, you cause your skin to sprout poisoned spines for 1 minute. For the duration, a creature who touches you or hits you with a melee attack takes 5 (1d10) piercing damage, and they must succeed on a Constitution saving throw against your exploit save DC or be &amp;Reference[poisoned] for 1 minute (save ends at end of turn). Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "activities": {
+        "save": {
+          "condition": "When a creature touches you or hits you with a melee attack."
+        }
+      },
+      "effects": {
+        "Spined Skin": {
+          "name": "Spined Skin",
+          "description": "<p>Any creature who touches you or hits you with a melee attack takes 5 (1d10) piercing damage, and they must succeed on a Constitution saving throw or be poisoned for 1 minute.</p>"
+        }
+      }
+    },
+    "Earthshaker": {
+      "name": "Earthshaker",
+      "description": "<p>The [[lookup @name lowercase]] strikes the ground, and each creature within 10 feet of them must succeed on a DC [[lookup @save.dc.value activity=vYUT7FuG0cW53v3i]] Dexterity saving throw or be knocked &amp;Reference[prone]. The [[lookup @name lowercase]]'s caregiver automatically succeeds on this saving throw.</p>"
+    },
+    "Hunt from the Shadows": {
+      "name": "Hunt from the Shadows",
+      "description": "<p>You gain darkvision out to a range of 60 feet. If you already have darkvision, its range increases by 60 feet. Additionally, you gain proficiency in the Stealth skill if you don't already have it, and your proficiency bonus is doubled for any ability check you make using that skill.</p>",
+      "effects": {
+        "Hunt from the Shadows": {
+          "name": "Hunt from the Shadows",
+          "description": "<p>You have darkvision out to 60 feet and expertise in the Stealth skill.</p>"
+        }
+      }
+    },
+    "Clever Goop": {
+      "name": "Clever Goop",
+      "description": "<p>The [[lookup @name lowercase]] takes the Hide action and makes a signature attack (in either order). If the attack hits a Large or smaller creature, the target is knocked &amp;Reference[prone]. While the [[lookup @name lowercase]] is hidden in this way, they can approach a creature or move where they're clearly visible without automatically giving away their position.</p>"
+    },
+    "Oozomorphism": {
+      "name": "Oozomorphism",
+      "description": "<p>As a bonus action, you become amorphous for 5 minutes, along with any gear you wear or carry. For the duration, you can move through a space as narrow as 1 inch wide without squeezing, and you have resistance to bludgeoning, piercing, and slashing damage. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Oozomorphism": {
+          "name": "Oozomorphism",
+          "description": "<p>You can move through a space as narrow as 1 inch wide without squeezing, and you have resistance to bludgeoning, piercing, and slashing damage.</p>"
+        }
+      }
+    },
+    "Memory Thief": {
+      "name": "Memory Thief",
+      "description": "<p><em>4th-Order Power, Concentration</em></p><p>The operative psionically plunders the mind of a creature they can see within 30 feet of them. The target must make a [[/save]] saving throw. On a failed save, the target takes [[/damage average]] damage, and for 1 minute, the target's proficiency bonus is cumulatively lowered by 1 and the operative gains a cumulative +1 bonus to attack and damage rolls and to each feature's save DC. On a successful save, a target takes half as much damage and doesn't have their proficiency bonus reduced. A creature whose proficiency bonus drops to 0 can't form new thoughts or speak, and they have disadvantage on ability checks, attack rolls, and saving throws.</p><fieldset><legend>Foundry Note</legend><p>To support cumulative effects, the effect from the activities on this item will have to be dragged to the target's sheet manually.</p></fieldset>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "The retainer must be able to see the target."
+          }
+        },
+        "Grant Self Bonus": {
+          "name": "Grant Self Bonus",
+          "condition": "Follow-up to a failed save from this feature."
+        }
+      },
+      "effects": {
+        "Memory Thief: Target": {
+          "name": "Memory Thief: Target",
+          "description": "<p>Your proficiency bonus is reduced by 1. If this reduces your proficiency bonus to 0, you cannot form new thoughts or speak, and you have disadvantage on ability checks, attack rolls, and saving throws.</p>"
+        },
+        "Memory Thief: Self Bonus": {
+          "name": "Memory Thief: Self Bonus",
+          "description": "<p>You have a cumulative +1 bonus to attack and damage rolls, and to each of your features' save DC.</p>"
+        }
+      }
+    },
+    "Powerful Impact": {
+      "name": "Powerful Impact",
+      "description": "<p>If the bird descends at least 20 feet on their turn immediately before hitting with a Rending Talons attack or Talons attack, the target takes an extra 7 (2d6) bludgeoning damage. (+1 CR)</p>",
+      "effects": {
+        "Powerful Impact": {
+          "name": "Powerful Impact",
+          "description": "<p>Your CR is increased by 1.</p>"
+        }
+      }
+    },
+    "Decapitating Strike": {
+      "name": "Decapitating Strike",
+      "description": "<p>When the bird scores a critical hit against a Tiny target, the target is decapitated. A decapitated target dies if they can't survive without that head.</p>"
+    },
+    "Lair Actions: Enchanted Forest": {
+      "name": "Lair Actions: Enchanted Forest",
+      "description": "<p>On initiative count 20 (losing initiative ties), the enchanted forest creature can take one of the following lair actions; the enchanted forest creature can't take the same lair action two rounds in a row:</p><p><strong>Frothing Flora.</strong> The enchanted forest creature causes roots and vines to temporarily grow around them; until initiative count 20 on the next round, the ground within 30 feet of the enchanted forest creature is difficult terrain.</p><p><strong>Writhing Roots.</strong> Foliage in the enchanted forest creature's lair becomes a conduit for the enchanted forest creature's power. The enchanted forest creature can target creatures of their choice that are touching such plant life within 90 feet of the enchanted forest creature. A target must succeed on a DC 12 plus [[lookup @prof.flat]] Wisdom saving throw or take [[lookup @prof.flat]]d6 psychic damage and be &amp;Reference[grappled] (escape DC 12 plus [[lookup @prof.flat]]).</p><p><strong>Faerie Lights.</strong> The enchanted forest creature creates dancing lights in a 20-foot cube at a point they can see within 120 feet of them. Each creature in that area who can see the lights must make a DC 12 plus [[lookup @prof.flat]] Wisdom saving throw. On a failed save, a creature is &amp;Reference[blinded], outlined in light, and sheds dim light in a 10-foot radius until the end of initiative count 20 on the next round. Attack rolls against an affected creature have advantage if the attacker can see them, and the affected creature can't benefit from being invisible.</p>",
+      "activities": {
+        "Frothing Flora": {
+          "name": "Frothing Flora"
+        },
+        "Writhing Roots": {
+          "name": "Writhing Roots",
+          "affects": {
+            "special": "Any touching plant life"
+          }
+        },
+        "Faerie Lights": {
+          "name": "Faerie Lights"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Shockwave": {
+      "name": "Shockwave",
+      "description": "<p><em>2nd-Order Telekinesis Power</em></p><p>You unleash a psionic shock wave. Each creature within 10 feet of you must succeed on a Strength saving throw or be pushed up to 10 feet directly away from you.</p>"
+    },
+    "Mentor": {
+      "name": "Mentor",
+      "description": "@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe02.JournalEntryPage.00mentor00000000 inline] <fieldset><legend>Foundry Note</legend><p>This feature provides several \"Summon\" activities that will give the retainer the correct number of hit points and adjust their proficiency bonus to match their caregiver. Each is configured for a different retainer hit die size (d6, d8, d10, or d12).</p></fieldset>",
+      "activities": {
+        "d6 Retainer": {
+          "name": "d6 Retainer"
+        },
+        "d8 Retainer": {
+          "name": "d8 Retainer"
+        },
+        "d10 Retainer": {
+          "name": "d10 Retainer"
+        },
+        "d12 Retainer": {
+          "name": "d12 Retainer"
+        }
+      }
+    },
+    "Adjuration": {
+      "name": "Adjuration",
+      "description": "<p>As a bonus action, the retainer grants an infernal blessing to an ally they can see within 60 feet of them. The next time that ally makes an attack roll before the start of the retainer's next turn, the ally adds a +[[lookup @prof]] bonus to the roll. If the attack hits, it deals an extra [[lookup @prof]] damage.</p>",
+      "activities": {
+        "utility": {
+          "affects": {
+            "special": "The monster must see the target."
+          }
+        }
+      },
+      "effects": {
+        "Infernal Blessing": {
+          "name": "Infernal Blessing",
+          "description": "<p>The creatures next attack has a bonus to attack and damage. The bonus is equal to the retainer's proficiency bonus.</p>"
+        }
+      }
+    },
+    "Flesh to Diamonds": {
+      "name": "Flesh to Diamonds",
+      "description": "<p>As a bonus action, you cover your skin with a hardened layer of crystals and gems that lasts for 10 minutes. For the duration, you have resistance to bludgeoning, piercing, and slashing damage. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Flesh to Diamonds": {
+          "name": "Flesh to Diamonds"
+        }
+      }
+    },
+    "Reinforce": {
+      "name": "Reinforce",
+      "description": "<p>When the decanus sees an ally within 30 feet of them being targeted by an attack, the decanus can use a reaction to move up to their speed toward the target. If the decanus ends their movement within 5 feet of the target, the target gains a +[[lookup @prof.flat]] bonus to their AC until the beginning of the decanus's next turn, including against the triggering attack.</p>",
+      "activities": {
+        "Move": {
+          "name": "Move",
+          "condition": "An ally within 30 feet is targeted by an attack."
+        }
+      },
+      "effects": {
+        "Reinforce": {
+          "name": "Reinforce",
+          "description": "<p>The target gains a +PB bonus to their AC until the beginning of the retainer's next turn, including against the triggering attack.</p>"
+        }
+      }
+    },
+    "Acid-Enhanced": {
+      "name": "Acid-Enhanced",
+      "description": "<p>As a bonus action, you cause your hands to exude acid for 1 minute. While exuding acid, your melee weapon attacks and unarmed strikes deal an extra 1d8 acid damage. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Acid-Enhanced": {
+          "name": "Acid-Enhanced"
+        }
+      }
+    },
+    "Hear the Unseen": {
+      "name": "Hear the Unseen",
+      "description": "<p>At the start of their turn, the [[lookup @name lowercase]] can emit a subsonic trill (no action required). If they aren't deafened, they can see their surroundings, including invisible and hidden creatures within 200 feet of them who aren't behind total cover, until the end of their turn.</p>",
+      "effects": {
+        "Hear the Unseen": {
+          "name": "Hear the Unseen",
+          "description": "<p>You can see your surroundings, including invisible and hidden creatures within 200 feet of you who aren't behind total cover, until the end of your turn.</p>"
+        }
+      }
+    },
+    "Lesser Petrifying Eye Beams": {
+      "name": "Lesser Petrifying Eye Beams",
+      "description": "<p>The [[lookup @name lowercase]] targets one creature they can see within 30 feet of them. The target must succeed on a DC [[lookup @save.dc.value activity=DQ1AS86VKkCTpmfJ]] Constitution saving throw or be &amp;Reference[restrained] as they magically begin to turn to stone. A creature restrained in this way must repeat the saving throw at the end of their turn. On a successful save, the effect ends. On a failed save, the creature is &amp;reference[petrified] for 1 hour or until freed by a <em>cure ailment</em> power, <em>lesser restoration</em> spell, or similar supernatural effect.</p>",
+      "effects": {
+        "Turning to Stone": {
+          "name": "Turning to Stone",
+          "description": "<p>You are turning to stone. You must repeat the saving throw at the end of each of your turns, ending this on a success. On a failed save, you become &amp;reference[petrified] for 1 hour.</p>"
+        }
+      }
+    },
+    "Reality Pull": {
+      "name": "Reality Pull",
+      "description": "<p>The [[lookup @name lowercase]] warps reality around up to [[lookup @prof]] enemies within 60 feet of them. Each target must succeed on a DC [[lookup @save.dc.value activity=S4uv3t1EQGlHrbw2]] Strength saving throw or be pulled up to 20 feet directly toward the [[lookup @name lowercase]].</p>"
+    },
+    "Hop": {
+      "name": "Hop",
+      "description": "<p>The [[lookup @name lowercase]] jumps [[lookup @attributes.movement.walk]] feet as a bonus action.</p>"
+    },
+    "Deserved Transfer": {
+      "name": "Deserved Transfer",
+      "description": "<p><em>2nd-Order Metamorphosis Power</em></p><p>You fire a bolt of draining psychic energy at a creature within range. Make a ranged power attack against the target. On a hit, the target takes [[/damage average]] damage, and the psychic energy bounces to another creature you can see within 30 feet of you. The second creature gains temporary hit points equal to half the damage dealt.</p><p><strong>Increased Order.</strong> When you manifest this power, you can increase its order by 1 or more. For each increase of 1, the damage increases by 2d8.</p>"
+    },
+    "Wrenching Bite": {
+      "name": "Wrenching Bite",
+      "description": "<p>As an action, the hunter makes a signature attack against a Large or smaller creature. On a hit, the target is &amp;reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]). Until the grapple ends, the target takes [[/damage]] damage at the end of each of their turns, and the hunter can't use their Wrenching Bite against another target.</p>",
+      "activities": {
+        "Use": {
+          "name": "Use"
+        },
+        "Repeating Damage": {
+          "name": "Repeating Damage",
+          "condition": "At the end of the grappled target's turn.",
+          "range": {
+            "special": "The grappled target."
+          }
+        }
+      }
+    },
+    "Darkvision": {
+      "name": "Darkvision",
+      "description": "<p>The Swarm has darkvision out to a range of 30 feet.</p>",
+      "effects": {
+        "Darkvision": {
+          "name": "Darkvision",
+          "description": "<p>You have darkvision out to a range of 30 feet.</p>"
+        }
+      }
+    },
+    "Devil": {
+      "name": "Devil",
+      "description": "<p>When converting another ancestry's stat block to a devil, increase the creature's challenge rating by 1. If converting a devil stat block to another ancestry, decrease the creature's challenge rating by 1.</p><p>A devil has the following defining features:</p><p><strong>Size.</strong> The devil's size is Medium.</p><p><strong>Type.</strong> The devil's type is Fiend.</p><p><strong>Speed.</strong> The devil has a walking speed of 30 feet.</p><p><strong>Damage Resistances.</strong> The devil is resistant to bludgeoning, piercing, and slashing damage from mundane attacks.</p><p><strong>Damage Immunities.</strong> The devil is immune to fire damage.</p><p><strong>Condition Immunities.</strong> The devil can't be charmed.</p><p><strong>Darkvision.</strong> The devil has darkvision out to a range of 120 feet.</p><p><strong>Languages.</strong> The devil can speak, read, and write Common and Infernal.</p><p><strong>True Name.</strong> If a creature the devil can hear within 60 feet of them speaks aloud the devil's true name, the devil loses their damage resistances and immunities and their Devilish Charm reaction for 24 hours.</p><p><strong>Devilish Charm (1/Day).</strong> When the devil is targeted by an attack, power, spell, or other effect by a creature they can see within 60 feet of them, the devil can use a reaction to force the creature to make a Charisma saving throw. The DC for this saving throw equals 8 + the devil's proficiency bonus + the devil's Intelligence, Wisdom, or Charisma modifier (whichever is highest). On a failed save, the creature is charmed by the devil until the start of the creature's next turn, and the devil chooses a new target the devil can see for the triggering effect. The new target must be within the triggering effect's range.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Lair Actions: Cave": {
+      "name": "Lair Actions: Cave",
+      "description": "<p>On initiative count 20 (losing initiative ties), the cave creature can take one of the following lair actions; the cave creature can't take the same lair action two rounds in a row:</p><p><strong>Rocky Bulwark.</strong> The cave creature magically attracts nearby stones, forming a stone armor that grants a +[[lookup @prof.flat]] bonus to AC but reduces their speed by 10 feet. The creature loses the armor at the end of initiative count 20 on the next round.</p><p><strong>Strategic Blockage.</strong> The cave creature causes loose rocks to fall, creating a 15-foot cube of solid earth centered on a point within 60 feet of them. Each creature in that area must make a DC 12 plus [[lookup @prof.flat]] Dexterity saving throw. On a failed save, a creature takes [[lookup @prof.flat]]d6 bludgeoning damage and is pushed into the nearest unoccupied space of the cave creature's choice outside that area. On a successful save, a creature takes no damage and is moved into the nearest unoccupied space of their choice outside that area. A creature within reach of the cube can use an action to remove a section of the cube as large as the space the creature occupies.</p><p><strong>Tremor.</strong> The cave creature causes an earthquake centered on a point they can see within 60 feet of them. Each other creature on the ground within 30 feet of that point must succeed on a DC 12 plus [[lookup @prof.flat]] Strength saving throw or fall &amp;Reference[prone].</p>",
+      "activities": {
+        "Rocky Bulwark": {
+          "name": "Rocky Bulwark"
+        },
+        "Strategic Blockage": {
+          "name": "Strategic Blockage"
+        },
+        "Tremor": {
+          "name": "Tremor",
+          "affects": {
+            "special": "Each creature on the ground in the area."
+          }
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        },
+        "Rocky Bulwark": {
+          "name": "Rocky Bulwark"
+        }
+      }
+    },
+    "Bombs Away": {
+      "name": "Bombs Away",
+      "description": "<p>The [[lookup @name lowercase]] flies up to their speed without provoking opportunity attacks. If the [[lookup @name lowercase]] has a creature grappled, the grapple doesn't halve the [[lookup @name lowercase]]'s speed and the [[lookup @name lowercase]] can end the grapple at any point during this movement. If the [[lookup @name lowercase]] ends the grapple before the end of their turn and the target takes bludgeoning damage from that fall, the target takes an extra [[lookup @prof]] bludgeoning damage.</p>"
+    },
+    "Magic Purge": {
+      "name": "Magic Purge",
+      "description": "<p>The [[lookup @name lowercase]] spews corrupted magical energy at a creature they can see within 30 feet of them. The target must make a DC [[lookup @save.dc.value activity=kvbFezJfORU276hl]] Constitution saving throw. On a failed save, the target takes [[lookup @prof.flat]]d8 force damage and is &amp;Reference[dazed] until the start of the [[lookup @name lowercase]]'s next turn. On a successful save, the target takes half as much damage and isn't dazed.</p>"
+    },
+    "Vile Stench": {
+      "name": "Vile Stench",
+      "description": "<p>As a bonus action, you cause your body to expel toxins into the air. Each creature of your choice within 10 feet of you who needs to breathe must succeed on a Constitution saving throw against your exploit save DC or be poisoned and have their speed halved for 1 minute (save ends at end of turn). Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Vile Stench": {
+          "name": "Vile Stench"
+        }
+      }
+    },
+    "Fortify Weapon": {
+      "name": "Fortify Weapon",
+      "description": "<p>As a bonus action, the blacksmith touches a weapon and polishes it. For 1 minute, the weapon is magical and deals an extra [[lookup @prof]] damage.</p><fieldset><legend>Foundry Note</legend><p>The enchantment activity on this feature currently uses the target's PB.</p></fieldset>",
+      "activities": {
+        "enchant": {
+          "affects": {
+            "special": "A weapon."
+          }
+        }
+      },
+      "effects": {
+        "Fortified Weapon": {
+          "name": "Fortified Weapon",
+          "description": "<p>This weapon deals an additional PB damage.</p>"
+        }
+      }
+    },
+    "Ground Stomp": {
+      "name": "Ground Stomp",
+      "description": "<p>As an action, the immobilizer stomps the ground. Each creature within 10 feet of the immobilizer must succeed on a [[/save]] saving throw or be knocked &amp;reference[prone]. Then the immobilizer can make a signature attack with a reach of 10 feet against one prone creature.</p>"
+    },
+    "Pack Tactics": {
+      "name": "Pack Tactics",
+      "description": "<p>The wildcat has advantage on an attack roll against a creature if at least one of the wildcat's allies is within 5 feet of the target and the ally isn't incapacitated.</p>"
+    },
+    "Underground Senses": {
+      "name": "Underground Senses",
+      "description": "<p>The [[lookup @name lowercase]] gains one of the following senses: &amp;Reference[darkvision] out to a range of 300 feet, &amp;Reference[tremorsense] out to a range of 120 feet, or &amp;Reference[blindsight] out to a range of 60 feet.</p>",
+      "effects": {
+        "Darkvision": {
+          "name": "Darkvision"
+        },
+        "Tremorsense": {
+          "name": "Tremorsense"
+        },
+        "Blindsight": {
+          "name": "Blindsight"
+        }
+      }
+    },
+    "Decimation of Magic": {
+      "name": "Decimation of Magic",
+      "description": "<p>As a bonus action, you tap into an innate magical resistance. For 1 minute, you have resistance to all damage dealt by spells and magical effects. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Decimation of Magic": {
+          "name": "Decimation of Magic"
+        }
+      }
+    },
+    "Minion": {
+      "name": "Minion",
+      "description": "<p>If the [[lookup @name lowercase]] takes damage from an attack or as the result of a failed saving throw, their hit points are reduced to 0. If the [[lookup @name lowercase]] takes damage from another effect, they die if the damage equals or exceeds their hit point maximum; otherwise they take no damage.</p>"
+    },
+    "Venomous Bite": {
+      "name": "Venomous Bite",
+      "description": "<p>When the headstrong hits a creature with a signature attack, the headstrong injects the target with venom. The target must make a [[/save]] saving throw. On a failed save, the target takes [[lookup @prof.flat]]d6 poison damage and is &amp;reference[poisoned] until the start of the headstrong's next turn. On a successful save, the target takes half as much damage and isn't poisoned.</p>",
+      "activities": {
+        "save": {
+          "condition": "When the retainer hits a creature with a signature attack.",
+          "affects": {
+            "special": "Same target as the triggering signature attack."
+          }
+        }
+      }
+    },
+    "Lair Actions: Lord Syuul": {
+      "name": "Lair Actions: Lord Syuul",
+      "description": "<p>When fighting inside the Terminal Excrescence, Lord Syuul can command the living fortress around him. On initiative count 20 (losing initiative ties), the cerebral processor whirs and Syuul takes one of the following lair actions; he can't take the same lair action two rounds in a row:</p><p><strong>Excremus March.</strong> Both excremus mouths can each move up to 30 feet along the wall in directions of Syuul's choice.</p><p><strong>Screaming Protection.</strong> Psionic projections of fleshy mouths cover Lord Syuul and scream at his aggressors. When a creature within 5 feet of Lord Syuul hits him with a melee attack, the attacker must succeed on a [[/save]] saving throw or take [[/damage average]] damage. The mouths disappear at the end of initiative count 20 on the next round.</p><p><strong>Wall of Flesh.</strong> Syuul creates a wall of flesh that extends in a straight line between two points he can see on the chamber walls. The wall stretches from floor to ceiling and is 5 feet thick. Each 5-foot cube of wall has AC 10 and 20 hit points.</p>",
+      "activities": {
+        "Excremus March": {
+          "name": "Excremus March"
+        },
+        "Screaming Protection": {
+          "name": "Screaming Protection"
+        },
+        "Wall of Flesh": {
+          "name": "Wall of Flesh"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Terranova": {
+      "name": "Terranova",
+      "description": "<p>Each creature on the ground within 10 feet of the [[lookup @name lowercase]] must succeed on a DC [[lookup @save.dc.value activity=hQgPF37PeBdGBeZe]] Strength saving throw or take 1d6 plus [[lookup @prof]] bludgeoning damage and be knocked &amp;Reference[prone]. A creature who fails this saving throw by 5 or more is &amp;Reference[restrained] by the ground (save ends at end of turn). A creature can use their action to free themself or another creature within their reach, ending the effect.</p>"
+    },
+    "Push Through": {
+      "name": "Push Through",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their walking speed without provoking opportunity attacks. While doing so, they can move through the spaces of Large or smaller creatures as if they were difficult terrain. If the [[lookup @name lowercase]] enters another creature's space during this move, that creature must succeed on a DC [[lookup @save.dc.value activity=iw6vgRwTZOrD6LxI]] Strength saving throw or be knocked &amp;Reference[prone].</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Large or smaller"
+          }
+        }
+      }
+    },
+    "Whispers of the Dead": {
+      "name": "Whispers of the Dead",
+      "description": "<p>As an action, the sycophant chooses up to [[lookup @prof.flat]] creatures they can see within 30 feet of them. Each target must succeed on a [[/save]] saving throw or make an attack against their nearest ally (no action required). A frightened creature has disadvantage on the saving throw.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Must be visible for the retainer."
+          }
+        }
+      }
+    },
+    "Noxious Vines": {
+      "name": "Noxious Vines",
+      "description": "<p>Long toxic vines whip out from the hag. Each enemy within 30 feet of the hag must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one. Each ally within 30 feet of the hag regains 18 (4d8) hit points.</p>",
+      "activities": {
+        "heal": {
+          "condition": "Follow-up to the damage roll."
+        }
+      }
+    },
+    "Snake Spit": {
+      "name": "Snake Spit",
+      "description": "<p>As a bonus action, the headstrong spits venom at the eyes of a creature within 5 feet of them. The target must succeed on a [[/save]] saving throw or be &amp;reference[blinded] until the end of their next turn.</p>"
+    },
+    "HVWQKhfuEIj0yQFo": {
+      "name": "Whispers of the Dead",
+      "description": "<p>As an action, the [[lookup @name lowercase]] chooses up to [[lookup @prof.flat]] creatures they can see within 30 feet of them. Each target must succeed on a [[/save]] saving throw or make an attack against their nearest ally (no action required). A frightened creature has disadvantage on the saving throw.</p>"
+    },
+    "Maw of the Mound": {
+      "name": "Maw of the Mound",
+      "description": "<p>As a bonus action, you can bite an enemy as an unarmed strike. You can use Dexterity or Strength for the attack and damage rolls of this attack. On a hit, the strike deals 1d6 + your Dexterity or Strength modifier piercing damage instead of the bludgeoning damage normal for an unarmed strike, and you gain temporary hit points equal to the damage dealt. You can make this attack a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>",
+      "activities": {
+        "Strength Attack": {
+          "name": "Strength Attack"
+        },
+        "Dexterity Attack": {
+          "name": "Dexterity Attack"
+        }
+      }
+    },
+    "Ocean Hunter": {
+      "name": "Ocean Hunter",
+      "description": "<p>When the bird starts their turn above water, they don't have disadvantage on attacks due to being underwater until the end of their turn.</p>"
+    },
+    "Phase": {
+      "name": "Phase",
+      "description": "<p><em>4th-Order Metamorphosis Power</em></p><p>You imbue your body and everything you wear and carry with psychic energy, allowing it to pass through solid objects. For the duration, you can move through creatures and objects as if they were difficult terrain. You take 1d10 force damage if you end your turn inside an object. If this power ends while you are inside a creature or object, you are shunted out of it into the closest unoccupied space of your choice.</p><p><strong>Increased Order.</strong> When you manifest this power, you can increase its order by 1 or more. For each increase of 1, you target one additional creature within 5 feet of you.</p>",
+      "effects": {
+        "Phase": {
+          "name": "Phase",
+          "description": "<p>For 1 minute, you can move through other creatures and objects as if they were difficult terrain. You take 1d10 force damage if you end your turn inside an object. If this power ends while you are inside a creature or object, you are shunted out of it into the closest unoccupied space of your choice.</p>"
+        }
+      }
+    },
+    "Angry Denial": {
+      "name": "Angry Denial",
+      "description": "<p>When the basher takes damage from a creature the basher can see within 5 feet of them, the basher can use their reaction to instead take no damage and make a signature attack against the creature.</p>",
+      "activities": {
+        "Prevent Damage": {
+          "name": "Prevent Damage",
+          "condition": "When the monster takes damage from a creature it can see within 5 feet."
+        }
+      }
+    },
+    "Superior Sprint": {
+      "name": "Superior Sprint",
+      "description": "<p>When the wildcat moves on their turn in combat, they can quadruple their speed until the end of their turn. (Replaces the Sprint trait.)</p>"
+    },
+    "Lair Actions: Olothec": {
+      "name": "Lair Actions: Olothec",
+      "description": "<p>When fighting inside their lair, an olothec can take lair actions. On initiative count 20 (losing initiative ties), the olothec can take one lair action to cause one of the following effects; the olothec can't use the same lair action two rounds in a row:</p><p><strong>Baleful Teleport.</strong> A surge of psionic power scours up to two creatures the olothec can see within 60 feet of the olothec. Each creature must succeed on a [[/save activity=T3kHtLhu2s4vC4DK]] saving throw or be teleported up to 60 feet to an unoccupied space the olothec can see.</p><p><strong>Psychic Shock.</strong> The olothec targets up to two creatures within 30 feet of them who are under the slime effect of the olothec's Devolving Tentacle. Each target takes [[/damage average activity=HElQfzu8rNsl2Z3V]] damage and the olothec regains a number of hit points equal to the total damage taken.</p><p><strong>Slime Eruption.</strong> A surge of toxic slime erupts from tunnels or caverns, targeting up to three creatures within 120 feet of the olothec. Each target must succeed on a [[/save activity=3KGsU6EFfqlGC8un]] saving throw or be &amp;Reference[poisoned] until the end of their next turn.</p>",
+      "activities": {
+        "Baleful Teleport": {
+          "name": "Baleful Teleport"
+        },
+        "Psychic Shock": {
+          "name": "Psychic Shock"
+        },
+        "Slime Eruption": {
+          "name": "Slime Eruption"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Misleading Strike": {
+      "name": "Misleading Strike",
+      "description": "<p>As an action, the retainer makes a signature attack. On a hit, the target must use their reaction, if available, to make a weapon attack against a creature of the retainer's choice.</p>"
+    },
+    "Agile Landing": {
+      "name": "Agile Landing",
+      "description": "<p>The wildcat takes no damage from falling 40 feet or less, provided they aren't incapacitated.</p>"
+    },
+    "Attach": {
+      "name": "Attach",
+      "description": "<p>The [[lookup @name lowercase]] makes a signature attack against a creature. On a hit, the target takes an extra [[lookup @prof.flat]]d6 piercing damage and the [[lookup @name lowercase]] attaches to the target and enters their space. While attached, the [[lookup @name lowercase]] moves with the target and can't attack any creature other than the target. If the [[lookup @name lowercase]] hits the target with an attack while attached, the target takes an extra [[lookup @prof.flat]]d6 piercing damage. The [[lookup @name lowercase]] can use an action or bonus action to detach and move 5 feet into an unoccupied space without provoking opportunity attacks. The [[lookup @name lowercase]] also detaches if they become grappled, incapacitated, prone, or restrained, or if they take more than [[@prof.flat * 5]] damage in a turn.</p>"
+    },
+    "Angulotl": {
+      "name": "Angulotl",
+      "description": "<p>An angulotl has the following defining features:</p><p><strong>Size.</strong> The angulotl's size is Small.</p><p><strong>Type.</strong> The angulotl's type is Humanoid.</p><p><strong>Speed.</strong> The angulotl has a walking speed of 20 feet, a climbing speed of 20 feet, and a swimming speed of 30 feet.</p><p><strong>Damage Immunities.</strong> The angulotl is immune to poison damage.</p><p><strong>Darkvision.</strong> The angulotl has darkvision out to a range of 60 feet.</p><p><strong>Languages.</strong> The angulotl can speak, read, and write Angulotl.</p><p><strong>Amphibious.</strong> The angulotl can breathe air and water.</p><p><strong>Toxiferous.</strong> When a creature hits the angulotl with a melee attack while within 5 feet of them or touches the angulotl, that creature takes 2 (1d4) poison damage.</p><p><strong>Hop.</strong> The angulotl jumps a number of feet up to their walking speed as a bonus action.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Agile Flyer": {
+      "name": "Agile Flyer",
+      "description": "<p>While in the air, the bird has a +5 bonus to Dexterity saving throws and Dexterity (Acrobatics) checks.</p><fieldset><legend>Foundry Note</legend><p>If the bird has the Flying condition, the bonus will automatically be enabled.</p></fieldset>",
+      "effects": {
+        "Agile Flyer": {
+          "name": "Agile Flyer",
+          "description": "<p>You have a +5 bonus to Dexterity saving throws and Dexterity (Acrobatics) checks while in the air.</p>"
+        }
+      }
+    },
+    "Defensive Eruption": {
+      "name": "Defensive Eruption",
+      "description": "<p>As a bonus action, you unleash a burst of protective energy. Each enemy within 30 feet of you must make a Dexterity saving throw against your exploit save DC. On a failed save, a creature takes 4d6 fire damage and is knocked &amp;Reference[prone]. On a successful save, a creature takes half as much damage and isn't knocked prone. In addition, you and allies within 30 feet of you have advantage on their next attack roll made before the start of your next turn. Once you use this bonus action, you can't do so again until you finish a long rest.</p>"
+    },
+    "Gnoll": {
+      "name": "Gnoll",
+      "description": "<p>A gnoll has the following defining features:</p><p><strong>Size.</strong> The gnoll's size is Medium.</p><p><strong>Type.</strong> The gnoll's type is Fiend.</p><p><strong>Speed.</strong> The gnoll has a walking speed of 30 feet.</p><p><strong>Darkvision.</strong> The gnoll has darkvision out to a range of 60 feet.</p><p><strong>Languages.</strong> The gnoll can speak, read, and write Abyssal and Gnoll.</p><p><strong>Bite Attack.</strong> The gnoll can use their teeth to make unarmed strikes using Strength or Dexterity (gnoll's choice) for the attack roll. When the gnoll hits with their teeth, the strike deals 1d4 + the gnoll's Strength or Dexterity modifier piercing damage, instead of the bludgeoning damage normal for an unarmed strike.</p><p><strong>Death Frenzy.</strong> When an ally the gnoll can see within 30 feet of them is reduced to 0 hit points, the gnoll can use their reaction to move up to half their speed and make a Bite attack.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Trample": {
+      "name": "Trample",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed. During this move, they can move through other creature's spaces. Each Large or smaller creature whose space the [[lookup @name lowercase]] passes through must make a DC [[lookup @save.dc.value activity=EvhcQy2rVabKDDk8]] Strength saving throw. On a failed save, a creature takes [[lookup @prof.flat]]d6 bludgeoning damage and is knocked &amp;Reference[prone]. On a successful save, a creature takes half as much damage and isn't knocked prone.</p>"
+    },
+    "Entomb": {
+      "name": "Entomb",
+      "description": "<p>As a bonus action, the immobilizer calls spiky vines to surround a creature they can see within 60 feet of them. The target must make a [[/save]] saving throw. On a failed save, the target takes [[/damage]] damage and is &amp;reference[restrained apply=false]. While restrained in this way, the target is &amp;reference[blinded apply=false]. On a successful save, the target takes only half damage and isn't restrained.</p><p>A creature can use their action to make a [[/check]] check, freeing themself or another creature within reach on a success.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Must be visible."
+          }
+        },
+        "Freeing Check": {
+          "name": "Freeing Check"
+        }
+      },
+      "effects": {
+        "Entombed": {
+          "name": "Entombed",
+          "description": "<p>You are restrained and blinded. You or another creature can make a Strength (Athletics) or Dexterity (Acrobatics) check to free you.</p>"
+        }
+      }
+    },
+    "Lion's Leap": {
+      "name": "Lion's Leap",
+      "description": "<p>The [[lookup @name lowercase]] moves up to half their speed without provoking opportunity attacks. If they end this movement on the ground, each creature within 5 feet of them must succeed on a DC [[lookup @save.dc.value activity=maTiaBBAgTLRMHpY]] Strength saving throw or be knocked &amp;Reference[prone].</p>"
+    },
+    "Throw Away": {
+      "name": "Throw Away",
+      "description": "<p>As an action, the basher grabs a willing Medium or smaller creature they can see within 5 feet of them and hurls the creature to an unoccupied space within 30 feet of the basher. If the creature lands within 5 feet of an enemy, the creature can use a reaction to make a melee attack against that enemy.</p>",
+      "activities": {
+        "Toss": {
+          "name": "Toss",
+          "affects": {
+            "special": "A willing Medium or smaller creature."
+          }
+        }
+      }
+    },
+    "Fearsome Gore": {
+      "name": "Fearsome Gore",
+      "description": "<p>As an action, the devastator makes a signature attack against a creature within 5 feet of them. On a hit, the attack deals an extra [[/damage]] damage, and the target must succeed on a DC [[lookup @save.dc.value activity=SmzJaFh0pZ8vTpy0]] Wisdom saving throw or be &amp;reference[frightened] of the devastator until the end of the devastator's next turn.</p>",
+      "activities": {
+        "save": {
+          "condition": "Follow-up to the attack."
+        }
+      }
+    },
+    "Infernal Ichor": {
+      "name": "Infernal Ichor",
+      "description": "<p>When the [[lookup @name lowercase]] dies, their corpse unleashes a spray of burning orange ichor. Each creature within 5 feet of the [[lookup @name lowercase]] takes fire damage equal to the [[lookup @name lowercase]]'s proficiency bonus.</p>",
+      "activities": {
+        "damage": {
+          "condition": "The monster dies"
+        }
+      }
+    },
+    "Crafty Boogie": {
+      "name": "Crafty Boogie",
+      "description": "<p>As a bonus action, you create a diversion for another creature you can see. The creature can use a reaction to move up to their speed without provoking opportunity attacks. Once you use this bonus action, you can't do so again until you finish a short or long rest.</p>"
+    },
+    "Villain Actions": {
+      "name": "Villain Actions",
+      "description": "<p>The [[lookup @name lowercase]] has three villain actions. They can take each action once during an encounter after an enemy's turn. They can take these actions in any order but can use only one per round.</p><p>[[/item .item-id-1]]</p><p>[[/item .item-id-2]]</p><p>[[/item .item-id-3]]</p>"
+    },
+    "Mind Link": {
+      "name": "Mind Link",
+      "description": "<p>[[lookup @name]] can communicate telepathically with any Amethyst Knife boss regardless of distance, provided they are on the same plane of existence.</p>"
+    },
+    "Ursine Might": {
+      "name": "Ursine Might",
+      "description": "<p>As a bonus action, you empower yourself with the strength of a great bear. For the next minute, your Strength-based attacks deal an extra 1d10 damage and you have advantage on Strength checks and saving throws. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Ursine Might": {
+          "name": "Ursine Might",
+          "description": "<p>Your Strength-based attacks deal an extra 1d10 damage and you have advantage on Strength checks and saving throws.</p>"
+        }
+      }
+    },
+    "Touch of Rot": {
+      "name": "Touch of Rot",
+      "description": "<p>When the [[lookup @name lowercase]] hits a target with a melee attack, the attack deals [[lookup @prof]] extra necrotic damage.</p>",
+      "effects": {
+        "Touch of Rot": {
+          "name": "Touch of Rot"
+        }
+      }
+    },
+    "Lethe": {
+      "name": "Lethe",
+      "description": "<p>When the [[lookup @name lowercase]]'s soul count is 0, they have advantage on attack rolls, disadvantage on saving throws, and their Intelligence score becomes 3 (−4). Additionally, the [[lookup @name lowercase]] must use their movement on each of their turns to move as close as possible to the nearest creature they can sense with their soulsight, and then if they are able, they must use their action to attack and attempt to kill that creature. The [[lookup @name lowercase]] can't act with any other purpose until they add 1 to their soul count.</p>",
+      "effects": {
+        "Lethe": {
+          "name": "Lethe",
+          "description": "<p>When the demon's soul count is 0, they have advantage on attack rolls, disadvantage on saving throws, and Intelligence score becomes 3. Additionally, must use their movement on each of their turns to move as close as possible to the nearest creature they can sense with their soulsight, and then if they are able, they must use their action to attack and attempt to kill that creature. Cannot act with any other purpose until they add 1 to their soul count.</p>"
+        }
+      }
+    },
+    "This Way!": {
+      "name": "This Way!",
+      "description": "<p>As an action, the deathguard moves up to their speed without provoking opportunity attacks. Each ally the deathguard passes within 5 feet of during the move can use a reaction to move up to their speed in the same direction as the deathguard without provoking opportunity attacks. Until the start of the deathguard's next turn, attacks against these allies have disadvantage.</p>",
+      "effects": {
+        "This Way!": {
+          "name": "This Way!",
+          "description": "<p>Attacks against you have disadvantage.</p>"
+        }
+      }
+    },
+    "Engulf": {
+      "name": "Engulf",
+      "description": "<p>The [[lookup @name lowercase]] attempts to pull a Large or smaller creature within 5 feet of them into their body. The target must make a DC [[lookup @save.dc.value activity=UQFGW1F3DhxyDTvJ]] Strength saving throw. On a failure, the target is pulled into the [[lookup @name lowercase]]'s space, takes [[lookup @prof.flat]]d8 poison damage, and is engulfed. On a success, a creature takes half as much damage, doesn't move, and isn't engulfed.</p><p>An engulfed creature is restrained, has total cover against attacks and other effects outside the [[lookup @name lowercase]], and takes [[lookup @prof.flat]]d8 poison damage at the start of each of the [[lookup @name lowercase]]'s turns. When the [[lookup @name lowercase]] moves, the engulfed creature moves with them. An engulfed creature can try to escape by taking an action to make a DC [[lookup @check.dc.value activity=3wz552jGQz2cjC72]] Strength check. On a success, that creature is freed and shunted to an unoccupied space of their choice within 5 feet of the [[lookup @name lowercase]].</p><p>The [[lookup @name lowercase]] can have one Large or up to four Medium or smaller creatures engulfed at a time.</p>"
+    },
+    "Time Raider": {
+      "name": "Time Raider",
+      "description": "<p>A time raider has the following defining features:</p><p><strong>Size.</strong> The time raider's size is Medium.</p><p><strong>Type.</strong> The time raider's type is Humanoid.</p><p><strong>Speed.</strong> The time raider has a walking speed of 30 feet.</p><p><strong>Damage Resistances.</strong> The time raider is resistant to psychic damage.</p><p><strong>Condition Immunities.</strong> The time raider can't be blinded or charmed.</p><p><strong>Darkvision.</strong> The time raider has darkvision out to a range of 120 feet.</p><p><strong>Languages.</strong> The time raider can speak, read, and write Common and Kuran'zoi.</p><p><strong>Psychic Scar.</strong> The time raider is immune to any effect that would sense their emotions, read their thoughts, reveal they are lying, or reveal their alignment or location.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Kobold": {
+      "name": "Kobold",
+      "description": "<p>A kobold has the following defining features:</p><p><strong>Size.</strong> The kobold's size is Small.</p><p><strong>Type.</strong> The kobold's type is Humanoid.</p><p><strong>Speed.</strong> The kobold has a walking speed of 30 feet.</p><p><strong>Darkvision.</strong> The kobold has darkvision out to a range of 60 feet.</p><p><strong>Languages.</strong> The kobold can speak, read, and write Common and Draconic.</p><p><strong>Shield? Shield!</strong> The kobold gains a +1 bonus to AC while within 5 feet of at least one ally who also has this trait, is wielding a shield, and isn't incapacitated or prone. To benefit from this trait, the kobold must be wielding a shield.</p><p><strong>Equipment.</strong> The kobold has a shield. When the kobold wields a shield, they gain a +2 bonus to AC.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Crimson Feast": {
+      "name": "Crimson Feast",
+      "description": "<p>The [[lookup @name lowercase]] attempts to enter the body of a creature they can see within 5 feet of them who isn't a Construct or an Undead. The target must make a DC [[lookup @save.dc.value activity=ie35ujg421G38gQN]] Constitution saving throw. On a failed save, the [[lookup @name lowercase]] melds into the target, who takes [[lookup @prof.flat]]d6 necrotic damage, becomes the [[lookup @name lowercase]]'s host, and is poisoned until the [[lookup @name lowercase]] exits the host.</p><p>While melded, the [[lookup @name lowercase]] has total cover against attacks and other effects originating outside the host, and they can't take any action except to exit the host as a bonus action. At the start of each of the [[lookup @name lowercase]]'s turns, the host must make a DC [[lookup @save.dc.value activity=ie35ujg421G38gQN]] Constitution saving throw. On a failed save, the host takes [[lookup @prof.flat]]d6 necrotic damage and remains melded. On a successful save, the host takes half as much damage and the [[lookup @name lowercase]] exits the host. If the host dies or is subject to a <em>cure ailment </em>power, a <em>protection from poison</em> or <em>lesser restoration</em> spell, or a similar supernatural effect, the [[lookup @name lowercase]] exits the host.</p><p>When the [[lookup @name lowercase]] exits the host, they enter an unoccupied space within 5 feet of the host.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Who isn't a Construct or Undead"
+          }
+        }
+      }
+    },
+    "Lizardfolk": {
+      "name": "Lizardfolk",
+      "description": "<p>A lizardfolk has the following defining features:</p><p><strong>Size.</strong> The lizardfolk's size is Medium.</p><p><strong>Type.</strong> The lizardfolk's type is Humanoid.</p><p><strong>Speed.</strong> The lizardfolk has a walking speed of 30 feet and a swimming speed of 30 feet.</p><p><strong>Languages.</strong> The lizardfolk can speak, read, and write Common and Draconic.</p><p><strong>Amphibious.</strong> The lizardfolk can breathe air and water.</p><p><strong>Bite Attack.</strong> The lizardfolk can use their teeth to make unarmed strikes using Strength or Dexterity (lizardfolk's choice) for the attack roll. When the lizardfolk hits with their teeth, the strike deals 1d6 + the lizardfolk's Strength or Dexterity modifier piercing damage, instead of the bludgeoning damage normal for an unarmed strike.</p><p><strong>Reptilian Escape (1/Day).</strong> If the lizardfolk fails a Strength or Dexterity saving throw, they can use their reaction to lose their tail and succeed instead. They regrow their tail when they finish a long rest.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Clever Claws": {
+      "name": "Clever Claws",
+      "description": "<p>The bear can use their long claws in place of thieves' tools to open locks, and they gain a +3 bonus to Dexterity checks made to do so.</p>",
+      "effects": {
+        "Clever Claws": {
+          "name": "Clever Claws",
+          "description": "<p>You have a +3 bonus to Thieves' Tools checks made to open locks, which you can use your claws for instead of a tool.</p>"
+        }
+      }
+    },
+    "Speak with Beasts and Plants": {
+      "name": "Speak with Beasts and Plants",
+      "description": "<p>The [[lookup @name lowercase]] can communicate with Beasts and Plants as if they shared a language.</p>"
+    },
+    "Blood for Blood": {
+      "name": "Blood for Blood",
+      "description": "<p>As a reaction to an ally the deathguard can see within 5 feet of them being hit with an attack, the deathguard redirects the attack to themself, potentially causing the attack to miss. If the attacker is within 5 feet of the deathguard, the retainer can make a signature attack against the attacker.</p>",
+      "activities": {
+        "utility": {
+          "condition": "When an ally the deathguard can see within 5 feet of them is hit by an attack."
+        }
+      }
+    },
+    "Chaotic Form": {
+      "name": "Chaotic Form",
+      "description": "<p>As a bonus action, you channel your companion's chaotic energy into yourself, constantly shifting your form and making you harder to hit. When you use this bonus action and at the start of each of your turns for the next minute, roll a d6. Your AC increases by the number rolled until the start of your next turn. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "activities": {
+        "utility": {
+          "roll": "AC Bonus"
+        }
+      },
+      "effects": {
+        "Chaotic Form": {
+          "name": "Chaotic Form"
+        }
+      }
+    },
+    "One-Kobold Army": {
+      "name": "One-Kobold Army",
+      "description": "<p>The decanus moves up to their speed, then makes a number of signature attacks equal to the number of enemies within 5 feet of them (minimum of three attacks). Each enemy within range must be attacked at least once. On a hit, the target must succeed on a [[/save]] saving throw or be &amp;reference[frightened] of the decanus for 1 minute (save ends at end of turn).</p>",
+      "effects": {
+        "One-Kobold Army": {
+          "name": "One-Kobold Army",
+          "description": "<p>The target is frightened of the retainer for 1 minute (save ends at end of turn).</p>"
+        }
+      }
+    },
+    "Crushing Grip": {
+      "name": "Crushing Grip",
+      "description": "<p>The bird's powerful talons crush a creature they are grappling or attached to. The target must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.</p>"
+    },
+    "Lair Actions: Shtriga Nonna": {
+      "name": "Lair Actions: Shtriga Nonna",
+      "description": "<p>When fighting inside her lair, Shtriga Nonna can take lair actions. On initiative count 20 (losing initiative ties), she can take one lair action to cause one of the following effects; Shtriga Nonna can't use the same lair action two rounds in a row:</p><p><strong>Fatten You Up.</strong> Shtriga Nonna chooses a point on the ground she can see within 60 feet of her. A 20-foot-square feast of pasta, gingerbread, and roast goose centered on that point appears on the ground until the end of initiative count 20 on the next round. Each creature in that area when the feast appears must succeed on a [[/save activity=uMP85ry32yVu2dBn]] saving throw or be &amp;Reference[dazed] by the bounty for the duration. The feast is difficult terrain for all creatures except Shtriga Nonna.</p><p><strong>Kitties of Despair.</strong> Illusory cats hiss at three enemies Shtriga Nonna can see within 60 feet of her. Each target must succeed on a [[/save activity=Us0vItiPjNG0QYg5]] saving throw or their speed is halved and they can't regain hit points until the end of initiative count 20 on the next round.</p><p><strong>Sugar and Spice.</strong> Magical herbs and spices rain down in a 20-foot-radius sphere at a point Shtriga Nonna can see within 120 feet of her. Each creature in that area must succeed on a [[/save activity=oeGimGcpp0qgJiTv]] saving throw or have disadvantage on Constitution and Wisdom saving throws until the end of initiative count 20 on the next round.</p>",
+      "activities": {
+        "Fatten You Up": {
+          "name": "Fatten You Up"
+        },
+        "Kitties of Despair": {
+          "name": "Kitties of Despair"
+        },
+        "Sugar and Spice": {
+          "name": "Sugar and Spice"
+        }
+      },
+      "effects": {
+        "Kitties of Despair": {
+          "name": "Kitties of Despair",
+          "description": "<p>Your speed is halved and you cannot regain hit points until the end of initiative count 20 on the next round.</p>"
+        },
+        "Sugar and Spice": {
+          "name": "Sugar and Spice",
+          "description": "<p>You have disadvantage on Constitution and Wisdom saving throws until the end of initiative count 20 on the next round.</p>"
+        },
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Arctic Traveler": {
+      "name": "Arctic Traveler",
+      "description": "<p>The bear has advantage on saving throws to avoid gaining exhaustion, can tolerate temperatures as cold as −50° Fahrenheit, and ignores difficult terrain created by ice or snow.</p>"
+    },
+    "Ferocity": {
+      "name": "Ferocity",
+      "description": "@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe02.JournalEntryPage.00ferocity000000 inline]",
+      "activities": {
+        "Gain Ferocity": {
+          "name": "Gain Ferocity",
+          "roll": "Gain Ferocity",
+          "condition": "The companion isn't incapacitated at the start of their and their caregiver's turn"
+        },
+        "Prevent Rampage": {
+          "name": "Prevent Rampage"
+        },
+        "End of Combat": {
+          "name": "End of Combat"
+        }
+      }
+    },
+    "Burning Embrace": {
+      "name": "Burning Embrace",
+      "description": "<p>As an action, the bastion makes a signature attack against a creature within range. If the attack hits, the target is also grappled (escape DC 10 plus [[lookup @prof.flat]]). While grappled in this way, a target is restrained and takes [[lookup @prof.flat]]d6 fire damage at the start of each of their turns.</p>",
+      "activities": {
+        "Use": {
+          "name": "Use"
+        },
+        "Repeating Damage": {
+          "name": "Repeating Damage",
+          "condition": "At the start of the grappled target's turn.",
+          "affects": {
+            "special": "The grappled target."
+          }
+        }
+      }
+    },
+    "Powerful Jaws": {
+      "name": "Powerful Jaws",
+      "description": "<p>The bear's Bite attack deals an extra 4 (1d8) damage, and it deals maximum damage to Plants. (A bear with this feature can't take the Multiattack action.)</p>"
+    },
+    "Backdraft": {
+      "name": "Backdraft",
+      "description": "<p>The [[lookup @name lowercase]] flies up to their speed without provoking opportunity attacks. When the [[lookup @name lowercase]] ends this movement, each creature within 15 feet of them must make a DC [[lookup @save.dc.value activity=aPKHXaVoLBWbZxYt]] Strength saving throw. On a failed save, a creature takes [[lookup @prof.flat]]d6 bludgeoning damage and is knocked &amp;Reference[prone]. On a successful save, a creature takes half as much damage and isn't knocked prone.</p>"
+    },
+    "Mind Scream": {
+      "name": "Mind Scream",
+      "description": "<p><em>3rd-Order Telepathy Power</em></p><p>You psionically pierce the mind of each enemy you can see within range. Each target must make an Intelligence saving throw, taking 5d6 psychic damage on a failed save, or half as much damage on a successful one. A creature reduced to 0 hit points by this damage is automatically stabilized.</p><p><strong>Increased Order.</strong> When you manifest this power, you can increase its order by 1 or more. For each increase of 1, the damage increases by 2d6.</p>"
+    },
+    "Rotting Hooves": {
+      "name": "Rotting Hooves",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed without provoking opportunity attacks, then makes a signature attack. On a hit, the attack deals an extra [[lookup @prof]] bludgeoning damage, and the target must succeed on a [[/save]] saving throw or be &amp;Reference[poisoned] until the start of the [[lookup @name lowercase]]'s next turn.</p>"
+    },
+    "Tail Sweep": {
+      "name": "Tail Sweep",
+      "description": "<p>The [[lookup @name lowercase]] sweeps their tail in a 15-foot cone. Each creature in that area must make a [[/save]] saving throw or take [[/damage]] damage and be pushed up to 10 feet away from the [[lookup @name lowercase]].</p>"
+    },
+    "Phasing Charge": {
+      "name": "Phasing Charge",
+      "description": "<p>When the operative hits a creature with a signature attack, they can attempt to teleport the target. The target must succeed on a [[/save]] saving throw or be teleported up to 30 feet to an unoccupied space on the ground that the operative can see.</p>",
+      "activities": {
+        "save": {
+          "condition": "When the retainer hits a creature with a signature attack.",
+          "affects": {
+            "special": "The creature hit by the signature attack."
+          }
+        }
+      }
+    },
+    "Poisoned Sting": {
+      "name": "Poisoned Sting",
+      "description": "<p>The [[lookup @name lowercase]] stings a target within 10 feet of them with their tail. The target must make a DC [[lookup @save.dc.value activity=uUTbMYf7WVK54fye]] Constitution saving throw. On a failed save, the target takes [[lookup @prof.flat]]d10 poison damage and becomes &amp;reference[dazed] until the end of their next turn. On a successful save, the target takes half as much damage and isn't dazed.</p>",
+      "effects": {
+        "Poisoned Sting": {
+          "name": "Poisoned Sting",
+          "description": "<p>The target is &amp;reference[dazed] until the end of their next turn.</p>"
+        }
+      }
+    },
+    "Lair Actions: Swamp": {
+      "name": "Lair Actions: Swamp",
+      "description": "<p>On initiative count 20 (losing initiative ties), the swamp creature can take one of the following lair actions; the swamp creature can't take the same lair action two rounds in a row: </p><p><strong>Swamp Camouflage.</strong> The swamp creature can move up to half their speed and then make a Dexterity (Stealth) check to hide, even if they are being observed by other creatures. </p><p><strong>Swamp Gas.</strong> The swamp creature chooses a point on the ground that they can see within 120 feet of them, causing a pocket of acidic swamp gas to erupt from it. Each creature, other than the swamp creature, in a 20-foot cube centered on that point must succeed on a DC 12 plus [[lookup @prof.flat]] Constitution saving throw or take [[lookup @prof.flat]]d6 acid damage. </p><p><strong>Swamp Medicine.</strong> The swamp creature draws on the life energy of the swamp and regains [[lookup @prof.flat]]d6 hit points.</p>",
+      "activities": {
+        "Swamp Camouflage": {
+          "name": "Swamp Camouflage"
+        },
+        "Swamp Gas": {
+          "name": "Swamp Gas"
+        },
+        "Swamp Medicine": {
+          "name": "Swamp Medicine"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Fearsome Growl": {
+      "name": "Fearsome Growl",
+      "description": "<p>The bear lets out a mighty growl. Each creature within 15 feet of the bear who can hear them must succeed on a DC 13 Wisdom saving throw or be &amp;reference[frightened] of the bear until the end of the bear's next turn. A creature who succeeds on their saving throw is immune to the Fearsome Growl of all bears for 24 hours.</p>",
+      "effects": {
+        "Fearsome Growl Immunity": {
+          "name": "Fearsome Growl Immunity",
+          "description": "<p>You are immune to the Fearsome Growl of all bears for 24 hours.</p>"
+        }
+      }
+    },
+    "Flurry of Fangs": {
+      "name": "Flurry of Fangs",
+      "description": "<p>As an action, the gnasher makes a signature attack against up to [[lookup @prof.flat]] creatures within 5 feet of them.</p>",
+      "activities": {
+        "Attack Nearby Creatures": {
+          "name": "Attack Nearby Creatures"
+        }
+      }
+    },
+    "Lair Actions: Yserthrax": {
+      "name": "Lair Actions: Yserthrax",
+      "description": "<p>When fighting inside her lair, Yserthrax can take lair actions. On initiative count 20 (losing initiative ties), she can take one lair action to cause one of the following effects; she can't use the same lair action two rounds in a row:</p><p><strong>All-Seeing.</strong> Yserthrax projects her senses through her lair, opening emerald eyes on every surface. Until the end of initiative count 20 on the next round, Yserthrax can see every creature in the lair.</p><p><strong>Eldritch Suppuration.</strong> Yserthrax releases a flood of eldritch energy from a point she can see within 120 feet of her. Each creature in a 20-foot-radius sphere centered on that point must make a [[/save activity=cjdCJWuhrXqHGduH]] saving throw. On a failed save, a creature takes [[/damage average]] damage, and until they finish a long rest, their hit point maximum is reduced by an amount equal to the damage taken. On a successful save, a creature takes half as much damage and their hit point maximum is not reduced.</p><p><strong>Elder Whispers.</strong> Yserthrax whispers a warping word of power to up to three creatures she can see within 120 feet of her who are corrupted by her Corruption trait. Each target must succeed on a [[/save activity=DWO79lDlMrrNFNHJ]] saving throw or use their reaction, if available, to move up to their speed in a direction chosen by Yserthrax.</p>",
+      "activities": {
+        "All-Seeing": {
+          "name": "All-Seeing"
+        },
+        "Eldritch Suppuration": {
+          "name": "Eldritch Suppuration"
+        },
+        "Elder Whispers": {
+          "name": "Elder Whispers",
+          "affects": {
+            "special": "Who are corrupted by her Corruption trait"
+          }
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Dazing Slash": {
+      "name": "Dazing Slash",
+      "description": "<p>The [[lookup @name lowercase]] makes a signature attack. On a hit, the attack deals an extra [[lookup @prof]] slashing damage, and the target must succeed on a [[/save]] saving throw or be &amp;reference[dazed] until the start of the [[lookup @name lowercase]]'s next turn.</p>"
+    },
+    "Grasping Detritus": {
+      "name": "Grasping Detritus",
+      "description": "<p>The hag conjures magical seaweed and fish guts to restrain their foes. Each enemy in a 30-foot cone emanating from the hag must make a [[/save]] saving throw. On a failed save, a target takes [[/damage average]] damage and is &amp;reference[restrained] until the end of the hag's next turn. On a successful save, a target takes half as much damage and isn't restrained.</p>"
+    },
+    "Protector": {
+      "name": "Protector",
+      "description": "<p>The chimera is divinely bound to another creature, who is their charge. When the chimera and their charge are on the same plane, the charge can telepathically communicate with the chimera, and the chimera knows the distance and direction to the charge. If the chimera is within 60 feet of the charge, half of any damage the charge takes (rounded up) is transferred to the chimera.</p>"
+    },
+    "Sa33Q0WPc2sbIHFe": {
+      "name": "Bite Attack",
+      "description": "<p>The [[lookup @name lowercase]] can use their teeth to make unarmed strikes using Strength or Dexterity ([[lookup @name lowercase]]'s choice) for the attack roll. When the [[lookup @name lowercase]] hits with their teeth, the strike deals 1d4 + the [[lookup @name lowercase]]'s Strength or Dexterity modifier piercing damage, instead of the bludgeoning damage normal for an unarmed strike.</p>"
+    },
+    "Energy Eyes": {
+      "name": "Energy Eyes",
+      "description": "<p><em>3rd-Order Resopathy Power</em></p><p>You beam elemental energy from your eyes at a creature you can see within range. The target must make a [[/save]] saving throw, taking 5d10 damage on a failed save, or half as much damage on a successful one. Choose the damage type from the following list: cold, fire, lightning, or radiant.</p><p><strong>Increased Order.</strong> When you manifest this power, you can increase its order by 1 or more. For each increase of 1, the damage increases by 2d10.</p>"
+    },
+    "Volcanic Blow": {
+      "name": "Volcanic Blow",
+      "description": "The [[lookup @name lowercase]] spits an explosion of fire at a point they can see within 60 feet of them. Each creature in a 10-foot-radius sphere centered on that point must make a DC [[lookup @save.dc.value activity=okEmK1rmj42YmeUc]] Dexterity saving throw, taking [[lookup @prof.flat]]d6 fire damage on a failed save, or half as much damage on a successful one."
+    },
+    "Sneak and Stab": {
+      "name": "Sneak and Stab",
+      "description": "<p>As a bonus action, the sneak takes the Hide action. If the sneak hits a creature they are hidden from with an attack on the same turn, the creature takes an extra [[lookup @prof.flat]]d10 piercing damage, and the sneak can immediately take the Hide action (no action required).</p>",
+      "activities": {
+        "Consume Usage": {
+          "name": "Consume Usage"
+        },
+        "Extra Damage": {
+          "name": "Extra Damage",
+          "condition": "If the sneak hits a creature they are hidden from with an attack on the same turn.",
+          "range": {
+            "special": "Same range as the triggering attack."
+          }
+        }
+      }
+    },
+    "Bugbear": {
+      "name": "Bugbear",
+      "description": "<p>A bugbear has the following defining features:</p><p><strong>Size.</strong> The bugbear's size is Medium.</p><p><strong>Type.</strong> The bugbear's type is Humanoid.</p><p><strong>Speed.</strong> The bugbear has a walking speed of 30 feet.</p><p><strong>Darkvision.</strong> The bugbear has darkvision out to a range of 60 feet.</p><p><strong>Languages.</strong> The bugbear can speak, read, and write Common and Goblin.</p><p><strong>Bugbear's Inspiration.</strong> Allied Humanoids within 15 feet of the bugbear who can see or hear them have advantage on Wisdom and Charisma saving throws.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Punishing Shake": {
+      "name": "Punishing Shake",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed and makes a signature Bite attack against one target. If the attack hits and the target is Medium or smaller, the [[lookup @name lowercase]] also shakes and flings them up to 10 feet away horizontally. If the target hits a solid surface, they are knocked &amp;Reference[prone] and take an extra [[/damage @prof bludgeoning]] damage.</p>"
+    },
+    "Hypnotic Sleep": {
+      "name": "Hypnotic Sleep",
+      "description": "<p>As a bonus action, the hunter drones lullingly. Each creature within 5 feet of the hunter who can hear them must succeed on a [[/save]] saving throw or fall &amp;reference[unconscious] for 1 minute. An unconscious target wakes up if they take damage, the hunter becomes incapacitated, the hunter moves more than 5 feet away from the target, or another creature uses an action to rouse the target.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Must be able to hear the retainer."
+          }
+        }
+      }
+    },
+    "Undying Hunger": {
+      "name": "Undying Hunger",
+      "description": "<p>The [[lookup @name lowercase]] can perceive each creature within 30 feet of them who isn't a &amp;Reference[Construct]{Construct} or an &amp;Reference[Undead], as if the [[lookup @name lowercase]] had &amp;Reference[blindsight].</p>",
+      "effects": {
+        "Undying Hunger": {
+          "name": "Undying Hunger"
+        }
+      }
+    },
+    "Brutal Charge": {
+      "name": "Brutal Charge",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed without provoking opportunity attacks. During or at the end of this move, they can make a signature attack against one target.</p>"
+    },
+    "Hobgoblin": {
+      "name": "Hobgoblin",
+      "description": "<p>A hobgoblin has the following defining features:</p><p><strong>Size.</strong> The hobgoblin's size is Medium.</p><p><strong>Type.</strong> The hobgoblin's type is Humanoid.</p><p><strong>Speed.</strong> The hobgoblin has a walking speed of 30 feet.</p><p><strong>Damage Resistances.</strong> The hobgoblin has resistance to fire damage.</p><p><strong>Darkvision.</strong> The hobgoblin has darkvision out to a range of 60 feet.</p><p><strong>Languages.</strong> The hobgoblin can speak, read, and write Common, Goblin, and Infernal.</p><p><strong>Infernal Ichor.</strong> When the hobgoblin dies, their corpse unleashes a spray of burning orange ichor. Each creature within 5 feet of the hobgoblin takes fire damage equal to the hobgoblin's proficiency bonus.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Astral Presence": {
+      "name": "Astral Presence",
+      "description": "<p>As an action, the sycophant becomes &amp;reference[invisible] for 1 minute or until they use a bonus action to end this effect. While invisible, the sycophant can move through creatures and objects as if they were &amp;reference[difficult terrain], and the sycophant's signature attacks deal an extra [[lookup @prof.flat]] damage to creatures who can't see them. The sycophant takes 5 (1d10) force damage if they end their turn inside an object.</p>",
+      "activities": {
+        "Become Invisible": {
+          "name": "Become Invisible"
+        },
+        "Extra Damage": {
+          "name": "Extra Damage",
+          "condition": "When the retainer hits a creature with a signature attack."
+        },
+        "Self Damage": {
+          "name": "Self Damage",
+          "condition": "When the retainer ends their turn inside an object."
+        }
+      },
+      "effects": {
+        "Astral Presence": {
+          "name": "Astral Presence",
+          "description": "<p>The retainer is invisible for the duration or until they use a bonus action to end this effect.</p><p>While invisible, the sycophant can move through creatures and objects as if they were difficult terrain and it's signature attacks deal extra damage. The sycophant takes force damage if they end their turn inside an object.</p>"
+        }
+      }
+    },
+    "Shield? Shield!": {
+      "name": "Shield? Shield!",
+      "description": "<p>The [[lookup @name lowercase]] gains a +1 bonus to AC while within 5 feet of at least one ally who also has this trait, is wielding a shield, and isn't incapacitated or prone. To benefit from this trait, the [[lookup @name lowercase]] must be wielding a shield.</p>",
+      "effects": {
+        "Shield? Shield!": {
+          "name": "Shield? Shield!"
+        }
+      }
+    },
+    "Transmute Ground": {
+      "name": "Transmute Ground",
+      "description": "<p>The [[lookup @name lowercase]] picks a 10-foot-square area of ground they can see within 30 feet of them. Each creature standing in the area must succeed on a DC [[lookup @save.dc.value activity=YufZSxk1lBF7Sicw]] Strength saving throw or partially sink into the ground and become &amp;Reference[restrained]. A creature can use their action to make a DC [[lookup @check.dc.value activity=FAfgy7zoNTyyLvz1]] Strength (Athletics) check, freeing themself or another creature within their reach on a success and ending the restrained condition for the freed creature.</p>"
+    },
+    "Sickening Sympathy": {
+      "name": "Sickening Sympathy",
+      "description": "<p><em>2nd-Order Telepathy Power</em></p><p>The creature who made the triggering attack must succeed on a Constitution saving throw or be &amp;reference[poisoned] until the end of their next turn as they feel the nauseous pain of their target.</p>",
+      "activities": {
+        "save": {
+          "condition": "When another creature you can see within 30 feet of you is hit with an attack."
+        }
+      }
+    },
+    "Liquefy": {
+      "name": "Liquefy",
+      "description": "<p><em>3rd-Order Metamorphosis Power</em></p><p>You psionically barrage your attacker with transformative energy. The attacker must succeed on a Constitution saving throw or be pushed 5 feet away from you and &amp;reference[restrained] until the end of their next turn, as their lower body temporarily melts into an immovable goo.</p>",
+      "activities": {
+        "save": {
+          "condition": "When you are hit with an attack by a creature within 5 feet of you."
+        }
+      }
+    },
+    "Crystallize": {
+      "name": "Crystallize",
+      "description": "<p>The [[lookup @name lowercase]] grows sharp crystals from the ground in a 20-foot-radius sphere centered on the [[lookup @name lowercase]]. Until the start of the [[lookup @name lowercase]]'s next turn, that area becomes difficult terrain for their enemies, and when an enemy moves into or within that area, the enemy takes 2×[[lookup @prof.flat]] piercing damage for every 5 feet they travel.</p>"
+    },
+    "Vicinity Shift": {
+      "name": "Vicinity Shift",
+      "description": "<p>The [[lookup @name lowercase]] and each ally within 30 feet of them gains a +[[lookup @prof]] bonus to damage rolls and has their speed doubled until the start of the [[lookup @name lowercase]]'s next turn. Additionally, the [[lookup @name lowercase]] can make one signature attack as part of this action.</p>",
+      "effects": {
+        "Vicinity Shift": {
+          "name": "Vicinity Shift"
+        }
+      }
+    },
+    "Hypnotic Mane": {
+      "name": "Hypnotic Mane",
+      "description": "<p>Each creature within 10 feet of the [[lookup @name lowercase]] must succeed on a DC [[lookup @save.dc.value activity=HFBgEEKvKTbJ9Jyx]] Wisdom saving throw or be charmed by the [[lookup @name lowercase]] until the end of the [[lookup @name lowercase]]'s next turn. While charmed in this way, a creature is incapacitated and has a speed of 0. If a creature charmed in this way takes damage or if someone else uses an action to shake the creature out of their stupor, the condition ends on that creature.</p>",
+      "effects": {
+        "Hypnotic Mane": {
+          "name": "Hypnotic Mane"
+        }
+      }
+    },
+    "Wind Hover": {
+      "name": "Wind Hover",
+      "description": "<p>The bird can hover while flying.</p>",
+      "effects": {
+        "Wind Hover": {
+          "name": "Wind Hover",
+          "description": "<p>You can hover while flying.</p>"
+        }
+      }
+    },
+    "Piscine Transformation": {
+      "name": "Piscine Transformation",
+      "description": "<p>3rd-Order Metamorphosis Power</p><p>You target a Humanoid you can see within range with a pulse of transformational energy. The target must succeed on a Wisdom saving throw or undergo one of the following transformations of your choice for the duration. The target can choose to fail this saving throw.</p><p><strong>Head.</strong> The target's head transforms into the head of a fish, proportionately sized for their body. They can't speak.</p><p><strong>Legs.</strong> The target's legs become fins. Their walking speed is reduced to 10 feet (unless their walking speed is slower), and they gain a swimming speed of 30 feet.</p><p><strong>Torso.</strong> The target's torso becomes the body of a fish with gills. They can only breathe water and can hold their breath for 1 hour. If the target isn't underwater when this transformation takes effect, they begin suffocating.</p><p><strong>Increased Order.</strong> When you manifest this power, you can increase its order by 2 to target any creature, instead of just a Humanoid, if they have the necessary body part you wish to transform.</p><p>Additionally, you can increase this power's order by 2 to increase its duration to 1 hour.</p>",
+      "effects": {
+        "Piscine Transformation (Head)": {
+          "name": "Piscine Transformation (Head)",
+          "description": "<p>Your head is transformed into the head of a fish, proportionately sized for your body. You cannot speak.</p>"
+        },
+        "Piscine Transformation (Legs)": {
+          "name": "Piscine Transformation (Legs)",
+          "description": "<p>Your legs become fins. Your walking speed is reduced to 10 feet (unless your walking speed is slower), and you gain a swimming speed of 30 feet.</p>"
+        },
+        "Piscine Transformation (Torso)": {
+          "name": "Piscine Transformation (Torso)",
+          "description": "<p>Your torso becomes the body of a fish with gills. You can only breathe water and can hold your breath for 1 hour. If you are not underwater when this transformation takes effect, you begin suffocating.</p>"
+        }
+      }
+    },
+    "Reinforce Armor": {
+      "name": "Reinforce Armor",
+      "description": "<p>As a bonus action, the blacksmith touches a piece of armor and fortifies it. For the next 10 minutes, a creature wearing the armor gains a bonus to their AC equal to half the blacksmith's PB.</p><fieldset><legend>Foundry Note</legend><p>The enchantment activity on this feature currently uses the target's PB.</p></fieldset>",
+      "activities": {
+        "enchant": {
+          "affects": {
+            "special": "A piece of armor."
+          }
+        }
+      },
+      "effects": {
+        "Reinforced Armor": {
+          "name": "Reinforced Armor",
+          "description": "<p>This piece of armor grants additional AC equal to half the orc blacksmith's PB.</p>"
+        }
+      }
+    },
+    "XbFOmnwuNWgBHC1A": {
+      "name": "Brutal Charge",
+      "description": "The [[lookup @name lowercase]] can move up to their speed without provoking opportunity attacks. During or at the end of this move, they can make a signature attack against one target within reach."
+    },
+    "XdiqHgdnW18YRRex": {
+      "name": "Adept Climber",
+      "description": "<p>The wildcat has a climbing speed of 25 feet.</p>",
+      "effects": {
+        "Adept Climber": {
+          "name": "Adept Climber",
+          "description": "<p>You have a climbing speed of 25 feet.</p>"
+        }
+      }
+    },
+    "Ruin Delver": {
+      "name": "Ruin Delver",
+      "description": "<p>When the [[lookup @name lowercase]] is behind an object that grants them &amp;Reference[half cover], they are considered to have &amp;Reference[three-quarters cover] instead.</p>"
+    },
+    "Sting": {
+      "name": "Sting",
+      "description": "<p><em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 2 (1d4) piercing damage plus 7 (2d6) poison damage, or 1 piercing damage if the swarm has half their hit points or fewer. (Replaces the Bite attack)</p>",
+      "activities": {
+        "Attack - Full Hit Points": {
+          "name": "Attack - Full Hit Points"
+        },
+        "Attack - Half Hit Points": {
+          "name": "Attack - Half Hit Points"
+        }
+      }
+    },
+    "Psychic Scar": {
+      "name": "Psychic Scar",
+      "description": "<p>The [[lookup @name lowercase]] is immune to any effect that would sense their emotions, read their thoughts, reveal they are lying, or reveal their alignment or location.</p>"
+    },
+    "YJNHM1XkPbZygMZ7": {
+      "name": "Call of the Dead",
+      "description": "<p>When the [[lookup @name lowercase]] hits a creature with a signature attack, the target must also succeed on a [[/save]] saving throw or be &amp;reference[frightened] of the [[lookup @name lowercase]] for 1 minute (save ends at end of turn).</p>",
+      "activities": {
+        "save": {
+          "condition": "When the Ghost Sycophant hits a creature with their signature attack."
+        }
+      }
+    },
+    "Flyer": {
+      "name": "Flyer",
+      "description": "<p>The swarm has a flying speed of 30 feet. </p>",
+      "effects": {
+        "Flyer": {
+          "name": "Flyer",
+          "description": "<p>You have a flying speed of 30 feet.</p>"
+        }
+      }
+    },
+    "Phantoms Abound": {
+      "name": "Phantoms Abound",
+      "description": "<p>The hag fills the area around them with illusions of their enemies' worst fears. Each enemy within 30 feet of the hag must make a [[/save]] saving throw. On a failed save, a target takes [[/damage average]] damage, falls &amp;reference[prone], and if the hag is within 5 feet of the target, the hag can make a Dream Claw attack against them. On a successful save, a target takes half as much damage, doesn't fall prone, and the hag doesn't attack them.</p>"
+    },
+    "Silent Pounce": {
+      "name": "Silent Pounce",
+      "description": "<p>The [[lookup @name lowercase]] teleports 30 feet to an unoccupied space they can see. Before or after teleporting, the [[lookup @name lowercase]] can make a signature attack. If the attack hits, the target is knocked &amp;Reference[prone].</p>"
+    },
+    "Lair Actions: Lich": {
+      "name": "Lair Actions: Lich",
+      "description": "<p>When fighting inside their lair, a lich can take lair actions. On initiative count 20 (losing initiative ties), the lich can take one lair action to cause one of the following effects; the lich can't use the same lair action two rounds in a row:</p><p><strong>Soul Sip.</strong> The lich chooses two enemies they can see within 90 feet of them. Each target must succeed on a [[/save activity=23v6ptrEBV81PkL0]] saving throw or take [[/damage average activity=23v6ptrEBV81PkL0]] damage as the lair absorbs a sliver of their soul.</p><p><strong>Spirit Shell.</strong> The lich summons spirits to surround them until the end of initiative count 20 of the next round. For the duration, a creature who hits the lich with a melee attack must succeed on a [[/save activity=9Iq1JIms8x3qorrk]] saving throw or be &amp;Reference[dazed] until the start of the creature's next turn.</p><p><strong>Unnatural Born Leader.</strong> The lich magnifies the power of their soulstone through the lair onto a creature they can see within 90 feet of them. The target must succeed on a [[/save activity=diPBGpHU5SBBvd2p]] saving throw or use their reaction, if available, to move up to their speed and make a weapon attack against a creature of the lich's choice.</p>",
+      "activities": {
+        "Soul Sip": {
+          "name": "Soul Sip"
+        },
+        "Spirit Shell": {
+          "name": "Spirit Shell",
+          "affects": {
+            "special": "A creature who hits the lick with a melee attack."
+          }
+        },
+        "Unnatural Born Leader": {
+          "name": "Unnatural Born Leader"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Cackle": {
+      "name": "Cackle",
+      "description": "<p>Each enemy within 30 feet of the [[lookup @name lowercase]] who can hear them must succeed on a DC [[lookup @save.dc.value activity=EUVhk14bJVk5AFY8]] saving throw or take [[lookup @prof.flat]]d4 damage and be &amp;Reference[frightened] of the [[lookup @name lowercase]] until the start of the [[lookup @name lowercase]]'s next turn.</p>"
+    },
+    "Stone Gaze": {
+      "name": "Stone Gaze",
+      "description": "<p>As an action, the headstrong fires energy beams from their eyes at a creature they can see within 30 feet of them. The target must succeed on a [[/save]] saving throw or begin to turn to stone and be &amp;reference[restrained].</p><p>A target restrained in this way must repeat the saving throw at the end of their next turn. On a successful save, the effect ends. On a failed save, the creature is &amp;reference[petrified] for 1 hour or until they are restored by a <em>cure ailment</em> power of 4th order or higher, a <em>greater restoration</em> spell, or a similar supernatural effect.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Must be visible."
+          }
+        }
+      }
+    },
+    "Amphibious": {
+      "name": "Amphibious",
+      "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+    },
+    "Shared Condition": {
+      "name": "Shared Condition",
+      "description": "<p>When [[lookup @name]] is blinded, charmed, dazed, deafened, frightened, paralyzed, or stunned, he chooses a willing Amethyst Knife boss within 60 feet of him who doesn't already have the condition or is immune to it. The chosen creature then gains the condition for the duration, and [[lookup @name]] loses the condition. He can use this reaction even while incapacitated.</p>"
+    },
+    "Desert Warrior": {
+      "name": "Desert Warrior",
+      "description": "<p>You ignore difficult terrain created by dirt or sand, and you are considered naturally adapted to hot climates. </p><p>Additionally, you can use a bonus action to activate an aura that shimmers around you like a desert mirage. For 1 minute, you and allies within 10 feet of you have a +PB bonus to Constitution saving throws and saving throws against being charmed, frightened, or knocked prone. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Desert Warrior": {
+          "name": "Desert Warrior",
+          "description": "<p>You and allies within 10 feet of you have a +PB bonus to Constitution saving throws and saving throws against being charmed, frightened, or knocked prone.</p>"
+        }
+      }
+    },
+    "Coiling Claws": {
+      "name": "Coiling Claws",
+      "description": "<p>The [[lookup @name lowercase]] makes a signature attack against a Medium or smaller creature. On a hit, the target is &amp;Reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]). Until this grapple ends, the target is &amp;reference[restrained] and the [[lookup @name lowercase]] can't make a signature attack against another target.</p>"
+    },
+    "Poison Gaze": {
+      "name": "Poison Gaze",
+      "description": "<p>The [[lookup @name lowercase]] chooses up to three creatures they can see within 15 feet of them. Each creature must succeed on a DC 10 plus [[lookup @prof.flat]] Constitution saving throw or be &amp;Reference[poisoned] until the start of the [[lookup @name lowercase]]'s next turn.</p>"
+    },
+    "Anomalous Terrain": {
+      "name": "Anomalous Terrain",
+      "description": "The area within 10 feet of the [[lookup @name lowercase]] becomes difficult terrain for their enemies until the start of their next turn. When an enemy enters that area for the first time on a turn or starts their turn there, they must succeed on a DC [[lookup @save.dc.value activity=onGc5rDvqii1Fmu8]] Dexterity saving throw or take [[lookup @prof.flat]]d4 force damage."
+    },
+    "Riverkith": {
+      "name": "Riverkith",
+      "description": "<p>You gain a swimming speed equal to your walking speed, and you can hold your breath for up to 15 minutes. Additionally, as a bonus action, you can breathe lightning in a 30-foot cone. Each creature in the cone must make a Dexterity saving throw against your exploit save DC, taking 6d6 lightning damage on a failed save, or half as much damage on a successful one. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Riverkith": {
+          "name": "Riverkith"
+        }
+      }
+    },
+    "Sinkhole": {
+      "name": "Sinkhole",
+      "description": "<p>The [[lookup @name lowercase]] burrows up to their speed and targets a creature they can sense on the surface within 10 feet of them. The target must succeed on a DC [[lookup @save.dc.value activity=sDd14vKGu8oxYkks]] Strength saving throw or be &amp;Reference[restrained] by the ground until the start of the [[lookup @name lowercase]]'s next turn.</p>"
+    },
+    "Fungal Infestation": {
+      "name": "Fungal Infestation",
+      "description": "<p>The [[lookup @name lowercase]] is covered in layers of poisonous fungi. They have immunity to poison damage. The first time the [[lookup @name lowercase]] takes damage on a turn, each creature within 5 feet of them takes [[/damage]] damage.</p>",
+      "activities": {
+        "damage": {
+          "condition": "The creature takes damage on a turn."
+        }
+      },
+      "effects": {
+        "Fungal Infestation": {
+          "name": "Fungal Infestation"
+        }
+      }
+    },
+    "Shadow Blend": {
+      "name": "Shadow Blend",
+      "description": "<p>While in dim light or darkness, the underground creature can take the &amp;Reference[Hide] action as a bonus action.</p>",
+      "activities": {
+        "Hide": {
+          "name": "Hide"
+        }
+      }
+    },
+    "Rend and Roast": {
+      "name": "Rend and Roast",
+      "description": "<p>The [[lookup @name lowercase]] makes two signature attacks against the same target, then breathes fire on them. The target must make a [[/save]] saving throw, taking [[/damage activity=3e5nD3gBrh2qsszu]] damage on a failed save, or half as much damage on a successful one.</p>",
+      "activities": {
+        "Signature Attack": {
+          "name": "Signature Attack"
+        },
+        "Breathe Fire": {
+          "name": "Breathe Fire"
+        }
+      }
+    },
+    "Wraithstep": {
+      "name": "Wraithstep",
+      "description": "<p>As an action, the freebooter becomes &amp;reference[invisible apply=false] for 1 minute. While invisible, the freebooter has resistance to bludgeoning, piercing, and slashing damage from mundane attacks, and the freebooter can move through other creatures and objects as if they were difficult terrain. The freebooter takes [[/damage 1d10 average force]] damage if they end their turn inside an object.</p>",
+      "effects": {
+        "Wraithstep": {
+          "name": "Wraithstep",
+          "description": "<p>You are invisible. While invisible, you have resistance to bludgeoning, piercing, and slashing damage from mundane attacks, and you can move through other creatures and objects as if they were difficult terrain.</p>"
+        }
+      }
+    },
+    "Weaving Knives": {
+      "name": "Weaving Knives",
+      "description": "<p>As an action, the sneak moves up to their speed without provoking opportunity attacks. Before, during, or after the move, they can make two signature attacks.</p>"
+    },
+    "I'm You": {
+      "name": "I'm You",
+      "description": "<p>The [[lookup @name lowercase]] uses their Shapechanger trait to polymorph into one Large or smaller creature they can see within 5 feet of them. Other than size, the [[lookup @name lowercase]]'s statistics do not change, and the [[lookup @name lowercase]] reverts to their previous form at the start of their next turn.</p><p>After transforming, the [[lookup @name lowercase]] can make a signature attack against the target whose form they have taken. Hit or miss, the target must then make a DC [[lookup @save.dc.value activity=XXFEtNCrhT44cD8L]] Wisdom saving throw. On a failed save, attacks against the target have advantage and the target has disadvantage on attack rolls and saving throws until the start of the [[lookup @name lowercase]]'s next turn.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Large or smaller"
+          }
+        }
+      },
+      "effects": {
+        "I'm You": {
+          "name": "I'm You",
+          "description": "<p>Attacks against the target have advantage and the target has disadvantage on attack rolls and saving throws until the start of the mimic's next turn.</p>"
+        }
+      }
+    },
+    "Reptilian Escape": {
+      "name": "Reptilian Escape",
+      "description": "<p>If the [[lookup @name lowercase]] fails a Strength or Dexterity saving throw, they can use their reaction to lose their tail and succeed instead. They regrow their tail when they finish a long rest.</p>",
+      "activities": {
+        "Lose Tail": {
+          "name": "Lose Tail",
+          "condition": "The monster fails a Strength or Dexterity saving throw."
+        }
+      }
+    },
+    "Burrower": {
+      "name": "Burrower",
+      "description": "<p>The swarm has a burrowing speed of 5 feet.</p>",
+      "effects": {
+        "Burrower": {
+          "name": "Burrower",
+          "description": "<p>You have a burrowing speed of 5 feet.</p>"
+        }
+      }
+    },
+    "Death Frenzy": {
+      "name": "Death Frenzy",
+      "description": "<p>When an ally the [[lookup @name lowercase]] can see within 30 feet of them is reduced to 0 hit points, the [[lookup @name lowercase]] can use their reaction to move up to half their speed and make a Bite attack.</p>",
+      "activities": {
+        "utility": {
+          "condition": "An ally the monster can see within 30 feet of them is reduced to 0 hit points"
+        }
+      }
+    },
+    "Pummel": {
+      "name": "Pummel",
+      "description": "<p>The [[lookup @name lowercase]] makes a signature attack. On a hit, the target is also &amp;Reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]). While grappled in this way, the [[lookup @name lowercase]]'s attacks (including the triggering attack) deal an extra [[lookup @prof]] damage, the target is &amp;Reference[restrained] if they are Large or smaller, and the [[lookup @name lowercase]] can't make a signature attack against another target.</p>"
+    },
+    "Acidic Nature": {
+      "name": "Acidic Nature",
+      "description": "<p>The natural acidity of the swamp gives the [[lookup @name lowercase]] resistance to acid damage. If the creature already has resistance to acid damage, they gain immunity to acid damage instead.</p>",
+      "effects": {
+        "Acidic Nature": {
+          "name": "Acidic Nature"
+        }
+      }
+    },
+    "Soul Devourer": {
+      "name": "Soul Devourer",
+      "description": "<p>When the [[lookup @name lowercase]] reduces a creature who isn't a Construct or an Undead to 0 hit points or deals damage to a dying creature, the creature must make a DC 11 Wisdom saving throw. On a failed save, the [[lookup @name lowercase]] consumes the creature's soul and adds 1 to the [[lookup @name lowercase]]'s soul count. A creature whose soul is consumed in this way immediately dies, and they can't be restored to life by any means short of a <em>wish</em> spell.</p>",
+      "activities": {
+        "Gain Soul": {
+          "name": "Gain Soul"
+        }
+      }
+    },
+    "Filthy Scratch": {
+      "name": "Filthy Scratch",
+      "description": "<p>The [[lookup @name lowercase]] scratches a creature they can see within 5 feet of them. The target must make a [[/save]] saving throw. On a failed save, the target takes [[/damage]] damage and is &amp;reference[poisoned] until the start of the [[lookup @name lowercase]]'s next turn. While poisoned in this way, the target can't regain hit points. On a successful save, the target takes half as much damage and isn't poisoned.</p>"
+    },
+    "Telekinetic Repulsion": {
+      "name": "Telekinetic Repulsion",
+      "description": "<p>As an action, the operative releases a powerful pulse of energy. Each enemy within 10 feet of the operative must make a [[/save]] saving throw. On a failed save, a creature takes [[/damage]] damage and is pushed up to 10 feet directly away from the operative. On a successful save, a creature takes half as much damage and isn't pushed.</p>"
+    },
+    "Orc": {
+      "name": "Orc",
+      "description": "<p>An orc has the following defining features:</p><p><strong>Size.</strong> The orc's size is Medium.</p><p><strong>Type.</strong> The orc's type is Humanoid.</p><p><strong>Speed.</strong> The orc has a walking speed of 35 feet.</p><p><strong>Darkvision.</strong> The orc has darkvision out to a range of 60 feet.</p><p><strong>Languages.</strong> The orc can speak, read, and write Common and Orc.</p><p><strong>Relentless (1/Turn).</strong> When the orc isn't incapacitated and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the orc drops to 1 hit point instead of 0 hit points.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Roll Out": {
+      "name": "Roll Out",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their walking speed in a straight line without provoking opportunity attacks. The [[lookup @name lowercase]] can end this movement in a space that contains another creature. If they do, that creature takes 2 × PB bludgeoning damage for every 10 feet the [[lookup @name lowercase]] traveled, and they must make a DC [[lookup @save.dc.value activity=CqVqkBEC7siK1a95]] Strength saving throw. On a failed save, the creature is knocked &amp;reference[prone]. On a successful save, the creature is pushed 5 feet out of the [[lookup @name lowercase]]'s space into an unoccupied space of the creature's choice.</p>"
+    },
+    "Invigorated March": {
+      "name": "Invigorated March",
+      "description": "<p><em>3rd-Order Metamorphosis Power</em></p><p>You emit a burst of mentally invigorating energy into the mind of a creature you can see within range. That creature can use their reaction, if available, to move up to their speed without provoking opportunity attacks.</p><p><strong>Increased Order.</strong> When you manifest this power, you can increase its order by 1 or more. For each increase of 1, you target one additional creature.</p>"
+    },
+    "Lair Actions: Overmind": {
+      "name": "Lair Actions: Overmind",
+      "description": "<p>When fighting inside their lair, an overmind can take lair actions. On initiative count 20 (losing initiative ties), the overmind can take one lair action to cause one of the following effects; the overmind can't use the same lair action two rounds in a row:</p><p><strong>Gas Belch.</strong> A hole opens in the ceiling, floor, or wall at a point the overmind chooses within 60 feet of them and belches a 20-foot-sphere of smelly gas that lasts until the end of initiative count 20 on the next round. When a creature enters that area for the first time or starts their turn there, they must succeed on a [[/save activity=WuqfLH7hVAjKb9rp]] saving throw or be &amp;Reference[poisoned] until the start of their next turn.</p><p><strong>Slime Shower.</strong> Viscous slime falls from the ceiling toward one enemy within 120 feet of the overmind. The creature must succeed on a [[/save activity=fZ3yk0EqQj0Q2VT5]] saving throw or be vulnerable to fire and lightning damage. The effect ends when they take fire or lightning damage, or at the end of initiative count 20 on the next round.</p><p><strong>Telekinetic Hold.</strong> An invisible force attempts to grab three enemies within 60 feet of the overmind. Each creature must make a [[/save activity=sKya8LweIKk0StjP]] saving throw. On a failed save, a creature's speed becomes 0 and they rise vertically 20 feet in the air, suspended there until the end of initiative count 20 on the next round, at which point they &amp;Reference[falling]{fall}.</p>",
+      "activities": {
+        "Gas Belch": {
+          "name": "Gas Belch"
+        },
+        "Slime Shower": {
+          "name": "Slime Shower"
+        },
+        "Telekinetic Hold": {
+          "name": "Telekinetic Hold"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        },
+        "Slime Shower": {
+          "name": "Slime Shower",
+          "description": "<p>You are vulnerable to fire and lightning damage. This effect ends when you take fire or lightning damage, or at the end of initiative count 20 on the next round.</p>"
+        },
+        "Telekinetic Hold": {
+          "name": "Telekinetic Hold",
+          "description": "<p>Your speed is 0 and you are suspended 20 feet in the air until the end of initiative count 20 on the next round, at which point you fall.</p>"
+        }
+      }
+    },
+    "Lair Actions: Vampire": {
+      "name": "Lair Actions: Vampire",
+      "description": "<p>When fighting inside their lair, a vampire can take lair actions. On initiative count 20 (losing initiative ties), the vampire can take one lair action to cause one of the following effects; the vampire can't use the same lair action two rounds in a row:</p><p><strong>Children of the Night.</strong> A swarm of bats and insects flies around the vampire, moving with them. The area within 30 feet of the vampire is &amp;Reference[heavily obscured] for other creatures until the end of initiative count 20 on the next round.</p><p><strong>Blood Rain.</strong> The vampire chooses a point they can see within 60 feet of them. Blood rains down in a 40-foot-high, 10-foot-radius cylinder centered on this point until the end of initiative count 20 on the next round. When a creature who isn't Undead in the cylinder takes necrotic damage, they take an extra [[/damage average]] damage.</p><p><strong>Obey My Desire.</strong> The vampire exerts their will on those who surround them. Each creature within 60 feet of the vampire who can hear them must succeed on a [[/save]] saving throw or be &amp;Reference[charmed] by the vampire until the end of this turn. Each charmed creature must immediately use their reaction, if available, to make a melee attack against another creature, to make a melee attack against themself, or to drop &amp;Reference[prone] (vampire's choice).</p>",
+      "activities": {
+        "Children of the Night": {
+          "name": "Children of the Night"
+        },
+        "Blood Rain": {
+          "name": "Blood Rain",
+          "affects": {
+            "special": "Who isn't undead"
+          }
+        },
+        "Obey My Desire": {
+          "name": "Obey My Desire"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Familiar": {
+      "name": "Familiar",
+      "description": "<p>The dragonet can serve another creature as a familiar, forming a telepathic bond with their willing companion. While the two are bonded, the companion can sense what the dragonet senses as long as they are within 1 mile of each other. In addition, when the dragonet uses their Truesight action, their companion also has truesight while in physical contact with the dragonet. Either creature can end the bond at any time.</p>",
+      "activities": {
+        "Truesight": {
+          "name": "Truesight",
+          "affects": {
+            "special": "The companion."
+          }
+        }
+      },
+      "effects": {
+        "Truesight": {
+          "name": "Truesight",
+          "description": "<p>When the dragonet uses their Truesight action, you also have truesight while in physical contact with the dragonet.</p>"
+        }
+      }
+    },
+    "Lightning Bomb": {
+      "name": "Lightning Bomb",
+      "description": "<p>Each creature within 10 feet of the [[lookup @name lowercase]] must make a DC [[lookup @save.dc.value activity=Emnktqn2nomJJqaz]] Dexterity saving throw, taking [[lookup @prof.flat]]d8 lightning damage on a failed save, or half as much damage on a successful one.</p>"
+    },
+    "Clawing Frenzy": {
+      "name": "Clawing Frenzy",
+      "description": "<p>The [[lookup @name lowercase]] makes a signature Claw attack against [[lookup @prof.flat]] creatures of their choice within 5 feet of them. At the end of their turn, the [[lookup @name lowercase]] gains 1 ferocity for every attack that missed.</p>",
+      "activities": {
+        "Regain Ferocity": {
+          "name": "Regain Ferocity"
+        }
+      }
+    },
+    "Fungicea": {
+      "name": "Fungicea",
+      "description": "<p>Mushrooms sprout from your body. As part of a long rest, you can synthesize them into one dose of a healing remedy. A creature can consume the remedy as a bonus action, regaining [[lookup @prof.flat]]d6 hit points. The remedy loses its potency 24 hours after creation.</p>"
+    },
+    "Crawling Menace": {
+      "name": "Crawling Menace",
+      "description": "<p>You can use a bonus action to become as nimble on the ground as you are on your feet. For 1 hour, crawling doesn't cost you extra movement, creatures have disadvantage on attack rolls against you, being &amp;Reference[prone apply=false] doesn't give other creatures advantage on attacks against you, and being prone doesn't give you disadvantage on attacks. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Crawling Menace": {
+          "name": "Crawling Menace",
+          "description": "<p>Crawling does not cost you extra movement, creatures have disadvantage on attack rolls against you, being prone does not give other creatures advantage on attacks against you, and being prone does not give you disadvantage on attacks.</p>"
+        }
+      }
+    },
+    "Swimmer": {
+      "name": "Swimmer",
+      "description": "<p>The wildcat has a swimming speed of 30 feet.</p>",
+      "effects": {
+        "Swimmer": {
+          "name": "Swimmer",
+          "description": "<p>You have a swimming speed of 30 feet.</p>"
+        }
+      }
+    },
+    "Bite Rampage": {
+      "name": "Bite Rampage",
+      "description": "<p>The [[lookup @name lowercase]] makes signature attacks against [[lookup @prof]] creatures of their choice within 5 feet of them. On a hit, a target is knocked &amp;Reference[prone].</p>"
+    },
+    "Wind Sweep": {
+      "name": "Wind Sweep",
+      "description": "<p>As a bonus action, the fledgling moves up to their flying speed without provoking opportunity attacks. If they end this movement within 5 feet of an enemy they can see, the fledgling can make a signature attack against them.</p>",
+      "activities": {
+        "Move": {
+          "name": "Move"
+        }
+      }
+    },
+    "Control Projectiles": {
+      "name": "Control Projectiles",
+      "description": "<p><em>2nd-Order Telekinesis Power</em></p><p>You telekinetically affect the projectile's flight. The attack roll is made with advantage or disadvantage (your choice).</p>",
+      "activities": {
+        "utility": {
+          "condition": "When  a creature you can see within 60 feet of you makes  a ranged weapon attack."
+        }
+      }
+    },
+    "Trumpeting Howl": {
+      "name": "Trumpeting Howl",
+      "description": "<p>Each enemy within 30 feet of the [[lookup @name lowercase]] who can hear them must succeed on a DC [[lookup @save.dc.value activity=kHevFkbPSWGkBbLt]] Wisdom saving throw or be &amp;reference[frightened] of them until the end of the [[lookup @name lowercase]]'s next turn.</p>",
+      "effects": {
+        "Trumpeting Howl": {
+          "name": "Trumpeting Howl",
+          "description": "<p>&amp;reference[frightened] until the end of the monster's next turn.</p>"
+        }
+      }
+    },
+    "Blood Puppet": {
+      "name": "Blood Puppet",
+      "description": "<p>As an action, the seneschal chooses a creature they can see within 60 feet of them. The target must succeed on a [[/save]] saving throw or move up to their speed in a direction of the seneschal's choice. During this movement, the seneschal can force them to make one attack against a creature of the seneschal's choice (no action required).</p>"
+    },
+    "Human": {
+      "name": "Human",
+      "description": "<p>A human has the following defining features:</p><p><strong>Size.</strong> The human's size is Medium.</p><p><strong>Type.</strong> The human's type is Humanoid.</p><p><strong>Speed.</strong> The human has a walking speed of 30 feet.</p><p><strong>Languages.</strong> The human can speak, read, and write Common.</p><p><strong>Exploit Opening (3/Day).</strong> When the human makes an attack, they have advantage on the attack roll.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Armor of Decay": {
+      "name": "Armor of Decay",
+      "description": "<p>The [[lookup @name lowercase]] has resistance to necrotic damage, and immunity to poison damage and the poisoned condition.</p>",
+      "effects": {
+        "Armor of Decay": {
+          "name": "Armor of Decay"
+        }
+      }
+    },
+    "Excoriating Acid": {
+      "name": "Excoriating Acid",
+      "description": "<p>As an action, the yegg throws a flask of acid at a point they can see within 20 feet of them. The flask shatters, and each creature within 10 feet of that point must make a [[/save]] saving throw, taking [[/damage]] damage on a failed save, or half as much damage on a successful one.</p>"
+    },
+    "Kinetic Clamp": {
+      "name": "Kinetic Clamp",
+      "description": "<p>As a bonus action, the freebooter tries to telekinetically grip one creature they can see within 60 feet of them. The target must make a DC 10 plus [[lookup @prof.flat]] Strength saving throw. On a failed save, the target takes [[lookup @prof.flat]]d6 force damage and is &amp;reference[restrained] until the start of the freebooter's next turn. On a successful save, the target takes half as much damage and is not restrained.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Must be visible."
+          }
+        }
+      }
+    },
+    "Scavenger's Resilience": {
+      "name": "Scavenger's Resilience",
+      "description": "<p>The bird has advantage on Constitution saving throws and resistance to poison damage.</p>",
+      "effects": {
+        "Scavenger's Resilience": {
+          "name": "Scavenger's Resilience",
+          "description": "<p>You have advantage on Constitution saving throws and resistance to poison damage.</p>"
+        }
+      }
+    },
+    "Shatter": {
+      "name": "Shatter",
+      "description": "<p>The [[lookup @name lowercase]] ejects jagged crystals from their body toward each enemy within 10 feet of them. Each target must make a DC [[lookup @save.dc.value activity=RrtJ8Un42ydzmXKl]] Dexterity saving throw, taking [[lookup @prof.flat]]d6 piercing damage on a failed save, or half as much damage on a successful one.</p>"
+    },
+    "Durable": {
+      "name": "Durable",
+      "description": "<p>The swarm's hit points are doubled, and they have an Armor Class of 15, a +5 bonus to Constitution saving throws, and advantage on Constitution saving throws. (+1 CR)</p><fieldset><legend>Foundry Note</legend><p>This item contains an effect that will automatically apply all the properties of this feature except the doubled hit point maximum.</p></fieldset>",
+      "effects": {
+        "Durable": {
+          "name": "Durable",
+          "description": "<p>Your hit points are doubled, you have an AC of 15, a +5 bonus to Constitution saving throws, and advantage on Constitution saving throws. (+1 CR)</p>"
+        }
+      }
+    },
+    "Unleash Sunlight": {
+      "name": "Unleash Sunlight",
+      "description": "<p>As a bonus action, you cause your skin to flare with brilliant light. Each creature of your choice within 10 feet of you who can see you must succeed on a Constitution saving throw against your exploit save DC or be &amp;Reference[blinded] for 1 minute (save ends at end of turn). Once you use this bonus action, you can't do so again until you finish a long rest.</p>"
+    },
+    "Halting Shot": {
+      "name": "Halting Shot",
+      "description": "<p>As an action, the warden makes a signature attack. On a hit, the target's speed is reduced to 0 until the end of their next turn.</p>",
+      "effects": {
+        "Halting Shot": {
+          "name": "Halting Shot",
+          "description": "<p>The creatures speed is reduced to 0 until the end of their next turn.</p>"
+        }
+      }
+    },
+    "iXmIVsgWCHCTOs9B": {
+      "name": "Familiar",
+      "description": "<p>The snowfox can serve another creature as a familiar, forming a telepathic bond with their willing companion. While the two are bonded, the companion can sense what the snowfox senses as long as they are within 1 mile of each other. In addition, the snowfox can use the companion's proficiency bonus for ability checks, and the snowfox gains temporary hit points equal to the companion's proficiency bonus at the end of a long rest. Either creature can end the bond at any time.</p>"
+    },
+    "Soul Thief": {
+      "name": "Soul Thief",
+      "description": "<p>As an action, the deathguard shrouds themself in dark energy. The deathguard regains [[lookup @prof.flat]]d6 hit points, and each enemy within 5 feet of the deathguard must make a [[/save]] saving throw. On a failed save, a target takes [[/damage]] damage. On a successful save, a target takes half as much damage.</p>",
+      "activities": {
+        "Soul Thief Healing": {
+          "name": "Soul Thief Healing"
+        },
+        "Soul Thief Damage": {
+          "name": "Soul Thief Damage"
+        }
+      }
+    },
+    "Ear to the Ground": {
+      "name": "Ear to the Ground",
+      "description": "<p>As a bonus action, you gain tremorsense out to a range of 60 feet for 10 minutes. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Ear to the Ground": {
+          "name": "Ear to the Ground",
+          "description": "<p>You have tremorsense out to a range of 60 feet.</p>"
+        }
+      }
+    },
+    "Bugbear's Inspiration": {
+      "name": "Bugbear's Inspiration",
+      "description": "<p>Allied Humanoids within 15 feet of the [[lookup @name lowercase]] who can see or hear them have advantage on Wisdom and Charisma saving throws.</p>"
+    },
+    "One with the Swamp": {
+      "name": "One with the Swamp",
+      "description": "<p>The [[lookup @name lowercase]] has advantage on Wisdom (Perception) checks made to perceive creatures within a swamp who don't have this trait.</p>"
+    },
+    "Stone Pereon": {
+      "name": "Stone Pereon",
+      "description": "<p>As a bonus action, you manifest rugged metameres on your back that last 10 minutes. For the duration, you gain a +2 bonus to AC and you can't be flanked. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "effects": {
+        "Stone Pereon": {
+          "name": "Stone Pereon",
+          "description": "<p>You gain a +2 bonus to AC and can't be flanked</p>"
+        }
+      }
+    },
+    "Lash Out": {
+      "name": "Lash Out",
+      "description": "<p>As a bonus action, the immobilizer whips a vine toward a creature they can see within 30 feet of them. The target must succeed on a [[/save]] saving throw or be pulled up to 10 feet toward the immobilizer and &amp;reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]). Until this grapple ends, the immobilizer's attacks against the target deal an extra [[lookup @prof]] bludgeoning damage.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Must be visible."
+          }
+        },
+        "Bonus Damage": {
+          "name": "Bonus Damage",
+          "condition": "When the retainer hit's an creature it has grappled using this feature.",
+          "affects": {
+            "special": "Must be grappled by the retainer with this feature."
+          }
+        }
+      }
+    },
+    "Quick Drink": {
+      "name": "Quick Drink",
+      "description": "<p>The [[lookup @name lowercase]] makes a signature attack. On a hit, the target takes an extra [[lookup @prof.flat]]d4 piercing damage and is &amp;Reference[poisoned] until the end of their next turn.</p>"
+    },
+    "l1oXsSD2BygosERl": {
+      "name": "Memory Thief",
+      "description": "<p><em>4th-Order Metamorphosis Power</em></p><p>You plunder the mind of a creature you can see within 30 feet of you. The target must make an Intelligence saving throw. On a failed save, the target takes 4d10 psychic damage, their proficiency bonus is lowered by 1, and you gain a +1 bonus to attack rolls and your power save DC for the duration.</p><p><strong>Increased Order.</strong> When you manifest this power, you can increase its order by 1 or more. For each increase of 1, the damage increases by 2d10.</p>",
+      "effects": {
+        "Stolen Memories": {
+          "name": "Stolen Memories",
+          "description": "<p>For the power's duration, your proficiency bonus is reduced by 1.</p>"
+        },
+        "Gained Memories": {
+          "name": "Gained Memories",
+          "description": "<p>For the duration of the power, you gain a +1 bonus to your attack rolls and your power save DC.</p>"
+        }
+      }
+    },
+    "Horrific Feast": {
+      "name": "Horrific Feast",
+      "description": "<p>When the gnasher reduces a creature to 0 hit points with their signature attack, they can consume part of the creature as part of the attack, gaining [[/heal]]. Each enemy within 30 feet of the gnasher who can see them must succeed on a [[/save]] saving throw or be &amp;reference[frightened] of the gnasher until the end of the gnasher's next turn.</p>",
+      "activities": {
+        "Consume Usage and Heal": {
+          "name": "Consume Usage and Heal",
+          "condition": "When the retainer reduces a creature to 0 hit points with their signature attack."
+        },
+        "Frightened Save": {
+          "name": "Frightened Save",
+          "condition": "When the retainer reduces a creature to 0 hit points with their signature attack.",
+          "affects": {
+            "special": "Must see the retainer."
+          }
+        }
+      }
+    },
+    "Draconic Aberration": {
+      "name": "Draconic Aberration",
+      "description": "<p>Just like Yserthrax is a dragon with eldritch power, you can give the voiceless talkers and other aberrations in this dungeon draconic features. You can implement the following changes to any Aberration stat block in the lair to surprise characters who have faced voiceless talkers and their creations before and show that spending time around a powerful dragon like Yserthrax can magically warp nearby creatures:</p><p><strong>Scales.</strong> The [[lookup @name lowercase]] is covered in dragon scales. Their AC increases by 2.</p><p><strong>Wings.</strong> The [[lookup @name lowercase]] has leathery dragon wings. If the [[lookup @name lowercase]] already has a flying speed, their flight is powered by the wings instead of psionic might. If the [[lookup @name lowercase]] doesn't have a flying speed, they gain a flying speed equal to their walking speed.</p><p><strong>Poison Immunity.</strong> The [[lookup @name lowercase]] has immunity to poison damage and the poisoned condition.</p><p><strong>Draconic Senses.</strong> The [[lookup @name lowercase]] is proficient in the Perception skill, and their proficiency bonus is doubled for any ability check they make that uses Perception. If the [[lookup @name lowercase]] doesn't have blindsight, they gain blindsight out to a range of 30 feet.</p><p><strong>Breath Weapon.</strong> As an action, the [[lookup @name lowercase]] breathes poison in a 30-foot cone. Each creature in that area must make a DC [[lookup @save.dc.value activity=lJC6bznlHCMBFWFV]] Constitution saving throw. On a failed save, a creature takes [[/damage activity=lJC6bznlHCMBFWFV]] damage and is &Reference[poisoned] for 1 minute (save ends at end of turn). On a successful save, a creature takes half as much damage and isn't poisoned. The [[lookup @name lowercase]] can't use this action again until they finish a long rest.</p><p><strong>Poison-Infused Weapons.</strong> When the [[lookup @name lowercase]] hits a creature with a melee weapon attack, the attack deals an extra 5 (1d10) poison damage.</p>",
+      "activities": {
+        "Breath Weapon": {
+          "name": "Breath Weapon"
+        }
+      },
+      "effects": {
+        "Poison-Infused Weapons": {
+          "name": "Poison-Infused Weapons",
+          "description": "<p>When the Aberration hits a creature with a melee weapon attack, the attack deals an extra 5 (1d10) poison damage.</p>"
+        },
+        "Scales": {
+          "name": "Scales",
+          "description": "<p>The Aberration is covered in dragon scales. Their AC increases by 2.</p>"
+        },
+        "Wings": {
+          "name": "Wings"
+        },
+        "Poison Immunity": {
+          "name": "Poison Immunity",
+          "description": "<p>The Aberration has immunity to poison damage and the poisoned condition.</p>"
+        },
+        "Draconic Senses": {
+          "name": "Draconic Senses",
+          "description": "<p>The Aberration is proficient in the Perception skill, and their proficiency bonus is doubled for any ability check they make that uses Perception. If the Aberration doesn't have blindsight, they gain blindsight out to a range of 30 feet.</p>"
+        }
+      }
+    },
+    "Wash Away": {
+      "name": "Wash Away",
+      "description": "<p>As a bonus action, the apprentice rides a crashing wave. They make a signature attack against an enemy within 5 feet of them and move up to their walking speed without provoking opportunity attacks. If the attack hits, it deals an extra [[lookup @prof]] bludgeoning damage.</p>"
+    },
+    "Deafening Song": {
+      "name": "Deafening Song",
+      "description": "<p>The swarm produces an earsplitting buzz. Each creature within 15 feet of them must succeed on a [[/save]] saving throw or be &amp;reference[deafened] (save ends at end turn).</p>"
+    },
+    "Take Away": {
+      "name": "Take Away",
+      "description": "<p>When the neophyte hits a creature with a signature attack, the neophyte grabs the target. The target is &amp;reference[grappled] (escape DC 10 + [[lookup @prof.flat]]), and the neophyte moves up to their speed without provoking attacks of opportunity (no action required). If the grappled creature is Medium or smaller, they don't cost the neophyte extra movement.</p>"
+    },
+    "Presence of Inspiration": {
+      "name": "Presence of Inspiration",
+      "description": "<p>As a bonus action, the warden inspires each ally within 30 feet of them who can hear them, granting them advantage on attack rolls until the start of the warden's next turn.</p>",
+      "effects": {
+        "Presence of Inspiration": {
+          "name": "Presence of Inspiration",
+          "description": "<p>The creature has advantage on attack rolls.</p>"
+        }
+      }
+    },
+    "Lair Actions: Qazyldrath": {
+      "name": "Lair Actions: Qazyldrath",
+      "description": "<p>When fighting inside their lair, Qazyldrath can take lair actions. On initiative count 20 (losing initiative ties), Qazyldrath can take one lair action to cause one of the following effects; Qazyldrath can't use the same lair action two rounds in a row:</p><p><strong>Acidic Gas.</strong> Corrosive gas erupts in a 10-foot-radius sphere centered on a point Qazyldrath can see within 120 feet of them. Each creature in that area must succeed on a [[/save activity=NxrwQpcaoM9d8lMi]] saving throw or take [[/damage average activity=NxrwQpcaoM9d8lMi]] damage.</p><p><strong>Consume Light.</strong> Qazyldrath extinguishes one or more light sources they can see within 120 feet of them. Qazyldrath regains 5 (1d10) hit points for each light source they extinguished.</p><p><strong>Hungry Gloom.</strong> Grasping shadows sap the vitality of each enemy in dim light or darkness within 120 feet of Qazyldrath. Each target must succeed on a [[/save activity=NUMkqOF2fhmFXJwX]] saving throw or take [[/damage average activity=NUMkqOF2fhmFXJwX]] damage and be &amp;Reference[restrained] until the end of initiative count 20 on the next round.</p>",
+      "activities": {
+        "Acidic Gas": {
+          "name": "Acidic Gas"
+        },
+        "Consume Light": {
+          "name": "Consume Light",
+          "affects": {
+            "special": "Light Sources"
+          }
+        },
+        "Hungry Gloom": {
+          "name": "Hungry Gloom"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Caregiver": {
+      "name": "Caregiver",
+      "description": "@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe02.JournalEntryPage.00caregiver00001 inline] <fieldset><legend>Foundry note</legend><p>This feature provides a \"Summon\" activity that will give the companion the correct number of hit points and adjust their proficiency bonus to match their caregiver.</p></fieldset>"
+    },
+    "Hellbitten Knives": {
+      "name": "Hellbitten Knives",
+      "description": "<p>As a bonus action, the retainer imbues their daggers with hellfire. For 1 minute, their signature attack deals an extra [[lookup @prof]] fire damage and ignores damage resistances.</p><fieldset><legend>Foundry Note</legend><p>The enchantment activity should only be used to enchant this retainer's signature attack.</p></fieldset>",
+      "activities": {
+        "enchant": {
+          "affects": {
+            "special": "Targets the signature attack of this retainer."
+          }
+        }
+      },
+      "effects": {
+        "Hellbitten Knives": {
+          "name": "Hellbitten Knives",
+          "description": "<p>For 1 minute, your signature attack deals an extra PB fire damage and ignores damage resistances.</p>",
+          "changes": {
+            "system.description.value": "<fieldset><legend>Hellbitten Knives</legend><p>This attack ignores damage resistances.</p></fieldset>"
+          }
+        }
+      }
+    },
+    "Pounce": {
+      "name": "Pounce",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed and makes a signature attack against one target, dealing an extra [[lookup @prof]] damage on a hit. If the target is Large or smaller, they are &amp;Reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]), and the [[lookup @name lowercase]] can't attack another creature until the grapple ends.</p>"
+    },
+    "Tackle": {
+      "name": "Tackle",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed without provoking opportunity attacks and makes a signature attack. On a hit, the target is also &amp;Reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]). While grappled in this way, the target is &amp;Reference[dazed] and &amp;Reference[restrained].</p>"
+    },
+    "Blood Bondage": {
+      "name": "Blood Bondage",
+      "description": "<p>As an action, the seneschal arrests the hearts of up to [[lookup @prof.flat]] creatures within 30 feet of them. Each target must make a [[/save]] saving throw. On a failed save, a creature takes [[/damage]] damage and is &amp;reference[paralyzed] for 1 minute (save ends at end of turn). On a successful save, a creature takes half as much damage and isn't paralyzed.</p>"
+    },
+    "Blip Strike": {
+      "name": "Blip Strike",
+      "description": "<p>As a bonus action, the freebooter teleports up to 30 feet to an unoccupied space they can see. If this space is within 5 feet of an enemy the freebooter can see, the freebooter can make a signature attack against them with advantage as part of this bonus action.</p>",
+      "activities": {
+        "utility": {
+          "affects": {
+            "special": "Must be unoccupied and visible."
+          }
+        }
+      }
+    },
+    "Monstrous Companion": {
+      "name": "Monstrous Companion",
+      "description": "@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe02.JournalEntryPage.00statistics0000 inline]",
+      "effects": {
+        "Monstrous Companion": {
+          "name": "Monstrous Companion"
+        }
+      },
+      "advancement": {
+        "Signature Damage": {
+          "title": "Signature Damage"
+        },
+        "Companion Features": {
+          "title": "Companion Features"
+        }
+      }
+    },
+    "Battlefield Medicine": {
+      "name": "Battlefield Medicine",
+      "description": "<p>As an action, the mercenary restores [[lookup @prof.flat]]d8 hit points to a creature they can see within 5 feet of them.</p>",
+      "activities": {
+        "heal": {
+          "affects": {
+            "special": "Must be visible."
+          }
+        }
+      }
+    },
+    "Verdant Roundup": {
+      "name": "Verdant Roundup",
+      "description": "<p>The [[lookup @name lowercase]] targets up to [[lookup @prof.flat]] creatures within 30 feet of them who are Large or smaller. Each target must succeed on a [[/save]] saving throw or be pulled up to 15 feet toward the [[lookup @name lowercase]] and take [[/damage]] damage.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Large or smaller"
+          }
+        }
+      }
+    },
+    "Devilish Charm": {
+      "name": "Devilish Charm",
+      "description": "<p>When the [[lookup @name lowercase]] is targeted by an attack, power, spell, or other effect by a creature they can see within 60 feet of them, the [[lookup @name lowercase]] can use a reaction to force the creature to make a Charisma saving throw. The DC for this saving throw equals 8 + the [[lookup @name lowercase]]'s proficiency bonus + the [[lookup @name lowercase]]'s Intelligence, Wisdom, or Charisma modifier (whichever is highest). On a failed save, the creature is charmed by the [[lookup @name lowercase]] until the start of the creature's next turn, and the [[lookup @name lowercase]] chooses a new target the [[lookup @name lowercase]] can see for the triggering effect. The new target must be within the triggering effect's range.</p><fieldset><legend>Foundry Note</legend><p>The save DC is set to spellcasting by default; you can either manually adjust the creature to have an Intelligence, Wisdom, or Charisma-based spellcasting or adjust the DC calculation in the save activity.</p></fieldset>",
+      "activities": {
+        "save": {
+          "condition": "The monster is targeted by an attack, power, spell, or other effect",
+          "affects": {
+            "special": "The triggering creature"
+          }
+        }
+      },
+      "effects": {
+        "Devilish Charm": {
+          "name": "Devilish Charm",
+          "description": "<p>The creature is &amp;reference[charmed] by the monster until the start of the creature's next turn.</p>"
+        }
+      }
+    },
+    "Powerful Leap": {
+      "name": "Powerful Leap",
+      "description": "<p>The wildcat's jump distance is doubled, with or without a running start. They can choose whether their Strength or Dexterity score determines their jump distance.</p>"
+    },
+    "Swamp Stride": {
+      "name": "Swamp Stride",
+      "description": "<p>The [[lookup @name lowercase]] ignores difficult terrain caused by the natural conditions of a swamp.</p>"
+    },
+    "Mental Lance": {
+      "name": "Mental Lance",
+      "description": "<p><em>3rd-Order Telepathy Power</em></p><p>You mentally assail a creature you can see within range. The target must make a Wisdom saving throw. On a failed save, the target takes 4d10 psychic damage and is &amp;reference[frightened] of you for the duration (save ends at end of turn). On a successful save, the target takes half as much damage and isn't frightened.</p><p><strong>Increased Order.</strong> When you manifest this power, you can increase its order by 1 or more. For each increase of 1, the damage increases by 2d10.</p>"
+    },
+    "Death from Above!": {
+      "name": "Death from Above!",
+      "description": "<p>As a bonus action, the yegg jumps up to their walking speed without provoking opportunity attacks. If they leap over an enemy during this jump, the yegg can make a signature attack with advantage against that enemy. On a hit, this attack deals an extra [[lookup @prof]] piercing damage.</p>",
+      "activities": {
+        "Bonus Damage": {
+          "name": "Bonus Damage",
+          "condition": "After leaping over an enemy and hitting them with the signature attack."
+        }
+      }
+    },
+    "Lay Low": {
+      "name": "Lay Low",
+      "description": "<p>When the yegg hits a creature with a signature attack while hidden, the yegg can use their reaction to remain hidden.</p>",
+      "activities": {
+        "utility": {
+          "condition": "When the retainer scores a hit on a creature while hidden."
+        }
+      }
+    },
+    "Halberd Master": {
+      "name": "Halberd Master",
+      "description": "<p>When a creature enters a space within the mercenary's reach, the mercenary uses a reaction to make a signature attack with advantage against that creature. If this attack hits, it deals an extra [[lookup @prof.flat]]d6 slashing damage.</p>",
+      "activities": {
+        "Extra Damage": {
+          "name": "Extra Damage",
+          "condition": "When a creature enters a space within the retainer's reach."
+        }
+      }
+    },
+    "Sprint": {
+      "name": "Sprint",
+      "description": "<p>When the bear moves on their turn in combat, they can triple their speed until the end of their turn.</p>"
+    },
+    "Of Unusual Size": {
+      "name": "Of Unusual Size",
+      "description": "<p>If the [[lookup @name lowercase]] is Small or Tiny, their size increases to Medium and their Hit Dice type changes to a d8. This gives them 1 extra hit point per Hit Die if originally Small, or 2 extra hit points per Hit Die if originally Tiny</p><fieldset><legend>Foundry Note</legend><p>Effects cannot provide these adjustments, they must be done manually.</p></fieldset>"
+    },
+    "Exploit Opening": {
+      "name": "Exploit Opening",
+      "description": "<p>When the [[lookup @name lowercase]] makes an attack, they have advantage on the attack roll.</p>",
+      "activities": {
+        "utility": {
+          "condition": "The monster makes an attack"
+        }
+      }
+    },
+    "Fire Breath": {
+      "name": "Fire Breath",
+      "description": "<p>The [[lookup @name lowercase]] exhales fire in a 15-foot cone. Each creature in that area must make a DC [[lookup @save.dc.value activity=tZkxlrjjISRyJcxL]] Dexterity saving throw, taking [[lookup @prof.flat]]d6 fire damage on a failed save, or half as much damage on a successful one.</p>"
+    },
+    "Coagulate": {
+      "name": "Coagulate",
+      "description": "<p>As an action, the seneschal empowers the blood of up to [[lookup @prof.flat]] creatures within 30 feet of them. Each target can expend 1 Hit Die, rolling it and regaining hit points equal to twice the result plus their Constitution modifier.</p>"
+    },
+    "Ride the Lightning": {
+      "name": "Ride the Lightning",
+      "description": "<p>As an action, the apprentice supercharges their foe's nervous system. The apprentice makes a signature attack, and if it deals damage to a creature, the target must make a [[/save]] saving throw. On a failed save, the target is &amp;reference[incapacitated apply=false] and their speed is halved until the end of their next turn.</p>",
+      "effects": {
+        "Supercharged Nervous System": {
+          "name": "Supercharged Nervous System",
+          "description": "<p>Until the end of your next turn, you are incapacitated and your speed is halved.</p>"
+        }
+      }
+    },
+    "Rending Teeth": {
+      "name": "Rending Teeth",
+      "description": "<p>As a bonus action, you can grow your teeth into natural weapons, which you can use to make unarmed strikes for 1 minute. You can use Strength or Dexterity for the attack and damage rolls of your teeth, which deal 1d6 + your Strength or Dexterity modifier piercing damage instead of the bludgeoning damage normal for an unarmed strike. The first time on a turn that you hit an enemy with this attack, you and your companion regain hit points equal to the damage dealt. Once you use this bonus action, you can't do so again until you finish a long rest.</p>",
+      "activities": {
+        "Strength Attack": {
+          "name": "Strength Attack"
+        },
+        "Dexterity Attack": {
+          "name": "Dexterity Attack"
+        }
+      },
+      "effects": {
+        "Rending Teeth": {
+          "name": "Rending Teeth"
+        }
+      }
+    },
+    "r7XXaFn9IbAr3gSa": {
+      "name": "Exploit Opening",
+      "description": "<p>The mercenary takes the Attack action, making each attack with advantage and dealing an extra [[lookup @prof.flat]]d4 slashing damage on a hit.</p>",
+      "activities": {
+        "Extra Damage": {
+          "name": "Extra Damage",
+          "condition": "Follow-up to the attacks made with this feature.",
+          "affects": {
+            "special": "The creature hit by the attack."
+          }
+        },
+        "Consume Usage": {
+          "name": "Consume Usage"
+        }
+      }
+    },
+    "Swooping Attack": {
+      "name": "Swooping Attack",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed without provoking opportunity attacks. During or after this move, they can make a signature attack against one target. On a hit, the target must succeed on a [[/save]] saving throw or drop one item they are holding.</p>"
+    },
+    "Lair Actions: Sewer": {
+      "name": "Lair Actions: Sewer",
+      "description": "<p>On initiative count 20 (losing initiative ties), the sewer creature can take one of the following lair actions; the sewer creature can't take the same lair action two rounds in a row:</p><p><strong>Cave-In.</strong> The sewer creature rakes debris from the ceiling or knocks loose an ancient column, and the sewer tunnel partially collapses in a 15-foot cube centered on a point the sewer creature can see within 60 feet of them. Creatures in that area must succeed on a DC [[lookup @save.dc.value activity=kYgdwhKhMs0kgwUG]] Dexterity saving throw or take [[lookup @prof.flat]]d6 bludgeoning damage from the falling rubble. Additionally, soot and debris heavily obscure that area for the next round, and it becomes difficult terrain.</p><p><strong>Covered in Muck.</strong> The sewer creature crushes a fungal growth near them, releasing a cloud of toxic spores. Each creature within 30 feet of the sewer creature must succeed on a DC [[lookup @save.dc.value activity=n77q4Knc7LcKhSFA]] Constitution saving throw or be &amp;Reference[poisoned] until the end of initiative count 20 on the next round.</p><p><strong>Open Valves.</strong> The sewer creature cranks a valve or breaks a pipe, causing sewage to gush from a point within 60 feet of the sewer creature. Each creature in a 10-foot-wide, 60-foot-long line originating from that point must succeed on a DC [[lookup @save.dc.value activity=nRvytnB4Kendt7sY]] Strength saving throw or fall &amp;Reference[prone] in the sewage and be pushed 15 feet away from the point where the sewage originated.</p>",
+      "activities": {
+        "Cave-In": {
+          "name": "Cave-In"
+        },
+        "Covered in Muck": {
+          "name": "Covered in Muck"
+        },
+        "Open Valves": {
+          "name": "Open Valves"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Child of the Night": {
+      "name": "Child of the Night",
+      "description": "<p>As a reaction to taking damage, the neophyte disappears in a cloud of bats and insects. Every enemy within 10 feet of the neophyte must make a [[/save]] saving throw. On a failed save, a creature takes [[/damage]] damage. On a successful save, a creature takes half as much damage. At the end of the turn, the neophyte reforms in an unoccupied space within 30 feet of where they disappeared.</p>",
+      "activities": {
+        "save": {
+          "condition": "When the retainer takes damage."
+        }
+      }
+    },
+    "Rockbreaker": {
+      "name": "Rockbreaker",
+      "description": "<p>Chitinous claws or blades around the [[lookup @name lowercase]]'s limbs give them a burrowing speed of 30 feet.</p>",
+      "effects": {
+        "Rockbreaker": {
+          "name": "Rockbreaker"
+        }
+      }
+    },
+    "Multiattack": {
+      "name": "Multiattack",
+      "description": "<p>The swarm makes two [[/item Bite]] attacks. (+1 CR)</p>",
+      "effects": {
+        "Multiattack": {
+          "name": "Multiattack"
+        }
+      }
+    },
+    "Grabbed from Above": {
+      "name": "Grabbed from Above",
+      "description": "<p>The [[lookup @name lowercase]] makes a signature attack against a Medium or smaller creature. On a hit, the target is also &amp;Reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]) if they weren't already. While grappled in this way, the target is &amp;Reference[restrained] and the [[lookup @name lowercase]] can't make a signature attack against another target.</p>"
+    },
+    "Fissure Force": {
+      "name": "Fissure Force",
+      "description": "<p>As an action, you can send tremors through dirt, sand, or solid stone. The area within 30 feet of your current space becomes difficult terrain for enemies for 1 minute. For the duration, an enemy who starts their turn inside this area must succeed on a Dexterity saving throw against your exploit save DC or be knocked &amp;Reference[prone]. Once you use this action, you can't do so again until you finish a long rest.</p>"
+    },
+    "tAp7x44j1cn6kJO2": {
+      "name": "Astral Presence",
+      "description": "<p>As an action, the [[lookup @name lowercase]] becomes &amp;reference[invisible] for 1 minute or until they use a bonus action to end this effect. While invisible, they can move through creatures and objects as if they were difficult terrain, and the their signature attacks deal an extra [[lookup @prof]] damage to creatures who can't see them. The [[lookup @name lowercase]] takes [[/damage 1d10 force average]] damage if they end their turn inside an object.</p>",
+      "activities": {
+        "Become Invisible": {
+          "name": "Become Invisible"
+        }
+      }
+    },
+    "Used to Filth": {
+      "name": "Used to Filth",
+      "description": "<p>The [[lookup @name lowercase]] gains resistance to poison damage and immunity to the poisoned condition. If the creature already has resistance to poison damage, they gain immunity to poison damage instead.</p>",
+      "effects": {
+        "Used to Filth": {
+          "name": "Used to Filth"
+        }
+      }
+    },
+    "Damage Resistances": {
+      "name": "Damage Resistances",
+      "description": "<p>The [[lookup @name lowercase]] is resistant to bludgeoning, piercing, and slashing damage from mundane attacks.</p>",
+      "effects": {
+        "Damage Resistances": {
+          "name": "Damage Resistances",
+          "description": "<p>The devil is resistant to bludgeoning, piercing, and slashing damage from mundane attacks.</p>"
+        }
+      }
+    },
+    "Blood Seeker": {
+      "name": "Blood Seeker",
+      "description": "<p>As an action, the neophyte moves up to their speed toward a creature they can see within 60 feet of them. If the neophyte ends their movement within 5 feet of the creature, the target must succeed on a [[/save]] saving throw or be &amp;reference[grappled] (escape DC 10 + [[lookup @prof.flat]]) and take [[/damage]] damage. The neophyte regains hit points equal to half the necrotic damage dealt.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Must be visible for the retainer."
+          }
+        }
+      }
+    },
+    "Living Forest": {
+      "name": "Living Forest",
+      "description": "<p>A writhing grove thrives in a 30-foot radius centered on the [[lookup @name lowercase]]. Mist lightly obscures that area, and colorful vines and shifting foliage make its ground difficult terrain. Teasing voices laugh and whisper, giving other creatures in that area disadvantage on saving throws made to maintain concentration on spells and similar effects. Flickering lights extinguish magical darkness in that area created by spells of 3rd level or lower. (When adding this trait to a creature, you can choose to exclude one or more of these effects.)</p>"
+    },
+    "uk7f5l18s8AfbsLq": {
+      "name": "Brutal Charge",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed without provoking opportunity attacks. During or after this move, they can make a signature attack against one target.</p>"
+    },
+    "Griffon-Hearted": {
+      "name": "Griffon-Hearted",
+      "description": "<p>As an action, you can fly up to twice your walking speed without provoking opportunity attacks. During this movement, you can enter the spaces of other creatures and these spaces don't count as difficult terrain for you. The first time you enter each creature's space during this move, they must succeed on a Strength saving throw against your exploit save DC or take bludgeoning damage equal to your beastheart level and be knocked &amp;Reference[prone]. Once you use this action, you can't do so again until you finish a long rest.</p>"
+    },
+    "Furious Charge": {
+      "name": "Furious Charge",
+      "description": "<p>As an action, the devastator moves up to their speed. At the end of this movement, they can make a signature attack. If that attack hits a Large or smaller creature, the target is pushed up to 10 feet away from the devastator, and the devastator and their allies have advantage on attack rolls against the target until the end of the devastator's next turn.</p>",
+      "effects": {
+        "Advantageous Target": {
+          "name": "Advantageous Target",
+          "description": "<p>Attackers have advantage on attacks against you until the end of the devastator's next turn.</p>"
+        }
+      }
+    },
+    "Relentless": {
+      "name": "Relentless",
+      "description": "<p>When the [[lookup @name lowercase]] isn't incapacitated and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the [[lookup @name lowercase]] drops to 1 hit point instead of 0 hit points.</p>",
+      "activities": {
+        "utility": {
+          "condition": "When reduced to 0 hit points."
+        }
+      }
+    },
+    "Frenzied Bite": {
+      "name": "Frenzied Bite",
+      "description": "<p>When a creature the gnasher can see within 30 feet of them is reduced to 0 hit points, the gnasher can use a reaction to move up to half their speed and then make a signature attack. On a hit, the attack deals an extra [[@prof.flat]] piercing damage.</p>",
+      "activities": {
+        "Move and Attack": {
+          "name": "Move and Attack",
+          "condition": "When a creature the gnasher can see within range is reduced to 0 hit points."
+        },
+        "Extra Damage": {
+          "name": "Extra Damage",
+          "condition": "When the attack made as part of this reaction hits."
+        }
+      }
+    },
+    "Toxiferous": {
+      "name": "Toxiferous",
+      "description": "<p>When a creature hits the [[lookup @name lowercase]] with a melee attack while within 5 feet of them or touches the [[lookup @name lowercase]], that creature takes 2 (1d4) poison damage.</p>",
+      "activities": {
+        "damage": {
+          "condition": "A creature hits the monster with a melee attack while within 5 feet of them or touches the monster"
+        }
+      }
+    },
+    "Bear Hug": {
+      "name": "Bear Hug",
+      "description": "<p>The [[lookup @name lowercase]] attempts to grab and crush a creature they can see within 5 feet of them. The target must make a DC [[lookup @save.dc.value activity=SltnjVdSchMAZ9BK]] Dexterity saving throw. On a failed save, the target takes [[lookup @prof.flat]]d10 bludgeoning damage and is &amp;Reference[grappled] (escape DC 10 plus [[lookup @prof.flat]]). On a successful save, the target takes half as much damage and is not grappled. Until this grapple ends, the target is also &amp;Reference[restrained]. The grapple ends if the [[lookup @name lowercase]] uses Bear Hug on another target or makes a signature attack against another target.</p>"
+    },
+    "Retaliatory Charge": {
+      "name": "Retaliatory Charge",
+      "description": "<p>When a creature the devastator can see within 40 feet of them deals damage to the devastator, the devastator can use a reaction to move up to their speed toward the creature. If the devastator ends this movement within 5 feet of the creature, they can make two signature attacks against the creature with a +[[lookup @prof]] bonus to those attack and damage rolls.</p><fieldset><legend>Foundry Note</legend><p>The activity on this feature includes an effect that can be added to the retainer to grant the temporary bonus to attack and damage rolls.</p></fieldset>",
+      "activities": {
+        "utility": {
+          "condition": "When a creature within range deals damage to the retainer.",
+          "affects": {
+            "special": "The creature that dealt the damage."
+          }
+        }
+      },
+      "effects": {
+        "Retaliatory Charge": {
+          "name": "Retaliatory Charge"
+        }
+      }
+    },
+    "Beacon": {
+      "name": "Beacon",
+      "description": "When the tactician hits with a signature attack, each creature within 5 feet of the target can use a reaction to make a melee weapon attack against the target.",
+      "activities": {
+        "Consume Usage": {
+          "name": "Consume Usage",
+          "condition": "When the tactician hits with a signature attack.",
+          "range": {
+            "special": "The signature attack's target is the range's origin."
+          }
+        }
+      }
+    },
+    "Ruin Runner": {
+      "name": "Ruin Runner",
+      "description": "<p>The [[lookup @name lowercase]] ignores difficult terrain</p>"
+    },
+    "Tree Stride": {
+      "name": "Tree Stride",
+      "description": "<p>Once per turn, the [[lookup @name lowercase]] can use 10 feet of their movement to step magically into one living tree within reach and emerge from a second living tree within 60 feet of the first tree, appearing in an unoccupied space within 5 feet of the second tree. Both trees must be the same size category as the [[lookup @name lowercase]] or bigger.</p>"
+    },
+    "In All Your Faces!": {
+      "name": "In All Your Faces!",
+      "description": "<p>The [[lookup @name lowercase]] chaotically bounces around, smearing toxin on each enemy within 5 feet of them.</p><p>Each target must succeed on a DC [[lookup @save.dc.value activity=uQp08LFdazjvTJyo]] Constitution saving throw or take 1d6 plus [[lookup @prof]] poison damage and be &amp;Reference[blinded] until the end of the skitterling's next turn. A creature within 5 feet of a target blinded in this way can use their action to wipe the toxin off them, ending the condition for that target.</p>"
+    },
+    "Rotwake Charge": {
+      "name": "Rotwake Charge",
+      "description": "The [[lookup @name lowercase]] moves up to their speed without provoking opportunity attacks, tainting the ground beneath their hooves and making it mundane difficult terrain for their enemies until the start of the [[lookup @name lowercase]]'s next turn. During this move, the [[lookup @name lowercase]] can move through the space of Large or smaller creatures as if they were difficult terrain. When a creature enters tainted ground for the first time on a turn or starts their turn there, they must make a [[/save]] saving throw, taking [[/damage]] damage on a failed save, or half as much damage on a successful one."
+    },
+    "Slime Servant": {
+      "name": "Slime Servant",
+      "description": "<p>If a creature spends 1 continuous minute under the effect of the slime from an olothec's Devolving Tentacle attack, that effect ends and their flesh devolves into a translucent primordial state. The creature loses their memories and sense of self, becoming a slime servant NPC who is loyal to the olothec. The slime servant retains all their original statistics and gains the following traits:</p><p><strong>Amphibious.</strong> The slime servant can breathe air and water. They gain a swimming speed equal to their walking speed (if they didn't already have an equal or greater swimming speed).</p><p><strong>Primordial Mind.</strong> The slime servant can't be charmed or frightened.</p><p><strong>Servant Senses.</strong> The olothec can sense anything the slime servant senses, and if the slime servant can speak, the olothec can speak through their body.</p><p>Only a <em>wish</em> spell can restore a slime servant's memories and return them to their original state.</p>",
+      "effects": {
+        "Slime Servant": {
+          "name": "Slime Servant",
+          "description": "<p>You have a swimming speed equal to your walking speed. You cannot be charmed or frightened.</p>",
+          "changes": {
+            "name": "{} (Slime Servant)"
+          }
+        }
+      }
+    },
+    "Disease Carrier": {
+      "name": "Disease Carrier",
+      "description": "<p>When the swarm hits a creature with an attack, the target must succeed on a [[/save]] saving throw or be &amp;reference[poisoned] (save ends at end of turn).</p>",
+      "activities": {
+        "save": {
+          "condition": "When hit by an attack."
+        }
+      }
+    },
+    "Deadly Bite": {
+      "name": "Deadly Bite",
+      "description": "<p>When the wildcat hits a prone creature with a Bite attack, the attack is a critical hit.</p>"
+    },
+    "Ankle Biter": {
+      "name": "Ankle Biter",
+      "description": "<p>The [[lookup @name lowercase]] moves up to their speed without provoking opportunity attacks and makes a signature attack. On a hit, if the target is a Medium or smaller creature, they are also knocked &amp;Reference[prone] and &amp;Reference[grappled] by the [[lookup @name lowercase]] (escape DC 10 plus [[lookup @prof.flat]]).</p>"
+    },
+    "Lair Actions: Durixaviinox": {
+      "name": "Lair Actions: Durixaviinox",
+      "description": "<p>When fighting inside his lair, Durixaviinox can take lair actions. On initiative count 20 (losing initiative ties), he can take one lair action to cause one of the following effects; he can't use the same lair action two rounds in a row:</p><p><strong>Fallen Army.</strong> Durixaviinox calls the spirits of his fallen warriors to attack up to five creatures he can see within 90 feet of him. Each target must succeed on a [[save activity=nZjUSJANTKfKO7cz]] saving throw or take [[/damage activity=nZjUSJANTKfKO7cz average]] damage from spectral arrows.</p><p><strong>Hailstorm.</strong> Durixaviinox creates a magical hailstorm in a 30-foot cube centered on a point he can see within 120 feet of him. The storm lasts until the end of initiative count 20 on the next round. Its area is difficult terrain, and creatures who enter the storm for the first time on a turn or start their turn there must succeed on a [[/save]] saving throw or take [[/damage activity=3saL054ntFGGMzzY average]] damage.</p><p><strong>Sovereignty.</strong> Each enemy who starts their turn within 120 feet of Durixaviinox and is aware of him must succeed on a [[/save activity=aHJmFqWvEbwBAfNE]] saving throw or be &amp;Reference[frightened] of him until the end of initiative count 20 on the next round.</p>",
+      "activities": {
+        "Fallen Army": {
+          "name": "Fallen Army"
+        },
+        "Hailstorm": {
+          "name": "Hailstorm"
+        },
+        "Sovereignty": {
+          "name": "Sovereignty"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "Lair Actions"
+        }
+      }
+    },
+    "Goblin": {
+      "name": "Goblin",
+      "description": "<p>A goblin has the following defining features:</p><p><strong>Size.</strong> The goblin's size is Small.</p><p><strong>Type.</strong> The goblin's type is Humanoid.</p><p><strong>Speed.</strong> The goblin has a walking speed of 30 feet and a climbing speed of 20 feet.</p><p><strong>Darkvision.</strong> The goblin has darkvision out to a range of 60 feet.</p><p><strong>Languages.</strong> The goblin can speak, read, and write Common and Goblin.</p><p><strong>Crafty.</strong> The goblin doesn't provoke opportunity attacks when they move out of an enemy's reach.</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "Defining Features"
+        }
+      }
+    },
+    "Glide": {
+      "name": "Glide",
+      "description": "<p>The bird can take a short rest while flying horizontally.</p>"
+    },
+    "Swallow": {
+      "name": "Swallow",
+      "description": "<p>The [[lookup @name lowercase]] attempts to swallow a Medium or smaller creature within 5 feet of them. The target must make a DC [[lookup @save.dc.value activity=iTI2tMHHrlKySHKE]] Dexterity saving throw. On a failed save, the target takes [[lookup @prof.flat]]d6 bludgeoning damage and is swallowed. On a successful save, the target takes half as much damage and isn't swallowed. The [[lookup @name lowercase]] can have only one target swallowed at a time.</p><p>A swallowed target is blinded and restrained, they have total cover against attacks and other effects outside the [[lookup @name lowercase]], and they take [[lookup @prof.flat]]d6 acid damage at the start of each of the [[lookup @name lowercase]] turns. Whenever the [[lookup @name lowercase]] takes damage, they must succeed on a Constitution saving throw or regurgitate the swallowed creature, who falls prone in an unoccupied space within 5 feet of the [[lookup @name lowercase]]. The DC for this saving throw equals 10 or half the triggering damage, whichever is higher. If the [[lookup @name lowercase]] is incapacitated or dies, a swallowed creature is no longer restrained by the [[lookup @name lowercase]] and can escape from the corpse using 5 feet of movement, exiting prone.</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "Medium or smaller"
+          }
+        }
+      },
+      "effects": {
+        "Swallow": {
+          "name": "Swallow"
+        }
+      }
+    },
+    "Owlie Oop": {
+      "name": "Owlie Oop",
+      "description": "<p>The [[lookup @name lowercase]] leaps up to half their speed without provoking opportunity attacks. When they land, each creature within 5 feet of them must succeed on a DC [[lookup @save.dc.value activity=zokDDGpdMr1aXOh6]] Strength saving throw or be knocked &amp;Reference[prone].</p>"
+    },
+    "Mountain Dweller": {
+      "name": "Mountain Dweller",
+      "description": "<p>The wildcat ignores difficult terrain created by snow, ice, or steep slopes.</p>"
+    }
+  }
+}
