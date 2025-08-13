@@ -46,7 +46,7 @@
           "activities": {
             "SPDV1OYRR1A3RjYJ": {
               "affects": {
-                "special": "self only"
+                "special": "仅自身"
               }
             }
           }
@@ -396,7 +396,7 @@
             "Intelligence Saving Throw": {
               "name": "智力豁免检定",
               "affects": {
-                "special": "that is Charmed or Grappled"
+                "special": "魅惑或受擒于"
               }
             }
           }
@@ -416,7 +416,7 @@
           "activities": {
             "heal": {
               "affects": {
-                "special": "one creature Charmed or Grappled"
+                "special": "单一生物魅惑或受擒"
               }
             }
           }
@@ -763,7 +763,7 @@
             "Expend Use": {
               "name": "耗用",
               "range": {
-                "special": "half its Fly Speed"
+                "special": "飞行速度的一半"
               }
             }
           }
@@ -5058,46 +5058,46 @@
           }
         },
         "Divine Aid": {
-          "name": "Divine Aid",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]{Bless}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]{Dispel Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor]{Healing Word}</em>, or <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLesserRest]{Lesser Restoration}</em>, using the same spellcasting ability as Spellcasting.</p>"
+          "name": "至圣援护",
+          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor]</em> 或 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLesserRest]</em>，使用其施法动作的施法属性。</p>"
         },
         "Bless": {
-          "name": "Bless",
-          "description": "<p>You bless up to three creatures within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 1.</p>",
+          "name": "祝福术",
+          "description": "<p>你祝福施法范围内至多 3 个生物。在法术终止前，每当受术目标进行攻击检定或豁免检定时，都可以在检定结果中额外加入 1d4。</p><p><strong>升环施法：</strong> 使用高于一环的法术位施展此法术时，你使用的法术位每比一环高一环，就能多指定一个生物。</p>",
           "effects": {
             "Blessed": {
-              "name": "Blessed",
-              "description": "<p>Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save.</p>"
+              "name": "祝福",
+              "description": "<p>在法术终止前，每当你进行攻击检定或豁免检定时，都可以在检定结果中额外加入 1d4。</p>"
             },
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
         "Dispel Magic": {
-          "name": "Dispel Magic",
-          "description": "<p>Choose one creature, object, or magical effect within range. Any ongoing spell of level 3 or lower on the target ends. For each ongoing spell of level 4 or higher on the target, make an ability check using your spellcasting ability (DC 10 plus that spell’s level). On a successful check, the spell ends.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You automatically end a spell on the target if the spell’s level is equal to or less than the level of the spell slot you use.</p>",
+          "name": "解除魔法",
+          "description": "<p>在施法距离内指定一名生物、一个物件或一处魔法效应。所有影响该目标的三环或更低环阶法术即告终止。每个影响目标的四环或更高环阶法术都需要以你的施法属性进行一次属性检定（DC 10 + 目标法术环阶），检定成功时目标法术终止。</p><p><strong>升环施法：</strong> 你直接终止影响目标的小于等于该施法环阶的法术效应。</p>",
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
         "Healing Word": {
-          "name": "Healing Word",
-          "description": "<p>A creature of your choice that you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The healing increases by 2d4 for each spell slot level above 1.</p>",
+          "name": "治愈真言",
+          "description": "<p>你指定施法距离内一个你能看见的生物并恢复其生命值，恢复量等于 2d4 + 你的施法属性调整值。</p><p><strong>升环施法：</strong> 使用高于一环的法术位施展该法术时，你使用的法术位每比一环高一环，治疗量就增加 2d4 点。</p>",
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
         "Lesser Restoration": {
-          "name": "Lesser Restoration",
-          "description": "<p>You touch a creature and end one condition on it: &amp;Reference[blinded], &amp;Reference[deafened], &amp;Reference[paralyzed], or &amp;Reference[poisoned].</p>",
+          "name": "次级复原术",
+          "description": "<p>你触碰一个生物，并终止正影响它的一种状态：&Reference[blinded]、&Reference[deafened]、&Reference[paralyzed] 或 &Reference[poisoned]。</p>",
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         }
@@ -12585,7 +12585,7 @@
               "name": "移动攻击",
               "condition": "移动了 20+ 尺",
               "affects": {
-                "special": "Large or smaller"
+                "special": "大型或更小的"
               }
             }
           }
@@ -13046,7 +13046,7 @@
             "Moving Attack": {
               "name": "移动攻击",
               "affects": {
-                "special": "Large or smaller"
+                "special": "大型或更小的"
               }
             }
           },
@@ -13098,7 +13098,7 @@
           "activities": {
             "save": {
               "affects": {
-                "special": "Large or smaller"
+                "special": "大型或更小的"
               }
             },
             "Escape Check": {
@@ -13167,7 +13167,7 @@
           "activities": {
             "attack": {
               "affects": {
-                "special": "Large or smaller"
+                "special": "大型或更小的"
               }
             },
             "Escape Check": {
@@ -13314,13 +13314,13 @@
           "activities": {
             "attack": {
               "affects": {
-                "special": "Large or smaller"
+                "special": "大型或更小的"
               }
             },
             "Moving Attack": {
               "name": "移动攻击",
               "affects": {
-                "special": "Large or smaller"
+                "special": "大型或更小的"
               }
             }
           },
@@ -16147,7 +16147,7 @@
               "name": "毒素抗性"
             },
             "Lightning Resistance": {
-              "name": "Lightning Resistance"
+              "name": "闪电抗性"
             }
           }
         },
@@ -17654,7 +17654,7 @@
           "activities": {
             "save": {
               "affects": {
-                "special": "Large or smaller"
+                "special": "大型或更小的"
               }
             },
             "Escape Check": {
@@ -19887,7 +19887,7 @@
           },
           "effects": {
             "Grappled and Stunned": {
-              "name": "Grappled and Stunned",
+              "name": "受擒并震慑",
               "description": "<p>If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC) from all the mind flayer's tentacles, and the target has the &amp;Reference[Stunned apply=false] condition until the grapple ends.</p>"
             }
           }
@@ -20759,7 +20759,7 @@
           }
         },
         "Animating Spores": {
-          "name": "Animating Spores",
+          "name": "活化孢子",
           "description": "<p>The [[lookup @name]] releases spores at a Medium or Small corpse within [[lookup @range.value activity=ruh9QGSrxWb57Iuf]] feet of it that wasn't a Construct or an Undead. In 24 hours, the corpse rises as a <strong>Myconid Spore Servant</strong>. The corpse stays animate for [[/r 1d4 + 1]] weeks or until destroyed, and it can't be animated again in this way.</p>",
           "activities": {
             "summon": {
@@ -20889,8 +20889,8 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "9l6Ro2lwddDcmZQt": {
-          "name": "Needles",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "枯针射击",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
         }
       }
     },
@@ -27803,7 +27803,7 @@
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Animate Trees": {
-          "name": "Animate Trees",
+          "name": "活化树木",
           "description": "<p>The [[lookup @name]] magically animates up to two trees it can see within [[lookup @range.value activity=EceTNjzjKWdrMNAy]] feet of itself. Each tree uses the <strong>Treant</strong> stat block, except it has Intelligence and Charisma scores of 1, it can't speak, and it lacks this action. The tree takes its turn immediately after the treant on the same initiative count, and it obeys the treant. A tree remains animate for 1 day or until it dies, the treant dies, or it is more than 120 feet from the treant. The tree then takes root if possible.</p>",
           "activities": {
             "summon": {
@@ -27814,7 +27814,7 @@
           },
           "effects": {
             "Animate Trees": {
-              "name": "Animate Trees",
+              "name": "活化树木",
               "description": "<p>The tree has Intelligence and Charisma scores of 1, can't speak, and lacks the Animate Trees action.</p>"
             }
           }
@@ -29305,11 +29305,11 @@
           }
         },
         "Maneuver": {
-          "name": "Maneuver",
-          "description": "<p class=\"feature-trait\">One [[lookup @target.affects.type activity=WMz2y2H5SLCDAxCF]] who can see or hear the [[lookup @name lowercase]] can take a Reaction to move up to half the [[lookup @target.affects.type activity=WMz2y2H5SLCDAxCF]]’s Speed without provoking &amp;Reference[OpportunityAttacks].</p>",
+          "name": "战技",
+          "description": "<p class=\"feature-trait\">一名能够看到或听到 [[lookup @name lowercase]] 的盟友可以用其反应移动至多等于自身速度一半的距离且不触发 &Reference[OpportunityAttacks]{借机攻击}。</p>",
           "activities": {
             "Expend Use": {
-              "name": "Expend Use"
+              "name": "耗用"
             }
           }
         }
