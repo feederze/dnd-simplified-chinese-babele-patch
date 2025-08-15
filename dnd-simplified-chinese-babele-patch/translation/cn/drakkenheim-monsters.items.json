@@ -1,0 +1,941 @@
+{
+  "label": "Magic Items",
+  "entries": {
+    "Frozen Armor": {
+      "name": "Frozen Armor",
+      "description": "<p><em>Armor (Any), Rare (Requires Attunement)</em></p><p>This armor channels cold energy through carefully manufactured veins of elemental fluid that run along the inside of its frame. Elemental dust is mixed with the gold in its forming, and contaminated ichor is used as a catalyst to magnify the magical effects. The animus gem placed centrally upon it must be infused with the energy of a frost giant.</p><p>While attuned to this armor you have Resistance to Cold damage and are Immune to the &amp;reference[Frozen apply=false] condition.</p><p>This magical armor has six charges, and regains all expended charges each day at dawn. When you are hit by a melee attack, you can use your Reaction and expend 1 charge from the armor to freeze your attacker in pace. The creature must make a DC 15 Constitution saving throw or be &amp;reference[Frozen] (DC 15).</p><p><em><strong>Crafting.</strong></em> Creating <em>Frozen Armor</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Frost Giant</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        },
+        "Icy Retaliation": {
+          "name": "Icy Retaliation",
+          "condition": "When you are hit by a melee attack."
+        }
+      },
+      "effects": {
+        "Frozen Armor: Cold Resistance": {
+          "name": "Frozen Armor: Cold Resistance",
+          "description": "<p>While attuned to this armor you have Resistance to Cold damage and are Immune to the &amp;reference[Frozen] condition.</p>"
+        },
+        "Frozen Armor": {
+          "name": "Frozen Armor",
+          "changes": {
+            "name": "Frozen {}",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.4ETD2uWHPA4T4IRh inline]"
+          }
+        },
+        "Frozen (DC 15)": {
+          "name": "Frozen (DC 15)",
+          "description": "<p>You're partially encased in ice:</p><ul><li><p>You are &amp;reference[Immobilized apply=false] &amp; &amp;reference[Defenseless apply=false].</p></li><li><p>You're &amp;reference[Helpless apply=false] against attacks made with a weapon that deals bludgeoning damage.</p></li><li><p>You or another creature can take an action to break the ice away. To do so, you must succeed on a [[/check 15 str ath]] check.</p></li></ul>"
+        }
+      }
+    },
+    "Pelt of the Pack Lord": {
+      "name": "Pelt of the Pack Lord",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>This pelt cape is made from the fur of a Garmyr stitched care fully into the leathers of a ratling, decorated with the talons of a harpy, and polished to a shine with contaminated ichor.</p><p>While you are attuned to this pelt and are within 5 feet of a hostile creature, your allies have Advantage on attack rolls against that creature.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Pelt of the Pack Lord</em> requires a Rare Workshop and the following Rare Components:</p><p><strong>[Animus]</strong> Monstrosity Animus</p><p><strong>[Fluid]</strong> Contaminated Ichor</p><p><strong>[Hair]</strong> Fur from a Garmyr</p><p><strong>[Hide]</strong> Skin from a Ratling</p><p><strong>[Natural Weapon]</strong> Claws from a Harpy</p>"
+    },
+    "Tentacle Whip": {
+      "name": "Tentacle Whip",
+      "description": "<p><em>Weapon (Whip), Rare</em></p><p>This whip is made from the tentacles and guts of aberrant creatures, stitched to the webbed membranes of winged beasts and fused to the bark of a plant creature. Once the animus is placed, the tentacles begin to writhe and wriggle and the whip can latch and drag creatures along the ground with uncanny strength.</p><p>You gain a +2 bonus to attack and damage rolls made with this magic whip, which has a reach of 20 feet.</p><p>Once per turn when you hit a Large or smaller creature with an attack using this weapon, you can pull it 10 feet towards you.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Tentacle Whip</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Hair]</strong> Stitches</p></li><li><p><strong>[Hide]</strong> Bark</p></li><li><p><strong>[Hide]</strong> Webbed Membrane</p></li><li><p><strong>[Natural Weapons]</strong> Tentacles from an Aberration</p></li></ul>",
+      "activities": {
+        "Pull Creature": {
+          "name": "Pull Creature",
+          "condition": "When you hit a Large or smaller creature with an attack using this weapon."
+        }
+      }
+    },
+    "Rat Tooth Dagger": {
+      "name": "Rat Tooth Dagger",
+      "description": "<p><em>Weapon (Dagger), Rare (Requires Attunement by a Rogue)</em></p><p>When you hit with an attack as part of an Attack action using this magic dagger and apply your Sneak Attack to the damage roll, you can make an additional attack using this dagger as part of the same action. If that attack hits and meets the criteria for your Sneak Attack, you can apply half your Sneak Attack dice (rounded down) to the attack’s damage.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Rat Tooth Dagger</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Venom</p></li><li><p><strong>[Hide]</strong> Bark</p></li><li><p><strong>[Natural Weapons]</strong> Claws from a Ratling</p></li></ul>",
+      "activities": {
+        "Rat Tooth Extra Damage": {
+          "name": "Rat Tooth Extra Damage"
+        }
+      }
+    },
+    "Cold Snap Circlet": {
+      "name": "Cold Snap Circlet",
+      "description": "<p><em>Wondrous Item, Rare</em></p><p>This icy circlet is made from frozen contaminated ichor, kept in a state of permafrost by the heart of a naturally cold creature, and lined with frozen bones of undead, all powered by the animus of an elemental. Even in its permanently frozen state, it is comfortable to wear.</p><p>Once per turn, when you cast a spell that deals Cold damage using a spell slot, you can choose one target that was dealt Cold damage by the spell to gain the &amp;reference[Frozen] condition. The escape DC equals your spell save DC.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Cold Snap Circlet</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from an Elemental</p></li><li><p><strong>[Bones]</strong> Ribs from an Undead</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Organ]</strong> Heart from a White Dragon, Silver Dragon, Winter Troll, or any monster Immune to Cold damage.</p></li></ul>",
+      "activities": {
+        "Cold Snap": {
+          "name": "Cold Snap",
+          "condition": "When you cast a spell that deals Cold damage using a spell slot.",
+          "affects": {
+            "special": "A target that was dealt Cold damage by the spell."
+          }
+        }
+      },
+      "effects": {
+        "Frozen (Spell Save DC)": {
+          "name": "Frozen (Spell Save DC)",
+          "description": "<p>You're partially encased in ice:</p><ul><li><p>You are &amp;reference[Immobilized apply=false] &amp; &amp;reference[Defenseless apply=false].</p></li><li><p>You're &amp;reference[Helpless apply=false] against attacks made with a weapon that deals bludgeoning damage.</p></li><li><p>You or another creature can take an action to break the ice away. To do so, you must succeed on a [[/check str ath]] check against the spellcaster's Spell Save DC.</p></li></ul>"
+        }
+      }
+    },
+    "Scroll of Spell Power": {
+      "name": "Scroll of Spell Power",
+      "description": "<p><em>Scroll, Uncommon</em></p><p>When you roll damage for a spell of level 1 or higher, you can expend this scroll to re-roll a number of the damage dice up to the level of the spell cast. You must use the new rolls.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Scroll of Spell Power</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Fey, Dragon, or Giant</p></li><li><p><strong>[Hide]</strong> Skin from a Monstrosity</p></li></ul>",
+      "activities": {
+        "Empower Spell": {
+          "name": "Empower Spell",
+          "condition": "When you roll damage for a spell of level 1 or higher."
+        }
+      }
+    },
+    "Champion's Weapon": {
+      "name": "Champion's Weapon",
+      "description": "<p><em>Weapon (Any Simple or Martial), Uncommon</em></p><p>Attack rolls made using this magic weapon can score a Critical Hit on a roll of 19 or 20 on the d20.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Champion’s Weapon</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Bones]</strong> Bones</p></li><li><p><strong>[Fluid]</strong> Sap</p></li><li><p><strong>[Hide]</strong> Plates</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Champion's Weapon": {
+          "name": "Champion's Weapon",
+          "changes": {
+            "name": "Champion's {}",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.DPDHIpGBisEfAZUx inline]"
+          }
+        }
+      }
+    },
+    "Necromancer's Armor": {
+      "name": "Necromancer's Armor",
+      "description": "<p><em>Armor (Light), Rare (Requires Attunement by a spellcaster)</em></p><p>This suit of armor is constructed from the bones of the dead and outfitted over black woven fabric. The armor has two skulls as pauldrons upon the shoulders, a reinforced spine, and a rib cage that covers the front, and the entire structure is ornately decorated with the fangs of fallen beasts. The bones are magically imbued with otherworldly energy, powered by a powerful undead animus.</p><p>While attuned to this armor, you are proficient with this armor even if you lack proficiency with light armor.</p><p>While you are within 30 feet of an Undead creature under your control, you gain Resistance to all damage except Radiant. However, each time you take damage, choose an Undead creature under your control within 30 feet of you. That creature takes the same amount of damage, which can’t be reduced or prevented in any way.</p><p><em><strong>Crafting.</strong></em> Creating <em>Necromancer’s Armor</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Undead Animus</p></li><li><p><strong>[Bones]</strong> Ribs</p></li><li><p><strong>[Bones]</strong> Skull</p></li><li><p><strong>[Bones]</strong> Spine</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Natural Weapon]</strong> Teeth</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Necromancer's Armor": {
+          "name": "Necromancer's Armor",
+          "changes": {
+            "name": "Necromancer's {}",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.Ducwx0AyK76XbkjL inline]"
+          }
+        },
+        "Necromancer's Resistance": {
+          "name": "Necromancer's Resistance",
+          "description": "<p>While you are within 30 feet of an Undead creature under your control, you gain Resistance to all damage except Radiant. However, each time you take damage, choose an Undead creature under your control within 30 feet of you. That creature takes the same amount of damage, which can’t be reduced or prevented in any way.</p>"
+        }
+      }
+    },
+    "Injector's Crossbow": {
+      "name": "Injector's Crossbow",
+      "description": "<p><em>Weapon (Any Crossbow), Rare (Requires Attunement)</em></p><p>This crossbow is covered in metal plating, decorative and refined pointed metal tips along an oak wood body, and foregrip. The barrel and limb are reinforced with the steel plates from a con struct, with a stained leather grip made from a monster’s hide. Its hair strung bowstring and leather fasteners hold a series of syringes in place. The crossbow’s stock has a series of various tubes extruding from it that connect to an alchemical chamber on the side of the weapon. A mechanical wheel feeds the darts into place upon filling them, auto-loading the crossbow for easy firing.</p><p>You gain a +1 bonus to attack and damage rolls made with this magic crossbow. This crossbow ignores the Loading property, and you don’t need a free hand to load a piece of ammunition into it.</p><p>Once per turn when you hit a creature with a ranged attack using this crossbow, you can apply one of the following poisons.</p><ul><li><p><strong>Virulent.</strong> The target takes an extra 2d6 Poison damage.</p></li><li><p><strong>Weakening.</strong> The target must make a DC 15 Constitution saving throw. On a failed save, it is Weakened until the start of your next turn.</p></li><li><p><strong>Immobilizing.</strong> The target must make a DC 15 Strength saving throw. On a failed save, it is Immobilized until the start of your next turn.</p></li></ul><p><em><strong>Crafting.</strong></em> Creating an <em>Injector Crossbow</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Chemical Solution</p></li><li><p><strong>[Hair]</strong> Hair</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Hide]</strong> Skin</p></li><li><p><strong>[Natural Weapons]</strong> Needles from an Injector</p></li></ul>",
+      "activities": {
+        "Virulent Poison": {
+          "name": "Virulent Poison"
+        },
+        "Weakening Poison": {
+          "name": "Weakening Poison"
+        },
+        "Immobilizing Poison": {
+          "name": "Immobilizing Poison"
+        },
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Injector's Crossbow": {
+          "name": "Injector's Crossbow",
+          "changes": {
+            "name": "Injector's {}",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.GDBSNXV8Ho1oCKCl inline]"
+          }
+        },
+        "Immobilizing Poison": {
+          "name": "Immobilizing Poison",
+          "description": "<p>You are &amp;reference[immobilized apply=false] until the start of the creature's next turn.</p>"
+        },
+        "Weakening Poison": {
+          "name": "Weakening Poison",
+          "description": "<p>You are &amp;reference[weakened apply=false] until the start of the creature's next turn.</p>"
+        }
+      }
+    },
+    "Manual of Occult Anatomy": {
+      "name": "Manual of Occult Anatomy",
+      "description": "<p><em>Wondrous Item, Rarity Varies (Requires Attunement by an Apothecary or Warlock)</em></p><p>Filled with diagrams showing humans with alien features, this book of strange medical lore is written in monster-blood ink infused with draconic dust and then etched onto parchment pages made from aberration skin. The manuscript is bound in a scale-clad cover.</p><p>You can use this manual as a Spellcasting Focus for your Apothecary or Warlock spells. When you use the manual as a Spellcasting Focus, you gain a bonus to spell attack rolls and spell save DCs of your Apothecary or Warlock spells. The bonus is determined by the book’s rarity (see the table below).</p><p>In addition, the book contains the knowledge of an Apothecary Esoteric Theory or Warlock Eldritch Invocation up to a level determined by the manual’s rarity and chosen when the item is created, which you gain while you are attuned to it. This determines which class is required to attune to the item.</p><table><caption>Manual of Occult Anatomy Rarities</caption><thead><tr><th>Rarity</th><th>Bonus</th><th>Maximum Level</th></tr></thead><tbody style=\"text-align:center\"><tr><td>Rare</td><td>+1</td><td>6th</td></tr><tr><td>Very Rare</td><td>+2</td><td>10th</td></tr><tr><td>Legendary</td><td>+3</td><td>15th</td></tr></tbody></table><p><em><strong>Crafting.</strong></em> Creating a <em>Manual of Occult Anatomy</em> requires a Workshop and Components of equal rarity to the item created. The Components required are:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Any Dragon Dust</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Monstrosity</p></li><li><p><strong>[Hide]</strong> Scales</p></li><li><p><strong>[Hide]</strong> Skin from an Aberration</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Manual of Occult Anatomy +1": {
+          "name": "Manual of Occult Anatomy +1",
+          "description": "<p>When you use the manual as a Spellcasting Focus, you gain a +1 bonus to spell attack rolls and spell save DCs of your Apothecary or Warlock spells.</p>"
+        },
+        "Manual of Occult Anatomy +2": {
+          "name": "Manual of Occult Anatomy +2",
+          "description": "<p>When you use the manual as a Spellcasting Focus, you gain a +2 bonus to spell attack rolls and spell save DCs of your Apothecary or Warlock spells.</p>"
+        },
+        "Manual of Occult Anatomy +3": {
+          "name": "Manual of Occult Anatomy +3",
+          "description": "<p>When you use the manual as a Spellcasting Focus, you gain a +3 bonus to spell attack rolls and spell save DCs of your Apothecary or Warlock spells.</p>"
+        },
+        "rcwE5BnZipl6GMp2": {
+          "name": "Manual of Occult Anatomy +1",
+          "changes": {
+            "name": "{} +1"
+          }
+        },
+        "wTSNc2sRYanpPrew": {
+          "name": "Manual of Occult Anatomy +2",
+          "changes": {
+            "name": "{} +2"
+          }
+        },
+        "NO5cEWQUwfbzFy4r": {
+          "name": "Manual of Occult Anatomy +3",
+          "changes": {
+            "name": "{} +3"
+          }
+        }
+      }
+    },
+    "Bracers of Arc Lightning": {
+      "name": "Bracers of Arc Lightning",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>These bracers are crafted with fine leathers decorated with magical scales, washed in elemental fluids, elemental dust, and contaminated ichor. The animus used must be from a creature that deals Lightning damage, allowing the bracers to channel the element.</p><p>While wearing these magic bracers you gain Resistance to Lightning damage and Immunity to the &amp;reference[Shocked apply=false] condition.</p><p>These magic bracers have six charges, and regain all expended charges each day at dawn. Once per turn when you hit a creature with a ranged weapon attack, you can expend one charge from the bracers to deal an extra 3d6 Lightning damage to the target. A target which takes this damage has the &amp;reference[Shocked] condition until the start of your next turn.</p><p><em><strong>Crafting.</strong></em> Creating <em>Bracers of Arc Lightning</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a creature that deals Lightning damage (such as a Blue Dragon)</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Hide]</strong> Skin</p></li><li><p><strong>[Hide]</strong> Scales</p></li></ul>",
+      "activities": {
+        "Arc Lightning": {
+          "name": "Arc Lightning",
+          "condition": "When you hit a creature with a ranged weapon attack."
+        }
+      },
+      "effects": {
+        "Shocked": {
+          "name": "Shocked",
+          "description": "<p>You are &amp;reference[shocked apply=false] until the start of the creature wearing the Bracers of Arc Lightning's next turn.</p>"
+        },
+        "Bracers of Arc Lightning: Lightning Resistance": {
+          "name": "Bracers of Arc Lightning: Lightning Resistance",
+          "description": "<p>While wearing these magic bracers you gain Resistance to Lightning damage and Immunity to the &amp;reference[Shocked apply=false] condition.</p>"
+        }
+      }
+    },
+    "Vampire Blood Potion": {
+      "name": "Vampire Blood Potion",
+      "description": "<p><em>Potion, Very Rare</em></p><p>This potion is a crimson-red bubbling brew that tastes distinctly of copper. When you drink this potion, you gain the following benefits for the next minute:</p><ul><li><p>You gain Advantage on Strength, Dexterity, and Charisma attack rolls, ability checks, and saving throws.</p></li><li><p>If damage reduces you to 0 Hit Points, you must make a Constitution saving throw with a DC of 5 + half the damage taken, unless the damage is Radiant or from a Critical Hit. On a success, you drop to 1 Hit Point instead, and the effects of this potion end.</p></li><li><p>The effects of this potion end early if you take Radiant damage or enter sunlight.</p></li></ul><p><em><strong>Crafting.</strong></em> Creating a <em>Vampire Blood Potion</em> requires a Very Rare Workshop and the following Very Rare Components.</p><ul><li><p><strong>[Animus]</strong> Undead Animus</p></li><li><p><strong>[Dust]</strong> Undead Dust from any Vampire</p></li><li><p><strong>[Fluid]</strong> Ectoplasm</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Vampire</p></li></ul>",
+      "activities": {
+        "Drink Potion": {
+          "name": "Drink Potion"
+        }
+      },
+      "effects": {
+        "Vampire Blood Potion": {
+          "name": "Vampire Blood Potion",
+          "description": "<p>You gain the following benefits for the next minute:</p><ul><li><p>You gain Advantage on Strength, Dexterity, and Charisma attack rolls, ability checks, and saving throws.</p></li><li><p>If damage reduces you to 0 Hit Points, you must make a Constitution saving throw with a DC of 5 + half the damage taken, unless the damage is Radiant or from a Critical Hit. On a success, you drop to 1 Hit Point instead, and the effects of this potion end.</p></li><li><p>The effects of this potion end early if you take Radiant damage or enter sunlight.</p></li></ul>"
+        }
+      }
+    },
+    "Aqua Expurgo": {
+      "name": "Aqua Expurgo",
+      "description": "<p><em>Potion, Rare</em></p><p>This bright orange fluid is stored in a syringe and charged with arcane magic. You can use a Utilize action to administer the shot directly to the heart of yourself or another willing creature.</p><p>You are protected against &amp;reference[drakkenheimContamination] for six hours after receiving a dose of Aqua Expurgo. During this time, whenever you fail a saving throw against an effect which would cause you to gain one or more Contamination levels, you can choose to succeed instead. You can use this ability three times, after which the effects of Aqua Expurgo expire.</p><p>If the effects of Aqua Expurgo expire in this manner, you immediately take [[/damage 3d6 necrotic]] damage and become &amp;reference[Incapacitated] for 1 minute while you violently retch corrupt bile. Your Hit Point maximum is reduced by an amount equal to the damage taken. This reduction lasts until you finish a Long Rest. You die if this effect reduces your Hit Point maximum to 0. The Necrotic damage can’t be reduced or prevented by any means.</p><p><em><strong>Crafting.</strong></em> Creating <em>Aqua Expurgo</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Aberrant Dust</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Organ]</strong> Flower from a Plant (traditionally an Eldritch Lily)</p></li></ul>",
+      "activities": {
+        "Administer Aqua Expurgo": {
+          "name": "Administer Aqua Expurgo"
+        }
+      },
+      "effects": {
+        "Aqua Expurgo": {
+          "name": "Aqua Expurgo",
+          "description": "<p>You have been administered Aqua Expurgo, and are under its effects for the next six hours.</p><p>You are protected against &amp;reference[drakkenheimContamination]. During this time, whenever you fail a saving throw against an effect which would cause you to gain one or more Contamination levels, you can choose to succeed instead. You can use this ability three times, after which the effects of Aqua Expurgo expire.</p><p>If the effects of Aqua Expurgo expire in this manner, you immediately take [[/damage 3d6 necrotic]] damage and become &amp;reference[Incapacitated] for 1 minute while you violently retch corrupt bile. Your Hit Point maximum is reduced by an amount equal to the damage taken. This reduction lasts until you finish a Long Rest. You die if this effect reduces your Hit Point maximum to 0. The Necrotic damage can’t be reduced or prevented by any means.</p>"
+        }
+      }
+    },
+    "Delerium Crystal": {
+      "name": "Delerium Crystal",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 21 and 20 Hit points. Extracting a [[lookup @item.name lowercase]] takes 30 minutes.</p>"
+    },
+    "Fractal Key": {
+      "name": "Fractal Key",
+      "description": "<p>This spiral bone key allows the user to traverse the planes. As an action, a creature in a Thin Place can create a gate to the Ethereal Plane for 1 minute, after which the key crumbles to dust.</p><p>Creating the Fractal Key requires a Rare forge and the following components:</p><ul><li><p><strong>[Animus]</strong> from a @UUID[Compendium.drakkenheim-monsters.monsters.Actor.DdRPPArJOsslUmaA].</p></li></ul><ul><li><p><strong>[Bones]</strong> of any Rare creature.</p></li></ul>",
+      "activities": {
+        "Access Thin Place": {
+          "name": "Access Thin Place"
+        }
+      }
+    },
+    "Scythed Arm Blades": {
+      "name": "Scythed Arm Blades",
+      "description": "<p><em>Weapons (Shortsword), Rare (Requires Attunement)</em></p><p>These steel arm blades are razor sharp, 4-foot-long scythes that are fastened to two locking bracers made of spinal bones. The fasteners are made from fine leather with steel buckles. Delerium crystals are embedded in the armbands, infusing the blades with energy.</p><p>These magic shortswords function as a pair and must be wield ed together for their magic properties to function. Attuning to the shortswords counts as being attuned to one magic item.</p><p>You gain a +2 bonus to attack and damage rolls made with these magic shortswords. While attuned to these weapons, you can activate the &amp;reference[Nick] mastery property in addition to a different mastery property you’re using with these weapons.</p><p><em><strong>Crafting.</strong></em> Creating <em>Scythed Arm Blades</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Spine</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Hide]</strong> Skin from any Beast or Monstrosity</p></li><li><p><strong>[Natural Weapons]</strong> Two Blades from a Reautomata</p></li></ul>"
+    },
+    "Familiar Figurine": {
+      "name": "Familiar Figurine",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>Once per day as a Magic action, you can use this finely-carved figurine to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili].</p><p><em><strong>Crafting.</strong></em> Creating a <em>Familiar Figurine</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Bones]</strong> Bones from a Giant</p></li><li><p><strong>[Dust]</strong> Dust from an Elemental or Fey</p></li></ul>"
+    },
+    "Giant Femur Club": {
+      "name": "Giant Femur Club",
+      "description": "<p><em>Weapon (Greatclub), Rare (Requires Attunement)</em></p><p>This club is made from the cleaned and polished femur of a giant, crafted finely into a usable two-handed club. Its tapered hilt is wrapped in stained leather. Fastened to the top of the club is a large troll skull with several monstrous teeth embedded into it like a bone morningstar, giving the weapon a grim appearance. The club is imbued with elemental power from the animus used to power the weapon, which causes it to crackle with elemental power.</p><p>You gain a +1 bonus to attack and damage rolls made with this magic greatclub, and you have Advantage on attack rolls made against Giants.</p><p>While attuned to this club you deal an additional 2d6 damage of the type associated with the elemental dust infused into it.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Giant Femur Club</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Giant Animus from a Troll</p></li><li><p><strong>[Bone]</strong> Skull from a Troll</p></li><li><p><strong>[Bone]</strong> Bone from a Giant</p></li><li><p><strong>[Dust]</strong> Elemental Dust from a Troll</p></li><li><p><strong>[Hide]</strong> Skin from a Monstrosity</p></li><li><p><strong>[Natural Weapons]</strong> Teeth from a Giant, Beast, or Monstrosity</p></li></ul><p>The dust Component determines the additional damage the club deals. For example, dust from a Storm Troll deals Lightning damage. Eldritch Trolls cause the club to deal Necrotic damage.</p>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Giant Femur Club (Lightning)": {
+          "name": "Giant Femur Club (Lightning)",
+          "changes": {
+            "name": "Shocking Giant Femur Club",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
+          }
+        },
+        "Giant Femur Club (Acid)": {
+          "name": "Giant Femur Club (Acid)",
+          "changes": {
+            "name": "Acidic Giant Femur Club",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
+          }
+        },
+        "Giant Femur Club (Cold)": {
+          "name": "Giant Femur Club (Cold)",
+          "changes": {
+            "name": "Freezing Giant Femur Club",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
+          }
+        },
+        "Giant Femur Club (Fire)": {
+          "name": "Giant Femur Club (Fire)",
+          "changes": {
+            "name": "Fiery Giant Femur Club",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
+          }
+        },
+        "Giant Femur Club (Necrotic)": {
+          "name": "Giant Femur Club (Necrotic)",
+          "changes": {
+            "name": "Eldritch Giant Femur Club",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
+          }
+        },
+        "Giant Femur Club (Poison)": {
+          "name": "Giant Femur Club (Poison)",
+          "changes": {
+            "name": "Poisonous Giant Femur Club",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
+          }
+        }
+      }
+    },
+    "Delerium Geode": {
+      "name": "Delerium Geode",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 23 and 25 Hit points. Extracting a [[lookup @item.name lowercase]] takes an hour.</p>"
+    },
+    "Greater Rejuvenation Potion": {
+      "name": "Greater Rejuvenation Potion",
+      "description": "<p><em>Potion, Legendary</em></p><p>When you consume this potion, you immediately gain the benefits of a Long Rest.</p><p>Once you consume a Greater Rejuvenation Potion, you can’t benefit from consuming another until you finish [[/r 3d6]] Long Rests.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Greater Rejuvenation Potion</em> requires a Legendary Workshop and the following Legendary Components.</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Any Giant</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Any Elemental Fluid</p></li><li><p><strong>[Fluid]</strong> Monster Blood from any Dragon</p></li><li><p><strong>[Hair]</strong> Any Celestial</p></li><li><p><strong>[Organ]</strong> Brain from an Aberration</p></li><li><p><strong>[Organ]</strong> Heart from a Fiend</p></li></ul>",
+      "activities": {
+        "Drink Potion": {
+          "name": "Drink Potion",
+          "roll": "Long Rest Cooldown"
+        }
+      }
+    },
+    "Talon Gloves": {
+      "name": "Talon Gloves",
+      "description": "<p><em>Wonderous Item, Rare (Requires Attunement)</em></p><p>These leather gloves are outfitted with the talons of fallen beasts and stitched together with the arcane stitching of apothecary creations. The gloves are then empowered by elemental magic, reinforced with bone, and powered by an animus.</p><p>While wearing these gloves, you gain Climb Speed equal to your Speed, and your Unarmed Strikes deal an additional 1d6 Piercing damage on a hit.</p><p><em><strong>Crafting.</strong></em> Creating <em>Talon Gloves</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hair]</strong> Stitches</p></li><li><p><strong>[Hide]</strong> Skin</p></li><li><p><strong>[Natural Weapons]</strong> Claws</p></li></ul><fieldset><legend>Foundry Note</legend><p>While equipped, this item increases your climbing speed to 30 feet. If your Speed is higher than 30 feet, adjust the Active Effect provided by this item to compensate.</p><p>Additionally, the Enchant activity on this item can be applied to an Unarmed Strike weapon, granting the additional 1d6 piercing damage.</p></fieldset>",
+      "effects": {
+        "Talon Gloves": {
+          "name": "Talon Gloves"
+        }
+      }
+    },
+    "Delerium Chip": {
+      "name": "Delerium Chip",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 15 and 5 Hit points. Extracting a [[lookup @item.name lowercase]] takes an action.</p>"
+    },
+    "Pendant of Prismatic Protection": {
+      "name": "Pendant of Prismatic Protection",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>The jeweled pendant has 3 charges, which are replenished when you finish a Long Rest. When you take Acid, Cold, Fire, Lightning, or Poison damage, you can use a Reaction to expend 1 charge from the pendant to gain resistance to that damage type until the end of your next turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Pendant of Prismatic Protection</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus from an Elemental</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Any two Elemental Fluids from different Elementals</p></li></ul>",
+      "activities": {
+        "Prismatic Protection": {
+          "name": "Prismatic Protection",
+          "condition": "When you take Acid, Cold, Fire, Lightning, or Poison damage."
+        }
+      },
+      "effects": {
+        "Prismatic Protection: Acid": {
+          "name": "Prismatic Protection: Acid",
+          "description": "<p>You have resistance to Acid damage until the start of your next turn.</p>"
+        },
+        "Prismatic Protection: Cold": {
+          "name": "Prismatic Protection: Cold",
+          "description": "<p>You have resistance to Cold damage until the start of your next turn.</p>"
+        },
+        "Prismatic Protection: Fire": {
+          "name": "Prismatic Protection: Fire",
+          "description": "<p>You have resistance to Fire damage until the start of your next turn.</p>"
+        },
+        "Prismatic Protection: Lightning": {
+          "name": "Prismatic Protection: Lightning",
+          "description": "<p>You have resistance to Lightning damage until the start of your next turn.</p>"
+        },
+        "Prismatic Protection: Poison": {
+          "name": "Prismatic Protection: Poison",
+          "description": "<p>You have resistance to Poison damage until the start of your next turn.</p>"
+        }
+      }
+    },
+    "Mantle of Otherworldly Charisma": {
+      "name": "Mantle of Otherworldly Charisma",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>Structured from the fur and skin of a monstrosity and the horns of a fiend, and coated in the dust of fey creatures, this mantle is imbued with charming energies.</p><p>Your Charisma score is 19 while you wear this magic cape. It has no effect on you if your Charisma is 19 or higher without it.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Mantle of Otherworldly Charisma</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Hair]</strong> Fur from a Monstrosity</p></li><li><p><strong>[Hide]</strong> Skin from a Monstrosity</p></li><li><p><strong>[Natural Weapons]</strong> Horns from a Fiend</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li></ul>",
+      "effects": {
+        "Otherworldly Charisma": {
+          "name": "Otherworldly Charisma",
+          "description": "<p>Your Charisma score is 19 while you wear this magic amulet. It has no effect on you if your Charisma is 19 or higher without it.</p>"
+        }
+      }
+    },
+    "Swashbuckler’s Boots": {
+      "name": "Swashbuckler’s Boots",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>While wearing these supple leather boots, Opportunity Attacks against you have Disadvantage.</p><p><em><strong>Crafting.</strong></em> Creating <em>Swashbuckler’s Boots</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hide]</strong> Any</p></li></ul>"
+    },
+    "Rejuvenation Potion": {
+      "name": "Rejuvenation Potion",
+      "description": "<p><em>Potion, Very Rare</em></p><p>When you drink this bright purple potion, you immediately gain the benefits of a short rest.</p><p>After you consume a Rejuvenation Potion, you can’t benefit from consuming another until you finish a [[/r 1d4]] Long Rests.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Rejuvenation Potion</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Any Elemental Fluid</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Dragon</p></li><li><p><strong>[Organ]</strong> Heart from a Fiend</p></li></ul>",
+      "activities": {
+        "Drink Potion": {
+          "name": "Drink Potion",
+          "roll": "Long Rest Cooldown"
+        }
+      }
+    },
+    "Monster Hunter's Weapon": {
+      "name": "Monster Hunter's Weapon",
+      "description": "<p><em>Weapon (Any), Rarity Varies (Requires Attunement by a Ranger)</em></p><p>These weapons are carved from bark, with a core of magical sap, and decorated with leaves from magical plants. Their hilts and shafts are bound in hair from a fey creature. This magic weapon channels the natural magic found in the elements of nature.</p><p>While holding this magic weapon, you gain a bonus to attack and damage rolls made with it, and you gain a bonus to spell attack rolls and the saving throw DCs of your Ranger spells. The bonus is determined by the weapon’s rarity. In addition, you can use the weapon as a Spellcasting Focus for your Ranger spells.</p><p>When you hit with an attack using this weapon, you can expend a Ranger spell slot to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{Hunter's Mark} on the target as part of the same action used to make the attack. When you cast Hunter’s Mark in this way it does not require Concentration. Additionally, the spell lasts for one minute or until the target dies or you cast Hunter’s Mark again using either the weapon or otherwise.</p><table><caption>Monster Hunter's Weapon Rarities</caption><thead><tr><th>Rarity</th><th>Bonus</th></tr></thead><tbody style=\"text-align:center\"><tr><td>Rare</td><td>+1</td></tr><tr><td>Very Rare</td><td>+2</td></tr><tr><td>Legendary</td><td>+3</td></tr></tbody></table><p><em><strong>Crafting.</strong></em> Creating a <em>Monster Hunter’s Weapon</em> requires a Workshop and the following Components of rarity equal to the item’s rarity:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Sap</p></li><li><p><strong>[Hair]</strong> Hair from a Fey</p></li><li><p><strong>[Hair]</strong> Leaves</p></li><li><p><strong>[Hide]</strong> Bark</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Monster Hunter's Weapon +1": {
+          "name": "Monster Hunter's Weapon +1",
+          "changes": {
+            "name": "Monster Hunter's {} +1",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.U1x7AFxZTHUVcE5b inline]"
+          }
+        },
+        "Monster Hunter's Weapon +2": {
+          "name": "Monster Hunter's Weapon +2",
+          "changes": {
+            "name": "Monster Hunter's {} +2",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.U1x7AFxZTHUVcE5b inline]"
+          }
+        },
+        "Monster Hunter's Weapon +3": {
+          "name": "Monster Hunter's Weapon +3",
+          "changes": {
+            "name": "Monster Hunter's {} +3",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.U1x7AFxZTHUVcE5b inline]"
+          }
+        },
+        "VqEOlIgvpiQnkUnX": {
+          "name": "Monster Hunter's Weapon +1",
+          "description": "<p>You can use this magical weapon as a Spellcasting Focus for your Ranger spells. While attuned to this item, you gain a +1 bonus to your spell attack rolls and spell save DC.</p>"
+        },
+        "UNrg1ksOprsZL6Xn": {
+          "name": "Monster Hunter's Weapon +2",
+          "description": "<p>You can use this magical weapon as a Spellcasting Focus for your Ranger spells. While attuned to this item, you gain a +2 bonus to your spell attack rolls and spell save DC.</p>"
+        },
+        "FOeYsQeszBKGHNiz": {
+          "name": "Monster Hunter's Weapon +3",
+          "description": "<p>You can use this magical weapon as a Spellcasting Focus for your Ranger spells. While attuned to this item, you gain a +3 bonus to your spell attack rolls and spell save DC.</p>"
+        }
+      }
+    },
+    "Hammer of Chaos": {
+      "name": "Hammer of Chaos",
+      "description": "<p><em>Weapon (Maul or Warhammer), Legendary (Requires Attunement)</em></p><p>A hammer of chaos is crafted by melting down the magical plates of otherworldly constructs, infused with both the fluid and dust of elementals. The weapon is then soaked in the grey matter of an aberrant brain. This steel hammer is fitted into a shaft made from fiend skin leather and the ribs of a dragon.</p><p>You gain a +3 bonus to attack rolls and damage rolls made with this weapon. This hammer has the Thrown property with a normal range of 30 feet and a long range of 90 feet. When you hit with an attack using this weapon, choose Acid, Cold, Fire, Lightning, Poison, or Thunder. The hammer deals 2d8 extra damage of the chosen type.</p><p>When you hit with a ranged attack using this weapon, if you roll the same number on two or more of the d8s, the hammer ricochets to a different target of your choice within 30 feet of the target. Make an attack roll against the new target, and make a new damage roll if the attack hits. After making this attack, the hammer flies back to your hand.</p><p><em><strong>Crafting.</strong></em> Creating the <em>Hammer of Chaos</em> requires a Legendary Workshop and the following Legendary Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Spine from a Dragon</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hide]</strong> Plates from a Construct</p></li><li><p><strong>[Hide]</strong> Skin from a Fiend</p></li><li><p><strong>[Organ]</strong> Brain from an Aberration</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Hammer of Chaos": {
+          "name": "Hammer of Chaos",
+          "changes": {
+            "name": "{} of Chaos",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.UWbbDR4bQzI8pA1q inline]"
+          }
+        }
+      }
+    },
+    "Sword Between Worlds": {
+      "name": "Sword Between Worlds",
+      "description": "<p>Weapon (Any Sword), Very Rare (Requires Attunement)</p><p>This otherworldly blade is made from starmetal steel; a potent alloy produced by combining iron with carbon extracted from the bones of powerful aberrant creatures. During the forging process, the blade is quenched in the spinal fluids of a Far Dweller to draw out extraplanar forces. The resulting metal has an octarine sheen that reflects possible worlds and other realities. The grip and crossguard are decorated with the barbs and leather of a Warp Marauder, and the pommel is set with a delerium crystal containing the eldritch essence of a Far Dweller that powers the weapon’s magic.</p><p>You gain a +2 bonus to attack and damage rolls made using this magic weapon.</p><p>Once per turn when you score a Critical Hit or reduce a creature to 0 Hit Points using this weapon, immediately after the attack you can teleport to an unoccupied space within 120 feet you can see.</p><p>Additionally, once per turn when you teleport to an unoccupied space within 5 feet of another creature while wielding this weapon, you can make one weapon attack against that creature with this weapon as part of the same action or Bonus Action made to teleport.</p><p>While holding the blade, you can use a Magic action to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplDimensionD]. Once you do, you must finish a short or Long Rest before you can use this feature again.</p><p><strong>Curse.</strong> You have Disadvantage on saving throws against any spell or other effect which would forcibly teleport you or send you to another plane of existence.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Sword Between Worlds</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Aberration Animus</p></li><li><p><strong>[Bones]</strong> Skull, Spine, or Ribs from an Aberration.</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor from a Far Dweller</p></li><li><p><strong>[Hide]</strong> Skin from an Aberration</p></li><li><p><strong>[Natural Weapon]</strong> Tentacles from a Warp Marauder</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        },
+        "Critical Strike Teleport": {
+          "name": "Critical Strike Teleport",
+          "condition": "When you score a Critical Hit or reduce a creature to 0 Hit Points using this weapon, immediately after the attack."
+        },
+        "Teleport Strike": {
+          "name": "Teleport Strike",
+          "condition": "When you teleport to an unoccupied space within 5 feet of another creature while holding this weapon."
+        }
+      },
+      "effects": {
+        "Sword Between Worlds": {
+          "name": "Sword Between Worlds",
+          "changes": {
+            "name": "Sword Between Worlds",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.V43MzYGux5zAQZPo inline]"
+          }
+        }
+      }
+    },
+    "Retracer Boots": {
+      "name": "Retracer Boots",
+      "description": "<p><em>Wondrous Item, Rare</em></p><p>These boots are crafted from the flesh and scales of a dragon and decorated with Harpy feathers and the webbed membranes of flying creatures. The soles are injected with goopy ooze, allowing their wearer to jump back in time and space.</p><p>You can use a Bonus Action on your turn to click the heels of these boots together. When you do, you teleport to the space you occupied at the start of your turn so long as it is currently unoccupied.</p><p><em><strong>Crafting.</strong></em> Creating <em>Retracer Boots</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Goopy Ooze</p></li><li><p><strong>[Hide]</strong> Scales from a Dragon</p></li><li><p><strong>[Hide]</strong> Webbed Membrane</p></li><li><p><strong>[Hair]</strong> Feathers from a Harpy</p></li><li><p><strong>[Organ]</strong> Flesh from a Dragon</p></li></ul>",
+      "activities": {
+        "Retrace Steps": {
+          "name": "Retrace Steps"
+        }
+      }
+    },
+    "Whirling Bonesaw": {
+      "name": "Whirling Bonesaw",
+      "description": "<p><em>Weapon (Greataxe), Very Rare (Requires Attunement)</em></p><p>This large greataxe is made from a blade taken off a Ripper and refitted into a housing made from the plates of constructs and reinforced with the rib bones of a monstrosity. The blade is equipped with a leather belt that connects to an elemental-fueled motor powered by a Very Rare Animus.</p><p>You gain a +3 bonus to attack and damage rolls made with this magic weapon.</p><p>Once on your turn when you hit a &amp;reference[Bloodied] creature using this weapon, you can make one additional attack with this weapon as part of the same action.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Whirling Bonesaw</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Ribs</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Hide]</strong> Skin from any Monstrosity</p></li><li><p><strong>[Natural Weapon]</strong> Blade from a Ripper</p></li></ul>"
+    },
+    "Ghost Sight Bow": {
+      "name": "Ghost Sight Bow",
+      "description": "<p><em>Weapon (Longbow), Very Rare (Requires Attunement)</em></p><p>This bow is hand-carved carefully from the bones of a dryad and stained in the undead blood of vampires. Strung with the hair of a banshee with a powerful wraith animus is placed with in the handle. Once the bow’s crafting is complete, it fades from its physical form into a semi-corporeal form.</p><p>You gain a +2 bonus to attack and damage rolls made with this magic longbow.</p><p>The bow produces its own spectral ammunition which deals Force damage instead of Piercing damage. The ammunition disappears when it hits or misses a target.</p><p>While attuned to this weapon, you can use a Bonus Action to see into the Ethereal Plane and see all &amp;reference[invisible apply=false] creatures and objects until the end of your turn. Additionally, you can see through all walls and solid objects within 60 feet of you until the end of your turn. During this time, ammunition fired from this bow passes through solid objects, and you can target enemies within 60 feet of you with your ranged attacks, even if they are behind &amp;reference[totalcover]. You can use this Bonus Action only if you haven’t moved during your turn. After you use the Bonus Action, your Speed becomes 0 until the end of your turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Ghost Sight Bow</em> requires a Very Rare Workshop and the following Very Rare components:</p><ul><li><p><strong>[Animus]</strong> Undead Animus from a Wraith</p></li><li><p><strong>[Bones]</strong> Skull from a Dryad</p></li><li><p><strong>[Dust]</strong> Undead Dust</p></li><li><p><strong>[Fluid]</strong> Ectoplasm</p></li><li><p><strong>[Fluid]</strong> Monster Blood from an Undead</p></li><li><p><strong>[Hair]</strong> Hair from a Banshee</p></li></ul>",
+      "activities": {
+        "Ghost Sight": {
+          "name": "Ghost Sight"
+        }
+      },
+      "effects": {
+        "Ghost Sight": {
+          "name": "Ghost Sight",
+          "description": "<p>You can see into the Ethereal Plane and see all &amp;reference[invisible apply=false] creatures and objects until the end of your turn. Additionally, you can see through all walls and solid objects within 60 feet of you until the end of your turn. During this time, ammunition fired from this bow passes through solid objects, and you can target enemies within 60 feet of you with your ranged attacks, even if they are behind &amp;reference[totalcover]. You can use this Bonus Action only if you haven’t moved during your turn.</p><p>After you use this feature, your Speed becomes 0 until the end of your turn.</p>"
+        }
+      }
+    },
+    "Circlet of Valor": {
+      "name": "Circlet of Valor",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a spellcaster)</em></p><p>This steel circlet is forged from a construct and set with a gemstone animus containing a fiend. After being cleansed in the fires of a dragon’s breath, this holy circlet glimmers with radiant energy.</p><p>When you cast a spell of level 1 or higher that restores Hit Points to a creature, that creature gains &amp;reference[Valor] (1d4) until the end of its next turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Circlet of Valor</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Fiend</p></li><li><p><strong>[Dust]</strong> Any Dust</p></li><li><p><strong>[Hide]</strong> Plates from a Construct</p></li><li><p><strong>[Organ]</strong> Glands from a Dragon</p></li></ul>",
+      "activities": {
+        "Grant Valor": {
+          "name": "Grant Valor",
+          "condition": "When you cast a spell of level 1 or higher that restores Hit Points to a creature."
+        }
+      },
+      "effects": {
+        "Valor (1d4)": {
+          "name": "Valor (1d4)",
+          "description": "<p>Until the end of your next turn, you add 1d4 to your attack rolls and saving throws.</p>"
+        }
+      }
+    },
+    "Helm of Burning Rage": {
+      "name": "Helm of Burning Rage",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Barbarian)</em></p><p>This helm is forged in fires ignited with elemental dust, using plates from a construct and the heart of a red dragon. The plates are then soaked in elemental fluid before having an animus gem installed that contains the energy of a Fire Giant.</p><p>While your Rage is active, you gain Resistance to Fire damage. In addition, once per turn, while you are Raging, when you hit a target with a Melee weapon that benefitted from your Reckless Attack feature, the target becomes Burning (2d4 Fire).</p><p><em><strong>Crafting.</strong></em> Creating a <em>Helm of Burning Rage</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Fire Giant</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Organ]</strong> Heart from a Red Dragon</p></li></ul>",
+      "activities": {
+        "Flaming Reckless Strike": {
+          "name": "Flaming Reckless Strike",
+          "condition": "When you hit a target with a Melee weapon that benefitted from your Reckless Attack feature while you are Raging."
+        }
+      },
+      "effects": {
+        "Burning (2d4 Fire)": {
+          "name": "Burning (2d4 Fire)",
+          "description": "<p>You are &amp;reference[burning apply=false] from being covered in fire.</p><ul><li><p>At the end of each of your turns, you take [[/damage average fire 2d4]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to douse the fire or if some other effect removes it such as submerging yourself in water.</p></li></ul>"
+        },
+        "Burning Rage Resistance": {
+          "name": "Burning Rage Resistance",
+          "description": "<p>While you are Raging, you have Resistance to Fire damage.</p>"
+        }
+      }
+    },
+    "Blade of Retribution": {
+      "name": "Blade of Retribution",
+      "description": "<p><em>Weapon (Any Sword), Rare (Requires Attunement by a Paladin)</em></p><p>The metal of this blade is forged in the dust of celestials, with a hilt wrapped in fiend skin leather. The eye of a dragon is placed upon the hilt and polished in monster blood.</p><p>When you use this magic weapon to attack a creature and roll a 20 on the d20 for the attack roll, you can cast @UUID[Compendium.dnd5e.spells24.Item.phbsplDivineSmit] as part of the same action used to make the attack without expending a spell slot.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Blade of Retribution</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Celestial Dust</p></li><li><p><strong>[Fluid]</strong> Monster Blood</p></li><li><p><strong>[Hide]</strong> Skin from a Fiend</p></li><li><p><strong>[Organ]</strong> Eye from a Dragon</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Blade of Retribution": {
+          "name": "Blade of Retribution",
+          "changes": {
+            "name": "{} of Retribution",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.a9ld4WgNddS9rP5A inline]"
+          }
+        }
+      }
+    },
+    "Wand of Jinxes": {
+      "name": "Wand of Jinxes",
+      "description": "<p>Wand, Rare (Requires Attunement by a Warlock)</p><p>This wand is carved from magical bark, with the hair of an undead creature in its core and finished in goopy ooze.</p><p>Once per turn when you deal damage with a Warlock cantrip to a creature, you can make that creature &amp;reference[Jinxed] (1d4) until the start of your next turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Wand of Jinxes</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Goopy Ooze</p></li><li><p><strong>[Hair]</strong> Hair from an Undead</p></li><li><p><strong>[Hide]</strong> Bark</p></li></ul>",
+      "activities": {
+        "Jinx Creature": {
+          "name": "Jinx Creature",
+          "condition": "When you deal damage with a Warlock cantrip to a creature."
+        }
+      },
+      "effects": {
+        "Jinxed (1d4)": {
+          "name": "Jinxed (1d4)",
+          "description": "<p>You subtract 1d4 to your attack rolls and saving throws. You can repeat your saving throw against this effect at the end of each of your turns, ending the effect on a success.</p>"
+        }
+      }
+    },
+    "Crimson Blade": {
+      "name": "Crimson Blade",
+      "description": "<p><em>Weapon (Any Sword), Very Rare (Requires Attunement)</em></p><p>A blood-red ichor drips down this sword’s darkened steel blade. The sword is coated in sanguine witch blood. The dust of dead vampires is forged into the steel of the blade, giving it its blackened sheen. The edge is then empowered by the heart of a dragon. Its gold hilt wrapped in crimson leathers and a blood red ruby plucked from the corpse of a Sanguine Witch. The fangs of vampires decorate the pommel.</p><p>You gain a +2 bonus to attack and damage rolls made with this magic sword.</p><p>Any a creature you hit with this weapon that isn’t a Construct or Undead takes an extra 3d6 Necrotic damage, and you regain Hit Points equal to the Necrotic damage dealt.</p><p><strong>Curse.</strong> While attuned to this blade, you can’t enter a residence without an invitation from one of its occupants.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Crimson Blade</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Undead Animus from a Sanguine Witch</p></li><li><p><strong>[Dust]</strong> Undead Dust from any Vampire</p></li><li><p><strong>[Fluid]</strong> Monster Blood from an Undead</p></li><li><p><strong>[Natural Weapons]</strong> Teeth from any Vampire</p></li><li><p><strong>[Organ]</strong> Heart from a Dragon</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        },
+        "Drain Life: Extra Damage": {
+          "name": "Drain Life: Extra Damage",
+          "condition": "When you hit a creature that isn't a Construct or Undead."
+        }
+      },
+      "effects": {
+        "Crimson Blade": {
+          "name": "Crimson Blade",
+          "changes": {
+            "name": "Crimson {}",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.erxRUvC6v8fglMw2 inline]"
+          }
+        }
+      }
+    },
+    "Aqua Delerium": {
+      "name": "Aqua Delerium",
+      "description": "<p><em>Potion, Rare</em></p><p>This purple potion glows dimly with octarine light. It swirls and sparkles in its small, stoppered bottle.</p><p>When you drink this potion, you regain expended spell slots. Roll [[/r 1d6]]. You choose spell slots to regain which have a combined level equal to or less than the result. None of the slots can be higher than level 5.</p><p>For one hour after drinking Aqua Delerium, roll 1d20 each time you cast a spell of level 1 or higher. On a 1, you trigger a random @UUID[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{Arcane Anomaly}.</p><p>If you consume more than one dose of Aqua Delerium before finishing a Long Rest, you take 1d12 Necrotic damage for each spell slot level regained from the second dose, and your Hit Point maximum is reduced by an amount equal to the damage taken until you finish a Long Rest. This damage can’t be reduced or prevented in any way.</p><p>When a creature who cannot cast spells using spell slots drinks Aqua Delerium, it takes [[/damage average]] damage and gains one level of &amp;reference[drakkenheimContamination].</p><p><em><strong>Crafting.</strong></em> Creating <em>Aqua Delerium</em> requires a Rare Work shop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Aberrant Dust</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Organ]</strong> Any Glands</p></li></ul>",
+      "activities": {
+        "Drink Potion": {
+          "name": "Drink Potion",
+          "roll": "Spell Slot Level Regained"
+        },
+        "Drink Potion: No Spell Slots": {
+          "name": "Drink Potion: No Spell Slots"
+        }
+      },
+      "effects": {
+        "Aqua Delerium": {
+          "name": "Aqua Delerium",
+          "description": "<p>For the next hour, each time you cast a spell of level 1 or higher, roll a d20. On a 1, you trigger an @UUID[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{Arcane Anomaly}.</p><p>If you consume an additional dose of Aqua Delerium before you finish a Long Rest, you take [[/damage 1d12 necrotic]] damage for each spell slot level you regain from the second dose, and your Hit Point maximum is reduced by an amount equal to the damage take until you finish a Long Rest. This damage can't be reduced or prevented in any way.</p>"
+        }
+      }
+    },
+    "Amulet of Incineration": {
+      "name": "Amulet of Incineration",
+      "description": "<p><em>Wondrous Item, Rare</em></p><p>Crafted from a gem made from the elemental dust of an entropic flame set within a bone talisman, and glazed in the blood of an aberration, this amulet shimmers with an internal, ever-burning fire.</p><p>Once per turn, when you cast a spell that deals Fire damage using a spell slot, you can choose one target that was dealt Fire damage by the spell to gain the &amp;reference[Burning] (3d6 Fire) condition.</p><p><em><strong>Crafting.</strong></em> Creating an <em>Amulet of Incineration</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from an Elemental</p></li><li><p><strong>[Bones]</strong> Spine from a Monstrosity</p></li><li><p><strong>[Dust]</strong> Elemental Dust from an Entropic Flame</p></li><li><p><strong>[Fluid]</strong> Monster Blood from an Aberration</p></li></ul>",
+      "activities": {
+        "Incinerate Creature": {
+          "name": "Incinerate Creature",
+          "condition": "When you cast a spell that deals Fire damage using a spell slot."
+        }
+      },
+      "effects": {
+        "Burning (3d6 Fire)": {
+          "name": "Burning (3d6 Fire)",
+          "description": "<p>You are &amp;reference[burning apply=false] from being covered in fire.</p><ul><li><p>At the end of each of your turns, you take [[/damage average fire 3d6]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to douse the fire or if some other effect removes it such as submerging yourself in water.</p></li></ul>"
+        }
+      }
+    },
+    "Charged Gauntlets": {
+      "name": "Charged Gauntlets",
+      "description": "<p><em>Wondrous Item, Very Rare (Requires Attunement by a Monk)</em></p><p>These light gauntlets are made from cloth woven from the hair of a fiend and reinforced with the scales of a dragon. The gauntlets are washed with an alchemical formula made from elemental fluid and undead dust. They are then powered with a rare animus collected from an aberration.</p><p>Each time you hit with an Unarmed Strike while attuned to these magic gauntlets they gain one charge. The gauntlets can have up to 10 charges. Any unexpended charges disappear when you take a Long Rest or roll Initiative.</p><p>While the gauntlets have at least one charge, your Unarmed Strikes deal Lightning damage instead of its normal damage type.</p><p>While the gauntlets have 5 or more charges, your Unarmed Strikes deal an additional 2d6 Lightning damage and push the target 10 feet away from you on a hit.</p><p>You can expend 2 charges from the gauntlets to cast the @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000] spell.</p><p>You can expend 10 charges from the gauntlets to cast <em>Destructive Wave</em> or @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc], using your monk’s focus saving throw DC.</p><p><em><strong>Crafting.</strong></em> Creating <em>Charged Gauntlets</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Aberrant Animus</p></li><li><p><strong>[Dust]</strong> Undead Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hair]</strong> Hair from a Fiend</p></li><li><p><strong>[Hide]</strong> Scales from a Blue or Bronze Dragon</p></li></ul><p></p>",
+      "activities": {
+        "Charged Gauntlets: Wall of Force": {
+          "name": "Charged Gauntlets: Wall of Force"
+        },
+        "Charged Gauntlets: Shield": {
+          "name": "Charged Gauntlets: Shield"
+        },
+        "Enchant Unarmed Strike": {
+          "name": "Enchant Unarmed Strike"
+        },
+        "Charged Gauntlets: Gain Charge": {
+          "name": "Charged Gauntlets: Gain Charge",
+          "condition": "When you hit a creature with an Unarmed Strike while attuned to the Charged Gauntlets."
+        }
+      },
+      "effects": {
+        "Charged Gauntlets": {
+          "name": "Charged Gauntlets",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>Charged Gauntlets</legend>     <p>Each time you hit with an Unarmed Strike while attuned to these magic gauntlets they gain one charge. The gauntlets can have up to 10 charges. Any unexpended charges disappear when you take a Long Rest or roll Initiative.</p>     <p>While the gauntlets have at least one charge, your Unarmed Strikes deal Lightning damage instead of its normal damage type.</p>     <p>While the gauntlets have 5 or more charges, your Unarmed Strikes deal an additional 2d6 Lightning damage and push the target 10 feet away from you on a hit.</p>     <p>You can expend 2 charges from the gauntlets to cast the @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000] spell. You can expend 10 charges from the gauntlets to cast <em>Destructive Wave</em> or @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc], using your monk’s focus saving throw DC.</p> </fieldset>"
+          }
+        }
+      }
+    },
+    "Reflector Shield": {
+      "name": "Reflector Shield",
+      "description": "<p><em>Armor (Shield), Rare (Requires Attunement)</em></p><p>This magic shield is formed from the shell of an Anomollusk combined with leather from an aberration as its handle. It’s fused together and coated in contaminated ichor and inset with a rare animus. Once complete, the shell gives off an otherworldly hue that shimmers in kaleidoscopic patterns. The shield can reflect attacks and magic.</p><p>When you take Acid, Cold, Fire, Force, Lightning, or Thunder damage from a creature you can see within 60 feet of you, you can use your Reaction to cause the creature to take the same damage (you still take the damage).</p><p><em><strong>Crafting.</strong></em> Creating a <em>Reflector Shield</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Hide]</strong> Shell from an Anomollusk</p></li><li><p><strong>[Hide]</strong> Skin from an Aberration</p></li></ul>",
+      "activities": {
+        "Reflect Elements": {
+          "name": "Reflect Elements",
+          "condition": "When you take Acid, Cold, Fire, Force, Lightning, or Thunder Damage from a creature you can see within 60 feet of you."
+        }
+      }
+    },
+    "Inexhaustible Armor": {
+      "name": "Inexhaustible Armor",
+      "description": "<p><em>Armor (Any), Very Rare (Requires Attunement by a Fighter)</em></p><p>This armor is made from fey leathers and magical plates, infused with the chemical solutions found in some constructs and empowered with the heart of a gorgon.</p><p>While attuned to this armor, you gain an additional use of your Second Wind class feature. In addition, when you use your Second Wind, you regain an additional 3d6 Hit Points and can remove one of the following conditions from yourself: &amp;reference[Blinded apply=false], &amp;reference[Charmed apply=false], &amp;reference[Dazed apply=false], &amp;reference[Deafened apply=false], &amp;reference[Frightened apply=false], &amp;reference[Immobilized apply=false], &amp;reference[Poisoned apply=false], &amp;reference[Slowed apply=false], or &amp;reference[Staggered apply=false].</p><p><em><strong>Crafting.</strong></em> Creating <em>Inexhaustible Armor</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Chemical solution from a Construct</p></li><li><p><strong>[Hide]</strong> Skin from a Fey</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Organ]</strong> Heart from a Gorgon</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        },
+        "Inexhaustible Healing": {
+          "name": "Inexhaustible Healing",
+          "condition": "When you use your Second Wind class feature."
+        }
+      },
+      "effects": {
+        "Inexhaustible Armor": {
+          "name": "Inexhaustible Armor",
+          "changes": {
+            "name": "Inexhaustible {}",
+            "system.description.value": "@embed[Compendium.drakkenheim-monsters.items.Item.h3IjCxkmRNyAnYCg inline]"
+          }
+        },
+        "Inexhaustible Wind": {
+          "name": "Inexhaustible Wind",
+          "description": "<p>You gain an additional use of your Second Wind class feature.</p>"
+        }
+      }
+    },
+    "Time Dilation Medallion": {
+      "name": "Time Dilation Medallion",
+      "description": "<p><em>Wondrous Item, Legendary</em></p><p>The inner workings of this clockwork device are formed from gears forged from magical constructs gathered around a focusing lens, held together carefully by the needles of magical creatures. The animus used harnesses the energy of The Algorithm, a being of order and consequence, whose control over time and space ripples from the strange clockworks of the medallion.</p><p>This medallion has 3 charges. It crumbles to dust when you expend the final charge.</p><p>You can expend 1 charge from the medallion to take an extra action on your turn. Each time you do, you can roll 1d6. On a 1, at the end of your turn, you become unstuck in time and space as the medallion casts the @UUID[Compendium.dnd5e.spells24.Item.phbsplMaze000000] spell on you. On a 6, the medallion regains 1d3 charges.</p><p><em><strong>Crafting.</strong></em> Creating the <em>Time Dilation Medallion</em> requires a Legendary Workshop and the following Legendary Components:</p><ul><li><p><strong>[Animus]</strong> Animus from The Algorithm*</p></li><li><p><strong>[Hide]</strong> Plates from a Construct</p></li><li><p><strong>[Natural Weapon]</strong> Any Needles</p></li><li><p><strong>[Organ]</strong> Eye from a Construct</p></li></ul><p><em>* At the Game Master’s discretion, the animus could be any other Legendary Construct instead.</em></p>",
+      "activities": {
+        "Take Extra Turn": {
+          "name": "Take Extra Turn"
+        },
+        "Roll 1D6": {
+          "name": "Roll 1D6",
+          "condition": "When you expend a charge from the Time Dilation Medallion."
+        },
+        "Regain Charges": {
+          "name": "Regain Charges",
+          "condition": "When you roll a 6 on the 1d6 you roll each time you expend a charge from the Time Dilation Medallion."
+        }
+      }
+    },
+    "Hazewind Cape": {
+      "name": "Hazewind Cape",
+      "description": "<p><em>Wonderous Item, Uncommon</em></p><p>This crimson and gold hooded cape is fitted with the feathers of fallen Harpies and dyed in their blood, this grants the wearer some resistance to the songs of Harpies. The cape is then in fused with the dust of a fey creature which grants it a powerful anti-charm effect powered by an animus.</p><p>While wearing this cape, you have Advantage on saving throws against the &amp;reference[Charmed apply=false] and &amp;reference[Frightened apply=false] conditions.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Hazewind Cape</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Harpy</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Harpy</p></li><li><p><strong>[Hair]</strong> Feathers from a Harpy</p></li><li><p><strong>[Hide]</strong> Skin</p></li></ul>",
+      "effects": {
+        "Hazewind Courage": {
+          "name": "Hazewind Courage",
+          "description": "<p>You While wearing this cape, you have Advantage on saving throws against the &amp;reference[Charmed apply=false] and &amp;reference[Frightened apply=false] conditions.</p>"
+        }
+      }
+    },
+    "Potion of Controlled Mutation": {
+      "name": "Potion of Controlled Mutation",
+      "description": "<p><em>Potion, Uncommon</em></p><p>This sickly-looking potion contains a writhing mass of tentacles that animate and uncomfortably crawl down the imbiber’s throat when consumed. The taste is pungent and fishy, and results in the sudden outbreak of random, but temporary, mutations.</p><p>When you consume this potion, you gain the effects of one randomly determined Mutation until you start a Short or Long Rest. You can roll on the @UUID[Compendium.drakkenheim-monsters.tables.RollTable.Q88HO4Z779FyUvma]{Mutations} table twice, choosing which mutation manifests. You don’t gain any Contamination levels as a result of this Mutation. When the effect ends, your body returns to normal.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Potion of Controlled Mutation</em> requires an Uncommon Workshop and the following Uncommon Components:</p><p><strong>[Animus]</strong> Animus from an Aberration</p><p><strong>[Fluid]</strong> Contaminated Ichor</p><p><strong>[Organs]</strong> Any two Organs from an Aberration.</p>",
+      "activities": {
+        "Drink Potion": {
+          "name": "Drink Potion"
+        }
+      }
+    },
+    "Everhot Stew Pot": {
+      "name": "Everhot Stew Pot",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>This cauldron is made using the plated iron from a construct infused with the ash of an elemental. The animus used must be from a dragon which adds both control and potency to the latent elemental magics. The spoon used to stir the cauldron is carved from the bone of a magical creature. This cauldron can heat to boiling temperatures without requiring fire simply by being filled and stirred, and the stews and soups it produces are always delicious and hearty.</p><p>During a Long Rest, you can cook enough stew to feed up to three creatures. All creatures who eat a stew from this pot gain 10 Temporary Hit Points. While a creature has these Temporary Hit Points, they gain Valor (1d4).</p><p><em><strong>Crafting.</strong></em> Creating an <em>Everhot Stew Pot</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Dragon</p></li><li><p><strong>[Bone]</strong> Ribs from a Monstrosity</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Hide]</strong> Plates</p></li></ul>",
+      "activities": {
+        "Cook Stew": {
+          "name": "Cook Stew"
+        }
+      },
+      "effects": {
+        "Ever Hot Stew Pot: Valor (1d4)": {
+          "name": "Ever Hot Stew Pot: Valor (1d4)",
+          "description": "<p>You add 1d4 to your attack rolls and saving throws.</p><p>This effect is only active while you have Temporary Hit Points from the Everhot Stew Pot's stew.</p>"
+        }
+      }
+    },
+    "Delerium Fragment": {
+      "name": "Delerium Fragment",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 17 and 10 Hit points. Extracting a [[lookup @item.name lowercase]] takes one minute.</p>"
+    },
+    "Crest of the Sacred Flame": {
+      "name": "Crest of the Sacred Flame",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Paladin)</em></p><p>This crest is crafted from the compressed dust of fiends destroyed and sanctified by the Sacred Flame and torched in fires ignited by the elemental fluid taken from a dragon. This simple crest is made from the bones of undead creatures washed in acidic monster bile.</p><p>While attuned to this magic crest you increase the Emanation of your Aura of Protection by 10 feet.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Crest of the Sacred Flame</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Spine or Ribs</p></li><li><p><strong>[Dust]</strong> Fiend Dust</p></li><li><p><strong>[Fluid]</strong> Acidic Bile</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li></ul>",
+      "effects": {
+        "Crest of the Sacred Flame": {
+          "name": "Crest of the Sacred Flame",
+          "description": "<p>While attuned to this magic crest you increase the Emanation of your Aura of Protection by 10 feet.</p>"
+        }
+      }
+    },
+    "Amulet of Primal Wisdom": {
+      "name": "Amulet of Primal Wisdom",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>Crafted from the dried leaves of magical plants and imbued with their dust, this amulet is decorated with a singular dried flower and then encased in sap. The pendant glows softly with the light of springtime and smells of floral fields in bloom.</p><p>Your Wisdom score is 19 while you wear this magic amulet. It has no effect on you if your Wisdom is 19 or higher without it.</p><p><em><strong>Crafting.</strong></em> Creating an <em>Amulet of Primal Wisdom</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Plant Animus</p></li><li><p><strong>[Dust]</strong> Plant Dust</p></li><li><p><strong>[Fluid]</strong> Sap</p></li><li><p><strong>[Hair]</strong> Leaves</p></li><li><p><strong>[Organ]</strong> Flower</p></li></ul>",
+      "effects": {
+        "Amulet of Primal Wisdom": {
+          "name": "Amulet of Primal Wisdom",
+          "description": "<p>Your Wisdom score is 19 while you wear this magic amulet. It has no effect on you if your Wisdom is 19 or higher without it.</p>"
+        }
+      }
+    },
+    "Charm of Swarms": {
+      "name": "Charm of Swarms",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>T is charm resembles a large gnat. It is made of the spores of dead mushrooms; the mandibles of an insectoid creature are placed upon it. The charm is coated in an acidic bile and held together by dried mucus. It smells of bugs and rot.</p><p>When an enemy within 5 feet of you scores a Critical Hit on an attack made against you, you can cause the enemy to become &amp;reference[Burning] (2d6 Necrotic). While the target is Burning in this way, you have Advantage on attacks against the target.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Charm of Swarms</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Acidic Bile</p></li><li><p><strong>[Fluid]</strong> Mucus</p></li><li><p><strong>[Natural Weapon]</strong> Spores</p></li><li><p><strong>[Natural Weapon]</strong> Mandibles</p></li></ul>",
+      "activities": {
+        "Coat in Insects": {
+          "name": "Coat in Insects",
+          "condition": "When an enemy within 5 feet of you scores a Critical Hit on an attack made against you."
+        }
+      },
+      "effects": {
+        "Burning (2d6 Necrotic)": {
+          "name": "Burning (2d6 Necrotic)",
+          "description": "<p>You are &amp;reference[burning apply=false] from being covered in insects.</p><ul><li><p>At the end of each of your turns, you take [[/damage average necrotic 2d6]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to scrape off the insects or if some other effect removes them.</p></li></ul>"
+        }
+      }
+    },
+    "Wand of the Precocious Apprentice": {
+      "name": "Wand of the Precocious Apprentice",
+      "description": "<p><em>Wand, Uncommon</em></p><p>Once per turn when you deal damage to a creature using a cantrip while holding this wand, one target of that cantrip takes an extra 1d4 damage of type dealt by the spell.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Wand of the Precocious Apprentice</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Bones]</strong> Bones from an Undead</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Ectoplasm</p></li></ul>",
+      "activities": {
+        "Precocious Damage": {
+          "name": "Precocious Damage",
+          "condition": "When you deal damage to a creature using a cantrip while holding this wand."
+        }
+      }
+    },
+    "Electric Charge Ring": {
+      "name": "Electric Charge Ring",
+      "description": "<p><em>Ring, Rare</em></p><p>This ring, composed of living lightning, is forged from elemental dust compressed into a gem around the lens eye of a construct, washed in the acidic glands of a monster before being set into an animus of an elemental.</p><p>When you cast a spell using a spell slot that deals Lightning damage, choose one target that failed its first saving throw against that spell. That creature is &amp;reference[Shocked] until the start of your next turn.</p><p>Crafting. Creating an Electric Charge Ring requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from an Elemental</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Organ]</strong> Eye from a Construct</p></li><li><p><strong>[Organ]</strong> Glands</p></li></ul>",
+      "activities": {
+        "Shock Creature": {
+          "name": "Shock Creature",
+          "condition": "When you cast a spell using a spell slot that deals Lightning damage."
+        }
+      },
+      "effects": {
+        "Shocked": {
+          "name": "Shocked",
+          "description": "<p>You are &amp;reference[shocked apply=false] until the start of the caster's next turn.</p>"
+        }
+      }
+    },
+    "Hag-Stitched Troll Leather Armor": {
+      "name": "Hag-Stitched Troll Leather Armor",
+      "description": "<p><em>Armor (Leather or Hide), Rare (Requires Attunement)</em></p><p>You gain a +1 bonus to Armor Class while wearing this magic armor.</p><p>This magic armor has 50 charges. It regains all expend ed charges each day at dawn. While wearing this armor and attuned to it, at the start of your turn you can expend between 1 and 10 charges from the armor (no action required). You regain 1 Hit Point for each charge expended in this way. If you take Acid or Fire damage while wearing this armor, it loses 1 charge for each point of Acid or Fire damage taken.</p><p><em><strong>Crafting.</strong></em> Creating <em>Hag-Stitched Troll Leather Armor</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Giant</p></li><li><p><strong>[Bones]</strong> Skulls of any two Trolls</p></li><li><p><strong>[Fluid]</strong> Monster Blood from any Troll</p></li><li><p><strong>[Fur]</strong> Stitches</p></li><li><p><strong>[Hide]</strong> Skin of any Troll</p></li></ul>",
+      "activities": {
+        "Troll Regeneration": {
+          "name": "Troll Regeneration"
+        },
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Hag-Stitched Troll Leather Armor": {
+          "name": "Hag-Stitched Troll Leather Armor",
+          "changes": {
+            "name": "Hag-Stitched Troll {}",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.wiSk7rdkYAZLph9l inline]"
+          }
+        }
+      }
+    },
+    "Delerium Shard": {
+      "name": "Delerium Shard",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 19 and 10 Hit points. Extracting a [[lookup @item.name lowercase]] takes five minutes.</p>"
+    },
+    "Heart String Harp": {
+      "name": "Heart String Harp",
+      "description": "<p><em>Instrument (Harp or Lyre), Rare (Requires Attunement by a Bard)</em></p><p>When played, this instrument reverberates with draconic whispers and enchantment that drift subtly within the notes that are struck, giving the music a sense of foreboding and palpable charm. Crafted from finely polished ivory and imbued with the animus of a fey creature, the true magic of this harp comes from the finely crafted strings made from combining the sinew of a dragon’s heart chords and the hair of a fey, willingly given out of kindness.</p><p>You can use this magical harp as a Spellcasting Focus for your Bard spells. While attuned to this item, you gain a +1 bonus to your spell attack rolls and spell save DC.</p><p>When you cast an Enchantment spell of level 1 to level 5 that targets only one creature using this harp as the Spellcasting Focus, you can target a second creature within the spell’s range.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Heart String Harp</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Fey Animus</p></li><li><p><strong>[Hair]</strong> Hair from a Fey*</p></li><li><p><strong>[Natural Weapon]</strong> Horns or Teeth of any Fey, Monstrosity, or Dragon</p></li><li><p><strong>[Organ]</strong> Heart from a Dragon</p></li></ul><p>*At the Game Master’s option, rather than being harvested from a slain fey, this hair must be willingly gifted by a fey creature.</p>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Heart String Harp": {
+          "name": "Heart String Harp",
+          "changes": {
+            "name": "Heart String {}",
+            "system.description.value": "@embed[Compendium.drakkenheim-monsters.items.Item.x8lzD0SevX3P3mPX inline]"
+          }
+        },
+        "udj39RyKZAZCLr5E": {
+          "name": "Heart String Harp",
+          "description": "<p>You can use this magical harp as a Spellcasting Focus for your Bard spells. While attuned to this item, you gain a +1 bonus to your spell attack rolls and spell save DC.</p>"
+        }
+      }
+    },
+    "Dazing Hammer": {
+      "name": "Dazing Hammer",
+      "description": "<p><em>Weapon (Warhammer or Maul), Uncommon</em></p><p>This hammer is made from giant bones and forged in undead dust. The bones are then stained with monster blood.</p><p>You gain a +1 bonus to attack and damage rolls with this magic hammer.</p><p>When you score a Critical Hit with this hammer, the target is &amp;reference[Dazed] until the start of your next turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Dazing Hammer</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Bones]</strong> Skull from a Giant</p></li><li><p><strong>[Dust]</strong> Undead Dust</p></li><li><p><strong>[Fluid]</strong> Monster Blood</p></li></ul>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        }
+      },
+      "effects": {
+        "Dazing Hammer": {
+          "name": "Dazing Hammer",
+          "changes": {
+            "name": "Dazing {}",
+            "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.xWNW8PE8pfHZuzrA inline]"
+          }
+        }
+      }
+    },
+    "Gloves of Ratling Agility": {
+      "name": "Gloves of Ratling Agility",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>Your Dexterity score is 19 while you wear these ratling hide gloves. They have no effect on you if your Dexterity is 19 or higher without them.</p><p><em><strong>Crafting.</strong></em> Creating <em>Gloves of Ratling Agility</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Hair]</strong> Fur from any Ratling</p></li><li><p><strong>[Hide]</strong> Skin from any Ratling</p></li><li><p><strong>[Organ]</strong> Guts from any Monstrosity</p></li></ul>",
+      "effects": {
+        "Ratling Agility": {
+          "name": "Ratling Agility",
+          "description": "<p>Your Dexterity score is 19 while you wear this ratling hide gloves. It has no effect on you if your Dexterity is 19 or higher without it.</p>"
+        }
+      }
+    },
+    "Eldritch Lily": {
+      "name": "Eldritch Lily",
+      "description": "<p>An eldritch lily is a pink-purple flower that grows in pools of contaminated water within natural areas covered by the Deep Haze.</p><p>A single eldritch lily is worth 100 gp. The petals are potent alchemical reagents, and can be used as a component for restorative spells and many potions.</p>"
+    },
+    "Mask of Monstrous Forms": {
+      "name": "Mask of Monstrous Forms",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Druid)</em></p><p>This magic mask is made from the skull of a particular monstrosity (with a Challenge Rating of 6 or lower). The skull is carved into a mask, engraved with aberrant dust, and then boiled in a vat of mimic mucus, the flesh of a doppelganger, and acidic bile. Finally, a vessel containing the animus of any creature with the Shapechanger trait is placed upon the forehead of the mask, channeling its shapechanging magic.</p><p>While attuned to the mask, you can expend two uses of your Wild Shape feature to transform into the monstrosity associated with the mask, instead of a Beast.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Mask of Monstrous Forms</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a creature that has the Shapechanger trait</p></li><li><p><strong>[Bones]</strong> Skull of a Monstrosity*</p></li><li><p><strong>[Dust]</strong> Aberrant Dust</p></li><li><p><strong>[Fluid]</strong> Acidic Bile</p></li><li><p><strong>[Fluid]</strong> Mucus from a Mimic</p></li><li><p><strong>[Organ]</strong> Flesh from a Doppelganger</p></li></ul><p><em>* The Monstrosity used for this mask determines the form of the shapechange.</em></p>",
+      "activities": {
+        "Monstrous Wild Shape": {
+          "name": "Monstrous Wild Shape",
+          "profiles": {
+            "Monstrous Wild Shape": {
+              "name": "Monstrous Wild Shape"
+            }
+          }
+        }
+      }
+    },
+    "Trollblood Potion": {
+      "name": "Trollblood Potion",
+      "description": "<p><em>Potion, Rare</em></p><p>This potion is a bubbling, sickly, green-brown viscous soup that has the consistency of mucus. What appears to be the rotting eye of a troll floats in the potion. It smells acrid and nauseating and tastes even worse than it looks.</p><p>When you drink this potion, for the next minute, you regain 5 Hit Points at the start of your turn. The effects of this potion end early if you take Fire or Acid damage.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Trollblood Potion</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Fey Animus</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Troll</p></li><li><p><strong>[Organ]</strong> Eyes from a Troll</p></li></ul>",
+      "activities": {
+        "Drink Potion": {
+          "name": "Drink Potion"
+        }
+      },
+      "effects": {
+        "Trollblood Potion": {
+          "name": "Trollblood Potion",
+          "description": "<p>For the next minute, you regain 5 Hit Points at the start of your turn. The effects of this potion end early if you take Fire or Acid damage.</p>"
+        }
+      }
+    }
+  }
+}
