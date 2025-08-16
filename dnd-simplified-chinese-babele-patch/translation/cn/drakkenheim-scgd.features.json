@@ -11,24 +11,25 @@
         "Chemical Compound: Tool Proficiency": {
           "title": "化合物：工具熟练"
         },
-        "Chemist Spells: 1st Level": {
-          "title": "化学家法术：一环"
+        "Chemist: 1st Level Spells": {
+          "title": "化学家：一环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Chemist Spells: 2nd Level": {
-          "title": "化学家法术：二环"
+        "Chemist: 2nd Level Spells": {
+          "title": "化学家：二环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Chemist Spells: 3rd Level": {
-          "title": "化学家法术：三环"
+        "Chemist: 4th Level Spells": {
+          "title": "化学家：四环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Chemist Spells: 4th level": {
-          "title": "化学家法术：四环"
+        "Chemist: 5th Level Spells": {
+          "title": "化学家：五环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Chemist Spells: 5th Level": {
-          "title": "化学家法术：五环"
-        },
-        "Chemical Compound: Cantrip": {
-          "title": "化合物：戏法",
-          "hint": "你学会法师法术列表中额外一个你所选的塑能学派戏法。这些法术视为你的药剂师法术，并且它们不计入你的已知戏法。"
+        "Chemical Compound: Evocation Cantrip": {
+          "title": "化合物：塑能学派戏法",
+          "hint": "你同时习得戏法火焰箭和法师法术列表中额外一个你所选的塑能学派戏法。这些法术视为你的药剂师法术，并且它们不计入你的已知戏法。"
         }
       }
     },
@@ -80,7 +81,13 @@
     },
     "Esoteric Theory: Extracurricular Research": {
       "name": "隐秘理论：课外研究",
-      "description": "<p>你从任意职业的法术列表中选择两个戏法并额外地习得它们。这些戏法成为你的药剂师戏法。</p>"
+      "description": "<p>你从任意职业的法术列表中选择两个戏法并额外地习得它们。这些戏法成为你的药剂师戏法。</p>",
+      "advancement": {
+        "Extracurricular Research: Cantrips": {
+          "title": "隐秘理论：戏法",
+          "hint": "你从任意职业的法术列表中选择两个戏法并额外地习得它们。这些戏法成为你的药剂师戏法。"
+        }
+      }
     },
     "Sitting Duck": {
       "name": "视若羔羊",
@@ -88,7 +95,23 @@
     },
     "Esoteric Theory: Triage": {
       "name": "隐秘理论：伤患鉴别法",
-      "description": "<p>你习得戏法@UUID[Compendium.dnd5e.spells.Item.8zT7njvqbpXs4Cel]{维生术}如果你还没有习得它的话。当你施展它时，其施法距离变为 60 尺。</p>"
+      "description": "<p>你习得戏法@UUID[Compendium.dnd5e.spells.Item.8zT7njvqbpXs4Cel]{维生术}如果你还没有习得它的话。当你施展它时，其施法距离变为 60 尺。</p>",
+      "activities": {
+        "Modify Spare the Dying": {
+          "name": "伤患鉴别法"
+        }
+      },
+      "effects": {
+        "Esoteric Theory: Triage": {
+          "name": "隐秘理论：伤患鉴别法"
+        }
+      },
+      "advancement": {
+        "Triage: Spare the Dying": {
+          "title": "伤患鉴别法：维生术",
+          "hint": "你习得戏法维生术，如果你还没有习得它的话。当你施展它时，其施法距离变为 60 尺。"
+        }
+      }
     },
     "Esoteric Theory: Unfailing Focus": {
       "name": "隐秘理论：全神贯注",
@@ -119,10 +142,10 @@
     "Esoteric Theory: Medical Expertise": {
       "name": "隐秘理论：妙手回春",
       "description": "<p>你获得医药和自然技能的熟练。你以这些技能进行任何属性检定时获得双倍的熟练加值。</p>",
-      "effects": {
-        "Esoteric Theory: Medical Expertise": {
-          "name": "隐秘理论：妙手回春",
-          "description": "<p>你获得医药和自然技能的熟练。你以这些技能进行任何属性检定时获得双倍的熟练加值。</p>"
+      "advancement": {
+        "Medical Expertise: Medicine & Nature": {
+          "title": "妙手回春：医药和自然",
+          "hint": "你获得医药和自然技能的熟练。你以这些技能进行任何属性检定时获得双倍的熟练加值。"
         }
       }
     },
@@ -253,7 +276,13 @@
     },
     "Esoteric Theory: Liability Insurance": {
       "name": "隐秘理论：防患未然",
-      "description": "<p>你可以在不消耗法术耗材的情况下以自身为目标施展法术@UUID[Compendium.dnd5e.spells.Item.4smlOvpF5AQHcyg1] 。你不能再次这样做直到完成一次长休。</p>"
+      "description": "<p>你可以在不消耗法术耗材的情况下以自身为目标施展法术@UUID[Compendium.dnd5e.spells.Item.4smlOvpF5AQHcyg1] 。你不能再次这样做直到完成一次长休。</p>",
+      "advancement": {
+        "Liability Insurance: Contingency": {
+          "title": "防患未然：触发术",
+          "hint": "你可以在不消耗法术耗材的情况下以自身为目标施展法术触发术。你不能再次这样做直到完成一次长休。"
+        }
+      }
     },
     "Psionic Power: Careful Examination": {
       "name": "心能力量：精密检查",
@@ -275,7 +304,7 @@
         "Expel Evil": {
           "name": "驱散邪恶",
           "affects": {
-            "special": "Undead, Celestials, Fey, or Fiends"
+            "special": "亡灵、天族、精类或邪魔"
           }
         },
         "Purge Corruption: End Ailment": {
@@ -309,6 +338,10 @@
       "advancement": {
         "dFEDuc8VHSzHYIkz": {
           "hint": "你的智力增加 1，上限为 20。"
+        },
+        "Investigative Mind: Investigation Proficiency": {
+          "title": "察微析理：调查熟练",
+          "hint": "你获得智力（调查）技能的熟练，并且在你使用该熟练进行的任何属性检定上，你的熟练加值翻倍。"
         }
       }
     },
@@ -344,10 +377,10 @@
     "Esoteric Theory: Bedside Manner": {
       "name": "隐秘理论：病榻话术",
       "description": "<p>你获得洞悉和说服技能的熟练。你以这些技能进行任何属性检定时获得双倍的熟练加值。</p>",
-      "effects": {
-        "Esoteric Theory: Bedside Manner": {
-          "name": "隐秘理论：病榻话术Bedside Manner",
-          "description": "<p>你获得洞悉和说服技能的熟练。你以这些技能进行任何属性检定时获得双倍的熟练加值。</p>"
+      "advancement": {
+        "Bedside Manners: Insight & Persuasion": {
+          "title": "病榻话术：洞悉和游说",
+          "hint": "你获得洞悉和说服技能的熟练。你以这些技能进行任何属性检定时获得双倍的熟练加值。"
         }
       }
     },
@@ -391,8 +424,9 @@
       "name": "隐秘理论：腐蚀性公式",
       "description": "<p>每回合一次，当你用药剂师法术对一个生物或物件造成伤害时，你可以消耗一个药剂师法术位，以此对目标造成额外 2d4+每法术位等级2d4 点的强酸伤害。</p>",
       "activities": {
-        "utility": {
-          "condition": "每回合一次，当你用药剂师法术对一个生物或物件造成伤害时"
+        "Caustic Formulae Damage": {
+          "name": "腐蚀性公式伤害",
+          "condition": "当你用药剂师法术对一个生物或物件造成伤害时。"
         }
       }
     },
@@ -407,7 +441,7 @@
           "title": "Reshaped Form Morphs"
         },
         "Natural Weapon Scaling": {
-          "title": "Natural Weapon Scaling"
+          "title": "天生武器伤害骰"
         }
       }
     },
@@ -422,7 +456,15 @@
     },
     "Trapmaker": {
       "name": "陷阱制造者",
-      "description": "<p><em>先决条件：修补工具或盗贼工具熟练项</em></p><hr /><p>在完成长休后，你可以花费一小时使用你选择的工具，将野外收集或找到的材料制作成一个特殊陷阱。</p><p>这些陷阱可以使用一个动作放置在地面上，占据一个5尺×5尺的方格。调查该区域的生物必须成功通过一次DC 15的感知（察觉）或智力（调查）检定，才能发现陷阱。如果有生物踏入陷阱所在的空间，该生物将立即触发陷阱。你可以制作下列任一陷阱：</p><p style=\"text-align:center\"><strong>陷阱豁免DC= </strong>等于8 + 你的熟练加值 + 你的智力或敏捷调整值（由你选择）</p><fieldset><legend>Basic Traps</legend><p><strong>纠缠陷阱. </strong>触发陷阱的生物必须进行一次敏捷豁免，（DC为陷阱豁免DC）未通过豁免的生物将被束缚。被束缚的生物可以花费一个动作进行一次DC为陷阱豁免DC的力量检定，以从陷阱中挣脱。</p><p><strong>尖刺陷阱 </strong>触发陷阱的生物必须进行一次敏捷豁免（DC为陷阱豁免DC）。未通过豁免的生物将受到2d6穿刺伤害。</p><p><strong>声波陷阱</strong>触发时发出响声，陷阱发出的声音可在300尺范围内被听到。</p></fieldset><fieldset><legend>高级陷阱</legend><p>从10级开始，你可以制作以下高级陷阱：</p><p><strong>爆炸陷阱</strong> 发陷阱的生物必须进行一次敏捷豁免（DC为陷阱豁免DC）。未通过豁免的生物受到4d6火焰伤害，并应击倒地。</p><p><strong>毒气陷阱</strong> 触发陷阱的生物必须进行一次体质豁免（DC为陷阱豁免DC）。未通过豁免的生物受到3d8毒素伤害，并在其下一回合结束前中毒。</p><p><strong>气体陷阱 </strong>触发陷阱的生物必须进行一次感知豁免（DC为陷阱豁免DC）。未通过检定的生物直到其下一回合结束前将处于失能状态。</p></fieldset>"
+      "description": "<p><em>先决条件：修补工具或盗贼工具熟练项</em></p><hr /><p>在完成长休后，你可以花费一小时使用你选择的工具，将野外收集或找到的材料制作成一个特殊陷阱。</p><p>这些陷阱可以使用一个动作放置在地面上，占据一个5尺×5尺的方格。调查该区域的生物必须成功通过一次DC 15的感知（察觉）或智力（调查）检定，才能发现陷阱。如果有生物踏入陷阱所在的空间，该生物将立即触发陷阱。你可以制作下列任一陷阱：</p><p style=\"text-align:center\"><strong>陷阱豁免DC= </strong>等于8 + 你的熟练加值 + 你的智力或敏捷调整值（由你选择）</p><fieldset><legend>Basic Traps</legend><p><strong>纠缠陷阱. </strong>触发陷阱的生物必须进行一次敏捷豁免，（DC为陷阱豁免DC）未通过豁免的生物将被束缚。被束缚的生物可以花费一个动作进行一次DC为陷阱豁免DC的力量检定，以从陷阱中挣脱。</p><p><strong>尖刺陷阱 </strong>触发陷阱的生物必须进行一次敏捷豁免（DC为陷阱豁免DC）。未通过豁免的生物将受到2d6穿刺伤害。</p><p><strong>声波陷阱</strong>触发时发出响声，陷阱发出的声音可在300尺范围内被听到。</p></fieldset><fieldset><legend>高级陷阱</legend><p>从10级开始，你可以制作以下高级陷阱：</p><p><strong>爆炸陷阱</strong> 发陷阱的生物必须进行一次敏捷豁免（DC为陷阱豁免DC）。未通过豁免的生物受到4d6火焰伤害，并应击倒地。</p><p><strong>毒气陷阱</strong> 触发陷阱的生物必须进行一次体质豁免（DC为陷阱豁免DC）。未通过豁免的生物受到3d8毒素伤害，并在其下一回合结束前中毒。</p><p><strong>气体陷阱 </strong>触发陷阱的生物必须进行一次感知豁免（DC为陷阱豁免DC）。未通过检定的生物直到其下一回合结束前将处于失能状态。</p></fieldset>",
+      "activities": {
+        "Create Trap": {
+          "name": "制作陷阱"
+        },
+        "Trap Save": {
+          "name": "陷阱豁免"
+        }
+      }
     },
     "Transmogrifying Elixir": {
       "name": "变形灵药",
@@ -494,8 +536,8 @@
       "description": "<p>第一批冒险进入德拉肯海姆的勇士们注定会失败。在探险的初期，很少有人能活着归来，而那些幸存下来的少数人则将永远被这段经历所改变。极少数人学会了通过一种超自然的狂怒与污霭的疯狂相抗衡，这种狂怒使他们能够驱使妄质中的魔能。这些污霭狂怒者在妄质的污染下成长，将疯狂和恐惧转化为武器。他们对能力的运用使他们对污染有着超乎常人的耐受力，据说这些野蛮人甚至能在最可怕的变异中幸存下来。</p>",
       "advancement": {
         "Octarine Blood: Damage Resistance": {
-          "title": "Octarine Blood: Damage Resistance",
-          "hint": "You gain resistance to necrotic, poison, psychic, and radiant damage."
+          "title": "八虹之血：伤害抗性",
+          "hint": "你获得对暗蚀、毒素、心灵和光耀伤害的抗性。"
         },
         "Contaminated Fury Damage": {
           "title": "Contaminated Fury Damage"
@@ -516,7 +558,13 @@
     },
     "Esoteric Theory: Stolen Secrets": {
       "name": "隐秘理论：奥秘窃来",
-      "description": "<p>你从任意一个职业的法术列表中习得一个法术，它必须等于或低于你所拥有的药剂师法术位环阶，这个法术被视为你的药剂师法术，并且不计入你已知的药剂师法术数量。</p>"
+      "description": "<p>你从任意一个职业的法术列表中习得一个法术，它必须等于或低于你所拥有的药剂师法术位环阶，这个法术被视为你的药剂师法术，并且不计入你已知的药剂师法术数量。</p>",
+      "advancement": {
+        "Stolen Secrets: Acquired Spells": {
+          "title": "奥秘窃来：习得法术",
+          "hint": "你从任意一个职业的法术列表中习得一个法术，它必须等于或低于你所拥有的药剂师法术位环阶，这个法术被视为你的药剂师法术，并且不计入你已知的药剂师法术数量。"
+        }
+      }
     },
     "Advanced Palate": {
       "name": "高等味觉",
@@ -534,38 +582,47 @@
       "name": "驱邪师",
       "description": "<p>驱邪师们随时准备去对付邪恶的实体，凶恶的鬼魂，以及可怖的邪魔。装备着他们的圣徽，一本祈祷书，以及一包仪式用的小道具，驱邪师们随时准备面对王国内最超自然、乃至来自异域的实体。驱邪师们习惯于凭借手中的一枚小小圣徽，以身为盾，在一众怪物前守护着王国的人类，面对那些难以战胜的威胁。</p><h3>驱邪师法术</h3><table><thead><tr><th>驱邪师等级</th><th>法术</th></tr></thead><tbody><tr><td>1级</td><td>@UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr], @UUID[Compendium.dnd5e.spells.Item.xmDBqZhRVrtLP8h2]</td></tr><tr><td>3级</td><td>@UUID[Compendium.dnd5e.spells.Item.JbxsYXxSOTZbf9I0], @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3]</td></tr><tr><td>5级</td><td>@UUID[Compendium.dnd5e.spells.Item.Ek45cBpVXvJdv1Qy], @UUID[Compendium.dnd5e.spells.Item.uCud2s4TjMfjiXUb]</td></tr><tr><td>7级</td><td>@UUID[Compendium.dnd5e.spells.Item.pxpb2eOB6bv4phAf], @UUID[Compendium.drakkenheim-scgd.spells.Item.Wmg60KwX5QlbBvPd]</td></tr><tr><td>9级</td><td>@UUID[Compendium.dnd5e.spells.Item.TkJ8Wtg1L7TZtspm], @UUID[Compendium.dnd5e.spells.Item.5e1xTohkzqFqbYH4]</td></tr></tbody></table>",
       "advancement": {
-        "Exorcist Spells: 1st Level": {
-          "title": "Exorcist Spells: 1st Level"
+        "Exorcist: 1st Level Spells": {
+          "title": "驱邪师：一环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Exorcist Spells: 2nd Level": {
-          "title": "Exorcist Spells: 2nd Level"
+        "Exorcist: 2nd Level Spells": {
+          "title": "驱邪师：二环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Exorcist Spells: 3rd Level": {
-          "title": "Exorcist Spells: 3rd Level"
+        "Exorcist: 3rd Level Spells": {
+          "title": "驱邪师：三环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Exorcist Spells: 4th level": {
-          "title": "Exorcist Spells: 4th level"
+        "Exorcist: 4th Level Spells": {
+          "title": "驱邪师：四环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Exorcist Spells: 5th Level": {
-          "title": "Exorcist Spells: 5th Level"
+        "Exorcist: 5th Level Spells": {
+          "title": "驱邪师：五环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
         "Spiritual Study: Skill Proficiency": {
-          "title": "Spiritual Study: Skill Proficiency",
-          "hint": "You gain proficiency in the Religion Skill. If you already have this proficiency, you gain proficiency with another skill of your choice."
+          "title": "灵魂研究：技能熟练",
+          "hint": "你获得宗教技能的熟练。如果你已经有了此技能的熟练，你获得你任选的一个其他技能的熟练。"
         },
         "Spiritual Study: Armor Proficiency": {
-          "title": "Spiritual Study: Armor Proficiency",
-          "hint": "You gain proficiency in heavy armor."
+          "title": "灵魂研究：护甲熟练",
+          "hint": "你获得重甲的熟练。"
         },
         "Exorcism Expel Evil Damage": {
-          "title": "Exorcism Expel Evil Damage"
+          "title": "驱散邪恶伤害骰"
         },
         "Sacred Vessel: Fear Immunity": {
-          "title": "Sacred Vessel: Fear Immunity",
-          "hint": "You are immune to the frightened condition."
+          "title": "受祝之躯：恐慌免疫",
+          "hint": "你免疫恐慌状态。"
         },
         "Purge Corruption Temporary Hit Points": {
-          "title": "Purge Corruption Temporary Hit Points"
+          "title": "净化不洁：临时生命值"
+        },
+        "Spiritual Study: Cantrip": {
+          "title": "灵魂研究：戏法",
+          "hint": "你从牧师法术列表中习得一个任选的戏法。这个戏法视为你的药剂师戏法。"
         }
       }
     },
@@ -638,8 +695,8 @@
       "description": "<p>这一学院的吟游诗人们陶醉在他人的恐惧与绝望之中。他们已经预见了时光的终末，利用预言之赐对那些聆听者们灌输畏怖。与其他学院一样，这个学院的吟游诗人也会用言语去命令他们的观众。但他们所创造的词句是疯狂的终末预言，他们的诗篇与歌谣中充斥着无望与苦痛的喃喃回响。而那些听见这些疯言狂语的人们终将被恐惧所支配，失去他们的意志，坠入无穷无尽的疯狂之中。</p>",
       "advancement": {
         "True Believer: Fear Immunity": {
-          "title": "True Believer: Fear Immunity",
-          "hint": "Convinced of your impending doom, you no longer fear death. You are immune to being frightened."
+          "title": "真谕信徒：恐慌免疫",
+          "hint": "由于你对末日的强烈追寻，你不再畏惧死亡。你免疫于恐慌状态。"
         }
       }
     },
@@ -660,33 +717,39 @@
       "description": "<p>精神师们追寻着能主宰心灵的奥秘。在用多年时间研究大脑内部运作方式，以及解锁人脑潜力后，精神师能够读取并操控其他人的思想，并扭曲现实本身。他们挖掘着深不可测的现实，并且利用从他们邪术学问和奥术知识调动出的精神力将世界按照他们的意愿重塑。</p><h3>精神师法术</h3><table><thead><tr><th>等级</th><th>法术</th></tr></thead><tbody><tr><td>1 级</td><td>@UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs]{魅惑类人}, @UUID[Compendium.dnd5e.spells.Item.BQk5Row4NymMnUQl]{塔莎狂笑术}</td></tr><tr><td>3 级</td><td>@UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{侦测思想}, @UUID[Compendium.dnd5e.spells.Item.zMAWdyc8UVb37BK4]{暗示术}</td></tr><tr><td>5 级</td><td>@UUID[Compendium.dnd5e.spells.Item.6g3WLOZ2u0EbaLAd]{催眠图纹}, @UUID[Compendium.dnd5e.spells.Item.nslx2nT3p4lNkmdp]{高等幻影}</td></tr><tr><td>7 级</td><td>@UUID[Compendium.dnd5e.spells.Item.ImlCJQwR1VL40Qem]{秘法眼}, @UUID[Compendium.dnd5e.spells.Item.A4RsPuSvB9wFtz1j]{任意门}</td></tr><tr><td>9 级</td><td>@UUID[Compendium.dnd5e.spells.Item.ATo0Eb63TDtnu6iA]{活化物件}, @UUID[Compendium.dnd5e.spells.Item.r3243JU4AyQJyfX4]{篡改记忆 }</td></tr></tbody></table>",
       "advancement": {
         "Advanced Psychology: Cantrip": {
-          "title": "Advanced Psychology: Cantrip"
+          "title": "高级心理学：戏法",
+          "hint": "你习得戏法魔能爆。"
         },
         "Advanced Psychology: Skill": {
-          "title": "Advanced Psychology: Skill",
-          "hint": "You gain proficiency in the Arcana skill. If you already have this proficiency, you gain proficiency with another skill of your choice."
+          "title": "高级心理学：技能",
+          "hint": "你获得奥秘技能的熟练。如果你已经有了这个技能的熟练，那么你获得另一个你任选技能的熟练。"
         },
-        "Alienist Spells: 1st Level": {
-          "title": "Alienist Spells: 1st Level"
+        "Alienist: 1st Level Spells": {
+          "title": "精神师：一环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Alienist Spells: 2nd Level": {
-          "title": "Alienist Spells: 2nd Level"
+        "Alienist: 2nd Level Spells": {
+          "title": "精神师：二环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Alienist Spells: 3rd Level": {
-          "title": "Alienist Spells: 3rd Level"
+        "Alienist: 3rd Level Spells": {
+          "title": "精神师：三环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Alienist Spells: 4th level": {
-          "title": "Alienist Spells: 4th level"
+        "Alienist: 4th Level Spells": {
+          "title": "精神师：四环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Alienist Spells: 5th Level": {
-          "title": "Alienist Spells: 5th Level"
+        "Alienist: 5th Level Spells": {
+          "title": "精神师：五环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
         "Psychic Points": {
           "title": "Psychic Points"
         },
         "Impenetrable Mind": {
-          "title": "Impenetrable Mind",
-          "hint": "You gain resistance to psychic damage, and immune to being charmed and frightened."
+          "title": "心灵鸿沟",
+          "hint": "你获得心灵伤害的抗性，并且免疫魅惑和恐慌。"
         }
       }
     },
@@ -714,12 +777,12 @@
           "title": "特性"
         },
         "Increased Threshold: Constitution Save Proficiency": {
-          "title": "Increased Threshold: Constitution Save Proficiency",
-          "hint": "You gain proficiency in Constitution saving throws."
+          "title": "强化阈值：体质豁免熟练",
+          "hint": "你获得体质豁免的熟练。"
         },
         "Increased Threshold: Necrotic Resistance": {
-          "title": "Increased Threshold: Necrotic Resistance",
-          "hint": "You gain resistance to necrotic damage."
+          "title": "强化阈值：暗蚀抗性",
+          "hint": "你获得暗蚀伤害的抗性。"
         }
       }
     },
@@ -802,8 +865,8 @@
       "description": "<p>身为使用长矛的大师，这种敏捷的战士不仅将这些长柄兵刃当做武器，它们同时也是自己肉体的延伸，他们使用这些武器增强自己的灵活性、机动性和战斗力。修行盘蛇武者的武僧就像是潜伏在草丛中的毒蛇，它可以磨炼修行者预测攻击、规避远距离袭击和精确制敌的能力。</p>",
       "advancement": {
         "Serpent Style: Weapon Proficiencies": {
-          "title": "Serpent Style: Weapon Proficiencies",
-          "hint": "You gain proficiency with the glaive, halberd, pike, trident, and similar spears and polearms."
+          "title": "委蛇态：武器熟练",
+          "hint": "你获得长柄刀、戟、长矛、三叉戟和所有类矛或长柄武器的熟练。"
         }
       }
     },
@@ -839,24 +902,24 @@
       "description": "<p>妄质自然而然地被魔法吸引，并以不自然和不可预测的方式扭曲和增强其存在。一些冒险进入德拉肯海姆废墟的人被古怪力量扭曲，并充满了受污染的能量。他们成为了奥术异常和废墟内扭曲现实的活体容器。</p><h4>妄质法术</h4><p>由于被妄质的古怪力量所浸染，你的魔法从根本上受到了污染。当你在此职业中达到特定等级时，你将学会额外的法术，如妄质法术表所示。这些法术对你而言视为术士法术，但它们不计入你所知的术士法术数量。</p><p>每当你提升一个术士等级时，你可以将此特性获得的一个法术替换为同等级的其他法术。新法术必须是一个受污染的法术。</p><table><caption>妄质法术</caption><thead><tr><th>术士等级</th><th>法术</th></tr></thead><tbody><tr><td>1 级</td><td>@UUID[Compendium.drakkenheim-scgd.spells.Item.N5Y9HWajHMf0Ch0m]， @UUID[Compendium.dnd5e.spells.Item.nqBDWkVOfcGZt4YU]</td></tr><tr><td>3 级</td><td>@UUID[Compendium.drakkenheim-scgd.spells.Item.OSEwx1jvbxzRSkC6]， @UUID[Compendium.drakkenheim-scgd.spells.Item.y0Hjt94L5pDGhot3]</td></tr><tr><td>5 级</td><td>@UUID[Compendium.drakkenheim-scgd.spells.Item.BgqUVivqJ43rgAxf]， @UUID[Compendium.drakkenheim-scgd.spells.Item.kkTnKuh9hPMvoVSN]</td></tr><tr><td>7 级</td><td>@UUID[Compendium.drakkenheim-scgd.spells.Item.r2LmhwT41M46kPLP]， @UUID[Compendium.drakkenheim-scgd.spells.Item.Zl5sRTuiieHzAePp]</td></tr><tr><td>9 级</td><td>@UUID[Compendium.drakkenheim-scgd.spells.Item.dvi6ZEKgBdDHGS0G]， @UUID[Compendium.dnd5e.spells.Item.o9ZCvuD2B1OTcubb]</td></tr></tbody></table>",
       "advancement": {
         "Delerium Spells: 1st Level": {
-          "title": "Delerium Spells: 1st Level",
-          "hint": "Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a contaminated spell."
+          "title": "妄质法术：一环",
+          "hint": "每当你获得一个术士等级时，你可以用同等级的另一个法术替换你从这个特性中获得的一个法术。新的法术必须是一个污染法术。"
         },
         "Delerium Spells: 2nd Level": {
-          "title": "Delerium Spells: 2nd Level",
-          "hint": "Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a contaminated spell."
+          "title": "妄质法术：二环",
+          "hint": "每当你获得一个术士等级时，你可以用同等级的另一个法术替换你从这个特性中获得的一个法术。新的法术必须是一个污染法术。"
         },
         "Delerium Spells: 3rd Level": {
-          "title": "Delerium Spells: 3rd Level",
-          "hint": "Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a contaminated spell."
+          "title": "妄质法术：三环",
+          "hint": "每当你获得一个术士等级时，你可以用同等级的另一个法术替换你从这个特性中获得的一个法术。新的法术必须是一个污染法术。"
         },
         "Delerium Spells: 4th Level": {
-          "title": "Delerium Spells: 4th Level",
-          "hint": "Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a contaminated spell."
+          "title": "妄质法术：四环",
+          "hint": "每当你获得一个术士等级时，你可以用同等级的另一个法术替换你从这个特性中获得的一个法术。新的法术必须是一个污染法术。"
         },
         "Delerium Spells: 5th Level": {
-          "title": "Delerium Spells: 5th Level",
-          "hint": "Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a contaminated spell."
+          "title": "妄质法术：五环",
+          "hint": "每当你获得一个术士等级时，你可以用同等级的另一个法术替换你从这个特性中获得的一个法术。新的法术必须是一个污染法术。"
         }
       }
     },
@@ -910,7 +973,7 @@
       "description": "<p><em>先决：神秘学者工具或驱魔人套组熟练，以及施法能力</em></p><hr /><p>将你的智力或魅力增加1，上限为20。</p><p>当你完成长休时，你可以触摸你的工具包并将你所知的一个法术注入其中。该法术的等级必须小于或等于你的熟练加值，且施法时间为 1 个动作。当持有你的工具包时，你可以使用一个动作施放此法术，而不需消耗法术位。你可以以这种方式施放该法术一次，然后必须完成一次长休才能再次这样做。物品保持被注入魔法的状态，直到你施放了注入的法术，或直到你再完成一次长休。</p>",
       "advancement": {
         "PBGQmp25VVA0XiRa": {
-          "hint": "Increase your Intelligence or Charisma score by 1, to a maximum of 20."
+          "hint": "你的智力或魅力增加 1，上限为 20。"
         }
       }
     },
@@ -956,23 +1019,23 @@
       "description": "<p>比起自然和荒野，城市游侠更适应屋顶城市战斗中的游击战术。这些游侠受过在荒废建筑和蜿蜒街道中的机动性和隐匿训练，在废墟之中如鱼得水。他们是矫健的奔跑者和娴熟的狙击手，总是知道最适合对付敌人的有利位置。</p><h3>城市游侠法术</h3><p>当你到达城市游侠法术表中特定的游侠等级时，你就始终准备了表中对应的法术。该法术被视为你的游侠法术，但它不计入你所知的游侠法术数量。</p><table><caption>城市游侠法术</caption><thead><tr><th>游侠等级</th><th>法术</th></tr></thead><tbody><tr><td>3 级</td><td>@UUID[Compendium.dnd5e.spells.Item.pub0OWVEB71XQx1n]{羽落术}</td></tr><tr><td>5 级</td><td>@UUID[Compendium.dnd5e.spells.Item.1N8dDMMgZ1h1YJ3B]{隐形术}</td></tr><tr><td>9 级</td><td>@UUID[Compendium.dnd5e.spells.Item.Szvk5FEVQW3uhJi5]{加速术}</td></tr><tr><td>13 级</td><td>@UUID[Compendium.dnd5e.spells.Item.A4RsPuSvB9wFtz1j]{任意门}</td></tr><tr><td>17 级</td><td>@UUID[Compendium.dnd5e.spells.Item.ATo0Eb63TDtnu6iA]{活化物件}</td></tr></tbody></table>",
       "advancement": {
         "Gutter Runner": {
-          "title": "Gutter Runner",
-          "hint": "You gain proficiency in the Athletics & Acrobatics skills if you don't already have it. Your proficiency bonus is doubled for any ability check you make that uses either of those proficiencies."
+          "title": "街头跑者",
+          "hint": "你获得等于你步行速度的攀爬速度，如果你没有运动和体操的熟练，你将获得之。你在使用这些熟练进行的属性检定中加上双倍的熟练加值。"
         },
         "Urban Ranger Magic: 1st Level": {
-          "title": "Urban Ranger Magic: 1st Level"
+          "title": "城市游侠魔法：一环"
         },
         "Urban Ranger Magic: 2nd Level": {
-          "title": "Urban Ranger Magic: 2nd Level"
+          "title": "城市游侠魔法：二环"
         },
         "Urban Ranger Magic: 3rd Level": {
-          "title": "Urban Ranger Magic: 3rd Level"
+          "title": "城市游侠魔法：三环"
         },
         "Urban Ranger Magic: 4th Level": {
-          "title": "Urban Ranger Magic: 4th Level"
+          "title": "城市游侠魔法：四环"
         },
         "Urban Ranger Magic: 5th Level": {
-          "title": "Urban Ranger Magic: 5th Level"
+          "title": "城市游侠魔法：五环"
         }
       }
     },
@@ -982,7 +1045,13 @@
     },
     "Esoteric Theory: Doctor's Note": {
       "name": "隐秘理论：医者谏言",
-      "description": "<p>你可以随意施展法术@UUID[Compendium.dnd5e.spells.Item.GtGjNjPBgUHxGYAD]。你必须完成一次长休才能使用该理论再次联络同一个生物。</p>"
+      "description": "<p>你可以随意施展法术@UUID[Compendium.dnd5e.spells.Item.GtGjNjPBgUHxGYAD]。你必须完成一次长休才能使用该理论再次联络同一个生物。</p>",
+      "advancement": {
+        "Doctor's Note: Sending": {
+          "title": "医者谏言：短讯术",
+          "hint": "你可以随意施展法术短讯术。你必须完成一次长休才能使用该理论再次联络同一个生物。"
+        }
+      }
     },
     "Body Modification": {
       "name": "肉体修饰",
@@ -1006,7 +1075,13 @@
     },
     "Esoteric Theory: Laboratory Assistant": {
       "name": "隐秘理论：实验室助理",
-      "description": "<p>你习得法术@UUID[Compendium.dnd5e.spells.Item.JGT5bNqu9REL7Fuz]，并视为始终准备它。它不计入你的药剂师准备法术数量中。</p>"
+      "description": "<p>你习得法术@UUID[Compendium.dnd5e.spells.Item.JGT5bNqu9REL7Fuz]，并视为始终准备它。它不计入你的药剂师准备法术数量中。</p>",
+      "advancement": {
+        "Laboratory Assistant: Find Familair": {
+          "title": "实验室助理：寻获魔宠",
+          "hint": "你习得法术寻获魔宠，并视为始终准备它。它不计入你的药剂师准备法术数量中。"
+        }
+      }
     },
     "Esoteric Theory: Surgical Strikes": {
       "name": "隐秘理论：外科打击",
@@ -1050,20 +1125,20 @@
       "description": "<p>有一些魔契师从完整和谐的统一体系中汲取力量，诸如卫星、行星、星系乃至整个宇宙。与域外天魔签约的魔契师通常会认为他们服务于一尊神灵或者类似神灵的存在，但是这尊存在的真实面貌隐藏在神秘之下，因为祂的外表无法理解、不可名状。而祂赐予魔契师的力量源自于遥远的恒星乃至恒星系之外。</p><h4>扩展法术列表</h4><p>学习魔契师法术时，你的域外天魔宗主赐予你将以下法术加入魔契师法术列表进行选择的权力。</p><table><caption>宇宙扩展法术</caption><thead><tr><th>法术等级</th><th>法术</th></tr></thead><tbody><tr><td>1 级</td><td>@UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{魔法飞弹}， @UUID[Compendium.dnd5e.spells.Item.nqBDWkVOfcGZt4YU]{妖火}</td></tr><tr><td>3 级</td><td>@UUID[Compendium.dnd5e.spells.Item.bV3yun6MIuFj71Er]{月华之光}， @UUID[Compendium.dnd5e.spells.Item.7u2obDvuvtZBkTfq]{灼热射线}</td></tr><tr><td>5 级</td><td>@UUID[Compendium.dnd5e.spells.Item.GSvLWcdCZLQkilXT]{闪现术}， @UUID[Compendium.dnd5e.spells.Item.uCud2s4TjMfjiXUb]{灵体卫士}</td></tr><tr><td>7 级</td><td>@UUID[Compendium.dnd5e.spells.Item.avD5XUtkBPQQR97c]{火焰护盾}， @UUID[Compendium.dnd5e.spells.Item.X3DrXgxjwI2dvkD6]{火墙术}</td></tr><tr><td>9 级</td><td>@UUID[Compendium.dnd5e.spells.Item.5e1xTohkzqFqbYH4]{焰击术}， @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{高等复原术}</td></tr></tbody></table>",
       "advancement": {
         "Shooting Stars: Eldritch Blast": {
-          "title": "Shooting Stars: Eldritch Blast"
+          "title": "流星：魔能爆"
         },
         "Features": {
-          "title": "Features"
+          "title": "特性"
         },
         "Cosmic Guidance: Cantrip": {
-          "title": "Cosmic Guidance: Cantrip"
+          "title": "宇宙指南：戏法"
         },
         "Cosmic Guidance: Augury": {
-          "title": "Cosmic Guidance: Augury"
+          "title": "宇宙指南：卜筮术"
         },
         "Cosmic Guidance: Languages": {
-          "title": "Cosmic Guidance: Languages",
-          "hint": "You can speak, read, and write Celestial and Deep Speech."
+          "title": "宇宙指南：语言",
+          "hint": "你可以说、读、写天界语和深潜语。"
         },
         "Meteoric Impact": {
           "title": "Meteoric Impact"
@@ -1139,32 +1214,38 @@
     },
     "Esoteric Theory: Anesthesiology": {
       "name": "隐秘理论：麻醉学",
-      "description": "<p>你可以不需要消耗法术位和法术成分的情况下施展法术@UUID[Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4]你必须提前完成一次长休才能对同一个生物再次使用该理论。</p>"
+      "description": "<p>你可以不需要消耗法术位和法术成分的情况下施展法术@UUID[Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4]你必须提前完成一次长休才能对同一个生物再次使用该理论。</p>",
+      "advancement": {
+        "Anesthesiology: Hold Person": {
+          "title": "麻醉学：定身类人",
+          "hint": "你可以不需要消耗法术位和法术成分的情况下施展法术定身类人你必须提前完成一次长休才能对同一个生物再次使用该理论。"
+        }
+      }
     },
     "Shadow Domain": {
       "name": "暗影领域",
       "description": "<p>神圣之火的牧师知晓生命始终是光明与黑暗之间的平衡。大多数牧师守护着圣火，他们的神圣使命是抵御黑暗，以及为过世者提供指引。暗影领域的牧师则与神圣的黑暗面同调。他们致力于平衡万物，运用暗影的力量对抗敌人。他们知晓并非所有人都值得光明救赎，因而将魑魅魍魉送入暗影是他们的正义之举。</p><table><caption>暗影领域法术表</caption><thead><tr><th>牧师等级</th><th>法术</th></tr></thead><tbody><tr><td>1 级</td><td>@UUID[Compendium.dnd5e.spells.Item.7e3QXF10hLNDEdr6]{虚假生命}， @UUID[Compendium.dnd5e.spells.Item.KhwiSi9fwVfUPtku]{睡眠术}</td></tr><tr><td>3 级</td><td>@UUID[Compendium.dnd5e.spells.Item.S7VbUetIfVT7B6Eq]{黑暗术， @UUID[Compendium.dnd5e.spells.Item.pRMvmknwLf2tdMTj]{行动无踪}</td></tr><tr><td>5 级</td><td>@UUID[Compendium.dnd5e.spells.Item.6g3WLOZ2u0EbaLAd]{催眠图纹}， @UUID[Compendium.dnd5e.spells.Item.aU62xVUBYkAQWIHv]{回避侦测}</td></tr><tr><td>7 级</td><td>@UUID[Compendium.dnd5e.spells.Item.DGONTFbk5eORs5qv]{艾伐黑触手}， @UUID[Compendium.dnd5e.spells.Item.tEpDmYZNGc9f5OhJ]{高等隐形术}</td></tr><tr><td>9 级</td><td>@UUID[Compendium.dnd5e.spells.Item.RpKjTlYASrfqUPVA]{寒冰锥}， @UUID[Compendium.dnd5e.spells.Item.kSPRpeIx3w3nihrF]{托梦术}</td></tr></tbody></table>",
       "advancement": {
         "Shadow Domain: Bonus Cantrips": {
-          "title": "Shadow Domain: Bonus Cantrips"
+          "title": "暗影领域：附赠戏法"
         },
         "Features": {
-          "title": "Features"
+          "title": "特性"
         },
         "Domain Spells: 1st Level": {
-          "title": "Domain Spells: 1st Level"
+          "title": "暗影领域：一环"
         },
         "Domain Spells: 2nd Level": {
-          "title": "Domain Spells: 2nd Level"
+          "title": "暗影领域：二环"
         },
         "Domain Spells: 3rd Level": {
-          "title": "Domain Spells: 3rd Level"
+          "title": "暗影领域：三环"
         },
         "Domain Spells: 4th Level": {
-          "title": "Domain Spells: 4th Level"
+          "title": "暗影领域：四环"
         },
         "Domain Spells: 5th Level": {
-          "title": "Domain Spells: 5th Level"
+          "title": "暗影领域：五环"
         }
       }
     },
@@ -1252,8 +1333,8 @@
       "description": "<p>修行织法武者的武僧通过训练，已将自己的身体和灵魂与魔网相协调。他们可以驾驭这股天地间的能量，并将其用于武艺修炼。承袭此脉的武僧虽然不是魔法血脉出身，却已可以熟练操纵最原始、最自然的能量形态。</p>",
       "advancement": {
         "Erudite Education: Arcana Proficiency": {
-          "title": "Erudite Education: Arcana Proficiency",
-          "hint": "You gain proficiency in the Arcana skill."
+          "title": "饱学之士：奥秘熟练",
+          "hint": "你获得奥秘技能的熟练。"
         }
       }
     },
@@ -1261,30 +1342,35 @@
       "name": "掘墓人",
       "description": "<p>掘墓人是生与死的主宰。他们花费多年时间完善他们的理论，来将刚刚死去之人复活、或将遗弃的肉块和拼凑的人体重组成新生命，这让大多数掘墓人在天才和疯子的界限上反复徘徊。掘墓人们从死神手中夺回生命的技艺使他们非常适合处理已死之物和不死生物。他们的疯狂才能，表现为可以指挥着由他们敌人遗骸组成的生物，让它们在战场上冲锋陷阵。</p><h3>掘墓人法术</h3><table>< 级ead><tr>< 级>掘墓人等级</ 级>< 级>法术</ 级></tr></ 级ead><tbody><tr><td>1st</td><td>@UUID[Compendium.dnd5e.spells.Item.7e3QXF10hLNDEdr6]{虚假生命}, @UUID[Compendium.dnd5e.spells.Item.ksaaTxIbKx2sJfia]{致伤术}</td></tr><tr><td>3rd</td><td>@UUID[Compendium.dnd5e.spells.Item.n4JDcFKe5ikzYmAc]{遗体防腐}, @UUID[Compendium.drakkenheim-scgd.spells.Item.fSYZjZLqETuPd2Gy]{精神焕发*}</td></tr><tr><td>5 级</td><td>@UUID[Compendium.dnd5e.spells.Item.IyikgTEOTv701jgQ]{闪电束}, @UUID[Compendium.dnd5e.spells.Item.LmRHHMtplpxr9fX6]{回生术}</td></tr><tr><td>7 级</td><td>@UUID[Compendium.dnd5e.spells.Item.VtCXMdyM6mAdIJZb]{防死结界}, @UUID[Compendium.drakkenheim-scgd.spells.Item.zYbQfFPFHLHlWJ0i]{尸爆*}</td></tr><tr><td>9 级</td><td>@UUID[Compendium.dnd5e.spells.Item.AGFMPAmuzwWO6Dfz]{死者复活}, @UUID[Compendium.drakkenheim-scgd.spells.Item.sU02lQ4LjO1dzcIK]{神经毒气*}</td></tr></tbody></table>",
       "advancement": {
-        "Reanimator Spells: 1st Level": {
-          "title": "Reanimator Spells: 1st Level"
+        "Reanimator: 1st Level Spells": {
+          "title": "掘墓人：一环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Reanimator Spells: 2nd Level": {
-          "title": "Reanimator Spells: 2nd Level"
+        "Reanimator: 2nd Level Spells": {
+          "title": "掘墓人：二环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Reanimator Spells: 3rd Level": {
-          "title": "Reanimator Spells: 3rd Level"
+        "Reanimator: 3rd Level Spells": {
+          "title": "掘墓人：三环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Reanimator Spells: 4th level": {
-          "title": "Reanimator Spells: 4th level"
+        "Reanimator: 4th Level Spells": {
+          "title": "掘墓人：四环法术：",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Reanimator Spells: 5th Level": {
-          "title": "Reanimator Spells: 5th Level"
+        "Reanimator: 5th Level Spells": {
+          "title": "掘墓人：五环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
         "Spark of Life: Cantrips": {
-          "title": "Spark of Life: Cantrips"
+          "title": "生命火花：戏法"
         },
         "Spark of Life": {
-          "title": "Spark of Life"
+          "title": "生命火花"
         },
         "Reanimated Head: Skill Proficiencies": {
-          "title": "Reanimated Head: Skill Proficiencies",
-          "hint": "You gain proficiency in the Arcana and Investigation skills."
+          "title": "颅获新生：技能熟练",
+          "hint": "你获得奥秘和调查技能的熟练。"
         }
       }
     },
@@ -1301,32 +1387,37 @@
       "name": "突变者",
       "description": "<p>突变者们研究出了一种血清，他们可以注射这种血清变化成怪物般的形态。他们将自身变为这股力量游走的管道，并且自己以骇人巨兽的形态猛冲向敌群。他们终其一生都在研究和挖掘新的方法，来提升并改进血清，以期达到完美的姿态。</p><h3>突变者法术</h3><table><thead><tr><th>突变者等级</th><th>法术</th></tr></thead><tbody><tr><td>1st</td><td>@UUID[Compendium.dnd5e.spells.Item.ZrTc23tToJ0JpH2h]{跳跃术}, @UUID[Compendium.drakkenheim-scgd.spells.Item.1ghOJpyACQHvz78S]{毒素护盾*}</td></tr><tr><td>3rd</td><td>@UUID[Compendium.dnd5e.spells.Item.8RTDOt80u8aBv9qx]{变身术}, @UUID[Compendium.dnd5e.spells.Item.9eOZDBImVKxbeOyZ]{强化属性}</td></tr><tr><td>5th</td><td>@UUID[Compendium.dnd5e.spells.Item.Szvk5FEVQW3uhJi5]{加速术 Haste}, @UUID[Compendium.dnd5e.spells.Item.13uVuBQP6VaiSPvC]{水下呼吸}</td></tr><tr><td>7th</td><td>@UUID[Compendium.dnd5e.spells.Item.04nMsTWkIFvkbXlY]{变形术}, @UUID[Compendium.dnd5e.spells.Item.ReMbjfeOKoSj3O79]{石肤术}</td></tr><tr><td>9th</td><td>@UUID[Compendium.dnd5e.spells.Item.zMEo5DKK8uxsuWnq]{转生术}, @UUID[Compendium.drakkenheim-scgd.spells.Item.i6X3czBV4C65jLKh]{脓毒休克*}</td></tr></tbody></table>",
       "advancement": {
-        "Mutagenist Spells: 1st Level": {
-          "title": "Mutagenist Spells: 1st Level"
+        "Mutagenist: 1st Level Spells": {
+          "title": "突变者：一环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Mutagenist Spells: 2nd Level": {
-          "title": "Mutagenist Spells: 2nd Level"
+        "Mutagenist: 2nd Level Spells": {
+          "title": "突变者：二环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Mutagenist Spells: 3rd Level": {
-          "title": "Mutagenist Spells: 3rd Level"
+        "Mutagenist: 3rd Level Spells": {
+          "title": "突变者：三环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Mutagenist Spells: 4th level": {
-          "title": "Mutagenist Spells: 4th level"
+        "Mutagenist: 4th Level Spells": {
+          "title": "突变者：四环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Mutagenist Spells: 5th Level": {
-          "title": "Mutagenist Spells: 5th Level"
+        "Mutagenist: 5th Level Spells": {
+          "title": "突变者：五环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
         "Natural Philosophy: Tool Proficiencies": {
-          "title": "Natural Philosophy: Tool Proficiencies",
-          "hint": "You gain proficiency with alchemist's supplies and either the herbalism kit or poisoner's kit."
+          "title": "自然哲学：工具熟练",
+          "hint": "你获得炼金工具，以及草药工具，或制毒工具二者其一技能的熟练。"
         },
         "Natural Philosophy: Languages": {
-          "title": "Natural Philosophy: Languages",
-          "hint": "You learn two languages of your choice."
+          "title": "自然哲学：语言",
+          "hint": "你习得两门语言。"
         },
         "Natural Philosophy: Nature": {
-          "title": "Natural Philosophy: Nature",
-          "hint": "You gain proficiency in the Nature skill."
+          "title": "自然哲学：自然",
+          "hint": "你获得自然技能的熟练。"
         }
       }
     },
@@ -1386,7 +1477,84 @@
     },
     "Arcane Fletcher": {
       "name": "奥术制箭师",
-      "description": "<p><em>先决：木匠工具、修补工具或木雕工具熟练</em></p><hr /><p>每当你进行长休时，你可以花费 1 小时使用你的工具，为一定数量的箭矢或弩箭注入元素力量。你可以注入的魔法箭矢或弩箭的最大数量等于你熟练加值的两倍。</p><p>你可以从火焰、寒冷、闪电、强酸或毒素中选择伤害类型。这些箭矢或弩箭在命中时造成额外的 1d4 伤害，伤害类型为所选类型。如果你制造了新一批的魔法箭矢与弩箭，则你先前制造的魔法箭矢与弩箭会失去魔法效力。</p><p>在 12 级时，额外伤害提升至 1d6。</p>"
+      "description": "<p><em>先决：木匠工具、修补工具或木雕工具熟练</em></p><hr /><p>每当你进行长休时，你可以花费 1 小时使用你的工具，为一定数量的箭矢或弩箭注入元素力量。你可以注入的魔法箭矢或弩箭的最大数量等于你熟练加值的两倍。</p><p>你可以从火焰、寒冷、闪电、强酸或毒素中选择伤害类型。这些箭矢或弩箭在命中时造成额外的 1d4 伤害，伤害类型为所选类型。如果你制造了新一批的魔法箭矢与弩箭，则你先前制造的魔法箭矢与弩箭会失去魔法效力。</p><p>在 12 级时，额外伤害提升至 1d6。</p>",
+      "activities": {
+        "Imbue Projectiles": {
+          "name": "注入箭/弩矢"
+        }
+      },
+      "effects": {
+        "Arcane Fletcher: Acid": {
+          "name": "奥术制箭师：强酸",
+          "changes": {
+            "name": "奥术强酸 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：强酸</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d4 强酸伤害。</p> </fieldset>"
+          }
+        },
+        "Arcane Fletcher: Cold": {
+          "name": "奥术制箭师：寒冷",
+          "changes": {
+            "name": "奥术寒冷 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：寒冷</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d4 强酸伤害。</p> </fieldset>"
+          }
+        },
+        "Arcane Fletcher: Fire": {
+          "name": "奥术制箭师：火焰",
+          "changes": {
+            "name": "奥术火焰 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：火焰</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d4 火焰伤害。</p> </fieldset>"
+          }
+        },
+        "Arcane Fletcher: Lightning": {
+          "name": "奥术制箭师：闪电",
+          "changes": {
+            "name": "奥术闪电 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：闪电</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d4 闪电伤害。</p> </fieldset>"
+          }
+        },
+        "Arcane Fletcher: Poison": {
+          "name": "奥术制箭师：毒素",
+          "changes": {
+            "name": "奥术毒素 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：毒素</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d4 毒素伤害。</p> </fieldset>"
+          }
+        },
+        "ixbHss19pUKYDAN9": {
+          "name": "奥术制箭师：强酸",
+          "changes": {
+            "name": "奥术强酸 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：强酸</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d6 强酸伤害。</p> </fieldset>"
+          }
+        },
+        "x01Ob4VdU4UlNYz3": {
+          "name": "奥术制箭师：寒冷",
+          "changes": {
+            "name": "奥术寒冷 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：寒冷</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d6 寒冷伤害。</p> </fieldset>"
+          }
+        },
+        "KKDjnMFqXxnwkRgq": {
+          "name": "奥术制箭师：火焰",
+          "changes": {
+            "name": "奥术火焰 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：火焰</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d6 火焰伤害。</p> </fieldset>"
+          }
+        },
+        "JvLbRHVeaLa8pG4y": {
+          "name": "奥术制箭师：闪电",
+          "changes": {
+            "name": "奥术闪电 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：闪电</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d6 闪电伤害。</p> </fieldset>"
+          }
+        },
+        "7kL2kE9a2jXpMRCP": {
+          "name": "奥术制箭师：毒素",
+          "changes": {
+            "name": "奥术毒素 {}",
+            "system.description.value": "{} <fieldset>     <legend>奥术制箭师：毒素</legend>     <p>这些箭矢或弩箭在命中时造成额外 1d6 毒素伤害。</p> </fieldset>"
+          }
+        }
+      }
     },
     "Serpent Strikes": {
       "name": "蛇出洞",
@@ -1414,34 +1582,39 @@
       "description": "<p> 你用捡来的尸体部位做成了一个同伴，并且用你神秘的魔法给予了它生命：一个尸锻生物。这个生物对你和你的同伴们友好，并且它遵循你的指令。它的游戏数据详见附带的统计表尸锻生物中。它在一部分数据上使用你的熟练加值。你可以决定这个生物的外貌特征，你的选择不会影响它的游戏数据。 </p><p> 在战斗中，它共享你的先攻，但它在你之后立即开始其回合。他可以在自己的回合内移动并且使用反应，但它在自己的回合内只会使用动作来进行回避动作，除非你在你的回合内使用一个附赠动作来指挥它采取另一种动作。这个动作可以是数据表中的一个动作，或任何其他的动作。如果你陷入失能，这个生物能够进行任何它所选的动作，而不仅是回避。 </p><p> 如果你的尸锻生物死亡不超过一个小时，在你处于它身边 5 尺范围内并消耗一个药剂师法术位的情况下，你可以用一个动作来使用你的医疗包复活它。尸锻伙伴将会在 1 分钟后复活并恢复它的全部生命值。 </p><p> 在长休结束时，如果你有一个医疗包，并且能使用合适的“材料”的话，你可以创造一个新的尸锻生物。如果你已经通过此特性获得一个尸锻生物了，那么前一个生物将立即死亡。如果你死亡了，该生物同样会死亡。 </p>"
     },
     "Pathogenist": {
-      "name": "病原师 ",
+      "name": "病原师",
       "description": "<p>围绕疾病展开的研究为许多危险的科学发现打开了大门。作为消除身体疾病和传染病突变的专家，病原师们通过将他们的敌人和怪物当做其传染病测试对象的方式，将他们的研究带入战场。经年累月对瘟疫的起源和效果的研究，使他们成为了疾病突变的专家，允许他们让他们的疾病以可怕的方式传播，并让敌人陷入衰弱的症状，让他们的身心为之瓦解、崩溃。</p><h3>病原师等级</h3><table><thead><tr><th>病原师等级</th><th>法术</th></tr></thead><tbody><tr><td>1 级</td><td>@UUID[Compendium.drakkenheim-scgd.spells.Item.yv8R1NwzoZ6UJEsJ]{感染术*}， @UUID[Compendium.dnd5e.spells.Item.ksaaTxIbKx2sJfia]{致伤术}</td></tr><tr><td>3 级</td><td>@UUID[Compendium.dnd5e.spells.Item.zwGsAv6kmwzYGhh3]{目盲术／耳聋术}， @UUID[Compendium.drakkenheim-scgd.spells.Item.pO02rAZlJJMhHwDV]{生物危害*}</td></tr><tr><td>5 级</td><td>@UUID[Compendium.drakkenheim-scgd.spells.Item.xLVG3d2Q3vKNvWK8]{瘟疫术*}， @UUID[Compendium.drakkenheim-scgd.spells.Item.jD5KpnAgudUJshYU]{恶毒灵光*}</td></tr><tr><td>7 级</td><td>@UUID[Compendium.dnd5e.spells.Item.pybg5MNc3lkerH4Y]{枯萎术}， @UUID[Compendium.drakkenheim-scgd.spells.Item.xh4rMJG8taEAbE9I]{鲜血蠕虫*}</td></tr><tr><td>9 级</td><td>@UUID[Compendium.dnd5e.spells.Item.CjIq8Ed7bu3vVwT1]{疫病术}， @UUIDCom[pendium.dnd5e.spells.Item.OVikYmSdHliAG2YD]{疫病虫群}</td></tr></tbody></table>",
       "advancement": {
-        "Pathogenist Spells: 1st Level": {
-          "title": "Pathogenist Spells: 1st Level"
+        "Pathogenist: 1st Level Spells": {
+          "title": "病原师：一环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Pathogenist Spells: 2nd Level": {
-          "title": "Pathogenist Spells: 2nd Level"
+        "Pathogenist: 2nd Level Spells": {
+          "title": "病原师：二环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Pathogenist Spells: 3rd Level": {
-          "title": "Pathogenist Spells: 3rd Level"
+        "Pathogenist: 3rd Level Spells": {
+          "title": "病原师：三环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Pathogenist Spells: 4th level": {
-          "title": "Pathogenist Spells: 4th level"
+        "Pathogenist: 4th Level Spells": {
+          "title": "病原师：四环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
-        "Pathogenist Spells: 5th Level": {
-          "title": "Pathogenist Spells: 5th Level"
+        "Pathogenist: 5th Level Spells": {
+          "title": "病原师：五环法术",
+          "hint": "你视为已经准备了特定的法术，如化学家法术表所示。这些法术计入你的药剂师法术，且不计入你的药剂师准备法术。"
         },
         "Plague Proficiency: Tool Proficiency": {
-          "title": "Plague Proficiency: Tool Proficiency",
-          "hint": "You gain proficiency with the herbalism kit. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice."
+          "title": "瘟疫熟练：工具熟练",
+          "hint": "你获得草药工具的熟练。若已拥有，则你获得其他任选的一项工匠工具的熟练。"
         },
         "Plague Proficiency: Cantrip": {
-          "title": "Plague Proficiency: Cantrip"
+          "title": "瘟疫熟练：戏法"
         },
         "Mutant Strain": {
-          "title": "Mutant Strain",
-          "hint": "You can evolve your diseases to cause new symptoms. You learn two mutant strains of your choice, and each time you gain a level in this class, you can replace one mutant strain you know with a different one from this feature."
+          "title": "突变菌株",
+          "hint": "你可以使你的疾病进化来产生新的病症。你习得你所选的两种突变菌株，并且每当你获得一个新的职业等级时，你可以将本特性给出的另一个不同菌株和你的一个已知菌株替换。"
         }
       }
     },
@@ -1463,49 +1636,49 @@
       "description": "<p>作为一名药剂师，你获得以下职业特性。</p><h3>生命值</h3><p><strong>生命骰：</strong> 每药剂师等级 1d8<br><strong>首级生命值：</strong> 8＋你的体质调整值<br><strong>升级生命值：</strong> 首级生命值之外，对应每个药剂师等级 5（1d8）+你的体质调整值</p><h3>熟练项</h3><p><strong>护甲：</strong> 轻甲、中甲<br><strong>武器：</strong> 简易武器、短剑、手弩<br><strong>工具：</strong> 任何一种工具熟练，再加上从以下工具中选择的一种：制毒工具，草药工具或炼金工具。<br><strong>豁免：</strong> 智力，感知<br><strong>技能：</strong> 从奥秘、历史、调查、医药、自然、宗教中选择两项</p><h3>装备</h3><p>你带着以下装备开始游戏，此外该角色还可以从其背景项中获得额外的起始装备：</p><ul><li>一把轻弩和 20 支弩矢或（b）任意一把简易武器</li><li>（a）一个材料包或（b）一件奥术法器</li><li>（a）一个学者套组或（b）一个地城套组</li><li>兽皮甲、任意简易武器和两把匕首</li><li>一件医疗包</li></ul><h1>药剂师职业表</h1><table border=\"0\"><thead><tr><td>职业等级</td><td>熟练加值</td><td>职业特性</td><td>已知理论</td></tr></thead><tbody><tr><td>1st</td><td>+2</td><td>@UUID[Compendium.drakkenheim-scgd.features.Item.c1cWZW18hPw81w9f]{药剂师施法}， @UUID[Compendium.drakkenheim-scgd.features.Item.3wvDHPWvb3yfZH7b]{玄奥实践}</td><td>̶</td></tr><tr><td>2nd</td><td>+2</td><td>@UUID[Compendium.drakkenheim-scgd.features.Item.9ygVgpyoY5TC6QhV]{隐秘理论}</td><td>2</td></tr><tr><td>3rd</td><td>+2</td><td>玄奥实践特性</td><td>2</td></tr><tr><td>4th</td><td>+2</td><td>属性值提升</td><td>2</td></tr><tr><td>5th</td><td>+3</td><td>--</td><td>3</td></tr><tr><td>6th</td><td>+3</td><td>玄奥实践特性</td><td>3</td></tr><tr><td>7th</td><td>+3</td><td>--</td><td>4</td></tr><tr><td>8th</td><td>+3</td><td>属性值提升</td><td>4</td></tr><tr><td>9th</td><td>+4</td><td>--</td><td>5</td></tr><tr><td>10th</td><td>+4</td><td>玄奥实践特性</td><td>5</td></tr><tr><td>11th</td><td>+4</td><td>@UUID[Compendium.drakkenheim-scgd.features.Item.07E4LBlJB9LBxzzP]{大公式（6 环）}</td><td>5</td></tr><tr><td>12th</td><td>+4</td><td>属性值提升</td><td>6</td></tr><tr><td>13th</td><td>+5</td><td>@UUID[Compendium.drakkenheim-scgd.features.Item.07E4LBlJB9LBxzzP]{大公式（7 环）}</td><td>6</td></tr><tr><td>14th</td><td>+5</td><td>玄奥实践特性</td><td>6</td></tr><tr><td>15th</td><td>+5</td><td>@UUID[Compendium.drakkenheim-scgd.features.Item.07E4LBlJB9LBxzzP]{大公式（8 环）}</td><td>7</td></tr><tr><td>16th</td><td>+5</td><td>属性值提升</td><td>7</td></tr><tr><td>17th</td><td>+6</td><td>@UUID[Compendium.drakkenheim-scgd.features.Item.07E4LBlJB9LBxzzP]{大公式（9 环）}</td><td>7</td></tr><tr><td>18th</td><td>+6</td><td>玄奥实践特性</td><td>8</td></tr><tr><td>19th</td><td>+6</td><td>属性值提升， @UUID[Compendium.drakkenheim-scgd.features.Item.07E4LBlJB9LBxzzP]{额外大公式（6 环）}</td><td>8</td></tr><tr><td>20th</td><td>+6</td><td>@UUID[Compendium.drakkenheim-scgd.features.Item.oYiopBcTylWw2iMj]{奇迹疗愈力}， @UUID[Compendium.drakkenheim-scgd.features.Item.07E4LBlJB9LBxzzP]{额外大公式（7 环）}</td><td>8</td></tr></tbody></table><hr><h1>玄奥实践</h1><p>@UUID[Compendium.drakkenheim-scgd.features.Item.LJn6blcn7U3WZM0f]</p><p>@UUID[Compendium.drakkenheim-scgd.features.Item.066tdj7Ot5Sf9Xj2]</p><p>@UUID[Compendium.drakkenheim-scgd.features.Item.JGquN35T5lVUy5EH]</p><p>@UUID[Compendium.drakkenheim-scgd.features.Item.f9mSl94Qzz5xjeGF]</p><p>@UUID[Compendium.drakkenheim-scgd.features.Item.iBeOFPdnKuZESA43]</p><p>@UUID[Compendium.drakkenheim-scgd.features.Item.eUqv8wW7ar9CuQXh]</p>",
       "advancement": {
         "Greater Formula: 6th Level Spell": {
-          "title": "Greater Formula: 6th Level Spell",
-          "hint": "Choose a 6th-level spell from the apothecary spell list as this greater formula. You gain another 6th level spell at 19th level."
+          "title": "大公式：六环法术",
+          "hint": "从药剂师法术列表中选择一个 6 环法术作为此公式。你能在 19 级习得额外一个 6 环法术。"
         },
         "Greater Formula: 7th Level Spell": {
-          "title": "Greater Formula: 7th Level Spell",
-          "hint": "Choose a 7th-level spell from the apothecary spell list as this greater formula. You gain another 7th level spell at 20th level."
+          "title": "大公式：七环法术",
+          "hint": "从药剂师法术列表中选择一个 7 环法术作为此公式。你能在 20 级习得额外一个 7 环法术。"
         },
         "Greater Formula: 8th Level Spell": {
-          "title": "Greater Formula: 8th Level Spell",
-          "hint": "Choose an 8th-level spell from the apothecary spell list as this greater formula."
+          "title": "大公式：八环法术",
+          "hint": "从药剂师法术列表中选择一个 8 环法术作为此公式。"
         },
         "Greater Formula: 9th Level Spell": {
-          "title": "Greater Formula: 9th Level Spell",
-          "hint": "Choose a 9th-level spell from the apothecary spell list as this greater formula."
+          "title": "大公式：九环法术",
+          "hint": "从药剂师法术列表中选择一个 9 环法术作为此公式。"
         },
         "Esoteric Theories": {
-          "title": "Esoteric Theories",
-          "hint": "You have discovered esoteric theories, scraps of forbidden lore that you can use to augment your magical abilities. You learn two Esoteric Theories of your choice. If an Esoteric Theory has prerequisites, you must meet them to learn it. You can learn the Esoteric Theory at the same time that you meet its prerequisites. A level prerequisite refers to your level in this class."
+          "title": "隐秘理论",
+          "hint": "你已经发现了一些隐秘理论，这些失落学问的只言片语可以用来强化你的魔法能力。你获得两种你所选的隐秘理论。可供你所选的理论在职业描述最后有详述。当你获得特定药剂师等级时，你可以额外获得你选择的理论，如药剂师职业表所展示的已知理论栏所示。除此之外，每当你获得一个该职业等级时，你可以选择一个你已经学习的理论，并用你当前等级可学习的另一个理论替换之。"
         },
         "Apothecary Class Proficiencies: Armor": {
-          "title": "Apothecary Class Proficiencies: Armor"
+          "title": "药剂师职业熟练：护甲"
         },
         "Apothecary Class Proficiencies: Weapons": {
-          "title": "Apothecary Class Proficiencies: Weapons"
+          "title": "药剂师职业熟练：武器"
         },
         "Apothecary Class Proficiencies: Skills": {
-          "title": "Apothecary Class Proficiencies: Skills"
+          "title": "药剂师职业熟练：技能"
         },
         "Apothecary Class Proficiencies: Tools": {
-          "title": "Apothecary Class Proficiencies: Tools"
+          "title": "药剂师职业熟练：工具"
         },
         "Apothecary Multiclass Proficiencies: Armor": {
-          "title": "Apothecary Multiclass Proficiencies: Armor"
+          "title": "药剂师兼职熟练：护甲"
         },
         "Apothecary Multiclass Proficiencies: Tools": {
-          "title": "Apothecary Multiclass Proficiencies: Tools"
+          "title": "药剂师兼职熟练：工具"
         },
         "Apothecary Class Proficiencies: Saving Throw": {
-          "title": "Apothecary Class Proficiencies: Saving Throw"
+          "title": "药剂师兼职熟练：豁免"
         },
         "Occult Practice": {
-          "title": "Occult Practice",
-          "hint": "At 1st level, you take up one of the Occult Practices, a chosen discipline which defines your ongoing research of the body and spirit: the Alienist, the Chemist, the Exorcist, the Mutagenist, the Pathogenist, or the Reanimator."
+          "title": "玄奥实践",
+          "hint": "第 1 级起，你选择习得一门玄奥实践，这门选定的学科表现了你对自身肉体和精神的持续研究：精神师，化学家，驱邪师，突变者，病原师，掘坟人。"
         }
       }
     },
@@ -1565,12 +1738,12 @@
       "description": "<p>维斯特玛，伊利瑞亚和卡斯匹亚三国之间曾爆发过无数的战争。许多伟大骑士，英勇士兵，强大战士的勇气经过了人类与怪物的考验。在这些勇敢者中总有一些人是天生的领袖，而指挥官就是这种人。他们站在战斗的最前线，团结他们的盟友并领导对敌人的冲锋。</p>",
       "advancement": {
         "Groomed for Leadership": {
-          "title": "Groomed for Leadership",
-          "hint": "You gain proficiency in the History and Persuasion skills if you don't already have it. Your proficiency bonus is doubled for any ability check you make that uses either of those proficiencies."
+          "title": "领袖修行",
+          "hint": "你获得历史和游说技能的熟练。你进行这两项技能的属性检定时，可以使用双倍的熟练加值。"
         },
         "Fearless Commander: Wisdom Save Proficiency": {
-          "title": "Fearless Commander: Wisdom Save Proficiency",
-          "hint": "You gain proficiency in Wisdom saving throws."
+          "title": "无畏司令：感知豁免熟练",
+          "hint": "你获得感知豁免的熟练。"
         }
       }
     },
@@ -1590,10 +1763,14 @@
     "Esoteric Theory: Inoculation": {
       "name": "隐秘理论：变质接种",
       "description": "<p>你获得暗蚀伤害的抗性，并且你的生命值上限无法被减少。除此之外，你免疫疾病。</p>",
-      "effects": {
-        "Esoteric Theory: Inoculation": {
-          "name": "隐秘理论：变质接种",
-          "description": "<p>你获得暗蚀伤害的抗性，并且你的生命值上限无法被减少。除此之外，你免疫疾病。</p>"
+      "advancement": {
+        "Inoculation: Necrotic Resistance": {
+          "title": "变质接种：暗蚀抗性",
+          "hint": "你获得暗蚀伤害的抗性。"
+        },
+        "Inoculation: Disease Immunity": {
+          "title": "变质接种：疾病免疫",
+          "hint": "你免疫疾病。"
         }
       }
     },
@@ -1641,7 +1818,13 @@
     },
     "Proficient Poisoner": {
       "name": "熟练毒师",
-      "description": "<p><em>先决：制毒工具、神秘学者工具或草药工具熟练</em></p><hr /><p>你对毒素伤害获得抗性，并且可以花费 1 分钟检查物质或物体来探测毒素的存在。</p><p>每天一次，在完成长休后，你可以花费一小时使用你选择的工具，将野外收集或找到的材料制作成一个特殊混合物或灌注物。这段时间内你必须可以使用你的工具。随着你等级的提升，你将学会制作更强大的物品，如下表所示。这些造物将在 24 小时后因变为惰性而失去作用。有关下面物品的更多信息，请参见核心规则。</p><table><thead><tr><th colspan=\"2\">毒物调配</th></tr></thead><tbody><tr><td>1 级</td><td>@UUID[Compendium.dnd5e.items.Item.eVbPkYjpl29RE2uW]{基础毒药}</td></tr><tr><td>5 级</td><td>蛇毒</td></tr><tr><td>11 级</td><td>飞龙毒液</td></tr></tbody></table>"
+      "description": "<p><em>先决：制毒工具、神秘学者工具或草药工具熟练</em></p><hr /><p>你对毒素伤害获得抗性，并且可以花费 1 分钟检查物质或物体来探测毒素的存在。</p><p>每天一次，在完成长休后，你可以花费一小时使用你选择的工具，将野外收集或找到的材料制作成一个特殊混合物或灌注物。这段时间内你必须可以使用你的工具。随着你等级的提升，你将学会制作更强大的物品，如下表所示。这些造物将在 24 小时后因变为惰性而失去作用。有关下面物品的更多信息，请参见核心规则。</p><table><thead><tr><th colspan=\"2\">毒物调配</th></tr></thead><tbody><tr><td>1 级</td><td>@UUID[Compendium.dnd5e.items.Item.eVbPkYjpl29RE2uW]{基础毒药}</td></tr><tr><td>5 级</td><td>蛇毒</td></tr><tr><td>11 级</td><td>飞龙毒液</td></tr></tbody></table>",
+      "advancement": {
+        "Proficient Poisoner: Poison Resistance": {
+          "title": "熟练毒师：毒素抗性",
+          "hint": "你获得对毒素伤害的抗性。"
+        }
+      }
     },
     "Reshaped Form: Toxic Fumes": {
       "name": "血肉改造：剧毒烟云",
@@ -1657,7 +1840,7 @@
       "description": "<p><em>先决：神秘学者工具包、驱魔人套组或医护工具包熟练</em></p><hr /><p>你的智力或感知增加 1，上限为 20。</p><p>在短休期间，你可以照顾生病或受伤的人。你可以从最多六个你可以在休息期间照顾到的生物身上移除 1 级力竭，治愈一种疾病，或移除魅惑、恐惧、麻痹或中毒状态。此外，你可以选择最多 6 个你可以听见和看见的生物，使他们在休息期间获得额外的生命骰，数量等于你的熟练加值。</p>",
       "advancement": {
         "9kCEIhbvqjL2vCNY": {
-          "hint": "Increase your Intelligence or Wisdom score by 1, to a maximum of 20."
+          "hint": "你的智力或感知增加 1，上限为 20。"
         }
       }
     },
@@ -1687,22 +1870,22 @@
       "description": "<p>那些立下巫咒之誓的人宣誓效忠于女巫集会、妖精生物和掌控魔法、命运和死亡的神秘神明。作为交换，这神圣的誓约赋予圣武士们莫测的魔法来诅咒那些试图挑战命运或逃避古神怒火的人。</p><h4>巫咒之信条</h4><p><strong>服务神秘。</strong> 掌控未来之力量的神明已将神秘魔法注入你的体内。通过你的誓约，你成为了他们深奥意志的凡间载体。</p><p><strong>守护秘密。</strong> 这个世界隐藏着最好被长久遗忘的黑暗秘密。你是那些秘密的守护者，防止它们落入意志薄弱的凡人手中，为邪恶目的服务。</p><p><strong>仲裁命运。</strong> 命运的纱线早已编织，与其螳臂当车不如顺应自然。凡人皆有不幸。</p><p><strong>毫不留情。</strong> 虽然有些人认为你的奇异力量是黑暗或腐化的，但你正是用邪徒奸党用来对付你的诅咒和魔法来还治其人之身。对那些抵抗命运的人毫不留情。</p><h4>圣武士等级</h4><p>你将在下列圣武士等级获得誓约法术。</p><table><caption>巫咒之誓法术</caption><thead><tr><th>圣武士等级</th><th>法术</th></tr></thead><tbody><tr><td>3级</td><td>@UUID[Compendium.dnd5e.spells.Item.22dPoeXfaaAv4K3h]{炼狱叱喝}, @UUID[Compendium.dnd5e.spells.Item.BQk5Row4NymMnUQl]{塔莎狂笑术}, @UUID[Compendium.dnd5e.spells.Item.Z9p1vezIn95jw1Yw]{魔能爆}</td></tr><tr><td>5级</td><td>@UUID[Compendium.dnd5e.spells.Item.1N8dDMMgZ1h1YJ3B]{隐形术}, @UUID[Compendium.dnd5e.spells.Item.zMAWdyc8UVb37BK4]{暗示术}</td></tr><tr><td>9级</td><td>@UUID[Compendium.dnd5e.spells.Item.pO4zGe5LmFIYqJiL]{降咒}, @UUID[Compendium.dnd5e.spells.Item.XXUDGFELgoskdOD0]{恐惧术}</td></tr><tr><td>13级</td><td>@UUID[Compendium.dnd5e.spells.Item.A4RsPuSvB9wFtz1j]{任意门}, @UUID[Compendium.dnd5e.spells.Item.04nMsTWkIFvkbXlY]{变形术}</td></tr><tr><td>17级</td><td>@UUID[Compendium.dnd5e.spells.Item.91Sw6vOIaO7U8DvM]{支配类人}, @UUID[Compendium.dnd5e.spells.Item.MBMaQLwoy05qzMJ3]{假象术}</td></tr></tbody></table>",
       "advancement": {
         "Features": {
-          "title": "Features"
+          "title": "特性"
         },
         "Oath Spells: 1st Level": {
-          "title": "Oath Spells: 1st Level"
+          "title": "圣誓法术：一环"
         },
         "Oath Spells: 2nd Level": {
-          "title": "Oath Spells: 2nd Level"
+          "title": "圣誓法术：二环"
         },
         "Oath Spells: 3rd Level": {
-          "title": "Oath Spells: 3rd Level"
+          "title": "圣誓法术：三环"
         },
         "Oath Spells: 4th level": {
-          "title": "Oath Spells: 4th level"
+          "title": "圣誓法术：四环"
         },
         "Oath Spells: 5th Level": {
-          "title": "Oath Spells: 5th Level"
+          "title": "圣誓法术：五环"
         }
       }
     },
@@ -1713,6 +1896,11 @@
     "Serpent Stances": {
       "name": "灵蛇姿",
       "description": "<p>在你的回合开始时，你可以准备一种灵蛇姿态（无需动作）。如果你这么做了，从以下的灵蛇姿态中选择其一，这种姿态会持续至你陷入失能或再次使用此特性。</p><ul><li><em><strong>森蚺态。</strong></em> 当你进入此姿态时，你的近战武器和徒手攻击的触及距离增加 10 尺。</li><li><em><strong>曼巴态。</strong></em> 当你进入此姿态时，一回合一次，当你的武器攻击未命中时，作为那个动作的一部分，你可以再发动一次额外的近战攻击。</li><li><em><strong>羽蛇态。</strong></em> 当你进入此姿态时，你获得等于你速度的飞行速度。</li><li><em><strong>蛇魔态 Marilith Stance。</strong></em> 当你进入此姿态时，你在战斗中的每个回合都可以执行一次反应，而非一轮一次。</li></ul>",
+      "activities": {
+        "Swap Serpent Stance": {
+          "name": "切换灵蛇姿"
+        }
+      },
       "effects": {
         "Anaconda Stance": {
           "name": "森蚺态",
@@ -1723,18 +1911,50 @@
           "description": "<p>当你进入此姿态时，一回合一次，当你的武器攻击未命中时，作为那个动作的一部分，你可以再发动一次额外的近战攻击。</p>"
         },
         "Couatl Stance": {
-          "name": "羽蛇态 ",
+          "name": "羽蛇态",
           "description": "<p>当你进入此姿态时，你获得等于你速度的飞行速度。</p>"
         },
         "Marilith Stance": {
           "name": "蛇魔态",
           "description": "<p>当你进入此姿态时，你在战斗中的每个回合都可以执行一次反应，而非一轮一次。</p>"
+        },
+        "celO4kzc4nXQQfYV": {
+          "name": "森蚺态",
+          "description": "<p>当你进入此姿态时，你的近战武器和徒手攻击的触及距离增加 10 尺。</p>",
+          "changes": {
+            "name": "{}：森蚺态"
+          }
+        },
+        "Black Mamba Stances": {
+          "name": "曼巴态",
+          "description": "<p>当你进入此姿态时，一回合一次，当你的武器攻击未命中时，作为那个动作的一部分，你可以再发动一次额外的近战攻击。</p>",
+          "changes": {
+            "name": "{}：曼巴态"
+          }
+        },
+        "HdaiOPWgpIqpjkYk": {
+          "name": "羽蛇态",
+          "changes": {
+            "name": "{}：羽蛇态"
+          }
+        },
+        "Marilith Stances": {
+          "name": "蛇魔态",
+          "description": "<p>当你进入此姿态时，你在战斗中的每个回合都可以使用一次反应，而非一轮一次。</p>",
+          "changes": {
+            "name": "{}：蛇魔态"
+          }
         }
       }
     },
     "Scribe": {
       "name": "抄写员",
-      "description": "<p><em>先决：书法工具、调查员套组或制图工具熟练，以及施法能力</em></p><hr /><p>在完成长休后，你可以花费一小时使用你选择的工具创造一个<em>法术卷轴</em>。</p><p>你创造的卷轴可以是任何你所知的等级小于或等于你熟练加值的法术。当你再次使用此特性创造新的卷轴时，先前创造的卷轴将失去效力。</p>"
+      "description": "<p><em>先决：书法工具、调查员套组或制图工具熟练，以及施法能力</em></p><hr /><p>在完成长休后，你可以花费一小时使用你选择的工具创造一个<em>法术卷轴</em>。</p><p>你创造的卷轴可以是任何你所知的等级小于或等于你熟练加值的法术。当你再次使用此特性创造新的卷轴时，先前创造的卷轴将失去效力。</p>",
+      "activities": {
+        "Scribe Scroll": {
+          "name": "抄写卷轴"
+        }
+      }
     },
     "Psionic Power: Mind Whisperer": {
       "name": "心灵点：心灵语者",
@@ -1748,9 +1968,10 @@
     "Esoteric Theory: Combat Medic": {
       "name": "隐秘理论：医护兵",
       "description": "<p>你获得军用武器和盾牌的熟练。</p>",
-      "effects": {
-        "Esoteric Theory: Combat Medic": {
-          "name": "隐秘理论：医护兵"
+      "advancement": {
+        "Combat Medic: Battle Training": {
+          "title": "医护兵：战斗训练",
+          "hint": "你获得军用武器和盾牌的熟练。"
         }
       }
     },
@@ -1787,9 +2008,10 @@
     "Esoteric Theory: Acquired Tolerance": {
       "name": "隐秘理论：后天耐受性 ",
       "description": "<p>你进行对抗毒素的豁免时具有优势，并且拥有毒素伤害的抗性。此外，你自动通过来自你自己的药剂师法术的豁免检定，并且永远不会因自己的药剂师法术受到伤害。</p>",
-      "effects": {
-        "Esoteric Theory: Acquired Tolerance": {
-          "name": "隐秘理论：后天耐受性 "
+      "advancement": {
+        "Acquired Tolerance: Poison Resistance": {
+          "title": "后天耐受性：毒素抗性",
+          "hint": "你获得对毒素伤害的抗性。"
         }
       }
     },
@@ -1834,7 +2056,17 @@
     },
     "Esoteric Theory: Medical Lexicon": {
       "name": "隐秘理论：医学词典",
-      "description": "<p>你习得自选的六种语言。你可以随意施展法术@UUID[Compendium.dnd5e.spells.Item.2skfDtglk1mGrb3l]{侦测毒性和疾病}。</p>"
+      "description": "<p>你习得自选的六种语言。你可以随意施展法术@UUID[Compendium.dnd5e.spells.Item.2skfDtglk1mGrb3l]{侦测毒性和疾病}。</p>",
+      "advancement": {
+        "Medical Lexicon: Extra Languages": {
+          "title": "医学词典：额外语言",
+          "hint": "你习得自选的六种语言。"
+        },
+        "Medical Lexicon: Detect Poison & Disease": {
+          "title": "医学词典：侦测毒性和疾病",
+          "hint": "你可以随意施展法术侦测毒性和疾病。"
+        }
+      }
     },
     "Metaphysical Tether": {
       "name": "玄妙绳结",
@@ -1849,26 +2081,26 @@
       "description": "<p>由于德鲁伊们常常和自然以及自然秩序保持立场一致，他们中的大多数都将妄质视作是世界上的灾害。然而，其中少数人看清了真相：妄质也是自然秩序的重要组成部分之一，它在宇宙尺度上发挥自己的作用。秽染结社的德鲁伊使用这些带来枯朽的岩石和污霭作为超自然进化的媒介。他们接受了妄质的混乱之力，将其视作自然秩序之中固有的混乱的延伸，散播污霭的同时将其作为一位强大的盟友为自己的法术提供力量。</p>",
       "advancement": {
         "Circle Spells: Bonus Cantrips": {
-          "title": "Circle Spells: Bonus Cantrips"
+          "title": "结社法术：附赠戏法"
         },
         "Circle Spells: 2nd Level": {
-          "title": "Circle Spells: 2nd Level"
+          "title": "结社法术：二环"
         },
         "Circle Spells: 3rd Level": {
-          "title": "Circle Spells: 3rd Level"
+          "title": "结社法术：三环"
         },
         "Circle Spells: 4th Level": {
-          "title": "Circle Spells: 4th Level"
+          "title": "结社法术：四环"
         },
         "Circle Spells: 5th Level": {
-          "title": "Circle Spells: 5th Level"
+          "title": "结社法术：五环"
         },
         "Defile Elementals: Summon Delerium Elemental": {
-          "title": "Defile Elementals: Summon Delerium Elemental"
+          "title": "玷污元素：妄质元素召唤术"
         },
         "Despoiler: Damage Resistance": {
-          "title": "Despoiler: Damage Resistance",
-          "hint": "You gain resistance to poison and necrotic damage."
+          "title": "破坏化身：伤害抗性",
+          "hint": "你获得对毒素和暗蚀伤害的抗性。"
         }
       }
     },
@@ -1886,7 +2118,13 @@
     },
     "Esoteric Theory: Routine Procedure": {
       "name": "隐秘理论：手术程序化",
-      "description": "<p>你可以随意施展法术@UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]而无需消耗法术位。</p>"
+      "description": "<p>你可以随意施展法术@UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]而无需消耗法术位。</p>",
+      "advancement": {
+        "Routine Procedure: Lesser Restoration": {
+          "title": "手术程序化：次级复原术",
+          "hint": "你可以随意施展法术次级复原术而无需消耗法术位。"
+        }
+      }
     },
     "Unnatural Evolution: Draconic Genome": {
       "name": "异常进化：龙族基因",
@@ -1937,9 +2175,10 @@
     "Esoteric Theory: Clinical Conditioning": {
       "name": "隐秘理论：临床适应性",
       "description": "<p>你获得体质豁免检定的熟练。</p>",
-      "effects": {
-        "Clinical Conditioning: Constitution Save Proficiency": {
-          "name": "临床适应性：体质豁免熟练"
+      "advancement": {
+        "Critical Conditioning: Constitution Save Proficiency": {
+          "title": "临床适应性：体质豁免熟练",
+          "hint": "你获得体质豁免检定的熟练。"
         }
       }
     }
