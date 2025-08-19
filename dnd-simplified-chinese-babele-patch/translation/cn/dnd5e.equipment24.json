@@ -3980,8 +3980,8 @@
       "description": "<p><em>Rod, Very Rare</em></p><p>While holding this rod, you can take a Magic action to activate it. The rod then instantly transports you and up to 199 other willing creatures you can see to a demiplane. You choose the form the demiplane takes. It could be a tranquil garden, a cheery tavern, an immense palace, a tropical island, a fantastic carnival, or whatever else you can imagine. Regardless of its nature, the demiplane contains enough water and food to sustain its visitors, and the demiplane's environment can't harm its occupants. Everything else that can be interacted with there can exist only there. For example, a flower picked from a garden there disappears if it is taken outside the demiplane.</p><p>For each hour spent in the demiplane, a visitor regains Hit Points as if it had spent 1 Hit Point Die. Also, creatures don't age while there, although time passes normally. Visitors can remain there for up to 200 days divided by the number of creatures present (round down).</p><p>When the time runs out or you take a Magic action to end the effect, all visitors reappear in the location they occupied when you activated the rod or an unoccupied space nearest that location. Once used, this property can't be used again until 10 days have passed.</p><section class=\"secret\" id=\"secret-Z6J3bMzIgyeF3UkP\"><p><strong>Foundry Note</strong></p><p>The <strong>Transport to Demiplane</strong> activity will consume a use of this item but the ten day recovery period must be tracked manually.</p></section>",
       "activities": {
         "Transport to Demiplane": {
-          "name": "Transport to Demiplane",
-          "affectsSpecial": "you can see"
+          "name": "半位面传送",
+          "affectsSpecial": "你能看到"
         }
       }
     },
@@ -4010,25 +4010,25 @@
       }
     },
     "Rope of Entanglement": {
-      "name": "Rope of Entanglement",
-      "description": "<p><em>Wondrous Item, Rare</em></p><p>This rope is 30 feet long. While holding one end of the rope, you can take a Magic action to command the other end to dart forward and entangle one creature you can see within 20 feet of yourself. The target must succeed on a DC 15 Dexterity saving throw or have the &amp;Reference[Restrained apply=false] condition. You can release the target by letting go of your end of the rope (causing the rope to coil up in the target's space) or by using a Bonus Action to repeat the command (causing the rope to coil up in your hand).</p><p>A target Restrained by the rope can take an action to make its choice of a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check. On a successful check, the target is no longer Restrained by the rope. If you're still holding onto the rope when a target escapes from it, you can take a Reaction to command the rope to coil up in your hand; otherwise, the rope coils up in the target's space.</p><p>The rope has AC 20, HP 20, and Immunity to Poison and Psychic damage. It regains 1 Hit Point every 5 minutes as long as it has at least 1 Hit Point. If the rope drops to 0 Hit Points, it is destroyed.</p><section class=\"secret\" id=\"secret-7RGkmfY1bTmeeb5L\"><p><strong>Foundry Note</strong></p><p>The item includes 20 uses for tracking its HP. The <strong>Damage Rope</strong> activity can be used to apply damage and the <strong>Repair Rope</strong> activity can be used to restore its HP.</p><p>The <strong>Escape</strong> activity can be used to send an Athletics and Dexterity check to the chat for the target to roll for their escape.</p></section>",
+      "name": "纠缠绳",
+      "description": "<p><em>奇物，珍稀</em></p><p>这根绳索长30尺。当你持握这根绳索的一端时，你可以使用一个魔法动作命令其另一端向前疾冲并缠住位于你 20 尺内一个你可见的生物。目标必须成功通过一次 DC 15 的敏捷豁免，豁免失败则其陷入束缚 状态。你可以通过松开绳索的一端（使绳索盘绕着掉落在目标的空间）或使用一个附赠动作 重复命令（使绳索回到你手中并盘绕起来）来释放目标。</p><p>一个被绳索束缚的目标可以使用一个动作进行一次DC 15 的力量（运动）或敏捷（特技）检定。若检定成功，目标不再被绳索束缚。如果目标逃脱时你仍然持握着绳索，则你可以使用一个反应命令绳索回到你手中并盘绕起来；否则，绳索会盘绕着掉落在目标的空间中。</p><p>这根绳索具有AC 20、HP 20以及毒素和心灵伤害免疫。只要绳索还剩至少1生命值，它就能每5分钟恢复1生命值。如果绳索的生命值降至0，则它被摧毁。</p><section class=\"secret\" id=\"secret-7RGkmfY1bTmeeb5L\">    <p><strong>Foundry Note</strong></p>    <p><strong>修复绳索</strong>行动可恢复其生命值。</p>    <p><strong>逃脱</strong>行动可向聊天栏发送一项运动与敏捷检定，供目标生物进行逃脱检定。</p></section>",
       "activities": {
         "Entangle": {
-          "name": "Entangle"
+          "name": "纠缠术"
         },
         "Escape": {
-          "name": "Escape"
+          "name": "逃脱"
         },
         "Damage Rope": {
-          "name": "Damage Rope"
+          "name": "损伤绳索"
         },
         "Repair Rope": {
-          "name": "Repair Rope"
+          "name": "修复绳索"
         }
       },
       "effects": {
         "Entangled": {
-          "name": "Entangled"
+          "name": "纠缠"
         }
       }
     },
@@ -4424,7 +4424,7 @@
       "description": "<p><em>@UUID[Compendium.dnd5e.equipment24.Item.phbafcStaffalsoa]{Staff}, Rare (Requires Attunement by a Druid)</em></p><p>This staff has 6 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While holding it, you have a +2 bonus to spell attack rolls.</p><p><em><strong>Spells.</strong></em> While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.</p><table><thead><tr><th><p>Spell</p></th><th><p>Charge Cost</p></th><th></th></tr></thead><tbody><tr><td><p><em>Animal Friendship</em></p></td><td><p>1</p></td><td></td></tr><tr><td><p><em>Awaken</em></p></td><td><p>5</p></td><td></td></tr><tr><td><p><em>Barkskin</em></p></td><td><p>2</p></td><td></td></tr><tr><td><p><em>Locate Animals or Plants</em></p></td><td><p>2</p></td><td></td></tr><tr><td><p><em>Pass without Trace</em></p></td><td><p>2</p></td><td></td></tr><tr><td><p><em>Speak with Animals</em></p></td><td><p>1</p></td><td></td></tr><tr><td><p><em>Speak with Plants</em></p></td><td><p>3</p></td><td></td></tr><tr><td><p><em>Wall of Thorns</em></p></td><td><p>6</p></td><td></td></tr></tbody></table><p><em><strong>Tree Form.</strong></em> You can take a Magic action to plant one end of the staff in earth in an unoccupied space and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius. The tree appears ordinary but radiates a faint aura of Transmutation magic that can be discerned with the <em>Detect Magic</em> spell. While touching the tree and using a Magic action, you return the staff to its normal form. Any creature in the tree falls when the tree reverts to a staff.</p><p><em><strong>Regaining Charges.</strong></em> The staff regains 1d6 expended charges daily at dawn. If you expend the last charge, roll [[/r 1d20]]. On a 1, the staff loses its properties and becomes a nonmagical Quarterstaff.</p>",
       "activities": {
         "Animal Friendship": {
-          "name": "Animal Friendship"
+          "name": "化兽为友"
         },
         "Awaken": {
           "name": "Awaken"
@@ -4436,10 +4436,10 @@
           "name": "Locate Animals or Plants"
         },
         "Pass without Trace": {
-          "name": "Pass without Trace"
+          "name": "行动无踪"
         },
         "Speak with Animals": {
-          "name": "Speak with Animals"
+          "name": "动物交谈"
         },
         "Speak with Plants": {
           "name": "Speak with Plants"
