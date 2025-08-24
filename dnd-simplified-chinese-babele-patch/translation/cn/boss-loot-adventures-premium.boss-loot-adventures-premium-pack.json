@@ -549,7 +549,7 @@
               "description": "<p><strong>灵魂复生。</strong>当魂仆的生命值降为 0 时，魂缚骑士恢复 [[/r 5d8 + 20]] 点生命值。</p><p></p>",
               "activities": {
                 "heal": {
-                  "condition": "死亡"
+                  "condition": "death"
                 }
               }
             }
@@ -581,7 +581,7 @@
               "description": "<section class=\"secret\" id=\"secret-zGdb5WjuSgQNrXxj\"><p>当魂缚骑士因非光耀非重击伤害<strong>生命值降低至 0</strong> 时，其进行一次体质<strong>体质</strong>豁免（DC为 5 + 所受伤害）。豁免成功则改为将<strong>生命值降至 1</strong>。</p></section><p>当魂缚骑士因伤害<strong>生命值降低至 0</strong> 时，其进行一次体质<strong>体质</strong>豁免。</p>",
               "activities": {
                 "save": {
-                  "condition": "死亡",
+                  "condition": "death",
                   "chatFlavor": "DC为 5 + 所受伤害"
                 }
               }
@@ -624,10 +624,10 @@
             },
             "The Harvester v1 (Copy)": {
               "name": "收割者 v1",
-              "description": "<p><em>武器（长柄刀），珍稀（需同调）</em></p> <div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"每次挥斩都如同宣告万物终末的死亡低语\"</em></p></div> <hr/> <p>使用此魔法武器进行攻击检定和伤害掷骰时，你获得 +1 加值。</p> <p>收割者是一柄长柄刀，其柄顶镶嵌骷髅头，刀刃自颅骨中延伸而出。</p> <hr/> <p><strong>黑暗收割。</strong> 收割者攻击命中生物时，额外造成[[/roll 1d4]]点暗蚀伤害。若该生物死亡，你的下一次攻击具有优势。</p><p><strong>虚幻打击。</strong> 以一个动作，你可以发动一次虚幻打击。以此能力攻击命中一名生物时，目标必须进行一次DC 15 的魅力豁免。豁免失败，目标将陷入以太状态，持续[[/roll 1d4]]轮，存在于物质位面与以太位面边缘的重叠空间，与两界的互动都极为有限。目标可以观察原位面，但是所有事物都以灰度显示，而目标也看不到 60 尺外的东西。目标攻击检定具有劣势，无法穿越实体墙壁，且受到来自两个位面攻击的伤害。持续时间结束后，目标在物质位面重现。一旦使用，该能力在下一次长休前将无法使用。</p><p><strong>灵魂收割。</strong>以一个动作，你可以旋转收割者释放暗蚀能量爆发，以自身为源点，10 尺范围内的所有生物需进行一次DC 15 的敏捷豁免。豁免失败者承受[[/roll 1d10]]点挥砍伤害外加[[/roll 1d8]]点暗蚀伤害，豁免成功则伤害减半。一旦使用，该能力在下一次长休前将无法使用。</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/057-soulbound-knight/art-transparent-background-for-journal-the-harvester-600x600.webp\" alt=\"The Harvester\" />",
+              "description": "<p><em>武器（长柄刀），珍稀（需同调）</em></p> <div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"每次挥斩都如同宣告万物终末的死亡低语\"</em></p></div> <hr/> <p>使用此魔法武器进行攻击检定和伤害掷骰时，你获得 +1 加值。</p> <p>收割者是一柄长柄刀，其柄顶镶嵌骷髅头，刀刃自颅骨中延伸而出。</p> <hr/> <p><strong>黑暗收割。</strong> 收割者攻击命中生物时，额外造成[[/roll 1d4]]点暗蚀伤害。若该生物死亡，你的下一次攻击具有优势。</p> <p><strong>虚幻打击。</strong> 以一个动作，你可以发动一次虚幻打击。以此能力攻击命中一名生物时，目标必须进行一次DC 15 的魅力豁免。豁免失败，目标将陷入以太状态，持续[[/roll 1d4]]轮，存在于物质位面与以太位面边缘的重叠空间，与两界的互动都极为有限。目标可以观察原位面，但是所有事物都以灰度显示，而目标也看不到 60 尺外的东西。目标攻击检定具有劣势，无法穿越实体墙壁，且受到来自两个位面攻击的伤害。持续时间结束后，目标在物质位面重现。一旦使用，该能力在下一次长休前将无法使用。</p><p><strong>灵魂收割。</strong>以一个动作，你可以旋转收割者释放暗蚀能量爆发，以自身为源点，10 尺范围内的所有生物需进行一次DC 15 的敏捷豁免。豁免失败者承受[[/roll 1d10]]点挥砍伤害外加[[/roll 1d8]]点暗蚀伤害，豁免成功则伤害减半。一旦使用，该能力在下一次长休前将无法使用。</p> <img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/057-soulbound-knight/art-transparent-background-for-journal-the-harvester-600x600.webp\" alt=\"The Harvester\" />",
               "activities": {
                 "Phantom Strike": {
-                  "name": "Phantom Strike",
+                  "name": "虚幻打击",
                   "chatFlavor": "虚幻打击"
                 },
                 "Soul Reap": {
@@ -640,7 +640,7 @@
               },
               "effects": {
                 "Phantom Strike": {
-                  "name": "Phantom Strike"
+                  "name": "虚幻打击"
                 }
               }
             }
@@ -653,7 +653,7 @@
           "description": "<p><em>武器（长柄刀），珍稀（需同调）</em></p> <div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"每次挥斩都如同宣告万物终末的死亡低语\"</em></p></div> <hr/> <p>使用此魔法武器进行攻击检定和伤害掷骰时，你获得 +1 加值。</p> <p>收割者是一柄长柄刀，其柄顶镶嵌骷髅头，刀刃自颅骨中延伸而出。</p> <hr/> <p><strong>黑暗收割。</strong> 收割者攻击命中生物时，额外造成[[/roll 1d4]]点暗蚀伤害。若该生物死亡，你的下一次攻击具有优势。</p> <p><strong>虚幻打击。</strong> 以一个动作，你可以发动一次虚幻打击。以此能力攻击命中一名生物时，目标必须进行一次DC 15 的魅力豁免。豁免失败，目标将陷入以太状态，持续[[/roll 1d4]]轮，存在于物质位面与以太位面边缘的重叠空间，与两界的互动都极为有限。目标可以观察原位面，但是所有事物都以灰度显示，而目标也看不到 60 尺外的东西。目标攻击检定具有劣势，无法穿越实体墙壁，且受到来自两个位面攻击的伤害。持续时间结束后，目标在物质位面重现。一旦使用，该能力在下一次长休前将无法使用。</p><p><strong>灵魂收割。</strong>以一个动作，你可以旋转收割者释放暗蚀能量爆发，以自身为源点，10 尺范围内的所有生物需进行一次DC 15 的敏捷豁免。豁免失败者承受[[/roll 1d10]]点挥砍伤害外加[[/roll 1d8]]点暗蚀伤害，豁免成功则伤害减半。一旦使用，该能力在下一次长休前将无法使用。</p> <img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/057-soulbound-knight/art-transparent-background-for-journal-the-harvester-600x600.webp\" alt=\"The Harvester\" />",
           "activities": {
             "Phantom Strike": {
-              "name": "Phantom Strike",
+              "name": "虚幻打击",
               "chatFlavor": "虚幻打击"
             },
             "Soul Reap": {
@@ -666,7 +666,7 @@
           },
           "effects": {
             "Phantom Strike": {
-              "name": "Phantom Strike"
+              "name": "虚幻打击"
             }
           }
         }
@@ -1459,7 +1459,7 @@
             },
             "FUNGAL CAVERN": {
               "name": "真菌洞穴",
-              "text": "<h2 style=\"text-align:center;font-weight:bold\"><strong>真菌洞穴</strong></h2><img src=\"modules/boss-loot-adventures-premium/assets/011-hunger-beneath/Fungal-Cavern-1.webp\" style=\"border:none\" /><h2>描述</h2><p>这个地下洞穴中布满了巨大的会发光的菌类群落，发出昏暗的绿光和黄光，照亮了整个洞穴。洞穴的地形由天然的石阶层层叠叠构成，从西北向东南逐渐下降，形成了错落有致的岩架和斜坡。</p><div class=\"fvtt narrative\"><p><em>“在艰难跋涉了一段时间之后，前方开始出现微弱的光亮，地衣和细小的蘑菇孢子散发着柔和的绿光和黄光，轻柔地照亮了前行的道路。小径最终变得平坦，将你引入一条狭窄的隧道，声音被石头吞噬，四周一片寂静。</em></p><p><em>在深邃的寂静中，就连你的呼吸声都显得过于响亮。终于，在仿佛过了无尽漫长的时间之后，小路通向了一个洞穴，里面散落着硕大的菌类，散发着微光光照，照亮了整个洞穴。空气中弥漫着浓重的菌类雾气，散发着一股恶臭。</em></p><p><em>在一个黑暗的角落里，你看到一个衣衫褴褛的男人，弯腰驼背，抱着膝盖，自言自语。”</em></p></div><h2>遭遇与挑战</h2><h3>布兰特——破碎的幸存者</h3><p>在洞穴的一个阴暗角落里，雾气和阴影交织，冒险者们发现一个男人蜷缩在石壁旁。他的衣服破烂不堪，满是污垢，紧紧地蜷缩着身子，轻轻地摇晃着，嘴里含糊不清地自言自语。如果冒险者们靠近，他会惊慌失措地用爪击石壁，惊恐之情在他瞪大的、惊慌失措的眼睛里一览无余。然而，如果冒险者们带着光源，这个男人起初会畏缩一下，但随后会慢慢平静下来，眨着眼睛看着那光芒，仿佛透过一层迷雾认出了它。</p><p>平静的态度和温和的语气或许能让他安静下来。成功通过 [[/check 游说 12]] 检定会使他稍微放松，重新开始喃喃自语。他的话语零散而令人难以忘怀：</p><div class=\"fvtt narrative\"><p><em>“那黑影在我们周围游移不定……”<br />“饥饿……永远饥饿……”<br />“眼睛像尖锐的针，在黑暗中闪闪发光……”</em></p></div><p><strong>小队成功安抚布兰特：</strong></p><p>这个人的名字叫布兰特，不过除非借助魔法或把他从疯狂的边缘拉回来，否则他想不起自己的名字。如果对他施展次级复原术（Lesser Restoration），他便开始恢复神智。他的呼吸放缓，坐直了身子，虽然仍有些茫然，但已能清晰地说话。他轻声要水和食物，得到安慰后，便讲起了自己所知道的情况：</p><div class=\"fvtt narrative\"><p><em>“我叫布兰特……我逃出来了。勉强逃出来了。你们来得太迟了，我们大多数人都死了……无论是看守还是囚犯。那阴影饥肠辘辘。我必须不停地走。要是我停下来太久，它就会来找我。”</em></p></div><p>如果有人要求提供更多信息，他会说：</p><div class=\"fvtt narrative\"><p><em>“我们在挖掘……被迫的。起初只是些废墟。古老的石块、雕刻。但后来他们挖穿了一堵墙。一堵更深的墙。我们从来都不被允许进去。那些被黑暗精灵抓走的人……他们再也没回来。精灵也没回来。只有阴影回来了。它杀死了所有的一切。所有人。如果还有人活着，也活不了多久了……我跑了。但在我身后，有尖叫声……然后是寂静。”</em></p></div><p><strong>小队未能安抚布兰特：</strong></p><p>如果小队无法施展魔法，则进行一次[[/check 游说或恐吓 15]] 检定，或许能从他口中套出一个惊恐故事。在这种情况下，布兰特蜷缩成一团，惊恐地瞪大眼睛，不时回头张望，用颤抖的声音低声说道，并用手指着洞穴另一端的出口：</p><div class=\"fvtt narrative\"><p><em>“阴影来了……我们身后已无退路，只有鲜血和惨叫。墙壁……都被染红了。黑暗……黑暗有了生命。我们都会死在这里。”</em></p></div><aside class=\"notable\"><h4>GM提示</h4><p>为保持预期氛围和游戏平衡，务必使暗度级别保持在设计的水平。为获得最佳体验，请确保将以下设置应用于每个场景：<strong>暗度级别：0.85</strong>（你可以使用此 @UUID[Macro.A4Uozvru0UwypVC0]{宏} 在本次冒险的所有场景中更新暗度级别）。</p><p>场景采用微光光照进行全局照明。所有角色都能看清地图上的环境和物件，无需额外光源。</p><p>提示机制（可选）：<br />GM可提示任何熟练于奥秘或医疗的玩家进行一次DC 13 的检定。若成功，则委婉地暗示施展“次等复原术”（Lesser Restoration）可能有助于治疗布兰特的状况。</p><p>先攻加值（可选）：<br />如果玩家在未被提示的情况下施展“次级治疗术”（Lesser Restoration），则在吸血鬼接近时，给予整个小队先攻加值和下一次察觉检定的优势，因为布兰特的头脑更加清醒，能够更有效地向他们发出警告。</p></aside><h3>腐烂吸血鬼 - 战斗遭遇</h3><p>话音刚落，吸血鬼立即发动了伏击，使用宏指令召唤吸血鬼。它会坚持战斗，直到被迫化为迷雾形态。</p><p>@Embed[JournalEntry.1O2CFTLNziprna5I.JournalEntryPage.h8zrfEoDUmpZzYbS caption=false cite=false]</p><p><strong>若成功：</strong></p><p>如果角色通过察觉检定，GM则叙述如下：</p><div class=\"fvtt narrative\"><p><em>“你看到黑暗中有个东西在移动，就在你视线的边缘。它沿着墙壁爬行，动作异常轻松，穿梭于岩石和蘑菇之间。片刻间，那生物僵住了，既没完全蹲下也没完全站直，隐没在阴影里。两只尖锐的红眼睛盯着你。接着，眨眼之间，它就扑到了你跟前，张着大嘴，满口尖牙，漆黑的利爪在空中挥舞，试图抓住你。”</em></p></div><p>进行先攻掷骰，开始战斗。轮到布兰特时，他将尝试躲藏并逃入黑暗之中。</p><p><strong>失败时：</strong></p><p>如果察觉检定失败，游戏主持人可以描述：</p><div class=\"fvtt narrative\"><p><em>“一个黑影从天花板上脱离下来，悄无声息，动作流畅，隐匿在那男子身后。眨眼间，利爪一闪，獠牙深深刺入，他的脑袋被猛地扭向一侧。那生物的嘴以惊人的精准咬住布拉特暴露在外的脖颈，双眼充满饥饿，死死盯着你，而布兰特的身体则瘫软下去。他的皮肤瞬间变得灰白干瘪，喉咙里发出一声湿漉漉的咕噜声，随后便瘫倒在地，没了气息。那生物像扔掉一块残肉般将他甩到一边，舔了舔沾满鲜血的獠牙，接着低伏下身，发出野兽般的咆哮，冲了过来。”</em></p></div><p><strong>战斗结束后：</strong></p><p>当生命值降至 0 时，吸血鬼会使用“雾隐遁行”（Misty Escape）化为迷雾形态逃回其休眠地。</p><div class=\"fvtt narrative\"><p><em>“片刻后，冒险者们得以观察一下刚才袭击你们的那个生物被砍倒的尸体，这是类人生物的身形，有着模糊的人类特征。但你还没来得及有所行动，那具尸体就开始化作一团细雾。那雾气在空中盘旋，像烟雾一样在洞穴的地面上蜿蜒，朝着出口的方向飘去。”</em></p></div><p>如果布兰特能活下来并恢复神智，他会愿意加入这个团队并带领他们前往挖掘现场。</p><div class=\"fvtt narrative\"><p><em>“你……你杀了它。”布兰特瞪大了眼睛，难以置信地喃喃说道。</em></p></div><p>若布兰特死亡，一分钟后将以丧尸形态复活：</p><div class=\"fvtt narrative\"><p><em>“布兰特躺倒在洞穴的地上，脸上凝固着死亡时的痛苦表情。当你准备离开时，他的身体开始抽搐，起初很轻微，接着便剧烈地痉挛起来。就在这一瞬间，他的身体又突然静止了。</em></p><p><em>接着，他开始起身。脸上的肉皮剥落，从嘴边向后撕裂，撕裂开来，拉得太开了，仿佛是在为即将到来的一口啃咬重新塑形。”</em></p></div><h2>危害</h2><p>@Embed[JournalEntry.AFbe6mpfAGEy1cNR.JournalEntryPage.h8zrfEoDUmpZzYbS caption=false cite=false]</p>"
+              "text": "<h2 style=\"text-align:center;font-weight:bold\"><strong>真菌洞穴</strong></h2><img src=\"modules/boss-loot-adventures-premium/assets/011-hunger-beneath/Fungal-Cavern-1.webp\" style=\"border:none\" /><h2>描述</h2><p>这个地下洞穴中布满了巨大的会发光的菌类群落，发出昏暗的绿光和黄光，照亮了整个洞穴。洞穴的地形由天然的石阶层层叠叠构成，从西北向东南逐渐下降，形成了错落有致的岩架和斜坡。</p><div class=\"fvtt narrative\"><p><em>“在艰难跋涉了一段时间之后，前方开始出现微弱的光亮，地衣和细小的蘑菇孢子散发着柔和的绿光和黄光，轻柔地照亮了前行的道路。小径最终变得平坦，将你引入一条狭窄的隧道，声音被石头吞噬，四周一片寂静。</em></p><p><em>在深邃的寂静中，就连你的呼吸声都显得过于响亮。终于，在仿佛过了无尽漫长的时间之后，小路通向了一个洞穴，里面散落着硕大的菌类，散发着微光光照，照亮了整个洞穴。空气中弥漫着浓重的菌类雾气，散发着一股恶臭。</em></p><p><em>在一个黑暗的角落里，你看到一个衣衫褴褛的男人，弯腰驼背，抱着膝盖，自言自语。”</em></p></div><h2>遭遇与挑战</h2><h3>布兰特——破碎的幸存者</h3><p>在洞穴的一个阴暗角落里，雾气和阴影交织，冒险者们发现一个男人蜷缩在石壁旁。他的衣服破烂不堪，满是污垢，紧紧地蜷缩着身子，轻轻地摇晃着，嘴里含糊不清地自言自语。如果冒险者们靠近，他会惊慌失措地用爪击石壁，惊恐之情在他瞪大的、惊慌失措的眼睛里一览无余。然而，如果冒险者们带着光源，这个男人起初会畏缩一下，但随后会慢慢平静下来，眨着眼睛看着那光芒，仿佛透过一层迷雾认出了它。</p><p>平静的态度和温和的语气或许能让他安静下来。成功通过 [[/check 游说 12]] 检定会使他稍微放松，重新开始喃喃自语。他的话语零散而令人难以忘怀：</p><div class=\"fvtt narrative\"><p><em>“那黑影在我们周围游移不定……”<br />“饥饿……永远饥饿……”<br />“眼睛像尖锐的针，在黑暗中闪闪发光……”</em></p></div><p><strong>小队成功安抚布兰特：</strong></p><p>这个人的名字叫布兰特，不过除非借助魔法或把他从疯狂的边缘拉回来，否则他想不起自己的名字。如果对他施展次级复原术（Lesser Restoration），他便开始恢复神智。他的呼吸放缓，坐直了身子，虽然仍有些茫然，但已能清晰地说话。他轻声要水和食物，得到安慰后，便讲起了自己所知道的情况：</p><div class=\"fvtt narrative\"><p><em>“我叫布兰特……我逃出来了。勉强逃出来了。你们来得太迟了，我们大多数人都死了……无论是看守还是囚犯。那阴影饥肠辘辘。我必须不停地走。要是我停下来太久，它就会来找我。”</em></p></div><p>如果有人要求提供更多信息，他会说：</p><div class=\"fvtt narrative\"><p><em>“我们在挖掘……被迫的。起初只是些废墟。古老的石块、雕刻。但后来他们挖穿了一堵墙。一堵更深的墙。我们从来都不被允许进去。那些被黑暗精灵抓走的人……他们再也没回来。精灵也没回来。只有阴影回来了。它杀死了所有的一切。所有人。如果还有人活着，也活不了多久了……我跑了。但在我身后，有尖叫声……然后是寂静。”</em></p></div><p><strong>小队未能安抚布兰特：</strong></p><p>如果小队无法施展魔法，则进行一次[[/check 游说或恐吓 15]] 检定，或许能从他口中套出一个惊恐故事。在这种情况下，布兰特蜷缩成一团，惊恐地瞪大眼睛，不时回头张望，用颤抖的声音低声说道，并用手指着洞穴另一端的出口：</p><div class=\"fvtt narrative\"><p><em>“阴影来了……我们身后已无退路，只有鲜血和惨叫。墙壁……都被染红了。黑暗……黑暗有了生命。我们都会死在这里。”</em></p></div><aside class=\"notable\"><h4>GM 提示</h4><p>为保持预期氛围和游戏平衡，务必使暗度级别保持在设计的水平。为获得最佳体验，请确保将以下设置应用于每个场景：<strong>暗度级别：0.85</strong>（你可以使用此 @UUID[Macro.A4Uozvru0UwypVC0]{宏} 在本次冒险的所有场景中更新暗度级别）。</p><p>场景采用微光光照进行全局照明。所有角色都能看清地图上的环境和物件，无需额外光源。</p><p>提示机制（可选）：<br />GM可提示任何熟练于奥秘或医疗的玩家进行一次DC 13 的检定。若成功，则委婉地暗示施展“次等复原术”（Lesser Restoration）可能有助于治疗布兰特的状况。</p><p>先攻加值（可选）：<br />如果玩家在未被提示的情况下施展“次级治疗术”（Lesser Restoration），则在吸血鬼接近时，给予整个小队先攻加值和下一次察觉检定的优势，因为布兰特的头脑更加清醒，能够更有效地向他们发出警告。</p></aside><h3>腐烂吸血鬼 - 战斗遭遇</h3><p>话音刚落，吸血鬼立即发动了伏击，使用宏指令召唤吸血鬼。它会坚持战斗，直到被迫化为迷雾形态。</p><p>@Embed[JournalEntry.1O2CFTLNziprna5I.JournalEntryPage.h8zrfEoDUmpZzYbS caption=false cite=false]</p><p><strong>若成功：</strong></p><p>如果角色通过察觉检定，GM则叙述如下：</p><div class=\"fvtt narrative\"><p><em>“你看到黑暗中有个东西在移动，就在你视线的边缘。它沿着墙壁爬行，动作异常轻松，穿梭于岩石和蘑菇之间。片刻间，那生物僵住了，既没完全蹲下也没完全站直，隐没在阴影里。两只尖锐的红眼睛盯着你。接着，眨眼之间，它就扑到了你跟前，张着大嘴，满口尖牙，漆黑的利爪在空中挥舞，试图抓住你。”</em></p></div><p>进行先攻掷骰，开始战斗。轮到布兰特时，他将尝试躲藏并逃入黑暗之中。</p><p><strong>失败时：</strong></p><p>如果察觉检定失败，游戏主持人可以描述：</p><div class=\"fvtt narrative\"><p><em>“一个黑影从天花板上脱离下来，悄无声息，动作流畅，隐匿在那男子身后。眨眼间，利爪一闪，獠牙深深刺入，他的脑袋被猛地扭向一侧。那生物的嘴以惊人的精准咬住布拉特暴露在外的脖颈，双眼充满饥饿，死死盯着你，而布兰特的身体则瘫软下去。他的皮肤瞬间变得灰白干瘪，喉咙里发出一声湿漉漉的咕噜声，随后便瘫倒在地，没了气息。那生物像扔掉一块残肉般将他甩到一边，舔了舔沾满鲜血的獠牙，接着低伏下身，发出野兽般的咆哮，冲了过来。”</em></p></div><p><strong>战斗结束后：</strong></p><p>当生命值降至 0 时，吸血鬼会使用“雾隐遁行”（Misty Escape）化为迷雾形态逃回其休眠地。</p><div class=\"fvtt narrative\"><p><em>“片刻后，冒险者们得以观察一下刚才袭击你们的那个生物被砍倒的尸体，这是类人生物的身形，有着模糊的人类特征。但你还没来得及有所行动，那具尸体就开始化作一团细雾。那雾气在空中盘旋，像烟雾一样在洞穴的地面上蜿蜒，朝着出口的方向飘去。”</em></p></div><p>如果布兰特能活下来并恢复神智，他会愿意加入这个团队并带领他们前往挖掘现场。</p><div class=\"fvtt narrative\"><p><em>“你……你杀了它。”布兰特瞪大了眼睛，难以置信地喃喃说道。</em></p></div><p>若布兰特死亡，一分钟后将以丧尸形态复活：</p><div class=\"fvtt narrative\"><p><em>“布兰特躺倒在洞穴的地上，脸上凝固着死亡时的痛苦表情。当你准备离开时，他的身体开始抽搐，起初很轻微，接着便剧烈地痉挛起来。就在这一瞬间，他的身体又突然静止了。</em></p><p><em>接着，他开始起身。脸上的肉皮剥落，从嘴边向后撕裂，撕裂开来，拉得太开了，仿佛是在为即将到来的一口啃咬重新塑形。”</em></p></div><h2>危害</h2><p>@Embed[JournalEntry.AFbe6mpfAGEy1cNR.JournalEntryPage.h8zrfEoDUmpZzYbS caption=false cite=false]</p>"
             },
             "ROPE BRIDGE": {
               "name": "绳索桥",
@@ -2414,7 +2414,7 @@
               "description": "<p><strong>死亡新星。</strong>烈焰元素死亡时会爆发出一团火焰。在其 5 尺范围内的每个生物都必须进行一次敏捷豁免（DC为 11），豁免失败则受到 1d6 点火焰伤害，豁免成功则只受到一半伤害。</p>",
               "activities": {
                 "save": {
-                  "condition": "死亡",
+                  "condition": "death",
                   "affects": {
                     "special": "self"
                   }
@@ -2503,7 +2503,7 @@
           "items": {
             "Legendary Resistance": {
               "name": "传奇抗性",
-              "description": "<p>如果烈焰暴君豁免失败时，可以将其改为豁免成功。</p>"
+              "description": "<p>烈焰暴君豁免失败时，可以将其改为豁免成功。</p>"
             },
             "Legendary Actions": {
               "name": "传奇动作",
@@ -3707,7 +3707,7 @@
             "Handout: Journal Notes in Bedroom 2": "展示材料：卧室的日志笔记 2",
             "Stairs to Level 4": "通往 4 楼",
             "Levitating Glyph": "悬浮符文",
-            "Map Integration: Climbing the Tower": "Map Integration: Climbing the Tower"
+            "Map Integration: Climbing the Tower": "地图整合：攀爬高塔"
           }
         },
         "Tower Level 6: Arcane Circle": {
@@ -3717,8 +3717,8 @@
             "Arcane Circle": "奥术法阵",
             "Metal Ladder to the Roof": "通往塔顶的金属梯",
             "Aperture to Level 5": "通往 5 楼的光圈",
-            "Map Integration: The Experiment Puzzle": "Map Integration: The Experiment Puzzle",
-            "Map Integration: Climbing the Tower": "Map Integration: Climbing the Tower"
+            "Map Integration: The Experiment Puzzle": "地图整合：实验谜题",
+            "Map Integration: Climbing the Tower": "地图整合：攀爬高塔"
           }
         },
         "Tower Level 7: Roof": {
@@ -3727,8 +3727,8 @@
             "Handout: Arcane Energy Cell": "展示材料：奥术能量单元",
             "Roof": "塔顶",
             "Trapdoor": "活板门",
-            "The Roof Encounter": "The Roof Encounter",
-            "Map Integration: Climbing the Tower": "Map Integration: Climbing the Tower"
+            "The Roof Encounter": "塔顶遭遇",
+            "Map Integration: Climbing the Tower": "地图整合：攀爬高塔"
           }
         },
         "Tower Lower Level 1: Storage": {
@@ -3740,7 +3740,7 @@
             "Handout: Locked Chest in Storage": "展示材料：储藏室的上锁宝箱",
             "Stairs to Level 1": "通往 1 楼",
             "Wooden Hatch to Torture Chamber": "通往刑讯室的木门",
-            "Toggle Magical Darkness": "Toggle Magical Darkness"
+            "Toggle Magical Darkness": "切换魔法黑暗"
           }
         },
         "Tower Lower Level 2: Torture Chamber": {
@@ -3748,12 +3748,12 @@
           "notes": {
             "Petrified Blue Dragon": "石化蓝龙",
             "Chest with Belt of Shoking magic item": "装有魔法物品“电击腰带”的宝箱",
-            "Handout: Bag with Vials": "Handout: Bag with Vials",
-            "Handout: Key Ring": "Handout: Key Ring",
+            "Handout: Bag with Vials": "展示材料：装有小瓶的袋子",
+            "Handout: Key Ring": "展示材料：钥匙环",
             "Torture Chamber": "刑讯室",
             "Handout: Journal Note in the Torture Chamber": "展示材料：刑讯室的日志笔记",
             "Ladder to Storage": "通往储藏室",
-            "Handout: Old Journal": "Handout: Old Journal"
+            "Handout: Old Journal": "展示材料：旧日记"
           }
         }
       },
@@ -3781,8 +3781,8 @@
       },
       "actors": {
         "Arcane Energy Coil": {
-          "name": "Arcane Energy Coil",
-          "tokenName": "Arcane Energy Coil",
+          "name": "奥术能量单元",
+          "tokenName": "奥术能量单元",
           "items": {
             "Skill Check": {
               "name": "技能检定",
@@ -4647,7 +4647,7 @@
             },
             "For GM": {
               "name": "致 GM",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/notebook-1.webp\" /></figure><article><h3>@UUID[JournalEntry.Jt9eOnlIjMitymXZ]</h3><p>要开启此物，冒险者必须解开藏于图书馆中的@UUID[JournalEntry.ECkU8hS0Y27Uu6qz]{谜题}。</p><h3>技能检定</h3><ul><li><p><strong>[[/check investigation 15]]: </strong>经细致检查后，可发现宝箱上暗藏陷阱的细微痕迹。</p></li><li><p><strong>[[/check arcana 15]]: </strong>深入分析研究了此陷阱的魔法本质。若尝试失败将触发奥术爆炸。当首次输入错误密码时，宝箱上方将显现红色光晕，共计可见三盏警示灯。若连续三次尝试失败，宝箱将启动自毁机制，其内物品将被彻底摧毁。</p></li></ul><h3>陷阱</h3><p><strong>奥术爆炸</strong></p><ul><li><p><strong>触发条件：</strong>输入错误密码将激活奥术爆炸。</p></li><li><p><strong>效应：</strong>奥术爆炸将选定试图开启宝箱的生物，造成[[/damage 3d8 force]]伤害。该生物需通过一次[[/save dexterity 14]]检定规避伤害，若成功则不受伤害。</p></li><li><p>@UUID[Macro.Re5IgcexE02UU6Qx]{触发陷阱}</p></li></ul><h3>宝箱内容物</h3><ul><li><p><strong>@UUID[Item.jIgCx4IYRfca6jMb]{幽影回响斗篷}</strong></p></li></ul></article></section><aside class=\"notable\"><p><strong>备注：</strong>你可以安全地向玩家展示此信息，他们将仅看到描述文本。</p></aside>"
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/notebook-1.webp\" /></figure><article><h3>@UUID[JournalEntry.Jt9eOnlIjMitymXZ]</h3><p>要开启此物，冒险者必须解开藏于图书馆中的@UUID[JournalEntry.ECkU8hS0Y27Uu6qz]{谜题}。</p><h3>技能检定</h3><ul><li><p><strong>[[/check investigation 15]]: </strong>经细致检查后，可发现宝箱上暗藏陷阱的细微痕迹。</p></li><li><p><strong>[[/check arcana 15]]: </strong>深入分析研究了此陷阱的魔法本质。若尝试失败将触发奥术爆炸。当首次输入错误密码时，宝箱上方将显现红色光晕，共计可见三盏警示灯。若连续三次尝试失败，宝箱将启动自毁机制，其内物品将被彻底摧毁。</p></li></ul><h3>陷阱</h3><p><strong>奥术爆炸</strong></p><ul><li><p><strong>触发条件：</strong>输入错误密码将激活奥术爆炸。</p></li><li><p><strong>效应：</strong>奥术爆炸将选定试图开启宝箱的生物，造成[[/damage 3d8 force]]伤害。该生物需通过一次[[/save dexterity 14]]检定规避伤害，若成功则不受伤害。</p></li><li><p>@UUID[Macro.Re5IgcexE02UU6Qx]{触发陷阱}</p></li></ul><h3>宝箱内容</h3><ul><li><p><strong>@UUID[Item.jIgCx4IYRfca6jMb]{幽影回响斗篷}</strong></p></li></ul></article></section><aside class=\"notable\"><p><strong>备注：</strong>你可以安全地向玩家展示此信息，他们将仅看到描述文本。</p></aside>"
             }
           }
         },
@@ -4695,25 +4695,25 @@
           "pages": {
             "THE SCHOLAR": {
               "name": "学者",
-              "text": "<p>@Embed[Actor.qkJAdaRGhEk5CSXu statblock classes=\"double-column\" caption=false]{The Scholar}</p><div style=\"display:flex;justify-content:center\"><img src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/Class_Wizard_Ethereal_GHOST_2_STATIC_TOKEN_COLOR_2_600x600.webp\" style=\"max-width:65%;height:auto;border:none\" /></div><div class=\"fvtt narrative\"><h2><em><strong>The Scholar Quotes</strong></em></h2><ol><li><em>\"Knowledge is the foundation upon which all else is built.\"</em></li><li><em>\"A question left unanswered is a door left unopened.\"</em></li><li><em>\"The world is not shaped by courage, but by understanding.\"</em></li><li><em>\"Emotions are fleeting, but knowledge is eternal.\"</em></li><li><em>\"Order and logic are what keep chaos at bay.\"</em></li><li><em>\"To study is to wield the greatest power of all: clarity.\"</em></li><li><em>\"Facts do not lie. It is people who twist them to fit their desires.\"</em></li><li><em>\"The pursuit of knowledge is not ambition it is necessity.\"</em></li><li><em>\"I am not cold. I am simply focused on what matters most.\"</em></li></ol></div>"
+              "text": "<p>@Embed[Actor.qkJAdaRGhEk5CSXu statblock classes=\"double-column\" caption=false]{学者}</p><div style=\"display:flex;justify-content:center\"><img src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/Class_Wizard_Ethereal_GHOST_2_STATIC_TOKEN_COLOR_2_600x600.webp\" style=\"max-width:65%;height:auto;border:none\" /></div><div class=\"fvtt narrative\"><h2><em><strong>学者语录</strong></em></h2><ol><li><em>\"知识是构建一切的基础。\"</em></li><li><em>\"未解之谜是未开之门。\"</em></li><li><em>\"世界并非由勇气塑造，而是由理解塑造。\"</em></li><li><em>\"情感转瞬即逝，知识永恒长存。\"</em></li><li><em>\"秩序与逻辑是抵御混乱的屏障。\"</em></li><li><em>\"研究就是掌握最强大的力量：清晰。\"</em></li><li><em>\"事实不会说谎。是人扭曲事实以满足自己的欲望。\"</em></li><li><em>\"追求知识并非野心，而是必需。\"</em></li><li><em>\"我不觉得寒冷。我只是专注于最重要的事情。\"</em></li></ol></div>"
             }
           }
         },
         "Map Integration: The Roof Encounter": {
-          "name": "Map Integration: The Roof Encounter",
+          "name": "地图整合：塔顶遭遇",
           "pages": {
             "Map Integration": {
-              "name": "Map Integration",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.We8Q3VApVH9zkoft]</h3><p>Because of the rain, the surface is slippery and will be treated as difficult terrain. The platform is divided into three regions: Region 1 at the center, Region 2 in the middle, and Region 3 along the edge. When the first vortex device is destroyed, an arcane lightning field activates in Region 2. Destroying a second vortex device activates an arcane lightning field in Region 1, and destroying a third activates it in Region 3. If the fourth vortex device is destroyed, all arcane lightning fields disappear. The arcane lightning fields deal [[/damage 1d8 lightning]] damage to anyone who enters or starts their turn in the affected region.</p><p>The central energy coil can also be destroyed. This will disable all remaining vortex devices.</p><p>The adventurers can use the following skill checks to interact with the vortex structures and the arcane energy coil:</p><h3>Vortex Structures</h3><p><strong>Skill Check: [[/check arcana 15]]</strong></p><ul><li>Success: The adventurer discovers how to weaken the vortex, granting advantage on all attacks for the rest of the combat.</li><li>Failure: The adventurer misinterprets the vortex’s energy and causes it to summon another Voidling Elemental.</li></ul><p><strong>Skill Check: [[/check sleightOfHand 20]]</strong></p><ul><li>Success: The adventurer disables or destabilizes part of the vortex, deactivating it.</li><li>Failure: An arcane lightning discharge is triggered in Region 2 of the platform, lasting for 1 round and dealing 1d8 lightning damage to any creature within the area or starting their turn there.</li></ul><h3>Arcane Energy Coil</h3><p><strong>Skill Check: [[/check investigation 15]]</strong></p><ul><li>Success: The adventurer uncovers hidden mechanisms that weaken the coil, causing all attacks against it to deal an extra 2d6 damage for the rest of the combat.</li><li>Failure: The coil releases an unstable surge of electricity, dealing 4d6 lightning damage to the adventurer and knocking the target prone.</li></ul><p><strong>Skill Check: [[/check athletics 15]]</strong></p><ul><li>Success: The adventurer inflicts structural damage to the coil, removing 50 hit points.</li><li>Failure: The coil releases an unstable surge of electricity, dealing 4d6 lightning damage to the adventurer and knocking the target prone.</li></ul><p>Use this <strong>@UUID[Macro.kfOzqfjgG8VQErb5]{Interactive Map Features UI}</strong> to enable or disable region beehaviors.</p></article></section><aside class=\"notable\"><h4>GM Notes</h4><p>The @UUID[Actor.RXhwO5NLxTYfZzDo]{Vortex Devices} and the @UUID[Actor.LenZHPCdlkWXcCSK]{Arcane Energy Coil} are tokens that players can target and attack. The GM can also use the vortex tokens to summon Voidling Elementals.</p></aside>"
+              "name": "地图整合",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.We8Q3VApVH9zkoft]</h3><p>因降雨导致地面湿滑，该区域将视为困难地形。平台划分为三个子区域：中央的 1 区、中环的 2 区以及边缘的 3 区。当首个虚空装置被摧毁时，将在 2 区激活奥术闪电场；摧毁第二个装置时 1 区激活闪电场，摧毁第三个装置则 3 区激活。若第四个装置被摧毁，所有奥术闪电场将消失。该力场会对进入或区域内回合开始其回合的生物造成 1d8 闪电伤害。</p><p>中央能量线圈可被摧毁，这将使所有剩余虚空装置失效。</p><p>冒险者可通过以下技能检定与虚空构造及奥术能量线圈交互：</p><h3>虚空构造</h3><p><strong>技能检定：[[/check arcana 15]]</strong></p><ul><li>成功：冒险者洞悉削弱虚空的方法，本场战斗中所有攻击获得优势。</li><li>失败：冒险者误判虚空能量，导致召唤出新的虚空元素。</li></ul><p><strong>技能检定：[[/check sleightOfHand 20]]</strong></p><ul><li>成功：冒险者解除或破坏部分虚空构造使其失效。</li><li>失败：触发平台 2 区奥术闪电释放，持续 1 回合并对区域内或在区域内回合开始其回合的生物造成 1d8 闪电伤害。</li></ul><h3>奥术能量线圈</h3><p><strong>技能检定：[[/check investigation 15]]</strong></p><ul><li>成功：冒险者发现削弱线圈的隐藏机制，本场战斗中对其所有攻击额外造成 2d6 伤害。</li><li>失败：线圈释放不稳定电流，对冒险者造成 4d6 闪电伤害并使目标倒地。</li></ul><p><strong>技能检定：[[/check athletics 15]]</strong></p><ul><li>成功：冒险者对线圈造成结构性破坏，削减 50 点生命值。</li><li>失败：线圈释放不稳定电流，对冒险者造成 4d6 闪电伤害并使目标倒地。</li></ul><p>使用此<strong>@UUID[Macro.kfOzqfjgG8VQErb5]{交互式地图功能界面}</strong>可控制区域行为。</p></article></section><aside class=\"notable\"><h4>GM 提示</h4><p>@UUID[Actor.RXhwO5NLxTYfZzDo]{虚空装置}与@UUID[Actor.LenZHPCdlkWXcCSK]{奥术能量线圈}均为玩家可攻击的指示物。GM 可使用虚空指示物召唤虚空元素。</p></aside>"
             }
           }
         },
         "Creature: Voidling Elemental": {
-          "name": "Creature: Voidling Elemental",
+          "name": "生物：虚空元素",
           "pages": {
             "VOIDLING ELEMENTAL": {
-              "name": "VOIDLING ELEMENTAL",
-              "text": "<p>@Embed[Actor.4VkK0gqIxpBwfND3 statblock classes=\"double-column\" caption=false]{Voidling Elemental}</p><div style=\"display:flex;justify-content:center\"><img src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/Voidling_Elemental_1_STATIC_TOKEN_600x600.webp\" style=\"max-width:65%;height:auto;border:none\" /></div>"
+              "name": "虚空元素",
+              "text": "<p>@Embed[Actor.4VkK0gqIxpBwfND3 statblock classes=\"double-column\" caption=false]{虚空元素}</p><div style=\"display:flex;justify-content:center\"><img src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/Voidling_Elemental_1_STATIC_TOKEN_600x600.webp\" style=\"max-width:65%;height:auto;border:none\" /></div>"
             }
           }
         },
@@ -4761,29 +4761,29 @@
           }
         },
         "Map Integration: Levitating Glyph": {
-          "name": "Map Integration: Levitating Glyph",
+          "name": "地图整合：悬浮符文",
           "pages": {
             "Map Integration": {
-              "name": "Map Integration",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.acOx0HFvN7S0Fc9z]</h3><p>Activate the glyph to open the aperture and levitates players between Tower Level 5 and Tower Level 6.</p><p>Use this <strong>@UUID[Macro.kfOzqfjgG8VQErb5]{Interactive Map Features UI}</strong> to enable or disable teleport regions.</p></article></section><aside class=\"notable\"><h4>GM Notes</h4><p>Activate this region only after the players complete the light orb puzzle @UUID[JournalEntry.7gwobmg96g7RltZa.JournalEntryPage.JuU0tRHMY9VMyqXx]{Entrance}</p></aside>"
+              "name": "地图整合",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.acOx0HFvN7S0Fc9z]</h3><p>激活符文以开启传送门，使玩家可在高塔的 5 楼与 6 楼之间悬浮移动。</p><p>使用此<strong>@UUID[Macro.kfOzqfjgG8VQErb5]{交互式地图功能界面}</strong>可启用或禁用传送区域。</p></article></section><aside class=\"notable\"><h4>GM 提示</h4><p>在玩家完成@UUID[JournalEntry.7gwobmg96g7RltZa.JournalEntryPage.JuU0tRHMY9VMyqXx]{入口}发光球体的解谜后，再激活该区域。</p></aside>"
             }
           }
         },
         "Map Integration: Light Orbs Puzzle": {
-          "name": "Map Integration: Light Orbs Puzzle",
+          "name": "地图整合：发光球体解密",
           "pages": {
             "Map Integration": {
-              "name": "Map Integration",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.cWzl3m6vQuxgJjXR]</h3><p>The small orbs are interactive and can be switched on or off. Activating the orbs in the incorrect order cause the @UUID[Actor.w96BD7Rkr3OsTpA9] to release harmful energy or summon elementals:</p><ul><li><p>On the first incorrect activation, the crystalline magical device summons three elementals to attack the adventurers.</p></li><li><p>For each subsequent incorrect activation, the following effects occur in sequence:</p><ol><li><p>Sonic damage, use the Sonic Damage from the orb's abilities.</p></li><li><p>Lightning damage, use the Lightning Damage from the orb's abilities.</p></li><li><p>Necrotic damage.</p></li></ol></li></ul><p>After these three effects, if the adventurers continue pressing the orbs in the wrong sequence, the GM can choose which ability of the crystalline magical device to activate next.<br />Additionally, when the crystalline device triggers any of its harmful abilities due to an incorrect sequence, all the orbs turn off, forcing the adventurers to start the sequence again.</p><p>Check the @UUID[JournalEntry.7gwobmg96g7RltZa.JournalEntryPage.JuU0tRHMY9VMyqXx]{TOWER LEVEL 1} Journal Page for the complete puzzle and the solution.</p><p>Use this <strong>@UUID[Macro.pL9tL6WRxevy4dzt]{Interactive Map Features UI}</strong> to open the light orb puzzle.</p></article></section>"
+              "name": "地图整合",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.cWzl3m6vQuxgJjXR]</h3><p>这些球体具有交互功能，可进行开启或关闭操作。若激活顺序错误，将导致@UUID[Actor.w96BD7Rkr3OsTpA9]释放伤害能量或召唤元素生物：</p><ul><li><p>首次错误激活时，该水晶魔法装置将召唤三个元素生物攻击冒险者。</p></li><li><p>后续每次激活错误将依次触发以下效果：</p><ol><li><p>音波伤害（采用球体能力中的音波伤害数值）</p></li><li><p>闪电伤害（采用球体能力中的闪电伤害数值）</p></li><li><p>暗蚀伤害</p></li></ol></li></ul><p>若冒险者在经历上述三重效应后仍持续错误操作，GM可自主选择激活该水晶魔法装置的任一后续能力。需特别注意的是，当水晶装置因错误序列触发任何伤害性能力时，所有球体将自动关闭，迫使冒险者重新开始解谜流程。</p><p>完整谜题及解法请查阅日志@UUID[JournalEntry.7gwobmg96g7RltZa.JournalEntryPage.JuU0tRHMY9VMyqXx]{高塔 1 楼}。</p><p>可通过@UUID[Macro.pL9tL6WRxevy4dzt]{交互式地图功能界面}开启光球谜题。</p></article></section>"
             }
           }
         },
         "Map Integration: Toggle Lights": {
-          "name": "Map Integration: Toggle Lights",
+          "name": "地图整合：切换光源",
           "pages": {
             "Map Integration": {
-              "name": "Map Integration",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.d00UkVU68bK6lf1J]</h3><p>You can use our tool to turn lights on or off. Select which light should be turned on or off, then click <strong>Update Lights</strong>.</p><p>Use this <strong>@UUID[Macro.pL9tL6WRxevy4dzt]{Interactive Map Features UI}</strong> to turn on/off the lights.</p></article></section>"
+              "name": "地图整合",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.d00UkVU68bK6lf1J]</h3><p>你可以使用Boss Loot的工具来打开或关闭光源。选择需要打开或关闭的光源，然后点击<strong>更新光源</strong>。</p><p>使用此<strong>@UUID[Macro.pL9tL6WRxevy4dzt]{交互式地图功能界面}</strong>来打开/关闭灯光。</p></article></section>"
             }
           }
         },
@@ -4804,8 +4804,8 @@
               "text": "<h3><span style=\"font-family:Times New Roman\"><em>该魔法宝箱配有一把造型奇特的锁孔，锁孔外围镌刻着魔法铭文。</em></span></h3><p><br /></p><img src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/assets/Chest-Puzzle-1.webp\" />"
             },
             "For GM": {
-              "name": "For GM",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/notebook-1.webp\" /></figure><article><h3>@UUID[JournalEntry.jW1gMJIDXxp6dLRB]</h3><h3>Solution &amp; Content of the Chest</h3><p>The adventurers must speak the word <strong>\"Love\"</strong> to open the chest.</p><p>The chest holds:</p><ul><li><p>a faded letter: The letter critiques love as deceptive, highlighting broken promises and disillusionment, with a reflective tone shaped by personal betrayal.</p></li><li><p>a locket with a tiny portrait: They can bring this item to the Dreamer.</p></li><li><p><strong>@UUID[Item.9CmHp6P5ByUh9pWC]{Rod of Lies}</strong> This magic item is an optional reward.</p></li></ul><img src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/assets/Chest-Puzzle-Solution-1.webp\" /></article></section><aside class=\"notable\"><p><strong>Note:</strong> You can safely show this to players. They will only see the description.</p></aside>"
+              "name": "致 GM",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/notebook-1.webp\" /></figure><article><h3>@UUID[JournalEntry.jW1gMJIDXxp6dLRB]</h3><h3>宝箱的解法与内容</h3><p>冒险者需念出<strong>\"爱\"</strong>这一咒语方能开启宝箱。</p><p>宝箱内含：</p><ul><li><p>一封褪色信笺：该信函以反思性笔调批判爱情之虚妄，着重揭示背弃诺言与理想幻灭，字里行间透露出作者亲身经历的背叛创伤。</p></li><li><p>嵌有微型肖像的挂坠盒：该物品可交付于\"梦旅者\"。</p></li><li><p><strong>@UUID[Item.9CmHp6P5ByUh9pWC]{谎言权杖}</strong> 为可选奖励。</p></li></ul><img src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/assets/Chest-Puzzle-Solution-1.webp\" /></article></section><aside class=\"notable\"><p><strong>提示：</strong>你可以安全地向玩家展示此信息，他们将仅看到描述文本。</p></aside>"
             }
           }
         },
@@ -4831,20 +4831,20 @@
           }
         },
         "Map Integration: Summon Tokens": {
-          "name": "Map Integration: Summon Tokens",
+          "name": "地图整合：召唤指示物",
           "pages": {
             "Map Integration": {
-              "name": "Map Integration",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.rkvYRHWUgWI05Org]</h3><p>Select which aspects (personalities) of the wizard to summon (minimum 1, maximum 4), then press Summon to power the experiment.</p><p>This feature can be used to summon the wizard.</p><p>Use this <strong>@UUID[Macro.T5uKOQfZV5fPKLUh]{Interactive Map Features UI}</strong> to summon the tokens in the predefined locations.</p></article></section>"
+              "name": "地图整合",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.rkvYRHWUgWI05Org]</h3><p>选择要召唤的法师的哪些人格（个性）（最少 1 个，最多 4 个），然后点击“召唤”为实验提供能量。</p><p>此功能可用于召唤法师。</p><p>使用此 <strong>@UUID[Macro.T5uKOQfZV5fPKLUh]{交互式地图功能界面}</strong> 在预定义的位置召唤指示物。</p></article></section>"
             }
           }
         },
         "Map Integration: Rotate Lights": {
-          "name": "Map Integration: Rotate Lights",
+          "name": "地图整合：旋转光源",
           "pages": {
             "Map Integration": {
-              "name": "Map Integration",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.t40EWQ5RzjoBBFNn]</h3><p>Press the <strong>Power ON Experiment</strong> button to turn on all the lights. Then, use the slider to rotate the lights.</p><p>Use this <strong>@UUID[Macro.aoJCylLS71Pvq3Ln]{Interactive Map Features UI}</strong> to adjust the angle of the light beams.</p></article></section>"
+              "name": "地图整合",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.t40EWQ5RzjoBBFNn]</h3><p>按下<strong>开启实验能源</strong>按钮打开所有光源。然后，使用滑块旋转光源。</p><p>使用此<strong>@UUID[Macro.aoJCylLS71Pvq3Ln]{交互式地图功能界面}</strong>调整光束的角度。</p></article></section>"
             }
           }
         },
@@ -4865,39 +4865,39 @@
               "text": "<h3><span style=\"font-family:Times New Roman\"><em>“想象力是我最大的天赋，也是我最大的诅咒。我沉醉于对未来的幻想之中，却一事无成。我的情感蒙蔽了我的判断力。它们束缚着我。或许，如果我能放下这份……柔情，我会变得更坚强。”</em></span></h3>"
             },
             "For GM": {
-              "name": "For GM",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/notebook-1.webp\" /></figure><article><h3>@UUID[JournalEntry.x2UHmRgRMXrpfUjt]</h3><p>[[/check Investigation 20]] to find this journal note.</p></article></section><aside class=\"notable\"><p><strong>Note:</strong> You can safely show this to players. They will only see the description.</p></aside>"
+              "name": "致 GM",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/notebook-1.webp\"></figure><article><h3>@UUID[JournalEntry.x2UHmRgRMXrpfUjt]</h3><p>通过一次[[/check investigation 20]]检定，以找到这本日记笔记。</p></article></section><aside class=\"notable\"><p><strong>提示：</strong>你可以安全地向玩家展示此信息，他们将仅看到描述文本。</p></aside>"
             }
           }
         },
         "Map Integration: Toggle Magical Darkness": {
-          "name": "Map Integration: Toggle Magical Darkness",
+          "name": "地图整合：切换魔法黑暗",
           "pages": {
             "Map Integration": {
-              "name": "Map Integration",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.x7Nnjyqz65k51jIj]</h3><p>After the adventurers stabilize the tower’s magic by completing the puzzle in the Entrance room, the Coward will disable the darkness in the storage.</p><p>Use this <strong>@UUID[Macro.pL9tL6WRxevy4dzt]{Interactive Map Features UI}</strong> to toggle the magical darkness</p></article></section>"
+              "name": "地图整合",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.x7Nnjyqz65k51jIj]</h3><p>冒险者们在入口房间完成解密并稳定了高塔的魔法后，怯懦者将解除储藏室中的黑暗。</p><p>使用此<strong>@UUID[Macro.pL9tL6WRxevy4dzt]{交互式地图功能界面}</strong>切换魔法黑暗</p></article></section>"
             }
           }
         },
         "Handout: Antidote": {
-          "name": "Handout: Antidote",
+          "name": "展示材料：解毒剂",
           "pages": {
             "DESCRIPTION": {
-              "name": "DESCRIPTION",
-              "text": "<h3><span style=\"font-family:Times New Roman\"><em>A bag containing two antidote potions for the poison in the Specimen Room.</em></span></h3><p><br /></p><div style=\"display:flex;justify-content:center;align-items:center;gap:10px;margin-top:10px\"><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/assets/Antidote-1.webp\" alt=\"Old Journal\" /></div>"
+              "name": "描述",
+              "text": "<h3><span style=\"font-family:Times New Roman\"><em>一个装有两瓶解毒剂的袋子，用于解除标本室里的毒素。</em></span></h3><p><br /></p><div style=\"display:flex;justify-content:center;align-items:center;gap:10px;margin-top:10px\"><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/assets/Antidote-1.webp\" alt=\"Old Journal\" /></div>"
             },
             "For GM": {
-              "name": "For GM",
-              "text": "<h3>@UUID[Item.VKCFlhzlkJOPfTse]</h3><p>@Embed[Item.VKCFlhzlkJOPfTse caption=false cite=false]</p><p><br /></p><div style=\"display:flex;justify-content:center;align-items:center;gap:10px;margin-top:10px\"><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/assets/Antidote-1.webp\" alt=\"Old Journal\" /></div><aside class=\"notable\"><h4>GM Notes</h4><p>The adventurers can learn about the antidote from @UUID[Actor.9XjOpzeCG7YC6lz9] in @UUID[JournalEntry.7gwobmg96g7RltZa.JournalEntryPage.ixKginRa1Pfrghrm]{The Specimen Room} during their conversation, after they fulfill its request.</p><p><strong>Note:</strong> You can safely show this to players. They will only see the description.</p></aside>"
+              "name": "致 GM",
+              "text": "<h3>@UUID[Item.VKCFlhzlkJOPfTse]</h3><p>@Embed[Item.VKCFlhzlkJOPfTse caption=false cite=false]</p><p><br /></p><div style=\"display:flex;justify-content:center;align-items:center;gap:10px;margin-top:10px\"><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/assets/Antidote-1.webp\" alt=\"Old Journal\" /></div><aside class=\"notable\"><h4>GM 提示</h4><p>冒险者们在完成@UUID[Actor.9XjOpzeCG7YC6lz9]的请求后，在@UUID[JournalEntry.7gwobmg96g7RltZa.JournalEntryPage.ixKginRa1Pfrghrm]{标本室}与其交谈时，可以了解到解药的相关信息。</p><p><strong>注意：</strong>你可以安全地向玩家展示此信息，他们将仅看到描述文本。</p></aside>"
             }
           }
         },
         "Map Integration: Teleport Region Trapdoor": {
-          "name": "Map Integration: Teleport Region Trapdoor",
+          "name": "地图整合：传送区域陷阱门",
           "pages": {
             "Map Integration": {
-              "name": "Map Integration",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.z2T9cZucVKnyvB84]</h3><p>There are two trapdoors, one to the north and one to the south of the platform, leading to the floor below. They automatically lock unless held open and can only be reopened by succeeding on a [[/check athletics 20]] check or a [[/check dexterity 20]] (Thieves' Tools) check.</p><p>Use this <strong>@UUID[Macro.kfOzqfjgG8VQErb5]{Interactive Map Features UI}</strong> to enable or disable teleport regions.</p></article></section>"
+              "name": "地图整合",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/toggles-1.webp\" /></figure><article><h3>@UUID[JournalEntry.z2T9cZucVKnyvB84]</h3><p>平台的北面和南面各有一个活板门，通向下面一层。除非一直保持开启状态，否则它们会自动锁上，要重新打开活板门，需要通过一次[[/check athletics 20]]检定或一次[[/check dexterity 20]]（盗贼工具）检定。</p><p>使用此<strong>@UUID[Macro.kfOzqfjgG8VQErb5]{交互式地图功能界面}</strong>来启用或禁用传送区域。</p></article></section>"
             }
           }
         },
@@ -4909,8 +4909,8 @@
               "text": "<h3><span style=\"font-family:Times New Roman\"><em>一个沉重的上锁宝箱。</em></span></h3>"
             },
             "For GM": {
-              "name": "For GM",
-              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/notebook-1.webp\" /></figure><article><h3>@UUID[JournalEntry.zr7zkr1h977MbhBm]</h3><h3>Skill Check to Open the Chest</h3><ul><li><p><strong>[[/check dexterity 15]] (Thieves' Tools): </strong>is required to pick the lock.</p></li><li><p><strong>[[/check athletics 20]]: </strong>is required to brute-force the lock.</p></li></ul><p></p><h3>Content of the Chest</h3><ul><li><p>500 gold</p></li><li><p>gemstones (<span style=\"font-family:'Roboto Condensed', sans-serif\">worth 950 gold total</span>)</p></li></ul></article></section><aside class=\"notable\"><p><strong>Note:</strong> You can safely show this to players. They will only see the description.</p></aside>"
+              "name": "致 GM",
+              "text": "<section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"modules/boss-loot-adventures-premium/artwork/000-logo/notebook-1.webp\" /></figure><article><h3>@UUID[JournalEntry.zr7zkr1h977MbhBm]</h3><h3>打开宝箱技能检定</h3><ul><li><p><strong>[[/check dexterity 15]] (盗贼工具): </strong>开锁需要。</p></li><li><p><strong>[[/check athletics 20]]: </strong>强行开锁需要。</p></li></ul><p></p><h3>宝箱内容</h3><ul><li><p>500GP</p></li><li><p>宝石（<span style=\"font-family:'Roboto Condensed', sans-serif\">总价值 950GP</span>）</p></li></ul></article></section><aside class=\"notable\"><p><strong>提示：</strong>你可以安全地向玩家展示此信息，他们将仅看到描述文本。</p></aside>"
             }
           }
         }
