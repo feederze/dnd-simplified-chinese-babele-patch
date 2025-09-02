@@ -79,6 +79,10 @@
         },
         "Phantasm Damage": {
           "name": "魅影伤害"
+        },
+        "Study": {
+          "name": "Study",
+          "condition": "Study Action taken by other creature"
         }
       },
       "effects": {
@@ -146,6 +150,40 @@
       "description": "<p>选择法术距离内至多三个生物。每个目标的生命值上限和当前生命值 在法术持续时间内提高 5 点。</p><p><strong>升环施法：</strong>使用的法术位每比二环高一环，每个目标的生命值就额外提高 5 点。</p><section class=\"secret\" id=\"secret-u9DpSmufNhFMDGmN\"><p><strong>Foundry Note</strong></p><p>默认的“<strong>治疗”</strong>行为配置了多个动态效果，用以代表该法术所提供的临时最大生命值上限。</p><p>用户应根据施放该法术时所使用的法术位等级，应用相应的动态效果</p></section>",
       "materials": {
         "value": "一小片白布"
+      },
+      "effects": {
+        "Level 2: +5 Max HP": {
+          "name": "Level 2: +5 Max HP",
+          "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+        },
+        "Level 3: +10 Max HP": {
+          "name": "Level 3: +10 Max HP",
+          "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+        },
+        "Level 4: +15 Max HP": {
+          "name": "Level 4: +15 Max HP",
+          "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+        },
+        "Level 5: +20 Max HP": {
+          "name": "Level 5: +20 Max HP",
+          "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+        },
+        "Level 6: +25 Max HP": {
+          "name": "Level 6: +25 Max HP",
+          "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+        },
+        "Level 7: +30 Max HP": {
+          "name": "Level 7: +30 Max HP",
+          "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+        },
+        "Level 8: +35 Max HP": {
+          "name": "Level 8: +35 Max HP",
+          "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+        },
+        "Level 9: +40 Max HP": {
+          "name": "Level 9: +40 Max HP",
+          "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+        }
       }
     },
     "Alarm": {
@@ -176,14 +214,27 @@
         "Natural Weapons": {
           "name": "天生武器"
         },
-        "Change Appearance Again": {
-          "name": "再次改变外貌",
-          "chatFlavor": "再次改变外貌"
+        "Attack: Claws": {
+          "name": "Attack: Claws"
+        },
+        "Attack: Fangs/Horns": {
+          "name": "Attack: Fangs/Horns"
+        },
+        "Attack: Hooves": {
+          "name": "Attack: Hooves"
         }
       },
       "effects": {
-        "Aquatic Adaptation - Aquatic Adaptation": {
-          "name": "水生适应"
+        "Aquatic Adaptation": {
+          "name": "Aquatic Adaptation",
+          "description": "<p>You can breathe underwater and gain a Swim Speed equal to your Speed.</p>"
+        },
+        "Altered Appearance": {
+          "name": "Altered Appearance"
+        },
+        "Natural Weapon": {
+          "name": "Natural Weapon",
+          "description": "<p>When you use your Unarmed Strike to deal damage with that new growth, it deals 1d6 damage of the type in parentheses instead of dealing the normal damage for your Unarmed Strike, and you use your spellcasting ability modifier for the attack and damage rolls rather than using Strength.</p>"
         }
       }
     },
@@ -194,8 +245,9 @@
         "value": "一点食物"
       },
       "effects": {
-        "Animal Friendship": {
-          "name": "化兽为友"
+        "Charmed": {
+          "name": "Charmed",
+          "description": "<p><span style=\"font-family:Signika, sans-serif\">The target has the &amp;Reference[charmed apply=false] condition for the duration. If you or one of your allies deals damage to the target, the spells ends.</span></p>"
         }
       }
     },
@@ -204,6 +256,12 @@
       "description": "<p>指定一只在施法距离内你能看见的微型野兽。该生物必须成功通过一次魅力豁免，否则它会为你传递一则消息（如果该生物的挑战等级不是 0，则豁免自动成功）。你选择一个你曾造访过的地点，然后描述收信人的基本信息，如“一个穿着城镇守卫制服的男人或女人”或“一个戴着尖顶帽子的红发矮人”。你还需要说出一段不超过二十五个单次的信息。目标野兽 将会在法术持续时间内前往你选定的地点。会飞的信使 24 小时内可移动 50 里，不会飞的信使只能移动 25 里。</p><p>野兽抵达目的地后，会模仿你的声音把信息传递给你描述的人。信使只会把信息传递给符合你描述的人。如果法术持续时间内信使未能抵达目的地则信息将遗失，而曾作为信使的野兽将自行寻路返回你施法的地点。</p><p><strong>升环施法：</strong> 使用的法术位每比 2 环高一环，此法术持续时间就增加 48 小时。</p>",
       "materials": {
         "value": "一点食物"
+      },
+      "effects": {
+        "Carrying Message": {
+          "name": "Carrying Message",
+          "description": "<p>The Beast travels for the duration toward the specified location, covering about 25 miles per 24 hours or 50 miles if the Beast can fly.</p><p>When the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn’t reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell.</p>"
+        }
       }
     },
     "Animal Shapes": {
@@ -217,12 +275,15 @@
         "value": "一滴血，一块肉，以及一点骨灰"
       },
       "activities": {
-        "Animate Dead: Command": {
-          "name": "活化死尸：命令",
-          "chatFlavor": "活化死尸：命令"
-        },
-        "Animate Dead": {
-          "name": "活化死尸"
+        "summon": {
+          "profiles": {
+            "Skeleton (bones)": {
+              "name": "Skeleton (bones)"
+            },
+            "Zombie (corpse)": {
+              "name": "Zombie (corpse)"
+            }
+          }
         }
       }
     },
@@ -253,7 +314,12 @@
     },
     "Antilife Shell": {
       "name": "防活物护罩",
-      "description": "<p>一道灵光从你身上延伸而出并在持续时间内形成 10 尺光环。这道灵光会阻绝外面除亡灵生物和构装生物之外所有类型的生物，使它们无法穿过或触及内部。一名受影响的生物施展的法术、使用远程武器或触及武器发动的攻击可以穿过屏障。</p><p>若你移动迫使受影响生物进入护罩内，则法术随之终止。</p>"
+      "description": "<p>一道灵光从你身上延伸而出并在持续时间内形成 10 尺光环。这道灵光会阻绝外面除亡灵生物和构装生物之外所有类型的生物，使它们无法穿过或触及内部。一名受影响的生物施展的法术、使用远程武器或触及武器发动的攻击可以穿过屏障。</p><p>若你移动迫使受影响生物进入护罩内，则法术随之终止。</p>",
+      "target": {
+        "affects": {
+          "special": "Constructs and Undead are unaffected"
+        }
+      }
     },
     "Antimagic Field": {
       "name": "反魔法场",
@@ -317,7 +383,28 @@
     },
     "Arcane Vigor": {
       "name": "复苏秘法",
-      "description": "<div class=\"Section0\" style=\"LAYOUT-GRID:15.6pt none\"><p class=\"MsoNormal\">你利用自己的生命力来治愈自身。投一枚或两枚你还未消耗的生命骰，然后回复等于结果加你的施法属性调整值的总和的生命值。随后，这些生命骰会被法术消耗。</p><p><strong>升环施法：</strong>使用的法术位每比二环高一环，你就能多投掷一枚未使用的生命骰。</p></div><section class=\"secret\" id=\"secret-boiIVpDiaDqivdaw\"><p><strong>Foundry Note</strong></p><p><strong>\"消耗n个生命骰\"</strong>的行为被设置为最少消耗 2 个生命骰，同时只会添加一次调整值。</p><p>如果需要消耗<em>单个</em>生命骰，请手动消耗、投掷并治疗。</p></section><p></p>"
+      "description": "<div class=\"Section0\" style=\"LAYOUT-GRID:15.6pt none\"><p class=\"MsoNormal\">你利用自己的生命力来治愈自身。投一枚或两枚你还未消耗的生命骰，然后回复等于结果加你的施法属性调整值的总和的生命值。随后，这些生命骰会被法术消耗。</p><p><strong>升环施法：</strong>使用的法术位每比二环高一环，你就能多投掷一枚未使用的生命骰。</p></div><section class=\"secret\" id=\"secret-boiIVpDiaDqivdaw\"><p><strong>Foundry Note</strong></p><p><strong>\"消耗n个生命骰\"</strong>的行为被设置为最少消耗 2 个生命骰，同时只会添加一次调整值。</p><p>如果需要消耗<em>单个</em>生命骰，请手动消耗、投掷并治疗。</p></section><p></p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast",
+          "roll": "Roll Largest Hit Die"
+        },
+        "Expend d6 Hit Dice": {
+          "name": "Expend d6 Hit Dice"
+        },
+        "Expend d8 Hit Dice": {
+          "name": "Expend d8 Hit Dice"
+        },
+        "Expend d10 Hit Dice": {
+          "name": "Expend d10 Hit Dice"
+        },
+        "Expend d12 Hit Dice": {
+          "name": "Expend d12 Hit Dice"
+        },
+        "H7hUZ2QYED0myy5Z": {
+          "name": "Expend d12 Hit Dice"
+        }
+      }
     },
     "Armor of Agathys": {
       "name": "黯冰狱铠",
@@ -326,14 +413,24 @@
         "value": "一块蓝色玻璃碎片"
       },
       "activities": {
-        "Armor of Agathys: Reflect": {
-          "name": "黯冰狱铠：报偿"
+        "Cast": {
+          "name": "Cast"
+        },
+        "Frost Damage": {
+          "name": "Frost Damage",
+          "condition": "when a creature hits you with a melee attack"
         }
       }
     },
     "Arms of Hadar": {
       "name": "哈达之臂",
-      "description": "<p>你祈唤哈达的力量，让触须从你身上蔓延而出。以你为源点的 10 尺光环区域内，所有生物都必须进行一次力量豁免。豁免失败的生物将受到 [[/damage 2d6 type=necrotic]]伤害，并其直到下一回合前都无法执行反应。豁免成功的生物仅受到一半伤害。</p><p><strong>升环施法：</strong> 你使用的法术位每比一环高一环，法术的伤害就增加 1d6 点。</p>"
+      "description": "<p>你祈唤哈达的力量，让触须从你身上蔓延而出。以你为源点的 10 尺光环区域内，所有生物都必须进行一次力量豁免。豁免失败的生物将受到 [[/damage 2d6 type=necrotic]]伤害，并其直到下一回合前都无法执行反应。豁免成功的生物仅受到一半伤害。</p><p><strong>升环施法：</strong> 你使用的法术位每比一环高一环，法术的伤害就增加 1d6 点。</p>",
+      "effects": {
+        "No Reactions": {
+          "name": "No Reactions",
+          "description": "<p>The target can’t take Reactions until the start of its next turn.</p>"
+        }
+      }
     },
     "Astral Projection": {
       "name": "星界投影",
@@ -364,21 +461,42 @@
       "name": "生命灵光",
       "description": "<p>一道灵光自你身上发出并形成 30 尺半径的光环。在灵光范围内时，你和你的盟友获得对暗蚀伤害的&Reference[resistance]{抗性}，生命值上限也无法被降低。另外，生命值为 0 的盟友在灵光范围内开始其回合时，恢复 1 点生命值。</p>",
       "activities": {
-        "utility": {
-          "chatFlavor": "[治疗] 生命值为 0 的盟友在灵光范围内开始其回合时，恢复 1 点生命值。"
+        "Create Aura": {
+          "name": "Create Aura"
+        }
+      },
+      "effects": {
+        "Aura of Life": {
+          "name": "Aura of Life",
+          "description": "<p>While in the aura, you and your allies have Resistance to Necrotic damage, and your Hit Point maximums can’t be reduced. If an ally with 0 Hit Points starts its turn in the aura, that ally regains [[/healing 1 type=healing]]{1 Hit Point}.</p>"
         }
       }
     },
     "Aura of Purity": {
       "name": "净化灵光",
-      "description": "<p>一道灵光自你身上发出并形成 30 尺半径的光环。在灵光范围内时，你和你的盟友获得毒素伤害的抗性，并且在为抵抗和结束下列状态所做的豁免时具有优势：&Reference[blinded apply=false]{目盲}、&Reference[charmed apply=false]{魅惑}、&Reference[Deafened apply=false]{耳聋}、&Reference[Frightened apply=false]{恐慌}、&Reference[Paralyzed apply=false]{麻痹}、&Reference[Poisoned apply=false]{中毒}、&Reference[Stunned apply=false]{震慑}。</p>"
+      "description": "<p>一道灵光自你身上发出并形成 30 尺半径的光环。在灵光范围内时，你和你的盟友获得毒素伤害的抗性，并且在为抵抗和结束下列状态所做的豁免时具有优势：&Reference[blinded apply=false]{目盲}、&Reference[charmed apply=false]{魅惑}、&Reference[Deafened apply=false]{耳聋}、&Reference[Frightened apply=false]{恐慌}、&Reference[Paralyzed apply=false]{麻痹}、&Reference[Poisoned apply=false]{中毒}、&Reference[Stunned apply=false]{震慑}。</p>",
+      "activities": {
+        "Create Aura": {
+          "name": "Create Aura"
+        }
+      },
+      "effects": {
+        "Aura of Purity": {
+          "name": "Aura of Purity",
+          "description": "<p>While in the aura, you and your allies have Resistance to Poison damage and Advantage on saving throws to avoid or end effects that include the &amp;Reference[Blinded apply=false], &amp;Reference[Charmed apply=false], &amp;Reference[Deafened apply=false], &amp;Reference[Frightened apply=false], &amp;Reference[Paralyzed apply=false], &amp;Reference[Poisoned apply=false], or &amp;Reference[Stunned apply=false] condition.</p>"
+        }
+      }
     },
     "Aura of Vitality": {
       "name": "活力灵光",
       "description": "<p>一道灵光自你身上发出并形成 30 尺半径的光环。当你创造灵光时和它持续时你的每个回合开始，你可以为区域内的一名生物恢复 2d6 点生命值。</p>",
       "activities": {
-        "Aura of Vitality: Heal": {
-          "name": "活力灵光：治疗"
+        "Create Aura": {
+          "name": "Create Aura"
+        },
+        "Start of Turn Heal": {
+          "name": "Start of Turn Heal",
+          "condition": "start of your turn"
         }
       }
     },
@@ -397,7 +515,8 @@
       },
       "effects": {
         "Bane": {
-          "name": "灾祸"
+          "name": "灾祸",
+          "description": "<p>Whenever a target makes an attack roll or a saving throw before the spell ends, the target must subtract 1d4 from the attack roll or save.</p>"
         }
       }
     },
@@ -405,16 +524,17 @@
       "name": "放逐斩",
       "description": "<p>被该次攻击检定命中的目标会在此次攻击中额外受到 5d10 力场伤害。如果此次攻击将目标的生命值削减到 50 点或更低，则目标必须进行一次魅力豁免，豁免失败则会在法术持续期间被转移到一个无害的半位面。身处半位面期间，目标会陷入&Reference[Incapacitated apply=false]{失能}状态。当法术终止时，目标将重新出现在其被放逐前的位置。如果该位置被占据，则目标将出现在距离该位置最近的一个未被占据空间。</p>",
       "activation": {
-        "condition": "当你使用近战武器或徒手打击命中一个生物后执行"
+        "condition": "immediately after hitting a creature with a Melee weapon or an Unarmed Strike"
       },
       "activities": {
-        "Banishment: Banish": {
-          "name": "伤害并放逐"
+        "Damage and Banish": {
+          "name": "Damage and Banish"
         }
       },
       "effects": {
         "Banished": {
-          "name": "放逐"
+          "name": "放逐",
+          "description": "<p>The target is transported to a harmless demiplane for the duration. While there, the target has the &amp;Reference[Incapacitated apply=false] condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.</p>"
         }
       }
     },
@@ -423,6 +543,12 @@
       "description": "<p>一个在你施法距离内你可见的生物必须进行一次魅力豁免，豁免失败者会在法术持续期间被转移到一个无害的半位面，身处半位面期间，目标会陷入&Reference[Incapacitated apply=false]{失能}状态。当法术终止时，目标将重新出现在其被放逐前的位置。如果该位置被占据，则目标将出现在距离该位置最近的一个未被占据空间。</p><p>若该目标的生物类型为异怪、天族、元素、妖精或邪魔，则在法术持续一分钟后，目标不会返回。该目标会被改为转移到与其生物类型相关的一个位面（由 DM 决定）中的随机地点。</p><p><strong>升环施法：</strong>使用的法术位每比四环高一环，你就能多指定一个生物作为此法术的目标。</p>",
       "materials": {
         "value": "一颗五芒星"
+      },
+      "effects": {
+        "Banished": {
+          "name": "Banished",
+          "description": "<p>While there, the target has the &amp;Reference[Incapacitated apply=false] condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.</p><p>If the target is an Aberration, a Celestial, an Elemental, a Fey, or a Fiend, the target doesn’t return if the spell lasts for 1 minute. The target is instead transported to a random location on a plane (DM’s choice) associated with its creature type.</p>"
+        }
       }
     },
     "Barkskin": {
@@ -432,14 +558,20 @@
         "value": "一把树皮"
       },
       "effects": {
-        "Barkskin": {
-          "name": "树肤术"
+        "Bark-like Skin": {
+          "name": "Bark-like Skin"
         }
       }
     },
     "Beacon of Hope": {
       "name": "希望信标",
-      "description": "<p>在施法距离内指定任意数量的生物，并使其在法术持续时间内进行的感知豁免和死亡豁免具有优势。此外，其获得的所有治疗的生命值恢复量都取最大值。</p>"
+      "description": "<p>在施法距离内指定任意数量的生物，并使其在法术持续时间内进行的感知豁免和死亡豁免具有优势。此外，其获得的所有治疗的生命值恢复量都取最大值。</p>",
+      "effects": {
+        "Hopeful": {
+          "name": "Hopeful",
+          "description": "<p>The target has Advantage on Wisdom saving throws and Death Saving Throws and regains the maximum number of Hit Points possible from any healing.</p>"
+        }
+      }
     },
     "Beast Sense": {
       "name": "野兽感官",
@@ -462,20 +594,55 @@
       "name": "降咒",
       "description": "<p>你触碰一名生物。该生物必须进行一次感知豁免并成功通过，否则将在法术持续时间内被诅咒。直到诅咒终止前，目标会遭受以下一项效应，由你选择：</p><ul><li>选择一项属性。目标使用该属性所进行的属性检定和豁免检定具有劣势。 （<strong>诅咒属性</strong>效应）</li><li>目标对你发动的攻击检定具有劣势。 （<strong>诅咒攻击</strong>效应）</li><li>在战斗中，目标在其每回合开始时必须进行一次感知豁免，豁免失败则在该回合中被迫执行 &Reference[Dodge]{回避}动作。 （<strong>诅咒行动</strong>效应）</li><li>若你的攻击检定或法术对目标造成了伤害，则目标还会额外受到 1d8 暗蚀伤害。 （<strong>诅咒韧性</strong>效应）。</li></ul><p><strong>升环施法：</strong>使用四环法术位施展此法术时，你可以维持此法术的专注至多 10 分钟。使用五环及更高环阶的法术位施展此法术时，此法术无需专注，并且持续时间变为 8 小时（5～6 环法术位）或 24 小时（7～8 环法术位）。若你使用 9 环法术位施展此法术，则此法术会一直持续到被解除为止。</p>",
       "activities": {
-        "Bestow Curse: Disadvantage on Ability Checks & Saves": {
-          "name": "降咒：属性和豁免检定劣势"
+        "Curse Ability": {
+          "name": "Curse Ability"
         },
-        "Bestow Curse: Extra Damage": {
-          "name": "降咒：额外伤害"
+        "Curse Attacks": {
+          "name": "Curse Attacks"
         },
-        "Bestow Curse: Disadvantage on Attacks": {
-          "name": "降咒：攻击劣势"
+        "Curse Actions": {
+          "name": "Curse Actions"
         },
-        "Bestow Curse: Dodge on Turn": {
-          "name": "降咒：回合中回避"
+        "Curse Resilience": {
+          "name": "Curse Resilience"
+        }
+      },
+      "effects": {
+        "Cursed Charisma": {
+          "name": "Cursed Charisma",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
         },
-        "Bestow Curse: Other": {
-          "name": "降咒：其他"
+        "Cursed Constitution": {
+          "name": "Cursed Constitution",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Dexterity": {
+          "name": "Cursed Dexterity",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Intelligence": {
+          "name": "Cursed Intelligence",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Strength": {
+          "name": "Cursed Strength",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Wisdom": {
+          "name": "Cursed Wisdom",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Attacks": {
+          "name": "Cursed Attacks",
+          "description": "<p>The target has Disadvantage on attack rolls against you.</p>"
+        },
+        "Cursed Actions": {
+          "name": "Cursed Actions",
+          "description": "<p>In combat, the target must succeed on a [[/save ability=wis dc=@attributes.spell.dc format=long]] at the start of each of its turns or be forced to take the &amp;Reference[Dodge] action on that turn.</p>"
+        },
+        "Cursed Resilience": {
+          "name": "Cursed Resilience",
+          "description": "<p>If you deal damage to the target with an attack roll or a spell, the target takes an extra [[/damage 1d8 type=necrotic]] damage.</p>"
         }
       }
     },
@@ -501,9 +668,9 @@
     "Blade Ward": {
       "name": "剑刃防护",
       "description": "<p>在此法术结束前，每当有生物对你发动攻击检定，该生物的该次攻击检定都将承受 1d4 减值。</p>",
-      "effects": {
-        "Blade Ward": {
-          "name": "剑刃防护"
+      "activities": {
+        "utility": {
+          "roll": "Attack Penalty"
         }
       }
     },
@@ -514,8 +681,9 @@
         "value": "一枚价值 5+GP 的圣徽"
       },
       "effects": {
-        "Bless": {
-          "name": "祝福"
+        "Blessed": {
+          "name": "Blessed",
+          "description": "<p>Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save.</p>"
         }
       }
     },
@@ -527,28 +695,52 @@
       "name": "致盲斩",
       "description": "<p>被该次攻击检定命中的目标会在此次攻击中额外受到 3d8 点光耀伤害，并且目标陷入&Reference[blinded apply=false]{目盲}状态。陷入目盲的目标在其每回合结束时可以进行一次 [[/save ability=con dc=@attributes.spelldc]]豁免，豁免成功则终止其身上的法术。</p><p><strong>升环施法：</strong>你使用的法术位每比三环高一环，此法术的额外伤害提升 1d8。</p>",
       "activation": {
-        "condition": "当你使用近战武器或徒手打击命中一个生物后执行"
+        "condition": "immediately after hitting a creature with a Melee weapon or an Unarmed Strike"
+      },
+      "activities": {
+        "End of Turn Save": {
+          "name": "End of Turn Save"
+        }
+      },
+      "effects": {
+        "Blinded": {
+          "name": "Blinded",
+          "description": "<p>The target has the Blinded condition until the spell ends. At the end of each of its turns, the Blinded target makes a [[/save ability=con]] saving throw, ending the spell on itself on a success.</p>"
+        }
       }
     },
     "Blindness/Deafness": {
       "name": "目盲术/耳聋术",
       "description": "<p>处于你施法范围内的一个你可见的生物必须进行一次体质豁免，豁免失败者在法术持续期间陷入&Reference[Blinded apply=false]{目盲}或&Reference[Deafened apply=false]{耳聋}状态（由你选择）。目标可以在其每个回合结束时重复此豁免，直至豁免成功时结束自己身上的效应。</p><p><strong>升环施法：</strong>使用的法术位每比二环高一环，你就能多指定一个生物作为法术目标。</p>",
-      "activities": {
-        "Blind": {
-          "name": "目盲"
+      "effects": {
+        "Blindness": {
+          "name": "Blindness",
+          "description": "<p>At the end of each of its turns, the target repeats the [[/save ability=con]] save, ending the spell on itself on a success.</p>"
         },
-        "Deafened": {
-          "name": "耳聋"
+        "Deafness": {
+          "name": "Deafness",
+          "description": "<p>At the end of each of its turns, the target repeats the [[/save ability=con]] save, ending the spell on itself on a success.</p>"
         }
       }
     },
     "Blink": {
       "name": "闪现术",
-      "description": "<p>你在法术持续时间内每次自己回合结束时[[/r 1d6]]{掷一次 1d6}。结果为 4～6 时，你从你现在身处的存在位面消失，并出现在以太位面 （若你本已身处以太位面，此法术会立即终止）。在你身处以太位面期间，你可以观测到你所离开位面的黑白影像，但只限于 60 尺之内。你只能影响其他身处以太位面的生物，或被其影响。并且处于其他位面的生物在没有能够观测到以太位面事物的特殊能力的情况下，同样无法观测到你。</p><p>你会在你的下一回合开始时返回其他位面；如果当你法术终止时身处以太位面，你同样会返回其他位面。你返回原先位面时会出现在一个你原先位置 10 尺之内你可见的未被占据的空间之中。若在此范围内没有未被占据的空间，则你会出现在最近的未被占据的空间之中</p>"
+      "description": "<p>你在法术持续时间内每次自己回合结束时[[/r 1d6]]{掷一次 1d6}。结果为 4～6 时，你从你现在身处的存在位面消失，并出现在以太位面 （若你本已身处以太位面，此法术会立即终止）。在你身处以太位面期间，你可以观测到你所离开位面的黑白影像，但只限于 60 尺之内。你只能影响其他身处以太位面的生物，或被其影响。并且处于其他位面的生物在没有能够观测到以太位面事物的特殊能力的情况下，同样无法观测到你。</p><p>你会在你的下一回合开始时返回其他位面；如果当你法术终止时身处以太位面，你同样会返回其他位面。你返回原先位面时会出现在一个你原先位置 10 尺之内你可见的未被占据的空间之中。若在此范围内没有未被占据的空间，则你会出现在最近的未被占据的空间之中</p>",
+      "effects": {
+        "Ethereal": {
+          "name": "Ethereal"
+        }
+      }
     },
     "Blur": {
       "name": "朦胧术",
-      "description": "<p>你的身体变得模糊不定，难以捉摸。在法术持续时间内，所有生物对你发动的攻击检定具有劣势。不过若攻击者能通过&Reference[blindsight]{盲视}或 &Reference[truesight]{真实视觉}观测你，则其免疫于此法术的效应。</p>"
+      "description": "<p>你的身体变得模糊不定，难以捉摸。在法术持续时间内，所有生物对你发动的攻击检定具有劣势。不过若攻击者能通过&Reference[blindsight]{盲视}或 &Reference[truesight]{真实视觉}观测你，则其免疫于此法术的效应。</p>",
+      "effects": {
+        "Blurred": {
+          "name": "Blurred",
+          "description": "<p>For the duration, any creature has Disadvantage on attack rolls against you. An attacker is immune to this effect if it perceives you with Blindsight or Truesight.</p>"
+        }
+      }
     },
     "Burning Hands": {
       "name": "燃烧之手",
@@ -558,12 +750,8 @@
       "name": "召雷术",
       "description": "<p>一朵风暴云在施法距离内你上方可见的一点出现。风暴云表现为高 10 尺、半径 60 尺的柱状形状。</p><p>当你施展这道法术时，选择风暴云下方你可见的一点。一束闪电从云端射向该点。位于该点 5 尺内的生物进行一次敏捷豁免。豁免失败者受到 3d10 闪电伤害，豁免成功则仅受半数伤害。</p><p>直至法术结束前，你都可以执行一个&Reference[magic]{魔法}动作以此法再次降下闪电，并指定闪电射向同一点或另选一点。</p><p>若施法时你身处暴风雨环境下的室外，则该法术令你得以控制空中的风暴而非创造一朵新的风暴云。在这种状况下，法术伤害增加 1d10。</p><p><strong>升环施法：</strong>使用的法术位每比三环高一环，此法术的伤害就增加 1d10。</p>",
       "activities": {
-        "Call Lightning": {
-          "name": "召雷"
-        },
-        "Storm Bolt": {
-          "name": "风暴轰击",
-          "chatFlavor": "风暴轰击"
+        "save": {
+          "chatFlavor": "Bolt strikes a point under the cloud in a 5-ft. radius"
         }
       }
     },
@@ -571,11 +759,13 @@
       "name": "安定心神",
       "description": "<p>你指定施法距离内一点，以该点为源点半径 20 尺球状区域内的每个类人生物必须成功通过一次魅力豁免，否则将受下列效应之一影响（由你分别为每名生物选择生效的效应）。</p><ul><li>直至法术结束，该生物免疫&Reference[Charmed apply=false]{魅惑}和&Reference[Frightened apply=false]{恐慌}状态。如果生物已经被魅惑或恐惧，这些状态在法术持续时间内被抑制。</li><li>该生物对你选择的之前&Reference[Hostile apply=false]{敌对}的生物态度变为&Reference[Indifferent apply=false]{冷漠} 。该冷漠态度持续到目标受到伤害或者看到自己的盟友受到伤害。当法术结束时，该生物恢复到原本的态度。</li></ul>",
       "effects": {
-        "Calm Emotions: Condition Immunity": {
-          "name": "安定心神：状态免疫"
+        "Calmed": {
+          "name": "Calmed",
+          "description": "<p>The creature has Immunity to the Charmed and Frightened conditions until the spell ends. If the creature was already Charmed or Frightened, those conditions are suppressed for the duration.</p>"
         },
-        "Calm Emotions: Indifferent": {
-          "name": "安定心神：冷漠"
+        "Indifference": {
+          "name": "Indifference",
+          "description": "<p>The creature becomes Indifferent about creatures of your choice that it’s Hostile toward. This indifference ends if the target takes damage or witnesses its allies taking damage. When the spell ends, the creature’s attitude returns to normal.</p>"
         }
       }
     },
@@ -585,9 +775,9 @@
       "materials": {
         "value": "三根银质别针"
       },
-      "activities": {
-        "Chain Lightning: Leap": {
-          "name": "连锁闪电：跳跃"
+      "target": {
+        "affects": {
+          "special": "secondary targets must be within 30 feet of initial target"
         }
       }
     },
@@ -595,8 +785,9 @@
       "name": "魅惑怪物",
       "description": "<p>一名你可见的施法距离内的生物进行一次感知豁免，如果你或者你的盟友正在与它战斗，它在这次豁免上具有优势。豁免失败，则目标陷入&Reference[Charmed apply=false]{魅惑}状态直至法术结束，或在你或你的盟友对它造成伤害时提前结束。魅惑生物将对你友好。当法术结束时，目标会知道它曾被你魅惑。</p><p><strong>升环施法：</strong>使用的法术位每比四环高一环，你就可以额外指定一名生物作为此法术的目标。</p>",
       "effects": {
-        "Charm Monster": {
-          "name": "魅惑怪物"
+        "Charmed": {
+          "name": "Charmed",
+          "description": "<p>The target has the &amp;Reference[Charmed apply=false] condition until the spell ends or until you or your allies damage it. The Charmed creature is Friendly to you. When the spell ends, the target knows it was Charmed by you.</p>"
         }
       }
     },
@@ -604,8 +795,9 @@
       "name": "魅惑类人",
       "description": "<p>选择法术距离内你可见的一名类人生物，迫使该生物进行一次感知豁免，如果你或者你的同伴正在与其战斗，其进行的这次豁免将具有优势。如果其豁免失败，其陷入&Reference[charmed]状态直到法术结束，或者直到你或你的同伴对其造成伤害。被魅惑的生物将对你友好。在法术结束时，生物会知道其曾被你魅惑。</p><p><strong>升环施法：</strong>使用的法术位每高一环，你就可以额外选择一个生物作为目标。</p>",
       "effects": {
-        "Charm Person": {
-          "name": "魅惑类人"
+        "Charmed": {
+          "name": "Charmed",
+          "description": "<p>the target has the &amp;Reference[charmed apply=false] condition until the spell ends or until you or your allies damage it. The Charmed creature is Friendly to you. When the spell ends, the target knows it was Charmed by you.</p>"
         }
       }
     },
@@ -613,8 +805,9 @@
       "name": "颤栗之触",
       "description": "<p>你引导出来自坟墓的刺骨阴冷，对目标进行一次近战法术攻击。命中时，目标将受到 1d10 点暗蚀伤害，并且直至你下一回合的结束前都无法恢复生命值。</p><p><strong>戏法强化：</strong> 法术的伤害会在你到达下列等级时增加 1d10：5 级（2d10）、11 级（3d10）以及 17 级（4d10）。</p>",
       "effects": {
-        "Chill Touch": {
-          "name": "颤栗之触"
+        "Blocked Healing": {
+          "name": "Blocked Healing",
+          "description": "<p>The target can’t regain Hit Points until the end of your next turn.</p>"
         }
       }
     },
@@ -623,11 +816,6 @@
       "description": "<div class=\"Section0\" style=\"LAYOUT-GRID:15.6pt none\"><p class=\"MsoNormal\">你向施法距离内某个目标掷出一颗能量球。从强酸、寒冷、火焰、闪电、毒素、雷鸣中选择一个作为创造出来的球体的伤害类型，然后对该目标发动一次远程法术攻击。命中时，该目标将受到 3d8 点你所选类型的伤害。</p><p>如果你的 d8 骰中有两枚（或更多）投出了相同的数字，能量球将会从原目标跃向其周围 30 尺内由你所选择的另一个目标。你需要对新目标再进行一次攻击检定，然后进行一次新的伤害掷骰。能量球无法再次进行此种跳跃，除非你施展此法术时使用了环阶 2+ 的法术位。</p><p>[[@item.level]]{跳跃次数}</p><p><strong>升环施法：</strong>使用的法术位每高一环，法术的伤害就增加 1d8。能量球能够跳跃的最大次数等同于所消耗的法术位环阶，但每次施展此法术时，每名生物只能被指定为此法术目标一次。</p></div>",
       "materials": {
         "value": "一枚价值 50+GP 的钻石"
-      },
-      "activities": {
-        "Chromatic Orb: Bounce": {
-          "name": "繁彩球：跳跃"
-        }
       }
     },
     "Circle of Death": {
@@ -664,8 +852,8 @@
       "name": "死云术",
       "description": "<div class=\"Section0\" style=\"LAYOUT-GRID:15.6pt none\"><p class=\"MsoNormal\">你指定施法距离内一点，在以该点为中心、半径 20 尺球状区域内，创造一片黄绿色剧毒浓雾。雾气在法术持续时间内维持存在，但仍会被强风吹散（比如@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]{造风术}）并解除法术。雾气存在区域视为&Reference[heavilyobscured]{重度遮蔽}。</p><p>每名位于球状区域内的生物都进行一次体质豁免，豁免失败者受到 5d8 点毒素伤害，豁免成功则受到一半伤害。每当球状区域移动到一名生物区域内时、一名生物进入球状区域时或是在该区域结束其回合时，该生物同样需要进行一次豁免。一名生物一回合只需要进行一次该豁免。</p><p>在你的每个回合开始时，球状区域会往远离你的方向移动 10 尺。</p><p><strong>升环施法：</strong> 使用的法术位每比五环高一环，此法术的伤害就增加 1d8。</p></div>",
       "activities": {
-        "Cloudkill: Damage": {
-          "name": "死云术：伤害"
+        "Cast and Save": {
+          "name": "Cast and Save"
         }
       }
     },
@@ -690,52 +878,18 @@
     },
     "Command": {
       "name": "命令术",
-      "description": "<p>你对施法距离内一个你能看见的生物说出一个单词的命令。目标生物必须通过一次感知豁免，否则在它自己的下一回合中，其必须服从这道命令行事。从以下选项中选择一条命令：</p><p><strong>过来。</strong>目标以最短最直接的路线向你移动，若其到达你 5 尺范围内，其会结束自己的回合。</p><p><strong>放下。</strong>目标放下持握的任何东西，然后结束自己的回合。</p><p><strong>走开。</strong>目标消耗其整个回合，以最快最有效的方式远离你。</p><p><strong>趴下。</strong>目标陷入&Reference[prone]状态并结束自己的回合。</p><p><strong>立定。</strong>在其回合内，目标不进行移动且不作任何动作和附赠动作。</p><p><strong>升环施法：</strong>你使用的法术位每比一环高一环，法术就能多影响一个目标。</p>",
-      "activities": {
-        "Approach": {
-          "name": "过来",
-          "chatFlavor": "命令术：过来"
-        },
-        "Drop": {
-          "name": "放下",
-          "chatFlavor": "命令术：放下"
-        },
-        "Flee": {
-          "name": "走开",
-          "chatFlavor": "命令术：走开"
-        },
-        "Grovel": {
-          "name": "趴下",
-          "chatFlavor": "命令术：趴下"
-        },
-        "Halt": {
-          "name": "立定",
-          "chatFlavor": "命令术：立定"
-        }
-      },
-      "effects": {
-        "Command: Approach": {
-          "name": "命令术：过来"
-        },
-        "Command: Drop": {
-          "name": "命令术：放下"
-        },
-        "Command: Flee": {
-          "name": "命令术：走开"
-        },
-        "Command: Grovel": {
-          "name": "命令术：趴下"
-        },
-        "Command: Halt": {
-          "name": "命令术：立定"
-        }
-      }
+      "description": "<p>你对施法距离内一个你能看见的生物说出一个单词的命令。目标生物必须通过一次感知豁免，否则在它自己的下一回合中，其必须服从这道命令行事。从以下选项中选择一条命令：</p><p><strong>过来。</strong>目标以最短最直接的路线向你移动，若其到达你 5 尺范围内，其会结束自己的回合。</p><p><strong>放下。</strong>目标放下持握的任何东西，然后结束自己的回合。</p><p><strong>走开。</strong>目标消耗其整个回合，以最快最有效的方式远离你。</p><p><strong>趴下。</strong>目标陷入&Reference[prone]状态并结束自己的回合。</p><p><strong>立定。</strong>在其回合内，目标不进行移动且不作任何动作和附赠动作。</p><p><strong>升环施法：</strong>你使用的法术位每比一环高一环，法术就能多影响一个目标。</p>"
     },
     "Commune": {
       "name": "通神术",
       "description": "<p>你与一名神明或一名神明的代理人进行联系，并询问至多三个能以“是”或“否”回答的问题。你必须在法术结束前完成提问。你会收到每个问题的正确答案。</p><p>这些神能存在也并非全知全能，因此当问题涉及的信息超过神的认知范围时，你可能会得到一句“不确定”作为回答。另外当一个单词的回答可能引致误导或者与神的兴致相违背时，DM 可能会提供一句短语作为答案。</p><p>若你在完成一次长休前施展两次或更多次的该法术，则法术有一定的几率不给任何答复。此概率从第二次施展起每次累计 25％。</p>",
       "materials": {
         "value": "焚香"
+      },
+      "target": {
+        "affects": {
+          "special": "diety or divine proxy"
+        }
       }
     },
     "Commune with Nature": {
@@ -744,7 +898,13 @@
     },
     "Compelled Duel": {
       "name": "强令对决",
-      "description": "<p>你尝试强令一名生物与你决斗。选择施法距离内一名你可见的生物，该生物必须成功通过一次感知豁免，豁免失败则，该生物对除你之外任何生物进行攻击检定时都具有劣势，且该生物不能自主移动到距离你超过 30 尺的位置。</p><p>当你攻击另一名生物时，当你对另一名敌对生物施展法术时，当一名你的盟友对该目标造成伤害或者对其施展伤害性法术时，又或者你在距离该目标超过 30 尺的位置结束你的回合时，该法术提前终止。</p>"
+      "description": "<p>你尝试强令一名生物与你决斗。选择施法距离内一名你可见的生物，该生物必须成功通过一次感知豁免，豁免失败则，该生物对除你之外任何生物进行攻击检定时都具有劣势，且该生物不能自主移动到距离你超过 30 尺的位置。</p><p>当你攻击另一名生物时，当你对另一名敌对生物施展法术时，当一名你的盟友对该目标造成伤害或者对其施展伤害性法术时，又或者你在距离该目标超过 30 尺的位置结束你的回合时，该法术提前终止。</p>",
+      "effects": {
+        "Compelled": {
+          "name": "Compelled",
+          "description": "<p>The target has Disadvantage on attack rolls against creatures other than you, and it can’t willingly move to a space that is more than 30 feet away from you.</p>"
+        }
+      }
     },
     "Comprehend Languages": {
       "name": "通晓语言",
@@ -1035,17 +1195,18 @@
       "name": "疯狂冠冕",
       "description": "<p>一名施法距离内你可见的生物必须成功于一次感知豁免，否则于法术持续时间内陷入&Reference[charmed]{魅惑}状态。非类人生物自动成功于此豁免。</p><p>一顶虚体王冠出现在被魅惑目标的头顶，且目标每回合必须在移动之前使用其动作对除自身以外你精神性选择的目标发动一次近战攻击。若你并未选择任何生物，或目标触及内没有生物，则目标可在其回合正常行动。目标在其每回合结束时都可以重新豁免，豁免成功则结束其身上该法术的效应。</p><p>在施法后，你在每个自己回合里必须用一个&Reference[magic]{魔法}动作维持对目标的控制，否则法术将终止。</p>",
       "effects": {
-        "Crown of Madness": {
-          "name": "疯狂冠冕"
+        "Spectral Crown": {
+          "name": "Spectral Crown",
+          "description": "<p>The target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if no creature is within its reach. The target repeats the [[/save ability=wis]] save at the end of each of its turns, ending the spell on itself on a success.</p>"
         }
       }
     },
     "Crusader's Mantle": {
       "name": "十字军披风",
       "description": "<p>你在 30 尺光环区域内散发出魔法灵光。位于灵光范围期间，你和你盟友以一把武器或一次徒手打击命中时将额外造成 1d4 光耀伤害。</p>",
-      "activities": {
-        "utility": {
-          "chatFlavor": "[1d4 - 光耀] 位于灵光范围期间，盟友以一把武器或一次徒手打击命中时"
+      "effects": {
+        "Crusader’s Mantle": {
+          "name": "Crusader’s Mantle"
         }
       }
     },
@@ -1094,7 +1255,13 @@
     },
     "Death Ward": {
       "name": "防死结界",
-      "description": "<p>你触摸一名生物，并给予其对死亡的防护。在法术结束前，当目标的生命值首次降至 0 时，该目标的生命值改为降至 1，随后法术终止。</p><p>目标受到直接致死而不造成伤害的效应影响时，若该法术仍在生效，则改为目标受到的致死效应失效，随后法术终止。</p>"
+      "description": "<p>你触摸一名生物，并给予其对死亡的防护。在法术结束前，当目标的生命值首次降至 0 时，该目标的生命值改为降至 1，随后法术终止。</p><p>目标受到直接致死而不造成伤害的效应影响时，若该法术仍在生效，则改为目标受到的致死效应失效，随后法术终止。</p>",
+      "effects": {
+        "Protection from Death": {
+          "name": "Protection from Death",
+          "description": "<p>The first time the target would drop to 0 Hit Points before the spell ends, the target instead drops to 1 Hit Point, and the spell ends.</p><p>If the spell is still in effect when the target is subjected to an effect that would kill it instantly without dealing damage, that effect is negated against the target, and the spell ends.</p>"
+        }
+      }
     },
     "Delayed Blast Fireball": {
       "name": "延迟爆裂火球",
@@ -1131,7 +1298,12 @@
     },
     "Destructive Wave": {
       "name": "湮灭波",
-      "description": "<p>毁灭能量从你身上扩散而出，覆盖了 30 尺光环范围。光环范围内你选择的每个生物进行一次体质豁免。豁免失败者受到[[/damage 5d6 type=thunder]]伤害和 [[/damage 5d6 type=necrotic|radiant]]伤害（由你选择）并且陷入&Reference[Prone]{倒地}状态。豁免成功只受一半伤害。</p>"
+      "description": "<p>毁灭能量从你身上扩散而出，覆盖了 30 尺光环范围。光环范围内你选择的每个生物进行一次体质豁免。豁免失败者受到[[/damage 5d6 type=thunder]]伤害和 [[/damage 5d6 type=necrotic|radiant]]伤害（由你选择）并且陷入&Reference[Prone]{倒地}状态。豁免成功只受一半伤害。</p>",
+      "effects": {
+        "Prone": {
+          "name": "Prone"
+        }
+      }
     },
     "Detect Evil and Good": {
       "name": "侦测善恶",
@@ -1144,7 +1316,12 @@
     },
     "Detect Magic": {
       "name": "侦测魔法",
-      "description": "<p>在法术持续时间内，你感受到距你 30 尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p>"
+      "description": "<p>在法术持续时间内，你感受到距你 30 尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p>",
+      "effects": {
+        "Detect Magic": {
+          "name": "Detect Magic"
+        }
+      }
     },
     "Detect Poison and Disease": {
       "name": "侦测毒性和疾病",
@@ -1180,6 +1357,12 @@
     "Disguise Self": {
       "name": "易容术",
       "description": "<p>你改变自身以及随身的衣物、护甲、武器等在你身上的所有物。该效应在法术终止时结束。肉眼看来你的身高可以有 1 尺的增减，体态可胖可瘦。你必须选择一个和你肢体基础排列方式一致的形态。此外，幻术的影响范围由你决定。</p><p>此法术产生的变化无法应对物理检查。比如，你用此法术添了一顶帽子，那么现实物件会从帽子穿过去，且任何触碰帽子的人将摸不到任何东西。</p><p>如果一名生物想要分辨你是否易容，则必须使用一个&Reference[study]{研究}动作研究你的外貌，并成功于一次对抗你法术豁免 DC 的[[/check ability=int skill=inv]]检定。</p>",
+      "activities": {
+        "Study": {
+          "name": "Study",
+          "condition": "Study Action taken by other creature"
+        }
+      },
       "effects": {
         "Disguised": {
           "name": "乔装",
@@ -1192,6 +1375,11 @@
       "description": "<p>你向施法距离内一个你能看见的目标射出一道绿色射线。该目标可以是一名生物或一个非魔法物件，或者是魔法力场的造物（例如由<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofForc]{力场墙}</em>创造的墙壁）。</p><p>目标生物必须进行一次敏捷豁免，豁免失败则受 10d6+40 点力场伤害，若目标生命值因此降至 0，则目标连同其穿着和携带的非魔法物品一起化为灰尘。该生物只能通过<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTrueResurr]</em>{完全复生术}或 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWish000000] @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWish000000]{祈愿术}</em>复活。</p><p>此法术会直接解离大型或更小的非魔法物件或魔法力场造物。如果目标是巨型或更大的物件或魔法力场造物，则此法术会解离其 10 尺立方大小的部分。</p><p><strong>升环施法：</strong>使用的法术位每比六环高一环，伤害就提高 3d6。</p>",
       "materials": {
         "value": "一块天然磁石和灰尘"
+      },
+      "target": {
+        "affects": {
+          "special": "a creature, a nonmagical object, or a creation of magical force,"
+        }
       }
     },
     "Dispel Evil and Good": {
@@ -1199,6 +1387,11 @@
       "description": "<p>法术持续时间内，天族、元素、妖精、邪魔和亡灵对你的攻击检定具有劣势。你可以使用下述特殊特性之一以提前结束法术。</p><p><strong>破咒。</strong>以一个&Reference[magic]{魔法}动作，你触碰一名因上述生物类型的任意生物而被其附身、陷入&Reference[Charmed]{魅惑}或 &Reference[Frightened]{恐慌}状态的生物。目标不再被上述生物附身，魅惑或恐慌。</p><p><strong>驱离。</strong>以一个魔法动作，你选择距你 5 尺内的一名你可见的生物，其生物类型必须是上述生物类型之一。目标必须成功于一次魅力豁免，否则，若其并未处于家园位面，则被遣送回其家园位面。对于亡灵和妖精，若它们并未处于家园位面，则亡灵会被遣送回堕影冥界，妖精则被遣送回妖精荒野。</p>",
       "materials": {
         "value": "银粉和铁粉"
+      },
+      "target": {
+        "affects": {
+          "special": "Celestials, Elementals, Fey, Fiends, and Undead only"
+        }
       },
       "activities": {
         "Dismissal": {
@@ -1215,12 +1408,6 @@
         },
         "Cast": {
           "name": "施展"
-        }
-      },
-      "effects": {
-        "Dispelling Evil and Good": {
-          "name": "驱逐善恶",
-          "description": "<p>法术持续时间内，天族、元素、妖精、邪魔和亡灵对你的攻击检定具有劣势。你可以使用下述特殊功能之一以提前结束法术：<strong>破咒</strong> 或 <strong>驱离</strong>。</p>"
         }
       }
     },
@@ -1252,7 +1439,15 @@
       "name": "至圣斩",
       "description": "<p>被该次攻击检定命中的目标会在此次攻击中额外受到 [[/damage 2d8 type=radiant]]伤害。若目标为邪魔生物或亡灵生物，则此伤害增加 1d8。</p><p><strong>升环施法：</strong>使用的法术位每比一环高一环，此法术的伤害就提高 1d8。</p>",
       "activation": {
-        "condition": "当你使用近战武器或徒手打击命中一个生物后立即执行"
+        "condition": "Immediately after hitting a target with a Melee weapon or an Unarmed Strike"
+      },
+      "activities": {
+        "Unholy Creature Damage": {
+          "name": "Unholy Creature Damage"
+        },
+        "Cast": {
+          "name": "Cast"
+        }
       }
     },
     "Divine Word": {
@@ -1312,8 +1507,11 @@
       "name": "龙息术",
       "description": "<p>你触摸一名自愿生物，然后从强酸、寒冷、火焰、闪电或毒素中任选其一。在法术结束之前，目标可以用一个&Reference[magic]{魔法}动作呼出 15 尺锥形范围的吐息。区域内的所有生物进行一次敏捷豁免，豁免失败受到 3d6 点所选类型的伤害，豁免成功只受一半伤害。</p><p><strong>升环施法：</strong>使用的法术位每比二环高一环，此法术的伤害就提高 1d6。</p>",
       "activities": {
-        "utility": {
-          "chatFlavor": "从强酸、寒冷、火焰、闪电或毒素中任选其一。"
+        "Cast": {
+          "name": "Cast"
+        },
+        "Exhale": {
+          "name": "Exhale"
         }
       }
     },
@@ -1725,6 +1923,15 @@
       "description": "<p>轻薄缥缈的火焰在法术持续期间环绕着你的身体，散发出 10 尺半径的&Reference[brightlight]{明亮光照}和额外 10 尺的&Reference[dimlight]{微光光照}。</p><p>这层火焰可以为你提供一面温暖护盾或冻寒护盾，由你选择。温暖护盾将赋予你对寒冷伤害的抗性，而冻寒护盾则会赋予你对火焰伤害的抗性。</p><p>此外，每当一名距你 5 尺内的生物以一次近战攻击命中你时，这个护盾将迸发出火焰。温暖护盾将对攻击者造成[[/damage 2d8 type=fire]]伤害，冻寒护盾将对攻击者造成[[/damage 2d8 type=cold]]伤害。</p>",
       "materials": {
         "value": "一小块磷或一只萤火虫"
+      },
+      "activities": {
+        "Flame Eruption": {
+          "name": "Flame Eruption",
+          "condition": "a creature within 5 feet hits you with a melee attack",
+          "affects": {
+            "special": "attacking creature"
+          }
+        }
       },
       "effects": {
         "Warm Shield": {
@@ -2153,6 +2360,12 @@
       "description": "<p>你使施法距离内一处 150 尺立方区域内的自然地形在视觉、听觉、嗅觉上都像是另一种自然地形。因此，开阔的平原或者道路可能会变得像是一片沼泽，或是丘陵、裂谷以及其他难以通过，甚至是无法通过的地形。一个池塘可能变得看起来像一片草地，一个悬崖像是一个缓坡，或者使一条乱石沟像是一条宽阔平坦的道路。区域内经过加工的建筑、装备或生物的外表不会改变。</p><p>地形的触觉特征不会改变，所以进入这片区域的生物可能会看穿幻象。如果触觉区别不明显，一个仔细调查幻象的生物可以采取研究动作，尝试进行一次对抗法术豁免DC 的智力（[[/check ability=int skill=inv dc=@attributes.spelldc]]{调查}）检定以识破之。对于一个识破了幻象本体的生物，幻象看起来就像是一层模糊的图像叠加在真实地形上。</p>",
       "materials": {
         "value": "一颗蘑菇"
+      },
+      "activities": {
+        "Study": {
+          "name": "Study",
+          "condition": "Study Action taken by other creature"
+        }
       }
     },
     "Harm": {
@@ -2273,6 +2486,9 @@
         },
         "Place Curse": {
           "name": "放置诅咒"
+        },
+        "Curse New Creature": {
+          "name": "Curse New Creature"
         }
       },
       "effects": {
@@ -2372,14 +2588,23 @@
     },
     "Hunter's Mark": {
       "name": "猎人印记",
-      "description": "<p>你指定施法距离内一个你能看见的生物并以魔法标记其作为你的猎物。直至法术终止前，你每次以任何攻击命中该目标时都会额外造成 1d6 点力场伤害，且每当你为寻找目标生物而进行感知（[[/check ability=wis skill=prc]]{察觉} 或 [[/check ability=wis skill=sur]]{生存}）检定时都具有优势。</p><p>如果在法术结束前目标 HP 降至 0，则你可以用附赠动作将标记转移至施法距离内的另一个可见生物。</p><p><strong>升环施法：</strong>使用三环或四环法术位施展该法术时，其专注可以维持至多 8 小时。使用环阶 5+ 的法术位施展该法术时，其专注可以维持至多 24 小时。</p>",
+      "description": "<p>You magically mark one creature you can see within range as your quarry. Until the spell ends, you deal an extra [[/damage]] damage to the target whenever you hit it with an attack roll. You also have Advantage on any [[/check ability=wis skill=prc]] or [[/check ability=wis skill=sur]] check you make to find it.</p><p>If the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action to move the mark to a new creature you can see within range.</p><p><strong>Using a Higher-Level Spell Slot.</strong> Your Concentration can last longer with a spell slot of level 3–4 (up to 8 hours) or 5+ (up to 24 hours).</p>",
       "activities": {
-        "Hunter's Mark": {
-          "name": "猎人印记"
+        "Bonus Mark Damage": {
+          "name": "Bonus Mark Damage"
         },
-        "Hunter's Mark: Move": {
-          "name": "猎人印记：转移",
-          "chatFlavor": "猎人印记：转移"
+        "Mark Creature": {
+          "name": "Mark Creature"
+        },
+        "Move Mark": {
+          "name": "Move Mark",
+          "condition": "when the currently marked target drops to 0 Hit Points"
+        }
+      },
+      "effects": {
+        "Hunter's Mark": {
+          "name": "Hunter's Mark",
+          "description": "<p>Until the spell ends, the caster deals an extra [[/damage 1d6 force]] damage to the target whenever they hit it with an attack roll.</p>"
         }
       }
     },
@@ -2462,11 +2687,8 @@
       "name": "焚云术",
       "description": "<p>一片充满了炽热灰烬的旋转烟云显现，并以施法距离内一点为中心的蔓延至半径 20 尺的球状区域。烟云区域被&Reference[HeavilyObscured]{重度遮蔽}。烟云会存在直至持续时间结束，或是直至被一阵强风（例如被<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]{造风术}</em>所创造）所吹散。</p><p>烟云出现时，每个处在其内的生物都必须通过一次敏捷豁免，豁免失败者将受到 10d8 点火焰伤害，豁免成功则受到一半伤害。该球状区域移动至生物所占据的空间，或者生物进入球状区域内，或者生物在球状区域内结束其回合时，该生物也必须进行该豁免。一名生物每回合仅需进行一次该豁免。</p><p>在你的每回合开始时，烟云会向你指定的、远离你的方向直线移动 10 尺。</p>",
       "activities": {
-        "Create Cloud": {
-          "name": "创造焚云"
-        },
-        "Per Turn Save": {
-          "name": "每回合豁免"
+        "Cast and Save": {
+          "name": "Cast and Save"
         }
       }
     },
@@ -2657,12 +2879,12 @@
       },
       "target": {
         "affects": {
-          "special": "作为法术材料成分的容器"
+          "special": "and the container used as the Material component"
         }
       },
       "activities": {
-        "Transfer Soul": {
-          "name": "灵魂转移"
+        "Cast and Transfer Soul": {
+          "name": "Cast and Transfer Soul"
         },
         "Possess Humanoid": {
           "name": "附身类人",
@@ -2729,6 +2951,15 @@
       "description": "<p>你创造一个影像，其形象来自一个大小不超过边长 20 尺立方体的物件或生物，或是其他的可视现象。影像出现在施法距离内你能看见的一处位置并在法术持续时间内维持存在。它看起来完全是真实的，并且还具有相应的声音、气味和温度。但它无法造成伤害或让人陷入任何状态。</p><p>在该幻象施法距离内时，你可以用一个魔法动作将影像移动到施法距离内的另一个位置。影像改变位置时，你可以改变影像的外表来使它移动得更自然。例如，如果你创造了一个生物的影像并移动它，则你可以改变影像，使它看起来就像是在走路。或者你也可以让影像在不同的时间发出不同的声音，甚至可以让它参与一场对话。</p><p>由于影像可以被穿过，任何与该影像进行的物理互动都会暴露其幻象的本质。一个生物用&Reference[study]{研究}动作调查影像时，它可以进行一次对抗你的法术豁免 DC 的智力（[[/check ability=int skill=inv dc=@attributes.spelldc]]{调查}）检定，以判定是否看穿幻象。辨出幻象的生物可以看破该影像，而影像的其他感官效应在该生物看来会变得微弱而模糊。</p><p><strong>升环施法：</strong> 使用高于三环的法术位时，法术时间持续至被解除且无需专注。</p>",
       "materials": {
         "value": "一小块羊毛"
+      },
+      "activities": {
+        "Create Illusion": {
+          "name": "Create Illusion"
+        },
+        "Study": {
+          "name": "Study",
+          "condition": "Study Action taken by other creature"
+        }
       }
     },
     "Mass Cure Wounds": {
@@ -2860,6 +3091,10 @@
               "name": "声响"
             }
           }
+        },
+        "Study": {
+          "name": "Study",
+          "condition": "Study Action taken by other creature"
         }
       }
     },
@@ -2898,6 +3133,11 @@
     "Mislead": {
       "name": "假象术",
       "description": "<p>你获得&Reference[Invisible apply=false]{隐形}状态，同时在你站的地方出现一个和你一样的幻象分身。分身会持续存在至法术持续时间结束；但如果你发动攻击、造成伤害或施展法术，则隐形随之结束。</p><p>以一个魔法动作，你可以令分身以至多两倍于你的速度移动并可以令其打手势、说话，以及以任何你指定的方式行事。分身无法被触及且无法受伤。</p><p>你可以通过分身的眼睛视物，用分身的耳朵聆听，如同你处于它的位置一样。</p>",
+      "activities": {
+        "Create Illusory Double": {
+          "name": "Create Illusory Double"
+        }
+      },
       "effects": {
         "Invisible": {
           "name": "隐形",
@@ -2924,19 +3164,6 @@
       "description": "<p>指定施法距离内一点，一束淡淡的银光照耀在以该点为中心半径 5 尺、高 40 尺的柱状区域内。直至法术终止前，柱状区域内处于微光光照。在施展该法术的后续回合内，你能够以一个魔法动作将柱状区域移动至多 60 尺。柱状区域出现时，每个区域内的生物进行一次体质豁免检定，豁免失败则受到 2d10 的光耀伤害，且若该生物已变形（例如受法术@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPolymorph0]{变形术} 影响），其变回真实形态，且无法在离开柱状区域前变形。豁免成功则仅承受前述伤害的一半。在法术区域进入生物空间、生物进入法术区域或在其内结束回合时，目标生物也需要进行该体质豁免检定。一名生物每回合仅需进行一次该豁免检定。</p><p><strong>升环施法：</strong>使用的法术位每比二环高一环，此法术的伤害就增加 1d10。</p>",
       "materials": {
         "value": "一片月籽藤叶"
-      },
-      "activities": {
-        "Moonbeam: Move": {
-          "name": "月华之光：移动",
-          "chatFlavor": "月华之光：移动"
-        },
-        "Moonbeam: Damage": {
-          "name": "月华之光：伤害",
-          "chatFlavor": "月华之光：伤害"
-        },
-        "Moonbeam": {
-          "name": "月华之光"
-        }
       }
     },
     "Move Earth": {
@@ -3067,7 +3294,7 @@
     },
     "Phantasmal Killer": {
       "name": "魅影杀手",
-      "description": "<p>你指定施法距离内一名你可见的生物，窥探其噩梦，依此创造一道只有目标能看见的幻象。目标生物进行一次感知豁免。豁免失败时，目标受到 4d10 点心灵伤害，且在法术持续时间内进行的所有属性检定与攻击检定都具有劣势。豁免成功，则目标只受一半伤害，法术终止。</p><p>法术持续时间内，目标在其每回合结束时进行一次[[/save ability=wis dc=@attributes.spelldc]]豁免，豁免失败将再次受到心灵伤害。豁免成功则法术终止。</p><p><strong>升环施法：</strong>使用的法术位每比四环高一环，此法术的伤害就增加 1d10。</p>",
+      "description": "<p>You tap into the nightmares of a creature you can see within range and create an illusion of its deepest fears, visible only to that creature. The target makes a Wisdom saving throw. On a failed save, the target takes 4d10 Psychic damage and has Disadvantage on ability checks and attack rolls for the duration. On a successful save, the target takes half as much damage, and the spell ends.</p><p>For the duration, the target makes a [[/save ability=wis dc=@attributes.spell.dc]] saving throw at the end of each of its turns. On a failed save, it takes the Psychic damage again. On a successful save, the spell ends.</p><p><strong>Using a Higher-Level Spell Slot. </strong>The damage increases by 1d10 for each spell slot level above 4.</p><section id=\"secret-mEqeb4gkG1Itpvh3\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>The associated Active Effect does not include changes to provide Disadvantage on attack rolls and should be handled manually.</p></section>",
       "effects": {
         "Fears Manifested": {
           "name": "陷入噩梦",
@@ -3147,11 +3374,21 @@
     },
     "Power Word Heal": {
       "name": "律令医疗",
-      "description": "<p>一股治疗能量冲刷着一名施法距离内你可见的生物。目标恢复其所有生命值。若目标具有&Reference[Charmed apply=false]{魅惑}、&Reference[Frightened apply=false]{恐慌}、&Reference[Paralyzed apply=false]{麻痹}、&Reference[Poisoned apply=false]{中毒}、或 &Reference[Stunned apply=false]{震慑}状态，则目标身上的此类状态立刻结束。若目标处于&Reference[Prone apply=false]{倒地}状态，则其还可以用其反应起身。</p><section class=\"secret\" id=\"secret-TZTRxIEOucKFdjFi\"><p>Foundry Note</p><p><strong>“完全治愈”</strong>行动被配置为治疗 1000 点生命值，以确保任一单个生物均可被完全治愈。</p></section>"
+      "description": "<p>一股治疗能量冲刷着一名施法距离内你可见的生物。目标恢复其所有生命值。若目标具有&Reference[Charmed apply=false]{魅惑}、&Reference[Frightened apply=false]{恐慌}、&Reference[Paralyzed apply=false]{麻痹}、&Reference[Poisoned apply=false]{中毒}、或 &Reference[Stunned apply=false]{震慑}状态，则目标身上的此类状态立刻结束。若目标处于&Reference[Prone apply=false]{倒地}状态，则其还可以用其反应起身。</p><section class=\"secret\" id=\"secret-TZTRxIEOucKFdjFi\"><p>Foundry Note</p><p><strong>“完全治愈”</strong>行动被配置为治疗 1000 点生命值，以确保任一单个生物均可被完全治愈。</p></section>",
+      "activities": {
+        "Heal Fully": {
+          "name": "Heal Fully"
+        }
+      }
     },
     "Power Word Kill": {
       "name": "律令死亡",
-      "description": "<p>你强迫一名施法距离内你可见的生物死亡。若目标的生命值为低于或等于 100 点，目标立即死亡。否则，目标将受到 12d12 点心灵伤害。</p>"
+      "description": "<p>你强迫一名施法距离内你可见的生物死亡。若目标的生命值为低于或等于 100 点，目标立即死亡。否则，目标将受到 12d12 点心灵伤害。</p>",
+      "activities": {
+        "Compel to Die": {
+          "name": "Compel to Die"
+        }
+      }
     },
     "Power Word Stun": {
       "name": "律令震慑",
@@ -3262,6 +3499,10 @@
       "activities": {
         "Create Illusion": {
           "name": "制造幻象"
+        },
+        "Study": {
+          "name": "Study",
+          "condition": "Study Action taken by other creature"
         }
       }
     },
@@ -3274,6 +3515,10 @@
       "activities": {
         "Create Illusion": {
           "name": "制造幻象"
+        },
+        "Study": {
+          "name": "Study",
+          "condition": "Study Action taken by other creature"
         }
       }
     },
@@ -3572,7 +3817,21 @@
       "name": "炽焰斩",
       "description": "<p>被该次攻击检定命中的目标会在此次攻击中额外受到 [[/damage 1d6 type=fire]]伤害。直至法术终止前，目标会在其每一回合开始时受到 1d6 点火焰伤害，并进行一次体质豁免。豁免失败则法术继续生效，成功则法术终止。</p><p><strong>升环施法：</strong>使用的法术位每比一环高一环，此法术造成的所有伤害都会增加 1d6 点。</p>",
       "activation": {
-        "condition": "附赠动作，当你使用近战武器或徒手打击命中一个生物后立即执行"
+        "condition": "immediately after hitting a target with a Melee weapon or an Unarmed Strike"
+      },
+      "activities": {
+        "Start of Turn Save": {
+          "name": "Start of Turn Save"
+        },
+        "Damage": {
+          "name": "Damage"
+        }
+      },
+      "effects": {
+        "Seared": {
+          "name": "Seared",
+          "description": "<p>At the start of each of its turns until the spell ends, the target takes [[/damage 1d6 type=fire]] damage and then makes a [[/save ability=con]] saving throw. On a failed save, the spell continues. On a successful save, the spell ends.</p>"
+        }
       }
     },
     "See Invisibility": {
@@ -3601,6 +3860,10 @@
         },
         "Change Appearance": {
           "name": "改变外表"
+        },
+        "Study": {
+          "name": "Study",
+          "condition": "Study Action taken by other creature"
         }
       },
       "effects": {
@@ -3717,11 +3980,12 @@
       "name": "闪耀斩",
       "description": "<p>被该次攻击检定命中的目标会在此次攻击中额外受到 2d6 点光耀伤害。目标会发出 5 尺半径的&Reference[BrightLight]{明亮光照}直至法术结束。在此期间，对其进行的攻击检定具有优势，且其无法受益于&Reference[Invisible]{隐形}状态中受益。</p><p>升环施法： 使用的法术位每比二环高一环，此法术的额外伤害就增加 1d6。</p>",
       "activation": {
-        "condition": "当你使用近战武器或徒手打击命中一个生物后执行"
+        "condition": "immediately after hitting a creature with a Melee weapon or an Unarmed Strike"
       },
       "effects": {
-        "Shining Smite": {
-          "name": "闪耀斩"
+        "Shining": {
+          "name": "Shining",
+          "description": "<p>Until the spell ends, the target sheds &amp;Reference[BrightLight] in a 5-foot radius, attack rolls against it have Advantage, and it can’t benefit from the &amp;Reference[Invisible] condition.</p>"
         }
       }
     },
@@ -3753,6 +4017,15 @@
       },
       "materials": {
         "value": "一小块羊毛"
+      },
+      "activities": {
+        "Create Illusion": {
+          "name": "Create Illusion"
+        },
+        "Study": {
+          "name": "Study",
+          "condition": "Study Action taken by other creature"
+        }
       }
     },
     "Simulacrum": {
@@ -3794,14 +4067,14 @@
     },
     "Slow": {
       "name": "缓慢术",
-      "description": "<p>你在施法距离内一处 40 尺立方区域内指定至多六个生物并扭曲其周围的时间流。每个目标都要进行一次感知豁免，豁免失败则受到该法术影响直至法术终止。</p><p>被影响的生物的速度减半，而其 AC 和敏捷豁免都获得 -2 减值，且不能执行反应。该生物在其回合内可以执行一个动作或一个附赠动作，但不能在一回合内同时执行以上两者。当它执行攻击动作时，它只能发动一次攻击。</p><p>如果该生物尝试施展一个具有姿势成分的法术，则其法术有 [[/r 1d100cs&lt;=25#Slowed spell cast success]]{25%}的概率会因为生物的动作太慢而施展失败。</p><p>受术生物在其每个回合结束时可以再进行一次该感知豁免，豁免成功则终止其身上的该法术效应。。当它执行攻击动作时，它只能发动一次攻击。</p><section class=\"secret\" id=\"secret-2RobIVhv3tn7gmU7\"><p><strong>Foundry Note</strong></p><p>上述的内联掷骰如果成功则返回 1，如果失败则返回 0。</p></section>",
+      "description": "<p>You alter time around up to six creatures of your choice in a 40-foot Cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.</p><p>An affected target’s Speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t take Reactions. On its turns, it can take either an action or a Bonus Action, not both, and it can make only one attack if it takes the Attack action. If it casts a spell with a Somatic component, there is a [[/r 1d100cs&gt;25#Spell cast successfully on 1]]{25 percent} chance the spell fails as a result of the target making the spell’s gestures too slowly.</p><p>An affected target repeats the save at the end of each of its turns, ending the spell on itself on a success.</p><section class=\"secret\" id=\"secret-2RobIVhv3tn7gmU7\"><p><strong>Foundry Note</strong></p><p>The inline roll above will return 1 if it succeeded or 0 if it failed.</p></section>",
       "materials": {
         "value": "一滴糖浆"
       },
       "effects": {
         "Slowed": {
           "name": "缓速",
-          "description": "<p>你的速度减半，而其 AC 和敏捷豁免都具有-2 减值，且不能执行反应。你在你的回合内可以执行一个动作或一个附赠动作，但不能在一回合内同时执行以上两者。当你执行攻击动作时，你只能发动一次攻击。</p><p>如果你尝试施展一个具有姿势成分的法术，有 [[/r 1d100cs&lt;=25#Slowed spell cast success]]{25%} 的可能法术会因为你的动作太慢而施展失败。</p>"
+          "description": "<p>An affected target’s Speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t take Reactions. On its turns, it can take either an action or a Bonus Action, not both, and it can make only one attack if it takes the Attack action. If it casts a spell with a Somatic component, there is a [[/r 1d100cs&gt;25#Spell cast successfully on 1]]{25 percent} chance the spell fails as a result of the target making the spell’s gestures too slowly.</p><p>An affected target repeats the [[/save ability=wis]] save at the end of each of its turns, ending the spell on itself on a success.</p>"
         }
       }
     },
@@ -3842,6 +4115,11 @@
     "Speak with Plants": {
       "name": "植物交谈",
       "description": "<p>你给周围 30 尺固定灵光范围内的植物赋予有限的知觉与活力，使其能够与你沟通和按你的简单命令行事。你可以向植物询问最近一日该法术区域内所发生的事，由此了解有关于曾路过这里的生物、天气和其他状况的信息。</p><p>你可以让区域内因植物生长形成的&Reference[difficultterrain]{困难地形}（如灌木丛）在法术持续时间内变为普通地形。你也可以在法术持续时间内将有植物生长的普通地形变成困难地形。</p><p>虽然该法术并不能让植物拔根而起或移动位置，但它们可以依你的意愿而活动自己的树枝、藤蔓和茎秆。</p><p>如果法术区域内有一个植物生物，你可以如同有共同语言一般与其交流。</p>",
+      "target": {
+        "affects": {
+          "special": "plants"
+        }
+      },
       "effects": {
         "Speaking with Plants": {
           "name": "植物交谈"
@@ -3874,11 +4152,8 @@
         "value": "一张祷文卷轴"
       },
       "activities": {
-        "Emanation Save": {
-          "name": "光环豁免"
-        },
-        "Cast": {
-          "name": "施展"
+        "Cast and Save": {
+          "name": "Cast and Save"
         }
       },
       "effects": {
@@ -3896,12 +4171,7 @@
       "name": "惊惧斩",
       "description": "<p>被该次攻击检定命中的目标会在此次攻击中额外受到 4d6 点心灵伤害。该目标必须进行一次感知豁免，豁免失败则目标陷入&Reference[Stunned]{震慑}状态直到你的下一回合结束。</p><p><strong>升环施法：</strong>使用高于四环的法术位施放本法术时，你使用的法术位每比四环高一环，额外伤害就增加 1d6。</p>",
       "activation": {
-        "condition": "当你使用近战武器或徒手打击命中一个生物后执行"
-      },
-      "effects": {
-        "Staggering Smite": {
-          "name": "惊惧斩"
-        }
+        "condition": "immediately after hitting a creature with a Melee weapon or an Unarmed Strike"
       }
     },
     "Starry Wisp": {
@@ -3928,11 +4198,8 @@
         "value": "一个臭鸡蛋"
       },
       "activities": {
-        "Start of Turn Save": {
-          "name": "回合开始豁免"
-        },
-        "Create Cloud": {
-          "name": "创造臭云"
+        "Cast and Save": {
+          "name": "Cast and Save"
         }
       },
       "effects": {
@@ -4358,7 +4625,18 @@
       "name": "雷鸣斩",
       "description": "<p>你的打击发出距你 300 尺内都能听见的雷鸣。被该次攻击检定命中的目标会在此次攻击中额外受到 [[/damage 2d6 type=thunder]]伤害，如果目标是一名生物，则它必须成功于一次力量豁免，否则其被向着远离你的方向推离 10 尺并陷入&Reference[prone]状态。</p><p><strong>升环施法：</strong>使用的法术位每比一环高一环，伤害就提高 1d6。</p>",
       "activation": {
-        "condition": "当你使用近战武器或徒手打击命中一个生物后立即执行"
+        "condition": "immediately after hitting a target with a Melee weapon or an Unarmed Strike"
+      },
+      "activities": {
+        "Save vs. Push": {
+          "name": "Save vs. Push"
+        }
+      },
+      "effects": {
+        "Prone": {
+          "name": "Prone",
+          "description": "<p>Due to being pushed 10 feet away, the target is &amp;Reference[prone apply=false].</p>"
+        }
       }
     },
     "Thunderwave": {
@@ -4724,44 +5002,15 @@
       "name": "祈愿术",
       "description": "<p><em><strong>祈愿术</strong></em>是凡间生物所能施展的最强大法术。你只需要大声说出自己的愿望就能改变现实世界本身。</p><p>法术最基础的用法是用来模仿任意一个八环或更低环阶的法术。如果你以此种方式使用该法术，你不需要满足目标法术所需的任何前提条件（包括有价值的材料成分）就可以让该法术生效。</p><p>作为另一种方式，你也可以选择让法术创造下列效应之一：</p><p><strong>创造物件。</strong>你创造出一个价值不超过 25000GP 的物件，令其出现在地面上你能看见的一处未占据空间中。该物件不能是魔法物品，其在任意方向上的长度都不能超过 300 尺。</p><p><strong>即刻治疗。</strong>你让你自己和至多二十个你可见的生物恢复全部生命值，并且终止它们身上一切在@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{高等复原术}中列举过的所有效应。</p><p><strong>伤害抗性。</strong>你让至多十个你能看见的生物获得你所指定的一种伤害类型的抗性。此抗性是永久存在的。</p><p><strong>免疫法术。</strong>你让最多十个你能看见的生物免疫于某道法术或某种其他魔法效应，持续 8 小时。</p><p><strong>突来学识。</strong>你将你的一个专长替换为符合条件的另一个专长。你失去旧专长带来的全部好处，并获得新专长的好处。你无法取代作为你其他专长或特性先决条件的专长。</p><p><strong>重新掷骰。</strong>你改变一件刚刚发生的事件。重掷前一轮（包括你的上一个回合）到现在期间的任意一次掷骰，并让现实随着你的新掷骰结果改变。例如，<strong>祈愿术</strong>以撤销队友的失败豁免或敌人的重击。你可以迫使重新进行的掷骰具有优势或劣势 ，并且可以选择是使用重投后的结果还是使用原来的结果。</p><p><strong>重塑现实。</strong>你可能会许愿一些没有包含在上述效应中的东西。为了做到这样的效果，请尽可能准确地向地下城主描述你的愿望。在这种情况下，地下城主有极高的自由来裁决究竟会发生什么。不过愿望越大，出错的概率就越大。法术可能会直接失败，也可能部分的达成你想要的结果，还有可能因表述愿望时措辞不当而遭到意想不到的结果。例如，许愿让一个坏人死去可能会让你穿越到多年后该人已死的一个时间段，使你相当于离开了游戏一样。此外，许愿获取一件传说中的魔法物品或神器可能会立即将你传送到该物品当前的持有者身边。如果你许的愿望太过庞大，其效应影响到了社群、区域或是世界，你可能会引来强大的敌人。如果你的愿望会影响神，这名神的神仆会立刻干涉，阻止它或是鼓励你以一种特殊的方式许愿。如果你的愿望将会撤销多元宇宙本身，或是威胁到了<strong>印记城</strong>，或是以某种方式影响到了<strong>痛苦女士</strong>，你的心灵中就会浮现出一段她的影像：她摇了摇自己的脑袋，然后你的愿望失效了。</p><p>除了模仿其他法术外，施展该法术以达成的任何其他目的都会使你的身躯承受极大的负担，令你变得无比虚弱。承受负担后，直到你完成长休之前，你每次施展法术时都将受到一定伤害（伤害数值取决于你施展的法术的环阶，每环阶 1d10 点的暗蚀伤害），此伤害无法被任何方式减免。此外，你的力量属性值将变为 3，持续 2d4 日。这段时间内，你每花一整日休息（不从事轻度活动以外的行为），恢复需要的日数就减少 2 日。最后，承受负担时，你将有 [[/r 1d3cs1]]{33%} 的概率永远也无法再次施放<strong>祈愿术</strong>。</p>",
       "activities": {
-        "Duplicate Spell": {
-          "name": "分身法术"
-        },
-        "Object Creation": {
-          "name": "创造物件"
-        },
-        "Instant Health": {
-          "name": "即刻治疗"
-        },
-        "Resistance": {
-          "name": "伤害抗性"
-        },
-        "Spell Immunity": {
-          "name": "免疫法术"
-        },
-        "Sudden Learning": {
-          "name": "突来学识"
-        },
-        "Roll Redo": {
-          "name": "重新掷骰"
-        },
-        "Reshape Reality": {
-          "name": "重塑现实"
-        },
-        "Wish Stress": {
-          "name": "祈愿代价",
-          "chatFlavor": "祈愿代价"
+        "utility": {
+          "roll": "Strength Sap Duration",
+          "chatFlavor": "<em>Wish</em> lost on 1: [[/r 1d3cs1]]"
         }
       },
       "effects": {
-        "Wish: Stress": {
-          "name": "祈愿术：代价"
-        },
-        "Wish: Resistance": {
-          "name": "祈愿术：抗性"
-        },
-        "Wish: Spell Immunity": {
-          "name": "祈愿术：免疫法术"
+        "Wish Stress": {
+          "name": "Wish Stress",
+          "description": "<p>Each time you cast a spell until you finish a Long Rest, you take [[/damage 1d10 type=necrotic]] damage per level of that spell. This damage can’t be reduced or prevented in any way. In addition, your Strength score becomes 3 for [[/r 2d4]] days.</p>"
         }
       }
     },
