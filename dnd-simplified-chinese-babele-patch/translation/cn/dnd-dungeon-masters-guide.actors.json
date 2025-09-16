@@ -2,6 +2,7 @@
   "label": "角色",
   "folders": {
     "Hazards": "危害",
+    "Traps": "Traps",
     "Bastion Defenders": "据点卫兵",
     "Creatures": "生物",
     "Magic Items": "魔法物品"
@@ -350,6 +351,30 @@
         }
       }
     },
+    "Collapsing Roof Trap": {
+      "name": "Collapsing Roof Trap",
+      "tokenName": "Collapsing Roof Trap",
+      "items": {
+        "Trigger Trap": {
+          "name": "Trigger Trap",
+          "description": "<div id=\"_idContainer405\" class=\"_idGenObjectStyleOverride-1\"><p class=\"Core-Styles_Core-Metadata\"><em>Deadly Trap (Levels 1–4)</em></p><p class=\"Game_Objects_Game_Object_Data\"><strong>Trigger:</strong> A creature crosses a trip wire</p><p class=\"Game_Objects_Game_Object_Data\"><strong>Duration:</strong> Instantaneous</p><p>This trap uses a trip wire to collapse an unstable section of ceiling. The trip wire is 3 inches off the ground and stretches between two weak supports that topple when the trip wire is pulled.</p><p>The first creature that crosses the trip wire causes the supports to topple and the unstable section of ceiling to collapse. Each creature beneath the unstable section of ceiling must succeed on a DC 13 Dexterity saving throw, taking 11 (2d10) Bludgeoning damage on a failed save or half as much damage on a successful one. Rubble from the collapse turns the trapped area into &amp;Reference[Difficult Terrain].</p><p><em><strong>Detect and Disarm.</strong></em> As a Search action, a creature can examine the trapped area and make a [[/check prc 11]] check, detecting the trip wire and the unstable section of ceiling on a successful check. Once detected, the trip wire can be easily cut or avoided (no ability check required).</p><p><em><strong>At Higher Levels.</strong></em> You can scale the trap for higher levels by increasing the damage and the save DC, as shown in the following table.</p><table><thead><tr><th><p>Levels</p></th><th><p>Bludgeoning Damage</p></th><th><p>Save DC</p></th></tr></thead><tbody><tr><td><p>5–10</p></td><td><p>22 (4d10)</p></td><td><p>15</p></td></tr><tr><td><p>11–16</p></td><td><p>55 (10d10)</p></td><td><p>17</p></td></tr><tr><td><p>17–20</p></td><td><p>99 (18d10)</p></td><td><p>19</p></td></tr></tbody></table></div>",
+          "activities": {
+            "Trigger (1-4)": {
+              "name": "Trigger (1-4)"
+            },
+            "Trigger (5-10)": {
+              "name": "Trigger (5-10)"
+            },
+            "Trigger (11-16)": {
+              "name": "Trigger (11-16)"
+            },
+            "Trigger (17-20)": {
+              "name": "Trigger (17-20)"
+            }
+          }
+        }
+      }
+    },
     "Driftglobe (Daylight)": {
       "name": "漂浮之球（昼明术）",
       "tokenName": "漂浮之球",
@@ -394,6 +419,74 @@
               "affects": {
                 "special": "陷入倒地状态"
               }
+            }
+          }
+        }
+      }
+    },
+    "Falling Net Trap": {
+      "name": "Falling Net Trap",
+      "tokenName": "Falling Net Trap",
+      "items": {
+        "Set & Trigger Trap": {
+          "name": "Set & Trigger Trap",
+          "description": "<div id=\"_idContainer405\" class=\"_idGenObjectStyleOverride-1\"><p class=\"Core-Styles_Core-Metadata\"><em>Nuisance Trap (Levels 1–4)</em></p><p class=\"Game_Objects_Game_Object_Data\"><strong>Trigger:</strong> A creature crosses a trip wire</p><p class=\"Game_Objects_Game_Object_Data\"><strong>Duration:</strong> Instantaneous</p><p>A falling net trap uses a trip wire to release a weighted, 10-foot-square Net suspended from the ceiling. The trip wire is 3 inches off the ground and stretches between two columns or trees.</p><p>The first creature that crosses the trip wire causes the Net to fall on it. The target must succeed on a DC 10 Dexterity saving throw or have the &amp;Reference[Restrained] condition until it escapes. The target succeeds automatically if it’s Huge or larger. A creature can take an action to make a DC 10 Strength (Athletics) check, freeing itself or another creature within its reach from the Net on a successful check.</p><p><em><strong>Detect and Disarm.</strong></em> As a Search action, a creature can examine the trapped area and make a [[/check prc 11]] check, detecting the trip wire and the suspended @UUID[Compendium.dnd-players-handbook.equipment.Item.phbagNet00000000]{Net} on a successful check. Once detected, the trip wire can be easily cut or avoided (no ability check required).</p><p><em><strong>Destroy the Net.</strong></em> Reducing the Net to 0 Hit Points frees any creature trapped in it (see the <em>Player’s Handbook</em> for the Net’s statistics).</p><p><em><strong>Set the Trap.</strong></em> A creature that has Thieves’ Tools and all the trap’s components (including a Net) can try to set a falling net trap, doing so with a successful DC 13 Dexterity (Sleight of Hand) check. Each attempt to set this trap takes 10 minutes.</p><p><em><strong>At Higher Levels.</strong></em> You can scale the trap for higher levels by increasing the weight of the Net, which increases the save DC and the DC of the Strength (Athletics) check as follows: DC 12 at levels 5–10, DC 14 at levels 11–16, or DC 16 at levels 17–20.</p></div>",
+          "activities": {
+            "Trigger (1-4)": {
+              "name": "Trigger (1-4)"
+            },
+            "Trigger (5-10)": {
+              "name": "Trigger (5-10)"
+            },
+            "Trigger (11-16)": {
+              "name": "Trigger (11-16)"
+            },
+            "Trigger (17-20)": {
+              "name": "Trigger (17-20)"
+            },
+            "Escape Check (1-4)": {
+              "name": "Escape Check (1-4)"
+            },
+            "Escape Check (5-10)": {
+              "name": "Escape Check (5-10)"
+            },
+            "Escape Check (11-16)": {
+              "name": "Escape Check (11-16)"
+            },
+            "Escape Check (17-20)": {
+              "name": "Escape Check (17-20)"
+            },
+            "Set Trap": {
+              "name": "Set Trap"
+            }
+          },
+          "effects": {
+            "Captured": {
+              "name": "Captured"
+            }
+          }
+        }
+      }
+    },
+    "Fire Casting Statue Trap": {
+      "name": "Fire Casting Statue Trap",
+      "tokenName": "Fire Casting Statue Trap",
+      "items": {
+        "Trigger Trap": {
+          "name": "Trigger Trap",
+          "description": "<div id=\"_idContainer405\" class=\"_idGenObjectStyleOverride-1\"><p class=\"Core-Styles_Core-Metadata\"><em>Deadly Trap (Levels 1–4)</em></p><p class=\"Game_Objects_Game_Object_Data\"><strong>Trigger:</strong> A creature moves onto a pressure plate</p><p class=\"Game_Objects_Game_Object_Data\"><strong>Duration:</strong> Instantaneous, and the trap resets at the start of the next turn</p><p>When a creature moves onto this trap’s pressure plate for the first time on a turn or starts its turn there, a nearby statue exhales a 15-foot Cone of magical flame. The statue can look like anything, such as a dragon or a wizard. Each creature in the Cone must succeed on a DC 15 Dexterity saving throw, taking 11 (2d10) Fire damage on a failed save or half as much damage on a successful one.</p><p><em><strong>Detect and Disarm.</strong></em> A <em>Detect Magic</em> spell reveals an aura of Evocation magic around the statue. As a Search action, a creature within 5 feet of the statue can examine it and make a [[/check DC prc 10]] check, detecting a tiny glyph on the statue on a successful check. Once the glyph is found, a character can take a Study action to examine it and make a [[/check arc 15]] check, ascertaining that the glyph means “fire” on a successful check. As an action, a character can use a sharp tool to deface the glyph, which disarms the trap.</p><p>As a Search action, a creature can examine the section of floor that forms the pressure plate and make a [[/check prc 15]] check, detecting the pressure plate on a successful check. Wedging an Iron Spike or similar object under the pressure plate prevents the trap from triggering.</p><p><em><strong>At Higher Levels.</strong></em> You can scale the trap for higher levels by increasing the damage and the area of effect, as shown in the following table.</p><table><thead><tr><th><p>Levels</p></th><th><p>Fire Damage</p></th><th><p>Area of Effect</p></th></tr></thead><tbody><tr><td><p>5–10</p></td><td><p>22 (4d10)</p></td><td><p>30-foot Cone</p></td></tr><tr><td><p>11–16</p></td><td><p>55 (10d10)</p></td><td><p>60-foot Cone</p></td></tr><tr><td><p>17–20</p></td><td><p>99 (18d10)</p></td><td><p>120-foot Cone</p></td></tr></tbody></table></div>",
+          "activities": {
+            "Trigger (1-4)": {
+              "name": "Trigger (1-4)"
+            },
+            "Trigger (5-10)": {
+              "name": "Trigger (5-10)"
+            },
+            "Trigger (11-16)": {
+              "name": "Trigger (11-16)"
+            },
+            "Trigger (17-20)": {
+              "name": "Trigger (17-20)"
             }
           }
         }
@@ -529,6 +622,30 @@
             },
             "Wood/Metal Damage": {
               "name": "木质/金属伤害"
+            }
+          }
+        }
+      }
+    },
+    "Hidden Pit Trap": {
+      "name": "Hidden Pit Trap",
+      "tokenName": "Hidden Pit Trap",
+      "items": {
+        "Trigger Trap": {
+          "name": "Trigger Trap",
+          "description": "<div id=\"_idContainer405\" class=\"_idGenObjectStyleOverride-1\"><p class=\"Core-Styles_Core-Metadata\"><em>Nuisance Trap (Levels 1–4)</em></p><p class=\"Game_Objects_Game_Object_Data\"><strong>Trigger:</strong> A creature moves onto the pit’s lid</p><p class=\"Game_Objects_Game_Object_Data\"><strong>Duration:</strong> Instantaneous</p><p>This 10-foot-deep pit has a hinged lid constructed from material identical to the surrounding floor. When a creature moves onto the lid, it swings open like a trapdoor, causing the creature to fall into the pit. The lid remains open thereafter.</p><p>A creature that falls into the pit takes 3 (1d6) Bludgeoning damage from the fall.</p><p><em><strong>Detect and Disarm.</strong></em> As a Study action, a creature can examine the section of floor that forms the pit’s lid and make a [[/check inv 15]] check, detecting the pit on a successful check. Once the pit is detected, an Iron Spike or a similar object can be wedged between the pit’s lid and the surrounding floor to prevent the lid from opening, thereby making it safe to cross. The cover can also be held shut using <em>Arcane Lock</em> or similar magic.</p><p><em><strong>Escape.</strong></em> A creature needs a Climb Speed, climbing gear, or magic such as <em>Spider Climb</em> to scale the pit’s smooth walls. You can make the pit easier to escape by adding cracks in the walls big enough to serve as handholds and footholds.</p><p><em><strong>At Higher Levels.</strong></em> You can scale the trap for higher levels by increasing the pit’s depth and damage, as shown in the following table.</p><table><thead><tr><th><p>Levels</p></th><th><p>Pit Depth</p></th><th><p>Bludgeoning Damage</p></th></tr></thead><tbody><tr><td><p>5–10</p></td><td><p>30 feet</p></td><td><p>10 (3d6)</p></td></tr><tr><td><p>11–16</p></td><td><p>60 feet</p></td><td><p>21 (6d6)</p></td></tr><tr><td><p>17–20</p></td><td><p>120 feet</p></td><td><p>42 (12d6)</p></td></tr></tbody></table></div>",
+          "activities": {
+            "Trigger (1-4)": {
+              "name": "Trigger (1-4)"
+            },
+            "Trigger (5-10)": {
+              "name": "Trigger (5-10)"
+            },
+            "Trigger (11-16)": {
+              "name": "Trigger (11-16)"
+            },
+            "Trigger (17-20)": {
+              "name": "Trigger (17-20)"
             }
           }
         }
@@ -715,6 +832,59 @@
         }
       }
     },
+    "Poisoned Darts Trap": {
+      "name": "Poisoned Darts Trap",
+      "tokenName": "Poisoned Darts Trap",
+      "items": {
+        "Trigger Trap": {
+          "name": "Trigger Trap",
+          "description": "<div id=\"_idContainer405\" class=\"_idGenObjectStyleOverride-1\"><p class=\"Core-Styles_Core-Metadata\"><em>Deadly Trap (Levels 1–4)</em></p><p class=\"Game_Objects_Game_Object_Data\"><strong>Trigger:</strong> A creature moves onto a pressure plate</p><p class=\"Game_Objects_Game_Object_Data\"><strong>Duration:</strong> Instantaneous, and the trap resets at the start of the next turn if it has activated fewer than three times</p><p>When a creature moves onto this trap’s pressure plate for the first time on a turn, poisoned darts shoot from tubes embedded in the surrounding walls. The holes that house these tubes are obscured by dust and cobwebs or skillfully hidden amid bas-reliefs, murals, or frescoes.</p><p>Each creature in the darts’ path must succeed on a DC 13 Dexterity saving throw or be struck by [[/r 1d3]] darts, taking 3 (1d6) Poison damage per dart.</p><p><em><strong>Detect and Disarm.</strong></em> As a Search action, a creature can examine the walls and make a [[/check prc 15]] check, detecting the holes on a successful check. Plugging all the holes with wax, cloth, or detritus prevents the darts from firing.</p><p>As a Search action, a creature can examine the section of floor that forms the pressure plate and make a [[/check prc 15]] check, detecting the pressure plate on a successful check. Wedging an Iron Spike or a similar object under the pressure plate prevents the trap from triggering.</p><p><em><strong>At Higher Levels.</strong></em> You can scale the trap for higher levels by increasing each dart’s Poison damage as follows: 7 (2d6) at levels 5–10, 14 (4d6) at levels 11–16, or 24 (7d6) at levels 17–20.</p></div>",
+          "activities": {
+            "Trigger (1-4)": {
+              "name": "Trigger (1-4)"
+            },
+            "Trigger (5-10)": {
+              "name": "Trigger (5-10)"
+            },
+            "Trigger (11-16)": {
+              "name": "Trigger (11-16)"
+            },
+            "Trigger (17-20)": {
+              "name": "Trigger (17-20)"
+            }
+          }
+        }
+      }
+    },
+    "Poisoned Needle Trap": {
+      "name": "Poisoned Needle Trap",
+      "tokenName": "Poisoned Needle Trap",
+      "items": {
+        "Trigger Trap": {
+          "name": "Trigger Trap",
+          "description": "<div id=\"_idContainer405\" class=\"_idGenObjectStyleOverride-1\"><p class=\"Core-Styles_Core-Metadata\"><em>Nuisance Trap (Levels 1–4)</em></p><p class=\"Game_Objects_Game_Object_Data\"><strong>Trigger:</strong> A creature opens the trap’s lock improperly or fails to disarm the trap</p><p class=\"Game_Objects_Game_Object_Data\"><strong>Duration:</strong> Instantaneous</p><p>A poisoned needle is hidden in a lock. When a creature opens the lock with any object other than the proper key, the needle springs out and stabs the creature. The creature makes a DC 11 Constitution saving throw. On a failed save, the creature takes 5 (1d10) Poison damage and has the &amp;Reference[Poisoned apply=false] condition for 1 hour. On a successful save, the creature takes half as much damage only.</p><p><em><strong>Avoid.</strong></em> The trap doesn’t trigger if the lock is opened using a <em>Knock</em> spell or similar magic.</p><p><em><strong>Detect and Disarm.</strong></em> As a Search action, a creature can examine the trapped lock and make a [[/check prc 15]] check, detecting the needle on a successful check. Once the trap is detected, a character can take an action to try to disarm the trap, doing so with a successful [[/check slt 15]] check. On a failed check, the creature triggers the trap.</p><p><em><strong>At Higher Levels.</strong></em> You can scale the trap for higher levels by increasing the damage and the save DC, as shown in the following table.</p><table><thead><tr><th><p>Levels</p></th><th><p>Poison Damage</p></th><th><p>Save DC</p></th><th></th></tr></thead><tbody><tr><td><p>5–10</p></td><td><p>11 (2d10)</p></td><td><p>13</p></td><td></td></tr><tr><td><p>11–16</p></td><td><p>22 (4d10)</p></td><td><p>15</p></td><td></td></tr><tr><td><p>17–20</p></td><td><p>55 (10d10)</p></td><td><p>17</p></td><td></td></tr></tbody></table></div>",
+          "activities": {
+            "Trigger (1-4)": {
+              "name": "Trigger (1-4)"
+            },
+            "Trigger (5-10)": {
+              "name": "Trigger (5-10)"
+            },
+            "Trigger (11-16)": {
+              "name": "Trigger (11-16)"
+            },
+            "Trigger (17-20)": {
+              "name": "Trigger (17-20)"
+            }
+          },
+          "effects": {
+            "Poisoned Needle": {
+              "name": "Poisoned Needle"
+            }
+          }
+        }
+      }
+    },
     "Poisonous Gas": {
       "name": "毒气",
       "tokenName": "毒气",
@@ -869,6 +1039,21 @@
         }
       }
     },
+    "Rolling Stone Trap": {
+      "name": "Rolling Stone Trap",
+      "tokenName": "Rolling Stone Trap",
+      "items": {
+        "Trigger Trap": {
+          "name": "Trigger Trap",
+          "description": "<div id=\"_idContainer405\" class=\"_idGenObjectStyleOverride-1\"><p class=\"Core-Styles_Core-Metadata\"><em>Deadly Trap (Levels 11–16) or Nuisance Trap (Levels 17–20)</em></p><p class=\"Game_Objects_Game_Object_Data\"><strong>Trigger:</strong> A creature moves onto a pressure plate</p><p class=\"Game_Objects_Game_Object_Data\"><strong>Duration:</strong> Until the stone stops rolling</p><p>When a creature moves onto a hidden pressure plate, a 5-foot-radius orb of solid stone is released from a secret compartment and begins to roll. The stone and all creatures nearby roll Initiative; the stone gets a [[/r 1d20 + 8]]{+8} bonus on its Initiative roll.</p><p>On its turn, the stone moves 60 feet in one direction, changing course if redirected by an obstacle. The stone can move through creatures’ spaces, and creatures can move through the stone’s space, treating it as &amp;Reference[Difficult Terrain]. Whenever the stone enters a creature’s space for the first time on a turn or a creature enters the stone’s space while the stone is rolling, that creature must succeed on a DC 15 Dexterity saving throw or take 55 (10d10) Bludgeoning damage and have the &amp;Reference[Prone apply=false] condition.</p><p>The stone stops when it hits a wall or similar barrier. It can’t go around corners, but creative dungeon builders incorporate curving turns into nearby passages that allow the stone to keep moving.</p><p><em><strong>Detect and Disarm.</strong></em> As a Study action, a creature can examine the section of floor that forms the pressure plate and make a [[/check inv 15]] check, deducing the pressure plate’s function on a successful check. Wedging an Iron Spike or a similar object under the pressure plate prevents the trap from triggering.</p><p><em><strong>Destroy the Stone.</strong></em> The stone is a Large object that has AC 17, HP 100, a Damage Threshold of 10, and Immunity to Poison and Psychic damage.</p><p><em><strong>Slow the Stone.</strong></em> As an action, a creature can try to slow down the stone with a DC 20 Strength (Athletics) check. If the check is successful, the distance the stone moves on its turn is reduced by 15 feet. If that distance drops to 0, it stops moving and is no longer a threat.</p></div>",
+          "activities": {
+            "Slow": {
+              "name": "Slow"
+            }
+          }
+        }
+      }
+    },
     "Skeleton": {
       "name": "骷髅",
       "tokenName": "骷髅",
@@ -880,6 +1065,30 @@
         "Shortbow": {
           "name": "短弓",
           "description": "<p><em>远程攻击检定：</em>+5，射程 80/320 尺。<em>命中：</em>6（1d6 + 3）穿刺伤害。</p>"
+        }
+      }
+    },
+    "Spiked Pit Trap": {
+      "name": "Spiked Pit Trap",
+      "tokenName": "Spiked Pit Trap",
+      "items": {
+        "Trigger Trap": {
+          "name": "Trigger Trap",
+          "description": "<div id=\"_idContainer405\" class=\"_idGenObjectStyleOverride-1\"><p class=\"Core-Styles_Core-Metadata\"><em>Deadly Trap (Levels 1–4)</em></p><p class=\"Game_Objects_Game_Object_Data\"><strong>Trigger:</strong> A creature moves onto the pit’s lid</p><p class=\"Game_Objects_Game_Object_Data\"><strong>Duration:</strong> Instantaneous</p><p>A 10-foot-deep pit has a hinged lid constructed from material identical to the surrounding floor. When a creature moves onto the lid, it swings open like a trapdoor, causing the creature to fall into the pit, which has sharpened wooden or metal spikes at the bottom. The lid remains open thereafter.</p><p>A creature that falls into the pit lands at the bottom and takes 3 (1d6) Bludgeoning damage from the fall plus 9 (2d8) Piercing damage from the spikes.</p><p><em><strong>Detect and Disarm.</strong></em> As a Study action, a creature can examine the section of floor that forms the pit’s lid and make a [[/check inv 15]] check, detecting the pit on a successful check. Once the hidden pit is detected, an Iron Spike or a similar object can be wedged between the pit’s lid and the surrounding floor to prevent the lid from opening, thereby making it safe to cross. The cover can also be held shut using an <em>Arcane Lock</em> spell or similar magic.</p><p><em><strong>Escape.</strong></em> A creature needs a Climb Speed, climbing gear, or magic such as a <em>Spider Climb</em> spell to scale the pit’s smooth walls. You can make the pit easier to escape by adding cracks in the walls big enough to serve as handholds and footholds.</p><p><em><strong>At Higher Levels.</strong></em> You can scale the trap for higher levels by increasing the pit’s depth and damage, as shown in the following table.</p><table><thead><tr><th><p>Levels</p></th><th><p>Pit Depth</p></th><th><p>Damage</p></th></tr></thead><tbody><tr><td><p>5–10</p></td><td><p>30 feet</p></td><td><p>10 (3d6) Bludgeoning plus 13 (3d8) Piercing</p></td></tr><tr><td><p>11–16</p></td><td><p>60 feet</p></td><td><p>21 (6d6) Bludgeoning plus 36 (8d8) Piercing</p></td></tr><tr><td><p>17–20</p></td><td><p>120 feet</p></td><td><p>42 (12d6) Bludgeoning plus 57 (13d8) Piercing</p></td></tr></tbody></table></div>",
+          "activities": {
+            "Trigger (1-4)": {
+              "name": "Trigger (1-4)"
+            },
+            "Trigger (5-10)": {
+              "name": "Trigger (5-10)"
+            },
+            "Trigger (11-16)": {
+              "name": "Trigger (11-16)"
+            },
+            "Trigger (17-20)": {
+              "name": "Trigger (17-20)"
+            }
+          }
         }
       }
     },

@@ -931,7 +931,12 @@
     },
     "Boots of Elvenkind": {
       "name": "精灵之靴",
-      "description": "<div>    <p><em>奇物，非普通</em></p></div><p>着装这双靴子期间，无论在何种表面上移动，你都不会发出脚步声。你进行敏捷（隐匿）检定时具有优势。</p>"
+      "description": "<div>    <p><em>奇物，非普通</em></p></div><p>着装这双靴子期间，无论在何种表面上移动，你都不会发出脚步声。你进行敏捷（隐匿）检定时具有优势。</p>",
+      "effects": {
+        "Stealth Advantage": {
+          "name": "Stealth Advantage"
+        }
+      }
     },
     "Boots of False Tracks": {
       "name": "伪迹之靴",
@@ -1410,7 +1415,12 @@
     },
     "Cloak of Elvenkind": {
       "name": "精灵斗篷",
-      "description": "<div>    <p><em>奇物，非普通（需同调）</em></p></div><p>着装此斗篷期间，任何为感知到你所做的感知（察觉）检定都将具有劣势，且你为躲藏所进行的敏捷（隐匿）检定具有优势。</p>"
+      "description": "<div>    <p><em>奇物，非普通（需同调）</em></p></div><p>着装此斗篷期间，任何为感知到你所做的感知（察觉）检定都将具有劣势，且你为躲藏所进行的敏捷（隐匿）检定具有优势。</p>",
+      "effects": {
+        "Stealth Advantage": {
+          "name": "Stealth Advantage"
+        }
+      }
     },
     "Cloak of Invisibility": {
       "name": "隐身斗篷",
@@ -1466,6 +1476,9 @@
       "effects": {
         "Fly Speed": {
           "name": "飞行速度"
+        },
+        "Stealth Advantage": {
+          "name": "Stealth Advantage"
         }
       }
     },
@@ -3974,7 +3987,7 @@
     },
     "Javelin of Lightning": {
       "name": "闪电标枪",
-      "description": "<p><em>武器（标枪），非普通</em></p><p>当你用该武器发动的攻击检定命中时，你可以选择令其造成闪电伤害而非穿刺伤害。</p><p><em><strong>闪电束。</strong></em> 当你向至多 120 尺内的一个目标投掷该武器时，你可以选择不进行远程攻击检定，而是改为将该武器变为一道闪电束。该闪电束会在你和目标之间形成一个 5 尺线状区域，目标及该区域内的每个生物（除你之外）都必须进行一次DC 13 的敏捷豁免，豁免失败者受到 4d6 闪电伤害，豁免成功则伤害减半。该武器会在造成该伤害后立即回到你的手中。直到次日黎明前，该词条都无法再使用。</p><section class=\"secret\" id=\"secret-606LeZVVMHWwmeln\">    <p><strong>Foundry Note</strong></p>    <p><strong>攻击</strong>行动允许你在伤害掷骰时选择闪电或穿刺伤害，并会记住你上次的选择。</p></section>",
+      "description": "<p><em>Weapon (@UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepJavelin000]{Javelin}), Uncommon</em></p><p>Each time you make an attack roll with this magic weapon and hit, you can have it deal Lightning damage instead of Piercing damage.</p><p><em><strong>Lightning Bolt.</strong></em> When you throw this weapon at a target no farther than 120 feet from you, you can forgo making a ranged attack roll and instead turn the weapon into a bolt of lightning. This bolt forms a 5-foot-wide Line between you and the target. The target and each other creature in the Line (excluding you) makes a DC 13 Dexterity saving throw, taking 4d6 Lightning damage on a failed save or half as much damage on a successful one. Immediately after dealing this damage, the weapon reappears in your hand. This property can’t be used again until the next dawn.</p><section class=\"secret\" id=\"secret-606LeZVVMHWwmeln\"><p><strong>Foundry Note</strong></p><p>The <strong>Attack</strong> activity allows you to choose between Lightning and Piercing when rolling damage and will remember your last choice.</p></section>",
       "activities": {
         "Lightning Bolt": {
           "name": "闪电束"
@@ -4675,7 +4688,7 @@
     },
     "Perfume of Bewitching": {
       "name": "迷醉香水",
-      "description": "<p><em>奇物，普通</em></p><p>这个小瓶内装有足够单次使用的魔法香水。你可以使用一个魔法动作将香水喷洒或涂抹在自己身上，其效应会持续 1 小时。在持续时间内，你对试图影响一个位于你周边5尺范围内的生物而进行的所有魅力（欺瞒和游说）检定都具有优势。</p><section class=\"secret\" id=\"secret-csXfXvBZjs3cCGRi\">    <p><strong>Foundry Note</strong></p>    <p>激活效应<strong>迷人香气</strong>可用于跟进，但不会自动触发效果。</p></section>",
+      "description": "<p><em>Wondrous Item, Common</em></p><p>This tiny vial contains magic perfume, enough for one use. You can take a Magic action to apply the perfume to yourself, and its effect lasts 1 hour. For the duration, you have Advantage on all Charisma (Deception and Persuasion) checks made to influence a creature within 5 feet of yourself.</p><section class=\"secret\" id=\"secret-csXfXvBZjs3cCGRi\"><p><strong>Foundry Note</strong></p><p>The <strong>Bewitching Scent</strong> Active Effect provides Advantage on the listed skill checks and should be disabled if the conditions are not met.</p></section>",
       "activities": {
         "Apply Perfume": {
           "name": "施用香水"
@@ -4683,7 +4696,8 @@
       },
       "effects": {
         "Bewitching Scent": {
-          "name": "迷醉香气"
+          "name": "迷醉香气",
+          "description": "<p>For the duration, you have Advantage on all Charisma (Deception and Persuasion) checks made to influence a creature within 5 feet of yourself.</p>"
         }
       }
     },
@@ -5190,13 +5204,13 @@
         }
       }
     },
-    "Ioun Stone of Regneration": {
-      "name": "艾恩石：再生",
-      "description": "<p><em>参见：@UUID[Compendium.dnd-dungeon-masters-guide.equipment.Item.dmgIounStone0000]</em></p><p>当你用一个魔法动作将<em>艾恩石</em>扔向空中时，此石会环绕在距离你头顶 1d3 尺高之处，并为你带来其增益。同一时间内至多只能有 3 颗<em>艾恩石</em>环绕在你的头顶。</p><p>你可以用一个操作动作，抓住并收起环绕在你头顶的任意颗<em>艾恩石</em>。如果你结束正环绕在你头顶的<em>艾恩石</em>的同调，石头就会如同你将其丢弃一样掉落下来。</p><p>这颗珍珠白色的纺锤形<em>艾恩石</em>环绕在你头顶期间，每个小时结束时，若你至少拥有 1 点生命值，你便恢复 [[/healing 15 type=healing]]{15 点生命值}。</p>",
+    "Ioun Stone of Regeneration": {
+      "name": "Ioun Stone of Regeneration",
+      "description": "<p><em>See: @UUID[Compendium.dnd-dungeon-masters-guide.equipment.Item.dmgIounStone0000]{Ioun Stone}</em></p><p>When you take a Magic action to toss an <em>Ioun Stone</em> into the air, the stone orbits your head at a distance of 1d3 feet, conferring its benefit to you while doing so. You can have up to three <em>Ioun Stones</em> orbiting your head at the same time.</p><p>As a Utilize action, you can seize and stow any number of <em>Ioun Stones</em> orbiting your head. If your Attunement to an <em>Ioun Stone</em> ends while it’s orbiting your head, the stone falls as though you had dropped it.</p><p>You regain [[/healing 15 type=healing]]{15 Hit Points} at the end of each hour this pearly white spindle orbits your head if you have at least 1 Hit Point.</p>",
       "activities": {
         "Regeneration": {
-          "name": "再生",
-          "condition": "每个小时结束时，若你至少拥有 1 点生命值"
+          "name": "Regeneration",
+          "condition": "once per hour if you have at least 1 Hit Point"
         }
       }
     },
@@ -5635,15 +5649,19 @@
     },
     "Rod of Alertness": {
       "name": "警示权杖",
-      "description": "<p><em>权杖，极珍稀（需同调）</em></p><p>这根权杖具有以下词条：</p><p><strong>警觉。</strong> 持握这根权杖期间，你的感知（察觉）检定和先攻检定具有优势。</p><p><strong>法术。</strong> 当持握这根权杖时，你可以从中施展以下法术：@UUID[Compendium.dnd5e.spells.Item.Mzh95utKDPIrjiH8], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectPois], @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSeeInvisib]。</p><p><strong>防护灵光。</strong> 以一个魔法动作，你可以将权杖的柄端插入地面，此时权杖的顶部将发出 60 尺半径的明亮光照和额外 60 尺微光光照。身处权杖发出的明亮光照中时，你与你的盟友在护甲等级和豁免中获得 +1 加值，并且可以感知到同样处于此明亮光照中的任何隐形生物的位置。</p><p>最多 10 分钟后或直至一个生物执行魔法动作将权杖从地面拔出后，权杖顶部会停止发光并结束这个效应。该词条一经使用，直至次日黎明前你都无法再次使用。</p><section class=\"secret\" id=\"secret-jGrucoqKAFLoFtqT\">    <p><strong>Foundry Note</strong></p>    <p><strong>插入权杖</strong>行动可放置 60 尺范围的明亮光照测量模板，该行动包含可作用于相关角色的激活效应，为其防御等级(AC)及豁免检定提供 +1 加值。</p></section>",
+      "description": "<p><em>Rod, Very Rare (Requires Attunement)</em></p><p>This rod has the following properties.</p><p><strong>Alertness.</strong> While holding the rod, you have Advantage on Wisdom (Perception) checks and on Initiative rolls.</p><p><strong>Spells.</strong> While holding the rod, you can cast the following spells from it: @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectEvil]{Detect Evil and Good}, @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectPois]{Detect Poison and Disease}, @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSeeInvisib]{See Invisibility}.</p><p><strong>Protective Aura.</strong> As a Magic action, you can plant the haft end of the rod in the ground, whereupon the rod’s head sheds Bright Light in a 60-foot radius and Dim Light for an additional 60 feet. While in that Bright Light, you and your allies gain a +1 bonus to Armor Class and saving throws and can sense the location of any Invisible creature that is also in the Bright Light.</p><p>The rod’s head stops glowing and the effect ends after 10 minutes or when a creature takes a Magic action to pull the rod from the ground. Once used, this property can’t be used again until the next dawn.</p><section class=\"secret\" id=\"secret-jGrucoqKAFLoFtqT\"><p><strong>Foundry Note</strong></p><p>The <strong>Protective Aura</strong> activity can be used to place a 60 foot template representing the Bright Light radius. It includes an Active Effect which can be applied to the relevant Actors and adds the +1 bonus to AC and Saving Throws.</p></section>",
       "activities": {
-        "Plant Rod": {
-          "name": "插入权杖"
+        "Protective Aura": {
+          "name": "Protective Aura"
         }
       },
       "effects": {
         "Protective Aura": {
-          "name": "防护灵光"
+          "name": "防护灵光",
+          "description": "<p>While in that Bright Light, you and your allies gain a +1 bonus to Armor Class and saving throws and can sense the location of any Invisible creature that is also in the Bright Light.</p>"
+        },
+        "Alertness": {
+          "name": "Alertness"
         }
       }
     },
@@ -6213,7 +6231,7 @@
     },
     "Ammunition of Slaying": {
       "name": "屠杀弹药",
-      "description": "<p><em>武器（任何弹药），极珍稀</em></p><p>此魔法弹药专门用于杀死某种特定生物，其生物类型由DM选择或骰骰子在表格中随机决定。当对应类型的生物受到该弹药的伤害时，那个生物进行一次DC 17 的体质豁免，失败则受到 6d10 点力场伤害，成功时则只受半伤。</p><p>此弹药一旦对某生物造成了额外伤害，就会变为非魔法的弹药。</p><details>    <summary>生物类型表（点击展开）</summary>    <p>@Embed[Compendium.dnd-dungeon-masters-guide.tables.RollTable.dmgSlayingAmmuni rollable]</p></details><p>@Embed[Compendium.dnd-dungeon-masters-guide.content.JournalEntry.dmgFoundryRefere.JournalEntryPage.Ok4iCgD25ENgoRxE cite=false caption=false classes=\"hide-in-embed\"]</p>",
+      "description": "<p>This magic ammunition is meant to slay creatures of a particular type, which the DM chooses or determines randomly by rolling on the table below. If a creature of that type takes damage from the ammunition, the creature makes a DC 17 Constitution saving throw, taking an extra 6d10 Force damage on a failed save or half as much extra damage on a successful one.</p><p>After dealing its extra damage to a creature, the ammunition becomes nonmagical.</p><details><summary>Creature Type Table (click to expand)</summary><p>@Embed[Compendium.dnd-dungeon-masters-guide.tables.RollTable.dmgSlayingAmmuni rollable]</p></details><p>@Embed[Compendium.dnd-dungeon-masters-guide.content.JournalEntry.dmgFoundryRefere.JournalEntryPage.Ok4iCgD25ENgoRxE cite=false caption=false classes=\"hide-in-embed\"]</p>",
       "activities": {
         "Slaying Save": {
           "name": "屠杀豁免",
@@ -7121,8 +7139,8 @@
         "Determine Ounces": {
           "name": "确定盎司"
         },
-        "Apply Glue": {
-          "name": "施用溶剂"
+        "Apply Solvent": {
+          "name": "Apply Solvent"
         }
       }
     },
