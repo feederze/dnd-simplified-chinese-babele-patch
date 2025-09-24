@@ -1,0 +1,713 @@
+{
+  "label": "Items",
+  "folders": {
+    "Staves": "Staves",
+    "Bloodsbane": "Bloodsbane",
+    "Badges": "Badges",
+    "Orbs and Crystals": "Orbs and Crystals",
+    "Reference Items": "Reference Items"
+  },
+  "entries": {
+    "Emblem of Elements": {
+      "name": "Emblem of Elements",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Companion)</em></p><p>This blown-glass emblem looks like a flower with petals of blue, green, red, and yellow When your companion deals acid, cold, fire, lightning, poison, or thunder damage with a signature attack or a ferocity action, you can spend 2 ferocity (no action required) to change the dam age type to any other type from that list.</p>",
+      "activities": {
+        "Transmute Damage": {
+          "name": "Transmute Damage"
+        }
+      }
+    },
+    "Bloodsbane (Rose Oil)": {
+      "name": "Bloodsbane (Rose Oil)",
+      "description": "<p>This oil is deceptively clear and smells faintly like parchment, dried ink, and a touch of sulfur. To unlock the oil's power, an additional component must be mixed in (as shown in the Bloodsbane Effects table); this component may have already been added, or the oil's user can acquire an unmixed oil and add the component as part of a short or long rest. These components are difficult to sense once diluted in the oil, and identifying this oil may require a keen nose or additional research</p><p>The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil in this way takes 1 minute, during which time a willing creature must offer one drop of their blood, mixing it into the oil to activate its magic.</p><p>A creature hit with a weapon or ammunition coated in this oil must succeed on a DC 15 Constitution saving throw or suffer an effect depending on the oil's special component added. In addition, if the creature fails the saving throw and the blood in the oil came from an illrigger, the creature has a seal placed on them by that illrigger. This seal doesn't count against the number of seals granted by the illrigger's Baleful Interdict feature.</p><table><caption>Bloodsbane Effects</caption><thead><tr><th style=\"min-width:50px\">Ingredient</th><th>Effect</th></tr></thead><tbody style=\"text-align:center\"><tr><td>Mentha Arvensis Oil</td><td>The target is under the effects of the @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3] spell for 10 minutes.</td></tr><tr><td>Nightshade Oil</td><td>The target is &amp;reference[paralyzed] for 1 minute.</td></tr><tr><td>Bloodhound Fur</td><td>The creature who offered their blood to the oil knows the direction and distance to the target for 24 hours.</td></tr><tr><td>Rose Oil</td><td>The target is under the effect of the @UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs] spell for 1 hour. The creature they are &amp;reference[charmed] by is the creature who offered their blood to the oil.</td></tr></tbody></table>",
+      "activities": {
+        "Bloodsbane Oil Save (Rose Oil)": {
+          "name": "Bloodsbane Oil Save (Rose Oil)"
+        },
+        "Apply Bloodsbane (Rose Oil)": {
+          "name": "Apply Bloodsbane (Rose Oil)"
+        }
+      },
+      "effects": {
+        "Interdiction Seal": {
+          "name": "Interdiction Seal",
+          "description": "<p>An invisible infernal seal has been placed upon your body, and lasts for one minute.</p>"
+        },
+        "Applied Bloodsbane with Rose Oil": {
+          "name": "Applied Bloodsbane with Rose Oil",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>Bloodsbane (Rose Oil)</legend>     <p>A creature hit with a weapon or ammunition coated in this oil must succeed on a DC 15 Constitution saving throw or suffer an effect depending on the oil's special component added. In addition, if the creature fails the saving throw and the blood in the oil came from an illrigger, the creature has a seal placed on them by that illrigger. This seal doesn't count against the number of seals granted by the illrigger's Baleful Interdict feature.</p>     <p><strong>Rose Oil:</strong> The target is under the effect of the @UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs] spell for 1 hour. The creature they are &reference[charmed] by is the creature who offered their blood to the oil.</p> </fieldset>"
+          }
+        },
+        "Charm Person": {
+          "name": "Charm Person",
+          "description": "<p>You are &amp;reference[charmed apply=false] by the creature that offered their blood to the oil for the next 24 hours.</p>"
+        }
+      }
+    },
+    "Crystal of Supreme Rejuvenation": {
+      "name": "Crystal of Supreme Rejuvenation",
+      "description": "<p><em>Psionic Crystal, Legendary</em></p><p>This crystal contains psionic energy that causes you to lose 4d4 + 4 strain when you break it.</p>",
+      "activities": {
+        "Relieve Strain": {
+          "name": "Relieve Strain",
+          "roll": "Strain Lost"
+        }
+      }
+    },
+    "Companion Ball": {
+      "name": "Companion Ball",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>Images of beasts, monstrosities, and other types of companion creatures are carved on the outside of this 3-inch-radius iron sphere. While you hold the ball and your companion is within 30 feet of you and not in a rampage, you can use an action to speak a command word to transport your companion inside the ball into a cozy, secure extradimensional space. While in the ball, your companion can take a short or long rest, and doesn’t need to eat or drink. A companion ball can hold only one companion at a time.</p>",
+      "activities": {
+        "Recall / Summon Companion": {
+          "name": "Recall / Summon Companion"
+        }
+      }
+    },
+    "Staff of Pyrokinesis": {
+      "name": "Staff of Pyrokinesis",
+      "description": "<p><em>Staff, Very Rare (Requires Attunement by a Talent)</em></p><p>This staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to manifest one of the following powers from it, using your talent power save DC: @UUID[Compendium.mcdm-class-bundle.features.Item.JhCVEpk57Ng5MR4q] (4 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.y5IFETLo6sTf3mlC] (2 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.qCOcf6LQesF7f0lN] (4 charges), or @UUID[Compendium.mcdm-class-bundle.features.Item.Eq7IQdMB33wayZlp] (1 charge).</p><p>Additionally, when you make a melee attack with the staff, you can use your Intelligence modifier instead of your Strength modifier for attack and damage rolls. When you hit with a melee attack using the staff, you can expend any number of charges, dealing an extra 1d8 fire damage to the target per expended charge.</p><p>The staff regains 1d6 + 4 expended charges daily at dawn.</p>",
+      "activities": {
+        "Fiery Strike": {
+          "name": "Fiery Strike",
+          "condition": "When you hit with a melee attack using this staff."
+        },
+        "Manifest Power: Fire Form": {
+          "name": "Manifest Power: Fire Form"
+        },
+        "Manifest Power: Imbue Flame": {
+          "name": "Manifest Power: Imbue Flame"
+        },
+        "Manifest Power: Melt": {
+          "name": "Manifest Power: Melt"
+        },
+        "Manifest Power: Scorch": {
+          "name": "Manifest Power: Scorch"
+        }
+      },
+      "effects": {
+        "Fire Form": {
+          "name": "Fire Form",
+          "description": "<p>You encase yourself in psionic flame and gain the following benefits for the duration:</p><ul><li><p>You have a flying speed of 60 feet.</p></li><li><p>You have immunity to cold and fire damage.</p></li><li><p>Whenever a creature within 5 feet of you touches you for the first time on a turn or hits you with a melee attack, that creature takes 1d6 fire damage.</p></li><li><p>Your power attacks, weapon attacks, and unarmed strikes deal an extra 1d6 fire damage.</p></li></ul>"
+        },
+        "Imbued Flame": {
+          "name": "Imbued Flame",
+          "description": "<p>For the duration of this power, your weapon attacks and unarmed strikes deal an extra 1d6 fire damage.</p>"
+        }
+      }
+    },
+    "Orb of Psionic Might": {
+      "name": "Orb of Psionic Might",
+      "description": "<p><em>Wondrous Item, Uncommon (+1), Rare (+2), or Very Rare (+3) (Requires Attunement by a Talent)</em></p><p>While holding this grapefruit-sized crystal orb, you gain a bonus to power attack rolls and to the saving throw DCs of your talent powers. The bonus is determined by the orb’s rarity.</p>"
+    },
+    "Orb of Psionic Might +2": {
+      "name": "Orb of Psionic Might +2",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Talent)</em></p><p>While holding this grapefruit-sized crystal orb, you gain a +2 bonus to power attack rolls and to the saving throw DCs of your talent powers.</p>",
+      "effects": {
+        "Orb of Psionic Might +2": {
+          "name": "Orb of Psionic Might +2",
+          "description": "<p>You gain a +2 bonus to power attack rolls and to the saving throw DCs of your talent powers.</p>"
+        }
+      }
+    },
+    "Bloodsbane": {
+      "name": "Bloodsbane",
+      "description": "<p>This oil is deceptively clear and smells faintly like parchment, dried ink, and a touch of sulfur. To unlock the oil's power, an additional component must be mixed in (as shown in the Bloodsbane Effects table); this component may have already been added, or the oil's user can acquire an unmixed oil and add the component as part of a short or long rest. These components are difficult to sense once diluted in the oil, and identifying this oil may require a keen nose or additional research</p><p>The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil in this way takes 1 minute, during which time a willing creature must offer one drop of their blood, mixing it into the oil to activate its magic.</p><p>A creature hit with a weapon or ammunition coated in this oil must succeed on a DC 15 Constitution saving throw or suffer an effect depending on the oil's special component added. In addition, if the creature fails the saving throw and the blood in the oil came from an illrigger, the creature has a seal placed on them by that illrigger. This seal doesn't count against the number of seals granted by the illrigger's Baleful Interdict feature.</p><table><caption>Bloodsbane Effects</caption><thead><tr><th style=\"min-width:50px\">Ingredient</th><th>Effect</th></tr></thead><tbody style=\"text-align:center\"><tr><td>@UUID[Compendium.mcdm-class-bundle.items.Item.a6Asu2MxotaB4inu]{Mentha Arvensis Oil}</td><td>The target is under the effects of the @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3] spell for 10 minutes.</td></tr><tr><td>@UUID[Compendium.mcdm-class-bundle.items.Item.HqfDCF0pxRaZeOvj]{Nightshade Oil}</td><td>The target is &amp;reference[paralyzed] for 1 minute.</td></tr><tr><td>@UUID[Compendium.mcdm-class-bundle.items.Item.UGQUMsJneJrOUsh7]{Bloodhound Fur}</td><td>The creature who offered their blood to the oil knows the direction and distance to the target for 24 hours.</td></tr><tr><td>@UUID[Compendium.mcdm-class-bundle.items.Item.0xyMS3L43beeT4zg]{Rose Oil}</td><td>The target is under the effect of the @UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs] spell for 1 hour. The creature they are &amp;reference[charmed] by is the creature who offered their blood to the oil.</td></tr></tbody></table>"
+    },
+    "Bonded Bracelets": {
+      "name": "Bonded Bracelets",
+      "description": "<p><em>Wondrous Item, Very Rare (Requires Attunement)</em></p><p>These simple rope bracelets come in pairs. While you and another creature on the same plane are attuned to the bracelets, you always know each other’s exact location and can speak telepathically to each other. If the other attuned creature does not understand any language, you understand their emotional state and can give them simple commands.</p><p>Additionally, while you and the other attuned creature are within 1 mile of each other, neither of you need to eat or drink, and you can both survive in conditions of extreme cold and extreme heat without gaining levels of exhaustion. While you are within 60 feet of each other, you gain any damage resistances or immunities the other creature has, and vice versa.</p>",
+      "effects": {
+        "Wilderness Resistance": {
+          "name": "Wilderness Resistance",
+          "description": "<p>While within one mile of another creature attuned to the bracelets, neither of you need to eat or drink and can survive in conditions of extreme cold and heat without gaining levels of exhaustion.</p>"
+        }
+      }
+    },
+    "Power Crystal (1st Order)": {
+      "name": "Power Crystal (1st Order)",
+      "description": "<p><em>Psionic Crystal, Common</em></p><p>A power crystal holds a single psionic power. When you break this crystal as an action, you immediately manifest the power within it, regardless of the power’s normal manifestation time. The power has a save DC of 13 and an attack modifier of +5.</p>"
+    },
+    "Bloodsbane (Nightshade Oil)": {
+      "name": "Bloodsbane (Nightshade Oil)",
+      "description": "<p>This oil is deceptively clear and smells faintly like parchment, dried ink, and a touch of sulfur. To unlock the oil's power, an additional component must be mixed in (as shown in the Bloodsbane Effects table); this component may have already been added, or the oil's user can acquire an unmixed oil and add the component as part of a short or long rest. These components are difficult to sense once diluted in the oil, and identifying this oil may require a keen nose or additional research</p><p>The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil in this way takes 1 minute, during which time a willing creature must offer one drop of their blood, mixing it into the oil to activate its magic.</p><p>A creature hit with a weapon or ammunition coated in this oil must succeed on a DC 15 Constitution saving throw or suffer an effect depending on the oil's special component added. In addition, if the creature fails the saving throw and the blood in the oil came from an illrigger, the creature has a seal placed on them by that illrigger. This seal doesn't count against the number of seals granted by the illrigger's Baleful Interdict feature.</p><table><caption>Bloodsbane Effects</caption><thead><tr><th style=\"min-width:50px\">Ingredient</th><th>Effect</th></tr></thead><tbody style=\"text-align:center\"><tr><td>Mentha Arvensis Oil</td><td>The target is under the effects of the @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3] spell for 10 minutes.</td></tr><tr><td>Nightshade Oil</td><td>The target is &amp;reference[paralyzed] for 1 minute.</td></tr><tr><td>Bloodhound Fur</td><td>The creature who offered their blood to the oil knows the direction and distance to the target for 24 hours.</td></tr><tr><td>Rose Oil</td><td>The target is under the effect of the @UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs] spell for 1 hour. The creature they are &amp;reference[charmed] by is the creature who offered their blood to the oil.</td></tr></tbody></table>",
+      "activities": {
+        "Bloodsbane Oil Save (Nightshade Oil)": {
+          "name": "Bloodsbane Oil Save (Nightshade Oil)"
+        },
+        "Apply Bloodsbane (Nightshade Oil)": {
+          "name": "Apply Bloodsbane (Nightshade Oil)"
+        }
+      },
+      "effects": {
+        "Interdiction Seal": {
+          "name": "Interdiction Seal",
+          "description": "<p>An invisible infernal seal has been placed upon your body, and lasts for one minute.</p>"
+        },
+        "Applied Bloodsbane with Nightshade Oil": {
+          "name": "Applied Bloodsbane with Nightshade Oil",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>Bloodsbane (Rose Oil)</legend>     <p>A creature hit with a weapon or ammunition coated in this oil must succeed on a DC 15 Constitution saving throw or suffer an effect depending on the oil's special component added. In addition, if the creature fails the saving throw and the blood in the oil came from an illrigger, the creature has a seal placed on them by that illrigger. This seal doesn't count against the number of seals granted by the illrigger's Baleful Interdict feature.</p>     <p><strong>Nightshade Oil: </strong>The target is &reference[paralyzed] for 1 minute.</p> </fieldset>"
+          }
+        }
+      }
+    },
+    "True Name": {
+      "name": "True Name",
+      "description": "<p><em>Weapon (Any), Uncommon, Rare, Very Rare, or Legendary (Requires Attunement by an Illrigger)</em></p><p>This weapon is ornately decorated with elegant details in brimstone and obsidian. It smells of iron and incense. When you attune to this weapon, you must whisper your true name to it. The name sears across the weapon in Infernal runes, then fades.</p><p>The typical <em>True Name</em>, an uncommon item, empowers an illrigger's @UUID[Compendium.mcdm-class-bundle.classes.Item.v5tWvb369dg4hgxe]{Baleful Interdict}. Whenever you roll an 18, 19, or 20 on your attack roll with this weapon and place a seal on a creature as part of the attack, you can place an additional seal on that creature.</p><p>More powerful variants of <em>True Name</em> gain an additional property depending on rarity:</p><p><strong>Rare. </strong>You gain a +1 bonus to attack and damage rolls made using the weapon, and the damage dealt by your seals increases by 1d6.</p><p><strong>Very Rare. </strong>You gain a +2 bonus to attack and damage rolls made using the weapon, and the damage dealt by your seals increases by 2d6. In addition, when you reduce an enemy to 0 hit points, you can choose to regain a seal (no action required). Once you regain a seal in this way, you can't do so again until the following dusk.</p><p><strong>Legendary.</strong> You gain a +3 bonus to attack and damage rolls made using the weapon, and the damage dealt by your seals increases by 3d6. In addition, when you reduce an enemy to 0 hit points, you can choose to regain two seals and gain temporary hit points equal to your illrigger level (no action required). Once you regain seals and gain temporary hit points in this way, you can't do so again until the following dusk.</p><p>@embed[Compendium.mcdm-class-bundle.books.JournalEntry.mcdmcbreferences.JournalEntryPage.NogMiRjpBnoAHd6i inline]</p>",
+      "activities": {
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
+        },
+        "Regain Seal": {
+          "name": "Regain Seal"
+        },
+        "Regain Seals & Health": {
+          "name": "Regain Seals & Health"
+        }
+      },
+      "effects": {
+        "Uncommon True Name": {
+          "name": "Uncommon True Name",
+          "changes": {
+            "name": "True Name {}",
+            "system.description.value": "{} <fieldset>     <legend>True Name Weapon (Uncommon)</legend>     <p>This weapon is ornately decorated with elegant details in brimstone and obsidian. It smells of iron and incense. When you attune to this weapon, you must whisper your true name to it. The name sears across the weapon in Infernal runes, then fades.</p>     <p>Whenever you roll an 18, 19, or 20 on your attack roll with this weapon and place a seal on a creature as part of the attack, you can place an additional seal on that creature.</p> </fieldset>"
+          }
+        },
+        "Rare True Name": {
+          "name": "Rare True Name",
+          "changes": {
+            "name": "True Name {}",
+            "system.description.value": "{} <fieldset>     <legend>True Name Weapon (Rare)</legend>     <p>This weapon is ornately decorated with elegant details in brimstone and obsidian. It smells of iron and incense. When you attune to this weapon, you must whisper your true name to it. The name sears across the weapon in Infernal runes, then fades.</p>     <p>You have a +1 bonus too attack and damage rolls made using this weapon, and the damage dealt by your seals increases by 1d6. Additionally, whenever you roll an 18, 19, or 20 on your attack roll with this weapon and place a seal on a creature as part of the attack, you can place an additional seal on that creature.</p> </fieldset>"
+          }
+        },
+        "Very Rare True Name Seals": {
+          "name": "Very Rare True Name Seals",
+          "description": "<p>The damage dealt by your seals increases by 2d6.</p>"
+        },
+        "Very Rare True Name": {
+          "name": "Very Rare True Name",
+          "changes": {
+            "name": "True Name {}",
+            "system.description.value": "{} <fieldset>     <legend>True Name Weapon (Very Rare)</legend>     <p>This weapon is ornately decorated with elegant details in brimstone and obsidian. It smells of iron and incense. When you attune to this weapon, you must whisper your true name to it. The name sears across the weapon in Infernal runes, then fades.</p>     <p>You have a +2 bonus too attack and damage rolls made using this weapon, and the damage dealt by your seals increases by 2d6. Additionally, whenever you roll an 18, 19, or 20 on your attack roll with this weapon and place a seal on a creature as part of the attack, you can place an additional seal on that creature.</p>     <p>Finally, when you reduce a creature to 0 hit points, you can choose to regain a seal (no action required). Once you regain a seal in this way, you can't do so again until the following dusk.</p> </fieldset>"
+          }
+        },
+        "Rare True Name Seals": {
+          "name": "Rare True Name Seals",
+          "description": "<p>The damage dealt by your seals increases by 1d6.</p>"
+        },
+        "Legendary True Name Seals": {
+          "name": "Legendary True Name Seals",
+          "description": "<p>The damage dealt by your seals increases by 3d6.</p>"
+        },
+        "Legendary True Name": {
+          "name": "Legendary True Name",
+          "changes": {
+            "name": "True Name {}",
+            "system.description.value": "{} <fieldset>     <legend>True Name Weapon (Uncommon)</legend>     <p>This weapon is ornately decorated with elegant details in brimstone and obsidian. It smells of iron and incense. When you attune to this weapon, you must whisper your true name to it. The name sears across the weapon in Infernal runes, then fades.</p>     <p>You have a +3 bonus too attack and damage rolls made using this weapon, and the damage dealt by your seals increases by 3d6. Additionally, whenever you roll an 18, 19, or 20 on your attack roll with this weapon and place a seal on a creature as part of the attack, you can place an additional seal on that creature.</p>     <p>Finally, when you reduce a creature to 0 hit points, you can choose to regain two seals and gain temporary hit points equal to your illrigger level (no action required). Once you regains seals and gain temporary hit points in this way, you can't do so again until the following dusk.</p> </fieldset>"
+          }
+        }
+      }
+    },
+    "Power Crystal (5th Order)": {
+      "name": "Power Crystal (5th Order)",
+      "description": "<p><em>Psionic Crystal, Very Rare</em></p><p>A power crystal holds a single psionic power. When you break this crystal as an action, you immediately manifest the power within it, regardless of the power’s normal manifestation time. The power has a save DC of 18 and an attack modifier of +10.</p>"
+    },
+    "Collar of Disguise": {
+      "name": "Collar of Disguise",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Companion)</em> </p><p>While your companion wears this leather collar, you can use an action to speak a command word and polymorph the companion into one of the following creatures: cat, frog, goat, mastiff, mule, owl, rat, or raven  Any equipment the companion is wearing or carrying is absorbed or borne by the new form (your choice). While in this form, your companion retains all their statistics except for size, and they can’t use ferocity actions  You can speak the command word again as an action and return your companion to their original form.</p>",
+      "activities": {
+        "Disguise Companion": {
+          "name": "Disguise Companion",
+          "profiles": {
+            "Disguised Companion": {
+              "name": "Disguised Companion"
+            }
+          }
+        }
+      }
+    },
+    "Hero's Cape": {
+      "name": "Hero's Cape",
+      "description": "<p><em>Wondrous Item, Legendary (Requires Attunement)</em></p><p>While you wear this flowing, colorful cape, you have a flying speed of 90 feet and can hover.</p><p>Additionally, you can use an action to send forth a 15-foot cone of psionic force. Each creature in the area must make a DC 19 Dexterity saving throw, taking 6d6 force damage on a failed save, or half as much damage on a successful one.</p>",
+      "activities": {
+        "Psionic Blast": {
+          "name": "Psionic Blast"
+        }
+      },
+      "effects": {
+        "Hero's Cape: Flying Speed": {
+          "name": "Hero's Cape: Flying Speed",
+          "description": "<p>While you wear this flowing, colorful cape, you have a flying speed of 90 feet and can hover.</p>"
+        }
+      }
+    },
+    "Staff of Resopathy": {
+      "name": "Staff of Resopathy",
+      "description": "<p><em>Staff, Very Rare (Requires Attunement by a Talent)</em></p><p>This staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to manifest one of the following powers from it, using your talent power save DC: @UUID[Compendium.mcdm-class-bundle.features.Item.bUKtjbjz8MGaEI8Q] (2 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.FQvVmMjtBidvc3L1] (2 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.cBxGKyT55vuUKISF] (4 charges), or @UUID[Compendium.mcdm-class-bundle.features.Item.Jlu739ZUtoIYtqZi] (1 charge).</p><p>Additionally, while holding the staff, you can expend 1 charge as a bonus action to give yourself &amp;reference[truesight] out to a range of 30 feet for 1 minute.</p><p>The staff regains 1d6 + 4 expended charges daily at dawn.</p>",
+      "activities": {
+        "Grant Truesight": {
+          "name": "Grant Truesight"
+        },
+        "Manifest Power: Extinguish": {
+          "name": "Manifest Power: Extinguish"
+        },
+        "Manifest Power: Guise": {
+          "name": "Manifest Power: Guise"
+        },
+        "Manifest Power: Reminisce": {
+          "name": "Manifest Power: Reminisce"
+        },
+        "Manifest Power: Weight": {
+          "name": "Manifest Power: Weight"
+        }
+      },
+      "effects": {
+        "Staff of Resopathy: Truesight": {
+          "name": "Staff of Resopathy: Truesight",
+          "description": "<p>You have &amp;reference[truesight] out to a range of 30 feet for the next minute.</p>"
+        },
+        "Psionic Guise": {
+          "name": "Psionic Guise",
+          "description": "<p>You have projected a psionic appearance over your own body, transforming yourself into any creature you have encountered that is your size, though none of your statistics change. You can also change the appearance of any gear you wear or hold when you manifest this power.</p><p>Your changed appearance fails to hold up to physical inspection. For example, if you use this power to become a mastiff, any object passing directly over the image of the mastiff will bump into you while seemingly in midair, and anyone who pets the mastiff would feel your body.</p><p>To discern that you are disguised, a creature can use an action to inspect your appearance and succeed on an Intelligence (Investigation) check against your talent power save DC.</p>"
+        },
+        "Reminiscing": {
+          "name": "Reminiscing",
+          "description": "<p>For the duration of this effect, you believe that a friend or loved one has approached you and wishes to have a pleasant conversation. You stop whatever you are doing, taking no actions while you engage in a conversation with the acquaintance.</p><p>If you take damage or another creature uses an action to point out that the acquaintance you are having a conversation with is not a real person, you may repeat the saving throw, ending the effect on a success.</p>"
+        },
+        "Gravitas": {
+          "name": "Gravitas",
+          "description": "<p>Your movement speed is reduced by 20 feet (to a minimum of 0).</p><p>You can repeat the saving throw against this power at the end of each of your turns, ending this effect on yourself on a success.</p>"
+        },
+        "Levitas": {
+          "name": "Levitas",
+          "description": "<p>At the start of each of your turns, you rise vertically 5 feet. When the effect ends, you begin to fall. If you can reach a fixed object, you may attempt a Strength saving throw against this power to hang on and avoid rising.</p><p>You can repeat the saving throw against this power at the end of each of your turns, ending this effect on yourself on a success.</p>"
+        }
+      }
+    },
+    "Badge of Battle +2": {
+      "name": "Badge of Battle +2",
+      "description": "<p><em>Wondrous Item, Rare</em></p><p>This bronze badge depicts a specific type of fearsome creature (a dragon, a wolf, an owlbear, and so forth) leaping into combat against a horde of enemies. While wearing the badge, you gain a +2 bonus to attack and damage rolls you make with unarmed strikes and natural weapons.</p>",
+      "effects": {
+        "Badge of Battle +2": {
+          "name": "Badge of Battle +2",
+          "description": "<p>you gain a +2 bonus to attack and damage rolls you make with unarmed strikes and natural weapons.</p>"
+        }
+      }
+    },
+    "Staff of Telekinesis": {
+      "name": "Staff of Telekinesis",
+      "description": "<p><em>Staff, Very Rare (Requires Attunement by a Talent)</em></p><p>This staff has 10 charges. While holding it, you can expend 1 or more of its charges to manifest one of the following powers from it, using your talent power save DC: @UUID[Compendium.mcdm-class-bundle.features.Item.cX1p6AeOYBtd8HYC] (4 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.DKK3ErkT2DHMLCH9] (4 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.g6bPj91u7aL3Wgm3] (1 charge), or @UUID[Compendium.mcdm-class-bundle.features.Item.GRRKLKZMvSO8SOXJ] (2 charges).</p><p>Additionally, while holding the staff, you can expend 1 charge to give yourself a flying speed of 60 feet until the end of your next turn (no action required). If you already have a flying speed, that speed increases by 60 feet until the end of your next turn.</p><p>The staff regains 1d6 + 4 expended charges daily at dawn.</p>",
+      "activities": {
+        "Telekinetic Flight": {
+          "name": "Telekinetic Flight"
+        },
+        "Manifest Power: Fulcrum": {
+          "name": "Manifest Power: Fulcrum"
+        },
+        "Fulcrum: Manipulate Creature (Telekinetic Grip)": {
+          "name": "Fulcrum: Manipulate Creature (Telekinetic Grip)"
+        },
+        "Fulcrum: Manipulate Object (Throw Object)": {
+          "name": "Fulcrum: Manipulate Object (Throw Object)"
+        },
+        "Manifest Power: Gravitational Collapse": {
+          "name": "Manifest Power: Gravitational Collapse"
+        },
+        "Manifest Power: Repel": {
+          "name": "Manifest Power: Repel"
+        },
+        "Manifest Power: Telekinetic Burst": {
+          "name": "Manifest Power: Telekinetic Burst"
+        }
+      },
+      "effects": {
+        "Telekinetic Flight": {
+          "name": "Telekinetic Flight",
+          "description": "<p>Until the end of your next turn, you have a flying speed of 60 feet. If you already have a flying speed, that speed increases by 60 feet until the end of your next turn.</p>"
+        },
+        "Fulcrum: Telekinetic Grip": {
+          "name": "Fulcrum: Telekinetic Grip",
+          "description": "<p>You are held in a telekinetic grip and are &amp;reference[restrained]. On subsequent rounds, when the creature that manifested this power attempts to maintain their telekinetic grip, you can attempt to repeat the saving throw as an action, ending this effect on yourself.</p>"
+        }
+      }
+    },
+    "Bloodsbane (Bloodhound Fur)": {
+      "name": "Bloodsbane (Bloodhound Fur)",
+      "description": "<p>This oil is deceptively clear and smells faintly like parchment, dried ink, and a touch of sulfur. To unlock the oil's power, an additional component must be mixed in (as shown in the Bloodsbane Effects table); this component may have already been added, or the oil's user can acquire an unmixed oil and add the component as part of a short or long rest. These components are difficult to sense once diluted in the oil, and identifying this oil may require a keen nose or additional research</p><p>The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil in this way takes 1 minute, during which time a willing creature must offer one drop of their blood, mixing it into the oil to activate its magic.</p><p>A creature hit with a weapon or ammunition coated in this oil must succeed on a DC 15 Constitution saving throw or suffer an effect depending on the oil's special component added. In addition, if the creature fails the saving throw and the blood in the oil came from an illrigger, the creature has a seal placed on them by that illrigger. This seal doesn't count against the number of seals granted by the illrigger's Baleful Interdict feature.</p><table><caption>Bloodsbane Effects</caption><thead><tr><th style=\"min-width:50px\">Ingredient</th><th>Effect</th></tr></thead><tbody style=\"text-align:center\"><tr><td>Mentha Arvensis Oil</td><td>The target is under the effects of the @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3] spell for 10 minutes.</td></tr><tr><td>Nightshade Oil</td><td>The target is &amp;reference[paralyzed] for 1 minute.</td></tr><tr><td>Bloodhound Fur</td><td>The creature who offered their blood to the oil knows the direction and distance to the target for 24 hours.</td></tr><tr><td>Rose Oil</td><td>The target is under the effect of the @UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs] spell for 1 hour. The creature they are &amp;reference[charmed] by is the creature who offered their blood to the oil.</td></tr></tbody></table>",
+      "activities": {
+        "Bloodsbane Oil Save (Bloodhound Fur)": {
+          "name": "Bloodsbane Oil Save (Bloodhound Fur)"
+        },
+        "Apply Bloodsbane (Bloodhound Fur)": {
+          "name": "Apply Bloodsbane (Bloodhound Fur)"
+        }
+      },
+      "effects": {
+        "Interdiction Seal": {
+          "name": "Interdiction Seal",
+          "description": "<p>An invisible infernal seal has been placed upon your body, and lasts for one minute.</p>"
+        },
+        "Applied Bloodsbane with Bloodhound Fur": {
+          "name": "Applied Bloodsbane with Bloodhound Fur",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>Bloodsbane (Rose Oil)</legend>     <p>A creature hit with a weapon or ammunition coated in this oil must succeed on a DC 15 Constitution saving throw or suffer an effect depending on the oil's special component added. In addition, if the creature fails the saving throw and the blood in the oil came from an illrigger, the creature has a seal placed on them by that illrigger. This seal doesn't count against the number of seals granted by the illrigger's Baleful Interdict feature.</p>     <p><strong>Bloodhound Fur: </strong>The creature who offered their blood to the oil knows the direction and distance to the target for 24 hours.</p> </fieldset>"
+          }
+        },
+        "Bloodhound Trail": {
+          "name": "Bloodhound Trail",
+          "description": "<p>The creature that offered their blood to the oil always knows the direction and distance to you for the next 24 hours.</p>"
+        }
+      }
+    },
+    "Badge of Battle +3": {
+      "name": "Badge of Battle +3",
+      "description": "<p><em>Wondrous Item, Very Rare</em></p><p>This bronze badge depicts a specific type of fearsome creature (a dragon, a wolf, an owlbear, and so forth) leaping into combat against a horde of enemies. While wearing the badge, you gain a +3 bonus to attack and damage rolls you make with unarmed strikes and natural weapons.</p>",
+      "effects": {
+        "Badge of Battle +3": {
+          "name": "Badge of Battle +3",
+          "description": "<p>You gain a +3 bonus to attack and damage rolls you make with unarmed strikes and natural weapons.</p>"
+        }
+      }
+    },
+    "Badge of Battle, +1, +2, or +3": {
+      "name": "Badge of Battle, +1, +2, or +3",
+      "description": "<p><em>Wondrous Item, Uncommon (+1), Rare (+2), or Very Rare (+3)</em></p><p>This bronze badge depicts a specific type of fearsome creature (a dragon, a wolf, an owlbear, and so forth) leaping into combat against a horde of enemies. While wearing the badge, you gain a bonus to attack and damage rolls you make with unarmed strikes and natural weapons. This bonus is determined by the badge’s rarity, and such attacks are considered magical.</p>"
+    },
+    "Bedroll of Vim": {
+      "name": "Bedroll of Vim",
+      "description": "<p><em>Wondrous Item, Rare</em></p><p>If you spend at least 6 hours of a long rest wrapped in this silk bedroll, you regain all your spent Hit Dice when you finish the rest. Only one creature can benefit from the bedroll at a time</p>"
+    },
+    "Crystal of Greater Rejuvenation": {
+      "name": "Crystal of Greater Rejuvenation",
+      "description": "<p><em>Psionic Crystal, Rare</em></p><p>This crystal contains psionic energy that causes you to lose 1d4 + 1 strain when you break it.</p>",
+      "activities": {
+        "Relieve Strain": {
+          "name": "Relieve Strain",
+          "roll": "Strain Lost"
+        }
+      }
+    },
+    "Beam Lenses": {
+      "name": "Beam Lenses",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Companion)</em></p><p>These ruby goggles are attached to the head with black leather straps. While your companion wears the goggles and has 3 ferocity or more, you can spend 3 ferocity on your turn (no action required) and command your companion to use their action to shoot a beam of magical energy from the lenses at a target within 60 feet of them. The companion makes an attack roll with a modifier equal to 3 + your proficiency bonus On a hit, the attack deals 1d10 + your proficiency bonus force damage.</p>",
+      "activities": {
+        "Beam of Force": {
+          "name": "Beam of Force"
+        }
+      }
+    },
+    "Bloodsbane (Mentha Arvensis Oil)": {
+      "name": "Bloodsbane (Mentha Arvensis Oil)",
+      "description": "<p>This oil is deceptively clear and smells faintly like parchment, dried ink, and a touch of sulfur. To unlock the oil's power, an additional component must be mixed in (as shown in the Bloodsbane Effects table); this component may have already been added, or the oil's user can acquire an unmixed oil and add the component as part of a short or long rest. These components are difficult to sense once diluted in the oil, and identifying this oil may require a keen nose or additional research</p><p>The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil in this way takes 1 minute, during which time a willing creature must offer one drop of their blood, mixing it into the oil to activate its magic.</p><p>A creature hit with a weapon or ammunition coated in this oil must succeed on a DC 15 Constitution saving throw or suffer an effect depending on the oil's special component added. In addition, if the creature fails the saving throw and the blood in the oil came from an illrigger, the creature has a seal placed on them by that illrigger. This seal doesn't count against the number of seals granted by the illrigger's Baleful Interdict feature.</p><table><caption>Bloodsbane Effects</caption><thead><tr><th style=\"min-width:50px\">Ingredient</th><th>Effect</th></tr></thead><tbody style=\"text-align:center\"><tr><td>Mentha Arvensis Oil</td><td>The target is under the effects of the @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3] spell for 10 minutes.</td></tr><tr><td>Nightshade Oil</td><td>The target is &amp;reference[paralyzed] for 1 minute.</td></tr><tr><td>Bloodhound Fur</td><td>The creature who offered their blood to the oil knows the direction and distance to the target for 24 hours.</td></tr><tr><td>Rose Oil</td><td>The target is under the effect of the @UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs] spell for 1 hour. The creature they are &amp;reference[charmed] by is the creature who offered their blood to the oil.</td></tr></tbody></table>",
+      "activities": {
+        "Bloodsbane Oil Save (Mentha Arvensis Oil)": {
+          "name": "Bloodsbane Oil Save (Mentha Arvensis Oil)"
+        },
+        "Apply Bloodsbane (Mentha Arvensis Oil)": {
+          "name": "Apply Bloodsbane (Mentha Arvensis Oil)"
+        }
+      },
+      "effects": {
+        "Mentha Arvensis Truth": {
+          "name": "Mentha Arvensis Truth",
+          "description": "<p>You are under the effects of the @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3] spell for the next 10 minutes.</p>"
+        },
+        "Interdiction Seal": {
+          "name": "Interdiction Seal",
+          "description": "<p>An invisible infernal seal has been placed upon your body, and lasts for one minute.</p>"
+        },
+        "Applied Bloodsbane with Mentha Arvensis Oil": {
+          "name": "Applied Bloodsbane with Mentha Arvensis Oil",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>Bloodsbane (Mentha Arvensis Oil)</legend>     <p>A creature hit with a weapon or ammunition coated in this oil must succeed on a DC 15 Constitution saving throw or suffer an effect depending on the oil's special component added. In addition, if the creature fails the saving throw and the blood in the oil came from an illrigger, the creature has a seal placed on them by that illrigger. This seal doesn't count against the number of seals granted by the illrigger's Baleful Interdict feature.</p>     <p><strong>Mentha Arvensis Oil:</strong> The target is under the effects of the @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3] spell for 10 minutes.</p> </fieldset>"
+          }
+        }
+      }
+    },
+    "Unholy Symbol": {
+      "name": "Unholy Symbol",
+      "description": "<p>An unholy symbol can be an amulet symbolizing an archdevil, a fragment of a blasphemous relic, or a glass orb holding a consecrated drop of archdevil blood. Architect of Ruin illriggers can use this item as a spellcasting focus for their illrigger spells. You must have a free hand to use the unholy symbol, but it can be the same hand you use to perform somatic components.</p>"
+    },
+    "Orb of Psionic Might +3": {
+      "name": "Orb of Psionic Might +3",
+      "description": "<p><em>Wondrous Item, Very Rare (Requires Attunement by a Talent)</em></p><p>While holding this grapefruit-sized crystal orb, you gain a +3 bonus to power attack rolls and to the saving throw DCs of your talent powers.</p>",
+      "effects": {
+        "Orb of Psionic Might +3": {
+          "name": "Orb of Psionic Might +3",
+          "description": "<p>You gain a +3 bonus to power attack rolls and to the saving throw DCs of your talent powers.</p>"
+        }
+      }
+    },
+    "Badge of Ruin, +1, +2, or +3": {
+      "name": "Badge of Ruin, +1, +2, or +3",
+      "description": "<p><em>Wondrous Item, Uncommon (+1), Rare (+2), or Very Rare (+3) (Requires Attunement by a Beastheart or a Companion)</em></p><p>This gold badge glows whenever your companion gains ferocity in combat. If your companion is attuned to the badge and uses a ferocity action that requires another creature to make an ability check or saving throw, the DC of the check or save is increased by an amount determined by this item’s rarity. While you wear the badge, your exploit save DC increases by an amount determined by the item’s rarity.</p>"
+    },
+    "Power Crystal (3rd Order)": {
+      "name": "Power Crystal (3rd Order)",
+      "description": "<p><em>Psionic Crystal, Uncommon</em></p><p>A power crystal holds a single psionic power. When you break this crystal as an action, you immediately manifest the power within it, regardless of the power’s normal manifestation time. The power has a save DC of 15 and an attack modifier of +7.</p>"
+    },
+    "Power Crystal (2nd Order)": {
+      "name": "Power Crystal (2nd Order)",
+      "description": "<p><em>Psionic Crystal, Common</em></p><p>A power crystal holds a single psionic power. When you break this crystal as an action, you immediately manifest the power within it, regardless of the power’s normal manifestation time. The power has a save DC of 13 and an attack modifier of +5.</p>"
+    },
+    "Power Crystal (4th Order)": {
+      "name": "Power Crystal (4th Order)",
+      "description": "<p><em>Psionic Crystal, Rare</em></p><p>A power crystal holds a single psionic power. When you break this crystal as an action, you immediately manifest the power within it, regardless of the power’s normal manifestation time. The power has a save DC of 17 and an attack modifier of +9.</p>"
+    },
+    "Power Crystal (6th Order)": {
+      "name": "Power Crystal (6th Order)",
+      "description": "<p><em>Psionic Crystal, Legendary</em></p><p>A power crystal holds a single psionic power. When you break this crystal as an action, you immediately manifest the power within it, regardless of the power’s normal manifestation time. The power has a save DC of 19 and an attack modifier of +11.</p>"
+    },
+    "Staff of Chronopathy": {
+      "name": "Staff of Chronopathy",
+      "description": "<p><em>Staff, Very Rare (Requires Attunement by a Talent)</em></p><p>This staff has 10 charges. While holding it, you can expend 1 or more of its charges to manifest one of the following powers from it, using an action or the power’s indicated manifesting time, and using your talent power save DC: @UUID[Compendium.mcdm-class-bundle.features.Item.hEypbJdJdWNptvZh] (2 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.23GXAIk1LWC8HT81] (1 charge), @UUID[Compendium.mcdm-class-bundle.features.Item.6MkNeNvQBwgpqhnG] (2 charges), or @UUID[Compendium.mcdm-class-bundle.features.Item.uWUiRJ2o7KzcjcNq] (4 charges; 10 minutes).</p><p>Additionally, if you fail a saving throw while holding the staff, you can use your reaction to expend 1 charge and reroll the save, using either roll.</p><p>The staff regains 1d6 + 4 expended charges daily at dawn.</p>",
+      "activities": {
+        "Reroll Saving Throw": {
+          "name": "Reroll Saving Throw",
+          "condition": "When you fail a saving throw while holding this staff."
+        },
+        "Manifest Power: Forget": {
+          "name": "Manifest Power: Forget"
+        },
+        "Manifest Power: Intuition": {
+          "name": "Manifest Power: Intuition"
+        },
+        "Manifest Power: Ravages of Time": {
+          "name": "Manifest Power: Ravages of Time"
+        },
+        "Manifest Power: Stasis Field": {
+          "name": "Manifest Power: Stasis Field"
+        }
+      },
+      "effects": {
+        "Forget: Psionics": {
+          "name": "Forget: Psionics",
+          "description": "<p>For the duration of this power, you can't manifest powers of 4th order or lower.</p>"
+        },
+        "Forget: Spells": {
+          "name": "Forget: Spells",
+          "description": "<p>For the duration of this power, you can't cast spells of 3rd level or higher.</p>"
+        },
+        "Forget: Weapons": {
+          "name": "Forget: Weapons",
+          "description": "<p>For the duration of this power, you lose any weapon proficiencies you have.</p>"
+        },
+        "Intuition": {
+          "name": "Intuition",
+          "description": "<p>You have been granted precognitive insight for the duration of this power. Each time you take damage while you are affected by this power, you reduce the damage you take by [[/r 1d4]] (to a minimum of 0 damage).</p>"
+        }
+      }
+    },
+    "Badge of Ruin +2": {
+      "name": "Badge of Ruin +2",
+      "description": "<p><em>Wondrous Item, Uncommon (Requires Attunement by a Beastheart or a Companion)</em></p><p>This gold badge glows whenever your companion gains ferocity in combat. If your companion is attuned to the badge and uses a ferocity action that requires another creature to make an ability check or saving throw, the DC of the check or save is increased by 2. While you wear the badge, your exploit save DC increases by 2.</p>",
+      "effects": {
+        "Badge of Ruin +2": {
+          "name": "Badge of Ruin +2",
+          "description": "<p>While you wear the badge, your exploit save DC increases by 2.</p>"
+        }
+      }
+    },
+    "Headband of Power Storing": {
+      "name": "Headband of Power Storing",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>This silver headband stores powers that are manifested into it, holding them until the attuned wearer uses them. The headband can store powers whose combined order totals 5 or fewer. When found, it contains powers determined by the GM, whose combined order totals 1d6 − 1.</p><p>Any creature can manifest a power of 1st order through 5th order into the headband by touching the headband as the power is manifested. That power has no effect, other than to be stored in the headband. If the headband can’t hold the power, the power is expended without effect.</p><p>While wearing this headband, you can manifest any power stored in it. The power uses the baseline order, power save DC, power attack modifier, and manifestation ability of the original manifester, but is otherwise treated as if you manifested the power. A power manifested from the headband is no longer stored in it, freeing up space.</p>"
+    },
+    "Crystal of Rejuvenation": {
+      "name": "Crystal of Rejuvenation",
+      "description": "<p><em>Psionic Crystal, Uncommon</em></p><p>This crystal contains psionic energy that causes you to lose 1 strain when you break it.</p>",
+      "activities": {
+        "Relieve Strain": {
+          "name": "Relieve Strain",
+          "roll": "Strain Lost"
+        }
+      }
+    },
+    "Crystal of Superior Rejuvenation": {
+      "name": "Crystal of Superior Rejuvenation",
+      "description": "<p><em>Psionic Crystal, Very Rare</em></p><p>This crystal contains psionic energy that causes you to lose 2d4 + 2 strain when you break it.</p>",
+      "activities": {
+        "Relieve Strain": {
+          "name": "Relieve Strain",
+          "roll": "Strain Lost"
+        }
+      }
+    },
+    "Staff of Telepathy": {
+      "name": "Staff of Telepathy",
+      "description": "<p><em>Staff, Very Rare (Requires Attunement by a Talent)</em></p><p>This staff has 10 charges . While holding it, you can expend 1 or more of its charges to manifest one of the following powers from it, using your talent power save DC: @UUID[Compendium.mcdm-class-bundle.features.Item.3N2oeT5vdoNYxUfK] (1 charge), @UUID[Compendium.mcdm-class-bundle.features.Item.TIFu2wUE02jwliXE] (2 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.Wpc0dTKd3uAI5G82] (2 charges), or @UUID[Compendium.mcdm-class-bundle.features.Item.KSxCbHYSBVBLcWpx] (4 charges).</p><p>Additionally, while holding the staff, you can use an action to expend 1 charge and choose a creature you can see within 30 feet of you. For 1 minute, you learn the surface thoughts of that creature—what is most on their mind in that moment. If the creature has an Intelligence of 3 or lower or doesn’t speak any language, you learn nothing from it.</p><p>While you are reading a creature’s surface thoughts with the staff, you can expend 1 charge as a bonus action to dig deeper into the target’s mind, forcing them to make an Intelligence saving throw against your talent power save DC. On a success, your ability to read the creature’s surface thoughts ends. On a failure, you gain insight into the target’s reasoning (if any), their emotional state, and one thing that looms large in their mind (a problem they are worried over, a person they love or hate, and so forth). Whether the saving throw succeeds or fails, the target doesn’t know that you attempted to dig into their mind.</p><p>The staff regains 1d6 + 4 expended charges daily at dawn.</p>",
+      "activities": {
+        "Manifest Power: Believe": {
+          "name": "Manifest Power: Believe"
+        },
+        "Manifest Power: Dagger of the Mind": {
+          "name": "Manifest Power: Dagger of the Mind"
+        },
+        "Manifest Power: Distant Voice": {
+          "name": "Manifest Power: Distant Voice",
+          "roll": "Maximum Words"
+        },
+        "Manifest Power: Harlequin": {
+          "name": "Manifest Power: Harlequin"
+        },
+        "Detect Thoughts": {
+          "name": "Detect Thoughts"
+        },
+        "Detect Thoughts: Dig Deep": {
+          "name": "Detect Thoughts: Dig Deep"
+        }
+      },
+      "effects": {
+        "Dagger of the Mind": {
+          "name": "Dagger of the Mind",
+          "description": "<p>During your next turn, you can only take the Dash, Disengage, or Dodge actions.</p>"
+        },
+        "Detecting Thoughts": {
+          "name": "Detecting Thoughts",
+          "description": "<p>For the next minute, you know the surface thoughts of the target creature and what is on their mind in the current moment. If the creature has an Intelligence of 3 or lower or doesn't speak any language, you learn nothing from it.</p>"
+        }
+      }
+    },
+    "Staff of Metamorphosis": {
+      "name": "Staff of Metamorphosis",
+      "description": "<p><em>Staff, Very Rare (Requires Attunement by a Talent)</em></p><p>This staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to manifest one of the following powers from it, using your talent power save DC: @UUID[Compendium.mcdm-class-bundle.features.Item.szBj3TYynI8mh8YH] (2 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.TPP69IqlT5U7MTm0] (2 charges), @UUID[Compendium.mcdm-class-bundle.features.Item.OwmgW3hPFPXatD4W] (4 charges), or @UUID[Compendium.mcdm-class-bundle.features.Item.WyqGnnjUD95F0bjx] (1 charge).</p><p>Additionally, while holding the staff, you can use an action to touch a creature with it and expend any number of charges. The creature regains 1d8 hit points per expended charge.</p><p>The staff regains 1d6 + 4 expended charges daily at dawn.</p>",
+      "activities": {
+        "Restore Life": {
+          "name": "Restore Life"
+        },
+        "Manifest Power: Sixth Sense": {
+          "name": "Manifest Power: Sixth Sense"
+        },
+        "Manifest Power: Shadow Form": {
+          "name": "Manifest Power: Shadow Form"
+        },
+        "Manifest Power: Cure Ailment": {
+          "name": "Manifest Power: Cure Ailment"
+        },
+        "Manifest Power: Beam Gaze": {
+          "name": "Manifest Power: Beam Gaze"
+        }
+      },
+      "effects": {
+        "Sixth Sense: Darkvision": {
+          "name": "Sixth Sense: Darkvision",
+          "description": "<p>For the duration of this power, you gain darkvision out to a range of 60 feet.</p>"
+        },
+        "Sixth Sense: Tremorsense": {
+          "name": "Sixth Sense: Tremorsense",
+          "description": "<p>For the duration of this power, you gain tremorsense out to a range of 10 feet.</p>"
+        },
+        "Sixth Sense: Psionic Detection": {
+          "name": "Sixth Sense: Psionic Detection",
+          "description": "<p>For the duration of this power, you can sense the presence of psionics within 30 feet of you. If you sense psionics in this way, they can use an action to see a faint aura around each visible creature or object within 30 feet of them that bears psionic power. This sense can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</p>"
+        },
+        "Shadow Form": {
+          "name": "Shadow Form",
+          "description": "<p>You transform your body and any equipment you wear into amorphous shadow, gaining the following benefits for the duration:</p><ul><li><p>You gain a flying speed of 60 feet.</p></li><li><p>You have resistance to bludgeoning, piercing, and slashing damage from mundane attacks.</p></li><li><p>You have advantage on Dexterity (Stealth) checks and can attempt to hide without cover.</p></li><li><p>You can move through a space as narrow as 1 inch wide without squeezing.</p></li></ul><p>While in this form, you can't pick up objects or wield your equipment.</p>"
+        },
+        "Beam Gaze: Poisoned": {
+          "name": "Beam Gaze: Poisoned",
+          "description": "<p>You are &amp;reference[poisoned apply=false] for the next minute. You may repeat the saving throw against this power at the end of each of your turns, ending this effect on a success.</p>"
+        },
+        "Beam Gaze: Slowed": {
+          "name": "Beam Gaze: Slowed",
+          "description": "<p>Your movement speed is halved, and you can't take reactions. You may repeat the saving throw against this power at the end of each of your turns, ending this effect on a success.</p>"
+        },
+        "Beam Gaze: Marked": {
+          "name": "Beam Gaze: Marked",
+          "description": "<p>All attack rolls made against you are made at advantage. You may repeat the saving throw against this power at the end of each of your turns, ending this effect on a success.</p>"
+        }
+      }
+    },
+    "Orb of Psionic Might +1": {
+      "name": "Orb of Psionic Might +1",
+      "description": "<p><em>Wondrous Item, Uncommon (Requires Attunement by a Talent)</em></p><p>While holding this grapefruit-sized crystal orb, you gain a +1 bonus to power attack rolls and to the saving throw DCs of your talent powers.</p>",
+      "effects": {
+        "Orb of Psionic Might +1": {
+          "name": "Orb of Psionic Might +1",
+          "description": "<p>You gain a +1 bonus to power attack rolls and to the saving throw DCs of your talent powers.</p>"
+        }
+      }
+    },
+    "Armor of the Caregiver": {
+      "name": "Armor of the Caregiver",
+      "description": "<p><em>Armor (Light, Medium, or Heavy), Rare (Requires Attunement)</em></p><p>When your companion turns their rage against you, this armor converts your pain into power. While wearing this armor, you have a +1 bonus to AC. Additionally, when you take damage from your companion while they are in a rampage, you take only half as much damage, and the next attack you make before the end of your next turn deals an extra 2d6 damage if it hits.</p><p>@embed[Compendium.mcdm-class-bundle.books.JournalEntry.mcdmcbreferences.JournalEntryPage.NogMiRjpBnoAHd6i inline]</p>",
+      "activities": {
+        "Armor of the Caregiver Template": {
+          "name": "Armor of the Caregiver Template"
+        },
+        "Rampage Empowerment": {
+          "name": "Rampage Empowerment",
+          "condition": "When you take damage from your companion while they are in a rampage."
+        }
+      },
+      "effects": {
+        "Armor of the Caregiver": {
+          "name": "Armor of the Caregiver",
+          "changes": {
+            "name": "{} of the Caregiver",
+            "system.description.value": "<p><em>Armor (Light, Medium, or Heavy), Rare (Requires Attunement)</em></p> <p>When your companion turns their rage against you, this armor converts your pain into power. While wearing this armor, you have a +1 bonus to AC. Additionally, when you take damage from your companion while they are in a rampage, you take only half as much damage, and the next attack you make before the end of your next turn deals an extra 2d6 damage if it hits.</p>"
+          }
+        },
+        "Caregiver's Empowerment": {
+          "name": "Caregiver's Empowerment",
+          "description": "<p>The next attack you make before the end of your next turn deals an additional 2d6 damage if it hits.</p>"
+        }
+      }
+    },
+    "Badge of Ruin +3": {
+      "name": "Badge of Ruin +3",
+      "description": "<p><em>Wondrous Item, Uncommon (Requires Attunement by a Beastheart or a Companion)</em></p><p>This gold badge glows whenever your companion gains ferocity in combat. If your companion is attuned to the badge and uses a ferocity action that requires another creature to make an ability check or saving throw, the DC of the check or save is increased by 3. While you wear the badge, your exploit save DC increases by 3.</p>",
+      "effects": {
+        "Badge of Ruin +3": {
+          "name": "Badge of Ruin +3",
+          "description": "<p>While you wear the badge, your exploit save DC increases by 3.</p>"
+        }
+      }
+    },
+    "Badge of Battle +1": {
+      "name": "Badge of Battle +1",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>This bronze badge depicts a specific type of fearsome creature (a dragon, a wolf, an owlbear, and so forth) leaping into combat against a horde of enemies. While wearing the badge, you gain a +1 bonus to attack and damage rolls you make with unarmed strikes and natural weapons.</p>",
+      "effects": {
+        "Badge of Battle +1": {
+          "name": "Badge of Battle +1",
+          "description": "<p>You gain a +1 bonus to attack and damage rolls you make with unarmed strikes and natural weapons.</p>"
+        }
+      }
+    },
+    "Badge of Ruin +1": {
+      "name": "Badge of Ruin +1",
+      "description": "<p><em>Wondrous Item, Uncommon (Requires Attunement by a Beastheart or a Companion)</em></p><p>This gold badge glows whenever your companion gains ferocity in combat. If your companion is attuned to the badge and uses a ferocity action that requires another creature to make an ability check or saving throw, the DC of the check or save is increased by 1. While you wear the badge, your exploit save DC increases by 1.</p>",
+      "effects": {
+        "Badge of Ruin +1": {
+          "name": "Badge of Ruin +1",
+          "description": "<p>While you wear the badge, your exploit save DC increases by 1.</p>"
+        }
+      }
+    },
+    "Armor of Psionic Absorption": {
+      "name": "Armor of Psionic Absorption",
+      "description": "<p><em>Armor (Light), Very Rare (Requires Attunement by a Talent)</em></p><p>While wearing this armor, you have a +1 bonus to AC. In addition, whenever you gain strain, the energy leeched from your body, mind, or soul is stored in the armor. For every 1 strain you gain, the armor gains 1 charge.</p><p>As an action, you can expend any number of charges from the armor to unleash a beam of force at a creature you can see within 60 feet of you. The target must make a Dexterity saving throw against your power save DC, taking 1d6 force damage for each expended charge on a failed save, or half as much damage on a successful one.</p><p>The armor can hold a maximum of 10 charges, and loses all unused charges each day at dawn.</p><p>@embed[Compendium.mcdm-class-bundle.books.JournalEntry.mcdmcbreferences.JournalEntryPage.NogMiRjpBnoAHd6i inline]</p>",
+      "activities": {
+        "Force Beam": {
+          "name": "Force Beam"
+        },
+        "Armor of Psionic Absorption Template": {
+          "name": "Armor of Psionic Absorption Template"
+        },
+        "Gain Charge": {
+          "name": "Gain Charge"
+        }
+      },
+      "effects": {
+        "Armor of Psionic Absorption": {
+          "name": "Armor of Psionic Absorption",
+          "changes": {
+            "name": "{} of Psionic Absorption",
+            "system.description.value": "<p><em>Armor (Light), Very Rare (Requires Attunement by a Talent)</em></p> <p>While wearing this armor, you have a +1 bonus to AC. In addition, whenever you gain strain, the energy leeched from your body, mind, or soul is stored in the armor. For every 1 strain you gain, the armor gains 1 charge.</p> <p>As an action, you can expend any number of charges from the armor to unleash a beam of force at a creature you can see within 60 feet of you. The target must make a Dexterity saving throw against your power save DC, taking 1d6 force damage for each expended charge on a failed save, or half as much damage on a successful one.</p> <p>The armor can hold a maximum of 10 charges, and loses all unused charges each day at dawn.</p>"
+          }
+        }
+      }
+    }
+  }
+}
