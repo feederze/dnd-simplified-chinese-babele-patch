@@ -38,17 +38,17 @@
           "description": "<p>将你的熟练加值加到野兽进行的一切属性检定和豁免检定上。</p><section class=\"secret\" id=\"secret-CfXBtyjBnCMQ2fmp\"><p><strong>Foundry贴士</strong></p><p>此加值已包含于野兽的全局加值中。</p></section>"
         },
         "Beast's Strike": {
-          "name": "Beast's Strike",
-          "description": "<p><em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d8 + 2 plus your Wisdom modifier Bludgeoning, Piercing, or Slashing damage (your choice when you summon the beast). If the beast moved at least 20 feet straight toward the target before the hit, the target takes an extra 1d6 damage of the same type, and the target has the &amp;Reference[prone] condition if it is a Large or smaller creature.</p><section class=\"secret\" id=\"secret-fxROphHp3AaFzUXp\"><p><strong>Foundry Note</strong></p><p>The <strong>Attack</strong> and <strong>Charging Attack</strong> activities will allow you to choose the damage type in the roll dialog. You should choose one damage type and use it consistently until resummoning your companion.</p><p>The <strong>Charging Attack</strong> activity includes the additional damage.</p></section>",
+          "name": "野兽打击",
+          "description": "<p><em>近战攻击检定：</em> 加值等于你的法术攻击加值，触及 5 尺。<em>命中：</em> 造成 1d8 + 2 + 你的感知调整值的钝击、穿刺或挥砍伤害（召唤时选择）。若野兽在此次攻击前立即向目标直线移动至少 20 尺，则目标额外受到 1d6 相同类型伤害，且若目标为大型或更小体型，则陷入倒地状态。</p><section class=\"secret\" id=\"secret-fxROphHp3AaFzUXp\"><p><strong>Foundry Note</strong></p><p><strong>攻击</strong> 与 <strong>冲锋攻击</strong> 行动可在掷骰对话框中选择伤害类型。应选定一种伤害类型并持续使用，直至重新召唤行侣。</p><p><strong>冲锋攻击</strong>行动已包含额外伤害。</p></section>",
           "activities": {
             "Charge": {
-              "name": "Charge",
-              "condition": "has moved at least 20 feet straight toward the target"
+              "name": "冲锋",
+              "condition": "向着该目标直线移动了至少 20 尺"
             }
           },
           "effects": {
             "Prone": {
-              "name": "Prone"
+              "name": "倒地"
             }
           }
         }
@@ -68,18 +68,18 @@
           "description": "<p>将你的熟练加值加到野兽进行的一切属性检定和豁免检定上。</p><section class=\"secret\" id=\"secret-pNoLkUZKFbyzHTbF\"><p><strong>Foundry Note</strong></p><p>该加值已经包含在野兽的全局加值中。</p></section>"
         },
         "Beast's Strike": {
-          "name": "Beast's Strike",
-          "description": "<p><em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d6 + 2 plus your Wisdom modifier Bludgeoning or Piercing damage (your choice when you summon the beast), and the target has the &amp;Reference[grappled] condition (escape DC equals your spell save DC).</p><section class=\"secret\" id=\"secret-AoVM7zkUrdX0Ny38\"><p><strong>Foundry Note</strong></p><p>The <strong>Attack</strong> activity will allow you to choose the damage type in the roll dialog. You should choose one damage type and use it consistently until resummoning your companion.</p></section>",
+          "name": "野兽打击",
+          "description": "<p><em>近战攻击检定：</em> 加值等于你的法术攻击加值，触及 5 尺。<em>命中：</em> 造成 1d6 + 2 + 你的感知调整值的钝击或穿刺伤害（召唤时选择），且目标陷入擒抱状态（逃脱DC 等于你的法术豁免DC）。</p><section class=\"secret\" id=\"secret-AoVM7zkUrdX0Ny38\"><p><strong>Foundry Note</strong></p><p><strong>攻击</strong> 行动可在掷骰对话框中选择伤害类型。应选定一种伤害类型并持续使用，直至重新召唤行侣。</p></section>",
           "activities": {
             "Escape Check": {
-              "name": "Escape Check",
-              "condition": "Taken by Grappled creature to Escape"
+              "name": "逃脱检定",
+              "condition": "挣脱擒抱生物以逃脱"
             }
           },
           "effects": {
             "Grappled": {
-              "name": "Grappled",
-              "description": "<p>Escape DC equals the ranger's spell save DC. [[/check ath acr]].</p>"
+              "name": "受擒",
+              "description": "<p>逃脱DC等于你的法术豁免DC。[[/check ath acr]]。</p>"
             }
           }
         }
@@ -99,8 +99,8 @@
           "description": "<p>将你的熟练加值加到野兽进行的一切属性检定和豁免检定上。</p><section class=\"secret\" id=\"secret-beTIv7xucaHGX104\"><p><strong>Foundry Note</strong></p><p>该加值已经包含在野兽的全局加值中。</p></section>"
         },
         "Beast's Strike": {
-          "name": "Beast's Strike",
-          "description": "<p><em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d4 + 3 plus your Wisdom modifier Slashing damage.</p>"
+          "name": "野兽打击",
+          "description": "<p><em>近战攻击检定：</em> 加值等于你的法术攻击加值，触及 5 尺。<em>命中：</em> 造成 1d4 + 3 + 你的感知调整值的挥砍伤害。</p>"
         }
       }
     },
@@ -2807,19 +2807,19 @@
         },
         "Unarmed Strike": {
           "name": "徒手打击",
-          "description": "<p><em>See: &amp;Reference[unarmedstrike]</em></p>",
+          "description": "<p><em>参见：&Reference[unarmedstrike]</em></p>",
           "activities": {
             "Grapple/Shove": {
-              "name": "Grapple/Shove",
-              "chatFlavor": "Grapple or Shove attempt"
+              "name": "擒抱/推撞",
+              "chatFlavor": "尝试擒抱或推撞"
             }
           },
           "effects": {
             "Grappled": {
-              "name": "Grappled"
+              "name": "受擒"
             },
             "Prone": {
-              "name": "Prone"
+              "name": "倒地"
             }
           }
         }
@@ -2884,7 +2884,7 @@
           "name": "舞光术",
           "description": "<p>你在施法距离内创造至多四个火把大小的光源，使其在法术持续时间内看起来如同火把、灯笼或悬浮珠。或者，你可以将四个光源合并为一个发光的中型形态，使其看上去像一个模糊的人形。无论你选择哪种形态，每个光源都会发出 10 尺半径的微光光照。</p><p> 用一个附赠动作，你可以将光源移动至多 60 尺至施法距离内的一处空间。一个由此法术创造的光源必须距另一个光源 20 尺内，而离开施法距离的光源会随即熄灭。</p>",
           "materials": {
-            "value": "a bit of phosphorus"
+            "value": "一点磷"
           },
           "activities": {
             "Create Lights": {
@@ -2919,7 +2919,7 @@
           "name": "七彩喷射",
           "description": "<p>你射出一道炫目的闪耀彩光。以你为源点的 15 尺锥状区域内的每个生物必须成功通过一次体质豁免，否则陷入 &Reference[blinded apply=false] 状态直至你的下一回合结束。</p>",
           "materials": {
-            "value": "a pinch of colorful sand"
+            "value": "一撮彩色沙子"
           },
           "effects": {
             "Blinded": {
@@ -3108,7 +3108,7 @@
           "effects": {
             "Blocked Healing": {
               "name": "无法恢复生命值",
-              "description": "<p>目标无法恢复生命值直至你的下一回合结束。</p>"
+              "description": "<p>你无法恢复生命值直至施法者的下一回合结束。</p>"
             }
           }
         },
@@ -3362,7 +3362,7 @@
           "name": "祝福术",
           "description": "<p>你祝福施法范围内至多 3 个生物。在法术终止前，每当受术目标进行攻击检定或豁免检定时，都可以在检定结果中额外加入 1d4。</p><p><strong>升环施法：</strong> 使用高于一环的法术位施展此法术时，你使用的法术位每比一环高一环，就能多指定一个生物。</p>",
           "materials": {
-            "value": "a Holy Symbol worth 5+ GP"
+            "value": "一枚价值 5+GP 的圣徽"
           },
           "effects": {
             "Blessed": {
@@ -3389,7 +3389,7 @@
           "name": "虔诚护盾",
           "description": "<p>一片闪着微光的魔法力场围绕着施法距离内你指定的一个生物，使目标在法术持续时间内 AC 获得+2 加值。</p>",
           "materials": {
-            "value": "a prayer scroll"
+            "value": "一张祷文卷轴"
           },
           "effects": {
             "Shimmering Field": {
@@ -3656,7 +3656,7 @@
           "name": "化兽为友",
           "description": "<p>在施法距离内指定一只你能看见的野兽。该野兽必须通过一次感知豁免，否则在法术持续时间内陷入 &Reference[charmed apply=false] 状态。如果你或你的盟友对目标造成伤害，法术将提前终止。</p><p><strong>升环施法：</strong> 你使用的法术位每比一环高一环，就可以多选择一个野兽作为目标。</p>",
           "materials": {
-            "value": "a morsel of food"
+            "value": "一点食物"
           },
           "effects": {
             "Charmed": {
@@ -3838,7 +3838,7 @@
           "description": "<p>你学会一个额外的 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU#cantrip] 中的戏法。此外，你和自然的神秘连接让你在智力（奥秘或自然）检定上获得加值。加值等于你的感知调整值（最小为 1，, 当前 [[lookup @abilities.wis.mod]]）。</p><section class=\"secret\" id=\"secret-adiIB9wCX5zZdZ9F\">    <p><strong>Foundry Note</strong></p>    <p>该特性包含一种激活效应，能自动提升你已知法术的数量，并为你的奥秘和自然检定提供加值。</p></section>",
           "effects": {
             "Magician Checks & Cantrip": {
-              "name": "Magician Checks & Cantrip"
+              "name": "术师：检定与戏法"
             }
           }
         }
@@ -4179,7 +4179,7 @@
           "name": "睡眠术",
           "description": "<p>以施法距离内一点为源点，5 尺半径球状区域内每个你选择的生物都必须成功通过一次感知豁免否则直到其下个回合结束陷入 &Reference[incapacitated apply=false] 状态。在其下个回合结束时，它必须重复此豁免。如果目标第二次豁免失败，目标在持续时间内陷入 &Reference[unconscious] 如果目标受到伤害，或其 5 尺内有人用一个动作将它摇醒，目标身上的法术结束。</p><p>不会睡眠的生物，比如精灵或免疫力竭状态的生物自动成功通过对抗此法术的豁免。</p>",
           "materials": {
-            "value": "a pinch of sand or rose petals"
+            "value": "一把细沙或玫瑰花瓣"
           },
           "activities": {
             "Free Cast (1/day)": {
@@ -4352,10 +4352,10 @@
           },
           "effects": {
             "Dexterous Attacks & Martial Arts Damage": {
-              "name": "Dexterous Attacks & Martial Arts Damage",
-              "description": "<p><strong>Martial Arts Die.</strong> You can roll [[lookup @scale.monk.die]] in place of the normal damage of your Unarmed Strike or Monk weapons. This die changes as you gain Monk levels, as shown in the Martial Arts column of the Monk Features table.</p><p><strong>Dexterous Attacks.</strong> You can use your Dexterity modifier instead of your Strength modifier for the attack and damage rolls of your Unarmed Strikes and Monk weapons. In addition, when you use the Grapple or Shove option of your Unarmed Strike, you can use your Dexterity modifier instead of your Strength modifier to determine the save DC.</p><p></p>",
+              "name": "敏捷攻击与武艺伤害",
+              "description": "<p><strong>武艺骰。</strong> 你使用徒手打击或武僧武器进行攻击时，可以选择用[[lookup @scale.monk.die]]骰代替原本的伤害。该骰子将随武僧职业等级的提升而增大，具体数据见武僧特性表中的武艺骰一列。</p><p><strong>敏捷攻击。</strong> 你使用徒手打击或武僧武器进行攻击时，可以用敏捷代替力量进行攻击检定和伤害掷骰。此外，当你使用徒手打击的擒抱或推撞选项时，你也可以使用你的敏捷代替力量决定豁免 DC。</p><p></p>",
               "changes": {
-                "name": "{} (Martial Arts)"
+                "name": "{}（武艺）"
               }
             }
           }
@@ -4371,19 +4371,19 @@
         },
         "Unarmed Strike": {
           "name": "徒手打击",
-          "description": "<p><em>See: @UUID[Compendium.dnd-players-handbook.classes.Item.phbmnkMartialArt]{Martial Arts (Monk)}</em></p>",
+          "description": "<p><em>参见：@UUID[Compendium.dnd-players-handbook.classes.Item.phbmnkMartialArt]{武艺（武僧）}</em></p>",
           "activities": {
             "Grapple/Shove": {
-              "name": "Grapple/Shove",
-              "chatFlavor": "Grapple or Shove attempt"
+              "name": "擒抱/推撞",
+              "chatFlavor": "尝试擒抱或推撞"
             }
           },
           "effects": {
             "Grappled": {
-              "name": "Grappled"
+              "name": "受擒"
             },
             "Prone": {
-              "name": "Prone"
+              "name": "倒地"
             }
           }
         }
@@ -4498,12 +4498,12 @@
           "name": "炽焰斩",
           "description": "<p>被该次攻击检定命中的目标会在此次攻击中额外受到 1d6 火焰伤害，并被魔法性火焰引燃。直至法术终止前，目标会在每个其回合开始时受到 1d6 点火焰伤害，并进行一次体质豁免。豁免失败则法术继续生效，成功则法术终止。</p><p><strong>升环施法： </strong>使用高于一环的法术位施放本法术时，你使用的法术位每比 1 环高一环，此法术造成的所有伤害都增加 1d6。</p>",
           "activation": {
-            "condition": "immediately after hitting a target with a Melee weapon or an Unarmed Strike"
+            "condition": "使用近战武器或徒手打击命中一个生物后立即执行"
           },
           "effects": {
             "Seared": {
               "name": "灼烧",
-              "description": "<p>直至法术终止前，目标会在每个其回合开始时受到 [[/damage 1d6 type=fire]] 伤害，并进行一次[[/save ability=con]] 豁免。豁免失败则法术继续生效，成功则法术终止。</p>"
+              "description": "<p>直至法术终止前，你会在每个其回合开始时受到 [[/damage 1d6 type=fire]] 伤害，并进行一次[[/save ability=con]] 豁免。豁免失败则法术继续生效，成功则法术终止。</p>"
             }
           }
         },
@@ -4755,7 +4755,7 @@
           "name": "捕获打击",
           "description": "<p>你命中目标时，目标身上出现一根紧紧将其攫住的藤蔓，使其进行一次力量豁免，大型或更大体型的生物进行该豁免时具有优势。豁免失败，则目标将直到法术结束为止陷入 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbAppendixCRule.JournalEntryPage.dqLeGdpHtb8FfcxX] 状态。豁免成功，则藤蔓立即枯萎，法术结束。</p><p>处于束缚状态期间，目标在其每回合开始受到 1d6 点穿刺伤害。目标或其他位于其触及内的生物可用一个动作进行一次对抗法术豁免DC的 [[/check ability=str skill=ath dc=@attributes.spell.dc]] 检定。检定成功则法术结束。</p><p><strong>升环施法：</strong> 使用的法术位每比一环高一环，伤害就提高 1d6。</p>",
           "activation": {
-            "condition": "Immediately after hitting a creature with a weapon"
+            "condition": "在你用武器命中目标后立即可用"
           },
           "activities": {
             "Start of Turn Damage": {
@@ -4902,8 +4902,8 @@
               "name": "标记猎物"
             },
             "Move Mark": {
-              "name": "Move Mark",
-              "condition": "when the currently marked target drops to 0 Hit Points"
+              "name": "移动标记",
+              "condition": "如果在法术结束前目标 HP 降至 0 时"
             },
             "Mark Creature (free casting)": {
               "name": "标记猎物"
@@ -4911,8 +4911,8 @@
           },
           "effects": {
             "Hunter's Mark": {
-              "name": "Hunter's Mark",
-              "description": "<p>Until the spell ends, the caster deals an extra [[/damage 1d6 force]] damage to the target whenever they hit it with an attack roll.</p>"
+              "name": "猎人印记",
+              "description": "<p>直至法术终止前，施法者每次以任何攻击命中你时都会额外造成[[/damage 1d6 force]]伤害。</p>"
             }
           }
         }
@@ -5271,7 +5271,7 @@
           "name": "点燃",
           "description": "<p>你触碰一个大型或者更小，且未被他人携带或着装的物件。在法术终止前，物件将在其 20 尺半径范围内发出明亮光照，并在其外 20 尺范围发出微光光照。光的颜色由你决定。</p><p>该物件被不透明的东西完全遮盖时，其光照被遮挡。如果你再次施展该法术，则该法术终止。</p>",
           "materials": {
-            "value": "a firefly or phosphorescent moss"
+            "value": "一只萤火虫或一片磷光苔藓"
           },
           "activities": {
             "Cast": {
@@ -5432,7 +5432,7 @@
           "name": "舞光术",
           "description": "<p>你在施法距离内创造至多四个火把大小的光源，使其在法术持续时间内看起来如同火把、灯笼或悬浮珠。或者，你可以将四个光源合并为一个发光的中型形态，使其看上去像一个模糊的人形。无论你选择哪种形态，每个光源都会发出 10 尺半径的微光光照。</p><p> 用一个附赠动作，你可以将光源移动至多 60 尺至施法距离内的一处空间。一个由此法术创造的光源必须距另一个光源 20 尺内，而离开施法距离的光源会随即熄灭。</p>",
           "materials": {
-            "value": "a bit of phosphorus"
+            "value": "一点磷"
           },
           "activities": {
             "Create Lights": {
@@ -5538,7 +5538,7 @@
           "name": "修复术",
           "description": "<p>该法术修复你所触碰一个物件上的一处破损或裂缝，例如修复一条断裂的链条、一把碎成两半的钥匙、一件撕裂的斗篷、一个漏了的酒袋等。只要破损或断裂处在任意方向上都不超过 1 尺，你就可以不留痕迹地修复它。</p><p>该法术可以物理性地修复一件魔法物品，但无法恢复其上的魔法。</p>",
           "materials": {
-            "value": "two lodestones"
+            "value": "两块磁石"
           },
           "activities": {
             "Cast": {
@@ -5584,7 +5584,7 @@
           "name": "灾祸术",
           "description": "<p>你选择施法距离内至多三个你可见的生物，迫使其分别进行一次魅力豁免。若有目标在此次豁免中失败，则在法术结束前，该目标进行的攻击检定或豁免检定都必须从检定结果中减去 1d4。</p><p><strong>升环施法：</strong>使用高于一环的法术位施展此法术时，你使用的法术位每比一环高一环，就能多指定一个生物。</p>",
           "materials": {
-            "value": "a drop of blood"
+            "value": "一滴血"
           },
           "activities": {
             "Cast": {
@@ -5629,7 +5629,7 @@
           "name": "脆弱诅咒",
           "description": "<p>你对施法距离内一个你能看见的一个生物施加诅咒。直到法术终止前，你对命中该目标的任意攻击都将额外造成 1d6 点暗蚀伤害。此外，你在施展该法术的同时选择一项属性，使该目标进行所选属性的属性检定时具有劣势。</p><p>如果目标在法术终止前 HP 降至 0，则你可以在法术终止前后续的某一回合中使用一个附赠动作诅咒另一个生物。</p><p><strong>升环施法：</strong> 使用二环法术位施展该法术时，其专注可以维持至多4小时。使用三环或四环法术位施展该法术时，其专注可以维持至多 8 小时。使用五环或更高法术位施展该法术时，其专注可以维持至多 24 小时。</p>",
           "materials": {
-            "value": "the petrified eye of a newt"
+            "value": "一只风干的蝾螈眼"
           },
           "activities": {
             "Bonus Hex Damage": {
@@ -5675,7 +5675,7 @@
           "name": "通晓语言",
           "description": "<p>你在法术持续时间内知晓你所听到或看到手语的所有语言的字面意义。你也可以通过触碰书写的文字来读懂其字面意义。以这种方式阅读每页文字需要花费 1 分钟的时间。这个法术并不能解读符号和暗语。</p>",
           "materials": {
-            "value": "a pinch of soot and salt"
+            "value": "一撮煤灰和盐"
           },
           "activities": {
             "Cast": {
@@ -5692,7 +5692,7 @@
           "name": "寻获魔宠",
           "description": "<p>你获得一只为你服务的魔宠，魔宠精魄可以采用下述你选择的动物形态之一：<strong>蝙蝠</strong>、<strong>猫</strong>、<strong>青蛙</strong>、<strong>鹰</strong>、<strong>蜥蜴</strong>、<strong>章鱼</strong>、<strong>猫头鹰</strong>、<strong>老鼠</strong>、<strong>渡鸦</strong>、<strong>蜘蛛</strong>、<strong>鼬</strong>，你也可以选择其他挑战等级为 0 的野兽作为魔宠的形态。魔宠出现在施法距离内一处未被占据的空间，虽然有着所选的生物属性数据，但其生物种类为天族，妖精或邪魔（由你选择）而非野兽。你的魔宠可脱离你独立行动，不过它会一直遵循你的命令行事。</p><p><strong>心灵连接。</strong> 你的魔宠距你 100 尺内期间，你可以与其进行心灵交流。此外，你还可以用一个附赠动作将自己的视觉和听觉切换到魔宠的感官，并一持续至你下一回合开始。在此期间，你同时享有该魔宠自身的特殊感官。</p><p>最后，当你施展施法距离为触碰的法术时，你的魔宠可以帮你传递这道触碰法术。此时你的魔宠必须距你 100 尺内，且其必须在你施展这道法术时执行一个反应将其传递。</p><p><strong>战斗。</strong> 魔宠是你和你盟友的盟友。战斗时，它为自己骰先攻，并在自己回合里行动。魔宠无法攻击，但是它能如常执行其他动作。</p><p><strong>魔宠的消失。</strong> 当魔宠生命值降至 0 点时，它会消失。它会在你再次施展此法术后重新出现。你可以用一个魔法动作，暂时解散你的魔宠，将其送入一个口袋位面。你也可以选择永久解散它。暂时解散时，你可以用一个魔法动作使其重新出现于距你 30 尺内任意未占空间中。当魔宠生命值归 0 或消失进入了口袋位面时，它都会将自己穿着或携带的任何物品留在自己曾占据的空间中。</p><p><strong>独一无二。</strong> 你在同一时间不能拥有多于一只魔宠。如果你在已拥有一只魔宠期间施展此法术，作为替代，你会使其采用一个新的符合条件的形态。</p>",
           "materials": {
-            "value": "burning incense worth 10+ GP, which the spell consumes"
+            "value": "价值 10+GP 的焚香，作为法术耗材"
           },
           "activities": {
             "summon": {
@@ -6008,7 +6008,7 @@
           "name": "光亮术",
           "description": "<p>你触碰一个体型不超过大型，且未被他人携带/着装的物件。在法术终止前，物件将发出20尺半径的明亮光照，以及其外20尺范围的微光光照 。光的颜色由你决定。</p><p>该物件被不透明的东西完全遮盖时，其光照也将被遮挡。此法术将在你再次施展它时提前终止。</p>",
           "materials": {
-            "value": "a firefly or phosphorescent moss"
+            "value": "一只萤火虫或一片磷光苔藓"
           },
           "activities": {
             "Cast": {
@@ -6063,17 +6063,17 @@
           "name": "羽落术",
           "description": "<p>指定施法距离内至多五个正坠落的生物。受术生物的坠落速度在法术持续时间内降低至每回合60尺。如果该生物在法术终止前落地，则其不会受到任何坠落伤害，且着地后法术对该生物的效应随即终止。</p>",
           "activation": {
-            "condition": "when you or a creature you can see within 60 feet of you falls"
+            "condition": "你或距你 60 尺内的可见生物坠落时可用"
           },
           "materials": {
-            "value": "a small feather or piece of down"
+            "value": "一小片羽毛或绒毛"
           }
         },
         "Mage Armor": {
           "name": "法师护甲",
           "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础AC变为 13+它的敏捷调整值。当目标穿上护甲时，此法术将提前终止。</p>",
           "materials": {
-            "value": "a piece of cured leather"
+            "value": "一块鞣制过的皮革"
           },
           "activities": {
             "Cast": {
@@ -6100,7 +6100,7 @@
           "name": "睡眠术",
           "description": "<p>以施法距离内一点为源点，5 尺半径球状区域内每个你选择的生物都必须成功通过一次感知豁免否则直到其下个回合结束陷入 &Reference[incapacitated apply=false] 状态。在其下个回合结束时，它必须重复此豁免。如果目标第二次豁免失败，目标在持续时间内陷入 &Reference[unconscious] 如果目标受到伤害，或其 5 尺内有人用一个动作将它摇醒，目标身上的法术结束。</p><p>不会睡眠的生物，比如精灵或免疫力竭状态的生物自动成功通过对抗此法术的豁免。</p>",
           "materials": {
-            "value": "a pinch of sand or rose petals"
+            "value": "一把细沙或玫瑰花瓣"
           },
           "effects": {
             "Sleeping": {
