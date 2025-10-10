@@ -191,7 +191,7 @@
     },
     "Animating Spores": {
       "name": "活化孢子",
-      "description": "<p>The [[lookup @name]] releases spores at a Medium or Small corpse within [[lookup @range.value activity=ruh9QGSrxWb57Iuf]] feet of it that wasn't a Construct or an Undead. In 24 hours, the corpse rises as a <strong>Myconid Spore Servant</strong>. The corpse stays animate for [[/r 1d4 + 1]] weeks or until destroyed, and it can't be animated again in this way.</p>",
+      "description": "<p>[[lookup @name]] 向 [[lookup @range.value activity=ruh9QGSrxWb57Iuf]] 尺内一具非构装非亡灵的中型或小型尸体释放孢子。尸体将在 24 小时后活化为<strong>蕈人孢子奴仆</strong>。尸体会保持活化状态[[/r 1d4 + 1]]周或直至被摧毁，且无法再次以此法活化。</p>",
       "activities": {
         "summon": {
           "affects": {
@@ -277,7 +277,7 @@
           "name": "解除吸附",
           "condition": "目标或处于其范围内的生物所采取的动作",
           "affects": {
-            "special": "attached target"
+            "special": "吸附目标"
           }
         }
       },
@@ -489,7 +489,7 @@
           "name": "清醒检定",
           "condition": "创造者以动作",
           "affects": {
-            "special": "this creature"
+            "special": "该生物"
           }
         }
       },
@@ -528,7 +528,7 @@
       "activities": {
         "damage": {
           "affects": {
-            "special": "can take this damage only once per turn"
+            "special": "每回合仅受到一次该伤害"
           }
         }
       }
@@ -872,7 +872,7 @@
         "Expend Use": {
           "name": "耗用",
           "range": {
-            "special": "half its Speed"
+            "special": "其半速"
           }
         }
       }
@@ -888,7 +888,7 @@
         "Expend Use": {
           "name": "耗用",
           "range": {
-            "special": "half its speed"
+            "special": "其半速"
           }
         }
       }
@@ -986,7 +986,7 @@
     },
     "Cloud of Insects": {
       "name": "虫群云聚",
-      "description": "<p><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=0OkFhjOM80ipoNKy]], one creature the [[lookup @name lowercase]] can see within [[lookup @range.value activity=0OkFhjOM80ipoNKy]] feet.</p><p><em>Failure:</em> [[/damage average]] damage, and the target has Disadvantage on saving throws to maintain &amp;Reference[Concentration] until the end of its next turn.</p><p><em>Failure or Success:</em> The [[lookup @name lowercase]] can’t take this action again until the start of its next turn.</p>",
+      "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=0OkFhjOM80ipoNKy]]，单一 [[lookup @range.value activity=0OkFhjOM80ipoNKy]] 尺内 [[lookup @name lowercase]] 可见的生物。</p><p><em>失败：</em>[[/damage average]]伤害，且目标为维持 &Reference[Concentration] 而进行的体质豁免具有劣势，持续直至其下一回合结束。</p><p><em>失败或成功：</em>[[lookup @name lowercase]] 直至其下一回合开始都无法再执行此动作。</p>",
       "effects": {
         "Clouded": {
           "name": "云聚",
@@ -1113,7 +1113,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "one living creature"
+            "special": "一名存活生物"
           }
         },
         "Wisp: Healing": {
@@ -1134,7 +1134,7 @@
         "Intelligence Saving Throw": {
           "name": "智力豁免检定",
           "affects": {
-            "special": "that is Charmed or Grappled"
+            "special": "魅惑或受擒于"
           }
         }
       }
@@ -1303,7 +1303,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "in the creature's destination space"
+            "special": "在生物占据的空间"
           }
         }
       },
@@ -1330,7 +1330,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "one Frightened creature"
+            "special": "一名恐慌中的生物"
           }
         }
       }
@@ -1367,7 +1367,7 @@
       "activities": {
         "damage": {
           "range": {
-            "special": "to an unoccupied space it can see"
+            "special": "其能看到未占据空间"
           }
         }
       }
@@ -1383,7 +1383,7 @@
         "Damage: Engulfed Creatures": {
           "name": "伤害：吞没生物",
           "affects": {
-            "special": "to each creature engulfed by it"
+            "special": "被其吞没的每名生物"
           }
         }
       }
@@ -1428,10 +1428,10 @@
         "Expend Use": {
           "name": "耗用",
           "affects": {
-            "special": "that isn’t being worn or carried"
+            "special": "未被穿戴或携带"
           },
           "range": {
-            "special": "touches a nonmagical metal object"
+            "special": "触碰非魔法金属物件"
           }
         }
       }
@@ -1577,7 +1577,7 @@
           "name": "豁免",
           "chatFlavor": "失败或成功：目标的生命值上限减少等于其受到伤害的数值。",
           "affects": {
-            "special": "Charmed by the creature"
+            "special": "被魅惑生物"
           }
         }
       }
@@ -1653,7 +1653,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "that isn't a worg"
+            "special": "其非座狼"
           }
         }
       },
@@ -1686,10 +1686,10 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "directly underneath the attacking creature"
+            "special": "在攻击生物的正下方"
           },
           "range": {
-            "special": "The attacking creature falls"
+            "special": "攻击生物倒下"
           }
         }
       }
@@ -1944,7 +1944,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "that is Grappled by the mind flayer’s Tentacles"
+            "special": "被夺心魔的触须擒抱"
           }
         }
       }
@@ -2047,7 +2047,7 @@
       "activities": {
         "save": {
           "affects": {
-            "special": "any enemy that starts its turn in the aura"
+            "special": "任何敌对生物在灵光范围内开始其回合"
           }
         }
       },
@@ -2306,7 +2306,7 @@
             "special": "大型生物"
           },
           "range": {
-            "special": "that isn’t in the air"
+            "special": "其不在空中"
           }
         }
       },
@@ -2670,7 +2670,7 @@
       "activities": {
         "save": {
           "affects": {
-            "special": "that casts a spell"
+            "special": "施展法术的"
           }
         }
       }
@@ -2957,7 +2957,7 @@
         "Expend Use": {
           "name": "耗用",
           "affects": {
-            "special": "that has the Rampage Bonus Action"
+            "special": "拥有横行附赠动作的"
           }
         }
       }
@@ -4069,7 +4069,7 @@
         "Second Save": {
           "name": "再次豁免",
           "affects": {
-            "special": "Restrained creature"
+            "special": "束缚生物"
           }
         }
       },
@@ -4188,7 +4188,7 @@
           "name": "掷 d20",
           "roll": "掷 d20",
           "affects": {
-            "special": "or an ally"
+            "special": "或一名盟友"
           }
         }
       }
@@ -4316,7 +4316,7 @@
       "activities": {
         "heal": {
           "affects": {
-            "special": "one creature Charmed or Grappled"
+            "special": "单一生物魅惑或受擒"
           }
         }
       }
@@ -4342,7 +4342,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "Grappled creature"
+            "special": "受擒生物"
           }
         }
       }
@@ -4354,7 +4354,7 @@
         "Expend Use": {
           "name": "耗用",
           "affects": {
-            "special": "within 10 feet of the triggering creature"
+            "special": "位于触发生物 10 尺内"
           }
         }
       }
@@ -4366,7 +4366,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "one Medium or smaller creature"
+            "special": "一名不超过中型的生物"
           }
         },
         "Escape Check": {
@@ -4433,7 +4433,7 @@
       "activities": {
         "attack": {
           "affects": {
-            "special": "Medium or smaller"
+            "special": "不超过中型"
           }
         }
       },
@@ -4475,7 +4475,7 @@
           "name": "移动攻击",
           "condition": "移动了 20+ 尺",
           "affects": {
-            "special": "Huge or smaller"
+            "special": "不超过巨型"
           }
         }
       },
@@ -4506,7 +4506,7 @@
           "name": "耗用",
           "condition": "一名地精可见的生物对其进行攻击检定。",
           "affects": {
-            "special": "a Small or Medium ally"
+            "special": "一名小型或中型盟友"
           }
         }
       }
@@ -4734,7 +4734,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "that isn’t a Construct or an Undead"
+            "special": "非构装非亡灵生物"
           }
         }
       }
@@ -4964,7 +4964,7 @@
         "Temporary Healing": {
           "name": "临时生命值",
           "affects": {
-            "special": "targets itself or one creature"
+            "special": "目标自身或一名生物"
           }
         }
       },
@@ -5060,7 +5060,7 @@
         "2nd Save": {
           "name": "再次豁免",
           "affects": {
-            "special": "Creatures who failed the first save"
+            "special": "首次豁免失败生物"
           }
         }
       },
@@ -5111,7 +5111,7 @@
         "Save": {
           "name": "豁免",
           "range": {
-            "special": "can move through the spaces of Medium or smaller creatures."
+            "special": "可穿过中型或更小生物所占据空间"
           }
         }
       },
@@ -5312,7 +5312,7 @@
         "Damage While Poisoned": {
           "name": "中毒时伤害",
           "affects": {
-            "special": "The target that is poisoned"
+            "special": "中毒的目标"
           }
         }
       },
@@ -5349,7 +5349,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "one Small or Medium creature within 5 feet that has the Incapacitated condition, is a Humanoid or Beast, and has 10 Hit Points or fewer."
+            "special": "单一 5 尺内的陷入失能状态的小型或中型生物，为类人或野兽，且生命值为不高于 10。"
           }
         }
       },
@@ -5389,7 +5389,7 @@
       "activities": {
         "save": {
           "affects": {
-            "special": "can see"
+            "special": "可见的"
           }
         }
       },
@@ -5406,7 +5406,7 @@
       "activities": {
         "save": {
           "affects": {
-            "special": "Large or smaller"
+            "special": "不超过大型的"
           }
         },
         "Escape Check": {
@@ -5428,13 +5428,13 @@
           "name": "豁免",
           "condition": "一名生物以武器进行的近战攻击检定对寇涛失手。",
           "affects": {
-            "special": "the triggering creature"
+            "special": "触发生物"
           }
         },
         "Free Weapon Check": {
           "name": "挣脱武器检定",
           "affects": {
-            "special": "the triggering creature"
+            "special": "触发生物"
           }
         },
         "Escape Check": {
@@ -5588,13 +5588,13 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "one Large or smaller creature Grappled"
+            "special": "一个不超过大型的受擒生物"
           }
         },
         "Damage: Swallowed": {
           "name": "伤害：吞咽",
           "affects": {
-            "special": "Swallowed by the behir"
+            "special": "被青足龙蛇吞咽"
           }
         },
         "Regurgitate: Save": {
@@ -5660,7 +5660,7 @@
         "Expend Use": {
           "name": "耗用",
           "affects": {
-            "special": "If the roc has a creature Grappled"
+            "special": "若鹏鸟已令一名生物陷入受擒"
           }
         }
       }
@@ -5782,7 +5782,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "each creature Grappled"
+            "special": "每名受擒生物"
           }
         }
       },
@@ -5913,7 +5913,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "each creature and each object that isn’t being worn or carried"
+            "special": "每名生物及未被着装或携带的每个物件"
           }
         }
       },
@@ -5963,7 +5963,7 @@
           "name": "豁免",
           "condition": "被一次攻击检定命中。",
           "range": {
-            "special": "teleports to an unoccupied space it can see"
+            "special": "传送至可见的未占据空间"
           }
         }
       },
@@ -6009,7 +6009,7 @@
         "Save": {
           "name": "豁免",
           "affects": {
-            "special": "Medium or smaller creatures"
+            "special": "不超过中型的生物"
           }
         }
       },
@@ -6294,7 +6294,7 @@
         "Damage: Grappled": {
           "name": "伤害：擒抱",
           "affects": {
-            "special": "The creature that is grappled"
+            "special": "受擒的生物"
           }
         },
         "Escape Check": {
@@ -6329,7 +6329,7 @@
         "Temp. Healing": {
           "name": "临时生命值",
           "affects": {
-            "special": "The giant or one creature of its choice that can see or hear it"
+            "special": "巨人或其选择的一名可以看见或听见其的生物"
           }
         }
       },
@@ -6363,10 +6363,10 @@
         "Expend Use": {
           "name": "耗用",
           "affects": {
-            "special": "within 5 feet"
+            "special": "5 尺内"
           },
           "range": {
-            "special": "to an unoccupied space it can see"
+            "special": "其能看到未占据空间"
           }
         }
       }
@@ -6430,7 +6430,7 @@
           "name": "豁免",
           "chatFlavor": "失败：目标直线推离 30 尺。",
           "affects": {
-            "special": "enters a space"
+            "special": "进入空间"
           }
         }
       }
@@ -6529,7 +6529,7 @@
         "Save": {
           "name": "豁免",
           "range": {
-            "special": "Inside the creature's space"
+            "special": "在生物占据的空间内"
           }
         },
         "Damage: Start of Turn": {
@@ -6554,7 +6554,7 @@
           "name": "豁免",
           "chatFlavor": "失败：目标被直线推离至多 20 尺",
           "affects": {
-            "special": "Must be in the creature's space"
+            "special": "必须在生物占据的空间"
           }
         }
       },
@@ -6573,7 +6573,7 @@
           "name": "耗用",
           "condition": "攻击生物被一次攻击检定命中。",
           "affects": {
-            "special": "to an unoccupied space it can see"
+            "special": "其能看到未占据空间"
           }
         }
       },
