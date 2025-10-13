@@ -1,5 +1,5 @@
 {
-  "label": "Monsters",
+  "label": "怪物",
   "entries": {
     "Wall Gargoyle": {
       "name": "戍墙石像鬼",
@@ -20,122 +20,122 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes one [[/item .xSBZX1FfBpnaeNml]] attack and one [[/item .MYvmkUBJOrsQEqXa]] attack.</p>"
+          "description": "<p>该[[lookup @name lowercase]]发动一次[[/item .xSBZX1FfBpnaeNml]]攻击和一次[[/item .MYvmkUBJOrsQEqXa]]攻击。</p>"
         },
         "Bite": {
           "name": "啃咬",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "description": "<p>[[/attack 扩展攻击]]. [[/damage 扩展伤害]].</p>"
         },
         "Claw": {
           "name": "爪击",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         }
       }
     },
     "Hazewing Moth Adult": {
-      "name": "Hazewing Moth Adult",
-      "tokenName": "Hazewing Moth Adult",
+      "name": "成年雾翼蛾",
+      "tokenName": "雾翼蛾成体",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.29biohazewingmot inline]</p>",
       "items": {
         "Delerium Dust": {
-          "name": "Delerium Dust",
-          "description": "<p><em>Wisdom Saving Throw:</em> DC 13, each creature in a 30-foot Emanation originating from the [[lookup @name lowercase]]. Failure: [[/damage average]] damage, and the target has the &amp;reference[Addled] condition (save ends).</p>",
+          "name": "谵妄尘",
+          "description": "<p><em>感知豁免:</em> DC 13, 每个位于以[[lookup @name lowercase]]为源点的30尺光环内的生物。失败: [[/damage average]]伤害, 且目标获得&amp;reference[Addled]状态(豁免终止)。</p>",
           "effects": {
             "Delerium Dust": {
-              "name": "Delerium Dust",
-              "description": "<p>You are &amp;reference[addled apply=false]. You can repeat your saving throw against this effect at the end of each of your turns, ending the effect on a success.</p>"
+              "name": "谵妄尘",
+              "description": "<p>你陷入&amp;reference[addled apply=false]状态。你可以在自己每个回合结束时重复进行针对此效果的豁免检定，成功则终止该效果。</p>"
             }
           }
         },
         "Hypnotic Flutter": {
-          "name": "Hypnotic Flutter",
-          "description": "<p><em>Intelligence Saving Throw:</em> DC 13, each creature in a 60-foot Emanation of the [[lookup @name lowercase]] that can see it ([[lookup @name lowercase]] automatically succeed). <em>Failure:</em> The target has the &amp;reference[Slowed] condition (save ends). If the target is already Slowed, it instead has the &amp;reference[Immobilized] condition (save ends). If the target is already Immobilized, it also has the &amp;reference[Incapacitated] condition (save ends both).</p>",
+          "name": "迷幻振翅",
+          "description": "<p><em>智力豁免：</em> DC 13，位于[[lookup @name lowercase]] 60尺光环内且能看见它的每个生物（[[lookup @name lowercase]]自动成功）。<em>失败：</em> 目标获得&amp;reference[Slowed]状态（豁免终止）。若目标已处于Slowed状态，则改为获得&amp;reference[Immobilized]状态（豁免终止）。若目标已处于Immobilized状态，则同时获得&amp;reference[Incapacitated]状态（双重豁免终止）。</p>",
           "effects": {
             "Hypnotic Flutter: Slowed": {
-              "name": "Hypnotic Flutter: Slowed",
-              "description": "<p>You are &amp;reference[slowed apply=false]. You can repeat your saving throw against this effect at the end of each of your turns, ending the effect on a success.</p>"
+              "name": "催眠振翅：减速",
+              "description": "<p>你处于&amp;reference[缓慢 apply=false]状态。你可以在每个自己回合结束时重复进行豁免来对抗此效应，豁免成功则终止该效应。</p>"
             },
             "Hypnotic Flutter: Immobilized": {
-              "name": "Hypnotic Flutter: Immobilized",
-              "description": "<p>You are &amp;reference[immobilized apply=false]. You can repeat your saving throw against this effect at the end of each of your turns, ending the effect on a success.</p>"
+              "name": "催眠振翅：定身",
+              "description": "<p>你被&amp;reference[immobilized apply=false]。你可以在每个回合结束时重复进行对抗此效果的豁免检定，成功则结束该效果。</p>"
             },
             "Hypnotic Flutter: Immobilized & Incapacitated": {
-              "name": "Hypnotic Flutter: Immobilized & Incapacitated",
-              "description": "<p>You are &amp;reference[immobilized apply=false] and &amp;reference[incapacitated apply=false]. You can repeat your saving throw against this effect at the end of each of your turns, ending the effect on a success.</p>"
+              "name": "催眠振翅：束缚与失能",
+              "description": "<p>你陷入&amp;reference[immobilized apply=false]和&amp;reference[incapacitated apply=false]状态。你可以在每个自己回合结束时重复进行对抗此效应的豁免，成功则终止该效应。</p>"
             }
           }
         },
         "Proboscis": {
-          "name": "Proboscis",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. If the target has the &amp;reference[Incapacitated apply=false] condition, its Intelligence score is reduced by [[/r 1d4]] until it finishes a Short or Long Rest. The target dies if this effect reduces its Intelligence score to 0.</p><fieldset><legend>Foundry Note</legend><p>This attack has several different Active Effects to apply to a target when reducing their Intelligence score. Use the \"Intelligence Drain\" activity to roll the d4 and apply the correct variant of the Active Effect.</p></fieldset>",
+          "name": "口鼻",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。如果目标具有&amp;reference[Incapacitated apply=false]状态，其智力属性将减少[[/r 1d4]]点，直至完成一次短休或长休。若此效果使目标的智力属性降至0，则目标死亡。</p><fieldset><legend>Foundry 注</legend><p>此攻击附带数种不同的主动效果，当降低目标智力属性时需应用这些效果。使用“智力汲取”行动来投掷d4骰并应用对应的主动效果变体。</p></fieldset>",
           "activities": {
             "Intelligence Drain": {
-              "name": "Intelligence Drain"
+              "name": "智力吸取"
             }
           },
           "effects": {
             "Intelligence Drain (-1)": {
-              "name": "Intelligence Drain (-1)",
-              "description": "<p>You Intelligence score has been reduced by 1 until you finish a Short or Long Rest. You die if this effect reduces your Intelligence score to 0.</p>"
+              "name": "智力流失 (-1)",
+              "description": "<p>你的智力属性值减少1，直至你完成一次短休或长休前。若此效果使你的智力属性值降至0，你将死亡。</p>"
             },
             "Intelligence Drain (-2)": {
-              "name": "Intelligence Drain (-2)",
-              "description": "<p>You Intelligence score has been reduced by 2 until you finish a Short or Long Rest. You die if this effect reduces your Intelligence score to 0.</p>"
+              "name": "智力吸取（-2）",
+              "description": "<p>你的智力属性值减少2，直至你完成一次短休或长休前。若该效果使你的智力属性值降至0，则你死亡。</p>"
             },
             "Intelligence Drain (-3)": {
-              "name": "Intelligence Drain (-3)",
-              "description": "<p>You Intelligence score has been reduced by 3 until you finish a Short or Long Rest. You die if this effect reduces your Intelligence score to 0.</p>"
+              "name": "智力流失 (-3)",
+              "description": "<p>你的智力属性值降低3点，直至你完成一次短休或长休前。若该效果将你的智力属性值降至0，则你立即死亡。</p>"
             },
             "Intelligence Drain (-4)": {
-              "name": "Intelligence Drain (-4)",
-              "description": "<p>You Intelligence score has been reduced by 4 until you finish a Short or Long Rest. You die if this effect reduces your Intelligence score to 0.</p>"
+              "name": "智力吸取 (-4)",
+              "description": "<p>你的智力属性值减少4，直至你完成一次短休或长休前。若此效果使你的智力属性值降至0，则你死亡。</p>"
             }
           }
         }
       }
     },
     "Ghoul Lord": {
-      "name": "Ghoul Lord",
-      "tokenName": "Ghoul Lord",
+      "name": "食尸鬼君主",
+      "tokenName": "食尸鬼君主",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.140biouls0000000 inline]</p><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.137biouls0000000 inline]</p>",
       "items": {
         "Blood Scent": {
-          "name": "Blood Scent",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on Wisdom (Perception) checks to Search for creatures who are not Constructs or Undead. It can automatically detect any creature that isn't a Construct or Undead within 10 feet of it.</p>"
+          "name": "血腥气息",
+          "description": "<p>该[[lookup @name lowercase]]在搜索非构装生物或亡灵的生物时，其感知（察觉）检定具有优势。它能自动侦测10尺内任何非构装生物或亡灵的生物。</p>"
         },
         "Soulbinding Mace": {
-          "name": "Soulbinding Mace",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. <em>Charisma Saving Throw:</em> DC 13. <em>Failure:</em> The target has the &amp;reference[Jinxed] condition (1d6; save ends).</p>",
+          "name": "缚魂硬头锤",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。<em>魅力豁免：</em> DC 13。<em>失败：</em> 目标获得&amp;reference[Jinxed]状态(1d6；豁免终止)。</p>",
           "effects": {
             "Jinxed (1d6)": {
-              "name": "Jinxed (1d6)",
-              "description": "<p>You subtract 1d6 to your attack rolls and saving throws. You can repeat your saving throw against this effect at the end of each of your turns, ending the effect on a success.</p>"
+              "name": "厄运缠身 (1d6)",
+              "description": "<p>你在攻击检定和豁免上减去1d6。你可以在自己每个回合结束时重复进行对抗此效应的豁免检定，成功则终止该效应。</p>"
             }
           }
         },
         "Abyssal Pull": {
-          "name": "Abyssal Pull",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and the target is pulled 15 feet toward the [[lookup @name lowercase]].</p>"
+          "name": "深渊牵引",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标被向[[lookup @name lowercase]]拉动15尺。</p>"
         },
         "Unyielding": {
-          "name": "Unyielding",
-          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is subjected to an effect that would move it, cause it to have the &amp;reference[Prone] condition, or both. <em>Failure:</em> The [[lookup @name lowercase]] is neither moved nor has the &amp;reference[Prone] condition.</p>",
+          "name": "不屈不挠",
+          "description": "<p><em>触发：</em>当[[lookup @name lowercase]]受到一个会移动它、使其获得&amp;reference[Prone]状态，或两者兼有的效果影响时。<em>失败：</em>[[lookup @name lowercase]]既不会被移动，也不会获得&amp;reference[Prone]状态。</p>",
           "activities": {
             "utility": {
-              "condition": "When the ghoul lord is subjected to an effect that would move it, cause it to have the Prone condition, or both."
+              "condition": "当食尸鬼君主受到一个会移动它、使其获得倒地状态或两者兼具的效果影响时。"
             }
           }
         },
         "Shield Slam": {
-          "name": "Shield Slam",
-          "description": "<p><em>Strength Saving Throw:</em> DC 14, one creature within 5 feet of the [[lookup @name lowercase]]. <em>Failure:</em> The target is pushed 10 feet away from the [[lookup @name lowercase]] and has the &amp;reference[Prone] condition.</p>"
+          "name": "盾牌猛击",
+          "description": "<p><em>力量豁免:</em> DC14, [[lookup @name lowercase]] 5尺内的单一生物。 <em>失败:</em> 目标被推离[[lookup @name lowercase]] 10尺并获得&amp;reference[Prone]状态。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes two attacks.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动两次攻击。</p>"
         },
         "Shield": {
-          "name": "Shield",
+          "name": "护盾术",
           "description": "<p>You gain the Armor Class benefit of a Shield only if you have training with it.</p>"
         },
         "Plate Armor": {
@@ -1253,111 +1253,111 @@
           "description": "<p>The [[lookup @name lowercase]] makes one [[/item .ILOF4lbStT3h3PiJ]] attack and two [[/item .ikLXHNEyYxEc3Av3]] attacks.</p>"
         },
         "Bite": {
-          "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Talons": {
-          "name": "Talons",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. Constitution Saving Throw: DC 15. Failure: The target has the Shocked condition until the end of the digipede's next turn.</p>",
+          "name": "利爪",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。体质豁免：DC15。失败：目标获得震慑状态直到数码蜈蚣的下个回合结束。</p>",
           "effects": {
             "Shocked": {
-              "name": "Shocked",
-              "description": "<p>You are &amp;reference[shocked apply=false] until the end of the digipede's next turn.</p>"
+              "name": "震惊",
+              "description": "<p>你陷入&amp;reference[shocked apply=false]状态，直到该数字蜈蚣的下个回合结束。</p>"
             }
           }
         },
         "Eye Beam": {
-          "name": "Eye Beam",
-          "description": "<p><em>Dexterity Saving Throw:</em> DC 15, each creature in a 60-foot long, 5-foot wide Line. <em>Failure:</em> [[/damage average]] damage, and the target has the &amp;reference[Slowed] condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. <em>Second Failure:</em> The target has the &amp;reference[Immobilized] condition. <em>Third Failure:</em> The target has the &amp;reference[Paralyzed] condition. Success: Half damage only.</p>"
+          "name": "眼棱射线",
+          "description": "<p><em>敏捷豁免:</em> DC15, 每个处于60尺长, 5尺宽线状区域内的生物。 <em>失败:</em> [[/damage average]]伤害, 且目标获得&amp;reference[Slowed]状态。在每个自己的回合结束时, 目标重复该豁免, 成功则自身终止该效果。 <em>第二次失败:</em> 目标获得&amp;reference[Immobilized]状态。 <em>第三次失败:</em> 目标获得&amp;reference[Paralyzed]状态。 成功: 仅受到一半伤害。</p>"
         }
       }
     },
     "Ratling Alchemist": {
-      "name": "Ratling Alchemist",
-      "tokenName": "Ratling Alchemist",
+      "name": "鼠人炼金术士",
+      "tokenName": "鼠人炼金术士",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.73biotlingalchem inline]</p>",
       "items": {
         "Delerium Bomb": {
-          "name": "Delerium Bomb",
-          "description": "<p><em>Dexterity Saving Throw:</em> DC 15, each creature in a 10-foot radius Sphere centered on a point the [[lookup @name lowercase]] can see within 60 feet. <em>Failure:</em> [[/damage average]] damage. <em>Failure or Success:</em> An Arcane Anomaly occurs in the area.</p>"
+          "name": "谵妄炸弹",
+          "description": "<p><em>敏捷豁免:</em> DC15, 每个在[[lookup @name lowercase]]可见的60尺内一点为中心的10尺半径球状区域内的生物。 <em>失败:</em> [[/damage average]]伤害。 <em>失败或成功:</em> 一个奥秘异常在该区域发生。</p>"
         },
         "Covering Fire": {
-          "name": "Covering Fire",
-          "description": "<p><em>Trigger:</em> A creature reduces an ally the [[lookup @name lowercase]] can see to 0 Hit Points. <em>Response:</em> The [[lookup @name lowercase]] makes a ranged attack against that creature.</p>",
+          "name": "掩护射击",
+          "description": "<p><em>触发:</em> 一个生物将一个[[lookup @name lowercase]]可见的盟友减少到0生命值。 <em>回应:</em> [[lookup @name lowercase]]对该生物进行一次远程攻击。</p>",
           "activities": {
             "utility": {
-              "condition": "When a creature reduces an ally the ratling can see to 0 hit points."
+              "condition": "当一个生物将一个鼠人可见的盟友的生命值降至0时。"
             }
           }
         },
         "Ratling Cunning": {
-          "name": "Ratling Cunning",
-          "description": "<p>The [[lookup @name lowercase]] takes the Dash, Disengage, or Hide action.</p>",
+          "name": "鼠人狡黠",
+          "description": "<p>该[[lookup @name lowercase]]采取疾走、撤离或躲藏动作。</p>",
           "activities": {
             "Dash / Disengage": {
-              "name": "Dash / Disengage"
+              "name": "疾走 / 撤离"
             },
             "Hide": {
-              "name": "Hide"
+              "name": "躲藏"
             }
           }
         },
         "Pack Tactics": {
-          "name": "Pack Tactics",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on attack rolls against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn't have the &amp;reference[Incapacitated apply=false] condition.</p>"
+          "name": "集群战术",
+          "description": "<p>如果[[lookup @name lowercase]]的至少一名盟友位于该生物5尺内，且该盟友未处于&amp;reference[Incapacitated apply=false]状态，则[[lookup @name lowercase]]对该生物进行的攻击检定具有优势。</p>"
         },
         "Keen Smell": {
-          "name": "Keen Smell",
-          "description": "<p>The [[lookup @name lowercase]] has advantage on Wisdom (Perception) checks that rely on smell.</p>"
+          "name": "敏锐嗅觉",
+          "description": "<p>该[[lookup @name lowercase]]在基于嗅觉的感知(察觉)检定上具有优势。</p>"
         },
         "Bite": {
-          "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes [[/item shUwjXWds5Njxca0]] attacks.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动[[/item shUwjXWds5Njxca0]]攻击。</p>"
         },
         "Repeating Crossbow": {
-          "name": "Repeating Crossbow",
-          "description": "<p>[[/attack extended]]. [[/damage extended]] (the [[lookup @name lowercase]]'s choice each time it attacks).</p>"
+          "name": "连发弩",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]（[[lookup @name lowercase]]每次攻击时选择其一）。</p>"
         }
       }
     },
     "Academy Mage": {
-      "name": "Academy Mage",
-      "tokenName": "Academy Mage",
+      "name": "学院法师",
+      "tokenName": "学院法师",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.193bioethystacad inline]</p>",
       "items": {
         "Academy Rings": {
-          "name": "Academy Rings",
-          "description": "<p>The [[lookup @name lowercase]] can cast a spell they know without expending a use of it.</p>"
+          "name": "学院之戒",
+          "description": "<p>该[[lookup @name lowercase]]可以施展一个他们已知的法术而无需消耗其使用次数。</p>"
         },
         "Prismatic Blast": {
-          "name": "Prismatic Blast",
-          "description": "<p>[[/attack extended]]. [[/damage extended]] ([[lookup @name lowercase]]'s choice).</p>"
+          "name": "棱光爆裂",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]] ([[lookup @name lowercase]]的选择)。</p>"
         },
         "Misty Step": {
-          "name": "Misty Step",
-          "description": "<p>The [[lookup @name lowercase]] casts @UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{Misty Step} using Intelligence as their spellcasting ability.</p>"
+          "name": "迷踪步",
+          "description": "<p>该[[lookup @name lowercase]]使用智力作为其施法关键属性，施展了@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{迷踪步}。</p>"
         },
         "Fireball": {
-          "name": "Fireball",
-          "description": "<p>A bright streak flashes from you to a point you choose within range and then blossoms with a low roar into a fiery explosion. Each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw, taking 8d6 Fire damage on a failed save or half as much damage on a successful one.</p><p>Flammable objects in the area that aren't being worn or carried start burning.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 3.</p>",
+          "name": "火球术",
+          "description": "<p>一道明亮的光束从你射向你选择射程内的一点，然后伴随着低沉的轰鸣绽放成炽烈的爆炸。以该点为中心，20尺半径球状区域内的每个生物进行一次敏捷豁免，豁免失败则受到8d6火焰伤害，豁免成功则伤害减半。</p><p>区域内未被穿戴或携带的可燃物开始燃烧。</p><p><strong>使用更高法术位。</strong>使用3环以上法术位施展该法术时，每比3环高一环，伤害就增加1d6。</p>",
           "materials": {
-            "value": "a ball of bat guano and sulfur"
+            "value": "一团蝙蝠粪和硫磺"
           }
         },
         "Slow": {
-          "name": "Slow",
-          "description": "<p>You alter time around up to six creatures of your choice in a 40-foot Cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.</p><p>An affected target's Speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can't take Reactions. On its turns, it can take either an action or a Bonus Action, not both, and it can make only one attack if it takes the Attack action. If it casts a spell with a Somatic component, there is a [[/r 1d100cs&lt;=25#Slowed spell cast success]]{25 percent} chance the spell fails as a result of the target making the spell's gestures too slowly.</p><p>An affected target repeats the save at the end of each of its turns, ending the spell on itself on a success.</p><section id=\"secret-2RobIVhv3tn7gmU7\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>The inline roll above will return 1 if it succeeded or 0 if it failed.</p></section>",
+          "name": "缓慢术",
+          "description": "<p>你改变射程内一个40尺立方区域中至多六个你选择的生物周围的时间。每个目标必须进行一次感知豁免，豁免失败则在该法术的持续时间内受其影响。</p><p>受影响目标的速度减半，它在AC和敏捷豁免上受到-2减值，并且它无法执行反应。在它的回合中，它只能执行一个动作或一个附赠动作，不能两者都执行，并且如果它执行攻击动作，则只能发动一次攻击。如果它施展一个带有姿势部件的法术，则有[[/r 1d100cs<=25#Slowed spell cast success]]{25%}的几率因目标施法手势过慢而导致法术失败。</p><p>受影响目标在每个自己的回合结束时重复进行该豁免，豁免成功则结束其身上的该法术效果。</p><section id=\"secret-2RobIVhv3tn7gmU7\" class=\"secret\"><p><strong>Foundry 注</strong></p><p>上方的内联骰若成功将返回1，若失败则返回0。</p></section>",
           "materials": {
-            "value": "a drop of molasses"
+            "value": "一滴糖浆"
           },
           "effects": {
             "Slowed": {
-              "name": "Slowed",
-              "description": "<p>An affected target’s Speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t take Reactions. On its turns, it can take either an action or a Bonus Action, not both, and it can make only one attack if it takes the Attack action. If it casts a spell with a Somatic component, there is a [[/r 1d100cs&gt;25#Slowed spell cast success]]{25 percent} chance the spell fails as a result of the target making the spell’s gestures too slowly.</p><p>An affected target repeats the [[/save ability=wis]] save at the end of each of its turns, ending the spell on itself on a success.</p>"
+              "name": "减速",
+              "description": "<p>受此影响的目标速度减半，在AC和敏捷豁免上受到-2减值，并且不能执行反应。在其回合中，它只能执行一个动作或一个附赠动作（不能同时执行两者），且若发动攻击动作则只能进行一次攻击。若它施展具有姿势部件的法术，则存在[[/r 1d100cs&gt;25#Slowed spell cast success]]{25%}概率因目标手势动作过于缓慢而导致法术失败。</p><p>受此影响的目标会在每个自己的回合结束时重复进行[[/save ability=wis]]豁免，成功则终止自身所受的法术效果。</p>"
             }
           }
         },
@@ -1366,10 +1366,10 @@
           "description": "<p>在施法距离内指定一名生物、一个物件或一处魔法效应。所有影响该目标的三环或更低环阶法术即告终止。每个影响目标的四环或更高环阶法术都需要以你的施法属性进行一次属性检定（DC 10 + 目标法术环阶），检定成功时目标法术终止。</p><p><strong>升环施法：</strong> 你直接终止影响目标的小于等于该施法环阶的法术效应。</p>"
         },
         "Invisibility": {
-          "name": "Invisibility",
-          "description": "<p>A creature you touch has the &amp;Reference[invisible apply=false] condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 2.</p>",
+          "name": "隐形术invisibility",
+          "description": "<p>你触及的一个生物获得&amp;Reference[invisible apply=false]状态，直至法术终止。在目标进行攻击检定、造成伤害或施放法术后，法术立即提前终止。</p><p><strong>使用更高法术位。</strong>你使用的法术位每比2环高一级，就可以多指定一个目标。</p>",
           "materials": {
-            "value": "an eyelash in gum arabic"
+            "value": "阿拉伯胶中的睫毛"
           },
           "effects": {
             "Invisible": {
@@ -1379,42 +1379,42 @@
           }
         },
         "Detect Magic": {
-          "name": "Detect Magic",
-          "description": "<p>For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell's school of magic.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p>",
+          "name": "侦测魔法",
+          "description": "<p>在持续时间内，你能感知到自身30尺范围内的魔法效应。若你感知到此类效应，你可以使用魔法动作来观察区域内任何带有魔法的可见生物或物件周围浮现的微弱灵光，若该效应由法术所创造，你还能获知其法术学派。</p><p>该法术会被1尺厚的石头、泥土或木材，1英寸厚的金属，或一层薄铅板所阻挡。</p>",
           "effects": {
             "Detect Magic": {
-              "name": "Detect Magic"
+              "name": "侦测魔法"
             }
           }
         },
         "Mage Armor": {
-          "name": "Mage Armor",
-          "description": "<p>You touch a willing creature who isn't wearing armor. Until the spell ends, the target's base AC becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor.</p>",
+          "name": "法师护甲",
+          "description": "<p>你触碰一个未穿着护甲的自愿生物。在该法术终止前，目标的护甲等级基础值变为13，外加其敏捷调整值。若目标穿上护甲，则法术提前终止。</p>",
           "materials": {
-            "value": "a piece of cured leather"
+            "value": "一片鞣制过的皮甲"
           },
           "effects": {
             "Mage Armor": {
-              "name": "Mage Armor",
-              "description": "<p>The target's base AC becomes 13 + its Dexterity modifier.</p>"
+              "name": "法师护甲",
+              "description": "<p>目标的基准AC变为13 + 其敏捷调整值。</p>"
             }
           }
         },
         "Minor Illusion": {
-          "name": "Minor Illusion",
-          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "name": "次级幻影",
+          "description": "<p>你在射程内创造一个声音或一个物件的影像，其效果持续至法术持续时间结束。每种效果的具体描述见下文。若你再次施展此法術，则该幻术结束。</p><p>如果一个生物使用研究动作来检视该声音或影像，该生物可以通过一次成功的[[/check ability=int skill=inv dc=@attributes.spell.dc]]检定对抗你的法术豁免DC，以识破它是一个幻术。如果一个生物辨识出该幻术的本质，则该幻术对该生物而言会变得模糊不清。</p><p><strong>声音。</strong> 如果你创造了一个声音，其音量可以从耳语到尖叫不等。它可以是你的声音、其他人的声音、狮子的咆哮、击鼓声，或任何你选择的其他声音。该声音在持续时间内持续不断，或者你可以在法术结束前的不同时间点制造出间断的声音。</p><p><strong>影像。</strong> 如果你创造了一个物件的影像——例如一把椅子、泥泞的脚印，或一个小箱子——其尺寸不得超过一个5尺立方体。该影像无法产生声音、光线、气味或任何其他感官效果。与该影像的物理互动会揭示其幻术本质，因为物体可以穿透它。</p>",
           "materials": {
-            "value": "a bit of fleece"
+            "value": "一小块羊毛"
           },
           "activities": {
             "Create Illusion": {
-              "name": "Create Illusion",
+              "name": "创造幻术",
               "profiles": {
                 "Image": {
-                  "name": "Image"
+                  "name": "图像"
                 },
                 "Sound": {
-                  "name": "Sound"
+                  "name": "声音"
                 }
               }
             }
@@ -1425,72 +1425,72 @@
           "description": "<p>你在施法距离内创造一个魔法效应。从下述效应中选择一项。如果你多次施展该法术，则可以同时维持至多三个不同的非即时效应。</p><p><strong>感官效应。</strong> 你创造一个立即生效的，无害的感官效应，比如一束火花，一阵风，微弱音乐或古怪的臭味。</p><p><strong>玩火。</strong>你立即点亮或熄灭一根蜡烛、一根火把或一处小篝火。</p><p><strong>清洁或弄脏。</strong> 你立即清洁或弄脏一个不大于 1 立方尺的物件。</p><p><strong>次级感官。</strong> 你使一个不大于 1 立方尺的无生命物质变冷、变暖或对其调味，持续 1 小时。</p><p><strong>魔法印记。</strong> 你在一个物件或一个表面上创造一块色斑，一个小印记，或者一个徽记，持续 1 小时。</p><p><strong>次级造物。</strong> 你创造出一个非魔法小饰品或一张虚幻图像，其大小不能超过你的手掌大小，它会持续存在至下个你的回合结束为止。一个小饰品不能造成伤害，也不值钱。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .KCxJQftLi9jx97yV]] attacks.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动两次[[/item .KCxJQftLi9jx97yV]]攻击。</p>"
         },
         "fMtARIFyhlyJk9u8": {
-          "name": "Misty Step",
-          "description": "<p>Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space you can see.</p>",
+          "name": "迷踪步",
+          "description": "<p>你短暂地被银色雾气环绕，传送至你能看见的一个未占据空间，距离不超过30尺。</p>",
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术变更"
             }
           }
         }
       },
       "effects": {
         "Mage Armor": {
-          "name": "Mage Armor",
-          "description": "<p>The target's base AC becomes 13 + its Dexterity modifier.</p>"
+          "name": "法师护甲",
+          "description": "<p>目标的护甲等级：基础值变为13 + 其敏捷调整值。</p>"
         }
       }
     },
     "Sentient Planetoid": {
-      "name": "Sentient Planetoid",
-      "tokenName": "Sentient Planetoid",
+      "name": "有知觉的小行星",
+      "tokenName": "有知觉的小行星",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.185biotientplane inline]</p>",
       "items": {
         "Beyond Space and Time": {
-          "name": "Beyond Space and Time",
-          "description": "<p>The [[lookup @name lowercase]] always acts on Initiative count 20. Additionally, it can’t be moved, teleported, or sent to another plane of existence against its will.</p>"
+          "name": "超越空间和时间",
+          "description": "<p>[[lookup @name lowercase]]总是在先攻值20时行动。此外，它不能被移动、传送或违背其意愿送往另一个存在位面。</p>"
         },
         "Gravitational Pull": {
-          "name": "Gravitational Pull",
-          "description": "<p>The [[lookup @name lowercase]] exerts its own force of gravity in a 100-foot Emanation. A creature that starts its turn in the Emanation falls towards the [[lookup @name lowercase]], taking falling damage as appropriate if it collides with the planetoid. A creature can make a [[/save]] saving throw to grab onto a fixed object it can reach, avoiding the fall on a success.</p>",
+          "name": "引力牵引",
+          "description": "<p>[[lookup @name lowercase]]在100尺范围内散发出一股引力光环。一个生物在其回合开始时若处于该光环内,会朝[[lookup @name lowercase]]坠落,若与小行星相撞则承受相应的坠落伤害。该生物可以进行一次[[/save]]豁免检定,尝试抓住其触及范围内的固定物件,若检定成功则可避免坠落。</p>",
           "activities": {
             "Grab Fixed Object Save": {
-              "name": "Grab Fixed Object Save"
+              "name": "抓握固定物件豁免"
             }
           }
         },
         "Immutable Form": {
-          "name": "Immutable Form",
-          "description": "<p>The [[lookup @name lowercase]] is immune to any spell or effect that would alter its form.</p>"
+          "name": "不变形态",
+          "description": "<p>该[[lookup @name lowercase]]免疫任何会改变其形态的法术或效果。</p>"
         },
         "Magic Resistance": {
-          "name": "Magic Resistance",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on saving throws against spells and other magical effects.</p>"
+          "name": "魔法抗性",
+          "description": "<p>该[[lookup @name lowercase]]在对抗法术和其他魔法效应的豁免上具有优势。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes four attacks, only one of which can be an [[/item .fKMeL14el7nes3Pk]] attack.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动四次攻击，其中只有一次可以是[[/item .fKMeL14el7nes3Pk]]攻击。</p>"
         },
         "Unfathomable Knowledge": {
-          "name": "Unfathomable Knowledge",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and the target has the &amp;reference[Addled] and &amp;reference[Weakened] conditions until the end of its next turn.</p>",
+          "name": "深不可测的知识",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标获得&amp;reference[Addled]和&amp;reference[Weakened]状态直至其下一回合结束。</p>",
           "effects": {
             "Unfathomable Knowledge": {
-              "name": "Unfathomable Knowledge",
-              "description": "<p>You are &amp;reference[addled apply=false] and &amp;reference[weakened apply=false] until the end of your next turn.</p>"
+              "name": "深不可测的知识",
+              "description": "<p>你陷入&amp;reference[addled apply=false]和&amp;reference[weakened apply=false]状态，直到你的下一个回合结束。</p>"
             }
           }
         },
         "Crashing Comet": {
-          "name": "Crashing Comet",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and the target has the &amp;reference[Burning] condition (3d8 Fire).</p>",
+          "name": "陨星撞击",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标获得&amp;reference[Burning]状态（3d8火焰）。</p>",
           "effects": {
             "Burning (3d8 Fire)": {
-              "name": "Burning (3d8 Fire)",
+              "name": "燃烧 (3d8 火焰)",
               "description": "<p>You are &amp;reference[burning apply=false] from being covered in fire.</p><ul><li><p>At the end of each of your turns, you take [[/damage average fire 3d8]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to douse the fire or if some other effect removes it such as submerging yourself in water.</p></li></ul>"
             }
           }
@@ -13334,169 +13334,169 @@
           "description": "<p>The [[lookup @name]] makes three attacks: two with his [[/item unxTiakL38YCJhUB]]{Shortswords} and one with his [[/item ie3KtPVdiacyLkKi]].</p>"
         },
         "Pack Tactics": {
-          "name": "Pack Tactics",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on attack rolls against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn't have the &amp;reference[Incapacitated apply=false] condition.</p>"
+          "name": "集群战术",
+          "description": "<p>如果[[lookup @name lowercase]]的至少一名盟友位于该生物5尺内，且该盟友未处于&amp;reference[Incapacitated apply=false]状态，则[[lookup @name lowercase]]对该生物进行的攻击检定具有优势。</p>"
         },
         "Keen Smell": {
-          "name": "Keen Smell",
-          "description": "<p>The [[lookup @name lowercase]] has advantage on Wisdom (Perception) checks that rely on smell.</p>"
+          "name": "敏锐嗅觉",
+          "description": "<p>该[[lookup @name lowercase]]在基于嗅觉的感知(察觉)检定上具有优势。</p>"
         },
         "Contaminated Bite": {
-          "name": "Contaminated Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+          "name": "污染啃咬",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>",
           "activities": {
             "Contamination Save": {
-              "name": "Contamination Save"
+              "name": "污染豁免"
             }
           }
         },
         "Hand Crossbow": {
-          "name": "Hand Crossbow",
+          "name": "手弩",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
         },
         "Shortsword": {
-          "name": "Shortsword",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "短剑",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Leather Armor": {
-          "name": "Leather Armor"
+          "name": "皮甲"
         },
         "Quiver": {
-          "name": "Quiver",
-          "description": "<p>A Quiver holds up to 20 Arrows.</p>"
+          "name": "箭袋",
+          "description": "<p>一个箭袋最多可容纳20支箭矢。</p>"
         },
         "Bolts": {
-          "name": "Bolts",
-          "description": "<p><em><strong>Storage:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagCaseCrossbo]{Case}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{Ammunition} is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately.</p>"
+          "name": "弩矢",
+          "description": "<p><em><strong>贮藏：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagCaseCrossbo]{弩矢匣}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性的武器所必需的。武器的描述会指明其使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量。该表还列出了通常用于贮藏每种弹药的物品；贮藏容器需单独购买。</p>"
         }
       }
     },
     "He Who Laughs Last": {
-      "name": "He Who Laughs Last",
-      "tokenName": "He Who Laughs Last",
+      "name": "笑到最后的人",
+      "tokenName": "笑到最后者",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.186bioholaughsla inline]</p>",
       "items": {
         "Mortal Coil": {
-          "name": "Mortal Coil",
-          "description": "<p>[[lookup @name]] projects a 150-foot Emanation of death and decay. A creature that ends its turn in the Emanation suffers an &amp;reference[Exhaustion] level and ages [[/r 3d6]]{10 (3d6)} years. The creature removes an Exhaustion level gained in this way at the end of its turn, but only if it ends its turn outside the Emanation. A creature's original age can be restored with @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes] or similar magic.</p>",
+          "name": "凡人羁绊",
+          "description": "<p>[[lookup @name]] 投射出一个150尺的死亡与腐朽光环。一个生物在其回合结束时若处于该光环内，将承受一个&amp;reference[Exhaustion]等级并衰老[[/r 3d6]]{10}年。该生物在其回合结束时移除以此方式获得的力竭等级，但仅当其回合结束时处于光环之外。一个生物的原始年龄可以通过@UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]或类似魔法恢复。</p>",
           "activities": {
             "Years Aged": {
-              "name": "Years Aged"
+              "name": "年岁增长"
             }
           }
         },
         "Scornful Whip": {
-          "name": "Scornful Whip",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and If the target is Large or smaller, it is pulled 30 feet toward [[lookup @name]].</p>"
+          "name": "轻蔑之鞭",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且如果目标是大型或更小的，它会被拉向[[lookup @name]] 30尺。</p>"
         },
         "Walking Shadow": {
-          "name": "Walking Shadow",
-          "description": "<p>[[lookup @name]] moves up to half his Speed.</p>"
+          "name": "行走暗影",
+          "description": "<p>[[lookup @name]]移动至多一半他的{速度}。</p>"
         },
         "Sleep No More": {
-          "name": "Sleep No More",
-          "description": "<p>[[lookup @name]] casts @UUID[Compendium.dnd5e.spells24.Item.phbsplPowerWordK].</p>"
+          "name": "长夜无眠",
+          "description": "<p>[[lookup @name]] 施放了 @UUID[Compendium.dnd5e.spells24.Item.phbsplPowerWordK]。</p>"
         },
         "Out Brief Candle": {
-          "name": "Out Brief Candle",
-          "description": "<p>[[lookup @name]] casts @UUID[Compendium.dnd5e.spells24.Item.phbsplFingerofDe] (save DC 24).</p>"
+          "name": "熄灭吧，短暂的烛光",
+          "description": "<p>[[lookup @name]] 施放 @UUID[Compendium.dnd5e.spells24.Item.phbsplFingerofDe]（豁免DC 24）。</p>"
         },
         "Dusty Death": {
-          "name": "Dusty Death",
-          "description": "<p>[[lookup @name]] casts @UUID[Compendium.dnd5e.spells24.Item.phbsplDisintegra] (save DC 24).</p>"
+          "name": "尘腐死亡",
+          "description": "<p>[[lookup @name]] 施放 @UUID[Compendium.dnd5e.spells24.Item.phbsplDisintegra] (豁免 DC 24)。</p>"
         },
         "Cage of Sorrows": {
-          "name": "Cage of Sorrows",
-          "description": "<p>[[lookup @name]] creates a wall of bone on a solid surface it can see within 120 feet of himself. The wall appears as a flat surface made up of one 10-foot-square panel. The wall is 1 foot thick and lasts for 1 minute or until the wall is destroyed (AC 15, 20 Hit Points, Immunity to Poison and Psychic damage, Vulnerability to Bludgeoning and Thunder damage).</p><p>If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (GM''s choice) and subjected to the following effect. <em>Dexterity Saving Throw:</em> DC 16. <em>Failure:</em> [[/damage average]] damage.</p>",
+          "name": "悲伤之笼",
+          "description": "<p>[[lookup @name]]在其可见的120尺范围内一处坚实表面上创造出一道骨墙。该墙显现为由一个10尺见方面板组成的平坦表面。墙厚1尺，持续1分钟或被摧毁为止（护甲等级：15，生命值：20，免疫毒素和心灵伤害，易伤钝击和雷鸣伤害）。</p><p>若墙出现时切过某生物的空间，该生物会被推至墙的一侧（由DM选择）并承受以下效果。<em>敏捷豁免：</em> DC 16。<em>失败：</em> [[/damage average]]伤害。</p>",
           "activities": {
             "Conjure Cage": {
-              "name": "Conjure Cage"
+              "name": "召唤牢笼"
             }
           }
         },
         "Epic Resistance": {
-          "name": "Epic Resistance",
-          "description": "<p>[[lookup @name]] chooses one condition, spell, or other effect currently affecting them and rolls [[/r 1d20]]. On an 11 or higher, the effect ends on them. [[lookup @name]] can use this Epic Action even if they would otherwise be unable to take actions, their actions are being controlled by another creature, or if a spell or effect alters their game statistics.</p>"
+          "name": "史诗抗性",
+          "description": "<p>[[lookup @name]]选择一个当前影响其自身的状态、法术或其他效果，并投掷[[/r 1d20]]。若结果为11或更高，该效果对其终止。[[lookup @name]]即使因故无法执行动作、动作受其他生物操控，或受法术/效果影响导致游戏资料卡变更时，仍可使用此传奇动作。</p>"
         },
         "Epic Boss": {
-          "name": "Epic Boss",
-          "description": "<p>This creature is an Epic Boss, a unique foe designed to pose a solo threat to an entire adventuring party. As such, it has additional game rules that sets it apart from normal creatures:</p><p>[[lookup @name]] always takes their turn on Initiative count 20. On their turn, they can use their movement and interaction as normal. However, they do not take an action or Bonus Action on their turn unless forced to do so by a spell or other effect. Instead, [[lookup @name]] takes one of the following Epic Actions at the end of each player character's turn.</p><p>All this creature's actions are Epic Actions.</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.pZO0UnsQfNpZjubA]{Scornful Whip}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.pwR4JchmnUj02wE0]{Walking Shadow}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.PEzE00cb7RNwe4DK]{Sleep No More}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.eUsODR2sAzeAcnWx]{Out Brief Candle}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.EjHMf81SNMWhzYvM]{Dusty Death}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.MlNrdWp3iA7Wwc80]{Cage of Sorrows}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.aeZ5ftBLrpdVN13k]{Spellcasting}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.jYV7eyzQLENGQerg]{Epic Resistance}</p></li></ul>",
+          "name": "史诗首领",
+          "description": "<p>该生物是一名史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]]总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在其回合中不执行动作或附赠动作。取而代之的是，[[lookup @name]]会在每位玩家角色回合结束时执行下列史诗动作之一。</p><p>该生物的所有动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.pZO0UnsQfNpZjubA]{轻蔑之鞭}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.pwR4JchmnUj02wE0]{行影}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.PEzE00cb7RNwe4DK]{长眠不再}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.eUsODR2sAzeAcnWx]{短暂烛火}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.EjHMf81SNMWhzYvM]{尘归死亡}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.MlNrdWp3iA7Wwc80]{悲恸牢笼}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.aeZ5ftBLrpdVN13k]{施法}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.jL5phj3Z7yft4yNV.Item.jYV7eyzQLENGQerg]{史诗抗性}</p></li></ul>",
           "effects": {
             "Epic Boss": {
-              "name": "Epic Boss",
-              "description": "<p>This creature is an Epic Boss, a unique foe designed to pose a solo threat to an entire adventuring party. As such, it has additional game rules that sets it apart from normal creatures.</p><p>The creature always takes their turn on Initiative count 20. On their turn, they can use their movement and interaction as normal. However, they do not take an action or Bonus Action on their turn unless forced to do so by a spell or other effect. Instead, the creature takes one of the Epic Actions they have available.</p>"
+              "name": "史诗首领",
+              "description": "<p>该生物是一位史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则。</p><p>该生物总是在先攻值20时进行其回合。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效应强制，否则它在回合中不会执行动作或附赠动作。取而代之的是，该生物会使用其拥有的一个史诗动作。</p>"
             }
           }
         },
         "Inscrutable": {
-          "name": "Inscrutable",
-          "description": "<p>[[lookup @name]] is immune to any effect that would sense their emotions or read their thoughts, as well as any divination spell that they refuse. Wisdom (Insight) checks made to ascertain [[lookup @name]]'s intentions or sincerity have Disadvantage.</p>"
+          "name": "高深莫测",
+          "description": "<p>[[lookup @name]]免疫任何能感知其情绪或读取其思想的效应，以及其拒绝的任何{预言术}法术。为确定[[lookup @name]]的意图或诚意而进行的感知{洞悉}检定具有{劣势}。</p>"
         },
         "Disintegrate": {
-          "name": "Disintegrate",
-          "description": "<p>You launch a green ray at a target you can see within range. The target can be a creature, a nonmagical object, or a creation of magical force, such as the wall created by <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{Wall of Force}.</em></p><p>A creature targeted by this spell makes a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 Force damage. If this damage reduces it to 0 Hit Points, it and everything nonmagical it is wearing and carrying are disintegrated into gray dust. The target can be revived only by a <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplTrueResurr]{True Resurrection}</em> or a <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{Wish}</em> spell.</p><p>This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If such a target is Huge or larger, this spell disintegrates a 10-foot-Cube portion of it.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 3d6 for each spell slot level above 6.</p>",
+          "name": "解离术",
+          "description": "<p>你向射程内一个可见目标发射一道绿色射线。目标可以是一个生物、一个非魔法物件、或一个魔法力场造物，例如由<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{力场墙}</em>创造的墙。</p><p>此法术指定的生物需进行一次敏捷豁免。豁免失败，目标受到10d6 + 40点力场伤害。若此伤害将其生命值降至0，则它及其穿戴和携带的所有非魔法物品都将化为灰色尘埃。目标只能通过<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplTrueResurr]{完全复生术}</em>或<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{祈愿术}</em>法术复活。</p><p>此法术会自动解消一个大型或更小的非魔法物件或魔法力场造物。若此类目标为巨型或更大，则此法术会解消其一个10尺立方体部分。</p><p><strong>使用更高法术位。</strong> 使用6环以上法术位施展此法术时，每比6环高一环，伤害就增加3d6。</p>",
           "materials": {
-            "value": "a lodestone and dust"
+            "value": "一块天然磁石和粉尘"
           },
           "target": {
             "affects": {
-              "special": "a creature, a nonmagical object, or a creation of magical force,"
+              "special": "一个生物、一个非魔法物件或一个魔法力场造物，"
             }
           },
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术变更"
             }
           }
         },
         "Finger of Death": {
-          "name": "Finger of Death",
-          "description": "<p>You unleash negative energy toward a creature you can see within range. The target makes a Constitution saving throw, taking 7d8 + 30 Necrotic damage on a failed save or half as much damage on a successful one.</p><p>A Humanoid killed by this spell rises at the start of your next turn as a <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{Zombie}</strong> (see appendix B) that follows your verbal orders.</p>",
+          "name": "死亡一指",
+          "description": "<p>你向射程内一个你能看见的生物释放负能量。该目标进行一次体质豁免，豁免失败则受到7d8 + 30点暗蚀伤害，豁免成功则仅受一半伤害。</p><p>被此法杀死的类人生物会在你的下个回合开始时以<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{丧尸}</strong>的形态复活（见附录B），并遵循你的言语命令。</p>",
           "activities": {
             "Negative Energy Save": {
-              "name": "Negative Energy Save"
+              "name": "负能量豁免"
             },
             "Raise Zombie": {
-              "name": "Raise Zombie"
+              "name": "唤起丧尸"
             }
           },
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术变更"
             }
           }
         },
         "Power Word Kill": {
-          "name": "Power Word Kill",
-          "description": "<p>You compel one creature you can see within range to die. If the target has 100 Hit Points or fewer, it dies. Otherwise, it takes 12d12 Psychic damage.</p>",
+          "name": "律令死亡",
+          "description": "<p>你强迫射程内一个你能看见的单一生物死亡。若目标的生命值为100或更少，则其立即死亡。否则，它将承受12d12点心灵伤害。</p>",
           "activities": {
             "Compel to Die": {
-              "name": "Compel to Die"
+              "name": "强迫赴死"
             }
           },
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术变更"
             }
           }
         },
         "Spellcasting": {
-          "name": "Spellcasting",
-          "description": "<p>[[lookup @name]] casts one of the spells he knows, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 26).</p>"
+          "name": "施法",
+          "description": "<p>[[lookup @name]]施展一个他所知的法术，无需任何材料部件并使用魅力作为施法关键属性（法术豁免DC 26）。</p>"
         },
         "Wish": {
           "name": "祈愿术",
           "description": "<p><em><strong>祈愿术</strong></em>是凡间生物所能施展的最强大法术。你只需要大声说出自己的愿望就能改变现实世界本身。</p><p>法术最基础的用法是用来模仿任意一个八环或更低环阶的法术。如果你以此种方式使用该法术，你不需要满足目标法术所需的任何前提条件（包括有价值的材料成分）就可以让该法术生效。</p><p>作为另一种方式，你也可以选择让法术创造下列效应之一：</p><p><strong>创造物件。</strong>你创造出一个价值不超过 25000GP 的物件，令其出现在地面上你能看见的一处未占据空间中。该物件不能是魔法物品，其在任意方向上的长度都不能超过 300 尺。</p><p><strong>即刻治疗。</strong>你让你自己和至多二十个你可见的生物恢复全部生命值，并且终止它们身上一切在@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{高等复原术}中列举过的所有效应。</p><p><strong>伤害抗性。</strong>你让至多十个你能看见的生物获得你所指定的一种伤害类型的抗性。此抗性是永久存在的。</p><p><strong>免疫法术。</strong>你让最多十个你能看见的生物免疫于某道法术或某种其他魔法效应，持续 8 小时。</p><p><strong>突来学识。</strong>你将你的一个专长替换为符合条件的另一个专长。你失去旧专长带来的全部好处，并获得新专长的好处。你无法取代作为你其他专长或特性先决条件的专长。</p><p><strong>重新掷骰。</strong>你改变一件刚刚发生的事件。重掷前一轮（包括你的上一个回合）到现在期间的任意一次掷骰，并让现实随着你的新掷骰结果改变。例如，<strong>祈愿术</strong>以撤销队友的失败豁免或敌人的重击。你可以迫使重新进行的掷骰具有优势或劣势 ，并且可以选择是使用重投后的结果还是使用原来的结果。</p><p><strong>重塑现实。</strong>你可能会许愿一些没有包含在上述效应中的东西。为了做到这样的效果，请尽可能准确地向地下城主描述你的愿望。在这种情况下，地下城主有极高的自由来裁决究竟会发生什么。不过愿望越大，出错的概率就越大。法术可能会直接失败，也可能部分的达成你想要的结果，还有可能因表述愿望时措辞不当而遭到意想不到的结果。例如，许愿让一个坏人死去可能会让你穿越到多年后该人已死的一个时间段，使你相当于离开了游戏一样。此外，许愿获取一件传说中的魔法物品或神器可能会立即将你传送到该物品当前的持有者身边。如果你许的愿望太过庞大，其效应影响到了社群、区域或是世界，你可能会引来强大的敌人。如果你的愿望会影响神，这名神的神仆会立刻干涉，阻止它或是鼓励你以一种特殊的方式许愿。如果你的愿望将会撤销多元宇宙本身，或是威胁到了<strong>印记城</strong>，或是以某种方式影响到了<strong>痛苦女士</strong>，你的心灵中就会浮现出一段她的影像：她摇了摇自己的脑袋，然后你的愿望失效了。</p><p>除了模仿其他法术外，施展该法术以达成的任何其他目的都会使你的身躯承受极大的负担，令你变得无比虚弱。承受负担后，直到你完成长休之前，你每次施展法术时都将受到一定伤害（伤害数值取决于你施展的法术的环阶，每环阶 1d10 点的暗蚀伤害），此伤害无法被任何方式减免。此外，你的力量属性值将变为 3，持续 2d4 日。这段时间内，你每花一整日休息（不从事轻度活动以外的行为），恢复需要的日数就减少 2 日。最后，承受负担时，你将有 [[/r 1d3cs1]]{33%} 的概率永远也无法再次施放<strong>祈愿术</strong>。</p>",
           "activities": {
             "utility": {
-              "roll": "Strength Sap Duration",
-              "chatFlavor": "<em>Wish</em> lost on 1: [[/r 1d3cs1]]"
+              "roll": "力量吸取持续时间",
+              "chatFlavor": "<em>祈愿术</em>在掷出1时失效：[[/r 1d3cs1]]"
             }
           },
           "effects": {
             "Wish Stress": {
-              "name": "Wish Stress",
-              "description": "<p>Each time you cast a spell until you finish a Long Rest, you take [[/damage 1d10 type=necrotic]] damage per level of that spell. This damage can’t be reduced or prevented in any way. In addition, your Strength score becomes 3 for [[/r 2d4]] days.</p>"
+              "name": "祈愿术压力",
+              "description": "<p>每次你施展一个法术直到完成一次长休，你都会受到相当于该法术等级[[/damage 1d10 type=necrotic]]的伤害。此伤害无法以任何方式减免或阻止。此外，你的力量属性值变为3，持续[[/r 2d4]]天。</p>"
             }
           }
         },
@@ -13548,15 +13548,15 @@
           }
         },
         "Dream": {
-          "name": "Dream",
-          "description": "<p>You target a creature you know on the same plane of existence. You or a willing creature you touch enters a trance state to act as a dream messenger. While in the trance, the messenger is &amp;Reference[Incapacitated apply=false] and has a Speed of 0.</p><p>If the target is asleep, the messenger appears in the target's dreams and can converse with the target as long as it remains asleep, through the spell's duration. The messenger can also shape the dream's environment, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the spell. The target recalls the dream perfectly upon waking.</p><p>If the target is awake when you cast the spell, the messenger knows it and can either end the trance (and the spell) or wait for the target to sleep, at which point the messenger enters its dreams.</p><p>You can make the messenger terrifying to the target. If you do so, the messenger can deliver a message of no more than ten words, and then the target makes a Wisdom saving throw. On a failed save, the target gains no benefit from its rest, and it takes 3d6 Psychic damage when it wakes up.</p>",
+          "name": "托梦术",
+          "description": "<p>你以同一位面上一个你认识的生物为目标。你或一个你触及的自愿生物进入出神状态，作为梦境信使。在出神期间，信使处于&Reference[Incapacitated apply=false]状态且速度为0。</p><p>若目标正在睡眠，信使会出现在目标的梦境中，并能在法术持续时间内，只要目标保持睡眠，就与其交谈。信使还能塑造梦境环境，创造景观、物体和其他影像。信使可随时脱离出神状态，以此终止法术。目标醒来时会完美地回忆起该梦境。</p><p>若你在施法时目标处于清醒状态，信将知晓此情况，并可以选择结束出神（及法术）或等待目标入睡——届时信使将进入其梦境。</p><p>你可以使信使对目标显得恐怖。若你如此做，信使能传递不超过十个字的信息，随后目标需进行一次感知豁免。豁免失败则目标的休息无法获得任何效益，并在醒来时受到3d6心灵伤害。</p>",
           "materials": {
-            "value": "a handful of sand"
+            "value": "一把沙子"
           },
           "effects": {
             "Trance State": {
-              "name": "Trance State",
-              "description": "<p><span style=\"font-family:Signika, sans-serif\">While in the trance, the messenger is Incapacitated and has a Speed of 0.</span></p>"
+              "name": "出神状态",
+              "description": "<p><span style=\"font-family:Signika, sans-serif\">在出神期间，信使处于失能状态且速度为0。</span></p>"
             }
           }
         },
@@ -13565,11 +13565,11 @@
           "description": "<p>在施法距离内指定一名生物、一个物件或一处魔法效应。所有影响该目标的三环或更低环阶法术即告终止。每个影响目标的四环或更高环阶法术都需要以你的施法属性进行一次属性检定（DC 10 + 目标法术环阶），检定成功时目标法术终止。</p><p><strong>升环施法：</strong> 你直接终止影响目标的小于等于该施法环阶的法术效应。</p>"
         },
         "Teleport": {
-          "name": "Teleport",
-          "description": "<p>This spell instantly transports you and up to eight willing creatures that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be Large or smaller, and it can't be held or carried by an unwilling creature.</p><p>The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls [[/gmr 1d100]] and consults the Teleportation Outcome table and the explanations after it.</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{Teleportation Outcome}</strong></summary><table><thead><tr><td>Familiarity</td><td>Mishap</td><td>Similar Area</td><td>Off Target</td><td>On Target</td></tr></thead><tbody><tr><td>Permanent circle</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>Linked object</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>Very familiar</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>Seen casually</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>Viewed once or described</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>False destination</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>Familiarity.</strong> Here are the meanings of the terms in the table's Familiarity column:</p><ul><li>\"Permanent circle\" means a permanent teleportation circle whose sigil sequence you know.</li><li>\"Linked object\" means you possess an object taken from the desired destination within the last six months, such as a book from a wizard's library.</li><li>\"Very familiar\" is a place you have visited often, a place you have carefully studied, or a place you can see when you cast the spell.</li><li>\"Seen casually\" is a place you have seen more than once but with which you aren't very familiar.</li><li>\"Viewed once or described\" is a place you have seen once, possibly using magic, or a place you know through someone else's description, perhaps from a map.</li><li>\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting to teleport to a location that no longer exists.</li></ul><p><strong>Mishap.</strong> The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes [[/damage 3d10 type=force]] damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time).</p><p><strong>Similar Area.</strong> You and your group (or the target object) appear in a different area that's visually or thematically similar to the target area. You appear in the closest similar place. If you are heading for your home laboratory, for example, you might appear in another person's laboratory in the same city.</p><p><strong>Off Target.</strong> You and your group (or the target object) appear [[/r 2d12]] miles away from the destination in a random direction. Roll [[/r 1d8]] for the direction: 1, east; 2, southeast; 3, south; 4, southwest; 5, west; 6, northwest; 7, north; or 8, northeast.</p><p><strong>On Target.</strong> You and your group (or the target object) appear where you intended.</p>",
+          "name": "传送术",
+          "description": "<p>该法术会立即将你和施法距离内你能看见的至多八个自愿生物，或施法距离内你能看见的单个物件，传送至你选择的目的地。如果你以物件为目标，则它必须是大型或更小的，且不能被非自愿生物持有或携带。</p><p>你选择的目的地必须是你所知晓的，并且必须与你处于同一位面。你对目的地的熟悉程度决定了你是否能成功抵达。DM掷[[/gmr 1d100]]并参照传送结果表及其后的说明。</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{传送结果}</strong></summary><table><thead><tr><td>熟悉度</td><td>意外</td><td>相似区域</td><td>偏离目标</td><td>正中目标</td></tr></thead><tbody><tr><td>永久法阵</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>关联物件</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>非常熟悉</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>大致见过</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>见过一次或听人描述</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>虚假目的地</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>熟悉度。</strong>以下是表中熟悉度栏各项术语的含义：</p><ul><li>“永久法阵”指一个你知道其符文序列的永久传送法阵。</li><li>“关联物件”指你持有一个在过去六个月内从期望目的地取来的物件，例如一本来自某法师图书馆的书。</li><li>“非常熟悉”指一个你经常造访、仔细研究过的地方，或一个你在施法时能看见的地方。</li><li>“大致见过”指一个你见过不止一次但并不十分熟悉的地方。</li><li>“见过一次或听人描述”指一个你只见过一次（可能通过魔法）的地方，或一个你通过他人描述（例如从地图上）得知的地方。</li><li>“虚假目的地”指一个不存在的地方。也许你试图探知某个敌人的密室却看到了一个幻象，或者你正尝试传送至一个已不复存在的地点。</li></ul><p><strong>意外。</strong>该法术不可预测的魔法导致了一次艰难的旅程。每个被传送的生物（或目标物件）受到[[/damage 3d10 type=force]]伤害，且DM重新在表中掷骰以确定你们最终抵达何处（可能发生多次意外，每次都会造成伤害）。</p><p><strong>相似区域。</strong>你和你的队伍（或目标物件）出现在一个与目标区域在视觉或主题上相似的不同区域。你们出现在最接近的相似地点。例如，如果你正前往你的家庭实验室，你可能会出现在同一城市的另一个人的实验室中。</p><p><strong>偏离目标。</strong>你和你的队伍（或目标物件）出现在距离目的地[[/r 2d12]]英里外的随机方向上。掷[[/r 1d8]]决定方向：1, 东；2, 东南；3, 南；4, 西南；5, 西；6, 西北；7, 北；或8, 东北。</p><p><strong>正中目标。</strong>你和你的队伍（或目标物件）出现在你意图抵达的地方。</p>",
           "target": {
             "affects": {
-              "special": "you and up to eight creatures or one object"
+              "special": "你和最多八个生物或一个物件"
             }
           }
         },
@@ -13586,116 +13586,116 @@
           }
         },
         "Create Undead": {
-          "name": "Create Undead",
-          "description": "<p>You can cast this spell only at night. Choose up to three corpses of Medium or Small Humanoids within range. Each one becomes a <strong>@UUID[Compendium.dnd5e.monsters.Actor.OBujQLLPSmlJiZnL]{Ghoul}</strong> under your control (see the <em>Monster Manual</em> for its stat block).</p><p>As a Bonus Action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to them). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a particular place. If you issue no commands, the creature takes the &amp;Reference[Dodge] action and moves only to avoid harm. Once given an order, the creature continues to follow the order until its task is complete.</p><p>The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell rather than animating new ones.</p><p><strong>Using a Higher-Level Spell Slot.</strong>If you use a level 7 spell slot, you can animate or reassert control over four <strong>Ghouls</strong>. If you use a level 8 spell slot, you can animate or reassert control over five <strong>Ghouls</strong> or two <strong>@UUID[Compendium.dnd5e.monsters.Actor.IyIybE5t2adMEVUM]{Ghasts}</strong> or <strong>@UUID[Compendium.dnd5e.monsters.Actor.rbyp54px2D0ql4QK]{Wights}</strong>. If you use a level 9 spell slot, you can animate or reassert control over six <strong>Ghouls</strong>, three <strong>Ghasts</strong> or <strong>Wights</strong>, or two <strong>@UUID[Compendium.dnd5e.monsters.Actor.t8WYD7ak07X7xpx8]{Mummies}</strong>. See the <em>Monster Manual</em> for these stat blocks.</p>",
+          "name": "唤起死灵",
+          "description": "<p>你只能在夜间施展该法术。选择射程内最多三具中型或小型类人生物的尸体。每具尸体都将变为一只受你控制的<strong>@UUID[Compendium.dnd5e.monsters.Actor.OBujQLLPSmlJiZnL]{食尸鬼}</strong>（其资料卡参见<em>《怪物图鉴》</em>）。</p><p>在你的每个回合中，你可以用一个附赠动作，以心灵感应方式命令任何由该法术活化的生物，只要该生物在你120尺范围内（若你控制多个生物，你可以同时命令它们中的任何一个，并向它们下达相同的命令）。你决定该生物在其下一回合中采取何种动作以及移动到何处，或者你可以下达一个笼统的命令，例如守卫某个特定地点。如果你没有下达任何命令，该生物会采取&amp;Reference[Dodge]动作，并且只进行移动以避免受到伤害。一旦被下达命令，该生物会持续遵循该命令，直到其任务完成。</p><p>该生物受你控制持续24小时，之后它将停止服从你给予的任何命令。要再维持对该生物的控制24小时，你必须在当前24小时期限结束前对该生物再次施展此法术。以此方式使用该法术是重新确立你通过此法术活化的至多三个生物的控制权，而非活化新的生物。</p><p><strong>使用更高法术位。</strong>若你使用一个7环法术位，你可以活化或重新确立对四个<strong>食尸鬼</strong>的控制。若你使用一个8环法术位，你可以活化或重新确立对五个<strong>食尸鬼</strong>或两个<strong>@UUID[Compendium.dnd5e.monsters.Actor.IyIybE5t2adMEVUM]{妖鬼}</strong>或<strong>@UUID[Compendium.dnd5e.monsters.Actor.rbyp54px2D0ql4QK]{尸妖}</strong>的控制。若你使用一个9环法术位，你可以活化或重新确立对六个<strong>食尸鬼</strong>、三个<strong>妖鬼</strong>或<strong>尸妖</strong>、或两个<strong>@UUID[Compendium.dnd5e.monsters.Actor.t8WYD7ak07X7xpx8]{木乃伊}</strong>的控制。这些生物的资料卡参见<em>《怪物图鉴》</em>。</p>",
           "activation": {
             "condition": "仅在夜晚"
           },
           "materials": {
-            "value": "one 150+ GP black onyx stone for each corpse"
+            "value": "每具尸体需要一颗价值150+ gp的黑色缟玛瑙石"
           },
           "target": {
             "affects": {
-              "special": "corpse of Medium or Small Humanoid or previously created undead"
+              "special": "中型或小型类人生物或先前创造的亡灵的尸体"
             }
           },
           "activities": {
             "Animate Corpses": {
-              "name": "Animate Corpses"
+              "name": "活化尸体"
             },
             "Reassert Control": {
-              "name": "Reassert Control"
+              "name": "重掌控制"
             },
             "Mentally Command": {
-              "name": "Mentally Command"
+              "name": "精神命令"
             }
           }
         },
         "Animate Dead": {
-          "name": "Animate Dead",
-          "description": "<p>Choose a pile of bones or a corpse of a Medium or Small Humanoid within range. The target becomes an Undead creature: a <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmSkeleton000000]{Skeleton}</strong> if you chose bones or a <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{Zombie}</strong> if you chose a corpse.</p><p>On each of your turns, you can take a Bonus Action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a chamber or corridor. If you issue no commands, the creature takes the Dodge action and moves only to avoid harm. Once given an order, the creature continues to follow it until its task is complete.</p><p>The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell rather than animating a new creature.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You animate or reassert control over two additional Undead creatures for each spell slot level above 3. Each of the creatures must come from a different corpse or pile of bones.</p>",
+          "name": "操纵死尸",
+          "description": "<p>在射程内选择一堆骨骸或一具中型或小型类人生物的尸体。目标变为亡灵生物：若你选择骨骸则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmSkeleton000000]{骷髅}</strong>，若选择尸体则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{丧尸}</strong>。</p><p>在你的每个回合中，若该生物位于你60尺范围内，你可以使用附赠动作以心灵感应下达命令（若你控制多个生物，可同时命令它们并对每个个体下达相同指令）。你可以决定该生物下个回合采取的动作和移动位置，或下达笼统指令（例如守卫某个房间或走廊）。若未下达指令，该生物会采取回避动作且仅会移动以规避伤害。一旦获得指令，该生物会持续执行直至任务完成。</p><p>该生物受你控制持续24小时，此后不再服从任何既有指令。若要延续控制权24小时，你必须在当前24小时周期结束前对该生物再次施展此法術。此举可重新确立你对至多四个通过此法術活化生物的控制权，而非创造新生物。</p><p><strong>使用更高法术位。</strong>你每使用比3环高一级的法术位，便可多活化或重新控制两个亡灵生物。每个生物必须源自不同的尸体或骨骸堆。</p>",
           "materials": {
-            "value": "a drop of blood, a piece of flesh, and a pinch of bone dust"
+            "value": "一滴血、一块肉和一撮骨灰"
           },
           "activities": {
             "summon": {
               "profiles": {
                 "Skeleton (bones)": {
-                  "name": "Skeleton (bones)"
+                  "name": "骷髅（骸骨）"
                 },
                 "Zombie (corpse)": {
-                  "name": "Zombie (corpse)"
+                  "name": "丧尸（尸体）"
                 }
               }
             }
           }
         },
         "Speak with Dead": {
-          "name": "Speak with Dead",
-          "description": "<p>You grant the semblance of life to a corpse of your choice within range, allowing it to answer questions you pose. The corpse must have a mouth, and this spell fails if the deceased creature was Undead when it died. The spell also fails if the corpse was the target of this spell within the past 10 days.</p><p>Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are antagonistic toward it or it recognizes you as an enemy. This spell doesn't return the creature's soul to its body, only its animating spirit. Thus, the corpse can't learn new information, doesn't comprehend anything that has happened since it died, and can't speculate about future events.</p>",
+          "name": "死者交谈",
+          "description": "<p>你在射程内选择一具尸体，赋予它生命的表象，使其能够回答你提出的问题。该尸体必须拥有嘴，并且如果该生物死亡时是亡灵，则此法术失败。如果该尸体在过去10天内曾是此法术的目标，法术同样会失败。</p><p>在法术结束前，你可以向尸体提出最多五个问题。尸体仅知晓其生前所知，包括它所掌握的语言。答案通常简短、隐晦或重复，而且如果你与尸体敌对或它视你为敌人，尸体没有义务提供真实的答案。此法术不会将生物的灵魂唤回其身体，只会召回其精魄。因此，尸体无法学习新信息，无法理解自其死亡后发生的任何事情，也无法推测未来事件。</p>",
           "materials": {
-            "value": "burning incense"
+            "value": "燃烧的熏香"
           }
         }
       }
     },
     "Master Mage": {
-      "name": "Master Mage",
-      "tokenName": "Master Mage",
+      "name": "大法师",
+      "tokenName": "大法师",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.194bioethystacad inline]</p>",
       "items": {
         "Counterspell": {
-          "name": "Counterspell",
-          "description": "<p>The [[lookup @name lowercase]] casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{Counterspell} in response to that spell’s trigger, using Intelligence as the spellcasting ability.</p>",
+          "name": "法术反制",
+          "description": "<p>该[[lookup @name lowercase]]以智力作为施法关键属性，对那个法术的触发条件施展了@UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{法术反制}。</p>",
           "activities": {
             "S7T82zbsY19sIQOD": {
-              "condition": "when you see a creature within range casting a spell with Verbal, Somatic, or Material components"
+              "condition": "当你在射程内看到一个生物正在施展包含言语、姿势或材料部件的法术时"
             }
           }
         },
         "Prismatic Blast": {
-          "name": "Prismatic Blast",
-          "description": "<p>[[/attack extended]]. [[/damage extended]] ([[lookup @name lowercase]]'s choice).</p>"
+          "name": "棱光爆裂",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]] ([[lookup @name lowercase]]的选择)。</p>"
         },
         "Academy Rings": {
-          "name": "Academy Rings",
-          "description": "<p>The [[lookup @name lowercase]] can cast a spell they know without expending a use of it.</p>"
+          "name": "学院戒指",
+          "description": "<p>该[[lookup @name lowercase]]可以施展一个他们已知的法术而不消耗其使用次数。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes the [[/item .US532wv3adaihLff]] attacks.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动[[/item .US532wv3adaihLff]]攻击。</p>"
         },
         "S3wbsuA6qZm4vQS3": {
-          "name": "Counterspell",
-          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.</p>",
+          "name": "法术反制",
+          "description": "<p>你尝试打断一个生物正在施展法术的过程。该生物进行一次体质豁免。豁免失败时，该法术消散且不产生任何效果，并且用于施展它的动作、附赠动作或反应被浪费。若该法术是用法术位施展的，则法术位不会被消耗。</p>",
           "activation": {
             "condition": "当你看见范围内一名生物施展一道法术时执行"
           },
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术变更"
             }
           }
         },
         "Detect Magic": {
-          "name": "Detect Magic",
-          "description": "<p>For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell's school of magic.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p>",
+          "name": "侦测魔法",
+          "description": "<p>在持续时间内，你感知到自身30尺范围内存在的魔法效应。如果你感知到此类效应，你可以使用魔法动作来查看区域内任何可见生物或带有魔法的物件周围微弱的灵光，并且如果一个效应是由法术创造的，你还会得知该法术的魔法学派。</p><p>此法术会被1尺厚的石头、泥土或木头；1英寸厚的金属；或一层薄铅板所阻挡。</p>",
           "effects": {
             "Detect Magic": {
-              "name": "Detect Magic"
+              "name": "侦测魔法"
             }
           }
         },
         "Mage Armor": {
-          "name": "Mage Armor",
-          "description": "<p>You touch a willing creature who isn't wearing armor. Until the spell ends, the target's base AC becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor.</p>",
+          "name": "法师护甲",
+          "description": "<p>你触碰一个未穿着护甲的自愿生物。直至该法术终止前，目标的护甲等级：变为13，外加其敏捷调整值。若目标穿上护甲，则法术提前终止。</p>",
           "materials": {
-            "value": "a piece of cured leather"
+            "value": "一块鞣制好的皮甲"
           },
           "effects": {
             "Mage Armor": {
-              "name": "Mage Armor",
-              "description": "<p>The target's base AC becomes 13 + its Dexterity modifier.</p>"
+              "name": "法师护甲",
+              "description": "<p>目标的基础AC变为13 + 其敏捷调整值。</p>"
             }
           }
         },
@@ -13705,434 +13705,434 @@
         },
         "Mage Hand": {
           "name": "法师之手",
-          "description": "<p>A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.</p><p>When you cast the spell, you can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial.</p><p>As a Magic action on your later turns, you can control the hand thus again. As part of that action, you can move the hand up to 30 feet.</p><p>The hand can't attack, activate magic items, or carry more than 10 pounds.</p>"
+          "description": "<p>一只幽灵般的漂浮之手出现在你于射程内指定的一点。该手持续存在至法术持续时间结束。若该手与你之间的距离超过30尺，或你再次施展此法术后，该手便会消失。</p><p>当你施展此法术后，你可以使用该手来操纵一个物件，打开未上锁的门或容器，从打开的容器中存放或取出物品，或倒出小瓶中的内容物。</p><p>在你后续回合中，你可以消耗一个魔法动作再次如此控制该手。作为该动作的一部分，你可以将该手移动至多30尺。</p><p>该手无法攻击，无法启动魔法物品，也无法携带超过10磅重量的物品。</p>"
         },
         "Unseen Servant": {
-          "name": "Unseen Servant",
-          "description": "<p>This spell creates an Invisible, mindless, shapeless, Medium force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 Hit Point, and a Strength of 2, and it can't attack. If it drops to 0 Hit Points, the spell ends.</p><p>Once on each of your turns as a Bonus Action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring drinks. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.</p><p>If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.</p>",
+          "name": "隐形仆役",
+          "description": "<p>该法术会创造一个隐形、无心智、无定形、中型的力场，它会遵照你的命令执行简单任务，直到法术终止。该仆从会出现在射程内地面上的一个未占据空间。它具有AC 10，1点生命值，以及2点力量，并且不能攻击。如果它的生命值降至0，法术终止。</p><p>在你的每个回合中，你可以用一个附赠动作，以心灵感应命令该仆从移动最多15尺并与一个物件互动。该仆从可以执行人类能够完成的简单任务，例如取物、清洁、修补、叠衣、生火、上菜和倒酒。一旦你下达命令，该仆从会尽其所能执行任务直到完成，然后等待你的下一个命令。</p><p>如果你命令该仆从执行一个会使其移动至距离你超过60尺的任务，则法术终止。</p>",
           "materials": {
-            "value": "a bit of string and of wood"
+            "value": "一点线和木头"
           }
         },
         "Fly": {
-          "name": "Fly",
-          "description": "<p>You touch a willing creature. For the duration, the target gains a Fly Speed of 60 feet and can hover. When the spell ends, the target falls if it is still aloft unless it can stop the fall.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 3.</p>",
+          "name": "飞行术",
+          "description": "<p>你触碰一个自愿生物。在持续时间内，目标获得60尺的飞行速度并且可以悬停。当法术结束时，如果目标仍在空中且无法阻止坠落，它就会坠落。</p><p><strong>使用更高法术位。</strong> 你使用的法术位每比3环高一级，就可以多指定一个目标。</p>",
           "materials": {
-            "value": "a feather"
+            "value": "一根羽毛"
           },
           "effects": {
             "Flight": {
-              "name": "Flight"
+              "name": "飞行"
             }
           }
         },
         "Ice Storm": {
-          "name": "Ice Storm",
-          "description": "<p>Hail falls in a 20-foot-radius, 40-foot-high Cylinder centered on a point within range. Each creature in the Cylinder makes a Dexterity saving throw. A creature takes 2d10 Bludgeoning damage and 4d6 Cold damage on a failed save or half as much damage on a successful one.</p><p>Hailstones turn ground in the Cylinder into &amp;Reference[DifficultTerrain] until the end of your next turn.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The Bludgeoning damage increases by 1d10 for each spell slot level above 4.</p>",
+          "name": "冰风暴",
+          "description": "<p>冰雹降落在射程内一点为中心，半径20尺，高40尺的柱状区域内。柱状区域内的每个生物进行一次敏捷豁免。豁免失败时，一个生物受到2d10钝击伤害和4d6冷冻伤害，豁免成功则只受一半伤害。</p><p>冰雹会将柱状区域内的地面变为&amp;Reference[DifficultTerrain]，持续到你的下个回合结束。</p><p><strong>使用更高法术位。</strong>使用的法术位每比4环高一环，钝击伤害就增加1d10。</p>",
           "materials": {
-            "value": "a mitten"
+            "value": "一只连指手套"
           }
         },
         "Lightning Bolt": {
-          "name": "Lightning Bolt",
-          "description": "<p>A stroke of lightning forming a 100-foot-long, 5-foot-wide Line blasts out from you in a direction you choose. Each creature in the Line makes a Dexterity saving throw, taking 8d6 Lightning damage on a failed save or half as much damage on a successful one.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 3.</p>",
+          "name": "闪电束",
+          "description": "<p>一道100尺长、5尺宽的线状闪电从你体内朝你选择的方向迸发而出。线状区域内的每个生物进行一次敏捷豁免，豁免失败则受到8d6闪电伤害，豁免成功则伤害减半。</p><p><strong>使用更高法术位。</strong>使用3环以上法术位施展该法术时，所用法术位每比3环高一环，伤害就增加1d6。</p>",
           "materials": {
-            "value": "a bit of fur and a crystal rod"
+            "value": "一点毛皮和一根水晶权杖"
           }
         },
         "Banishment": {
-          "name": "Banishment",
-          "description": "<p>One creature that you can see within range must succeed on a Charisma saving throw or be transported to a harmless demiplane for the duration. While there, the target has the &amp;Reference[Incapacitated apply=false] condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.</p><p>If the target is an Aberration, a Celestial, an Elemental, a Fey, or a Fiend, the target doesn't return if the spell lasts for 1 minute. The target is instead transported to a random location on a plane (DM's choice) associated with its creature type.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 4.</p>",
+          "name": "放逐术",
+          "description": "<p>射程内你能看见的单一生物必须进行一次魅力豁免，若失败则在该法术的持续时间内被传送至一个无害的半位面。身处其中时，目标处于&Reference[Incapacitated apply=false]状态。当法术终止时，目标会重新出现在其离开的空间，若该空间已被占据则出现在最近的未占据空间。</p><p>若目标为异怪、天族、元素生物、精类生物或邪魔，且该法术持续了1分钟，则目标不会返回。取而代之的是，目标会被传送至与其生物类型相关的某个位面（由DM选择）上的随机位置。</p><p><strong>使用更高法术位。</strong> 你使用的法术位每比4环高一级，就能多指定一个目标。</p>",
           "materials": {
-            "value": "a pentacle"
+            "value": "一个五芒星"
           },
           "effects": {
             "Banished": {
-              "name": "Banished",
-              "description": "<p>While there, the target has the &amp;Reference[Incapacitated apply=false] condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.</p><p>If the target is an Aberration, a Celestial, an Elemental, a Fey, or a Fiend, the target doesn’t return if the spell lasts for 1 minute. The target is instead transported to a random location on a plane (DM’s choice) associated with its creature type.</p>"
+              "name": "被放逐",
+              "description": "<p>在彼处时，目标处于&amp;Reference[Incapacitated apply=false]状态。当法术结束时，目标会重新出现在其离开的空间，若该空间已被占据，则出现在最近的未占据空间。</p><p>若目标为异怪、天族、元素生物、精类生物或邪魔，且法术持续1分钟，则目标不会返回。取而代之的是，目标会被传送至与其生物类型相关的随机位面（由DM选择）。</p>"
             }
           }
         },
         "Wall of Force": {
-          "name": "Wall of Force",
-          "description": "<p>An Invisible wall of force springs into existence at a point you choose within range. The wall appears in any orientation you choose, as a horizontal or vertical barrier or at an angle. It can be free floating or resting on a solid surface. You can form it into a hemispherical dome or a globe with a radius of up to 10 feet, or you can shape a flat surface made up of ten 10-foot-by-10-foot panels. Each panel must be contiguous with another panel. In any form, the wall is 1/4 inch thick and lasts for the duration. If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (you choose which side).</p><p>Nothing can physically pass through the wall. It is immune to all damage and can't be dispelled by <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Dispel Magic}.</em> A <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDisintegra]{Disintegrate}</em> spell destroys the wall instantly, however. The wall also extends into the Ethereal Plane and blocks ethereal travel through the wall.</p>",
+          "name": "力场墙",
+          "description": "<p>一道隐形的力场墙在你选择射程内的一点突然出现。该墙可以按你选择的任何方向出现，作为水平或垂直的屏障，或呈一定角度。它可以自由悬浮或依托于固体表面。你可以将其塑造成一个半径最多10尺的半球形穹顶或球体，或者塑造一个由十个10尺乘10尺面板组成的平坦表面。每个面板必须与另一个面板相邻。无论以何种形式出现，该墙的厚度均为1/4英寸，并在持续时间内存在。如果该墙出现时穿过一个生物的空间，该生物会被推到墙的一侧（由你选择哪一侧）。</p><p>没有任何物体能物理性地穿过该墙。它对所有伤害免疫，且不能被<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{解除魔法}</em>所驱散。然而，<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDisintegra]{解离术}</em>法术会立即摧毁该墙。该墙还延伸至以太位面，并阻挡通过该墙的以太旅行。</p>",
           "materials": {
-            "value": "a shard of glass"
+            "value": "一片玻璃碎片"
           },
           "activities": {
             "Sphere or Globe": {
-              "name": "Sphere or Globe"
+              "name": "球状或球状"
             },
             "Panels": {
-              "name": "Panels"
+              "name": "面板"
             }
           }
         }
       },
       "effects": {
         "Mage Armor": {
-          "name": "Mage Armor",
-          "description": "<p>The target's base AC becomes 13 + its Dexterity modifier.</p>"
+          "name": "法师护甲",
+          "description": "<p>目标的护甲等级：基础值变为13 + 其敏捷调整值。</p>"
         }
       }
     },
     "Bloated Dreg": {
-      "name": "Bloated Dreg",
-      "tokenName": "Bloated Dreg",
+      "name": "臃肿的沉渣",
+      "tokenName": "臃肿的沉渣",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.47biooateddreg00 inline]</p>",
       "items": {
         "Amphibious": {
-          "name": "Amphibious",
-          "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+          "name": "水陆两栖Amphibious。",
+          "description": "<p>该[[lookup @name lowercase]]可以呼吸空气和水。</p>"
         },
         "Acid Spray": {
-          "name": "Acid Spray",
-          "description": "<p>Dexterity Saving Throw: DC 11, each creature in a 15-foot Cone. Failure: 5 (2d4) Acid damage and is &amp;reference[burning] (2d4 Acid).</p>",
+          "name": "强酸喷射",
+          "description": "<p>敏捷豁免：DC 11，15尺锥形区域内的每个生物。豁免失败：5（2d4）强酸伤害并陷入&amp;reference[burning]（2d4强酸伤害）。</p>",
           "effects": {
             "Burning (2d4 Acid)": {
-              "name": "Burning (2d4 Acid)",
-              "description": "<p>You are &amp;reference[burning apply=false] from being covered in acid.</p><ul><li><p>At the end of each of your turns, you take [[/damage average acid 2d4]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to scrape off the acid or if some other effect removes it.</p></li></ul>"
+              "name": "燃烧 (2d4 强酸)",
+              "description": "<p>你因被强酸覆盖而处于&amp;reference[燃烧 apply=false]状态。</p><ul><li><p>在你的每个回合结束时，你受到[[/damage average acid 2d4]]伤害。</p></li><li><p>如果你或5尺内的另一生物花费动作刮除强酸，或其他效果将其移除，则该状态结束。</p></li></ul>"
             }
           }
         },
         "Slam": {
-          "name": "Slam",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "猛击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         }
       }
     },
     "Eldritch Troll": {
-      "name": "Eldritch Troll",
-      "tokenName": "Eldritch Troll",
+      "name": "诡术巨魔",
+      "tokenName": "诡术巨魔",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.159bioritchtroll inline]</p>",
       "items": {
         "Regeneration": {
-          "name": "Regeneration",
-          "description": "<p>The [[lookup @name lowercase]] regains 10 Hit Points at the start of each of its turns. If the [[lookup @name lowercase]] takes Force or Psychic damage, this trait doesn't function at the start of the [[lookup @name lowercase]]'s next turn. The [[lookup @name lowercase]] dies only if it starts its turn with 0 Hit Points and doesn't regenerate.</p>"
+          "name": "再生",
+          "description": "<p>[[lookup @name lowercase]]在其每回合开始时恢复10点生命值。如果[[lookup @name lowercase]]受到力场或心灵伤害，此特性在其下一回合开始时不会生效。[[lookup @name lowercase]]仅当在其回合开始时生命值为0且未触发再生术时才会死亡。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item vCvUgOWh1N3fUcrF]] attacks and one [[/item M9Lu3UX3auiSprkq]] attack. It can replace its Bite attack with [[/item O0z1R5pfKtirm9nF]] if available.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动两次[[/item vCvUgOWh1N3fUcrF]]攻击和一次[[/item M9Lu3UX3auiSprkq]]攻击。若可用，它可以用[[/item O0z1R5pfKtirm9nF]]取代其啃咬攻击。</p>"
         },
         "Corrupting Blast": {
-          "name": "Corrupting Blast",
-          "description": "<p>The [[lookup @name lowercase]] blasts a corrupting beam at a point it can see within 300 feet. <em>Constitution Saving Throw:</em> DC 16, all creatures in a 10-foot-radius Sphere centered on that point. <em>Failure:</em> [[/damage average]] damage and gains a level of &amp;reference[drakkenheimContamination]. <em>Success:</em> Half damage only.</p>"
+          "name": "腐化冲击",
+          "description": "<p>[[lookup @name lowercase]]向一个它能看到且300尺内的点发射一道腐化光束。<em>体质豁免:</em> DC 16，所有位于以该点为中心10尺半径球状区域内的生物。<em>失败:</em> [[/damage average]]伤害并获得一级&amp;reference[drakkenheimContamination]。<em>成功:</em> 仅受到一半伤害。</p>"
         },
         "Forced Mutation": {
-          "name": "Forced Mutation",
-          "description": "<p>The [[lookup @name lowercase]] is so contaminated that it changes form constantly, growing new appendages or exploding out of its old skin into a new form. The [[lookup @name lowercase]] may manifest one of the following mutations. The mutation stays in effect until a new one is chosen.</p><ol><li><p><strong>Grotesque Wings.</strong> The [[lookup @name lowercase]] gains a Fly Speed equal to is Speed, but it falls if it ends its turn in the air.</p></li><li><p><strong>Cyclopean Eye.</strong> Corrupting Blast now recharges on a 4–6, and the [[lookup @name lowercase]] gains Truesight 30 ft.</p></li><li><p><strong>Extra Arms.</strong> The [[lookup @name lowercase]] can make two additional Claw attacks as part of the Multiattack action.</p></li><li><p><strong>Spider Legs.</strong> The [[lookup @name lowercase]] gains a Climb Speed equal to its Speed and can climb difficult surfaces, including along ceilings, without needing to make an ability check.</p></li><li><p><strong>Reflective Flesh.</strong> The [[lookup @name lowercase]] has the Invisible condition until it makes an attack.</p></li><li><p><strong>Crystalized Carapace.</strong> The [[lookup @name lowercase]]'s Armor Class becomes 20.</p></li></ol>",
+          "name": "强制突变",
+          "description": "<p>[[lookup @name lowercase]]受到严重污染，以至于形态不断变化，生长出新的附肢或从旧皮囊中爆裂形成新形态。[[lookup @name lowercase]]可能显现以下变异之一。该变异持续生效直至选择新变异。</p><ol><li><p><strong>畸形翅膀。</strong> [[lookup @name lowercase]]获得等于其速度的飞行速度，但若其回合结束时处于空中则会坠落。</p></li><li><p><strong>独眼巨人之眼。</strong> 腐化冲击现在会在4–6充能，且[[lookup @name lowercase]]获得30尺真实视觉。</p></li><li><p><strong>额外手臂。</strong> [[lookup @name lowercase]]在进行多重攻击动作时能额外发动两次爪击。</p></li><li><p><strong>蜘蛛腿。</strong> [[lookup @name lowercase]]获得等于其速度的攀爬速度，且能攀爬困难表面（包括天花板）而无需进行属性检定。</p></li><li><p><strong>反射表皮。</strong> [[lookup @name lowercase]]获得隐形状态直至其发动攻击。</p></li><li><p><strong>晶化甲壳。</strong> [[lookup @name lowercase]]的护甲等级变为20。</p></li></ol>",
           "activities": {
             "Mutate: Grotesque Wings": {
-              "name": "Mutate: Grotesque Wings"
+              "name": "突变：怪诞之翼"
             },
             "Mutate: Cyclopean Eye": {
-              "name": "Mutate: Cyclopean Eye"
+              "name": "突变：独眼巨人眼"
             },
             "Mutate: Extra Arms": {
-              "name": "Mutate: Extra Arms"
+              "name": "突变：额外手臂"
             },
             "Mutate: Spider Legs": {
-              "name": "Mutate: Spider Legs"
+              "name": "突变：蜘蛛腿"
             },
             "Mutate: Reflective Flesh": {
-              "name": "Mutate: Reflective Flesh"
+              "name": "突变：反射血肉"
             },
             "Mutate: Crystalized Carapace": {
-              "name": "Mutate: Crystalized Carapace"
+              "name": "突变：晶化甲壳"
             }
           },
           "effects": {
             "Forced Mutation: Grotesque Wings": {
-              "name": "Forced Mutation: Grotesque Wings",
-              "description": "<p>The eldritch troll gains a Fly Speed equal to is Speed, but it falls if it ends its turn in the air.</p>"
+              "name": "强制突变：怪诞之翼",
+              "description": "<p>该诡术巨魔获得等于其速度的飞行速度，但若它在空中结束其回合，则会坠落。</p>"
             },
             "Forced Mutation: Cyclopean Eye": {
-              "name": "Forced Mutation: Cyclopean Eye",
-              "description": "<p>Corrupting Blast now recharges on a 4–6, and the eldritch troll gains Truesight 30 ft.</p>"
+              "name": "强制突变：独眼巨人眼",
+              "description": "<p>腐化爆裂现在于4–6充能, 并且该邪术巨魔获得30尺真实视觉。</p>"
             },
             "Forced Mutation: Extra Arms": {
-              "name": "Forced Mutation: Extra Arms",
-              "description": "<p>The eldritch troll can make two additional Claw attacks as part of the Multiattack action.</p>"
+              "name": "强制突变：额外手臂",
+              "description": "<p>该邪术巨魔可以在多重攻击Multiattack动作中额外发动两次爪击。</p>"
             },
             "Forced Mutation: Spider Legs": {
-              "name": "Forced Mutation: Spider Legs",
-              "description": "<p>The eldritch troll gains a Climb Speed equal to its Speed and can climb difficult surfaces, including along ceilings, without needing to make an ability check.</p>"
+              "name": "强制突变：蜘蛛腿",
+              "description": "<p>该邪术巨魔获得等于其速度的攀爬速度，并且可以在困难表面上攀爬，包括沿着天花板，而无需进行属性检定。</p>"
             },
             "Forced Mutation: Reflective Flesh": {
-              "name": "Forced Mutation: Reflective Flesh",
-              "description": "<p>The eldritch troll has the &amp;reference[Invisible apply=false] condition until it makes an attack.</p>"
+              "name": "强制突变：反射血肉",
+              "description": "<p>该诡术巨魔拥有&amp;reference[Invisible apply=false]状态，直到它发动一次攻击。</p>"
             },
             "Forced Mutation: Crystalized Carapace": {
-              "name": "Forced Mutation: Crystalized Carapace",
-              "description": "<p>The eldritch troll’s Armor Class becomes 20.</p>"
+              "name": "强制突变：晶化甲壳",
+              "description": "<p>该邪术巨魔的护甲等级变为20。</p>"
             }
           }
         },
         "Bite": {
-          "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and the target is subjected to the following effect. <em>Constitution Saving Throw:</em> DC 16. Failure: The target gains one level of &amp;reference[drakkenheimContamination].</p>",
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]，且目标受到以下效果影响。<em>体质豁免：</em> DC 16。失败：目标获得一级&amp;reference[drakkenheimContamination]。</p>",
           "activities": {
             "Contamination Save": {
-              "name": "Contamination Save"
+              "name": "污染豁免"
             }
           }
         },
         "Claws": {
-          "name": "Claws",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "爪击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         }
       }
     },
     "Lenore von Kessel": {
-      "name": "Lenore von Kessel",
-      "tokenName": "Lenore von Kessel",
+      "name": "莱诺尔·冯·凯塞尔",
+      "tokenName": "莱诺尔·冯·凯塞尔",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.65bionorevonkess inline]</p>",
       "items": {
         "Radiant Gaze": {
-          "name": "Radiant Gaze",
-          "description": "<p><em>Constitution Saving Throw:</em> DC 15, each creature in a 30-foot Cone. <em>Failure:</em> [[/damage average]] damage and the target gains one level of Contamination. Success: Half damage only. If [[lookup @name]] sees her reflection within the Cone, she gains the &amp;reference[Blinded] and &amp;reference[Incapacitated] conditions for [[/r 1d6]] hours.</p>",
+          "name": "光耀凝视",
+          "description": "<p><em>体质豁免:</em> DC15, 30尺锥状区域内的每个生物。 <em>失败:</em> [[/damage average]]伤害且目标获得1级污染。 成功: 仅受到一半伤害。 如果[[lookup @name]]在锥状区域内看到自己的倒影, 她获得&amp;reference[Blinded]和&amp;reference[Incapacitated]状态, 持续[[/r 1d6]]小时。</p>",
           "effects": {
             "Incapacitating Visage": {
-              "name": "Incapacitating Visage",
-              "description": "<p>Seeing her own reflection, Lenore is &amp;reference[blinded apply=false] and &amp;reference[incapacitated apply=false] for [[/r 1d6]] hours..</p>"
+              "name": "致残面容",
+              "description": "<p>看到自己的倒影后，莱诺尔陷入&amp;reference[blinded apply=false]和&amp;reference[incapacitated apply=false]状态，持续[[/r 1d6]]小时。</p>"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>[[lookup @name]] makes three attacks with her [[/item wGk0j2uUB7ToU4jb]].</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>[[lookup @name]]使用她的[[/item wGk0j2uUB7ToU4jb]]发动三次攻击。</p>"
         },
         "Tentacle Hair": {
-          "name": "Tentacle Hair",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and if the target is a creature it is subjected to the following effect. <em>Constitution Saving Throw:</em> DC 14. <em>Failure:</em> The target gains one level of Contamination.</p>",
+          "name": "触须发",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]，如果目标是一个生物，则受到以下效果影响。<em>体质豁免：</em> DC14。<em>失败：</em> 目标获得一级污染。</p>",
           "activities": {
             "Save": {
-              "name": "Save"
+              "name": "豁免"
             }
           }
         }
       }
     },
     "Garmyr Bloodhound": {
-      "name": "Garmyr Bloodhound",
-      "tokenName": "Garmyr Bloodhound",
+      "name": "加尔米尔猎犬",
+      "tokenName": "加尔米尔寻血犬",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.80biormyr0000000 inline]</p>",
       "items": {
         "Skilled Hunter": {
-          "name": "Skilled Hunter",
-          "description": "<p>The [[lookup @name lowercase]]'s ranged attacks ignore &amp;reference[Halfcover] and &amp;reference[ThreeQuartersCover].</p>"
+          "name": "熟习猎人",
+          "description": "<p>[[lookup @name lowercase]]的远程攻击无视&reference[Halfcover]和&reference[ThreeQuartersCover]。</p>"
         },
         "Kill Shot": {
-          "name": "Kill Shot",
-          "description": "<p>The [[lookup @name lowercase]]'s ranged attacks deal an extra [[/damage average]] damage to a &amp;reference[Bloodied] creature.</p>"
+          "name": "致命射击",
+          "description": "<p>[[lookup @name lowercase]]的远程攻击对&amp;reference[Bloodied]生物额外造成[[/damage average]]伤害。</p>"
         },
         "Skirmisher": {
-          "name": "Skirmisher",
-          "description": "<p><em>Trigger:</em> A Hostile creature ends its movement within 5 feet of the [[lookup @name lowercase]]. <em>Response:</em> The [[lookup @name lowercase]] moves up to its Speed without provoking Opportunity Attacks.</p>",
+          "name": "散兵",
+          "description": "<p><em>触发:</em> 一个敌对生物在距离[[lookup @name lowercase]] 5尺内结束其移动。 <em>回应:</em> [[lookup @name lowercase]]移动至多等同于其速度的距离，且不触发借机攻击。</p>",
           "activities": {
             "utility": {
-              "condition": "When a hostile creature ends its movement within 5 feet of the garmyr."
+              "condition": "当一个敌对生物在5尺内结束其移动时。"
             }
           }
         },
         "Hunter's Quarry": {
-          "name": "Hunter's Quarry",
-          "description": "<p>The garmyr casts @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{Hunter's Mark}, using Wisdom as the spellcasting ability.</p>"
+          "name": "猎人的猎物",
+          "description": "<p>该伽尔米尔施展 @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{猎人印记}，使用感知作为施法关键属性。</p>"
         },
         "Pack Tactics": {
-          "name": "Pack Tactics",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on attack rolls against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn't have the &amp;reference[Incapacitated apply=false] condition.</p>"
+          "name": "集群战术",
+          "description": "<p>如果[[lookup @name lowercase]]的至少一名盟友位于该生物5尺内，且该盟友未处于&amp;reference[Incapacitated apply=false]状态，则[[lookup @name lowercase]]对该生物进行的攻击检定具有优势。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes three attacks.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动三次攻击。</p>"
         },
         "Bite": {
-          "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Hunter's Mark": {
-          "name": "Hunter's Mark",
-          "description": "<p>You magically mark one creature you can see within range as your quarry. Until the spell ends, you deal an extra 1d6 Force damage to the target whenever you hit it with an attack roll. You also have Advantage on any [[/check ability=wis skill=prc]] or [[/check ability=wis skill=sur]] check you make to find it.</p><p>If the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action to move the mark to a new creature you can see within range.</p><p><strong>Using a Higher-Level Spell Slot.</strong> Your Concentration can last longer with a spell slot of level 3–4 (up to 8 hours) or 5+ (up to 24 hours).</p>",
+          "name": "猎人印记",
+          "description": "<p>你魔法性地标记一个在射程内你能看见的单一生物作为你的猎物。直到法术结束，每当你通过攻击检定命中目标时，你对其额外造成1d6力场伤害。你在为寻找它而进行的任何[[/check ability=wis skill=prc]]或[[/check ability=wis skill=sur]]检定上都具有优势。</p><p>如果目标在此法术结束前生命值降至0，你可以使用一个附赠动作将标记转移至射程内你能看见的另一个生物。</p><p><strong>使用更高等级法术位。</strong> 使用3–4级法术位时，你的专注可持续更久（最多8小时），或使用5级以上法术位时（最多24小时）。</p>",
           "activities": {
             "Bonus Mark Damage": {
-              "name": "Bonus Mark Damage"
+              "name": "额外印记伤害"
             },
             "Mark Creature": {
-              "name": "Mark Creature"
+              "name": "标记生物"
             }
           },
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术变更"
             }
           }
         },
         "Longbow": {
-          "name": "Longbow",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and the target has the &amp;reference[Slowed] condition until the start of the [[lookup @name lowercase]] next turn.</p>",
+          "name": "长弓",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标获得&amp;reference[Slowed]状态，持续至[[lookup @name lowercase]]的下一回合开始。</p>",
           "effects": {
             "Slowed": {
-              "name": "Slowed",
-              "description": "<p>You are &amp;reference[slowed apply=false] until the end of the garmyr's next turn.</p>"
+              "name": "减速",
+              "description": "<p>你被&amp;reference[slowed apply=false]直到该伽米尔的下一回合结束。</p>"
             }
           }
         },
         "Spear": {
-          "name": "Spear",
-          "description": "<p>[[/attack extended]]. [[/damage extended]] or [[/damage 1d8 + 3 piercing average]] damage if wielded with two hands to make a melee attack.</p>"
+          "name": "矛",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]或[[/damage 1d8 + 3 piercing average]]伤害，双手持用时进行近战攻击。</p>"
         },
         "Arrows": {
-          "name": "Arrows",
-          "description": "<p><em><strong>Storage:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{Quiver}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{Ammunition} is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately.</p>"
+          "name": "箭矢",
+          "description": "<p><em><strong>存储:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性的武器所必需的。武器的描述会指明该武器使用的弹药类型。弹药表列出了不同类型的弹药以及购买时获得的数量。该表还列出了通常用于存储每种类型的物品；存储容器必须单独购买。</p>"
         },
         "Quiver": {
-          "name": "Quiver",
-          "description": "<p>A Quiver holds up to 20 Arrows.</p>"
+          "name": "箭袋",
+          "description": "<p>一个箭袋最多可容纳20支箭矢。</p>"
         },
         "Studded Leather Armor": {
-          "name": "Studded Leather Armor"
+          "name": "镶钉皮甲"
         }
       }
     },
     "Queen of Thieves": {
-      "name": "Queen of Thieves",
-      "tokenName": "Queen of Thieves",
+      "name": "盗贼女王",
+      "tokenName": "盗贼女王",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.213bioeensmen000 inline]</p>",
       "items": {
         "Canny Defense": {
-          "name": "Canny Defense",
-          "description": "<p>While the [[lookup @name]] is wearing light or no armor and wielding no shield, her AC includes her Intelligence modifier.</p>",
+          "name": "灵巧防御",
+          "description": "<p>当[[lookup @name]]穿着轻甲或未着甲且未持用护盾时，她的护甲等级包括其智力调整值。</p>",
           "effects": {
             "Canny Defense": {
-              "name": "Canny Defense",
-              "description": "<p>While the Queen of Thieves is not wearing armor, and wielding no shield, her Armor Class includes her Intelligence modifier.</p>"
+              "name": "灵巧防御",
+              "description": "<p>当盗贼女王未穿着护甲且未持用护盾时，她的护甲等级包含其智力调整值。</p>"
             }
           }
         },
         "Masked Identity": {
-          "name": "Masked Identity",
-          "description": "<p>The [[lookup @name]] is immune to any effect that would sense her emotions or read her thoughts, as well as any divination spell that she refuses. Wisdom (Insight) checks made to ascertain her intentions or sincerity have Disadvantage.</p>"
+          "name": "伪装身份",
+          "description": "<p>该[[lookup @name]]免疫任何能感知其情绪或读取其思想的效果，以及任何她拒绝的{预言术}法术。为确认其意图或诚意而进行的{感知}{洞悉}{检定}具有{劣势}。</p>"
         },
         "Memory Thief": {
-          "name": "Memory Thief",
-          "description": "<p>Creatures are not aware when the [[lookup @name]] reads their thoughts or imposes the &amp;reference[Charmed apply=false] condition on them. Additionally, when a spell cast by the her that causes creatures to become Charmed ends, she can make affected creatures lose their memories. Each creature must succeed on a [[/save]] saving throw or forget up to 8 hours of the time spent Charmed by her. These memories can be restored with a @UUID[Compendium.dnd5e.spells24.Item.phbsplHeal000000] spell or similar magic.</p>",
+          "name": "记忆窃贼",
+          "description": "<p>当[[lookup @name]]读取生物的思想或对其施加&amp;reference[Charmed apply=false]状态时，生物不会察觉。此外，当地施展的导致生物被魅惑的法术结束时，她可以使受影响的生物失去记忆。每个生物必须进行一次[[/save]]豁免，否则将忘记最多8小时被她魅惑期间的记忆。这些记忆可以通过@UUID[Compendium.dnd5e.spells24.Item.phbsplHeal000000]法术或类似魔法恢复。</p>",
           "activities": {
             "Memory Loss Save": {
-              "name": "Memory Loss Save",
-              "condition": "When a spell cast by the Queen of Thieves that causes a creatures to become Charmed ends."
+              "name": "记忆丧失豁免",
+              "condition": "当盗贼女王施展的一个使生物陷入魅惑状态的法术结束时。"
             }
           }
         },
         "Vexing Aura": {
-          "name": "Vexing Aura",
-          "description": "<p>The [[lookup @name]] projects a 30-foot Emanation of bewitching magic. At the start of each of her turns, she can choose the aura's effect, which applies to creatures of her choice in the Emanation:</p><ul><li><p><strong>Enchanting Presence.</strong> A creature that starts its turn in the Emanation has the &amp;reference[Charmed] condition until it ends its turn outside the Emanation. If she deals damage to the creature, the condition ends, and that creature is immune to her Enchanting Presence for 24 hours.</p></li><li><p><strong>Mocking Laughter.</strong> A creature that starts its turn in the Emanation takes [[/damage average]] damage.</p></li></ul><fieldset><legend>Foundry Note</legend><p>The \"Change Aura Effect\" activity has two active effects you can apply to the [[lookup @name]] in order to keep track of the current effect of her [[lookup @item.name]].</p></fieldset>",
+          "name": "恼人灵光",
+          "description": "<p>[[lookup @name]] 散发出一个30尺的魅惑魔法{光环}。在她的每个回合开始时，她可以选择{光环}的效果，该效果作用于{光环}内她所选择的生物：</p><ul><li><p><strong>迷人仪态。</strong> 在{光环}内开始其回合的生物获得&amp;reference[Charmed]{状态}，直到其回合结束时离开{光环}范围。如果她对生物造成{伤害}，该{状态}结束，且该生物在24{小时}内对她的迷人仪态{免疫}。</p></li><li><p><strong>嘲弄笑声。</strong> 在{光环}内开始其回合的生物受到[[/damage average]]{伤害}。</p></li></ul><fieldset><legend>Foundry 注</legend><p>\\\"变更{光环}效果\\\"{行动}有两个主动效果，你可以将其应用到[[lookup @name]]上，以便追踪其[[lookup @item.name]]的当前效果。</p></fieldset>",
           "activities": {
             "Change Aura Effect": {
-              "name": "Change Aura Effect"
+              "name": "改变灵光效果"
             },
             "Vexing Aura: Enchanting Presence": {
-              "name": "Vexing Aura: Enchanting Presence"
+              "name": "烦扰灵光：魅惑气场"
             },
             "Vexing Aura: Mocking Laughter": {
-              "name": "Vexing Aura: Mocking Laughter"
+              "name": "烦扰灵光：嘲讽笑声"
             }
           },
           "effects": {
             "Enchanting Presence": {
-              "name": "Enchanting Presence",
-              "description": "<p>You are &amp;reference[charmed apply=false] until you end your turn outside of the Queen of Thieves' Vexing Aura. If the Queen of Thieves deals damage to you, the condition ends and you are immune to her Enchanting Presence for 24 hours.</p>"
+              "name": "魅惑气场",
+              "description": "<p>你将处于&amp;reference[charmed apply=false]状态，直到你在盗贼女王的烦扰灵光外结束你的回合。如果盗贼女王对你造成伤害，该状态结束，并且你在24小时内对她的魅惑存在免疫。</p>"
             },
             "Vexing Aura: Enchanting Presence": {
-              "name": "Vexing Aura: Enchanting Presence",
-              "description": "<p>The Queen of Thieves projects a 30-foot Emanation of bewitching magic.</p><p>A creature that starts its turn in the Emanation has the &amp;reference[Charmed] condition until it ends its turn outside the Emanation. If she deals damage to the creature, the condition ends, and that creature is immune to her Enchanting Presence for 24 hours.</p>"
+              "name": "恼人灵光：惑人仪态",
+              "description": "<p>盗贼女王投射出一个30尺范围的魅惑魔法光环。</p><p>一个在其回合开始时处于该光环内的生物将获得&amp;reference[Charmed]状态，直到它在该光环外结束其回合。如果她对那个生物造成伤害，该状态结束，并且该生物在24小时内对她的魅惑气场免疫。</p>"
             },
             "Vexing Aura: Mocking Laughter": {
-              "name": "Vexing Aura: Mocking Laughter",
-              "description": "<p>The Queen of Thieves projects a 30-foot Emanation of bewitching magic.</p><p>A creature that starts its turn in the Emanation takes [[/damage 4d6 psychic average]] damage.</p>"
+              "name": "恼人灵光：嘲讽之笑",
+              "description": "<p>盗贼女王投射出一个30尺的魅惑魔法光环。</p><p>一个生物在其回合开始时处于该光环内，会受到[[/damage 4d6 psychic average]]心灵伤害。</p>"
             }
           }
         },
         "Rapier +3": {
-          "name": "Rapier +3",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "刺剑 +3",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Cutting Words": {
-          "name": "Cutting Words",
-          "description": "<p><em>Intelligence Saving Throw:</em> DC 18, one creature within 120 feet of the Queen of Thieves. <em>Failure:</em> [[/damage average]] damage, and the target has Disadvantage on the next D20 Test it makes before the end of its next turn. <em>Success:</em> Half damage only.</p>",
+          "name": "尖刻之言",
+          "description": "<p><em>智力豁免:</em> DC 18, 盗贼女王120尺内单一生物。 <em>失败:</em> [[/damage average]]伤害, 且目标在其下个回合结束前进行的下一次D20检定具有劣势。 <em>成功:</em> 仅承受半数伤害。</p>",
           "effects": {
             "Cutting Words": {
-              "name": "Cutting Words",
-              "description": "<p>You have Disadvantage on the next D20 test you make before the end of your next turn.</p>"
+              "name": "尖刻言辞",
+              "description": "<p>在你的下一个回合结束前，你进行的下一次D20检定具有劣势。</p>"
             }
           }
         },
         "Dash": {
-          "name": "Dash",
-          "description": "<p>The [[lookup @name]] moves up to her Speed without provoking Opportunity Attacks.</p>"
+          "name": "疾走",
+          "description": "<p>该[[lookup @name]]移动至多等同于其{速度}的距离，且不触发{借机攻击}。</p>"
         },
         "Misdirection": {
-          "name": "Misdirection",
-          "description": "<p>The [[lookup @name]] becomes &amp;reference[Invisible] and teleports to an unoccupied space she can see within 60 feet. At the same time, an illusory double of her appears where she was standing. The illusory double, as well as the Invisible condition, end if the [[lookup @name]] attacks or casts a spell, or after 1 minute.</p>"
+          "name": "误导术",
+          "description": "<p>[[lookup @name]]变为&amp;reference[Invisible]状态，并传送至她可见的60尺内一个未占据空间。同时，一个她的幻象分身出现在她原本站立的位置。如果[[lookup @name]]进行攻击或施展法术，该幻象分身及隐形状态将立即结束，或在1分钟后自动终止。</p>"
         },
         "Spellcasting": {
-          "name": "Spellcasting",
-          "description": "<p>The Queen of Thieves casts a spells she knows, requiring no Verbal or Somatic components and using Intelligence as the spellcasting ability (spell save DC 18, +10 to spell attacks).</p>"
+          "name": "施法",
+          "description": "<p>盗贼女王施展一个她知晓的法术，无需言语或姿势部件，并使用智力作为施法关键属性（法术豁免DC 18，法术攻击+10）。</p>"
         },
         "Epic Boss": {
-          "name": "Epic Boss",
-          "description": "<p>This creature is an Epic Boss, a unique foe designed to pose a solo threat to an entire adventuring party. As such, it has additional game rules that sets it apart from normal creatures:</p><p>The [[lookup @name]] always takes their turn on Initiative count 20. On their turn, they can use their movement and interaction as normal. However, they do not take an action or Bonus Action on their turn unless forced to do so by a spell or other effect. Instead, the [[lookup @name]] takes one of the following Epic Actions at the end of each player character's turn.</p><p>All this creature's actions are Epic Actions.</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.6trxS1VGrluNB303]{Rapier +3}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.SxBs8WeS1al6zffw]{Cutting Words}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.EzxKzK1Ddqwy1mx0]{Dash}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.zvzYMo8tfwEheAE3]{Misdirection}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.trL6eGu4Z4tAiRXz]{Spellcasting}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.YM9oY3Bewt1wnISa]{Epic Resistance}</p></li></ul>",
+          "name": "史诗首领",
+          "description": "<p>该生物是一个史诗首领,一个独特的敌人,旨在对整个冒险队伍构成单独威胁。因此,它拥有区别于普通生物的额外游戏规则:</p><p>[[lookup @name]]总是在先攻值20时进行其回合。在其回合中,它可以正常使用移动和互动。然而,除非被法术或其他效果强制,否则它不会在其回合中执行动作或附赠动作。取而代之的是,[[lookup @name]]会在每个玩家角色回合结束时执行以下史诗动作之一。</p><p>该生物的所有动作都是史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.6trxS1VGrluNB303]{刺剑+3}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.SxBs8WeS1al6zffw]{讥讽术}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.EzxKzK1Ddqwy1mx0]{疾走}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.zvzYMo8tfwEheAE3]{误导术}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.trL6eGu4Z4tAiRXz]{施法}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.k6q6YbmVI2v1L053.Item.YM9oY3Bewt1wnISa]{史诗抗性}</p></li></ul>",
           "effects": {
             "Epic Boss": {
-              "name": "Epic Boss",
-              "description": "<p>This creature is an Epic Boss, a unique foe designed to pose a solo threat to an entire adventuring party. As such, it has additional game rules that sets it apart from normal creatures.</p><p>The creature always takes their turn on Initiative count 20. On their turn, they can use their movement and interaction as normal. However, they do not take an action or Bonus Action on their turn unless forced to do so by a spell or other effect. Instead, the creature takes one of the Epic Actions they have available.</p>"
+              "name": "史诗首领",
+              "description": "<p>该生物是一个史诗首领，一个独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则。</p><p>该生物总是在先攻值20时进行其回合。在其回合中，它可以正常使用其移动和互动。然而，除非被法术或其他效果强制，否则它在自己的回合中不执行动作或附赠动作。取而代之的是，该生物会执行其拥有的一个可用史诗动作。</p>"
             }
           }
         },
         "Epic Resistance": {
-          "name": "Epic Resistance",
-          "description": "<p>The [[lookup @name]] chooses one condition, spell, or other effect currently affecting them and rolls [[/r 1d20]]. On an 11 or higher, the effect ends on them. The [[lookup @name]] can use this Epic Action even if they would otherwise be unable to take actions, their actions are being controlled by another creature, or if a spell or effect alters their game statistics.</p>"
+          "name": "史诗抗性",
+          "description": "<p>[[lookup @name]]选择一个当前影响其自身的状态、法术或其他效果，并掷[[/r 1d20]]。若结果为11或更高，则该效果在其身上终止。即使[[lookup @name]]本应无法执行动作、其动作正受其他生物操控，或受法术/效果影响而改变游戏资料卡，仍可使用此传奇动作。</p>"
         },
         "Charm Monster": {
-          "name": "Charm Monster",
-          "description": "<p>One creature you can see within range makes a Wisdom saving throw. It does so with Advantage if you or your allies are fighting it. On a failed save, the target has the &amp;Reference[Charmed apply=false] condition until the spell ends or until you or your allies damage it. The Charmed creature is Friendly to you. When the spell ends, the target knows it was Charmed by you.</p><p><strong>Using a Higher-Level Spell Slot.</strong>You can target one additional creature for each spell slot level above 4.</p>",
+          "name": "魅惑怪物",
+          "description": "<p>你能看见的射程内单一生物进行一次感知豁免。若你或你的盟友正与其战斗，则该次豁免具有优势。豁免失败时，目标获得&amp;Reference[Charmed apply=false]状态，直至法术终止或你或你的盟友对其造成伤害。被魅惑的生物对你保持友善。法术终止时，目标会知晓自己曾被你魅惑。</p><p><strong>使用更高法术位。</strong>你使用的法术位每比4环高一环，就能多指定一个目标。</p>",
           "effects": {
             "Charmed": {
-              "name": "Charmed",
-              "description": "<p>The target has the &amp;Reference[Charmed apply=false] condition until the spell ends or until you or your allies damage it. The Charmed creature is Friendly to you. When the spell ends, the target knows it was Charmed by you.</p>"
+              "name": "魅惑",
+              "description": "<p>目标获得&amp;Reference[Charmed apply=false]状态，直到法术结束或你或你的盟友对其造成伤害。被魅惑的生物对你保持友善。当法术结束时，目标会知道自己曾被你所魅惑。</p>"
             }
           }
         },
         "Dimension Door": {
-          "name": "Dimension Door",
-          "description": "<p>You teleport to a location within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as \"200 feet straight downward\" or \"300 feet upward to the northwest at a 45-degree angle.\"</p><p>You can also teleport one willing creature. The creature must be within 5 feet of you when you teleport, and it teleports to a space within 5 feet of your destination space.</p><p>If you, the other creature, or both would arrive in a space occupied by a creature or completely filled by one or more objects, you and any creature traveling with you each take 4d6 Force damage, and the teleportation fails.</p>"
+          "name": "任意门",
+          "description": "<p>你传送到射程内的一个地点。你会准确抵达期望的位置。它可以是你能够看见的地点，一个你能够想象的地点，或者一个你可以通过说明距离和方向来描述的地点，例如“笔直向下200尺”或“向上300尺，以45度角向西北方向”。</p><p>你也可以传送一个自愿生物。该生物必须在你传送时处于你周围5尺内，并且它会传送到你目标地点周围5尺内的一个空间。</p><p>如果你、其他生物或两者将抵达一个被生物占据或完全被一个或多个物体填满的空间，你以及任何与你同行的生物各自受到4d6{力场伤害}，并且此次传送失败。</p>"
         },
         "Dominate Person": {
-          "name": "Dominate Person",
-          "description": "<p>One Humanoid you can see within range must succeed on a Wisdom saving throw or have the &amp;Reference[Charmed apply=false] condition for the duration. The target has Advantage on the save if you or your allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success.</p><p>You have a telepathic link with the Charmed target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"Attack that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself.</p><p>You can command the target to take a Reaction but must take your own Reaction to do so.</p><p><strong>Using a Higher-Level Spell Slot.</strong> Your Concentration can last longer with a spell slot of level 6 (up to 10 minutes), 7 (up to 1 hour), or 8+ (up to 8 hours).</p>",
+          "name": "支配人类",
+          "description": "<p>射程内你能看见的一个类人生物必须进行一次感知豁免，若失败则在其持续时间内陷入&Reference[Charmed apply=false]状态。若你或你的盟友正在与该目标战斗，则其在此豁免上具有优势。每当目标受到伤害时，它会重复此豁免，成功则自行终止该法术。</p><p>当你与受魅惑目标处于同一位面时，你们会建立心灵感应链接。在你的回合中，你可通过此链接向目标下达指令（无需动作），例如“攻击那个生物”、“移动到那边”或“取回那个物件”。目标会在其回合内尽力服从指令。若它完成指令且未收到你的进一步指示，则会按自身意愿行动和移动，并专注于自我保护。</p><p>你可以命令目标执行反应动作，但必须使用你自己的反应动作来实现。</p><p><strong>使用更高法术位。</strong>若使用6环法术位（至多10分钟）、7环法术位（至多1小时）或8环及以上法术位（至多8小时），你的专注持续时间会相应延长。</p>",
           "effects": {
             "Dominated": {
-              "name": "Dominated",
-              "description": "<p>Whenever the &amp;Reference[charmed apply=false] target takes damage, it repeats the [[/save ability=wis]] save, ending the spell on itself on a success.</p>"
+              "name": "受控",
+              "description": "<p>每当&amp;Reference[charmed apply=false]目标受到伤害时，它都会重复进行[[/save ability=wis]]豁免，成功则自身身上的该法术终止。</p>"
             }
           }
         },
         "Gaseous Form": {
-          "name": "Gaseous Form",
-          "description": "<p>A willing creature you touch shape-shifts, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends on the target if it drops to 0 Hit Points or if it takes a Magic action to end the spell on itself.</p><p>While in this form, the target's only method of movement is a Fly Speed of 10 feet, and it can hover. The target can enter and occupy the space of another creature. The target has Resistance to Bludgeoning, Piercing, and Slashing damage; it has Immunity to the &amp;Reference[prone apply=false] condition; and it has Advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through narrow openings, but it treats liquids as though they were solid surfaces.</p><p>The target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. Finally, the target can't attack or cast spells.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 3.</p>",
+          "name": "气化形体",
+          "description": "<p>你触碰的一个自愿生物，连同其穿戴和携带的所有物品，会在法术持续时间内变形为一团雾气。若目标生命值降至0，或它发动一个魔法动作来终止其身上的该法术，则法术对目标结束。</p><p>在此形态下，目标的唯一移动方式是10尺飞行速度，并且它可以悬停。目标可以进入并占据另一个生物的空间。目标对钝击、穿刺和挥砍伤害具有抗性；它对&Reference[prone apply=false]状态免疫；并且在力量、敏捷和体质豁免上具有优势。目标可以穿过狭窄开口，但会将液体视为固体表面。</p><p>目标不能说话或操纵物体，其携带或持有的任何物品均无法被丢弃、使用或以其他方式互动。最后，目标不能攻击或施展法术。</p><p><strong>使用更高法术位。</strong> 你使用的法术位每比3环高一环，就可以多以一个生物为目标。</p>",
           "materials": {
-            "value": "a bit of gauze"
+            "value": "一小块纱布"
           },
           "effects": {
             "Gaseous Form": {
-              "name": "Gaseous Form",
-              "description": "<p>The target’s only method of movement is a Fly Speed of 10 feet, and it can hover. The target can enter and occupy the space of another creature. The target has Resistance to Bludgeoning, Piercing, and Slashing damage; it has Immunity to the &amp;Reference[prone apply=false] condition; and it has Advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through narrow openings, but it treats liquids as though they were solid surfaces.</p><p>The target can’t talk or manipulate objects, and any objects it was carrying or holding can’t be dropped, used, or otherwise interacted with. Finally, the target can’t attack or cast spells.</p>"
+              "name": "气化形体",
+              "description": "<p>目标的唯一移动方式是10尺飞行速度,并且可以悬停。目标可以进入并占据另一个生物的空间。目标对钝击、穿刺和挥砍伤害具有抗性；它对&amp;Reference[prone apply=false]状态具有免疫；并且它在力量、敏捷和体质豁免上具有优势。目标可以穿过狭窄的开口，但它将液体视为固体表面。</p><p>目标不能说话或操纵物体，它携带或持有的任何物体都不能被丢弃、使用或以其他方式互动。最后，目标不能攻击或施展法术。</p>"
             }
           }
         },
         "Greater Invisibility": {
-          "name": "Greater Invisibility",
-          "description": "<p>A creature you touch has the Invisible condition until the spell ends.</p>",
+          "name": "高等隐形术",
+          "description": "<p>你触及的一个生物获得隐形状态，直到该法术结束。</p>",
           "effects": {
             "Invisible": {
               "name": "隐形"
@@ -14140,37 +14140,37 @@
           }
         },
         "Hypnotic Pattern": {
-          "name": "Hypnotic Pattern",
-          "description": "<p>You create a twisting pattern of colors in a 30-foot Cube within range. The pattern appears for a moment and vanishes. Each creature in the area who can see the pattern must succeed on a Wisdom saving throw or have the &amp;Reference[charmed apply=false] condition for the duration. While Charmed, the creature has the &amp;Reference[incapacitated apply=false] condition and a Speed of 0.</p><p>The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.</p>",
+          "name": "催眠图纹",
+          "description": "<p>你在射程内创造出一个30尺立方区域的扭曲色彩图纹。该图纹显现片刻后消失。区域内每个能看到该图纹的生物必须进行一次感知豁免，若失败则在法术持续时间内陷入&Reference[charmed apply=false]状态。在被魅惑期间，该生物处于&Reference[incapacitated apply=false]状态且速度为0。</p><p>若受术生物受到任何伤害，或其他生物使用动作将其从迷醉中摇醒，则法术对该生物的效应提前终止。</p>",
           "materials": {
-            "value": "a pinch of confetti"
+            "value": "一小撮五彩纸屑"
           },
           "effects": {
             "Hypnotized": {
-              "name": "Hypnotized",
-              "description": "<p>While &amp;Reference[charmed apply=false], the creature has the &amp;Reference[incapacitated apply=false] condition and a Speed of 0.</p><p>The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.</p>"
+              "name": "被催眠",
+              "description": "<p>当&amp;Reference[charmed apply=false]时，该生物处于&amp;Reference[incapacitated apply=false]状态且速度为0。</p><p>若受影响生物受到任何伤害，或其他生物用动作将其从迷醉中摇醒，则法术对该生物的效应结束。</p>"
             }
           }
         },
         "Major Image": {
-          "name": "Major Image",
-          "description": "<p>You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot Cube. The image appears at a spot that you can see within range and lasts for the duration. It seems real, including sounds, smells, and temperature appropriate to the thing depicted, but it can't deal damage or cause conditions.</p><p>If you are within range of the illusion, you can take a Magic action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.</p><p>Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The spell lasts until dispelled, without requiring Concentration, if cast with a level 4+ spell slot.</p>",
+          "name": "高等幻影",
+          "description": "<p>你创造一个不大于20尺立方体的物件、生物或其他可见现象的影像。该影像出现在你射程内可见的一点，并持续至法术持续时间结束。它看起来是真实的，包括声音、气味和温度都与所描绘的事物相符，但它无法造成伤害或导致状态。</p><p>如果你处于该幻术的射程内，你可以采取一个魔法动作使影像移动到射程内的任何其他地点。当影像改变位置时，你可以调整其外观，使其移动看起来自然。例如，如果你创造了一个生物的影像并移动它，你可以调整影像使其看起来像是在行走。同样地，你可以在不同时间让幻术发出不同的声音，甚至可以使其进行对话，例如。</p><p>与影像的物理互动会揭示它是一个幻术，因为物体可以穿透它。一个生物采取研究动作来检查影像时，可以通过成功的[[/check ability=int skill=inv dc=@attributes.spell.dc]]检定对抗你的法术豁免DC来确定它是一个幻术。如果一个生物识破了幻术的本质，该生物可以看穿影像，并且其其他感官特性对该生物变得微弱。</p><p><strong>使用更高法术位。</strong> 如果使用4级或更高的法术位施展，该法术持续至被解除，无需专注。</p>",
           "materials": {
-            "value": "a bit of fleece"
+            "value": "一小块羊毛"
           }
         },
         "Mirror Image": {
-          "name": "Mirror Image",
-          "description": "<p>Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real.</p><p>Each time a creature hits you with an attack roll during the spell's duration, roll a [[/r (@flags.dnd-players-handbook.mirrorImages)d6kh1cs&gt;2#Duplicate destroyed]]{d6 for each} of your remaining duplicates. If any of the d6s rolls a 3 or higher, one of the duplicates is hit instead of you, and the duplicate is destroyed. The duplicates otherwise ignore all other damage and effects. The spell ends when all three duplicates are destroyed.</p><p>A creature is unaffected by this spell if it has the &amp;Reference[blinded apply=false] condition, &amp;Reference[blindsight], or &amp;Reference[truesight].</p>",
+          "name": "镜影术",
+          "description": "<p>三个你的幻象分身出现在你的空间。法术持续时间内，分身会随你移动并模仿你的动作，不断变换位置使敌人无法分辨哪个影像是真实的。</p><p>每当一个生物在法术持续期间通过攻击检定命中你时，为你剩余的每个分身投掷一次[[/r (@flags.dnd-players-handbook.mirrorImages)d6kh1cs>2#Duplicate destroyed]]{d6}。若任一d6掷出3或更高，则其中一个分身将代替你承受攻击并被摧毁。除此之外，分身会无视所有其他伤害和效果。当三个分身全部被摧毁时，法术终止。</p><p>具有&amp;Reference[blinded apply=false]状态、&amp;Reference[blindsight]或&amp;Reference[truesight]的生物不受此法術影响。</p>",
           "effects": {
             "Duplicate A": {
-              "name": "Duplicate A"
+              "name": "复制体A"
             },
             "Duplicate B": {
-              "name": "Duplicate B"
+              "name": "复制体B"
             },
             "Duplicate C": {
-              "name": "Duplicate C"
+              "name": "复制C"
             }
           }
         },
@@ -14222,15 +14222,15 @@
           }
         },
         "Sleep": {
-          "name": "Sleep",
-          "description": "<p>Each creature of your choice in a 5-foot-radius Sphere centered on a point within range must succeed on a Wisdom saving throw or have the &amp;Reference[incapacitated apply=false] condition until the end of its next turn, at which point it must repeat the save. If the target fails the second save, the target has the &amp;Reference[unconscious] condition for the duration. The spell ends on a target if it takes damage or someone within 5 feet of it takes an action to shake it out of the spell's effect.</p><p>Creatures that don't sleep, such as elves, or that have Immunity to the Exhaustion condition automatically succeed on saves against this spell.</p>",
+          "name": "睡眠术",
+          "description": "<p>位于射程内某点5尺半径球状区域内的每个你所选择的生物必须进行一次感知豁免，若失败则陷入&Reference[incapacitated apply=false]状态直至其下一回合结束，此时必须重复该豁免。若目标第二次豁免失败，则会在法术持续时间内陷入&Reference[unconscious]状态。若目标受到伤害，或其5尺内的某人使用动作将其摇醒，则法术对该目标提前终止。</p><p>无需睡眠的生物（例如精灵）或对力竭状态具有免疫力的生物，对抗此法术的豁免自动成功。</p>",
           "materials": {
-            "value": "a pinch of sand or rose petals"
+            "value": "一撮沙子或玫瑰花瓣"
           },
           "effects": {
             "Sleeping": {
-              "name": "Sleeping",
-              "description": "<p>The target has the &amp;Reference[incapacitated apply=false] condition until the end of its next turn, at which point it must repeat the save. If the target fails the second save, the target has the &amp;Reference[unconscious] condition for the duration. The spell ends on a target if it takes damage or someone within 5 feet of it takes an action to shake it out of the spell’s effect.</p>"
+              "name": "沉睡",
+              "description": "<p>目标获得&amp;Reference[incapacitated apply=false]状态直到其下一回合结束，届时它必须重复豁免。如果目标第二次豁免失败，则目标在法术持续时间内获得&amp;Reference[unconscious]状态。若目标受到伤害，或5尺内的某人使用动作将其摇醒以摆脱法术效果，则法术对该目标终止。</p>"
             }
           }
         },
@@ -14242,38 +14242,38 @@
           }
         },
         "Befuddlement": {
-          "name": "Befuddlement",
-          "description": "<p>You blast the mind of a creature that you can see within range. The target makes an Intelligence saving throw.</p><p>On a failed save, the target takes 10d12 Psychic damage and can't cast spells or take the Magic action. At the end of every 30 days, the target repeats the save, ending the effect on a success. The effect can also be ended by the <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration}</em>, <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplHeal000000]{Heal}</em>, or <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{Wish}</em> spell.</p><p>On a successful save, the target takes half as much damage only.</p>",
+          "name": "迷乱",
+          "description": "<p>你轰击射程内一个你能看见的生物的心智。该目标进行一次智力豁免。</p><p>豁免失败时，目标受到10d12心灵伤害且不能施展法术或采取魔法动作。每30天结束时，目标重复此豁免，成功则终止该效应。该效应也可通过<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{高等复原术}</em>、<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplHeal000000]{医疗术}</em>或<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{祈愿术}</em>法术终止。</p><p>豁免成功时，目标仅受到一半伤害。</p>",
           "materials": {
-            "value": "a key ring with no keys"
+            "value": "一个没有钥匙的钥匙环。"
           },
           "effects": {
             "Befuddled": {
-              "name": "Befuddled",
-              "description": "<p>On a failed save, the target takes 10d12 Psychic damage and can’t cast spells or take the Magic action. At the end of every 30 days, the target repeats the [[/save ability=wis]] save, ending the effect on a success. The effect can also be ended by the <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration}</em>, <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplHeal000000]{Heal}</em>, or <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{Wish}</em> spell.</p>"
+              "name": "困惑",
+              "description": "<p>豁免失败时，目标受到10d12心灵伤害，且无法施展法术或执行魔法动作。每30天结束时，目标重复进行[[/save ability=wis]]豁免，成功则终止此效果。此效果也可通过<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{高等复原术}</em>、<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplHeal000000]{医疗术}</em>或<em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{祈愿术}</em>法术终止。</p>"
             }
           }
         },
         "Seeming": {
-          "name": "Seeming",
-          "description": "<p>You give an illusory appearance to each creature of your choice that you can see within range. An unwilling target can make a Charisma saving throw, and if it succeeds, it is unaffected by this spell.</p><p>You can give the same appearance or different ones to the targets. The spell can change the appearance of the targets' bodies and equipment. You can make each creature seem 1 foot shorter or taller and appear heavier or lighter. A target's new appearance must have the same basic arrangement of limbs as the target, but the extent of the illusion is otherwise up to you. The spell lasts for the duration.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to a creature's outfit, objects pass through the hat.</p><p>A creature that takes the Study action to examine a target can make an [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If it succeeds, it becomes aware that the target is disguised.</p>",
+          "name": "伪装术Seeming",
+          "description": "<p>你为射程内你能看见的每个自选生物赋予一个{幻形}。非自愿的目标可以进行一次{魅力豁免}，若成功则不受此法術影响。</p><p>你可以为这些目标赋予相同或不同的外观。此法術可以改变目标的躯体和{装备}的外观。你可以使每个生物看起来变矮或变高1{尺}，显得更重或更轻。目标的新外观必须具有与目标相同的基本肢体结构，但除此之外幻象的程度由你决定。此法術持续{持续时间}。</p><p>此法術造成的变化经不起物理检验。例如，若你使用此法術为生物的装束添加一顶帽子，物体会直接穿过帽子。</p><p>生物若采取{动作}仔细检视目标，可进行一次[[/check ability=int skill=inv dc=@attributes.spell.dc]]检定对抗你的{法术豁免DC}。若成功，该生物会察觉目标经过伪装。</p>",
           "target": {
             "affects": {
-              "special": "visible creature"
+              "special": "可见生物"
             }
           },
           "activities": {
             "Unwilling Save": {
-              "name": "Unwilling Save"
+              "name": "不情愿豁免"
             },
             "Change Appearance": {
-              "name": "Change Appearance"
+              "name": "改变外貌"
             }
           },
           "effects": {
             "Changed Appearance": {
-              "name": "Changed Appearance",
-              "description": "<p>A creature that takes the Study action to examine a target can make an [[/check ability=int skill=inv]] check against your spell save DC. If it succeeds, it becomes aware that the target is disguised.</p>"
+              "name": "改变外貌",
+              "description": "<p>一个生物若采取研究动作来检视目标，可以针对你的法术豁免DC进行一次[[/check ability=int skill=inv]]检定。若检定成功，该生物会意识到目标正处于伪装状态。</p>"
             }
           }
         },
@@ -14290,15 +14290,15 @@
           }
         },
         "Mass Suggestion": {
-          "name": "Mass Suggestion",
-          "description": "<p>You suggest a course of activity—described in no more than 25 words—to twelve or fewer creatures you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to any of the targets or their allies. For example, you could say, \"Walk to the village down that road, and help the villagers there harvest crops until sunset.\" Or you could say, \"Now is not the time for violence. Drop your weapons, and dance! Stop in an hour.\"</p><p>Each target must succeed on a Wisdom saving throw or have the &amp;Reference[Charmed apply=false] condition for the duration or until you or your allies deal damage to the target. Each Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for a target upon completing it.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The duration is longer with a spell slot of level 7 (10 days), 8 (30 days), or 9 (366 days).</p>",
+          "name": "群体暗示术",
+          "description": "<p>你向射程内你能看见的十二个或更少、能听见并理解你的生物提议一个行动方案——用不超过25个词描述。该提议必须听起来可行，且不涉及任何明显会对任何目标或其盟友造成伤害的内容。例如，你可以说：“沿着那条路走到村落，在那里帮助村民收割庄稼直到日落。”或者你可以说：“现在不是动武的时候。放下你们的武器，跳舞吧！一小时后停止。”</p><p>每个目标必须进行一次感知豁免，否则将在持续时间内或直到你或你的盟友对该目标造成伤害前获得&Reference[Charmed apply=false]状态。每个被魅惑的目标会尽其所能地执行该提议。提议的行动可以持续整个持续时间，但如果提议的行动能在更短时间内完成，则目标完成时法术对其结束。</p><p><strong>使用更高法术位。</strong>使用7环（10天）、8环（30天）或9环（366天）法术位时，持续时间更长。</p>",
           "materials": {
-            "value": "a snake’s tongue"
+            "value": "蛇的舌头"
           },
           "effects": {
             "Charmed": {
-              "name": "Charmed",
-              "description": "<p>The target has the &amp;Reference[Charmed apply=false] condition for the duration or until you or your allies deal damage to the target. Each Charmed target pursues the suggestion to the best of its ability.</p>"
+              "name": "魅惑",
+              "description": "<p>目标在&Reference[Charmed apply=false]状态的持续时间内或直到你或你的盟友对目标造成伤害为止，具有魅惑状态。每个被魅惑的目标都会尽其所能地追求暗示术。</p>"
             }
           }
         },
@@ -14318,20 +14318,20 @@
           }
         },
         "Disguise Self": {
-          "name": "Disguise Self",
-          "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.</p><p>To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC.</p>",
+          "name": "易容术",
+          "description": "<p>你使自己——包括你的服饰、护甲、武器以及随身携带的其他物品——在法术结束前看起来有所不同。你可以显得比原来矮1尺或高1尺，或显得更胖或更瘦。你必须采用与自身肢体结构基本相同的形态。除此之外，幻象的具体效果由你决定。</p><p>此法术带来的变化经不起物理接触的检验。例如，若你用法术为服装添加一顶帽子，物体将直接穿过帽子，任何触摸它的人也会感觉空无一物。</p><p>要识破你的伪装，一个生物必须采取研究动作来检视你的外观，并成功通过一次[[/check ability=int skill=inv dc=@attributes.spell.dc]]检定以对抗你的法术豁免DC。</p>",
           "effects": {
             "Disguised": {
-              "name": "Disguised",
-              "description": "<p><span style=\"font-family:Signika, sans-serif\">To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv]] check against your spell save DC.</span></p>"
+              "name": "伪装",
+              "description": "<p><span style=\"font-family:Signika, sans-serif\">要识破你的伪装，一个生物必须采取研究动作来检视你的外貌，并在对抗你法术豁免DC的[[/check ability=int skill=inv]]检定中成功。</span></p>"
             }
           }
         },
         "Invisibility": {
-          "name": "Invisibility",
-          "description": "<p>A creature you touch has the &amp;Reference[invisible apply=false] condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 2.</p>",
+          "name": "隐形术",
+          "description": "<p>你触及的一个生物获得&amp;Reference[invisible apply=false]状态，直至法术终止。该法术会在目标进行攻击检定、造成伤害或施放法术后立即提前终止。</p><p><strong>使用更高法术位。</strong>你使用的法术位每比2环高1环，就能多以一个生物为目标。</p>",
           "materials": {
-            "value": "an eyelash in gum arabic"
+            "value": "阿拉伯树胶中的一根睫毛"
           },
           "effects": {
             "Invisible": {
@@ -14341,411 +14341,411 @@
           }
         },
         "Mage Armor": {
-          "name": "Mage Armor",
-          "description": "<p>You touch a willing creature who isn't wearing armor. Until the spell ends, the target's base AC becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor.</p>",
+          "name": "法师护甲",
+          "description": "<p>你触碰一个未穿着护甲的自愿生物。在该法术终止前，该目标的护甲等级：变为13，外加其敏捷调整值。若目标穿上护甲，则法术提前终止。</p>",
           "materials": {
-            "value": "a piece of cured leather"
+            "value": "一块鞣制好的皮甲"
           },
           "effects": {
             "Mage Armor": {
-              "name": "Mage Armor",
-              "description": "<p>The target's base AC becomes 13 + its Dexterity modifier.</p>"
+              "name": "法师护甲",
+              "description": "<p>目标的护甲等级：基础值变为13 + 其敏捷调整值。</p>"
             }
           }
         },
         "Suggestion": {
-          "name": "Suggestion",
-          "description": "<p>You suggest a course of activity—described in no more than 25 words—to one creature you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to the target or its allies. For example, you could say, \"Fetch the key to the cult's treasure vault, and give the key to me.\" Or you could say, \"Stop fighting, leave this library peacefully, and don't return.\"</p><p>The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration or until you or your allies deal damage to the target. The Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for the target upon completing it.</p>",
+          "name": "暗示术",
+          "description": "<p>你向射程内一个能听见并理解你的单一生物提出一项行动建议——用不超过25个词描述。该建议必须听起来可行，且不涉及任何明显会对目标或其盟友造成伤害的行为。例如，你可以说：“去取来教团宝库的钥匙，并把钥匙交给我。”或者你也可以说：“停止战斗，和平地离开这座图书馆，并且不要再回来。”</p><p>目标必须进行一次感知豁免，若失败则会在法术持续时间内陷入魅惑状态，直到你或你的盟友对目标造成伤害为止。被魅惑的目标会尽其所能地执行该建议。建议的行动可以持续整个法术持续时间，但如果建议的行动能在更短时间内完成，则目标在完成后法术效果结束。</p>",
           "materials": {
-            "value": "a drop of honey"
+            "value": "一滴蜂蜜"
           },
           "effects": {
             "Pursuing Suggestion": {
-              "name": "Pursuing Suggestion",
-              "description": "<p>The Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for the target upon completing it.</p>"
+              "name": "追寻暗示术",
+              "description": "<p>被魅惑的目标会尽其所能地遵循暗示。所建议的行动可以持续整个法术持续时间，但如果该行动可以在更短的时间内完成，则法术在目标完成该行动后结束。</p>"
             }
           }
         }
       },
       "effects": {
         "Mage Armor": {
-          "name": "Mage Armor",
-          "description": "<p>The target's base AC becomes 13 + its Dexterity modifier.</p>"
+          "name": "法师护甲",
+          "description": "<p>目标的护甲等级：基础值变为13 + 其敏捷调整值。</p>"
         }
       }
     },
     "Ratling Warrior": {
-      "name": "Ratling Warrior",
-      "tokenName": "Ratling Warrior",
+      "name": "鼠人武者",
+      "tokenName": "鼠人武者",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.68biotlingwarrio inline]</p>",
       "items": {
         "Keen Smell": {
-          "name": "Keen Smell",
-          "description": "<p>The [[lookup @name lowercase]] has advantage on Wisdom (Perception) checks that rely on smell.</p>"
+          "name": "敏锐嗅觉",
+          "description": "<p>该[[lookup @name lowercase]]在基于嗅觉的感知(察觉)检定上具有优势。</p>"
         },
         "Pack Tactics": {
-          "name": "Pack Tactics",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on attack rolls against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn't have the &amp;reference[Incapacitated apply=false] condition.</p>"
+          "name": "集群战术",
+          "description": "<p>如果[[lookup @name lowercase]]的至少一名盟友位于该生物5尺内，且该盟友未处于&amp;reference[Incapacitated apply=false]状态，则[[lookup @name lowercase]]对该生物进行的攻击检定具有优势。</p>"
         },
         "Ratling Cunning": {
-          "name": "Ratling Cunning",
-          "description": "<p>The [[lookup @name lowercase]] takes the Dash, Disengage, or Hide action.</p>",
+          "name": "鼠人狡黠",
+          "description": "<p>该[[lookup @name lowercase]]采取疾走、撤离或躲藏动作。</p>",
           "activities": {
             "Dash / Disengage": {
-              "name": "Dash / Disengage"
+              "name": "疾走 / 撤离"
             },
             "Hide": {
-              "name": "Hide"
+              "name": "躲藏"
             }
           }
         },
         "Bite": {
-          "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Sling": {
-          "name": "Sling",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "投石索",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Bullets, Sling": {
-          "name": "Bullets, Sling",
-          "description": "<p><em><strong>Storage:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagPouch000000]{Pouch}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{Ammunition} is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately.</p>"
+          "name": "投石索弹丸",
+          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagPouch000000]{钱包}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性的武器所必需的。武器描述中会指明该武器使用的弹药类型。弹药表列出了不同类型的弹药以及购买时获得的数量。该表还列出了通常用于存储每种弹药的物品；存储容器需另行购买。</p>"
         },
         "Pouch": {
-          "name": "Pouch",
-          "description": "<p>A Pouch holds up to 6 pounds within one-fifth of a cubic foot.</p>"
+          "name": "钱包",
+          "description": "<p>一个钱包最多可容纳6磅，体积为五分之一立方尺。</p>"
         }
       }
     },
     "Fungal Trolling": {
-      "name": "Fungal Trolling",
-      "tokenName": "Fungal Trolling",
+      "name": "真菌嘲讽",
+      "tokenName": "真菌式诱敌",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.162biogaltrollin inline]</p>",
       "items": {
         "False Appearance": {
-          "name": "False Appearance",
-          "description": "<p>While the [[lookup @name lowercase]] remains motionless, it is indistinguishable from a patch of mushrooms.</p>"
+          "name": "虚假表象",
+          "description": "<p>当[[lookup @name lowercase]]静止不动时，它与一片蘑菇地一模一样。</p>"
         },
         "Death Burst": {
-          "name": "Death Burst",
-          "description": "<p>When the [[lookup @name lowercase]] dies, it explodes in a burst of mind-affecting spores. <em>Wisdom Saving Throw:</em> DC 13, each creature that isn't a troll in a 10-foot Emanation originating from the [[lookup @name lowercase]]. <em>Failure:</em> [[/damage average]] damage and has the &amp;reference[Weakened] condition (save ends). <em>Success:</em> Half damage only.</p>",
+          "name": "死亡爆发",
+          "description": "<p>当[[lookup @name lowercase]]死亡时，它会爆发出影响心智的孢子。<em>感知豁免：</em> DC 13，每个非巨魔生物在源自[[lookup @name lowercase]]的10尺光环内。<em>失败：</em> [[/damage average]]伤害并陷入&reference[Weakened]状态（豁免终止）。<em>成功：</em> 仅承受半数伤害。</p>",
           "effects": {
             "Fungal Trolling Spores": {
-              "name": "Fungal Trolling Spores",
-              "description": "<p>You are &amp;reference[weakened apply=false]. You can repeat your saving throw against this effect at the end of each of your turns, ending the effect on a success.</p>"
+              "name": "真菌诱捕孢子",
+              "description": "<p>你处于&amp;reference[weakened apply=false]状态。你可以在自己每个回合结束时重复进行对抗此效应的豁免，成功则终止该效应。</p>"
             }
           }
         },
         "Spore Slam": {
-          "name": "Spore Slam",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "孢子猛击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         }
       }
     },
     "Ripper": {
-      "name": "Ripper",
-      "tokenName": "Ripper",
+      "name": "撕裂者",
+      "tokenName": "撕裂者",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.127bioper0000000 inline]</p>",
       "items": {
         "Dismemberment": {
-          "name": "Dismemberment",
-          "description": "<p>Creatures killed by attacks made by the [[lookup @name lowercase]] can't be restored to life except by a @UUID[Compendium.dnd5e.spells24.Item.phbsplResurrecti]{Resurrection} spell or similar magic.</p>"
+          "name": "肢解",
+          "description": "<p>被[[lookup @name lowercase]]的攻击杀死的生物无法恢复[[lookup @name lowercase]]，除非通过@UUID[Compendium.dnd5e.spells24.Item.phbsplResurrecti]{复生术}法术或类似魔法。</p>"
         },
         "Feed on Fear": {
-          "name": "Feed on Fear",
-          "description": "<p>&amp;reference[Frightened apply=false] creatures have the &amp;reference[Helpless] and &amp;reference[Defenseless] conditions against attacks made by the [[lookup @name lowercase]].</p>"
+          "name": "以恐惧为食",
+          "description": "<p>&reference[Frightened apply=false]生物在受到[[lookup @name lowercase]]发动的攻击时，具有&reference[Helpless]和&reference[Defenseless]状态。</p>"
         },
         "Insensitive to Pain": {
-          "name": "Insensitive to Pain",
-          "description": "<p>Critical Hits against the [[lookup @name lowercase]] become normal hits.</p>"
+          "name": "对痛苦无感",
+          "description": "<p>对[[lookup @name lowercase]]的致命一击变为普通命中。</p>"
         },
         "Whirling Bonesaw": {
-          "name": "Whirling Bonesaw",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. On hit, the [[lookup @name lowercase]] can immediately make another Whirling Bonesaw attack against the same target. This attack ignores Resistance and Immunity to Slashing damage.</p>"
+          "name": "旋转骨锯",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。命中时，[[lookup @name lowercase]]可立即对同一目标再次发动旋转骨锯攻击。此攻击无视对挥砍伤害的抗性与免疫。</p>"
         },
         "Gory Display": {
-          "name": "Gory Display",
-          "description": "<p><em>Wisdom Saving Throw:</em> DC 15, each creature that can see the [[lookup @name lowercase]]. <em>Failure:</em> [[/damage average]] damage, and the target has the &amp;reference[Frightened] condition (save ends). While Frightened, the target's Speed becomes 0 and can't increase.</p>",
+          "name": "血腥展示",
+          "description": "<p><em>感知豁免:</em> DC15, 每个能看见[[lookup @name lowercase]]的生物。 <em>失败:</em> [[/damage average]]伤害, 且目标获得&amp;reference[Frightened]状态(豁免终止)。当处于恐慌状态时, 目标的速度变为0且无法增加。</p>",
           "activities": {
             "save": {
               "affects": {
-                "special": "Each creature that can see the ripper."
+                "special": "每个能看到撕裂者的生物。"
               }
             }
           },
           "effects": {
             "Gory Display": {
-              "name": "Gory Display",
-              "description": "<p>You are &amp;reference[frightened apply=false]. You can repeat your saving throw against this effect at the end of each of your turns, ending the effect on a success.</p><p>While Frightened in this way, you movement speed becomes 0 and you are &amp;reference[helpless apply=false] and &amp;reference[defenseless apply=false] against attack made by the ripper.</p>"
+              "name": "血腥展示",
+              "description": "<p>你陷入&amp;reference[frightened apply=false]状态。你可以在每个自己回合结束时再次进行对抗此效应的豁免检定，成功则终止该效应。</p><p>以此方式陷入恐慌状态期间，你的移动&amp;reference[speed apply=false]变为0，并且对撕裂者发动的&amp;reference[attack apply=false]处于&amp;reference[helpless apply=false]与&amp;reference[defenseless apply=false]状态。</p>"
             }
           }
         },
         "Unstoppable Lurch": {
-          "name": "Unstoppable Lurch",
-          "description": "<p><em>Trigger:</em> A creature deals damage to the [[lookup @name lowercase]]. <em>Response:</em> The [[lookup @name lowercase]] moves up to half its Speed toward that creature without provoking Opportunity Attacks. If the [[lookup @name lowercase]] ends this movement within reach of the creature, it gains Advantage on its next attack roll against the creature.</p>",
+          "name": "不可阻挡的踉跄",
+          "description": "<p><em>触发:</em> 一个生物对[[lookup @name lowercase]]造成伤害。 <em>反应:</em> [[lookup @name lowercase]]可向其移动最多一半速度,且不触发借机攻击。若[[lookup @name lowercase]]以此移动结束时位于该生物触及范围内,则其下次对该生物进行的攻击检定获得优势。</p>",
           "activities": {
             "utility": {
-              "condition": "When a creature damages the ripper."
+              "condition": "当一个生物对撕裂者造成伤害时。"
             }
           }
         }
       }
     },
     "Living Deep Haze": {
-      "name": "Living Deep Haze",
-      "tokenName": "Living Deep Haze",
+      "name": "活体深雾",
+      "tokenName": "活体深雾",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.20biolivingdeeph inline]</p>",
       "items": {
         "Fog Form": {
-          "name": "Fog Form",
-          "description": "<p>The [[lookup @name lowercase]] can enter a Hostile creature's space and stop there. It can move through a space as narrow as 1 inch without squeezing.</p>"
+          "name": "雾化形态",
+          "description": "<p>该[[lookup @name lowercase]]可以进入敌对生物的空间并在那里停下。它可以在不挤迫的情况下穿过窄至1英寸的空间。</p>"
         },
         "Deep Haze": {
-          "name": "Deep Haze",
-          "description": "<p>A creature that enters the same space as the [[lookup @name lowercase]] or starts its turn there is subjected to the following effect. <em>Constitution Saving Throw:</em> DC 13. <em>Failure:</em> [[/damage average]] damage, and the target gains one Contamination level.</p>",
+          "name": "深雾",
+          "description": "<p>进入与[[lookup @name lowercase]]相同空间或在其内开始回合的生物将受到以下效果影响。<em>体质豁免：</em> DC 13。<em>失败：</em> [[/damage average]]伤害，且目标获得1级污染。</p>",
           "activities": {
             "save": {
               "affects": {
-                "special": "A creature that enters the same space as the elemental or starts its turn there."
+                "special": "进入该元素生物所在空间或在其内开始回合的生物。"
               }
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .oUKgAffGBtgbOgo2]] attacks.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动两次[[/item .oUKgAffGBtgbOgo2]]攻击。</p>"
         },
         "Slam": {
-          "name": "Slam",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "猛击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         }
       }
     },
     "Effulgent Cnidarian": {
-      "name": "Effulgent Cnidarian",
-      "tokenName": "Effulgent Cnidarian",
+      "name": "光辉水母",
+      "tokenName": "光辉水母",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.17bioeffulgent00 inline]</p>",
       "items": {
         "Altered Reality": {
-          "name": "Altered Reality",
-          "description": "<p>The [[lookup @name lowercase]] has the &amp;reference[Invisible apply=false] condition for creatures &amp;reference[Charmed apply=false] by it.</p>"
+          "name": "被篡改的现实",
+          "description": "<p>[[lookup @name lowercase]]对受其&amp;reference[Charmed apply=false]状态的生物拥有&amp;reference[Invisible apply=false]状态。</p>"
         },
         "Hallucinogenic Bioluminescence": {
-          "name": "Hallucinogenic Bioluminescence",
-          "description": "<p>A creature that starts its turn within 60 feet of the [[lookup @name lowercase]] and can see it is subjected to the following effect unless the [[lookup @name lowercase]] chooses otherwise. <em>Wisdom Saving Throw:</em> DC 16. Failure: The target has the &amp;reference[Charmed] condition (save ends). While Charmed, the target regards all other creatures as enemies except the [[lookup @name lowercase]], whom it regards as an ally.</p><p>Whenever the target makes an attack or casts a detrimental spell, it must choose its target at random from the creatures it can see within range. If a creature provokes an Opportunity Attack from the target, it must make the attack, if able. If the target ends its turn without taking an Attack or Magic action, it takes [[/damage average]] damage.</p><p>Unless &amp;reference[surprise]{Surprised}, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it has Disadvantage on attack rolls against the [[lookup @name lowercase]] until the start of its next turn. If the creature looks at the [[lookup @name lowercase]] in the meantime, that creature must immediately make the saving throw.</p>",
+          "name": "致幻性生物发光",
+          "description": "<p>一个在[[lookup @name lowercase]] 60尺内开始其回合并能看到它的生物，除非[[lookup @name lowercase]]另有选择，否则会受到以下效果影响。<em>感知豁免:</em> DC 16。失败: 目标获得&amp;reference[Charmed]状态(豁免终止)。在被魅惑期间，目标将所有其他生物视为敌人，除了[[lookup @name lowercase]]，它将其视为盟友。</p><p>每当目标发动攻击或施放有害法术时，它必须从其射程内能看到的生物中随机选择目标。如果一个生物引发了目标的借机攻击，它必须发动该攻击(如果能够)。如果目标在其回合结束时没有进行攻击或魔法动作，它将受到[[/damage average]]伤害。</p><p>除非&amp;reference[surprise]{突袭}, 一个生物可以在其回合开始时移开视线以避免豁免。如果该生物这样做，它在对抗[[lookup @name lowercase]]的攻击检定上具有劣势，直到其下一回合开始。如果在此期间该生物看向[[lookup @name lowercase]]，则该生物必须立即进行豁免。</p>",
           "activities": {
             "Hesitation Damage": {
-              "name": "Hesitation Damage",
-              "condition": "When a creature charmed by the cnidarian ends their turn without taking an Attack or Magic action."
+              "name": "犹豫伤害",
+              "condition": "当被该刺胞动物魅惑的生物在其回合结束时未执行攻击或魔法动作。"
             },
             "save": {
-              "condition": "When a creature starts their turn within 60 feet of the cnidarian and can see it."
+              "condition": "当一个生物在刺胞动物60尺内开始其回合并能看见它时。"
             }
           }
         },
         "Neon Illumination": {
-          "name": "Neon Illumination",
-          "description": "<p>The [[lookup @name lowercase]] sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet.</p>"
+          "name": "霓虹照明",
+          "description": "<p>该[[lookup @name lowercase]]散发出30尺半径的明亮光照和额外30尺的微光光照。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .M7CMXSePIgbnD3xU]] attacks.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动两次[[/item .M7CMXSePIgbnD3xU]]攻击。</p>"
         },
         "Tendrils": {
-          "name": "Tendrils",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], or [[/damage 48 necrotic]] damage if the target is &amp;reference[Charmed apply=false] by the [[lookup @name lowercase]].</p>"
+          "name": "触须",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，或若目标被[[lookup @name lowercase]]&reference[Charmed apply=false]则造成[[/damage 48 necrotic]]伤害。</p>"
         },
         "Reflexive Flash": {
-          "name": "Reflexive Flash",
-          "description": "<p><em>Trigger:</em> A creature the [[lookup @name lowercase]] can see within 30 feet deals damage to it. <em>Response:</em> <em>Constitution Saving Throw:</em> DC 16, each creature in a 30-foot Emanation originating from the [[lookup @name lowercase]] that can see it. <em>Failure:</em> [[/damage average]] damage and the target has the &amp;reference[Blinded] condition (save ends). <em>Success:</em> Half damage only.</p>",
+          "name": "反射闪光",
+          "description": "<p><em>触发:</em> 一个[[lookup @name lowercase]]可见的30尺内的生物对其造成伤害。 <em>回应:</em> <em>体质豁免:</em> DC 16，每个位于[[lookup @name lowercase]]为中心30尺光环内且能看见它的生物。 <em>失败:</em> [[/damage average]]伤害且目标获得&amp;reference[Blinded]状态（豁免终止）。 <em>成功:</em> 仅承受一半伤害。</p>",
           "activities": {
             "save": {
-              "condition": "When a creature the cnidarian can see within 30 feet deals damage to it."
+              "condition": "当一个该刺胞动物能看见的30尺内的生物对它造成伤害时。"
             }
           },
           "effects": {
             "Reflexive Flash": {
-              "name": "Reflexive Flash",
-              "description": "<p>You are &amp;reference[blinded apply=false]. You can repeat your saving throw against this effect at the end of each of your turns, ending the effect on a success.</p>"
+              "name": "反射闪光",
+              "description": "<p>你陷入&amp;reference[blinded apply=false]状态。你可以在每个自己回合结束时重复进行对抗此效应的豁免检定，成功则终止该效应。</p>"
             }
           }
         }
       }
     },
     "Protean Abomination": {
-      "name": "Protean Abomination",
-      "tokenName": "Protean Abomination",
+      "name": "混沌畸变怪",
+      "tokenName": "混沌憎恶",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.64biooteanabomin inline]</p>",
       "items": {
         "Absorption": {
-          "name": "Absorption",
-          "description": "<p>When the [[lookup @name lowercase]] kills a creature that is neither a construct nor undead, it absorbs the corpse into its body and regains 20 Hit Points.</p>"
+          "name": "吸收",
+          "description": "<p>当[[lookup @name lowercase]]杀死一个既非构装生物也非亡灵的生物时，它会将尸体吸收进体内并恢复20点生命值。</p>"
         },
         "Amorphous": {
-          "name": "Amorphous",
-          "description": "<p>The [[lookup @name lowercase]] can move through a space as narrow as 1 inch wide without expending extra movement to do so.</p>"
+          "name": "无定形",
+          "description": "<p>该[[lookup @name lowercase]]可以穿过仅1英寸宽的狭窄空间而无需为此消耗额外移动力。</p>"
         },
         "Spider Climb": {
-          "name": "Spider Climb",
-          "description": "<p>The [[lookup @name lowercase]] can climb difficult surfaces, including along ceilings, without needing to make an ability check</p>"
+          "name": "蛛行术",
+          "description": "<p>该[[lookup @name lowercase]]可以攀爬困难表面，包括天花板，而无需进行属性检定</p>"
         },
         "Engulf": {
-          "name": "Engulf",
-          "description": "<p>The [[lookup @name lowercase]] engulfs a Large or smaller creature &amp;reference[Grappled apply=false] by it. Until the grapple ends the target has the &amp;reference[Blinded] and &amp;reference[Restrained] conditions, is suffocating, and has &amp;reference[TotalCover] against attacks and other effects outside the [[lookup @name lowercase]. If the [[lookup @name lowercase]] moves, the engulfed target moves with it. The [[lookup @name lowercase]] can have only one creature engulfed at a time. <em>Constitution Saving Throw:</em> DC 15. <em>Failure:</em> [[/damage average]] damage. The engulfed creature repeats the save at the start of each of the [[lookup @name lowercase]] turns Success: the target escapes and enters the nearest unoccupied space.</p>",
+          "name": "吞噬",
+          "description": "<p>该[[lookup @name lowercase]]会吞没一个被它擒抱的大型或更小的生物&amp;reference[Grappled apply=false]。直到擒抱结束为止，目标处于&amp;reference[Blinded]和&amp;reference[Restrained]状态，并且窒息，同时对[[lookup @name lowercase]]之外的攻击和其他效果具有&amp;reference[TotalCover]。如果该[[lookup @name lowercase]]移动，被吞没的目标会随之移动。该[[lookup @name lowercase]]一次只能吞没单一生物。<em>体质豁免:</em> DC15。<em>失败:</em> [[/damage average]]伤害。被吞没的生物在该[[lookup @name lowercase]]的每个回合开始时重复豁免。成功：目标逃脱并进入最近的未占据空间。</p>",
           "activities": {
             "Start of Turn Damage": {
-              "name": "Start of Turn Damage",
-              "condition": "At the start of each of the abomination's turns while a creature is inside of them."
+              "name": "回合开始伤害",
+              "condition": "当有生物位于该憎恶体内时，在其每个回合开始时。"
             },
             "Engulf Creature": {
-              "name": "Engulf Creature",
+              "name": "吞噬生物",
               "affects": {
-                "special": "A grappled creature."
+                "special": "一个受擒生物。"
               }
             }
           },
           "effects": {
             "Engulfed": {
-              "name": "Engulfed",
-              "description": "<p>You are &amp;reference[blinded apply=false], &amp;reference[restrained apply=false], suffocating, and have &amp;reference[totalcover] against attacks and other effects outside the creature while engulfed by it. If the creature moves, you move with it.</p><p>At the start of each of the creature's turns, you must make a [[/save 15 con]] saving throw or take [[/damage average 3d8 + 5 bludgeoning]] damage. On a successful save, you escape the creature and enter the nearest unoccupied space.</p>"
+              "name": "被吞噬",
+              "description": "<p>当你被该生物吞没时，你将处于&amp;reference[blinded apply=false]、&amp;reference[restrained apply=false]、窒息状态，并对生物外部的攻击和其他效果具有&amp;reference[totalcover]。如果该生物移动，你将随之移动。</p><p>在该生物每回合开始时，你必须进行一次[[/save 15 con]]豁免，否则将受到[[/damage average 3d8 + 5 bludgeoning]]伤害。若豁免成功，你将脱离该生物并进入最近的未占据空间。</p>"
             }
           }
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item rGQ5K5jFsQqgwRXZ]] attacks. If both attacks hit a Large or smaller creature, the target has the &amp;reference[Grappled] condition (escape DC 16) and the abomination uses [[/item XAareYyDCcQNg3Bg]] on the Grappled creature.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动两次[[/item rGQ5K5jFsQqgwRXZ]]攻击。若两次攻击均命中大型或更小的生物，目标将陷入&amp;reference[Grappled]状态（逃脱DC 16），且该畸变体对受擒生物使用[[/item XAareYyDCcQNg3Bg]]。</p>"
         },
         "Slam": {
-          "name": "Slam",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "猛击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         }
       }
     },
     "Deep Knight": {
-      "name": "Deep Knight",
-      "tokenName": "Deep Knight",
+      "name": "深域骑士",
+      "tokenName": "深骑士",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.87bioepdregs0000 inline]</p>",
       "items": {
         "Abyssal Aura": {
-          "name": "Abyssal Aura",
-          "description": "<p>Allies within 30 feet who can see and hear the [[lookup @name lowercase]] have Advantage on saving throws to avoid or end the &amp;reference[Charmed apply=false] and &amp;reference[Frightened apply=false] conditions. The [[lookup @name lowercase]] can't use this trait if it is &amp;reference[Incapacitated apply=false].</p>"
+          "name": "深渊语灵光",
+          "description": "<p>30尺内能看见并听见[[lookup @name lowercase]]的盟友，在避免或终止&amp;reference[Charmed apply=false]与&amp;reference[Frightened apply=false]状态的豁免上具有优势。若[[lookup @name lowercase]]处于&amp;reference[Incapacitated apply=false]状态，则无法使用此特质。</p>"
         },
         "Unwavering Sentinel": {
-          "name": "Unwavering Sentinel",
-          "description": "<p>Creatures provoke Opportunity Attacks from the [[lookup @name lowercase]] even if they take the Disengage action before leaving its reach.</p>"
+          "name": "坚定卫士",
+          "description": "<p>生物即使在其触及范围内离开前采取撤离动作，也会引发来自[[lookup @name lowercase]]的借机攻击。</p>"
         },
         "Shield Bash": {
-          "name": "Shield Bash",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and if the target is a Huge or smaller creature, it is subjected to the following effect. <em>Strength Saving Throw:</em> DC 14. <em>Failure:</em> The target has the &amp;reference[Prone] condition.</p>"
+          "name": "盾击",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且若目标为巨型或更小的生物，它将受到以下效果影响。<em>力量豁免：</em> DC14。<em>失败：</em> 目标获得&amp;reference[Prone]状态。</p>"
         },
         "Amphibious": {
-          "name": "Amphibious",
-          "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+          "name": "水陆两栖",
+          "description": "<p>该[[lookup @name lowercase]]可以呼吸空气和水。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes one [[/item PoL1rROP1co7SpTi]] attack and one [[/item n1GFQMZjCcCHOWps]] attack.</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动一次[[/item PoL1rROP1co7SpTi]]攻击和一次[[/item n1GFQMZjCcCHOWps]]攻击。</p>"
         },
         "Bite": {
-          "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Harpoon": {
-          "name": "Harpoon",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and if the target is a Huge or smaller creature, it is subjected to the following effect. <em>Strength Saving Throw:</em> DC 14. <em>Failure:</em> The target is pulled up to 20 feet toward the [[lookup @name lowercase]].</p>"
+          "name": "渔枪",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且若目标为巨型或更小的生物，它将受到以下效果影响。<em>力量豁免：</em> DC14。<em>失败：</em> 目标被拉向[[lookup @name lowercase]]最多20尺。</p>"
         },
         "Shield": {
-          "name": "Shield",
-          "description": "<p>You gain the Armor Class benefit of a Shield only if you have training with it.</p>"
+          "name": "护盾术",
+          "description": "<p>你只有在接受过相关训练的情况下，才能获得{护盾术shield}的{护甲等级：}效益。</p>"
         }
       }
     },
     "Garmyr War Dog": {
-      "name": "Garmyr War Dog",
-      "tokenName": "Garmyr War Dog",
+      "name": "加米尔战犬",
+      "tokenName": "加尔米尔战犬",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.83biormyr0000000 inline]</p>",
       "items": {
         "Bite": {
-          "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and if the target is Medium or smaller, it has the &amp;reference[Prone] condition.</p>"
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且若目标是中型或更小的，它将获得&amp;reference[Prone]状态。</p>"
         },
         "Feast": {
-          "name": "Feast",
-          "description": "<p>The [[lookup @name lowercase]] makes a [[/item NU75YRszGL1KPm0F]] attack against a &amp;reference[Bloodied] target.</p>"
+          "name": "盛宴",
+          "description": "<p>该[[lookup @name lowercase]]对&amp;reference[Bloodied]目标发动一次[[/item NU75YRszGL1KPm0F]]攻击。</p>"
         },
         "Pack Tactics": {
-          "name": "Pack Tactics",
-          "description": "<p>The [[lookup @name lowercase]] has Advantage on attack rolls against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn't have the &amp;reference[Incapacitated apply=false] condition.</p>"
+          "name": "集群战术",
+          "description": "<p>如果[[lookup @name lowercase]]的至少一名盟友位于该生物5尺内，且该盟友不具有&amp;reference[Incapacitated apply=false]状态，则[[lookup @name lowercase]]对该生物进行的攻击检定具有优势。</p>"
         }
       }
     },
     "Void Pirate Squib": {
-      "name": "Void Pirate Squib",
-      "tokenName": "Void Pirate Squib",
+      "name": "虚空海盗斯奎布",
+      "tokenName": "虚空海盗斯奎布",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.183biodpirates00 inline]</p>",
       "items": {
         "Captain’s Orders": {
-          "name": "Captain’s Orders",
-          "description": "<p>While within 60 feet of a @UUID[Compendium.drakkenheim-monsters.monsters.Actor.9tj31BF3CTZE84Ux], the [[lookup @name lowercase]] has Advantage on saving throws to avoid or end the &amp;reference[Charmed apply=false] and &amp;reference[Frightened apply=false] conditions.</p>"
+          "name": "船长之令",
+          "description": "<p>当位于@UUID[Compendium.drakkenheim-monsters.monsters.Actor.9tj31BF3CTZE84Ux]60尺范围内时，[[lookup @name lowercase]]在防止或终止&amp;reference[Charmed apply=false]和&amp;reference[Frightened apply=false]状态的豁免上具有优势。</p>"
         },
         "From Another World": {
-          "name": "From Another World",
-          "description": "<p>The [[lookup @name lowercase]] doesn’t have the standard Aberrant Traits other creatures in the Space Between Worlds have.</p>"
+          "name": "来自异界",
+          "description": "<p>[[lookup @name lowercase]]不具备世界间隙中其他生物所拥有的标准异怪特质。</p>"
         },
         "Multiattack": {
-          "name": "Multiattack",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .gYm3Z88np1Hrb2oH]] attacks or uses its [[/item .LloS3Ae2AEX0rRl2]].</p>"
+          "name": "多重攻击Multiattack。",
+          "description": "<p>该[[lookup @name lowercase]]发动两次[[/item .gYm3Z88np1Hrb2oH]]攻击或使用其[[/item .LloS3Ae2AEX0rRl2]]。</p>"
         },
         "Sturdy Net": {
-          "name": "Sturdy Net",
-          "description": "<p>[[/attack extended]]. <em>Hit:</em> The target has the &amp;reference[Restrained] and &amp;reference[Defenseless] conditions. A creature can take an action to free itself or another creature in a net with a successful [[/check]] check. Dealing 10 Slashing damage to the net (AC 12) frees the target without harming it and destroys the net.</p>",
+          "name": "坚固捕网",
+          "description": "<p>[[/attack extended]]。<em>命中：</em>目标获得&amp;reference[Restrained]和&amp;reference[Defenseless]状态。生物可通过一个动作进行[[/check]]检定，若成功则可解放自身或网中其他生物。对捕网造成10点挥砍伤害（护甲等级：12）可解放目标而不伤害它，并摧毁捕网。</p>",
           "activities": {
             "Escape Net Check": {
-              "name": "Escape Net Check"
+              "name": "逃脱捕网检定"
             }
           },
           "effects": {
             "Ensnared in Sturdy Net": {
-              "name": "Ensnared in Sturdy Net",
-              "description": "<p>You are &amp;reference[restrained apply=false] and &amp;reference[defenseless apply=false].</p><p>You or a creature can take an action to free you from the net with a successful [[/check 14 str]]. Dealing 10 Slashing damage to the net (AC 12) frees you without harming you and destroys the net.</p>"
+              "name": "被坚固的捕网缠住",
+              "description": "<p>你受到&amp;reference[restrained apply=false]和&amp;reference[defenseless apply=false]。</p><p>你或一个生物可以执行动作，通过成功的[[/check 14 str]]检定将你从捕网中解救出来。对捕网造成10点挥砍伤害（护甲等级：12）可使你脱困且不受伤害，并摧毁捕网。</p>"
             }
           }
         },
         "Man the Cannons": {
-          "name": "Man the Cannons",
-          "description": "<p>The [[lookup @name lowercase]] loads an artillery weapon, such as a cannon or ballista.</p>"
+          "name": "操作火炮",
+          "description": "<p>[[lookup @name lowercase]]装填一件炮兵武器，例如火炮或弩炮。</p>"
         },
         "Void Cutlass": {
-          "name": "Void Cutlass",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "虚空弯刀",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Leather Armor": {
-          "name": "Leather Armor"
+          "name": "皮甲"
         }
       }
     },
     "Pilgrim": {
-      "name": "Pilgrim",
-      "tokenName": "Pilgrim",
+      "name": "朝圣者",
+      "tokenName": "朝圣者",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.200biollowersoft inline]</p>",
       "items": {
         "Unshakeable Faith": {
-          "name": "Unshakeable Faith",
-          "description": "<p>When the [[lookup @name lowercase]] would fail a saving throw, it can reroll the save with Advantage. It must use the new roll.</p>"
+          "name": "不可动摇的信仰",
+          "description": "<p>当[[lookup @name lowercase]]在豁免检定中失败时，它可以重掷该豁免并获得优势。它必须使用新的掷骰结果。</p>"
         },
         "Club": {
-          "name": "Club",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "name": "短棒",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         }
       }
     },
     "Haze Hulk": {
-      "name": "Haze Hulk",
-      "tokenName": "Haze Hulk",
+      "name": "迷雾废船",
+      "tokenName": "迷雾废船",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.58biozehulk00000 inline]</p>",
       "items": {
         "Mutant Fortitude": {
-          "name": "Mutant Fortitude",
+          "name": "突变体坚韧",
           "description": "<p>If damage reduces the [[lookup @name lowercase]] to 0 Hit Points, it makes a Constitution saving throw (DC 5 plus the damage taken) unless the damage is Radiant or from a Critical Hit. On a successful save, the [[lookup @name lowercase]] drops to 1 Hit Point instead.</p><fieldset><legend>Foundry Note</legend><p>Input the amount of damage taken by the [[lookup @name lowercase]] into the scaling field when using this feature to automatically adjust the saving throw DC.</p></fieldset>",
           "activities": {
             "save": {
