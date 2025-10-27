@@ -1025,7 +1025,7 @@
         },
         "Whirlwind of Sand": {
           "name": "沙旋风",
-          "description": "<p>木乃伊领主魔法般地转变为一股{旋风 whirlwind}，移动最多60{尺}，然后恢复其正常形态。在{旋风 whirlwind}形态下，木乃伊领主对所有{伤害}{免疫}，并且不能被{受擒}、{石化}、{应击倒地}、{束缚}或{震慑}。木乃伊领主穿着或携带的{装备}仍归其所有。</p>"
+          "description": "<p>木乃伊领主魔法般地转变为一股{旋风 whirlwind}，移动最多60{尺}，然后恢复其正常形态。在{旋风 whirlwind}形态下，木乃伊领主对所有{伤害}{免疫}，并且不能被{受擒 Grappled}、{石化 Petrified}、{应击倒地 knocked prone}、{束缚 Restrained}或{震慑 Stunned}。木乃伊领主穿着或携带的{装备 Equipment}仍归其所有。</p>"
         },
         "Sacred Flame": {
           "name": "圣火术",
@@ -1541,7 +1541,7 @@
     "Water Elemental": {
       "name": "水元素",
       "tokenName": "水元素",
-      "description": "<p>水元素生物是一道翻涌的波浪，在地面上滚动前进，当它流经更大的水体时会变得近乎&Reference[invisible]{隐形}。它会吞噬阻挡其去路的生物，如同轻易扑灭火焰一般填满它们的口鼻与肺腑。</p>",
+      "description": "<p>水元素生物是一道翻涌的波浪，在地面上滚动前进，当它流经更大的水体时会变得近乎&Reference[invisible]{隐形 Invisible}。它会吞噬阻挡其去路的生物，如同轻易扑灭火焰一般填满它们的口鼻与肺腑。</p>",
       "items": {
         "Freeze": {
           "name": "冻结",
@@ -1561,7 +1561,7 @@
         },
         "Whelm": {
           "name": "淹没",
-          "description": "<section class=\"secret\" id=\"secret-tpnvomAtfNouC7yE\"><p>在元素生物空间内的每个生物必须进行一次<strong>DC15力量</strong>豁免。若失败，目标受到<strong>13 (2d8 + 4) </strong><em><strong>钝击伤害</strong></em>。若是大型或更小的生物，它还会被擒抱（逃脱[[/check ability=str dc=14]]）。直到此擒抱结束，目标被束缚且无法呼吸，除非它能水下呼吸。</p><p>若豁免成功，目标被推出元素生物的空间。元素生物可同时擒抱一个大型生物或至多两个中型或更小的生物。在元素生物每回合开始时，每个被它擒抱的目标受到<strong>13 (2d8 + 4) </strong><em><strong>钝击伤害</strong></em>。元素生物5尺内的生物可通过执行一个动作进行一次DC14力量检定并成功，从而将生物或物件从中拉出。</p></section><p>在元素生物空间内的每个生物必须进行一次<strong>力量</strong>豁免。若是大型或更小的生物，它还会被&Reference[grappled]{受擒}。直到此擒抱结束，目标被&Reference[restrained]{束缚}且无法呼吸，除非它能水下呼吸。元素生物5尺内的生物可通过执行一个动作进行一次力量检定并成功，从而将生物或物件从中拉出。</p>"
+          "description": "<section class=\"secret\" id=\"secret-tpnvomAtfNouC7yE\"><p>在元素生物空间内的每个生物必须进行一次<strong>DC15力量</strong>豁免。若失败，目标受到<strong>13 (2d8 + 4) </strong><em><strong>钝击伤害</strong></em>。若是大型或更小的生物，它还会被擒抱（逃脱[[/check ability=str dc=14]]）。直到此擒抱结束，目标被束缚且无法呼吸，除非它能水下呼吸。</p><p>若豁免成功，目标被推出元素生物的空间。元素生物可同时擒抱一个大型生物或至多两个中型或更小的生物。在元素生物每回合开始时，每个被它擒抱的目标受到<strong>13 (2d8 + 4) </strong><em><strong>钝击伤害</strong></em>。元素生物5尺内的生物可通过执行一个动作进行一次DC14力量检定并成功，从而将生物或物件从中拉出。</p></section><p>在元素生物空间内的每个生物必须进行一次<strong>力量</strong>豁免。若是大型或更小的生物，它还会被&Reference[grappled]{受擒 grappled}。直到此擒抱结束，目标被&Reference[restrained]{束缚 restrained}且无法呼吸，除非它能水下呼吸。元素生物5尺内的生物可通过执行一个动作进行一次力量检定并成功，从而将生物或物件从中拉出。</p>"
         }
       }
     },
@@ -1716,7 +1716,7 @@
         },
         "Horrifying Visage": {
           "name": "Horrifying Visage",
-          "description": "<section class=\"secret\" id=\"secret-PS1xFPnqQ6wyNqRE\"><p>幽灵60尺范围内能看见它的每个非不死生物必须进行一次<strong>DC 13 感知</strong>豁免，失败则陷入&amp;Reference[frightened]{恐慌}状态1分钟。若豁免失败且差值达到5或更多，目标还会衰老[[/gmroll 1d4*10]]年。</p><p>受惊目标可以在每个自己的回合结束时重复该豁免，成功则结束自身的恐慌状态。若目标豁免成功或效果终止，该目标在接下来的24小时内免疫此幽灵的恐怖面容。衰老效果可通过@UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{高等复原术 greater restoration}法术逆转，但仅限于效果发生后的24小时内。</p></section><p>幽灵60尺范围内能看见它的每个非不死生物必须进行一次<strong>感知</strong>豁免。目标可以在每个自己的回合结束时重复该豁免，成功则结束自身状态。</p>"
+          "description": "<section class=\"secret\" id=\"secret-PS1xFPnqQ6wyNqRE\"><p>幽灵60尺范围内能看见它的每个非不死生物必须进行一次<strong>DC 13 感知</strong>豁免，失败则陷入&amp;Reference[frightened]{恐慌 frightened}状态1分钟。若豁免失败且差值达到5或更多，目标还会衰老[[/gmroll 1d4*10]]年。</p><p>受惊目标可以在每个自己的回合结束时重复该豁免，成功则结束自身的恐慌状态。若目标豁免成功或效果终止，该目标在接下来的24小时内免疫此幽灵的恐怖面容。衰老效果可通过@UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{高等复原术 greater restoration}法术逆转，但仅限于效果发生后的24小时内。</p></section><p>幽灵60尺范围内能看见它的每个非不死生物必须进行一次<strong>感知</strong>豁免。目标可以在每个自己的回合结束时重复该豁免，成功则结束自身状态。</p>"
         },
         "Possession": {
           "name": "Possession",
@@ -1840,7 +1840,7 @@
         },
         "Dreadful Glare": {
           "name": "Dreadful Glare",
-          "description": "<section class=\"secret\" id=\"secret-brWqnTRJmIubygpP\"><p>该木乃伊以它能看见的60尺内单一生物为目标。如果目标可以看见木乃伊，它必须进行一次<strong>DC 11 感知</strong>豁免以抵抗此魔法，否则将陷入&Reference[frightened]{恐慌}状态，直到木乃伊的下个回合结束。</p><p>如果目标的豁免检定失败且差值达到5或更多，它还会在相同持续时间内&Reference[paralyzed]{麻痹}。成功通过豁免检定的目标在接下来的24小时内对所有木乃伊（但不包括木乃伊领主）的恐怖怒视效果免疫。</p></section><p>该木乃伊以它能看见的60尺内单一生物为目标。如果目标可以看见木乃伊，它必须进行一次<strong>感知</strong>豁免以抵抗此魔法。</p>"
+          "description": "<section class=\"secret\" id=\"secret-brWqnTRJmIubygpP\"><p>该木乃伊以它能看见的60尺内单一生物为目标。如果目标可以看见木乃伊，它必须进行一次<strong>DC 11 感知</strong>豁免以抵抗此魔法，否则将陷入&Reference[frightened]{恐慌 frightened}状态，直到木乃伊的下个回合结束。</p><p>如果目标的豁免检定失败且差值达到5或更多，它还会在相同持续时间内&Reference[paralyzed]{麻痹 paralyzed}。成功通过豁免检定的目标在接下来的24小时内对所有木乃伊（但不包括木乃伊领主）的恐怖怒视效果免疫。</p></section><p>该木乃伊以它能看见的60尺内单一生物为目标。如果目标可以看见木乃伊，它必须进行一次<strong>感知</strong>豁免以抵抗此魔法。</p>"
         }
       }
     },
@@ -2017,7 +2017,7 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术环阶的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术环阶的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Slam": {
           "name": "Slam",
@@ -2035,7 +2035,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]]发动相当于本法术等级一半（向下取整）次数的攻击。</p><p><strong>[[max(1, floor((@attributes.ac.value - @attributes.ac.flat)/2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动相当于本法术等级一半（向下取整）次数的攻击。</p><p><strong>[[max(1, floor((@attributes.ac.value - @attributes.ac.flat)/2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Maul": {
           "name": "巨锤",
@@ -2082,7 +2082,7 @@
         },
         "Alter Self": {
           "name": "Alter Self",
-          "description": "<p>你呈现为另一种形态。当你施展该法术时，从下列选项中选择其一，其效果将在法术持续时间内生效。当法术持续时，你可以用一个动作来结束一项选项，以获得另一选项的效益。</p><p><strong>水栖适应。</strong>你使自己的身体适应水生环境，长出鳃并在指间生出蹼膜。你可以呼吸{水下 underwater}，并获得等于你{步行速度 walking speed}的{游泳速度 swimming speed}。</p><p><strong>改变外观。</strong>你改变自己的外貌。你可以决定自己的样貌，包括身高、体重、面部特征、声音、头发长度、肤色以及任何显著特征。你可以使自己看起来像是其他{种族}的成员，但你的{资料卡}不会改变。同时，你不能变成与你不同{体型}的{生物}，且你的基本形态保持不变；例如，如果你是双足{生物}，你不能通过此法术变为四足形态。在法术{持续时间}内的任意时刻，你可以再次使用你的{动作}以这种方式改变你的外观。</p><p><strong>天生武器。</strong>你长出爪子、尖牙、尖刺、犄角或你选择的其他{天生武器 natural weapons}。你的徒手打击造成1d6{钝击 Bludgeoning}、{穿刺 Piercing}或{挥砍伤害 slashing damage}（根据你所选的{天生武器 natural weapon}类型而定），并且你对你的徒手打击{熟练}。最后，该{天生武器 natural weapon}是{魔法}的，并且你使用它进行的{攻击}和{伤害}骰具有+1{加值}。</p>"
+          "description": "<p>你呈现为另一种形态。当你施展该法术时，从下列选项中选择其一，其效果将在法术持续时间内生效。当法术持续时，你可以用一个动作来结束一项选项，以获得另一选项的效益。</p><p><strong>水栖适应。</strong>你使自己的身体适应水生环境，长出鳃并在指间生出蹼膜。你可以呼吸{水下 underwater}，并获得等于你{步行速度 walking speed}的{游泳速度 swimming speed}。</p><p><strong>改变外观。</strong>你改变自己的外貌。你可以决定自己的样貌，包括身高、体重、面部特征、声音、头发长度、肤色以及任何显著特征。你可以使自己看起来像是其他{种族 Race}的成员，但你的{资料卡 statistics}不会改变。同时，你不能变成与你不同{体型 Size}的{生物 Creature}，且你的基本形态保持不变；例如，如果你是双足{生物 Creature}，你不能通过此法术变为四足形态。在法术{持续时间 Duration}内的任意时刻，你可以再次使用你的{动作 Action}以这种方式改变你的外观。</p><p><strong>天生武器。</strong>你长出爪子、尖牙、尖刺、犄角或你选择的其他{天生武器 natural weapons}。你的徒手打击造成1d6{钝击 Bludgeoning}、{穿刺 Piercing}或{挥砍伤害 slashing damage}（根据你所选的{天生武器 natural weapon}类型而定），并且你对你的徒手打击{熟练 Proficient}。最后，该{天生武器 natural weapon}是{魔法 Magic}的，并且你使用它进行的{攻击 Attack}和{伤害 damage}骰具有+1{加值 bonus}。</p>"
         },
         "Darkness": {
           "name": "Darkness",
@@ -2203,7 +2203,7 @@
       "items": {
         "Force Ballista": {
           "name": "Force Ballista",
-          "description": "<p>从火炮发动一次[[/r 1d20]]{远程法术攻击}，目标为120尺内的单一生物或物件。若命中，目标受到2d8力场伤害，且若目标是一个生物，它会被推离火炮至多5尺远。</p>"
+          "description": "<p>从火炮发动一次[[/r 1d20]]{远程法术攻击 Ranged Spell Attack}，目标为120尺内的单一生物或物件。若命中，目标受到2d8力场伤害，且若目标是一个生物，它会被推离火炮至多5尺远。</p>"
         }
       }
     },
@@ -2223,7 +2223,7 @@
       "items": {
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Radiant Bow": {
           "name": "Radiant Bow",
@@ -2255,7 +2255,7 @@
         },
         "Horrifying Visage": {
           "name": "Horrifying Visage",
-          "description": "<section class=\"secret\" id=\"secret-1OBS0flNMT5xkqiK\"><p>女妖60尺范围内能看见它的每个非不死生物必须进行一次<strong>DC 13 感知</strong>豁免，失败则陷入&Reference[condition=frightened]{恐慌}状态1分钟。若豁免结果低于DC 5点或更多，目标还会衰老[[/r 1d4 * 10]]年。</p><p>恐慌目标可以在每个自己的回合结束时重复该豁免，成功则结束自身的恐慌状态。若目标的豁免成功或效果终止，该目标在接下来的24小时内免疫此{生物 creature}的恐怖面容。衰老效果可通过{高等复原术 greater restoration}逆转，但仅限于效果发生后的24小时内。</p></section><p>女妖60尺范围内能看见它的每个非不死生物必须进行一次<strong>感知</strong>豁免。目标可以在每个自己的回合结束时重复该豁免，成功则结束自身状态。</p>"
+          "description": "<section class=\"secret\" id=\"secret-1OBS0flNMT5xkqiK\"><p>女妖60尺范围内能看见它的每个非不死生物必须进行一次<strong>DC 13 感知</strong>豁免，失败则陷入&Reference[condition=frightened]{恐慌 frightened}状态1分钟。若豁免结果低于DC 5点或更多，目标还会衰老[[/r 1d4 * 10]]年。</p><p>恐慌目标可以在每个自己的回合结束时重复该豁免，成功则结束自身的恐慌状态。若目标的豁免成功或效果终止，该目标在接下来的24小时内免疫此{生物 creature}的恐怖面容。衰老效果可通过{高等复原术 greater restoration}逆转，但仅限于效果发生后的24小时内。</p></section><p>女妖60尺范围内能看见它的每个非不死生物必须进行一次<strong>感知</strong>豁免。目标可以在每个自己的回合结束时重复该豁免，成功则结束自身状态。</p>"
         },
         "Detect Life": {
           "name": "Detect Life",
@@ -2289,7 +2289,7 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(1, floor((@attributes.ac.value - @attributes.ac.flat)/2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(1, floor((@attributes.ac.value - @attributes.ac.flat)/2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Maul": {
           "name": "巨锤",
@@ -2317,19 +2317,19 @@
         },
         "Eye Rays": {
           "name": "Eye Rays",
-          "description": "<p>眼魔随机射出以下三种魔法眼波射线[[/gmroll 1d10]]（重复则重掷），选择其视野内120尺范围内的一至三个目标：</p><ol><li><p>@UUID[.yB4KNNcTeWURkALQ]{魅惑射线}</p></li><li><p>@UUID[.mE1eabICJu4hrx5P]{麻痹射线}</p></li><li><p>@UUID[.fctKGxfFZoGM6s3z]{恐惧射线}</p></li><li><p>@UUID[.1KSNmwX7SvXf8lCV]{缓速射线}</p></li><li><p>@UUID[.3y9RyZvkGjScxlor]{汲能射线}</p></li><li><p>@UUID[.txO8mWSqaeNYxEe5]{念动射线}</p></li><li><p>@UUID[.mssOCG1h0bENsZnX]{睡眠射线}</p></li><li><p>@UUID[.kkrVXPb50lWVJbt6]{石化射线}</p></li><li><p>@UUID[.QyQyJjhvMRYrXTXL]{解离射线}</p></li><li><p>@UUID[.m5s2eogxxSmIizAZ]{死亡射线}</p></li></ol>"
+          "description": "<p>眼魔随机射出以下三种魔法眼波射线[[/gmroll 1d10]]（重复则重掷），选择其视野内120尺范围内的一至三个目标：</p><ol><li><p>@UUID[.yB4KNNcTeWURkALQ]{魅惑 Charm Ray}</p></li><li><p>@UUID[.mE1eabICJu4hrx5P]{麻痹 Paralyzing Ray}</p></li><li><p>@UUID[.fctKGxfFZoGM6s3z]{恐惧 Fear Ray}</p></li><li><p>@UUID[.1KSNmwX7SvXf8lCV]{缓速 Slowing Ray}</p></li><li><p>@UUID[.3y9RyZvkGjScxlor]{汲能术enervation Enervation Ray}</p></li><li><p>@UUID[.txO8mWSqaeNYxEe5]{念动 Telekinetic Ray}</p></li><li><p>@UUID[.mssOCG1h0bENsZnX]{睡眠术sleep Sleep Ray}</p></li><li><p>@UUID[.kkrVXPb50lWVJbt6]{石化 Petrification Ray}</p></li><li><p>@UUID[.QyQyJjhvMRYrXTXL]{解离 Disintegration Ray}</p></li><li><p>@UUID[.m5s2eogxxSmIizAZ]{死亡 Death Ray}</p></li></ol>"
         },
         "Charm Ray": {
           "name": "Charm Ray",
-          "description": "<p>目标生物必须进行一次DC 16的感知豁免，若失败则被眼魔&Reference[charmed]{魅惑}1小时，或直至眼魔伤害该生物。</p>"
+          "description": "<p>目标生物必须进行一次DC 16的感知豁免，若失败则被眼魔&Reference[charmed]{魅惑 charmed}1小时，或直至眼魔伤害该生物。</p>"
         },
         "Paralyzing Ray": {
           "name": "Paralyzing Ray",
-          "description": "<p>目标生物必须进行一次DC 16体质豁免，失败则被&Reference[paralyzed]{麻痹}1分钟。目标可以在每个自己的回合结束时重复该豁免，成功则终止其身上的该效应。</p>"
+          "description": "<p>目标生物必须进行一次DC 16体质豁免，失败则被&Reference[paralyzed]{麻痹 paralyzed}1分钟。目标可以在每个自己的回合结束时重复该豁免，成功则终止其身上的该效应。</p>"
         },
         "Fear Ray": {
           "name": "Fear Ray",
-          "description": "<p>目标生物必须进行一次DC 16的感知豁免，失败则会被&Reference[frightened]{恐慌}1分钟。目标可以在每个自己的回合结束时重复该豁免，成功则终止其身上的该效应。</p>"
+          "description": "<p>目标生物必须进行一次DC 16的感知豁免，失败则会被&Reference[frightened]{恐慌 frightened}1分钟。目标可以在每个自己的回合结束时重复该豁免，成功则终止其身上的该效应。</p>"
         },
         "Slowing Ray": {
           "name": "Slowing Ray",
@@ -2341,15 +2341,15 @@
         },
         "Telekinetic Ray": {
           "name": "Telekinetic Ray",
-          "description": "<p>如果目标是一个生物，它必须进行一次DC 16力量豁免，否则眼魔将其向任意方向移动至多30尺。目标将被射线的心灵遥控抓握&amp;Reference[restrained]{束缚}，直到眼魔的下一回合开始或眼魔&amp;Reference[incapacitated]{失能}。</p><p>如果目标是一个重量不超过300磅且未被穿着或携带的物件，它将被向任意方向移动至多30尺。眼魔也可以用此射线对物件进行精细操控，例如操纵一件简易工具或打开一扇门或一个容器。</p>"
+          "description": "<p>如果目标是一个生物，它必须进行一次DC 16力量豁免，否则眼魔将其向任意方向移动至多30尺。目标将被射线的心灵遥控抓握&amp;Reference[restrained]{束缚 restrained}，直到眼魔的下一回合开始或眼魔&amp;Reference[incapacitated]{失能 incapacitated}。</p><p>如果目标是一个重量不超过300磅且未被穿着或携带的物件，它将被向任意方向移动至多30尺。眼魔也可以用此射线对物件进行精细操控，例如操纵一件简易工具或打开一扇门或一个容器。</p>"
         },
         "Sleep Ray": {
           "name": "Sleep Ray",
-          "description": "<p>目标生物必须进行一次DC 16的感知豁免，失败则陷入沉睡并保持&amp;Reference[unconscious]{昏迷}状态1分钟。若目标受到伤害或有其他生物使用动作将其唤醒，则目标会苏醒。此射线对构装生物和亡灵无效。</p>"
+          "description": "<p>目标生物必须进行一次DC 16的感知豁免，失败则陷入沉睡并保持&amp;Reference[unconscious]{昏迷 unconscious}状态1分钟。若目标受到伤害或有其他生物使用动作将其唤醒，则目标会苏醒。此射线对构装生物和亡灵无效。</p>"
         },
         "Petrification Ray": {
           "name": "Petrification Ray",
-          "description": "<p>目标生物必须进行一次DC 16的敏捷豁免。豁免失败时，该生物开始石化并受到&amp;Reference[restrained]{束缚}。它必须在其下一回合结束时重复该豁免。若成功，则效果结束。若失败，该生物将被&amp;Reference[petrified]{石化}，直至通过@{UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{高等复原术 greater restoration}}或其他魔法解除。</p>"
+          "description": "<p>目标生物必须进行一次DC 16的敏捷豁免。豁免失败时，该生物开始石化并受到&amp;Reference[restrained]{束缚 restrained}。它必须在其下一回合结束时重复该豁免。若成功，则效果结束。若失败，该生物将被&amp;Reference[petrified]{石化 petrified}，直至通过@UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{高等复原术 greater restoration}或其他魔法解除。</p>"
         },
         "Disintegration Ray": {
           "name": "Disintegration Ray",
@@ -2392,7 +2392,7 @@
       "items": {
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Radiant Bow": {
           "name": "Radiant Bow",
@@ -2466,7 +2466,7 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Slam": {
           "name": "Slam",
@@ -2643,7 +2643,7 @@
         },
         "Magic Weapon": {
           "name": "Magic Weapon",
-          "description": "<p>你触及一件非魔法{武器}。直至该{法术}终止，该{武器}成为一把{魔化武器 magic weapon}，其{攻击}骰和{伤害}骰获得+1{加值}。</p><p><strong>{升环施法效应}</strong> {施展该法术时}，若你使用的{法术位}为4环{或}更高，该{加值}{扩展至}+2。若你使用的{法术位}为6环{或}更高，该{加值}{扩展至}+3。</p>"
+          "description": "<p>你触及一件非魔法{武器}。直至该{法术}终止，该{武器}成为一把{魔化武器 magic weapon}，其{攻击}骰和{伤害}骰获得+1{加值}。</p><p><strong>{升环施法效应 At Higher Levels}</strong> {施展该法术时 When you cast this spell}，若你使用的{法术位}为4环{或}更高，该{加值}{扩展至}+2。若你使用的{法术位}为6环{或}更高，该{加值}{扩展至}+3。</p>"
         },
         "Dispel Magic": {
           "name": "解除魔法",
@@ -2766,7 +2766,7 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(3, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(3, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Bite": {
           "name": "Bite",
@@ -2788,7 +2788,7 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(3, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(3, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Hurl Flame": {
           "name": "Hurl Flame",
@@ -2802,7 +2802,7 @@
       "items": {
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Slam": {
           "name": "Slam",
@@ -2820,7 +2820,7 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Slam": {
           "name": "Slam",
@@ -2844,7 +2844,7 @@
       "items": {
         "Force Ballista": {
           "name": "Force Ballista",
-          "description": "<p>从火炮发动一次[[/r 1 #Ranged Spell Attack]]{远程法术攻击}, 目标为120尺内的一个生物或物件。若命中, 目标受到2d8力场伤害, 且若目标为生物, 它将被推离火炮至多5尺。</p>"
+          "description": "<p>从火炮发动一次[[/r 1 #Ranged Spell Attack]]{远程法术攻击 Ranged Spell Attack}, 目标为120尺内的一个生物或物件。若命中, 目标受到2d8力场伤害, 且若目标为生物, 它将被推离火炮至多5尺。</p>"
         }
       }
     },
@@ -2864,7 +2864,7 @@
       "items": {
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术环阶的一半（向下取整）。</p><p><strong>[[max(1, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术环阶的一半（向下取整）。</p><p><strong>[[max(1, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Shortsword": {
           "name": "短剑",
@@ -2899,7 +2899,7 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术环阶的一半（向下取整）。</p><p><strong>[[max(3, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术环阶的一半（向下取整）。</p><p><strong>[[max(3, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Bite": {
           "name": "Bite",
@@ -2925,7 +2925,7 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(2, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Slam": {
           "name": "Slam",
@@ -3000,11 +3000,11 @@
       "items": {
         "Advanced Telepathy": {
           "name": "Advanced Telepathy",
-          "description": "<p>该呋噜可以感知60尺内任何心灵感应交流的内容,并且它不会被任何拥有心灵感应能力的生物&Reference[surprised]{突袭}。</p>"
+          "description": "<p>该呋噜可以感知60尺内任何心灵感应交流的内容，并且它不会被任何拥有心灵感应能力的生物&Reference[surprised]{突袭 surprised}。</p>"
         },
         "Prone Deficiency": {
           "name": "Prone Deficiency",
-          "description": "<p>如果呋噜被击倒，掷一次骰。若结果为奇数，呋噜会背部着地且陷入&amp;Reference[incapacitated]{失能}状态。在每个自己的回合结束时，呋噜可以进行一次DC 10敏捷豁免，若成功则翻身并结束失能状态。</p>"
+          "description": "<p>如果呋噜被击倒，掷一次骰。若结果为奇数，呋噜会背部着地且陷入&amp;Reference[incapacitated]{失能 incapacitated}状态。在每个自己的回合结束时，呋噜可以进行一次DC 10敏捷豁免，若成功则翻身并结束失能状态。</p>"
         },
         "Telepathic Shroud": {
           "name": "Telepathic Shroud",
@@ -3016,7 +3016,7 @@
         },
         "Stench Spray": {
           "name": "Stench Spray",
-          "description": "<p>源自呋噜的15尺锥形区域内的每个生物必须进行一次DC 10 敏捷豁免，豁免失败则被恶臭液体覆盖。被覆盖的生物会散发可怕恶臭[[/gmroll 1d4]]小时。恶臭持续期间，被覆盖生物处于&Reference[poisoned]{中毒}状态，其他生物位于被覆盖生物5尺范围内时也会中毒。生物可通过短休用水、酒精或醋清洗来去除身上的恶臭。</p>"
+          "description": "<p>源自呋噜的15尺锥形区域内的每个生物必须进行一次DC 10敏捷豁免，豁免失败则被恶臭液体覆盖。被覆盖的生物会散发可怕恶臭[[/gmroll 1d4]]小时。恶臭持续期间，被覆盖生物处于&Reference[poisoned]{中毒 poisoned}状态，其他生物位于被覆盖生物5尺范围内时也会中毒。生物可通过短休用水、酒精或醋清洗来去除身上的恶臭。</p>"
         }
       }
     },
@@ -3053,7 +3053,7 @@
         },
         "Animate Boulders": {
           "name": "Animate Boulders",
-          "description": "<p>石元素魔法性地活化至多两个它可见的，位于其60尺内的巨石。一块巨石拥有与石元素相似的资料卡，除了它的智力为1和魅力为1，它不能被&Reference[charmed]{魅惑}或&Reference[frightened]{恐慌}，并且它缺乏此动作选项。只要石元素维持专注，至多1分钟（如同专注于法术），巨石就会保持活化状态。</p>"
+          "description": "<p>石元素魔法性地活化至多两个它可见的，位于其60尺内的巨石。一块巨石拥有与石元素相似的资料卡，除了它的智力为1和魅力为1，它不能被&Reference[charmed]{魅惑 charmed}或&Reference[frightened]{恐慌 frightened}，并且它缺乏此动作选项。只要石元素维持专注，至多1分钟（如同专注于法术），巨石就会保持活化状态。</p>"
         },
         "Rolling Charge": {
           "name": "Rolling Charge",
@@ -3136,7 +3136,7 @@
         },
         "Vigilant": {
           "name": "Vigilant",
-          "description": "<p>该防御者无法被&Reference[surprise]{突袭}。</p>"
+          "description": "<p>该防御者无法被&Reference[surprise]{突袭 surprise}。</p>"
         }
       }
     },
@@ -3203,7 +3203,7 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动相当于本法术等级一半（向下取整）次数的攻击。</p><p><strong>[[max(1, floor((@attributes.ac.value - @attributes.ac.flat)/2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动相当于本法术等级一半（向下取整）次数的攻击。</p><p><strong>[[max(1, floor((@attributes.ac.value - @attributes.ac.flat)/2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Maul": {
           "name": "巨锤",
@@ -3423,7 +3423,7 @@
         },
         "Servant Controls": {
           "name": "Servant Controls",
-          "description": "<p><em>奇物, 需要同调</em></p><p><strong>危险同调。</strong> 可以同时有两个生物与@{UUID...}{仆从}同调。如果第三个生物试图与之同调，则不会发生任何事。</p><p>仆从的控制装置通过其上背部的一个舱口进入，当没有生物与该神器同调时，该舱口很容易打开。</p><p>与神器同调需要两个小时，这可以作为长休的一部分进行，在此期间你必须位于仆从内部，操作其控制装置。当船员进行同调时，仆从外部50尺内的任何生物或结构有25%的几率在同调过程中被其一次毁灭之拳攻击意外命中。每次生物与该神器同调时都必须经历此过程。</p><p><strong>控制仆从。</strong> 当有任何生物与该神器同调时，同调生物可以像打开其他门一样轻松地打开舱口。其他生物可以花费一个动作，使用盗贼工具成功通过一次[[/check ability=dex tool=thief dc=25]]检定来打开舱口。对舱口施展@{UUID...}{敲击术 knock}也会将其打开，直到施法者的下一回合开始。</p><p>一个生物可以通过花费10尺移动力穿过舱口进入或离开。位于仆从内部的生物对来自外部的效果拥有&amp;Reference[Total Cover]{全身掩护}。其内部的控制装置允许生物无阻碍地看到外部。</p><p>当你在仆从内部时，你可以使用控制装置来命令它。在你的回合期间（对于任一已同调生物），你可以通过以下方式命令它：</p><ul><li><p>打开或关闭舱口（无需动作，每回合一次）</p></li><li><p>移动仆从至多其速度（无需动作）</p></li><li><p>作为一个动作，你可以命令仆从执行其资料卡中的一个动作或其他某个动作。</p></li><li><p>当一个生物引发仆从的借机攻击时，你可以用你的反应命令仆从对该生物发动一次毁灭之拳攻击。</p></li></ul><p>当仆从内部没有已同调生物时，它是一个惰性物件。</p><section class=\"secret\" id=\"secret-prSZFJoXscR97wzu\"><p><strong>Foundry 注</strong></p><p>此物品主要用于表示与@{UUID...}的同调以及已同调生物的数量。该物品可以根据需要复制并添加到其他角色上。</p></section>"
+          "description": "<p><em>奇物, 需要同调</em></p><p><strong>危险同调。</strong> 可以同时有两个生物与@UUID[Compendium.dnd-tashas-cauldron.tcoe-actors.Actor.tcoeMightyServan]{仆从}同调。如果第三个生物试图与之同调，则不会发生任何事。</p><p>仆从的控制装置通过其上背部的一个舱口进入，当没有生物与该神器同调时，该舱口很容易打开。</p><p>与神器同调需要两个小时，这可以作为长休的一部分进行，在此期间你必须位于仆从内部，操作其控制装置。当船员进行同调时，仆从外部50尺内的任何生物或结构有25%的几率在同调过程中被其一次毁灭之拳攻击意外命中。每次生物与该神器同调时都必须经历此过程。</p><p><strong>控制仆从。</strong> 当有任何生物与该神器同调时，同调生物可以像打开其他门一样轻松地打开舱口。其他生物可以花费一个动作，使用盗贼工具成功通过一次[[/check ability=dex tool=thief dc=25]]检定来打开舱口。对舱口施展@UUID[Compendium.dnd5e.spells.Item.1nhIxh0DsJsntCfj]{敲击术 knock}也会将其打开，直到施法者的下一回合开始。</p><p>一个生物可以通过花费10尺移动力穿过舱口进入或离开。位于仆从内部的生物对来自外部的效果拥有&amp;Reference[totalcover]{全身掩护 total cover}。其内部的控制装置允许生物无阻碍地看到外部。</p><p>当你在仆从内部时，你可以使用控制装置来命令它。在你的回合期间（对于任一已同调生物），你可以通过以下方式命令它：</p><ul><li><p>打开或关闭舱口（无需动作，每回合一次）</p></li><li><p>移动仆从至多其速度（无需动作）</p></li><li><p>作为一个动作，你可以命令仆从执行其资料卡中的一个动作或其他某个动作。</p></li><li><p>当一个生物引发仆从的借机攻击时，你可以用你的反应命令仆从对该生物发动一次毁灭之拳攻击。</p></li></ul><p>当仆从内部没有已同调生物时，它是一个惰性物件。</p><section class=\"secret\" id=\"secret-prSZFJoXscR97wzu\"><p><strong>Foundry 注</strong></p><p>此物品主要用于表示与@UUID[Compendium.dnd-tashas-cauldron.tcoe-actors.Actor.tcoeMightyServan]的同调以及已同调生物的数量。该物品可以根据需要复制并添加到其他角色上。</p></section>"
         }
       }
     },
@@ -3446,7 +3446,7 @@
         },
         "Extract Brain": {
           "name": "Extract Brain",
-          "description": "<section class=\"secret\" id=\"secret-GG0uby9js9Ev7VwP\"><p><em>近战武器攻击:</em> 命中+7, 触及5尺, 一个被夺心魔&amp;Reference[grappled]{擒抱}的&amp;Reference[incapacitated]{失能}类人生物。命中: 目标受到55 (10d10)点穿刺伤害。如果此伤害将目标生命值降至0, 夺心魔会通过提取并吞噬其大脑来杀死目标。</p></section><p>夺心魔试图提取一个大脑。</p>"
+          "description": "<section class=\"secret\" id=\"secret-GG0uby9js9Ev7VwP\"><p><em>近战武器攻击:</em> 命中+7, 触及5尺, 一个被夺心魔&amp;Reference[grappled]{受擒 grappled}的&amp;Reference[incapacitated]{失能 incapacitated}类人生物。命中: 目标受到55 (10d10)点穿刺伤害。如果此伤害将目标生命值降至0, 夺心魔会通过提取并吞噬其大脑来杀死目标。</p></section><p>夺心魔试图提取一个大脑。</p>"
         },
         "Detect Thoughts": {
           "name": "侦测思想",
@@ -3466,7 +3466,7 @@
         },
         "Mind Blast": {
           "name": "Mind Blast",
-          "description": "<p>夺心魔魔法性地释放出一道60尺锥状的心灵能量。该区域内的每个生物必须进行一次DC15的智力豁免，失败则受到22（4d8 + 4）心灵伤害并被&Reference[stunned]{震慑}1分钟。生物可以在每个自己的回合结束时重复该豁免，成功则结束其身上的该效应。</p>"
+          "description": "<p>夺心魔魔法性地释放出一道60尺锥状的心灵能量。该区域内的每个生物必须进行一次DC15的智力豁免，失败则受到22（4d8 + 4）心灵伤害并被&Reference[stunned]{震慑 stunned}1分钟。生物可以在每个自己的回合结束时重复该豁免，成功则结束其身上的该效应。</p>"
         },
         "Tentacles": {
           "name": "Tentacles",
@@ -3610,7 +3610,7 @@
       "items": {
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Weight of Sorrow": {
           "name": "Weight of Sorrow",
@@ -3722,7 +3722,7 @@
         },
         "Vigilant": {
           "name": "Vigilant",
-          "description": "<p>该防御者无法被&Reference[surprise]{突袭}。</p>"
+          "description": "<p>该防御者无法被&Reference[surprise]{突袭 Surprise}。</p>"
         },
         "Repair": {
           "name": "Repair",
@@ -3800,7 +3800,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半(向下取整)。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</strong></p>"
+          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半(向下取整)。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Deathly Touch": {
           "name": "Deathly Touch",
@@ -3818,7 +3818,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</strong></p>"
+          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Rotting Claw": {
           "name": "Rotting Claw",
@@ -3832,7 +3832,7 @@
       "items": {
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</strong></p>"
+          "description": "<p>该[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Grave Bolt": {
           "name": "Grave Bolt",
@@ -3854,7 +3854,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>该[[lookup @name lowercase]]发动攻击的次数等于本法术等级的一半（向下取整）。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数}</strong></p>"
+          "description": "<p>该[[lookup @name lowercase]]发动攻击的次数等于本法术等级的一半（向下取整）。</p><p><strong>[[floor(@flags.dnd5e.summon.level / 2)]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Deathly Touch": {
           "name": "Deathly Touch",
@@ -3898,7 +3898,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(1, floor((@attributes.ac.value - @attributes.ac.flat)/2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于该法术等级的一半（向下取整）。</p><p><strong>[[max(1, floor((@attributes.ac.value - @attributes.ac.flat)/2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Maul": {
           "name": "巨锤",
@@ -3930,7 +3930,7 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(3, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数}</strong></p>"
+          "description": "<p>[[lookup @name lowercase]]发动的攻击次数等于本法术等级的一半（向下取整）。</p><p><strong>[[max(3, floor(@flags.dnd5e.summon.level / 2))]]{攻击次数 Number of Attacks}</strong></p>"
         },
         "Claws": {
           "name": "爪击",

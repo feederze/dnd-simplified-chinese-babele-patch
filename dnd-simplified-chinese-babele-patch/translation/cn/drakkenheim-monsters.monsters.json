@@ -1052,7 +1052,7 @@
         },
         "Dimension Door": {
           "name": "任意门",
-          "description": "<p>你传送到射程内的一个地点。你会精确抵达期望的位置。它可以是一个你能看见的地方、一个你能清晰想象的地方，或者一个你能通过描述距离和方向来指定的地方，例如“正下方200尺”或“西北方向45度角向上300尺”。</p><p>你也可以传送一个自愿生物。该生物在你传送时必须处于你5尺范围内，且它会传送到你目标地点5尺范围内的一个空间。</p><p>若你、其他生物、或两者将抵达一个被生物占据的空间，或完全被一个或多个物体填满的空间，则你及所有与你同行的生物各自受到4d6{力场伤害}，且此次传送失败。</p>"
+          "description": "<p>你传送到射程内的一个地点。你会精确抵达期望的位置。它可以是一个你能看见的地方、一个你能清晰想象的地方，或者一个你能通过描述距离和方向来指定的地方，例如“正下方200尺”或“西北方向45度角向上300尺”。</p><p>你也可以传送一个自愿生物。该生物在你传送时必须处于你5尺范围内，且它会传送到你目标地点5尺范围内的一个空间。</p><p>若你、其他生物、或两者将抵达一个被生物占据的空间，或完全被一个或多个物体填满的空间，则你及所有与你同行的生物各自受到4d6{力场伤害 force damage}，且此次传送失败。</p>"
         },
         "CLZVcVj8orYgTM5s": {
           "name": "解除魔法",
@@ -1123,7 +1123,7 @@
         },
         "Prismatic Spray": {
           "name": "虹光喷射",
-          "description": "<p>八道光芒从你身上迸发而出,形成一个60尺锥状区域。锥状区域内的每个生物需进行一次敏捷豁免。为每个目标骰1d8,参照七彩射线表确定影响它的射线颜色。</p><p>@Embed[Compendium.dnd5e.tables24.RollTable.phbPrismaticRays rollable=true caption=false]{七彩射线}</p>",
+          "description": "<p>八道光芒从你身上迸发而出,形成一个60尺锥状区域。锥状区域内的每个生物需进行一次敏捷豁免。为每个目标骰1d8,参照七彩射线表确定影响它的射线颜色。</p><p>@Embed[Compendium.dnd5e.tables24.RollTable.phbPrismaticRays rollable=true caption=false]{七彩射线 Prismatic Rays}</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -1148,7 +1148,7 @@
         },
         "Teleport": {
           "name": "传送术",
-          "description": "<p>该法术会立即将你和施法距离内你能看见的至多八个自愿生物，或施法距离内你能看见的单个物件，传送至你选择的目的地。如果你以物件为目标，则它必须是大型或更小的，且不能被非自愿的生物持有或携带。</p><p>你选择的目的地必须是你已知的，且必须与你处于同一位面。你对目的地的熟悉程度决定了你是否能成功抵达。DM投掷[[/gmr 1d100]]并参照传送结果表及其后的说明。</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{传送结果}</strong></summary><table><thead><tr><td>熟悉度</td><td>意外</td><td>相似区域</td><td>偏离目标</td><td>正中目标</td></tr></thead><tbody><tr><td>永久法阵</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>关联物件</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>非常熟悉</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>大致见过</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>见过一次或听人描述</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>虚假目的地</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>熟悉度。</strong>以下是表中“熟悉度”栏各词条的含义：</p><ul><li>“永久法阵”指一个你知道其符文序列的永久传送法阵。</li><li>“关联物件”指你持有一个在过去六个月内从期望目的地取走的物件，例如从某法师的图书馆里取来的一本书。</li><li>“非常熟悉”指一个你经常造访的地方，一个你仔细研究过的地方，或者一个你在施展该法术时能看见的地方。</li><li>“大致见过”指一个你见过不止一次但并不十分熟悉的地方。</li><li>“见过一次或听人描述”指一个你只见过一次的地方（可能通过魔法），或者一个你通过他人描述（例如地图）而知道的地方。</li><li>“虚假目的地”指一个不存在的地方。也许你试图探知某个敌人的密室却看到了一个幻术，或者你正尝试传送至一个已不复存在的地点。</li></ul><p><strong>意外。</strong>该法术不可预测的魔法导致了一次艰难的旅程。每个被传送的生物（或目标物件）受到[[/damage 3d10 type=force]]伤害，且DM重新在表中投掷以决定你们最终抵达何处（可能发生多次意外，每次都会造成伤害）。</p><p><strong>相似区域。</strong>你和你的团队（或目标物件）出现在一个与目标区域在视觉或主题上相似的不同区域。你们出现在最接近的相似地点。例如，如果你正前往你的家庭实验室，你可能会出现在同一城市的另一个人的实验室里。</p><p><strong>偏离目标。</strong>你和你的团队（或目标物件）出现在距离目的地[[/r 2d12]]英里远的随机方向上。投掷[[/r 1d8]]决定方向：1，东；2，东南；3，南；4，西南；5，西；6，西北；7，北；或8，东北。</p><p><strong>正中目标。</strong>你和你的团队（或目标物件）出现在你 intended 的地方。</p>",
+          "description": "<p>该法术会立即将你和施法距离内你能看见的至多八个自愿生物，或施法距离内你能看见的单个物件，传送至你选择的目的地。如果你以物件为目标，则它必须是大型或更小的，且不能被非自愿的生物持有或携带。</p><p>你选择的目的地必须是你已知的，且必须与你处于同一位面。你对目的地的熟悉程度决定了你是否能成功抵达。DM投掷[[/gmr 1d100]]并参照传送结果表及其后的说明。</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{传送结果}</strong></summary><table><thead><tr><td>熟悉度</td><td>意外</td><td>相似区域</td><td>偏离目标</td><td>正中目标</td></tr></thead><tbody><tr><td>永久法阵</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>关联物件</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>非常熟悉</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>大致见过</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>见过一次或听人描述</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>虚假目的地</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>熟悉度。</strong>以下是表中\"熟悉度\"栏各词条的含义：</p><ul><li>\"永久法阵\"指一个你知道其符文序列的永久传送法阵。</li><li>\"关联物件\"指你持有一个在过去六个月内从期望目的地取走的物件，例如从某法师的图书馆里取来的一本书。</li><li>\"非常熟悉\"指一个你经常造访的地方，一个你仔细研究过的地方，或者一个你在施展该法术时能看见的地方。</li><li>\"大致见过\"指一个你见过不止一次但并不十分熟悉的地方。</li><li>\"见过一次或听人描述\"指一个你只见过一次的地方（可能通过魔法），或者一个你通过他人描述（例如地图）而知道的地方。</li><li>\"虚假目的地\"指一个不存在的地方。也许你试图探知某个敌人的密室却看到了一个幻术，或者你正尝试传送至一个已不复存在的地点。</li></ul><p><strong>意外。</strong>该法术不可预测的魔法导致了一次艰难的旅程。每个被传送的生物（或目标物件）受到[[/damage 3d10 type=force]]伤害，且DM重新在表中投掷以决定你们最终抵达何处（可能发生多次意外，每次都会造成伤害）。</p><p><strong>相似区域。</strong>你和你的团队（或目标物件）出现在一个与目标区域在视觉或主题上相似的不同区域。你们出现在最接近的相似地点。例如，如果你正前往你的家庭实验室，你可能会出现在同一城市的另一个人的实验室里。</p><p><strong>偏离目标。</strong>你和你的团队（或目标物件）出现在距离目的地[[/r 2d12]]英里远的随机方向上。投掷[[/r 1d8]]决定方向：1，东；2，东南；3，南；4，西南；5，西；6，西北；7，北；或8，东北。</p><p><strong>正中目标。</strong>你和你的团队（或目标物件）出现在你 intended 的地方。</p>",
           "target": {
             "affects": {
               "special": "你和最多八个生物或一个物件"
@@ -1623,7 +1623,7 @@
           "effects": {
             "Level 2: +5 Max HP": {
               "name": "2级：+5最大生命值",
-              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间}内得到提升。</p>"
+              "description": "<p>目标的{生命值上限 hit point maximum}在{持续时间 duration}内得到提升。</p>"
             },
             "Level 3: +10 Max HP": {
               "name": "3级：+10最大生命值",
@@ -1639,11 +1639,11 @@
             },
             "Level 6: +25 Max HP": {
               "name": "等级6：+25点最大生命值",
-              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间}内得到提升。</p>"
+              "description": "<p>目标的{生命值上限 hit point maximum}在{持续时间 duration}内得到提升。</p>"
             },
             "Level 7: +30 Max HP": {
               "name": "等级7：+30最大生命值",
-              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间}内得到提升。</p>"
+              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间 duration}内得到提升。</p>"
             },
             "Level 8: +35 Max HP": {
               "name": "8级：+35最大生命值",
@@ -1651,7 +1651,7 @@
             },
             "Level 9: +40 Max HP": {
               "name": "等级9：+40最大生命值",
-              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间}内得到提升。</p>"
+              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间 duration}内得到提升。</p>"
             }
           }
         },
@@ -1691,7 +1691,7 @@
         },
         "Bolts": {
           "name": "弩矢",
-          "description": "<p><em><strong>贮藏:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagCaseCrossbo]{弩矢匣}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性的武器所必需的。武器的描述会指明该武器使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量。该表还列出了通常用于贮藏每种弹药的容器；贮藏容器必须单独购买。</p>"
+          "description": "<p><em><strong>贮藏:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagCaseCrossbo]{弩矢匣}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}是拥有弹药属性的武器所必需的。武器的描述会指明该武器使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量。该表还列出了通常用于贮藏每种弹药的容器；贮藏容器必须单独购买。</p>"
         },
         "Quiver": {
           "name": "箭袋",
@@ -1932,7 +1932,7 @@
         },
         "Force Barrier": {
           "name": "力场屏障",
-          "description": "<p>该[[lookup @name lowercase]]在其150尺范围内的一点创造出一道闪烁八色光的10尺乘10尺的{力场墙 wall of force}。这道墙持续1{分钟}，或直到该[[lookup @name lowercase]]陷入&reference[Incapacitated apply=false]{失能}状态或死亡。墙体可以按施法者选择的任何方向出现，可以是自由漂浮的，也可以依托于固体表面。如果墙体出现时穿过了某个{生物}所在的{空间}，该{生物}会被推到墙体的一侧（由该[[lookup @name lowercase]]选择）。</p><p>任何物体都无法物理穿过这道墙。它对所有{伤害}{免疫}，且不能被@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{解除魔法 dispel magic}驱散。然而，@UUID[Compendium.dnd5e.spells24.Item.phbsplDisintegra]{解离术 disintegrate}会立刻摧毁这道墙。此墙还延伸至{以太位面}，阻挡任何通过此墙的{以太}旅行。</p>"
+          "description": "<p>该[[lookup @name lowercase]]在其150尺范围内的一点创造出一道闪烁八色光的10尺乘10尺的{力场墙 wall of force}。这道墙持续1{分钟}，或直到该[[lookup @name lowercase]]陷入&reference[Incapacitated apply=false]{失能}状态或死亡。墙体可以按施法者选择的任何方向出现，可以是自由漂浮的，也可以依托于固体表面。如果墙体出现时穿过了某个{生物}所在的{空间}，该{生物}会被推到墙体的一侧（由该[[lookup @name lowercase]]选择）。</p><p>任何物体都无法物理穿过这道墙。它对所有{伤害}免疫，且不能被@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{解除魔法 dispel magic}驱散。然而，@UUID[Compendium.dnd5e.spells24.Item.phbsplDisintegra]{解离术 disintegrate}会立刻摧毁这道墙。此墙还延伸至{以太位面 Ethereal Plane}，阻挡任何通过此墙的{以太}旅行。</p>"
         },
         "Epic Boss": {
           "name": "史诗首领",
@@ -2203,7 +2203,7 @@
         },
         "Bark Orders": {
           "name": "发号施令",
-          "description": "<p>60尺内的一个@{UUID[Compendium.drakkenheim-monsters.monsters.Actor.lpVnUx38MFj4Tilk]}{虚空龙}或@{UUID[Compendium.drakkenheim-monsters.monsters.Actor.dhrRtM7bIrXG11UU]}{虚空海盗}可以使用其反应移动至多一半速度或发动一次攻击。</p>",
+          "description": "<p>60尺内的一个@UUID[Compendium.drakkenheim-monsters.monsters.Actor.lpVnUx38MFj4Tilk]{虚空龙 the Void}或@UUID[Compendium.drakkenheim-monsters.monsters.Actor.dhrRtM7bIrXG11UU]{虚空海盗 pirate}可以使用其反应移动至多一半速度或发动一次攻击。</p>",
           "activities": {
             "utility": {
               "affects": {
@@ -2509,7 +2509,7 @@
           "effects": {
             "Level 5: +20 Max HP": {
               "name": "5级：+20最大生命值",
-              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间}内获得提升。</p>"
+              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间 duration}内获得提升。</p>"
             }
           }
         },
@@ -3031,7 +3031,7 @@
         },
         "Epic Boss": {
           "name": "史诗首领",
-          "description": "<p>该生物是一位史诗首领，一种独特敌人，旨在对整支冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时进行其回合。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，它不会在其回合中执行动作或附赠动作。取而代之的是，[[lookup @name]] 会在每位玩家角色回合结束时执行以下一项史诗动作。</p><p>此生物的全部动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.ZouowPTuKiB8fUJJ]{血哀}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.QFW9SCUMoPql58Mz]{爪击}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.LJYg8j8GqZeb2iuE]{啃咬}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.7rGy9ngNLfwzOfbw]{支配}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.CWdyvsyLaUAkPaKZ]{翼击}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.SE2uaxCrWUcu7Gfa]{影步}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.7l6cj1k437W6fzuj]{变形}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.Vc1IL6PyfD74GoLE]{史诗抗性}</p></li></ul>"
+          "description": "<p>该生物是一位史诗首领，一种独特敌人，旨在对整支冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时进行其回合。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，它不会在其回合中执行动作或附赠动作。取而代之的是，[[lookup @name]] 会在每位玩家角色回合结束时执行以下一项史诗动作。</p><p>此生物的全部动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.ZouowPTuKiB8fUJJ]{血哀 Bloodmourne}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.QFW9SCUMoPql58Mz]{爪击 Claws}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.LJYg8j8GqZeb2iuE]{啃咬 Bite}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.7rGy9ngNLfwzOfbw]{支配 Dominate}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.CWdyvsyLaUAkPaKZ]{翼击 Wing Blast}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.SE2uaxCrWUcu7Gfa]{影步 Shadow Step}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.7l6cj1k437W6fzuj]{变形 Shape-Shift}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.Cu1QeAtFRf90XGFr.Item.Vc1IL6PyfD74GoLE]{史诗抗性 Epic Resistance}</p></li></ul>"
         },
         "Bite": {
           "name": "啃咬",
@@ -3299,7 +3299,7 @@
         },
         "Arrows": {
           "name": "箭矢",
-          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性武器的必需品。武器描述中会明确该武器所使用的弹药类型。弹药表列出了不同类型的弹药以及购买时获得的数量。该表还列出了通常用于存储每种弹药的物品；存储容器必须单独购买。</p>"
+          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋 Quiver}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}是拥有弹药属性武器的必需品。武器描述中会明确该武器所使用的弹药类型。弹药表列出了不同类型的弹药以及购买时获得的数量。该表还列出了通常用于存储每种弹药的物品；存储容器必须单独购买。</p>"
         },
         "Quiver": {
           "name": "箭袋",
@@ -3469,7 +3469,7 @@
         },
         "Heroes' Feast": {
           "name": "英雄盛宴",
-          "description": "<p>你在身边一个未占据的10尺立方体表面上召唤出一场盛宴。这场盛宴需要1小时来消耗，并在该时间结束时消失，而有益效果要等到这一小时结束后才会生效。最多十二个生物可以参与这场盛宴。</p><p>参与盛宴的生物获得数个持续24小时的效益。该生物对毒素伤害具有&Reference[damageResistance]{抗性}，并且免疫&Reference[Frightened]和&Reference[Poisoned]状态。其生命值上限也会增加2d10，并恢复等量的生命值。</p>",
+          "description": "<p>你在身边一个未占据的10尺立方体表面上召唤出一场盛宴。这场盛宴需要1小时来消耗，并在该时间结束时消失，而有益效果要等到这一小时结束后才会生效。最多十二个生物可以参与这场盛宴。</p><p>参与盛宴的生物获得数个持续24小时的效益。该生物对毒素伤害具有&Reference[damageResistance]{抗性 resistance}，并且免疫&Reference[Frightened]{恐慌 Frightened}和&Reference[Poisoned]{中毒 Poisoned}状态。其生命值上限也会增加2d10，并恢复等量的生命值。</p>",
           "materials": {
             "value": "一个镶嵌宝石的碗，价值1000+ gp，该法术会消耗此碗。"
           },
@@ -3490,7 +3490,7 @@
           "effects": {
             "Feast's Benefits": {
               "name": "盛宴的效益",
-              "description": "<p>该生物对毒素伤害具有&Reference[damageResistance]{抗性}，并且免疫&Reference[Frightened]{恐慌}和&Reference[Poisoned]{中毒}状态。它的生命值上限也会增加2d10，并恢复等量的生命值。</p>"
+              "description": "<p>该生物对毒素伤害具有&Reference[damageResistance]{抗性 resistance}，并且免疫&Reference[Frightened]{恐慌 Frightened}和&Reference[Poisoned]{中毒 Poisoned}状态。它的生命值上限也会增加2d10，并恢复等量的生命值。</p>"
             }
           }
         },
@@ -3784,7 +3784,7 @@
         },
         "Incomprehensible Vision": {
           "name": "难以理解的景象",
-          "description": "<p>一个生物若在其回合开始时位于[[lookup @name lowercase]]的30尺范围内且能看见它，则会受到以下效果影响。<em>感知豁免：</em> DC 13。<em>失败：</em> 目标获得&reference[Staggered]状态直到其下个回合开始。<em>成功：</em> 目标被传送至边界以太。若目标已在边界以太，则改为被传送至物质位面。</p><p>除非&reference[surprise]{突袭}，生物可在其回合开始时移开视线以规避该豁免。若如此做，该生物在下一回合开始前无法看见[[lookup @name lowercase]]。若在此期间生物注视[[lookup @name lowercase]]，则必须立即进行该豁免。</p>",
+          "description": "<p>一个生物若在其回合开始时位于[[lookup @name lowercase]]的30尺范围内且能看见它，则会受到以下效果影响。<em>感知豁免：</em> DC 13。<em>失败：</em> 目标获得&reference[Staggered]状态直到其下个回合开始。<em>成功：</em> 目标被传送至边界以太。若目标已在边界以太，则改为被传送至物质位面。</p><p>除非&reference[surprise]{突袭 Surprised}，生物可在其回合开始时移开视线以规避该豁免。若如此做，该生物在下一回合开始前无法看见[[lookup @name lowercase]]。若在此期间生物注视[[lookup @name lowercase]]，则必须立即进行该豁免。</p>",
           "effects": {
             "Incomprehensible Vision: Staggered": {
               "name": "不可理解的幻象：踉跄",
@@ -3920,7 +3920,7 @@
       "items": {
         "Dispersal": {
           "name": "驱散",
-          "description": "<p>当[[lookup @name lowercase]]的生命值降至0时，它会在原地留下2d4名@UUID[Compendium.drakkenheim-monsters.monsters.Actor.lswU4nTHwGbM5Goc]{朝圣者}。</p>"
+          "description": "<p>当[[lookup @name lowercase]]的生命值：降至0时，它会在原地留下2d4名@UUID[Compendium.drakkenheim-monsters.monsters.Actor.lswU4nTHwGbM5Goc]{朝圣者 Pilgrims}。</p>"
         },
         "Mob": {
           "name": "暴民",
@@ -4169,7 +4169,7 @@
         },
         "Gaseous Form": {
           "name": "气化形体",
-          "description": "<p>你触碰的一个自愿生物，连同其穿着和携带的一切，在法术持续时间内变形为一团雾状云。如果目标的{生命值：}降至0，或者它发动一个{魔法}{动作}来终止自身法术，则法术在目标身上结束。</p><p>在此形态下，目标的唯一移动方式是10{尺}{飞行术fly}{速度}，并且可以悬停。目标可以进入并占据另一个{生物}的{空间}。目标对{钝击}、{穿刺}和{挥砍}{伤害}具有{抗性}；它对&Reference[prone apply=false]{状态}具有{免疫}；并且它在{力量}、{敏捷}和{体质}{豁免}上{具有优势}。目标可以穿过狭窄的开口，但会将液体视为固体表面。</p><p>目标不能说话或操纵物体，其携带或持有的任何物体都无法被丢弃、使用或以其他方式互动。最后，目标不能{攻击}或{施展}{法术}。</p><p><strong>使用更高环阶{法术位}。</strong>对于高于3环的每个{法术位}等级，你可以多指定一个{目标}。</p>",
+          "description": "<p>你触碰的一个自愿生物，连同其穿着和携带的一切，在法术持续时间内变形为一团雾状云。如果目标的{生命值 Hit Points}降至0，或者它发动一个{魔法 Magic}{动作 Action}来终止自身法术，则法术在目标身上结束。</p><p>在此形态下，目标的唯一移动方式是10{尺 feet}{飞行术fly fly}{速度 Speed}，并且可以悬停。目标可以进入并占据另一个{生物 Creature}的{空间 space}。目标对{钝击 Bludgeoning}、{穿刺 Piercing}和{挥砍 Slashing}{伤害 damage}具有{抗性 resistance}；它对&Reference[prone apply=false]{倒地 prone}状态具有{免疫}；并且它在{力量 Strength}、{敏捷 Dexterity}和{体质 Constitution}{豁免 Saving Throws}上{具有优势 has advantage}。目标可以穿过狭窄的开口，但会将液体视为固体表面。</p><p>目标不能说话或操纵物体，其携带或持有的任何物体都无法被丢弃、使用或以其他方式互动。最后，目标不能{攻击 Attack}或{施展 cast}{法术 Spell}。</p><p><strong>使用更高环阶{法术位 spell slot}。</strong>对于高于3环的每个{法术位 spell slot}等级，你可以多指定一个{目标 target}。</p>",
           "materials": {
             "value": "一小块纱布"
           },
@@ -4250,7 +4250,7 @@
         },
         "Liquid Form": {
           "name": "液态形体",
-          "description": "<p>该[[lookup @name lowercase]]可以挤过窄至1英寸的空间，并能进入敌对生物的{空间}并在那里停下。在其{回合}中首次进入一个生物的{空间}时，该生物受到[[/damage average]]{伤害}。该[[lookup @name lowercase]]在尝试发起{受擒}或逃脱擒抱时进行的{属性检定}具有{优势}。</p>"
+          "description": "<p>该[[lookup @name lowercase]]可以挤过窄至1英寸的空间，并能进入敌对生物的{空间 space}并在那里停下。在其{回合 turn}中首次进入一个生物的{空间 space}时，该生物受到[[/damage average]]{伤害 damage}。该[[lookup @name lowercase]]在尝试发起{受擒 grapple}或逃脱擒抱时进行的{属性检定 ability checks}具有{优势 advantage}。</p>"
         },
         "Spider Climb": {
           "name": "蛛行术",
@@ -4551,7 +4551,7 @@
         },
         "Arrows": {
           "name": "箭矢",
-          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性的武器所必需的。武器的描述会指明该武器使用的弹药类型。弹药表列出了不同类型的弹药以及购买时获得的数量。该表还列出了通常用于存储每种类型的物品,存储容器必须单独购买。</p>"
+          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋 Quiver}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}是拥有弹药属性的武器所必需的。武器的描述会指明该武器使用的弹药类型。弹药表列出了不同类型的弹药以及购买时获得的数量。该表还列出了通常用于存储每种类型的物品,存储容器必须单独购买。</p>"
         },
         "Quiver": {
           "name": "箭袋",
@@ -4778,7 +4778,7 @@
         },
         "Darkness": {
           "name": "黑暗术",
-          "description": "<p>在{持续时间}内，魔法性的&Reference[darkness]从{射程}内的一点扩散并充满一个15尺{半径}的{球状}区域。{黑暗视觉 darkvision}无法{看穿}它，非魔法的{光亮术 light}也无法照亮它。</p><p>或者，你可以将此{法术}施展在一个未被穿着或携带的{物件}上，使{黑暗术 darkness}充满一个源自该{物件}的15尺{光环}。用不透明物（例如碗或{船舵 helm}）盖住该{物件}可以阻挡{黑暗术 darkness}。</p><p>如果此{法术}的任何区域与由2环或更低环阶{法术}创造的{明亮光照 Bright Light}或{微光光照 Dim Light}区域重叠，则该{其他}{法术}被解除。</p>",
+          "description": "<p>在{持续时间 Duration}内，魔法性的&Reference[darkness]从{射程 Range}内的一点扩散并充满一个15尺{半径 radius}的{球状 Sphere}区域。{黑暗视觉 Darkvision}无法{看穿 see through}它，非魔法的{光亮术 Light}也无法照亮它。</p><p>或者，你可以将此{法术 Spell}施展在一个未被穿着或携带的{物件 Object}上，使{黑暗术 Darkness}充满一个源自该{物件 Object}的15尺{光环 emanation}。用不透明物（例如碗或{船舵 helm}）盖住该{物件 Object}可以阻挡{黑暗术 Darkness}。</p><p>如果此{法术 Spell}的任何区域与由2环或更低环阶{法术 Spell}创造的{明亮光照 Bright Light}或{微光光照 Dim Light}区域重叠，则该{其他 other}{法术 Spell}被解除。</p>",
           "materials": {
             "value": "蝙蝠毛和一块煤"
           }
@@ -4967,7 +4967,7 @@
           "effects": {
             "Outlined": {
               "name": "轮廓",
-              "description": "<p>在{持续时间}内，物件和受影响的生物在10尺半径内散发&amp;Reference[dimlight]并且无法从{隐形}状态中获得效益。</p><p>如果攻击者能看到受影响的生物或物件，则对其进行的攻击检定具有优势。</p>"
+              "description": "<p>在{持续时间 Duration}内，物件和受影响的生物在10尺半径内散发&amp;Reference[dimlight]并且无法从{隐形 Invisible}状态中获得效益。</p><p>如果攻击者能看到受影响的生物或物件，则对其进行的攻击检定具有优势。</p>"
             }
           }
         },
@@ -5069,7 +5069,7 @@
         },
         "Epic Boss": {
           "name": "史诗首领",
-          "description": "<p>该生物是一名史诗首领，一种独特敌人，旨在对整个冒险队伍构成单人威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时进行其回合。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它不会在其回合中执行动作或附赠动作。取而代之的是，[[lookup @name]] 会在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>此生物的所有动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.NetoeRBaq7D4XHYn]{血哀}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.sDkvYHzEM1jRmPLz]{爪击}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.nkFCP8cGN3DnM7Mb]{啃咬}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.MV9WWQ1GRO9r71AS]{撕裂灵魂}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.GKDqkJiujP5sCjKz]{恐怖凝视}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.4sgLpSvEzvOFWfAX]{翼击}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.8wYwnZW8BFUC0ITe]{空中战技}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.0Gc6YQoZ1be5ibsj]{史诗抗性}</p></li></ul>"
+          "description": "<p>该生物是一名史诗首领，一种独特敌人，旨在对整个冒险队伍构成单人威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时进行其回合。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它不会在其回合中执行动作或附赠动作。取而代之的是，[[lookup @name]] 会在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>此生物的所有动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.NetoeRBaq7D4XHYn]{血哀 Bloodmourne}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.sDkvYHzEM1jRmPLz]{爪击 Claws}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.nkFCP8cGN3DnM7Mb]{啃咬 Bite}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.MV9WWQ1GRO9r71AS]{撕裂灵魂 Soul Rending}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.GKDqkJiujP5sCjKz]{恐怖凝视 Terrifying Glare}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.4sgLpSvEzvOFWfAX]{翼击 Wing Blast}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.8wYwnZW8BFUC0ITe]{空中战技 Aerial Maneuver}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.IdQoSYp5mPlkTb93.Item.0Gc6YQoZ1be5ibsj]{史诗抗性 Epic Resistance}</p></li></ul>"
         },
         "Epic Resistance": {
           "name": "史诗抗性",
@@ -5517,7 +5517,7 @@
         },
         "Rapid Growth": {
           "name": "快速生长",
-          "description": "<p>如果所有三个巨魔鬼婆都使用它们的动作，以此能力瞄准60尺内同一个@UUID[Compendium.drakkenheim-monsters.monsters.Actor.kMue3OQFZtzXtzni]，该真菌巨魔的体型会爆发性增长，并变为一个@UUID[Compendium.drakkenheim-monsters.monsters.Actor.DxRms9It18hCd2Ug]。当巨魔鬼婆们使用此能力时，它们必须维持{专注}。如果在第三个鬼婆采取其动作之前有任何巨魔鬼婆失去{专注}，该能力不会浪费，但它们必须重新开始。当成为{快速生长}的目标时，被瞄准的真菌巨魔拥有&reference[Paralyzed]{状态}。</p>",
+          "description": "<p>如果所有三个巨魔鬼婆都使用它们的动作，以此能力瞄准60尺内同一个@UUID[Compendium.drakkenheim-monsters.monsters.Actor.kMue3OQFZtzXtzni]，该真菌巨魔的体型会爆发性增长，并变为一个@UUID[Compendium.drakkenheim-monsters.monsters.Actor.DxRms9It18hCd2Ug]。当巨魔鬼婆们使用此能力时，它们必须维持{专注 concentration}。如果在第三个鬼婆采取其动作之前有任何巨魔鬼婆失去{专注 concentration}，该能力不会浪费，但它们必须重新开始。当成为{快速生长 Rapid Growth}的目标时，被瞄准的真菌巨魔拥有&reference[Paralyzed]{麻痹 Paralyzed}状态。</p>",
           "activities": {
             "Begin Rapid Growth": {
               "name": "开始快速生长",
@@ -5830,7 +5830,7 @@
         },
         "Darkness": {
           "name": "黑暗术",
-          "description": "<p>在{持续时间}内，魔法性的&Reference[darkness]从{射程}内的一点扩散并充满一个15尺{半径}的{球状}区域。{黑暗视觉 darkvision}无法{看穿}它，非魔法的{光亮术 light}也无法照亮它。</p><p>或者，你可以将该{法术}{施展}于一个未被穿着或携带的{物件}上，使{黑暗术 darkness}充满一个源自该{物件}的15尺{光环}。用不透明物（例如碗或{船舵 helm}）覆盖该{物件}可以阻挡{黑暗术 darkness}。</p><p>若此{法术}的任何区域与由2环{或}更低环阶{法术}创造的{明亮光照 Bright Light}{或}{微光光照 Dim Light}区域重叠，则该{其他}{法术}被解除。</p>",
+          "description": "<p>在{持续时间 duration}内，魔法性的&Reference[darkness]从{射程 range}内的一点扩散并充满一个15尺{半径 radius}的{球状 Sphere}区域。{黑暗视觉 darkvision}无法{看穿 see through}它，非魔法的{光亮术 light}也无法照亮它。</p><p>或者，你可以将该{法术 spell}{施展 cast}于一个未被穿着或携带的{物件 object}上，使{黑暗术 darkness}充满一个源自该{物件 object}的15尺{光环 emanation}。用不透明物（例如碗或{船舵 helm}）覆盖该{物件 object}可以阻挡{黑暗术 darkness}。</p><p>若此{法术 spell}的任何区域与由2环{或 or}更低环阶{法术 spell}创造的{明亮光照 Bright Light}{或 or}{微光光照 Dim Light}区域重叠，则该{其他 other}{法术 spell}被解除。</p>",
           "materials": {
             "value": "蝙蝠毛和一块煤"
           }
@@ -5942,7 +5942,7 @@
         },
         "Epic Boss": {
           "name": "史诗首领",
-          "description": "<p>该生物是一名史诗首领，一种独特敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在其回合中不执行动作或附赠动作。取而代之的是，[[lookup @name]] 在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>此生物的所有动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.pjOCYH5H1FfOH5Y4]{猛击}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.j1eIIOYDYdhUDlto]{提灯爆裂}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.FeZJmBjqiKzxD2Ew]{滑翔}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.TKa3RBF5znrxw8fZ]{活化墙壁}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.vA8FEqAcYZpd5auM]{污泥柱}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.QdG1JBIJH1zk24pR]{史诗抗性}</p></li></ul>"
+          "description": "<p>该生物是一名史诗首领，一种独特敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在其回合中不执行动作或附赠动作。取而代之的是，[[lookup @name]] 在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>此生物的所有动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.pjOCYH5H1FfOH5Y4]{猛击 Slam}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.j1eIIOYDYdhUDlto]{提灯爆裂 Lantern Blast}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.FeZJmBjqiKzxD2Ew]{滑翔 Glide}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.TKa3RBF5znrxw8fZ]{活化墙壁 Animate Walls}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.vA8FEqAcYZpd5auM]{污泥柱 Sludge Column}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.LPB3YCeumvKMdpi2.Item.QdG1JBIJH1zk24pR]{史诗抗性 Epic Resistance}</p></li></ul>"
         },
         "Epic Resistance": {
           "name": "史诗抗性",
@@ -6495,7 +6495,7 @@
         },
         "Telekinesis": {
           "name": "心灵遥控",
-          "description": "<p>你获得通过意念移动或操纵{生物}或{物件}的能力。当你{施展}此法术后，以及在{法术}结束前的后续{回合}中作为一个{魔法 动作}，你可以对{射程}内你能看见的一个{单一生物}或{物件}施加意志，产生如下相应效果。你可以每{轮}影响同一{目标}，或随时选择新{目标}。若你切换{目标}，先前{目标}不再受此法術影响。</p><p><strong>生物。</strong> 你可以尝试移动一个{巨型}或更小的{生物}。{目标}{必须进行}{力量豁免}，否则你将其在{法术}{射程}内向任意方向移动至多{30尺}。直到你的下个{回合}结束，该{生物}处于&Reference[Restrained]{状态}，且若你将其抬升至空中，它会悬浮于此。除非你再次对其使用此选项且其豁免失败，否则它将在你的下个{回合}结束时坠落。</p><p><strong>物件。</strong> 你可以尝试移动一个{巨型}或更小的{物件}。若该{物件}未被穿着或携带，你可自动将其在{法术}{射程}内向任意方向移动至多{30尺}。</p><p>若该{物件}被{生物}穿着或携带，该{生物}{必须进行}{力量豁免}，否则你将{物件}拽离并使其在{法术}{射程}内向任意方向移动至多{30尺}。</p><p>你可以通过心灵遥控对{物件}进行精细操控，例如操纵{简易}工具、开门或容器、从开放容器中存放或取回物品、或倾倒{小瓶}内容物。</p>"
+          "description": "<p>你获得通过意念移动或操纵{生物 Creature}或{物件 Object}的能力。当你{施展 cast}此法术后，以及在{法术 Spell}结束前的后续{回合 turn}中作为一个{魔法 动作 Magic Action}，你可以对{射程 Range}内你能看见的一个{单一生物 one creature}或{物件 Object}施加意志，产生如下相应效果。你可以每{轮 round}影响同一{目标 target}，或随时选择新{目标 target}。若你切换{目标 target}，先前{目标 target}不再受此法術影响。</p><p><strong>生物。</strong> 你可以尝试移动一个{巨型 Huge}或更小的{生物 Creature}。{目标 target}{必须进行 must succeed on}{力量豁免 Strength saving throw}，否则你将其在{法术 Spell}{射程 Range}内向任意方向移动至多{30尺 30 feet}。直到你的下个{回合 turn}结束，该{生物 Creature}处于&Reference[Restrained]{束缚 状态}，且若你将其抬升至空中，它会悬浮于此。除非你再次对其使用此选项且其豁免失败，否则它将在你的下个{回合 turn}结束时坠落。</p><p><strong>物件。</strong> 你可以尝试移动一个{巨型 Huge}或更小的{物件 Object}。若该{物件 Object}未被穿着或携带，你可自动将其在{法术 Spell}{射程 Range}内向任意方向移动至多{30尺 30 feet}。</p><p>若该{物件 Object}被{生物 Creature}穿着或携带，该{生物 Creature}{必须进行 must succeed on}{力量豁免 Strength saving throw}，否则你将{物件 Object}拽离并使其在{法术 Spell}{射程 Range}内向任意方向移动至多{30尺 30 feet}。</p><p>你可以通过心灵遥控对{物件 Object}进行精细操控，例如操纵{简易 Simple}工具、开门或容器、从开放容器中存放或取回物品、或倾倒{小瓶 vial}内容物。</p>"
         }
       }
     },
@@ -6739,7 +6739,7 @@
         },
         "Animate Dead": {
           "name": "操纵死尸",
-          "description": "<p>在射程内选择一堆骨骸或一具中型或小型类人生物的尸体。目标成为一个亡灵生物：如果你选择的是骨骸，则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmSkeleton000000]{骷髅}</strong>；如果你选择的是一具尸体，则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{丧尸}</strong>。</p><p>在你的每个回合，你可以使用一个附赠动作以心灵感应方式命令任何你通过此法术创造的生物，只要该生物在你60尺范围内（若你控制多个生物，你可以同时命令它们，并对每个生物下达相同的命令）。你决定该生物在其下一回合采取什么动作以及移动到哪里，或者你可以下达一个笼统的命令，例如守卫某个房间或走廊。如果你没有下达任何命令，该生物会采取回避动作，并且只移动以避开伤害。一旦下达了命令，该生物会持续遵循该命令，直到任务完成。</p><p>该生物受你控制持续24小时，之后它将停止服从你给予的任何命令。要再维持对该生物的控制24小时，你必须在当前24小时期限结束前再次对该生物施展此法术。此法术的该用法是重新确立你对至多四个你已通过此法术活化的生物的控制，而不是活化一个新的生物。</p><p><strong>使用更高法术位。</strong> 对于3环以上的每个法术位等级，你额外活化或重新控制两个亡灵生物。每个生物必须来自不同的尸体或骨骸堆。</p>",
+          "description": "<p>在射程内选择一堆骨骸或一具中型或小型类人生物的尸体。目标成为一个亡灵生物：如果你选择的是骨骸，则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmSkeleton000000]{骷髅 Skeleton}</strong>；如果你选择的是一具尸体，则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{丧尸 Zombie}</strong>。</p><p>在你的每个回合，你可以使用一个附赠动作以心灵感应方式命令任何你通过此法术创造的生物，只要该生物在你60尺范围内（若你控制多个生物，你可以同时命令它们，并对每个生物下达相同的命令）。你决定该生物在其下一回合采取什么动作以及移动到哪里，或者你可以下达一个笼统的命令，例如守卫某个房间或走廊。如果你没有下达任何命令，该生物会采取{回避 Dodge}动作，并且只移动以避开伤害。一旦下达了命令，该生物会持续遵循该命令，直到任务完成。</p><p>该生物受你控制持续24小时，之后它将停止服从你给予的任何命令。要再维持对该生物的控制24小时，你必须在当前24小时期限结束前再次对该生物施展此法术。此法术的该用法是重新确立你对至多四个你已通过此法术活化的生物的控制，而不是活化一个新的生物。</p><p><strong>使用更高法术位。</strong> 对于3环以上的每个法术位等级，你额外活化或重新控制两个亡灵生物。每个生物必须来自不同的尸体或骨骸堆。</p>",
           "materials": {
             "value": "一滴血、一块肉和一撮骨灰"
           },
@@ -8154,7 +8154,7 @@
         },
         "Epic Boss": {
           "name": "史诗首领",
-          "description": "<p>该生物是一位史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]]总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在自己的回合中不会执行动作或附赠动作。取而代之的是，[[lookup @name]]会在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>该生物的所有动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.pXYxvdS2z8Zfrh2u]{污染啃咬}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.lBL6OaKhxqEJrCS7]{谵妄灌注利刃}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.aGand1TnpiJNNlsu]{召唤鼠人}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.zZoIlUywaRMnNl40]{融身入影}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.GaFiOVEdao4ViB4z]{迅捷步伐}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.2F1TXmVrBmPoeLL1]{史诗抗性}</p></li></ul>"
+          "description": "<p>该生物是一位史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]]总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在自己的回合中不会执行动作或附赠动作。取而代之的是，[[lookup @name]]会在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>该生物的所有动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.pXYxvdS2z8Zfrh2u]{污染啃咬 Contaminated Bite}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.lBL6OaKhxqEJrCS7]{谵妄灌注利刃 Delerium-Infused Blades}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.aGand1TnpiJNNlsu]{召唤鼠人 Call Ratlings}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.zZoIlUywaRMnNl40]{融身入影 Meld into Shadow}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.GaFiOVEdao4ViB4z]{迅捷步伐 Swift Stride}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.P3zVbU8MP80E64mL.Item.2F1TXmVrBmPoeLL1]{史诗抗性 Epic Resistance}</p></li></ul>"
         },
         "Contaminated Bite": {
           "name": "污染啃咬",
@@ -8990,7 +8990,7 @@
         },
         "Bolts": {
           "name": "弩矢",
-          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagCaseCrossbo]{弩矢盒}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性武器的必需物品。武器描述中会注明该武器使用的弹药类型。弹药表列出了不同种类的弹药及其购买数量,同时标注了各类弹药的常用存储容器;存储容器需单独购买。</p>"
+          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagCaseCrossbo]{弩矢盒}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}是拥有弹药属性武器的必需物品。武器描述中会注明该武器使用的弹药类型。弹药表列出了不同种类的弹药及其购买数量，同时标注了各类弹药的常用存储容器；存储容器需单独购买。</p>"
         },
         "Quiver": {
           "name": "箭袋",
@@ -9208,7 +9208,7 @@
         },
         "Arrows": {
           "name": "箭矢",
-          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>具有弹药属性的武器需要使用@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}。武器的描述会指明其使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量，同时标注了各类弹药的常规存储容器；存储容器需另行购买。</p>"
+          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>具有弹药属性的武器需要使用@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}。武器的描述会指明其使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量，同时标注了各类弹药的常规存储容器；存储容器需另行购买。</p>"
         },
         "Shield": {
           "name": "护盾术",
@@ -9325,7 +9325,7 @@
         },
         "Summon Demon": {
           "name": "召唤恶魔",
-          "description": "<p>该被逐者以魔法召唤三只@UUID[Compendium.dnd5e.actors24.Actor.mmDretch00000000]{怯魔}或一只@UUID[Compendium.dnd5e.actors24.Actor.mmQuasit00000000]。被召唤的生物出现在被逐者60尺内未被占据的空间中，并服从其命令。它们在被逐者的回合结束后立刻行动。这些生物持续存在1小时，直到被逐者死亡，或被逐者以附赠动作解散。</p>",
+          "description": "<p>该被逐者以魔法召唤三只@UUID[Compendium.dnd5e.actors24.Actor.mmDretch00000000]{怯魔 dretches}或一只@UUID[Compendium.dnd5e.actors24.Actor.mmQuasit00000000]。被召唤的生物出现在被逐者60尺内未被占据的空间中，并服从其命令。它们在被逐者的回合结束后立刻行动。这些生物持续存在1小时，直到被逐者死亡，或被逐者以附赠动作解散。</p>",
           "activities": {
             "Summon Demons": {
               "name": "召唤恶魔"
@@ -9424,7 +9424,7 @@
         },
         "Darkness": {
           "name": "黑暗术",
-          "description": "<p>在{持续时间}内，魔法性的&Reference[darkness]从{射程}内的一点扩散并充满一个15尺{半径}的{球状}区域。{黑暗视觉 darkvision}无法{看穿}它，非魔法的{光亮术 light}也无法照亮它。</p><p>或者，你可以将该{法术}{施展}于一个未被穿着或携带的{物件}上，使{黑暗术 darkness}充满一个源自该{物件}的15尺{光环}。用不透明物（例如碗或{船舵 helm}）覆盖该{物件}可以阻挡{黑暗术 darkness}。</p><p>如果该{法术}的任何区域与由2环或更低环阶{法术}创造的{明亮光照 Bright Light}{或}{微光光照 Dim Light}区域重叠，则该{其他}{法术}被解除。</p>",
+          "description": "<p>在{持续时间 Duration}内，魔法性的&Reference[darkness]从{射程 Range}内的一点扩散并充满一个15尺{半径 radius}的{球状 Sphere}区域。{黑暗视觉 Darkvision}无法{看穿 see through}它，非魔法的{光亮术 Light}也无法照亮它。</p><p>或者，你可以将该{法术 Spell}{施展 cast}于一个未被穿着或携带的{物件 Object}上，使{黑暗术 Darkness}充满一个源自该{物件 Object}的15尺{光环 emanation}。用不透明物（例如碗或{船舵 helm}）覆盖该{物件 Object}可以阻挡{黑暗术 Darkness}。</p><p>如果该{法术 Spell}的任何区域与由2环或更低环阶{法术 Spell}创造的{明亮光照 Bright Light}{或 or}{微光光照 Dim Light}区域重叠，则该{其他 other}{法术 Spell}被解除。</p>",
           "materials": {
             "value": "蝙蝠毛和一块煤"
           }
@@ -9613,7 +9613,7 @@
         },
         "Arrows": {
           "name": "箭矢",
-          "description": "<p><em><strong>存储:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性的武器所必需的。武器描述中会说明该武器使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量。该表还列出了通常用于存放每种弹药的容器；存储容器必须单独购买。</p>"
+          "description": "<p><em><strong>存储:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}是拥有弹药属性的武器所必需的。武器描述中会说明该武器使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量。该表还列出了通常用于存放每种弹药的容器；存储容器必须单独购买。</p>"
         },
         "Shortsword": {
           "name": "短剑",
@@ -9860,7 +9860,7 @@
         },
         "Aggressive": {
           "name": "侵略性",
-          "description": "<p>该[[lookup @name lowercase]]向其可见的一个敌对{生物 Creature}移动最多等于其{速度 Speed}的距离。如果此移动结束时它与该{生物 Creature}{相邻的}，则直到其{回合 turn}结束前，它对那个{生物 Creature}的{攻击 Attack}检定获得{优势 advantage}。</p>"
+          "description": "<p>该[[lookup @name lowercase]]向其可见的一个敌对{生物 Creature}移动最多等于其{速度 Speed}的距离。如果此移动结束时它与该{生物 Creature}{相邻的 adjacent}，则直到其{回合 turn}结束前，它对那个{生物 Creature}的{攻击 Attack}检定获得{优势 advantage}。</p>"
         },
         "Multiattack": {
           "name": "多重攻击Multiattack。",
@@ -10955,7 +10955,7 @@
         },
         "Epic Boss": {
           "name": "史诗首领",
-          "description": "<p>该生物是一名史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在自己的回合中不执行动作或附赠动作。取而代之的是，[[lookup @name]] 会在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>该生物的所有动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.n1qWQOweP9nWg1W2]{蹒跚前行}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.LunSIKLUXY7f9sRC]{死亡之握}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.uA6V126HniiEFMtz]{断头刃}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.xCwkMAQrBO9mriKZ]{破坏神}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.E0FfxaC12QDsgP8x]{召唤攫握暗影}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.9WVVIKiaBQAZ7rr2]{史诗抗性}</p></li></ul>"
+          "description": "<p>该生物是一名史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在自己的回合中不执行动作或附赠动作。取而代之的是，[[lookup @name]] 会在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>该生物的所有动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.n1qWQOweP9nWg1W2]{蹒跚前行 Lumber Forward}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.LunSIKLUXY7f9sRC]{死亡之握 Death Grip}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.uA6V126HniiEFMtz]{断头刃 Guillotine Blade}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.xCwkMAQrBO9mriKZ]{破坏神 Destroyer}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.E0FfxaC12QDsgP8x]{召唤攫握暗影 Summon Grasping Shadows}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.aIt4k1FpvN44Ea2r.Item.9WVVIKiaBQAZ7rr2]{史诗抗性 Epic Resistance}</p></li></ul>"
         },
         "Epic Resistance": {
           "name": "史诗抗性",
@@ -11252,7 +11252,7 @@
         },
         "Summon Public Opinion": {
           "name": "召唤舆论",
-          "description": "<p>该[[lookup @name lowercase]]在自身120尺范围内召唤出一群德拉克海姆市民精魄。该集群使用@UUID[Compendium.drakkenheim-monsters.monsters.Actor.GVdbbOX0T7Yl8lHK]{合唱团}资料卡。合唱团会在同一先攻值上紧随[[lookup @name lowercase]]之后行动，并服从[[lookup @name lowercase]]的指令。该合唱团会在1分钟后或[[lookup @name lowercase]]死亡时消失。</p>"
+          "description": "<p>该[[lookup @name lowercase]]在自身120尺范围内召唤出一群德拉克海姆市民精魄。该集群使用@UUID[Compendium.drakkenheim-monsters.monsters.Actor.GVdbbOX0T7Yl8lHK]{合唱团 Chorus}资料卡。合唱团会在同一先攻值上紧随[[lookup @name lowercase]]之后行动，并服从[[lookup @name lowercase]]的指令。该合唱团会在1分钟后或[[lookup @name lowercase]]死亡时消失。</p>"
         },
         "Hallucinatory Terrain": {
           "name": "幻景hallucinatory terrain",
@@ -11534,11 +11534,11 @@
         },
         "Shadow Step": {
           "name": "暗影步",
-          "description": "<p>[[lookup @name]]传送到他可见的60尺内一个处于{微光光照 Dim Light}或{黑暗术 Darkness}的{未占据}{空间}。他在本轮结束前进行的下一次{近战}{攻击}{具有优势}。</p>"
+          "description": "<p>[[lookup @name]]传送到他可见的60尺内一个处于{微光光照 Dim Light}或{黑暗术 Darkness}的{未占据 unoccupied}{空间 space}。他在本轮结束前进行的下一次{近战 Melee}{攻击 Attack}{具有优势 has advantage}。</p>"
         },
         "Epic Boss": {
           "name": "史诗首领",
-          "description": "<p>该生物是一名史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在回合中不执行动作或附赠动作。取而代之的是，[[lookup @name]] 在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>此生物的全部动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.9jBDXZVzD66Mh9ZY]{血哀}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.H9c8rMwZgEC9C5JM]{爪击}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.KnzucUrB7UcJv0Vv]{啃咬}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.Dj6ipdqoCBvT2rs4]{恐怖凝视}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.Fs8Car1AuyZCgSg8]{暗影步}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.w0IJe8DfG3okrBHv]{史诗抗性}</p></li></ul>"
+          "description": "<p>该生物是一名史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在回合中不执行动作或附赠动作。取而代之的是，[[lookup @name]] 在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>此生物的全部动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.9jBDXZVzD66Mh9ZY]{血哀 Bloodmourne}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.H9c8rMwZgEC9C5JM]{爪击 Claws}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.KnzucUrB7UcJv0Vv]{啃咬 Bite}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.Dj6ipdqoCBvT2rs4]{恐怖凝视 Terrifying Glare}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.Fs8Car1AuyZCgSg8]{暗影步 Shadow Step}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.df9cj61NU2DssvIG.Item.w0IJe8DfG3okrBHv]{史诗抗性 Epic Resistance}</p></li></ul>"
         },
         "Epic Resistance": {
           "name": "史诗抗性",
@@ -11599,7 +11599,7 @@
         },
         "Bark Orders": {
           "name": "发号施令",
-          "description": "<p>60尺内的一个@{UUID[Compendium.drakkenheim-monsters.monsters.Actor.lpVnUx38MFj4Tilk]}{虚空海盗}可以使用其反应移动至多一半速度或发动一次攻击。</p>",
+          "description": "<p>60尺内的一个@UUID[Compendium.drakkenheim-monsters.monsters.Actor.lpVnUx38MFj4Tilk]{虚空海盗 虚空海盗}可以使用其反应移动至多一半速度或发动一次攻击。</p>",
           "activities": {
             "utility": {
               "affects": {
@@ -11891,7 +11891,7 @@
         },
         "Arrows": {
           "name": "箭矢",
-          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性武器的必需品。武器描述中会注明该武器使用的弹药类型。弹药表列出了不同种类的弹药及其购买数量。该表还列出了通常用于存放每种弹药的容器；存储容器需另行购买。</p>"
+          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋 Quiver}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}是拥有弹药属性武器的必需品。武器描述中会注明该武器使用的弹药类型。弹药表列出了不同种类的弹药及其购买数量。该表还列出了通常用于存放每种弹药的容器；存储容器需另行购买。</p>"
         },
         "Shield": {
           "name": "护盾术",
@@ -12125,7 +12125,7 @@
         },
         "Misty Step": {
           "name": "迷踪步",
-          "description": "<p>River使用@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{智力}作为其施法关键属性施展了@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{迷踪步 misty step}。</p>"
+          "description": "<p>River使用@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{智力 Intelligence}作为其施法关键属性施展了@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{迷踪步 misty step}。</p>"
         },
         "oFv84x4cnxetppy2": {
           "name": "迷踪步",
@@ -12557,7 +12557,7 @@
         },
         "Epic Boss": {
           "name": "史诗首领",
-          "description": "<p>该生物是一名史诗首领,一个独特敌人,旨在对整个冒险队伍构成单独威胁。因此,它拥有区别于普通生物的额外游戏规则:</p><p>[[lookup @name]]总是在先攻值20时进行其回合。在其回合中,它可以正常使用移动和互动。然而,除非被法术或其他效果强制,否则它不会在其回合中执行动作或附赠动作。相反,[[lookup @name]]会在每个玩家角色回合结束时执行以下史诗动作之一。</p><p>该生物的所有动作都是史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.slseZswKbzxXlfbj]{宇宙爪}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.qTducUZcXsaqBnKi]{尾鞭}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.wtWtHCL7qOlKaXTD]{显化复制体}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.AUzKGgVxEWzZcduG]{相位置换}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.t98NYRGge1UbLtze]{施法(灵能)}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.T4PDXYXVIeafGtC1]{史诗抗性}</p></li></ul>",
+          "description": "<p>该生物是一名史诗首领，一个独特敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]]总是在先攻值20时进行其回合。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它不会在其回合中执行动作或附赠动作。相反，[[lookup @name]]会在每个玩家角色回合结束时执行以下史诗动作之一。</p><p>该生物的所有动作都是史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.slseZswKbzxXlfbj]{宇宙爪 Cosmic Claw}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.qTducUZcXsaqBnKi]{尾鞭 Tail Whip}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.wtWtHCL7qOlKaXTD]{显化复制体 Manifest Duplicate}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.AUzKGgVxEWzZcduG]{相位置换 Phase Displacement}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.t98NYRGge1UbLtze]{施法(灵能) Spellcasting (Psionics)}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.fWvI8wG54BQyuhyD.Item.T4PDXYXVIeafGtC1]{史诗抗性 Epic Resistance}</p></li></ul>",
           "effects": {
             "Epic Boss": {
               "name": "史诗首领",
@@ -12612,7 +12612,7 @@
         },
         "Teleport": {
           "name": "传送术",
-          "description": "<p>该法术会立即将你和施法距离内你能看见的至多八个自愿生物，或施法距离内你能看见的单个物件，传送至你选择的目的地。如果你以物件为目标，它必须是大型或更小的，且不能被非自愿的生物持有或携带。</p><p>你选择的目的地必须是你已知的，且必须与你处于同一位面。你对目的地的熟悉程度决定了你是否能成功抵达。DM掷[[/gmr 1d100]]并参照传送结果表及其后的说明。</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{传送结果}</strong></summary><table><thead><tr><td>熟悉度</td><td>意外</td><td>相似区域</td><td>偏离目标</td><td>正中目标</td></tr></thead><tbody><tr><td>永久法阵</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>关联物件</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>非常熟悉</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>大致见过</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>见过一次或有所描述</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>虚假目的地</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>熟悉度。</strong>以下是表中熟悉度栏各项术语的含义：</p><ul><li>“永久法阵”指一个你知道其符文序列的永久传送法阵。</li><li>“关联物件”指你持有一个在过去六个月内从期望目的地取得的物件，例如从某法师图书馆取出的一本书。</li><li>“非常熟悉”指一个你经常造访、仔细研究过的地方，或是你在施展该法术时能看见的地方。</li><li>“大致见过”指一个你见过不止一次但并不十分熟悉的地方。</li><li>“见过一次或有所描述”指一个你只见过一次（可能通过魔法）的地方，或是你通过他人描述（例如地图）知晓的地方。</li><li>“虚假目的地”指一个不存在的地方。也许你试图探知某个敌人的密室却只看到了一个幻术，或者你正尝试传送至一个已不复存在的地点。</li></ul><p><strong>意外。</strong>该法术不可预测的魔法导致了一次艰难的旅程。每个被传送的生物（或目标物件）受到[[/damage 3d10 type=force]]伤害，且DM重新在表中掷骰以决定你们最终抵达何处（可能发生多次意外，每次都会造成伤害）。</p><p><strong>相似区域。</strong>你和你的团队（或目标物件）出现在一个与目标区域在视觉或主题上相似的不同区域。你们出现在最接近的相似地点。例如，如果你正前往你的家庭实验室，你可能会出现在同一城市的另一个人的实验室中。</p><p><strong>偏离目标。</strong>你和你的团队（或目标物件）出现在距离目的地[[/r 2d12]]英里外的随机方向。掷[[/r 1d8]]决定方向：1, 东；2, 东南；3, 南；4, 西南；5, 西；6, 西北；7, 北；或 8, 东北。</p><p><strong>正中目标。</strong>你和你的团队（或目标物件）出现在你意图到达的地方。</p>",
+          "description": "<p>该法术会立即将你和施法距离内你能看见的至多八个自愿生物，或施法距离内你能看见的单个物件，传送至你选择的目的地。如果你以物件为目标，它必须是大型或更小的，且不能被非自愿的生物持有或携带。</p><p>你选择的目的地必须是你已知的，且必须与你处于同一位面。你对目的地的熟悉程度决定了你是否能成功抵达。DM掷[[/gmr 1d100]]并参照传送结果表及其后的说明。</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{传送结果 Teleportation Outcome}</strong></summary><table><thead><tr><td>熟悉度</td><td>意外</td><td>相似区域</td><td>偏离目标</td><td>正中目标</td></tr></thead><tbody><tr><td>永久法阵</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>关联物件</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>非常熟悉</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>大致见过</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>见过一次或有所描述</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>虚假目的地</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>熟悉度。</strong>以下是表中熟悉度栏各项术语的含义：</p><ul><li>\"永久法阵\"指一个你知道其符文序列的永久传送法阵。</li><li>\"关联物件\"指你持有一个在过去六个月内从期望目的地取得的物件，例如从某法师图书馆取出的一本书。</li><li>\"非常熟悉\"指一个你经常造访、仔细研究过的地方，或是你在施展该法术时能看见的地方。</li><li>\"大致见过\"指一个你见过不止一次但并不十分熟悉的地方。</li><li>\"见过一次或有所描述\"指一个你只见过一次（可能通过魔法）的地方，或是你通过他人描述（例如地图）知晓的地方。</li><li>\"虚假目的地\"指一个不存在的地方。也许你试图探知某个敌人的密室却只看到了一个幻术，或者你正尝试传送至一个已不复存在的地点。</li></ul><p><strong>意外。</strong>该法术不可预测的魔法导致了一次艰难的旅程。每个被传送的生物（或目标物件）受到[[/damage 3d10 type=force]]伤害，且DM重新在表中掷骰以决定你们最终抵达何处（可能发生多次意外，每次都会造成伤害）。</p><p><strong>相似区域。</strong>你和你的团队（或目标物件）出现在一个与目标区域在视觉或主题上相似的不同区域。你们出现在最接近的相似地点。例如，如果你正前往你的家庭实验室，你可能会出现在同一城市的另一个人的实验室中。</p><p><strong>偏离目标。</strong>你和你的团队（或目标物件）出现在距离目的地[[/r 2d12]]英里外的随机方向。掷[[/r 1d8]]决定方向：1, 东；2, 东南；3, 南；4, 西南；5, 西；6, 西北；7, 北；或 8, 东北。</p><p><strong>正中目标。</strong>你和你的团队（或目标物件）出现在你意图到达的地方。</p>",
           "target": {
             "affects": {
               "special": "你和最多八个生物或一个物件"
@@ -13120,7 +13120,7 @@
         },
         "Arrows": {
           "name": "箭矢",
-          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性武器的必需品。武器描述中会注明该武器使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量。该表还列出了通常用于存放每种弹药的容器；存储容器需单独购买。</p>"
+          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋 Quiver}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}是拥有弹药属性武器的必需品。武器描述中会注明该武器使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量。该表还列出了通常用于存放每种弹药的容器；存储容器需单独购买。</p>"
         },
         "Studded Leather Armor": {
           "name": "镶钉皮甲"
@@ -13367,7 +13367,7 @@
         },
         "Bolts": {
           "name": "弩矢",
-          "description": "<p><em><strong>贮藏：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagCaseCrossbo]{弩矢匣}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性的武器所必需的。武器的描述会指明其使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量。该表还列出了通常用于贮藏每种弹药的物品；贮藏容器需单独购买。</p>"
+          "description": "<p><em><strong>贮藏：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagCaseCrossbo]{弩矢匣}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}是拥有弹药属性的武器所必需的。武器的描述会指明其使用的弹药类型。弹药表列出了不同类型的弹药及其购买数量。该表还列出了通常用于贮藏每种弹药的物品；贮藏容器需单独购买。</p>"
         }
       }
     },
@@ -13451,7 +13451,7 @@
         },
         "Finger of Death": {
           "name": "死亡一指",
-          "description": "<p>你向射程内一个你能看见的生物释放负能量。该目标进行一次体质豁免，豁免失败则受到7d8 + 30点暗蚀伤害，豁免成功则仅受一半伤害。</p><p>被此法杀死的类人生物会在你的下个回合开始时以<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{丧尸}</strong>的形态复活（见附录B），并遵循你的言语命令。</p>",
+          "description": "<p>你向射程内一个你能看见的生物释放负能量。该目标进行一次体质豁免，豁免失败则受到7d8 + 30点暗蚀伤害，豁免成功则仅受一半伤害。</p><p>被此法杀死的类人生物会在你的下个回合开始时以<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{丧尸 Zombie}</strong>的形态复活（见附录B），并遵循你的言语命令。</p>",
           "activities": {
             "Negative Energy Save": {
               "name": "负能量豁免"
@@ -13566,7 +13566,7 @@
         },
         "Teleport": {
           "name": "传送术",
-          "description": "<p>该法术会立即将你和施法距离内你能看见的至多八个自愿生物，或施法距离内你能看见的单个物件，传送至你选择的目的地。如果你以物件为目标，则它必须是大型或更小的，且不能被非自愿生物持有或携带。</p><p>你选择的目的地必须是你所知晓的，并且必须与你处于同一位面。你对目的地的熟悉程度决定了你是否能成功抵达。DM掷[[/gmr 1d100]]并参照传送结果表及其后的说明。</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{传送结果}</strong></summary><table><thead><tr><td>熟悉度</td><td>意外</td><td>相似区域</td><td>偏离目标</td><td>正中目标</td></tr></thead><tbody><tr><td>永久法阵</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>关联物件</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>非常熟悉</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>大致见过</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>见过一次或听人描述</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>虚假目的地</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>熟悉度。</strong>以下是表中熟悉度栏各项术语的含义：</p><ul><li>“永久法阵”指一个你知道其符文序列的永久传送法阵teleportation circle。</li><li>“关联物件”指你持有一个在过去六个月内从期望目的地取来的物件，例如一本来自某法师图书馆的书。</li><li>“非常熟悉”指一个你经常造访、仔细研究过的地方，或一个你在施法时能看见的地方。</li><li>“大致见过”指一个你见过不止一次但并不十分熟悉的地方。</li><li>“见过一次或听人描述”指一个你只见过一次（可能通过魔法）的地方，或一个你通过他人描述（例如从地图上）得知的地方。</li><li>“虚假目的地”指一个不存在的地方。也许你试图探知某个敌人的密室却看到了一个幻象，或者你正尝试传送至一个已不复存在的地点。</li></ul><p><strong>意外。</strong>该法术不可预测的魔法导致了一次艰难的旅程。每个被传送的生物（或目标物件）受到[[/damage 3d10 type=force]]伤害，且DM重新在表中掷骰以确定你们最终抵达何处（可能发生多次意外，每次都会造成伤害）。</p><p><strong>相似区域。</strong>你和你的队伍（或目标物件）出现在一个与目标区域在视觉或主题上相似的不同区域。你们出现在最接近的相似地点。例如，如果你正前往你的家庭实验室，你可能会出现在同一城市的另一个人的实验室中。</p><p><strong>偏离目标。</strong>你和你的队伍（或目标物件）出现在距离目的地[[/r 2d12]]英里外的随机方向上。掷[[/r 1d8]]决定方向：1, 东；2, 东南；3, 南；4, 西南；5, 西；6, 西北；7, 北；或8, 东北。</p><p><strong>正中目标。</strong>你和你的队伍（或目标物件）出现在你意图抵达的地方。</p>",
+          "description": "<p>该法术会立即将你和施法距离内你能看见的至多八个自愿生物，或施法距离内你能看见的单个物件，传送至你选择的目的地。如果你以物件为目标，则它必须是大型或更小的，且不能被非自愿生物持有或携带。</p><p>你选择的目的地必须是你所知晓的，并且必须与你处于同一位面。你对目的地的熟悉程度决定了你是否能成功抵达。DM掷[[/gmr 1d100]]并参照传送结果表及其后的说明。</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{传送结果 Teleportation Outcome}</strong></summary><table><thead><tr><td>熟悉度</td><td>意外</td><td>相似区域</td><td>偏离目标</td><td>正中目标</td></tr></thead><tbody><tr><td>永久法阵</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>关联物件</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>非常熟悉</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>大致见过</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>见过一次或听人描述</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>虚假目的地</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>熟悉度。</strong>以下是表中熟悉度栏各项术语的含义：</p><ul><li>“永久法阵”指一个你知道其符文序列的永久传送法阵teleportation circle。</li><li>“关联物件”指你持有一个在过去六个月内从期望目的地取来的物件，例如一本来自某法师图书馆的书。</li><li>“非常熟悉”指一个你经常造访、仔细研究过的地方，或一个你在施法时能看见的地方。</li><li>“大致见过”指一个你见过不止一次但并不十分熟悉的地方。</li><li>“见过一次或听人描述”指一个你只见过一次（可能通过魔法）的地方，或一个你通过他人描述（例如从地图上）得知的地方。</li><li>“虚假目的地”指一个不存在的地方。也许你试图探知某个敌人的密室却看到了一个幻象，或者你正尝试传送至一个已不复存在的地点。</li></ul><p><strong>意外。</strong>该法术不可预测的魔法导致了一次艰难的旅程。每个被传送的生物（或目标物件）受到[[/damage 3d10 type=force]]伤害，且DM重新在表中掷骰以确定你们最终抵达何处（可能发生多次意外，每次都会造成伤害）。</p><p><strong>相似区域。</strong>你和你的队伍（或目标物件）出现在一个与目标区域在视觉或主题上相似的不同区域。你们出现在最接近的相似地点。例如，如果你正前往你的家庭实验室，你可能会出现在同一城市的另一个人的实验室中。</p><p><strong>偏离目标。</strong>你和你的队伍（或目标物件）出现在距离目的地[[/r 2d12]]英里外的随机方向上。掷[[/r 1d8]]决定方向：1, 东；2, 东南；3, 南；4, 西南；5, 西；6, 西北；7, 北；或8, 东北。</p><p><strong>正中目标。</strong>你和你的队伍（或目标物件）出现在你意图抵达的地方。</p>",
           "target": {
             "affects": {
               "special": "你和最多八个生物或一个物件"
@@ -13613,7 +13613,7 @@
         },
         "Animate Dead": {
           "name": "操纵死尸",
-          "description": "<p>在射程内选择一堆骨骸或一具中型或小型类人生物的尸体。目标变为亡灵生物：若你选择骨骸则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmSkeleton000000]{骷髅}</strong>，若选择尸体则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{丧尸}</strong>。</p><p>在你的每个回合中，若该生物位于你60尺范围内，你可以使用附赠动作以心灵感应下达命令（若你控制多个生物，可同时命令它们并对每个个体下达相同指令）。你可以决定该生物下个回合采取的动作和移动位置，或下达笼统指令（例如守卫某个房间或走廊）。若未下达指令，该生物会采取回避动作且仅会移动以规避伤害。一旦获得指令，该生物会持续执行直至任务完成。</p><p>该生物受你控制持续24小时，此后不再服从任何既有指令。若要延续控制权24小时，你必须在当前24小时周期结束前对该生物再次施展此法术。此举可重新确立你对至多四个通过此法术活化生物的控制权，而非创造新生物。</p><p><strong>使用更高法术位。</strong>你每使用比3环高一级的法术位，便可多活化或重新控制两个亡灵生物。每个生物必须源自不同的尸体或骨骸堆。</p>",
+          "description": "<p>在射程内选择一堆骨骸或一具中型或小型类人生物的尸体。目标变为亡灵生物：若你选择骨骸则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmSkeleton000000]{骷髅 Skeleton}</strong>，若选择尸体则成为<strong>@UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{丧尸 Zombie}</strong>。</p><p>在你的每个回合中，若该生物位于你60尺范围内，你可以使用附赠动作以心灵感应下达命令（若你控制多个生物，可同时命令它们并对每个个体下达相同指令）。你可以决定该生物下个回合采取的动作和移动位置，或下达笼统指令（例如守卫某个房间或走廊）。若未下达指令，该生物会采取{回避 Dodge}动作且仅会移动以规避伤害。一旦获得指令，该生物会持续执行直至任务完成。</p><p>该生物受你控制持续24小时，此后不再服从任何既有指令。若要延续控制权24小时，你必须在当前24小时周期结束前对该生物再次施展此法术。此举可重新确立你对至多四个通过此法术活化生物的控制权，而非创造新生物。</p><p><strong>使用更高法术位。</strong>你每使用比3环高一级的法术位，便可多活化或重新控制两个亡灵生物。每个生物必须源自不同的尸体或骨骸堆。</p>",
           "materials": {
             "value": "一滴血、一块肉和一撮骨灰"
           },
@@ -14012,7 +14012,7 @@
         },
         "Masked Identity": {
           "name": "伪装身份",
-          "description": "<p>该[[lookup @name]]免疫任何能感知其情绪或读取其思想的效果，以及任何她拒绝的{预言术 divination}法术。为确认其意图或诚意而进行的{感知}{洞悉}{检定}具有{劣势}。</p>"
+          "description": "<p>该[[lookup @name]]免疫任何能感知其情绪或读取其思想的效果，以及任何她拒绝的{预言术 divination}法术。为确认其意图或诚意而进行的{感知 Wisdom}{洞悉 Insight}{检定 checks}具有{劣势 disadvantage}。</p>"
         },
         "Memory Thief": {
           "name": "记忆窃贼",
@@ -14532,7 +14532,7 @@
         },
         "Hallucinogenic Bioluminescence": {
           "name": "致幻性生物发光",
-          "description": "<p>一个在[[lookup @name lowercase]] 60尺内开始其回合并能看到它的生物，除非[[lookup @name lowercase]]另有选择，否则会受到以下效果影响。<em>感知豁免:</em> DC 16。失败: 目标获得&reference[Charmed]状态(豁免终止)。在被魅惑期间，目标将所有其他生物视为敌人，除了[[lookup @name lowercase]]，它将其视为盟友。</p><p>每当目标发动攻击或施放有害法术时，它必须从其射程内能看到的生物中随机选择目标。如果一个生物引发了目标的借机攻击，它必须发动该攻击(如果能够)。如果目标在其回合结束时没有进行攻击或魔法动作，它将受到[[/damage average]]伤害。</p><p>除非&reference[surprise]{突袭}, 一个生物可以在其回合开始时移开视线以避免豁免。如果该生物这样做，它在对抗[[lookup @name lowercase]]的攻击检定上具有劣势，直到其下一回合开始。如果在此期间该生物看向[[lookup @name lowercase]]，则该生物必须立即进行豁免。</p>",
+          "description": "<p>一个在[[lookup @name lowercase]] 60尺内开始其回合并能看到它的生物，除非[[lookup @name lowercase]]另有选择，否则会受到以下效果影响。<em>感知豁免:</em> DC 16。失败: 目标获得&reference[Charmed]{魅惑 Charmed}状态(豁免终止)。在被魅惑期间，目标将所有其他生物视为敌人，除了[[lookup @name lowercase]]，它将其视为盟友。</p><p>每当目标发动攻击或施放有害法术时，它必须从其射程内能看到的生物中随机选择目标。如果一个生物引发了目标的借机攻击，它必须发动该攻击(如果能够)。如果目标在其回合结束时没有进行攻击或魔法动作，它将受到[[/damage average]]伤害。</p><p>除非&reference[surprise]{突袭 Surprised}, 一个生物可以在其回合开始时移开视线以避免豁免。如果该生物这样做，它在对抗[[lookup @name lowercase]]的攻击检定上具有劣势，直到其下一回合开始。如果在此期间该生物看向[[lookup @name lowercase]]，则该生物必须立即进行豁免。</p>",
           "activities": {
             "Hesitation Damage": {
               "name": "犹豫伤害",
@@ -15414,7 +15414,7 @@
         },
         "Arrows": {
           "name": "箭矢",
-          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药}是拥有弹药属性的武器所必需的。武器的描述会指明该武器使用的弹药类型。弹药表列出了不同类型的弹药以及购买时获得的数量。该表还列出了通常用于存储每种类型的物品；存储容器必须单独购买。</p>"
+          "description": "<p><em><strong>存储：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{箭袋}</em></p><p>@UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{弹药 Ammunition}是拥有弹药属性的武器所必需的。武器的描述会指明该武器使用的弹药类型。弹药表列出了不同类型的弹药以及购买时获得的数量。该表还列出了通常用于存储每种类型的物品；存储容器必须单独购买。</p>"
         }
       }
     },
@@ -16195,7 +16195,7 @@
         },
         "Epic Boss": {
           "name": "史诗首领",
-          "description": "<p>该生物是一名史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在自己的回合中不执行动作或附赠动作。取而代之的是，[[lookup @name]] 会在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>该生物的全部动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.8p4Fwyc088pLRMiW]{污染爆发}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.X6c8dp778EINaEdg]{心灵遥控}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.nX37QYy8R6knJexv]{操控傀儡}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.ytQgwRwsyDdYKK2X]{心智牢笼}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.DiZteu8X1H0KMaJP]{重力解放}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.dyXm5u69uNG58SPQ]{史诗抗性}</p></li></ul>",
+          "description": "<p>该生物是一名史诗首领，一种独特的敌人，旨在对整个冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时行动。在其回合中，它可以正常使用移动和互动。然而，除非被法术或其他效果强制，否则它在自己的回合中不执行动作或附赠动作。取而代之的是，[[lookup @name]] 会在每位玩家角色回合结束时执行以下史诗动作之一。</p><p>该生物的全部动作均为史诗动作。</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.8p4Fwyc088pLRMiW]{污染爆发 Contaminated Blast}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.X6c8dp778EINaEdg]{心灵遥控 Telekinetic Grip}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.nX37QYy8R6knJexv]{操控傀儡 Pluck the Puppet Strings}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.ytQgwRwsyDdYKK2X]{心智牢笼 Mind Cage}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.DiZteu8X1H0KMaJP]{重力解放 Unbind Gravity}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.tGMG5oks7iSWw3J3.Item.dyXm5u69uNG58SPQ]{史诗抗性 Epic Resistance}</p></li></ul>",
           "effects": {
             "Epic Boss": {
               "name": "史诗首领",
@@ -16651,7 +16651,7 @@
           "effects": {
             "Level 2: +5 Max HP": {
               "name": "2级：+5最大生命值",
-              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间}内得到提升。</p>"
+              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间 duration}内得到提升。</p>"
             },
             "Level 3: +10 Max HP": {
               "name": "等级3：+10最大生命值",
@@ -16663,11 +16663,11 @@
             },
             "Level 5: +20 Max HP": {
               "name": "5级：+20最大生命值",
-              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间}内得到提升。</p>"
+              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间 duration}内得到提升。</p>"
             },
             "Level 6: +25 Max HP": {
               "name": "等级6：+25最大生命值",
-              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间}内得到提升。</p>"
+              "description": "<p>目标的{生命值上限 Hit Point maximum}在{持续时间 duration}内得到提升。</p>"
             },
             "Level 7: +30 Max HP": {
               "name": "7级：+30最大生命值",
@@ -17117,7 +17117,7 @@
         },
         "Staff of Power": {
           "name": "力量法杖",
-          "description": "<p><em>@UUID[Compendium.dnd5e.equipment24.Item.phbafcStaffalsoa]{法杖}, 极珍稀 (需由术士, 魔契师, 或法师同调)</em></p><p>该法杖拥有20发充能, 可作为魔法长棍挥舞, 使用它进行攻击检定和伤害检定时获得+2加值。持握时, 你的护甲等级, 豁免, 和法术攻击检定获得+2加值。</p><p><em><strong>法术。</strong></em> 持握此法杖时, 你可以使用你的法术豁免DC, 从其上施展下列表格中的一个法术。表格标明了施展该法术必须消耗的充能数。</p><details><summary>法术消耗表</summary><table><thead><tr><th><p>法术</p></th><th><p>充能消耗</p></th><th></th></tr></thead><tbody><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplConeofCold]{寒冰锥 cone of cold}</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{火球术 fireball} (5环版本)</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplGlobeofInv]{法术无效结界 Globe of Invulnerability}</p></td><td><p>6</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplHoldMonste]{怪物定身术 hold monster}</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplLevitate00]{浮空术 levitate}</p></td><td><p>2</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{闪电束 lightning bolt} (5环版本)</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{魔法飞弹 magic missile}</p></td><td><p>1</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplRayofEnfee]{衰弱射线 ray of enfeeblement}</p></td><td><p>1</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{力场墙 wall of force}</p></td><td><p>5</p></td><td></td></tr></tbody></table></details><p><em><strong>恢复充能。</strong></em> 此法杖每天于拂晓恢复2d8 + 4发已消耗的充能。如果你消耗了最后一发充能, 骰[[/r 1d20]]。若结果为1, 法杖保留其攻击检定和伤害检定的+2加值, 但失去所有其他词条。若结果为20, 法杖恢复[[/r 1d8 + 2]]发充能。</p><p><em><strong>报复打击。</strong></em> 你可以采取一个魔法动作将法杖在膝盖上或坚硬表面上折断。法杖被摧毁并释放其魔法, 在以其自身为源点, 30尺半径的光环内引发爆炸。你有50%的几率立即传送到一个随机存在位面, 避开此爆炸。如果你未能避开此效应, 你将受到等于法杖充能数16倍的力场伤害。区域内的每个其他生物进行一次DC 17的敏捷豁免。豁免失败, 该生物受到等于法杖充能数4倍的力场伤害。豁免成功, 该生物受到一半伤害。</p>",
+          "description": "<p><em>@UUID[Compendium.dnd5e.equipment24.Item.phbafcStaffalsoa]{法杖 Staff}, 极珍稀 (需由术士, 魔契师, 或法师同调)</em></p><p>该法杖拥有20发充能, 可作为魔法长棍挥舞, 使用它进行攻击检定和伤害检定时获得+2加值。持握时, 你的护甲等级, 豁免, 和法术攻击检定获得+2加值。</p><p><em><strong>法术。</strong></em> 持握此法杖时, 你可以使用你的法术豁免DC, 从其上施展下列表格中的一个法术。表格标明了施展该法术必须消耗的充能数。</p><details><summary>法术消耗表</summary><table><thead><tr><th><p>法术</p></th><th><p>充能消耗</p></th><th></th></tr></thead><tbody><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplConeofCold]{寒冰锥 cone of cold}</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{火球术 fireball} (5环版本)</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplGlobeofInv]{法术无效结界 Globe of Invulnerability}</p></td><td><p>6</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplHoldMonste]{怪物定身术 hold monster}</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplLevitate00]{浮空术 levitate}</p></td><td><p>2</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{闪电束 lightning bolt} (5环版本)</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{魔法飞弹 magic missile}</p></td><td><p>1</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplRayofEnfee]{衰弱射线 ray of enfeeblement}</p></td><td><p>1</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{力场墙 wall of force}</p></td><td><p>5</p></td><td></td></tr></tbody></table></details><p><em><strong>恢复充能。</strong></em> 此法杖每天于拂晓恢复2d8 + 4发已消耗的充能。如果你消耗了最后一发充能, 骰[[/r 1d20]]。若结果为1, 法杖保留其攻击检定和伤害检定的+2加值, 但失去所有其他词条。若结果为20, 法杖恢复[[/r 1d8 + 2]]发充能。</p><p><em><strong>报复打击。</strong></em> 你可以采取一个魔法动作将法杖在膝盖上或坚硬表面上折断。法杖被摧毁并释放其魔法, 在以其自身为源点, 30尺半径的光环内引发爆炸。你有50%的几率立即传送到一个随机存在位面, 避开此爆炸。如果你未能避开此效应, 你将受到等于法杖充能数16倍的力场伤害。区域内的每个其他生物进行一次DC 17的敏捷豁免。豁免失败, 该生物受到等于法杖充能数4倍的力场伤害。豁免成功, 该生物受到一半伤害。</p>",
           "activities": {
             "Retributive Strike": {
               "name": "报复打击"
@@ -17322,7 +17322,7 @@
         },
         "Prismatic Spray": {
           "name": "虹光喷射",
-          "description": "<p>八道光线从你身上向一个60尺锥状区域迸发。锥状区域内的每个生物需进行一次敏捷豁免。为每个目标骰1d8，参照七彩射线表来决定影响它的射线颜色。</p><p>@Embed[Compendium.dnd5e.tables24.RollTable.phbPrismaticRays rollable=true caption=false]{七彩射线}</p>",
+          "description": "<p>八道光线从你身上向一个60尺锥状区域迸发。锥状区域内的每个生物需进行一次敏捷豁免。为每个目标骰1d8，参照七彩射线表来决定影响它的射线颜色。</p><p>@Embed[Compendium.dnd5e.tables24.RollTable.phbPrismaticRays rollable=true caption=false]{七彩射线 Prismatic Rays}</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -17382,7 +17382,7 @@
         },
         "znESvMihyakiRY5g": {
           "name": "传送术",
-          "description": "<p>该法术会立即将你和施法距离内你能看见的至多八个自愿生物，或施法距离内你能看见的单个物件，传送至你选择的目的地。如果你以物件为目标，则它必须是大型或更小的，且不能被非自愿的生物持有或携带。</p><p>你选择的目的地必须是你已知的，且必须与你在同一位面。你对目的地的熟悉程度决定了你是否能成功抵达。DM掷[[/gmr 1d100]]并参考传送结果表及其后的说明。</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{传送结果}</strong></summary><table><thead><tr><td>熟悉度</td><td>意外</td><td>相似区域</td><td>偏离目标</td><td>正中目标</td></tr></thead><tbody><tr><td>永久法阵</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>关联物件</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>非常熟悉</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>大致见过</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>见过一次或听人描述</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>虚假目的地</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>熟悉度。</strong>以下是表中“熟悉度”列各术语的含义：</p><ul><li>“永久法阵”指一个你知道其符文序列的永久传送法阵。</li><li>“关联物件”指你持有一个在过去六个月内从期望目的地取来的物件，例如从某法师的图书馆中取来的一本书。</li><li>“非常熟悉”指你经常造访的地方、你仔细研究过的地方，或是你施法时能看见的地方。</li><li>“大致见过”指你见过不止一次但并不十分熟悉的地方。</li><li>“见过一次或听人描述”指你只见过一次的地方（可能通过魔法），或是你通过他人描述（例如从地图上）知道的地方。</li><li>“虚假目的地”指一个不存在的地方。也许你试图探知某个敌人的密室却看到了幻象，或者你正尝试传送到一个已不复存在的地点。</li></ul><p><strong>意外。</strong>法术不可预测的魔法导致了一次艰难的旅程。每个被传送的生物（或目标物件）受到[[/damage 3d10 type=force]]伤害，且DM重新在表中掷骰以确定你们最终抵达何处（可能发生多次意外，每次都会造成伤害）。</p><p><strong>相似区域。</strong>你和你的队伍（或目标物件）出现在一个与目标区域在视觉或主题上相似的不同区域。你们出现在最接近的相似地点。例如，如果你正前往你的家庭实验室，你可能会出现在同一城市的另一个人的实验室中。</p><p><strong>偏离目标。</strong>你和你的队伍（或目标物件）出现在距离目的地[[/r 2d12]]英里远的随机方向上。掷[[/r 1d8]]决定方向：1, 东；2, 东南；3, 南；4, 西南；5, 西；6, 西北；7, 北；或 8, 东北。</p><p><strong>正中目标。</strong>你和你的队伍（或目标物件）出现在你意图抵达的地方。</p>",
+          "description": "<p>该法术会立即将你和施法距离内你能看见的至多八个自愿生物，或施法距离内你能看见的单个物件，传送至你选择的目的地。如果你以物件为目标，则它必须是大型或更小的，且不能被非自愿的生物持有或携带。</p><p>你选择的目的地必须是你已知的，且必须与你在同一位面。你对目的地的熟悉程度决定了你是否能成功抵达。DM掷[[/gmr 1d100]]并参考传送结果表及其后的说明。</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{传送结果 Teleportation Outcome}</strong></summary><table><thead><tr><td>熟悉度</td><td>意外</td><td>相似区域</td><td>偏离目标</td><td>正中目标</td></tr></thead><tbody><tr><td>永久法阵</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>关联物件</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>非常熟悉</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>大致见过</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>见过一次或听人描述</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>虚假目的地</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>熟悉度。</strong>以下是表中\"熟悉度\"列各术语的含义：</p><ul><li>\"永久法阵\"指一个你知道其符文序列的永久传送法阵。</li><li>\"关联物件\"指你持有一个在过去六个月内从期望目的地取来的物件，例如从某法师的图书馆中取来的一本书。</li><li>\"非常熟悉\"指你经常造访的地方、你仔细研究过的地方，或是你施法时能看见的地方。</li><li>\"大致见过\"指你见过不止一次但并不十分熟悉的地方。</li><li>\"见过一次或听人描述\"指你只见过一次的地方（可能通过魔法），或是你通过他人描述（例如从地图上）知道的地方。</li><li>\"虚假目的地\"指一个不存在的地方。也许你试图探知某个敌人的密室却看到了幻象，或者你正尝试传送到一个已不复存在的地点。</li></ul><p><strong>意外。</strong>法术不可预测的魔法导致了一次艰难的旅程。每个被传送的生物（或目标物件）受到[[/damage 3d10 type=force]]伤害，且DM重新在表中掷骰以确定你们最终抵达何处（可能发生多次意外，每次都会造成伤害）。</p><p><strong>相似区域。</strong>你和你的队伍（或目标物件）出现在一个与目标区域在视觉或主题上相似的不同区域。你们出现在最接近的相似地点。例如，如果你正前往你的家庭实验室，你可能会出现在同一城市的另一个人的实验室中。</p><p><strong>偏离目标。</strong>你和你的队伍（或目标物件）出现在距离目的地[[/r 2d12]]英里远的随机方向上。掷[[/r 1d8]]决定方向：1, 东；2, 东南；3, 南；4, 西南；5, 西；6, 西北；7, 北；或 8, 东北。</p><p><strong>正中目标。</strong>你和你的队伍（或目标物件）出现在你意图抵达的地方。</p>",
           "target": {
             "affects": {
               "special": "你和最多八个生物或一个物件"
@@ -18270,7 +18270,7 @@
           "effects": {
             "Slowed": {
               "name": "减速",
-              "description": "<p>受影响{目标}的{速度 Speed}减半，在{AC}和{敏捷 Dexterity}{豁免 Saving Throws}上受到-2减值，并且不能进行{反应 Reactions}。在它的回合中，它只能执行一个{动作 Action}或一个{附赠动作 Bonus Action}，不能同时执行两者，并且如果它执行{攻击 Attack}动作，则只能发动一次攻击。如果它施展一个带有{姿势 somatic}{部件 component}的{法术 Spell}，则有[[/r 1d100cs>25#Slowed spell cast success]]{25%}的几率由于{目标 the target}施法手势过慢而导致法术失败。</p><p>受影响{目标}在每个自己的回合结束时重复进行[[/save ability=wis]]{豁免 Save}，成功则终止自身所受的法术效果。</p>"
+              "description": "<p>受影响{目标 target}的{速度 Speed}减半，在{护甲等级： AC}和{敏捷 Dexterity}{豁免 Saving Throws}上受到-2减值，并且不能进行{反应 Reactions}。在它的回合中，它只能执行一个{动作 Action}或一个{附赠动作 Bonus Action}，不能同时执行两者，并且如果它执行{攻击 Attack}动作，则只能发动一次攻击。如果它施展一个带有{姿势 somatic}{部件 component}的{法术 Spell}，则有[[/r 1d100cs>25#Slowed spell cast success]]{25% 25 percent}的几率由于{目标 the target}施法手势过慢而导致法术失败。</p><p>受影响{目标 target}在每个自己的回合结束时重复进行[[/save ability=wis]]{豁免 Save}，成功则终止自身所受的法术效果。</p>"
             }
           }
         },

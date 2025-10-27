@@ -63,7 +63,7 @@
         },
         "XD2ochO9uswzABX3": {
           "name": "爪击",
-          "description": "<p>[[lookup @name]]发动一次[[/item Claw]]{爪击}攻击。</p>",
+          "description": "<p>[[lookup @name]]发动一次[[/item Claw]]{爪击 claw}攻击。</p>",
           "activities": {
             "Expand Use": {
               "name": "扩展用途"
@@ -261,7 +261,7 @@
         },
         "Multiattack": {
           "name": "多重攻击Multiattack。",
-          "description": "<p>该鹫马发动两次攻击：一次用它的[[/item Beak]]{喙啄}，一次用它的[[/item Claw]]{爪击}。</p>"
+          "description": "<p>该鹫马发动两次攻击：一次用它的[[/item Beak]]{喙啄 beak}，一次用它的[[/item Claw]]{爪击 claws}。</p>"
         },
         "Keen Sight": {
           "name": "敏锐视觉",
@@ -498,7 +498,7 @@
         },
         "Prismatic Breath": {
           "name": "虹光吐息",
-          "description": "<p>这只雀鸟呼出一道30尺锥状的棱彩能量，表现为八道多彩的光线。每道光线颜色各异，拥有不同的力量与目的。效果区域内的每个生物必须进行一次[[/save]]豁免。豁免失败时，受影响的生物需掷一次[[r 1d8]]以确定受何种颜色的光线影响：</p><p>@embed[Compendium.kob-adv-potbellied-kobold.tables.RollTable.lNzqrYUVbpoIPHT1 rollable]{欢愉色彩射线}</p><section class=\"secret\" id=\"secret-F7vxTo3YScanZ23d\"><p><em><strong>Foundry 注：</strong></em> 确定各颜色射线命中目标后，对其施加相应的效果。关于伤害部分，请在伤害掷骰窗口中选择对应的伤害类型。</p></section>",
+          "description": "<p>这只雀鸟呼出一道30尺锥状的棱彩能量，表现为八道多彩的光线。每道光线颜色各异，拥有不同的力量与目的。效果区域内的每个生物必须进行一次[[/save]]豁免。豁免失败时，受影响的生物需掷一次[[r 1d8]]以确定受何种颜色的光线影响：</p><p>@embed[Compendium.kob-adv-potbellied-kobold.tables.RollTable.lNzqrYUVbpoIPHT1 rollable]{欢愉色彩射线 Joy Color Rays}</p><section class=\"secret\" id=\"secret-F7vxTo3YScanZ23d\"><p><em><strong>Foundry 注：</strong></em> 确定各颜色射线命中目标后，对其施加相应的效果。关于伤害部分，请在伤害掷骰窗口中选择对应的伤害类型。</p></section>",
           "activities": {
             "Select Color": {
               "name": "选择颜色",
@@ -726,7 +726,7 @@
       "items": {
         "Horrid Clacking": {
           "name": "恐怖咔嗒声",
-          "description": "<p>如果咯吱骷髅移动至少10尺，每个位于该骷髅30尺内且能听到其声响的野兽或类人生物必须进行一次[[/save]]豁免，否则将被&Reference[frightened apply=false]{恐慌}直至其下一回合结束。</p>",
+          "description": "<p>如果咯吱骷髅移动至少10尺，每个位于该骷髅30尺内且能听到其声响的野兽或类人生物必须进行一次[[/save]]豁免，否则将被&Reference[frightened apply=false]{恐慌 frightened}直至其下一回合结束。</p>",
           "activities": {
             "save": {
               "condition": "移动至少10尺"
@@ -815,7 +815,7 @@
         },
         "Net Cannon": {
           "name": "捕网火炮",
-          "description": "<p><em>远程武器攻击：</em> [[/attack]] 命中, 射程 5/15 尺, 单一目标, 体型大型或更小的。 <em>命中：</em> 目标被&amp;Reference[Restrained apply=false]{束缚}。[[lookup @name lowercase]]胸部的机关可以发射一张带有20尺长拖缆的捕网, 缆绳锚定在构装生物的胸部。生物可以使用其动作进行一次成功的[[/check]]检定, 或对捕网AC10造成5点挥砍伤害, 来使自己(或另一生物)从捕网中脱身。[[lookup @name lowercase]]最多可以发射四张捕网, 之后必须重新装填。</p>",
+          "description": "<p><em>远程武器攻击：</em> [[/attack]] 命中, 射程 5/15 尺, 单一目标, 体型大型或更小的。 <em>命中：</em> 目标被&amp;Reference[Restrained apply=false]{束缚 Restrained}。[[lookup @name lowercase]]胸部的机关可以发射一张带有20尺长拖缆的捕网, 缆绳锚定在构装生物的胸部。生物可以使用其动作进行一次成功的[[/check]]检定, 或对捕网AC10造成5点挥砍伤害, 来使自己(或另一生物)从捕网中脱身。[[lookup @name lowercase]]最多可以发射四张捕网, 之后必须重新装填。</p>",
           "activities": {
             "Escape Net": {
               "name": "逃脱捕网"
@@ -1319,7 +1319,7 @@
         },
         "Poisoned Spear": {
           "name": "中毒矛",
-          "description": "<p>[[/attack extended activity=dnd5eactivity000]]。[[/damage extended activity=dnd5eactivity000]]，或双手持用近战攻击时造成[[/damage twoHanded average activity=dnd5eactivity000]]。如果目标是一个生物，它必须进行[[/save activity=5MvgTuoN2P877OML]]豁免，豁免失败则受到[[/damage activity=5MvgTuoN2P877OML]]伤害，成功则仅受一半伤害。若该毒素伤害将目标生命值降至0，目标将陷入稳定状态但会&Reference[Poisoned]{中毒}1小时(即使恢复生命值后亦然)，且在此中毒期间持续&Reference[Paralyzed]{麻痹}。</p>",
+          "description": "<p>[[/attack extended activity=dnd5eactivity000]]。[[/damage extended activity=dnd5eactivity000]]，或双手持用近战攻击时造成[[/damage twoHanded average activity=dnd5eactivity000]]。如果目标是一个生物，它必须进行[[/save activity=5MvgTuoN2P877OML]]豁免，豁免失败则受到[[/damage activity=5MvgTuoN2P877OML]]伤害，成功则仅受一半伤害。若该毒素伤害将目标生命值降至0，目标将陷入稳定状态但会&Reference[Poisoned]{中毒 Poisoned}1小时(即使恢复生命值后亦然)，且在此中毒期间持续&Reference[Paralyzed]{麻痹 Paralyzed}。</p>",
           "activities": {
             "Save": {
               "name": "豁免",
@@ -2410,7 +2410,7 @@
         },
         "Censer of Controlling Air Elementals": {
           "name": "操控气元素生物香炉",
-          "description": "<p><em>奇物</em></p>\n<p>当熏香在此香炉中燃烧时，你可以用一个动作说出香炉的命令语，召唤一个@UUID[Compendium.dnd5e.monsters.Actor.banHjKDMCegbUwYE]{气元素}，如同你施展了@UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{召唤元素生物 conjure elemental}法术。此香炉无法再次以这种方式使用，直到次日黎明。</p>\n<p>这个6英寸宽、1尺高的容器形似带雕饰盖子的圣杯。它重1磅。</p>",
+          "description": "<p><em>奇物</em></p>\n<p>当熏香在此香炉中燃烧时，你可以用一个动作说出香炉的命令语，召唤一个@UUID[Compendium.dnd5e.monsters.Actor.banHjKDMCegbUwYE]{气元素 air elemental}，如同你施展了@UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{召唤元素生物 conjure elemental}法术。此香炉无法再次以这种方式使用，直到次日黎明。</p>\n<p>这个6英寸宽、1尺高的容器形似带雕饰盖子的圣杯。它重1磅。</p>",
           "activities": {
             "utility": {
               "condition": "命令语。"
@@ -2592,7 +2592,7 @@
       "items": {
         "Slingsnare": {
           "name": "投石套索",
-          "description": "<p>一个隐蔽的绳圈或金属丝圈连接在配重上。当生物踏入{魔法圈套Snare Snare}时，它必须成功进行一次[[/save dex 13]]豁免检定，否则会被猛地拽向空中，头下脚上地悬吊在离地5尺的高度。被圈套困住的生物将受到&amp;Reference[restrained]{束缚}(逃脱需通过[[/check 13 ath acr]]检定)。该绳索的AC为10，具有5点生命值。</p>",
+          "description": "<p>一个隐蔽的绳圈或金属丝圈连接在配重上。当生物踏入{魔法圈套Snare Snare}时，它必须成功进行一次[[/save dex 13]]豁免检定，否则会被猛地拽向空中，头下脚上地悬吊在离地5尺的高度。被圈套困住的生物将受到&amp;Reference[restrained]{束缚 restrained}(逃脱需通过[[/check 13 ath acr]]检定)。该绳索的AC为10，具有5点生命值。</p>",
           "activities": {
             "Yank": {
               "name": "猛拽"
@@ -2826,7 +2826,7 @@
         },
         "Net Cannon": {
           "name": "捕网火炮",
-          "description": "<p><em>远程武器攻击：</em> [[/attack]] 命中, 射程 5/15 尺, 单一目标, 体型大型或更小的。 <em>命中：</em> 目标被&amp;Reference[Restrained apply=false]{束缚}。[[lookup @name lowercase]]胸部的机制可以发射一张带有20尺长拖缆的捕网, 缆绳锚定在构装生物胸部。一个生物可以使用其动作进行一次成功的[[/check]]检定或对捕网造成5点挥砍伤害 (护甲等级：10) 来使自己 (或另一个生物) 从捕网中脱身。[[lookup @name lowercase]]最多可以发射四张捕网, 之后必须重新装填。</p>",
+          "description": "<p><em>远程武器攻击：</em> [[/attack]] 命中, 射程 5/15 尺, 单一目标, 体型大型或更小的。 <em>命中：</em> 目标被&amp;Reference[Restrained apply=false]{束缚 Restrained}。[[lookup @name lowercase]]胸部的机制可以发射一张带有20尺长拖缆的捕网, 缆绳锚定在构装生物胸部。一个生物可以使用其动作进行一次成功的[[/check]]检定或对捕网造成5点挥砍伤害 (护甲等级：10) 来使自己 (或另一个生物) 从捕网中脱身。[[lookup @name lowercase]]最多可以发射四张捕网, 之后必须重新装填。</p>",
           "activities": {
             "Escape Net": {
               "name": "逃脱捕网"
@@ -2882,7 +2882,7 @@
         },
         "Shortbow": {
           "name": "短弓",
-          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标必须进行一次DC 12体质豁免，失败则承受&Reference[poisoned apply=false]{中毒}状态1分钟。中毒生物可在每个自己的回合结束时重复该豁免，成功则终止其身上的该效果。</p>",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标必须进行一次DC 12体质豁免，失败则承受&Reference[poisoned apply=false]{中毒 poisoned}状态1分钟。中毒生物可在每个自己的回合结束时重复该豁免，成功则终止其身上的该效果。</p>",
           "effects": {
             "Poisoned": {
               "name": "中毒"
@@ -2891,7 +2891,7 @@
         },
         "Inspiring Shriek": {
           "name": "鼓舞尖啸",
-          "description": "<p>狗头人酋长发出一声龙语战吼。每个在酋长30尺内且非龙裔或狗头人的生物必须进行一次[[/save]]豁免,失败则被&amp;Reference[frightened apply=false]{恐慌}1分钟。恐慌生物可以在其每个自己的回合结束时重复该豁免,成功则终止其身上的该效应。每个在酋长30尺内的龙裔和狗头人会获得1分钟的激励。每当受激励生物进行攻击检定或豁免时,该生物可以投一枚d4并将结果加到攻击检定或豁免上。</p>",
+          "description": "<p>狗头人酋长发出一声龙语战吼。每个在酋长30尺内且非龙裔或狗头人的生物必须进行一次[[/save]]豁免,失败则被&amp;Reference[frightened apply=false]{恐慌 frightened}1分钟。恐慌生物可以在其每个自己的回合结束时重复该豁免,成功则终止其身上的该效应。每个在酋长30尺内的龙裔和狗头人会获得1分钟的激励。每当受激励生物进行攻击检定或豁免时,该生物可以投一枚d4并将结果加到攻击检定或豁免上。</p>",
           "activities": {
             "save": {
               "affects": {
@@ -2986,7 +2986,7 @@
       "items": {
         "Multiattack": {
           "name": "多重攻击Multiattack。",
-          "description": "<p>该[[lookup @name lowercase]] [[/item Bite]]{啃咬}一次，[[/item Claw]]{爪击}一次，并发动一次[[/item War Pick]]攻击。使用{护盾术shield Shield}会限制{达拉库食尸鬼 darakhul}只能发动爪击或战镐攻击，但无法同时发动两者。</p>"
+          "description": "<p>该[[lookup @name lowercase]] [[/item Bite]]{啃咬 bite}一次，[[/item Claw]]{爪击 claw}一次，并发动一次[[/item War Pick]]攻击。使用{护盾术shield Shield}会限制{达拉库食尸鬼 darakhul}只能发动爪击或战镐攻击，但无法同时发动两者。</p>"
         },
         "Master of Disguise": {
           "name": "伪装大师Master of Disguise",
@@ -3035,7 +3035,7 @@
         },
         "Claw": {
           "name": "爪击",
-          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。如果目标是一个生物而非亡灵，它必须进行一次成功的[[/save]]豁免检定，否则将被&amp;Reference[paralyzed apply=none]{麻痹}1分钟。被麻痹的目标会在其每个自己的回合结束时重复进行豁免检定，成功则终止其身上的该效应。若类人生物被麻痹达到2轮或更久(受害者至少失败2次豁免检定，无论连续与否)，该生物将感染<strong>达拉库疫病</strong>。</p><section id=\"secret-sUNxBo3ErizKbxvo\" class=\"secret\"><p><strong>Foundry 注：</strong>你可以通过从效果标签页拖拽达拉库疫病主动效果至目标角色卡来施加该效果。</p></section>",
+          "description": "<p>[[/attack extended]]。 [[/damage average extended]]。如果目标是一个生物而非亡灵，它必须进行一次成功的[[/save]]豁免检定，否则将被&amp;Reference[paralyzed apply=none]{麻痹 paralyzed}1分钟。被麻痹的目标会在其每个自己的回合结束时重复进行豁免检定，成功则终止其身上的该效应。若类人生物被麻痹达到2轮或更久(受害者至少失败2次豁免检定，无论连续与否)，该生物将感染<strong>达拉库疫病</strong>。</p><section id=\"secret-sUNxBo3ErizKbxvo\" class=\"secret\"><p><strong>Foundry 注：</strong>你可以通过从效果标签页拖拽达拉库疫病主动效果至目标角色卡来施加该效果。</p></section>",
           "effects": {
             "Darakhul Fever": {
               "name": "达拉库疫病"
@@ -3297,7 +3297,7 @@
         },
         "Stunner": {
           "name": "震慑者",
-          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标被&amp;Reference[Restrained apply=false]{束缚}(逃脱[[/check activity=yQVg5SpZhQE9frEg]])。被束缚期间，目标在其回合开始时受到7([[/r 2d6]])点闪电伤害并陷入&amp;Reference[Prone apply=false]{倒地}状态。若目标穿着金属护甲，陷阱匠的此次攻击检定具有优势。震击索是由金属丝、磁体与静电电容器构成的流星索。狗头人陷阱匠可通过长休为其充能。</p>",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标被&amp;Reference[Restrained apply=false]{束缚 restrained}(逃脱[[/check activity=yQVg5SpZhQE9frEg]])。被束缚期间，目标在其回合开始时受到7([[/r 2d6]])点闪电伤害并陷入&amp;Reference[Prone apply=false]{倒地 prone}状态。若目标穿着金属护甲，陷阱匠的此次攻击检定具有优势。震击索是由金属丝、磁体与静电电容器构成的流星索。狗头人陷阱匠可通过长休为其充能。</p>",
           "activities": {
             "Restrained damages": {
               "name": "束缚伤害"
@@ -3338,7 +3338,7 @@
         },
         "Traps and Snares": {
           "name": "陷阱和圈套",
-          "description": "<p>[[lookup @name lowercase]]擅长设置机械陷阱。侦测、解除、避开或减轻其陷阱需要通过DC 13的检定或豁免，且陷阱具有+5攻击加值。借助盗贼工具和基础建造材料，[[lookup @name lowercase]]能在5分钟内布置下列一种简易但有效的陷阱。触发装置包括压力板、绊线、锁具内的小卡榫或其他简易机械。</p><ul><li><p><strong>窒息炸弹。</strong> 这枚小型燃烧装置会急速燃烧，在20尺球状范围内释放令人窒息的烟雾。该区域呈重度遮蔽。任何呼吸生物在烟雾生成时处于受影响区域，或其回合开始时位于烟雾中，将陷入&amp;Reference[poisoned]状态。中毒生物离开烟雾后，可在其回合结束时进行[[/save con 13]]豁免，成功则结束中毒状态。烟雾将在10分钟后消散，或在强风中持续1轮后消散。</p></li><li><p><strong>淬毒薄片。</strong> 淬毒薄片或针几乎可隐藏在任何位置：锁芯内部、箱盒内、铺地毯的地板、门把底面、液体杯或宝石碗中。当目标满足被薄片刺伤的条件时，陷阱会以优势发动近战武器攻击：[[/attack +5]]命中，触及0尺，单一目标；[[/damage 1d4 piercing extended]]点穿刺伤害加[[/damage 4d6 poison average]]毒素伤害，若通过[[/save con 13]]豁免则仅承受半数毒素伤害。</p></li><li><p><strong>碎颅器。</strong> 该陷阱由重物、尖刺或刀锋构成，设置成坠落或摆荡袭击受害者。触发时，碎颅器对路径上首个目标发动近战武器攻击：[[/attack +5]]命中，触及15尺，单一目标；[[/damage 2d10 average bludgeoning piercing slashing]]伤害。伤害类型取决于碎颅器构造：石塊或重木造成钝击伤害，钉刺木桩造成穿刺伤害，扫掠刀锋造成挥砍伤害等。</p></li><li><p><strong>弹射套索。</strong> 隐蔽的绳圈或金属圈连接着配重物。当生物踏入圈套时，必须成功通过[[/save dex 13]]豁免，否则将被拽至空中倒悬于离地5尺处。受困生物处于&amp;Reference[restrained]{束缚}状态(逃脱需通过[[/check 13 ath acr]]检定)。绳索的护甲等级：10且具有5生命值：。</p></li></ul><section id=\"secret-Yb17iypHpOFgVNSH\" class=\"secret\"><p><strong>Foundry 注：</strong> 根据具体情境，你可以使用<em>布置陷阱</em>行动在地图上生成陷阱，或利用描述中的增强器执行各陷阱所需操作。</p></section>",
+          "description": "<p>[[lookup @name lowercase]]擅长设置机械陷阱。侦测、解除、避开或减轻其陷阱需要通过DC 13的检定或豁免，且陷阱具有+5攻击加值。借助盗贼工具和基础建造材料，[[lookup @name lowercase]]能在5分钟内布置下列一种简易但有效的陷阱。触发装置包括压力板、绊线、锁具内的小卡榫或其他简易机械。</p><ul><li><p><strong>窒息炸弹。</strong> 这枚小型燃烧装置会急速燃烧，在20尺球状范围内释放令人窒息的烟雾。该区域呈重度遮蔽。任何呼吸生物在烟雾生成时处于受影响区域，或其回合开始时位于烟雾中，将陷入&amp;Reference[poisoned]{中毒 poisoned}状态。中毒生物离开烟雾后，可在其回合结束时进行[[/save con 13]]豁免，成功则结束中毒状态。烟雾将在10分钟后消散，或在强风中持续1轮后消散。</p></li><li><p><strong>淬毒薄片。</strong> 淬毒薄片或针几乎可隐藏在任何位置：锁芯内部、箱盒内、铺地毯的地板、门把底面、液体杯或宝石碗中。当目标满足被薄片刺伤的条件时，陷阱会以优势发动近战武器攻击：[[/attack +5]]命中，触及0尺，单一目标；[[/damage 1d4 piercing extended]]点穿刺伤害加[[/damage 4d6 poison average]]毒素伤害，若通过[[/save con 13]]豁免则仅承受半数毒素伤害。</p></li><li><p><strong>碎颅器。</strong> 该陷阱由重物、尖刺或刀锋构成，设置成坠落或摆荡袭击受害者。触发时，碎颅器对路径上首个目标发动近战武器攻击：[[/attack +5]]命中，触及15尺，单一目标；[[/damage 2d10 average bludgeoning piercing slashing]]伤害。伤害类型取决于碎颅器构造：石塊或重木造成钝击伤害，钉刺木桩造成穿刺伤害，扫掠刀锋造成挥砍伤害等。</p></li><li><p><strong>弹射套索。</strong> 隐蔽的绳圈或金属圈连接着配重物。当生物踏入圈套时，必须成功通过[[/save dex 13]]豁免，否则将被拽至空中倒悬于离地5尺处。受困生物处于&amp;Reference[restrained]{束缚 restrained}状态(逃脱需通过[[/check 13 ath acr]]检定)。绳索的护甲等级：10且具有5生命值：。</p></li></ul><section id=\"secret-Yb17iypHpOFgVNSH\" class=\"secret\"><p><strong>Foundry 注：</strong> 根据具体情境，你可以使用<em>布置陷阱</em>行动在地图上生成陷阱，或利用描述中的增强器执行各陷阱所需操作。</p></section>",
           "activities": {
             "Place Trap": {
               "name": "放置陷阱"
