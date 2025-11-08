@@ -384,7 +384,7 @@
         },
         "Tentacle": {
           "name": "触须",
-          "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过大型，则其会被四条触须之一擒抱，陷入 &Reference[Grappled apply=false] 状态（逃脱DC [[lookup @skills.ath.passive]]）。</p>",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC 14) from one of four tentacles.</p>",
           "activities": {
             "Escape Check": {
               "name": "逃脱检定"
@@ -5823,7 +5823,7 @@
         },
         "Parry": {
           "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
           "activities": {
             "Use": {
               "name": "使用",
@@ -9057,28 +9057,7 @@
         },
         "Spellcasting": {
           "name": "施法",
-          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展以下一道法术，使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMageArmor0]</em>（已计入AC），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplJallarzisS]</em>（7 环版本），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassSugges]</em></p>"
-        },
-        "Mage Armor": {
-          "name": "法师护甲",
-          "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础 AC 变为 13 + 它的敏捷调整值。目标着装护甲则法术提前终止。</p>",
-          "materials": {
-            "value": "a piece of cured leather"
-          },
-          "activities": {
-            "Cast": {
-              "name": "施展"
-            }
-          },
-          "effects": {
-            "Mage Armor": {
-              "name": "法师护甲",
-              "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
-            },
-            "Spell Changes": {
-              "name": "法术改动"
-            }
-          }
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplJallarzisS]{Jallarzi’s Storm of Radiance}</em> (level 7 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMassSugges]{Mass Suggestion}</em></p>"
         },
         "Thaumaturgy": {
           "name": "奇术",
@@ -9125,12 +9104,9 @@
               "name": "法术改动"
             }
           }
-        }
-      },
-      "effects": {
-        "Mage Armor": {
-          "name": "法师护甲",
-          "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
+        },
+        "Breastplate": {
+          "name": "Breastplate"
         }
       }
     },
@@ -9729,17 +9705,6 @@
             }
           }
         },
-        "Parry": {
-          "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
-          "activities": {
-            "Use": {
-              "name": "使用",
-              "roll": "AC加值",
-              "condition": "在持握武器期间因近战攻击检定被命中"
-            }
-          }
-        },
         "Dread Authority": {
           "name": "恐怖权威",
           "description": "<p class=\"feature\">[[lookup @name lowercase]] 使用施法施展 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]</em>。[[lookup @name lowercase]] 直至其下一回合开始都无法再执行此动作。</p>",
@@ -9815,6 +9780,17 @@
               "name": "法术改动"
             }
           }
+        },
+        "Parry": {
+          "name": "格挡",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
+          "activities": {
+            "Use": {
+              "name": "使用",
+              "roll": "AC加值",
+              "condition": "在持握武器期间因近战攻击检定被命中"
+            }
+          }
         }
       }
     },
@@ -9867,17 +9843,6 @@
             }
           }
         },
-        "Parry": {
-          "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
-          "activities": {
-            "Use": {
-              "name": "使用",
-              "roll": "AC加值",
-              "condition": "在持握武器期间因近战攻击检定被命中"
-            }
-          }
-        },
         "Spellcasting": {
           "name": "施法",
           "description": "<p class=\"feature\">[[lookup @name lowercase]] 施展以下一道法术，无需任何材料成分并使用魅力作为施法属性（法术豁免DC [[lookup @attributes.spell.dc]]）：</p><p class=\"feature-trait\"><strong>随意：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPhantomSte]</em></p><p class=\"feature-trait\"><strong>每项1/日：</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDestructiv]</em>（暗蚀），<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em></p>",
@@ -9914,6 +9879,17 @@
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
+            }
+          }
+        },
+        "Parry": {
+          "name": "格挡",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
+          "activities": {
+            "Use": {
+              "name": "使用",
+              "roll": "AC加值",
+              "condition": "在持握武器期间因近战攻击检定被命中"
             }
           }
         }
@@ -12418,17 +12394,6 @@
             }
           }
         },
-        "Parry": {
-          "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
-          "activities": {
-            "Use": {
-              "name": "使用",
-              "roll": "AC加值",
-              "condition": "在持握武器期间因近战攻击检定被命中"
-            }
-          }
-        },
         "Withering Sword": {
           "name": "凋零之刃",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
@@ -12440,6 +12405,17 @@
             "Restrained": {
               "name": "束缚",
               "description": "<p>你陷入 &Reference[Restrained apply=false] 状态，直至魔绳被摧毁。</p>"
+            }
+          }
+        },
+        "Parry": {
+          "name": "格挡",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
+          "activities": {
+            "Use": {
+              "name": "使用",
+              "roll": "AC加值",
+              "condition": "在持握武器期间因近战攻击检定被命中"
             }
           }
         }
@@ -15333,7 +15309,7 @@
         },
         "Parry": {
           "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
           "activities": {
             "Use": {
               "name": "使用",
@@ -15486,6 +15462,15 @@
         "Bone Bow": {
           "name": "骸骨弓",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
+        },
+        "Rampage": {
+          "name": "Rampage",
+          "description": "<p class=\"feature\">Immediately after dealing damage to a creature that is already &amp;Reference[Bloodied], the [[lookup @name lowercase]] moves up to half its Speed, and it makes one [[/Item Rend]] attack.</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "Expend Use"
+            }
+          }
         }
       }
     },
@@ -17432,19 +17417,19 @@
             }
           }
         },
-        "Parry": {
-          "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
-          "activities": {
-            "Expend Use": {
-              "name": "耗用",
-              "roll": "AC加值",
-              "condition": "在持握武器期间因近战攻击检定被命中"
-            }
-          }
-        },
         "Plate Armor": {
           "name": "板甲"
+        },
+        "Parry": {
+          "name": "格挡",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
+          "activities": {
+            "Use": {
+              "name": "Use",
+              "roll": "Bonus AC",
+              "condition": "hit by a melee attack roll while holding a weapon"
+            }
+          }
         }
       }
     },
@@ -18163,47 +18148,11 @@
       "items": {
         "Living Shadow": {
           "name": "活体幽影",
-          "description": "<p class=\"feature\">若 [[lookup @name lowercase]]  身处微光光照或黑暗中，其具有对除力场、心灵、光耀外所有伤害的抗性。</p><section class=\"secret\" id=\"secret-mDlPy4LM9OwpRBJk\">    <p><strong>Foundry Note</strong></p>    <p>该特性在角色卡的“效应”选项卡中提供了一个<strong>激活效应</strong>，用于管理伤害抗性。所列出的抗性需要手动启用/禁用。</p></section>",
+          "description": "<p class=\"feature\">While in Dim Light or Darkness, the [[lookup @name lowercase]] has Resistance to damage that isn’t Force, Psychic, or Radiant.</p><section class=\"secret\" id=\"secret-mDlPy4LM9OwpRBJk\"><p><strong>Foundry Note</strong></p><p>This feature provides an Active Effect to manage <strong>Damage Resistances</strong> in the character sheet's Effects tab.</p></section>",
           "effects": {
-            "Acid Resistance": {
-              "name": "强酸抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-            },
-            "Bludgeoning Resistance": {
-              "name": "钝击抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-            },
-            "Cold Resistance": {
-              "name": "寒冷抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-            },
-            "Fire Resistance": {
-              "name": "火焰抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-            },
-            "Lightning Resistance": {
-              "name": "闪电抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-            },
-            "Necrotic Resistance": {
-              "name": "暗蚀抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-            },
-            "Piercing Resistance": {
-              "name": "穿刺抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-            },
-            "Poison Resistance": {
-              "name": "毒素抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-            },
-            "Slashing Resistance": {
-              "name": "挥砍抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-            },
-            "Thunder Resistance": {
-              "name": "雷鸣抗性",
-              "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
+            "Living Shadow": {
+              "name": "Living Shadow",
+              "description": "<p>While in Dim Light or Darkness, the creature has Resistance to damage that isn’t Force, Psychic, or Radiant.</p>"
             }
           }
         },
@@ -18331,7 +18280,7 @@
         },
         "Parry": {
           "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
           "activities": {
             "Use": {
               "name": "使用",
@@ -19556,14 +19505,6 @@
             "Frightened": {
               "name": "恐慌",
               "description": "<p>你陷入 &Reference[Frightened apply=false] 状态直至狮子的下一回合开始。</p>"
-            },
-            "Paralyzed": {
-              "name": "麻痹",
-              "description": "<p>你陷入 &Reference[Paralyzed apply=false] 状态，并在你回合结束时重复豁免，成功则终止你身上的该效应。1 分钟后，你的豁免自动成功。</p>"
-            },
-            "Prone": {
-              "name": "倒地",
-              "description": "<p>你陷入 &Reference[Prone apply=false] 状态。</p>"
             }
           }
         }
@@ -20510,7 +20451,7 @@
         },
         "Parry": {
           "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
           "activities": {
             "Use": {
               "name": "使用",
@@ -22324,7 +22265,7 @@
         },
         "Parry": {
           "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
           "activities": {
             "Use": {
               "name": "使用",
@@ -22690,18 +22631,7 @@
         },
         "Tentacles": {
           "name": "触须",
-          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>",
-          "activities": {
-            "Escape Check": {
-              "name": "请删除"
-            }
-          },
-          "effects": {
-            "Grappled": {
-              "name": "请删除",
-              "description": "请删除"
-            }
-          }
+          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
         }
       }
     },
@@ -23479,6 +23409,16 @@
             "Defense: +4 AC": {
               "name": "防守：+4 AC",
               "description": "<p>在你的下一回合开始前对抗近战攻击检定的 AC 具有+4 加值（包括触发攻击）。</p>"
+            }
+          }
+        },
+        "Rally": {
+          "name": "Rally",
+          "description": "<p>The [[lookup @name lowercase]] chooses up to three other creatures it can see within 30 feet. Until the start of the [[lookup @name lowercase]]’s next turn, the targets have Advantage on attack rolls and saving throws.</p>",
+          "effects": {
+            "Rallied": {
+              "name": "Rallied",
+              "description": "<p>The [[lookup @name lowercase]] chooses up to three other creatures it can see within 30 feet. Until the start of the [[lookup @name lowercase]]’s next turn, the targets have Advantage on attack rolls and saving throws.</p>"
             }
           }
         }
@@ -24431,7 +24371,7 @@
         },
         "Divine Aid": {
           "name": "至圣援护",
-          "description": "<p class=\"feature\">[[lookup @name lowcase]] 施展<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDispelMagi]</em>，<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor]</em> 或 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLesserRest]</em>，使用其施法动作的施法属性。</p>"
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]{Bless}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor]{Healing Word}</em>, or <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbSanctuary0000]{Sanctuary}</em>, using the same spellcasting ability as Spellcasting.</p>"
         },
         "Bless": {
           "name": "祝福术",
@@ -24593,15 +24533,11 @@
         },
         "Sting": {
           "name": "蛰刺",
-          "description": "<p><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=OqZfznbyuzdtMOb5]]，单一 5 尺内[[lookup @name lowercase]]可见的生物。</p><p><em>失败：</em>[[/damage average]]伤害，且目标陷入 &Reference[Poisoned apply=false]状态，持续 1 小时。</p><p><em>失败差值 5 或更多：</em>目标在中毒期间陷入 &Reference[Unconscious apply=false] 状态，昏迷在其受到伤害或被目标 5 尺内的另一生物用一个动作摇醒时提前结束。</p>",
+          "description": "<p class=\"feature\"><em>Constitution Saving Throw:</em> DC 12, one creature the pseudodragon can see within 5 feet.</p><p class=\"feature\"><em>Failure:</em> 5 (2d4) Poison damage, and the target has the Poisoned condition for 1 hour. While Poisoned, the target also has the Unconscious condition, which ends early if the target takes damage or a creature within 5 feet of it takes an action to wake it.</p>",
           "effects": {
             "Poisoned": {
               "name": "中毒",
-              "description": "<p>你陷入 &Reference[Poisoned apply=false] 状态，持续 1 小时。</p>"
-            },
-            "Poisoned (Failure 5+)": {
-              "name": "中毒（差值 5+）",
-              "description": "<p>你陷入 &Reference[Poisoned apply=false] 状态，持续 1 小时。</p><p>你在中毒期间陷入 &Reference[Unconscious apply=false] 状态，昏迷在其受到伤害或被目标 5 尺内的另一生物用一个动作摇醒时提前结束。</p>"
+              "description": "<p>The target has the &amp;Reference[Poisoned apply=false] condition for 1 hour. While Poisoned the target also has the Unconscious condition, which ends early if the target takes damage or a creature within 5 feet of it takes an action to wake it.</p>"
             }
           }
         }
@@ -26687,10 +26623,10 @@
         },
         "Living Shadow": {
           "name": "活体幽影",
-          "description": "<p class=\"feature\">若 [[lookup @name lowercase]]  身处微光光照或黑暗中，其具有对除力场、心灵、光耀外所有伤害的抗性。</p><section class=\"secret\" id=\"secret-mDlPy4LM9OwpRBJk\">    <p><strong>Foundry Note</strong></p>    <p>该特性在角色卡的“效应”选项卡中提供了一个<strong>激活效应</strong>，用于管理伤害抗性。所列出的抗性需要手动启用/禁用。</p></section>",
+          "description": "<p class=\"feature\">While in Dim Light or Darkness, the [[lookup @name lowercase]] has Resistance to damage that isn’t Force, Psychic, or Radiant.</p><section class=\"secret\" id=\"secret-mDlPy4LM9OwpRBJk\"><p><strong>Foundry Note</strong></p><p>This feature provides an Active Effect to manage <strong>Damage Resistances</strong> in the character sheet's Effects tab.</p></section>",
           "effects": {
-            "Temp. Resistances": {
-              "name": "Temp. Resistances"
+            "Living Shadow": {
+              "name": "Living Shadow"
             }
           }
         }
@@ -29331,7 +29267,7 @@
       "items": {
         "Loathsome Limbs": {
           "name": "扰人断肢",
-          "description": "<p class=\"feature\">若 [[lookup @name lowercase]] 在任意回合结束时浴血，并且曾在此回合中受到 15+ 挥砍伤害， [[lookup @name lowercase]] 的其中一条肢体会被切断，落到 [[lookup @name lowercase]] 所在的空间中，成为一条 <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmTrollLimb00000]</strong>。断肢在[[lookup @name lowcase]] 的回合结束后立即行动。[[lookup @name lowcase]] 每有一条失去的肢体，其便获得 1 级 &Reference[Exhaustion apply=false]，[[lookup @name lowcase]] 会在下次恢复生命值时长出失去的肢体。</p><section class=\"secret\" id=\"secret-01PBOuaZ8xS1KYt6\">    <p><strong>Foundry Note</strong></p>    <p>此特性在角色卡的“效应”选项卡中提供了一个<strong>“激活效应”</strong>状态，以启用力竭的每一级。由于该状态可多次应用，所以 GM 必须手动管理力竭的等级。力竭的每一级都有一个可用的激活效应。</p></section>",
+          "description": "<p class=\"feature\">If the [[lookup @name lowercase]] ends any turn Bloodied and took 15+ Slashing damage during that turn, one of the [[lookup @name lowercase]]l’s limbs is severed, falls into the [[lookup @name lowercase]]’s space, and becomes a <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmTrollLimb00000]{Troll Limb}</strong>. The limb acts immediately after the [[lookup @name lowercase]]’s turn. The [[lookup @name lowercase]] has 1 &amp;Reference[Exhaustion apply=false] level for each missing limb, and it grows replacement limbs the next time it regains Hit Points.</p><section class=\"secret\" id=\"secret-01PBOuaZ8xS1KYt6\"><p><strong>Foundry Note</strong></p><p>This feature provides an <strong>Active Effect</strong> condition in the character sheet's Effects tab to enable each level of Exhaustion. Since the condition can be applied multiple times, the GM must manually manage the level of Exhaustion. There is an active effect available for each level of exhaustion.</p></section>",
           "activities": {
             "Troll Limb": {
               "name": "巨魔断肢",
@@ -30099,7 +30035,7 @@
         },
         "Vampire Weakness": {
           "name": "吸血鬼弱点",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 拥有以下弱点：</p><p class=\"feature-trait\"><strong>禁入。</strong> [[lookup @name lowercase]] 未得到一位居住者的邀请时无法进入相应的民宅。</p><p class=\"feature-trait\"><strong>流水。</strong> 若 [[lookup @name lowercase]] 在流水中结束回合，其受到[[/damage 20 type=acid]]伤害。</p><p class=\"feature-trait\"><strong>桩刺。</strong> [[lookup @name lowercase]] 位于其休眠地且陷入失能状态期间，若用一把造成穿刺伤害的武器钉入其心脏，其陷入麻痹状态直至该武器被移除。</p><p class=\"feature-trait\"><strong>日光 Sunlight.</strong> 若 [[lookup @name lowercase]] 在阳光下开始其回合，其受到[[/damage 20 type=radiant]]伤害。若其身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] has these weaknesses:</p><p class=\"feature-trait\"><strong>Forbiddance.</strong> The [[lookup @name lowercase]] can’t enter a residence without an invitation from an occupant.</p><p class=\"feature-trait\"><strong>Running Water.</strong> The [[lookup @name lowercase]] takes 20 Acid damage if it ends its turn in running water.</p><p class=\"feature-trait\"><strong>Stake to the Heart.</strong> If a weapon that deals Piercing damage is driven into the [[lookup @name lowercase]]'s heart while the [[lookup @name lowercase]] has the &amp;Reference[Incapacitated apply=false] condition in its resting place, the [[lookup @name lowercase]] has the &amp;Reference[Paralyzed apply=false] condition until the weapon is removed.</p><p class=\"feature-trait\"><strong>Sunlight.</strong> The [[lookup @name lowercase]] takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.</p>",
           "activities": {
             "Damage: Running Water": {
               "name": "伤害：流水",
@@ -30391,7 +30327,7 @@
         },
         "Vampire Weakness": {
           "name": "吸血鬼弱点",
-          "description": "<p class=\"feature\">[[lookup @name lowercase]] 拥有以下弱点：</p><p class=\"feature-trait\"><strong>禁入。</strong> [[lookup @name lowercase]] 未得到一位居住者的邀请时无法进入相应的民宅。</p><p class=\"feature-trait\"><strong>流水。</strong> 若 [[lookup @name lowercase]] 在流水中结束回合，其受到[[/damage 20 type=acid]]伤害。</p><p class=\"feature-trait\"><strong>桩刺。</strong> [[lookup @name lowercase]] 位于其休眠地且陷入失能状态期间，若用一把造成穿刺伤害的武器钉入其心脏，其陷入麻痹状态直至该武器被移除。</p><p class=\"feature-trait\"><strong>日光 Sunlight.</strong> 若 [[lookup @name lowercase]] 在阳光下开始其回合，其受到[[/damage 20 type=radiant]]伤害。若其身处阳光下，其进行的属性检定和攻击检定具有劣势。</p>",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] has these weaknesses:</p><p class=\"feature-trait\"><strong>Forbiddance.</strong> The [[lookup @name lowercase]] can’t enter a residence without an invitation from an occupant.</p><p class=\"feature-trait\"><strong>Running Water.</strong> The [[lookup @name lowercase]] takes 20 Acid damage if it ends its turn in running water.</p><p class=\"feature-trait\"><strong>Stake to the Heart.</strong> If a weapon that deals Piercing damage is driven into the [[lookup @name lowercase]]'s heart while the [[lookup @name lowercase]] has the &amp;Reference[Incapacitated apply=false] condition in its resting place, the [[lookup @name lowercase]] has the &amp;Reference[Paralyzed apply=false] condition until the weapon is removed.</p><p class=\"feature-trait\"><strong>Sunlight.</strong> The [[lookup @name lowercase]] takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.</p>",
           "activities": {
             "Damage: Running Water": {
               "name": "伤害：流水",
@@ -30772,7 +30708,7 @@
         },
         "Parry": {
           "name": "格挡",
-          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
+          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
           "activities": {
             "Use": {
               "name": "使用",
@@ -32379,7 +32315,7 @@
           "activities": {
             "save": {
               "affects": {
-                "special": "Large or smaller"
+                "special": "Medium or smaller"
               }
             },
             "Escape Check": {

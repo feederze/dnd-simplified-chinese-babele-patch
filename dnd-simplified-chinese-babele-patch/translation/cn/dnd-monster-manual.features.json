@@ -3260,45 +3260,9 @@
       "name": "活体幽影",
       "description": "<p class=\"feature\">若 [[lookup @name lowercase]]  身处微光光照或黑暗中，其具有对除力场、心灵、光耀外所有伤害的抗性。</p><section class=\"secret\" id=\"secret-mDlPy4LM9OwpRBJk\">    <p><strong>Foundry Note</strong></p>    <p>该特性在角色卡的“效应”选项卡中提供了一个<strong>激活效应</strong>，用于管理伤害抗性。所列出的抗性需要手动启用/禁用。</p></section>",
       "effects": {
-        "Acid Resistance": {
-          "name": "强酸抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-        },
-        "Bludgeoning Resistance": {
-          "name": "钝击抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-        },
-        "Cold Resistance": {
-          "name": "寒冷抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-        },
-        "Fire Resistance": {
-          "name": "火焰抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-        },
-        "Lightning Resistance": {
-          "name": "闪电抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-        },
-        "Necrotic Resistance": {
-          "name": "暗蚀抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-        },
-        "Piercing Resistance": {
-          "name": "穿刺抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-        },
-        "Poison Resistance": {
-          "name": "毒素抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-        },
-        "Slashing Resistance": {
-          "name": "挥砍抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
-        },
-        "Thunder Resistance": {
-          "name": "雷鸣抗性",
-          "description": "<p>若你身处微光光照或黑暗中，你具有对除力场、心灵、光耀外所有伤害的抗性。</p>"
+        "Living Shadow": {
+          "name": "Living Shadow",
+          "description": "<p>While in Dim Light or Darkness, the creature has Resistance to damage that isn’t Force, Psychic, or Radiant.</p>"
         }
       }
     },
@@ -3994,7 +3958,7 @@
     },
     "Parry": {
       "name": "格挡",
-      "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
+      "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
       "activities": {
         "Use": {
           "name": "使用",
@@ -4427,6 +4391,16 @@
       "name": "枝叶刮擦",
       "description": "<p class=\"feature\">[[/attack extended]]。[[/damage extended]]。</p>"
     },
+    "Rally": {
+      "name": "Rally",
+      "description": "<p>The [[lookup @name lowercase]] chooses up to three other creatures it can see within 30 feet. Until the start of the [[lookup @name lowercase]]’s next turn, the targets have Advantage on attack rolls and saving throws.</p>",
+      "effects": {
+        "Rallied": {
+          "name": "Rallied",
+          "description": "<p>The [[lookup @name lowercase]] chooses up to three other creatures it can see within 30 feet. Until the start of the [[lookup @name lowercase]]’s next turn, the targets have Advantage on attack rolls and saving throws.</p>"
+        }
+      }
+    },
     "Ram": {
       "name": "顶撞",
       "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若目标生物体型不超过大型，则其陷入 &Reference[Prone apply=false] 状态。</p>",
@@ -4708,9 +4682,6 @@
     "Running Water": {
       "name": "流水",
       "description": "<p class=\"feature-trait\">若 [[lookup @name lowercase]] 在流水中结束回合，其受到[[/damage]]伤害。</p>"
-    },
-    "Spectral Claw": {
-      "name": "幽魂利爪"
     },
     "Sacred Weapon": {
       "name": "圣洁武器",
@@ -5188,13 +5159,13 @@
       "name": "与蛙和蟾蜍交流",
       "description": "<p class=\"feature\">[[lookup @name lowercase]] 可以使用啵灵蛙语来与蛙和蟾蜍进行简单交流。</p>"
     },
-    "mmSpectralClaw00": {
+    "Spectral Claw": {
       "name": "幽魂利爪",
-      "description": "<p class=\"feature\"><em>近战或远程攻击检定：</em> [[/attack]]，触及 [[lookup @item.range.reach]] 尺或射程 [[lookup @item.range.value]] 尺。<em>命中：</em> [[/damage average]] 伤害。如果目标生物体型不超过大型，则其陷入 &Reference[Prone apply=false] 状态。</p>",
+      "description": "<p class=\"feature\"><em>Melee or Ranged Attack Roll:</em> [[/attack]], reach [[lookup @item.range.reach]] ft. or range [[lookup @item.range.value]] ft. <em>Hit:</em> [[/damage average]] damage. If the target is a Large or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>",
       "effects": {
         "Prone": {
-          "name": "倒地",
-          "description": "<p>若你的生物体型不超过大型，则你陷入 &Reference[Prone apply=false] 状态。</p>"
+          "name": "Prone",
+          "description": "<p>If the target is a Large or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>"
         }
       }
     },

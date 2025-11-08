@@ -1998,31 +1998,21 @@
       "name": "黑豹",
       "tokenName": "黑豹",
       "items": {
-        "Multiattack": {
-          "name": "多重攻击",
-          "description": "<p>黑豹发动一次 [[/item 猛扑]] 攻击，并使用 [[/item 潜行]]。</p>",
-          "activities": {
-            "Activate": {
-              "name": "激活"
-            }
-          }
+        "Rend": {
+          "name": "Rend",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         },
-        "Pounce": {
-          "name": "猛扑",
-          "description": "<p><em>近战攻击检定：</em>+4，攻击范围 5 尺。<em>命中：</em>4（1d4 + 2）挥砍伤害，若黑豹在攻击检定中具有优势，则造成 7（2d4 + 2）挥砍伤害。</p>",
+        "Nimble Escape": {
+          "name": "Nimble Escape",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] takes the &amp;Reference[Disengage] or &amp;Reference[Hide] action.</p>",
           "activities": {
-            "Advantage Attack": {
-              "name": "优势攻击",
-              "condition": "在此攻击中具有优势"
+            "Expend Use": {
+              "name": "Expend Use"
             }
-          }
-        },
-        "Prowl": {
-          "name": "潜行",
-          "description": "<p>黑豹可移动达其移动速度的一半且不会引发机会攻击。在移动结束时，黑豹可以采取&Reference[hide] 动作。</p>",
-          "activities": {
-            "Move and Hide": {
-              "name": "移动并潜行"
+          },
+          "effects": {
+            "Apply Hide Action to Target": {
+              "name": "Apply Hide Action to Target"
             }
           }
         }
@@ -2347,31 +2337,27 @@
       "name": "虎",
       "tokenName": "虎",
       "items": {
-        "Multiattack": {
-          "name": "多重攻击",
-          "description": "<p>虎发动一次 [[/item 猛扑]] 攻击，并使用 [[/item 潜行]]。</p>",
-          "activities": {
-            "Activate": {
-              "name": "激活"
+        "Rend": {
+          "name": "Rend",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>",
+          "effects": {
+            "Prone": {
+              "name": "Prone",
+              "description": "<p>If the target is a Large or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>"
             }
           }
         },
-        "Pounce": {
-          "name": "猛扑",
-          "description": "<p><em>近战攻击检定：</em>+5，触及 5 尺。<em>命中：</em>6（1d6 + 3）挥砍伤害。若虎在攻击检定上有优势，目标会额外承受 3（1d6）挥砍伤害，且若目标体型为巨型或更小，则会陷入 &Reference[prone] 状态。</p>",
+        "Nimble Escape": {
+          "name": "Nimble Escape",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] takes the &amp;Reference[Disengage] or &amp;Reference[Hide] action.</p>",
           "activities": {
-            "Advantage Attack": {
-              "name": "优势攻击",
-              "condition": "具有优势的攻击"
+            "Expend Use": {
+              "name": "Expend Use"
             }
-          }
-        },
-        "Prowl": {
-          "name": "潜行",
-          "description": "<p>虎可移动达其移动速度的一半且不会引发机会攻击。在移动结束时，虎可以采取&Reference[hide] 动作。</p>",
-          "activities": {
-            "Move and Hide": {
-              "name": "移动并躲藏"
+          },
+          "effects": {
+            "Apply Hide Action to Target": {
+              "name": "Apply Hide Action to Target"
             }
           }
         }

@@ -266,7 +266,15 @@
     },
     "Animal Shapes": {
       "name": "动物形态",
-      "description": "<p>选择施法距离内任意数量的自愿生物。每个目标都变形为一只挑战等级不超过 4，体型不超过大型的野兽。你可以将每个目标变为不同的形态。在法术持续时间内之后的回合中，你可以使用一个魔法 动作将这些目标再度变形。</p><p>生物的游戏数据被选择的野兽资料卡替换，但目标保留其生物类型、生命值、生命骰、阵营、交流的能力以及智力、感知、魅力属性值。目标的动作受到新形态身体结构的限制，并且无法施法。目标的装备会融入其新形态，而且处于此形态时无法使用这些被融入的装备。</p><p>目标获得等于野兽形态生命值的临时生命值。该变形会在持续时间结束或目标失去所有临时生命值时结束，目标也能以一个附赠动作变回原型以结束此法术。</p>"
+      "description": "<p>Choose any number of willing creatures that you can see within range. Each target shape-shifts into a Large or smaller Beast of your choice that has a Challenge Rating of 4 or lower. You can choose a different form for each target. On later turns, you can take a Magic action to transform the targets again.</p><p>A target’s game statistics are replaced by the chosen Beast’s statistics, but the target retains its creature type; Hit Points; Hit Point Dice; alignment; ability to communicate; and Intelligence, Wisdom, and Charisma scores. The target’s actions are limited by the Beast form’s anatomy, and it can’t cast spells. The target’s equipment melds into the new form, and the target can’t use any of that equipment while in that form.</p><p>The target gains a number of Temporary Hit Points equal to the Hit Points of the first form into which it shape-shifts. These Temporary Hit Points vanish if any remain when the spell ends. The transformation lasts for the duration or until the target ends it as a Bonus Action.</p>",
+      "activities": {
+        "Initial Transformation": {
+          "name": "Initial Transformation"
+        },
+        "Follow Up Transformations": {
+          "name": "Follow Up Transformations"
+        }
+      }
     },
     "Animate Dead": {
       "name": "活化死尸",
@@ -976,7 +984,7 @@
     },
     "Conjure Elemental": {
       "name": "咒唤元素",
-      "description": "<p>你将来自元素位面的大型虚幻精魂咒唤在施法距离内一处未占据空间中。选择精魄的元素类别，这将决定它造成的伤害类型：@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAirElemental00]{气元素(闪电)}, @UUID[Compendium.dnd-monster-manual.actors.Actor.mmEarthElemental]{土元素（雷鸣）}, @UUID[Compendium.dnd-monster-manual.actors.Actor.mmFireElemental0]{火元素（火焰）}, 或 @UUID[Compendium.dnd-monster-manual.actors.Actor.mmWaterElemental]{水元素（寒冷）}。精魂在持续时间内一直存在。</p><p>每当一名你可见的生物进入精魂所在的空间或是在精魂 5 尺内开始其回合时，若没有生物被精魂束缚，你可以迫使其进行一次敏捷豁免检定。失败则目标受到 8d8 对应精魂类型的伤害并且直到法术结束为止，目标陷入&Reference[Restrained apply=false]{束缚}状态。陷入束缚状态的目标回合开始时，其重新豁免，失败则目标受到 4d8 对应精魂类型的伤害，豁免成功则目标不再被精魂束缚。</p><p><strong>升环施法：</strong> 使用的法术位每比五环高一环，法术的伤害就增加 2d8。</p>",
+      "description": "<p>You conjure a Large, intangible spirit from the Elemental Planes that appears in an unoccupied space within range. Choose the spirit’s element, which determines its damage type: @UUID[Compendium.dnd-players-handbook.actors.Actor.phbsplConjuredEl]{air (Lightning)}, @UUID[Compendium.dnd-players-handbook.actors.Actor.phbConjuredEarth]{earth (Thunder)}, @UUID[Compendium.dnd-players-handbook.actors.Actor.phbConjuredFireE]{fire (Fire)}, or @UUID[Compendium.dnd-players-handbook.actors.Actor.phbConjuredWater]{water (Cold)}. The spirit lasts for the duration.</p><p>Whenever a creature you can see enters the spirit’s space or starts its turn within 5 feet of the spirit, you can force that creature to make a Dexterity saving throw if the spirit has no creature Restrained. On failed save, the target takes 8d8 damage of the spirit’s type, and the target has the &amp;Reference[Restrained apply=false] condition until the spell ends. At the start of each of its turns, the Restrained target repeats the save. On a failed save, the target takes 4d8 damage of the spirit’s type. On a successful save, the target isn’t Restrained by the spirit.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 5.</p>",
       "activities": {
         "Conjure": {
           "name": "咒唤"
@@ -985,7 +993,7 @@
     },
     "Conjure Fey": {
       "name": "咒唤妖精",
-      "description": "<p>你将来自妖精荒野的中型精魂咒唤在施法距离内一处你可见的未你将来自妖精荒野的中型精魂咒唤在施法距离内一处你可见的未占据空间中。精魂在持续时间内一直存在，其外貌看起来像是一名你选择的妖精生物。当精魂显现时，你可以对位于精魂 5 尺内的一名生物进行一次近战法术攻击。命中则目标受到等于 3d12 加你施法属性调整值总和的心灵伤害，并且直到你的下个回合开始为止，目标处于&Reference[Frightened]{恐慌}状态，你和精魂均是目标的恐惧源。</p><p>在后续的你的回合中，以一个附赠动作，你可以将精魂传送至一处位于其原位置 30 尺内的你可见的未占据空间，并对位于精魂 5 尺内的一名生物进行上述攻击。</p><p><strong>升环施法：</strong> 使用的法术位每比六环高一环，法术造成的伤害就增加 2d12。</p>",
+      "description": "<p>You conjure a Medium spirit from the Feywild in an unoccupied space you can see within range. The spirit lasts for the duration, and it looks like a Fey creature of your choice. When the spirit appears, you can make one melee spell attack against a creature within 5 feet of it. On a hit, the target takes Psychic damage equal to 3d12 plus your spellcasting ability modifier, and the target has the &amp;Reference[Frightened] condition until the start of your next turn, with both you and the spirit as the source of the fear.</p><p>As a Bonus Action on your later turns, you can teleport the spirit to an unoccupied space you can see within 30 feet of the space it left and make the attack against a creature within 5 feet of it.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d12 for each spell slot level above 6.</p>",
       "activities": {
         "Teleport and Attack": {
           "name": "传送并攻击",
@@ -997,7 +1005,7 @@
     },
     "Conjure Minor Elementals": {
       "name": "咒唤微元素群",
-      "description": "<p>你在持续时间内将来自元素位面的精魂咒唤在你身周 15 尺光环区域内，让它们环绕着你飞舞。直到法术结束为止，你进行的任何攻击检定命中光环区域内的生物时，都会额外造成 2d8 点伤害。额外伤害的类型为强酸、寒冷、火焰或闪电的一种（在你发动攻击时选择）。</p><p>此外，光环区域内的地面对你的敌人而言是&Reference[DifficultTerrain]{困难地形}。</p><p><strong>升环施法：</strong> 使用的法术位每比四环高一环，此法术的伤害就增加 2d8。</p>",
+      "description": "<p>You conjure spirits from the Elemental Planes that flit around you in a 15-foot Emanation for the duration. Until the spell ends, any attack you make deals an extra 2d8 damage when you hit a creature in the Emanation. This damage is Acid, Cold, Fire, or Lightning (your choice when you make the attack).</p><p>In addition, the ground in the Emanation is &amp;Reference[DifficultTerrain] for your enemies.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 4.</p>",
       "activities": {
         "Bonus Attack Damage": {
           "name": "额外攻击伤害"
@@ -2100,7 +2108,7 @@
     },
     "Freedom of Movement": {
       "name": "行动自如",
-      "description": "<p>你触碰一个自愿生物，并使目标在法术持续时间内移动时不受&Reference[DifficultTerrain]{困难地形}限制，并且任何法术或其他魔法效应都不能降低目标的速度，或者使目标陷入&Reference[Paralyzed apply=false]{麻痹}或 &Reference[Restrained apply=false]{束缚}状态。目标还会获得等同于其速度的游泳速度。</p><p>此外，该目标还可以花费 5 尺移动力直接从非魔法的束缚物中挣脱（诸如镣铐或其他生物对其施加的&Reference[grappled apply=false]{受擒}状态）。</p><p><strong>升环施法：</strong>使用的法术位每比四环高一环，你就可以额外再指定一名生物作为此法术的目标。</p><section class=\"secret\" id=\"secret-uwteEBj1fBNIf7KZ\"><p><strong>Foundry Note</strong></p><p><strong>“施展”</strong>行动提供的主动效应会将角色的游泳速度升级为“1”（使之与行走速度等同），同时赋予状态免疫效应。</p></section>",
+      "description": "<p>You touch a willing creature. For the duration, the target’s movement is unaffected by &amp;Reference[DifficultTerrain], and spells and other magical effects can neither reduce the target’s Speed nor cause the target to have the &amp;Reference[Paralyzed apply=false] or &amp;Reference[Restrained apply=false] conditions. The target also has a Swim Speed equal to its Speed.</p><p>In addition, the target can spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature imposing the &amp;Reference[Grappled apply=false] condition on it.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 4.</p><section class=\"secret\" id=\"secret-uwteEBj1fBNIf7KZ\"><p><strong>Foundry Note</strong></p><p>The Active Effect provided by the <strong>Cast</strong> activity upgrades the character's Swim Speed to a value of \"1\" to indicate equivalence to (walk) Speed, in addition to the condition immunities. It also automates ignoring all Difficult Terrain.</p></section>",
       "materials": {
         "value": "一条皮带"
       },
@@ -3363,9 +3371,18 @@
     },
     "Polymorph": {
       "name": "变形术",
-      "description": "<p>你尝试将施法距离内你可见的一名生物转变为一只野兽。目标必须成功于一次感知豁免，否则在持续时间内被变形为野兽形态。这种野兽形态可以是你所选的挑战等级不大于目标（若目标没有挑战等级，则使用目标的等级）的任意野兽。目标的游戏数据被替换为所选野兽的数据，但目标保留其阵营、性格、生物类型、生命值、生命值骰。</p><p>目标获得等于其野兽形态生命值的临时生命值。此法术会在目标不具有临时生命值时提前结束。</p><p>该生物只可做出其新形态的生理结构所允许的动作。它不能说话也不能施法。</p><p>目标的装备融入新形态中。目标不能使用装备或者通过其他方式从装备中获得增益。</p>",
+      "description": "<p>You attempt to transform a creature that you can see within range into a Beast. The target must succeed on a Wisdom saving throw or shape-shift into a Beast form for the duration. That form can be any Beast you choose that has a Challenge Rating equal to or less than the target’s (or the target’s level if it doesn’t have a Challenge Rating). The target’s game statistics are replaced by the stat block of the chosen Beast, but the target retains its alignment, personality, creature type, Hit Points, and Hit Point Dice. See appendix B for a sample of Beast stat blocks.</p><p>The target gains a number of Temporary Hit Points equal to the Hit Points of the Beast form. These Temporary Hit Points vanish if any remain when the spell ends. The spell ends early on the target if it has no Temporary Hit Points left.</p><p>The target is limited in the actions it can perform by the anatomy of its new form, and it can’t speak or cast spells.</p><p>The target’s gear melds into the new form. The creature can’t use or otherwise benefit from any of that equipment.</p>",
       "materials": {
         "value": "一枚毛毛虫茧"
+      },
+      "activities": {
+        "transform": {
+          "profiles": {
+            "Creature into Creature": {
+              "name": "Creature into Creature"
+            }
+          }
+        }
       }
     },
     "Power Word Fortify": {
@@ -3895,9 +3912,17 @@
     },
     "Shapechange": {
       "name": "形体变化",
-      "description": "<p>在法术持续时间内，你变形为另一个生物。你还可以使用魔法动作来变形为另一个符合条件的形态。新形态生物的挑战等级必须不高于你的等级或挑战等级的生物。你必须在之前见过该类生物至少一次，并且该生物不能是构装生物或亡灵生物。</p><p>当你变形时，你获得数值等于新形态生命值的临时生命值。此法术会在你不具有临时生命值时提前结束。</p><p>你的游戏资料卡替换为所选择形态的资料卡，但你保留你的生物类型、阵营、人格，智力、感知与魅力属性值、生命值、生命骰、熟练以及交流的能力。如果你具有施法特性，你同样保留它。</p><p>进行变形的途中，你可以决定你的装备是落到地上，还是改变其尺寸和形状来适应你的新形态。</p>",
+      "description": "<p>You shape-shift into another creature for the duration or until you take a Magic action to shape-shift into a different eligible form. The new form must be of a creature that has a Challenge Rating no higher than your level or Challenge Rating. You must have seen the sort of creature before, and it can’t be a Construct or an Undead.</p><p>When you cast the spell, you gain a number of Temporary Hit Points equal to the Hit Points of the first form into which you shape-shift. These Temporary Hit Points vanish if any remain when the spell ends.</p><p>Your game statistics are replaced by the stat block of the chosen form, but you retain your creature type; alignment; personality; Intelligence, Wisdom, and Charisma scores; Hit Points; Hit Point Dice; proficiencies; and ability to communicate. If you have the Spellcasting feature, you retain it too.</p><p>Upon shape-shifting, you determine whether your equipment drops to the ground or changes in size and shape to fit the new form while you’re in it.</p>",
       "materials": {
         "value": "一只价值 1500+GP 的玉环"
+      },
+      "activities": {
+        "Initial Transformation": {
+          "name": "Initial Transformation"
+        },
+        "Follow Up Transformations": {
+          "name": "Follow Up Transformations"
+        }
       }
     },
     "Shatter": {
@@ -4603,7 +4628,13 @@
     },
     "Thaumaturgy": {
       "name": "奇术",
-      "description": "<p>你在施法距离内显现一道次级奇迹。你在施法距离内创造下述效应之一。如果你多次施展该法术，则可以同时维持至多三个不同的 1 分钟效应。</p><p><strong>改变眼睛。</strong> 你改变自己眼睛的外观，其效应持续 1 分钟。</p><p><strong>扩音。</strong> 你的语音音量变为通常情况下的三倍大，其效应持续 1 分钟。在此期间，你在[[/check ability=cha skill=itm]] 检定上具有优势 。</p><p><strong>玩火。</strong> 你使一团火焰闪烁、变亮、变暗或变色，其效应持续 1 分钟。</p><p><strong>看不见的手 Invisible Hand。</strong> 你使一扇没有上锁的门/窗立即打开或关上。</p><p><strong>幻音。</strong> 指定施法距离内的一点，你使该点发出一道短暂的声音，例如雷鸣声，渡鸦叫声或不祥低语声。</p><p><strong>震动。</strong> 你在地面上引发无害的震动，其效应持续 1 分钟。</p>"
+      "description": "<p>你在施法距离内显现一道次级奇迹。你在施法距离内创造下述效应之一。如果你多次施展该法术，则可以同时维持至多三个不同的 1 分钟效应。</p><p><strong>改变眼睛。</strong> 你改变自己眼睛的外观，其效应持续 1 分钟。</p><p><strong>扩音。</strong> 你的语音音量变为通常情况下的三倍大，其效应持续 1 分钟。在此期间，你在[[/check ability=cha skill=itm]] 检定上具有优势 。</p><p><strong>玩火。</strong> 你使一团火焰闪烁、变亮、变暗或变色，其效应持续 1 分钟。</p><p><strong>看不见的手 Invisible Hand。</strong> 你使一扇没有上锁的门/窗立即打开或关上。</p><p><strong>幻音。</strong> 指定施法距离内的一点，你使该点发出一道短暂的声音，例如雷鸣声，渡鸦叫声或不祥低语声。</p><p><strong>震动。</strong> 你在地面上引发无害的震动，其效应持续 1 分钟。</p>",
+      "effects": {
+        "Booming Voice": {
+          "name": "Booming Voice",
+          "description": "<p>Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p>"
+        }
+      }
     },
     "Thorn Whip": {
       "name": "荆棘之鞭",
@@ -4702,9 +4733,21 @@
     },
     "True Polymorph": {
       "name": "完全变形术",
-      "description": "<p>选择施法距离内你可见的一名生物或一个非魔法物件，你将那名生物变形成一名不同的生物或一个非魔法物件，或者那个物件变形成一名生物（物件必须并未被着装或携带）。这一转变会一直持续到持续时间结束或目标死亡/被摧毁为止；如果你为此法术维持了最长时间的专注，则法术的持续时间会延长为直至被解除。</p><p>一名非自愿生物可以进行一次感知豁免，若豁免成功则不会受此法术影响。</p><p><strong>生物变生物。</strong>如果你将生物变成另一种生物，则其新形态可以是你选择的挑战等级小于等于目标挑战等级或等级的任何种类。目标的游戏数据被新形态的数据所替代，但目标保留其生命值、生命骰 、阵营、性格。</p><p>目标获得等于新形态生命值的临时生命值 。此法术会在你不具有临时生命值时提前结束。</p><p>该生物只可做出其新形态的生理结构所允许的动作，不能说话也不能施法。</p><p>目标的装备融入新形态中。目标不能使用装备或者通过其他方式从装备中获得增益。</p><p><strong>物件变生物。</strong>你可以将一个物件变成任何一种符合下列要求的生物：生物的体型不能大于原物件，且生物的挑战等级必须小于等于 9。变形出的生物对你和你的同伴保持友善 。而战斗中它将会在你的回合之后立刻进行其回合，且遵循你的命令。</p><p>如果该法术持续时间超过 1 小时，则你将不再控制该生物。此后，该生物将根据你对待它的方式决定是否对你保持友善 。</p><p><strong>生物变物件。</strong> 如果你将一名生物变形成一个物件，则它连同其穿着与携带物一起变成新的形态。变成物件的体型不能大于原生物。受术者的数据变成和该物件一样，在法术终止而受术者变回原形后，它将不会记得在变成物件时所发生的任何事情。</p><section class=\"secret\" id=\"secret-IB4vzIqK9EZU3ho1\"><p><strong>Foundry Note</strong></p><p>GM 可以将角色拖拽到目标变形生物的数据卡上来处理变形。</p></section>",
+      "description": "<p>Choose one creature or nonmagical object that you can see within range. The creature shape-shifts into a different creature or a nonmagical object, or the object shape-shifts into a creature (the object must be neither worn nor carried). The transformation lasts for the duration or until the target dies or is destroyed, but if you maintain Concentration on this spell for the full duration, the spell lasts until dispelled.</p><p>An unwilling creature can make a Wisdom saving throw, and if it succeeds, it isn’t affected by this spell.</p><p><strong>Creature into Creature. </strong>If you turn a creature into another kind of creature, the new form can be any kind you choose that has a Challenge Rating equal to or less than the target’s Challenge Rating or level. The target’s game statistics are replaced by the stat block of the new form, but it retains its Hit Points, Hit Point Dice, alignment, and personality.</p><p>The target gains a number of Temporary Hit Points equal to the Hit Points of the new form. These Temporary Hit Points vanish if any remain when the spell ends.</p><p>The target is limited in the actions it can perform by the anatomy of its new form, and it can’t speak or cast spells.</p><p>The target’s gear melds into the new form. The creature can’t use or otherwise benefit from any of that equipment.</p><p><strong>Object into Creature. </strong>You can turn an object into any kind of creature, as long as the creature’s size is no larger than the object’s size and the creature has a Challenge Rating of 9 or lower. The creature is Friendly to you and your allies. In combat, it takes its turns immediately after yours, and it obeys your commands.</p><p>If the spell lasts more than an hour, you no longer control the creature. It might remain Friendly to you, depending on how you have treated it.</p><p><strong>Creature into Object. </strong>If you turn a creature into an object, it transforms along with whatever it is wearing and carrying into that form, as long as the object’s size is no larger than the creature’s size. The creature’s statistics become those of the object, and the creature has no memory of time spent in this form after the spell ends and it returns to normal.</p>",
       "materials": {
         "value": "一滴汞、一团阿拉伯胶和一缕烟"
+      },
+      "activities": {
+        "transform": {
+          "profiles": {
+            "Creature into Creature": {
+              "name": "Creature into Creature"
+            },
+            "Object into Creature": {
+              "name": "Object into Creature"
+            }
+          }
+        }
       }
     },
     "True Resurrection": {
