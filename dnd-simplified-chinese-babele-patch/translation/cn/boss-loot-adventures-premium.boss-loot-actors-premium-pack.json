@@ -9,6 +9,7 @@
     "Dragon": "龙类",
     "Aberration": "异怪",
     "Giant": "巨人",
+    "Fey": "精类",
     "Construct": "构装"
   },
   "entries": {
@@ -297,7 +298,7 @@
     },
     "Kobold Warrior (Sling) CR1/8": {
       "name": "狗头人武者（投石索）CR1/8",
-      "tokenName": "狗头人武者 CR1/8",
+      "tokenName": "狗头人武者",
       "items": {
         "Dagger": {
           "name": "匕首"
@@ -1223,7 +1224,7 @@
     },
     "Kobold Warrior (Dagger) CR1/8": {
       "name": "狗头人武者（匕首）CR1/8",
-      "tokenName": "狗头人武者 CR1/8",
+      "tokenName": "狗头人武者",
       "items": {
         "Dagger": {
           "name": "匕首"
@@ -1238,6 +1239,54 @@
         },
         "Sling": {
           "name": "投石索"
+        }
+      }
+    },
+    "Goblin Lollipop Dancer CR1/4": {
+      "name": "地精棒棒糖舞者 CR1/4",
+      "tokenName": "地精棒棒糖舞者",
+      "description": "<h1>棒棒糖舞者</h1><p>被迫随军出征，棒棒糖舞者背着一袋草药和一瓶糖浆，而非刀锋。他酷爱甜食，能将采集来的植物和菌类制成糖果。</p><p>起初遭人嘲笑，但当他的糖果让疲惫的战士恢复精力时，他变得不可或缺。如今，战团将他视若珍宝般保护起来。</p>",
+      "items": {
+        "Nimble Escape": {
+          "name": "迅捷逃逸",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 执行 &Reference[Disengage] 或 &Reference[Hide] 动作。</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "耗用"
+            }
+          },
+          "effects": {
+            "Apply Hide Action to Target": {
+              "name": "执行躲藏动作"
+            }
+          }
+        },
+        "Leather Armor": {
+          "name": "皮甲"
+        },
+        "Groove of Fleet Feet": {
+          "name": "Groove of Fleet Feet",
+          "description": "<p><strong>Groove of Fleet Feet (Recharge 5–6).</strong> As an action, the goblin chooses up to two allies within 30ft. that can see or hear it. For 1 minute, each gains a +10ft. bonus to speed and its movement doesn't provoke opportunity attacks.</p>",
+          "effects": {
+            "Groove of Fleet Feet": {
+              "name": "Groove of Fleet Feet",
+              "description": "<p>+10 ft. bonus to walking speed. Movement doesn't provoke opportunity attacks.</p>"
+            }
+          }
+        },
+        "Rally Song": {
+          "name": "鼓舞之歌",
+          "description": "<p><strong>鼓舞之歌。</strong>以一个动作，地精选择一个在 30 尺内能看到或听到它的盟友。在 1 分钟内，该盟友的所有近战攻击检定获得 +1d4 加值。</p>",
+          "effects": {
+            "Rally Song": {
+              "name": "鼓舞之歌",
+              "description": "<p>近战攻击检定获得 +1d4 加值。</p>"
+            }
+          }
+        },
+        "Stinky-Sweet Lollipop": {
+          "name": "Stinky-Sweet Lollipop",
+          "description": "<p>As an action let a creature bite the lollipop (if it’s unconscious, break off a piece of the lollipop and place it in the target’s mouth). If the creature has 0 hit points and isn’t a construct or undead, it regains 1 hit point.<br />This item can’t return a creature to life.</p><section class=\"secret\" id=\"secret-81nEIaTckkjG7eSc\"><p>The creature that consume even a piece of the lollipop exudes an irresistible sweet scent for [[/r 1d4]] days. During this time, insects continually bother the creature, and gains no benefits from rests for the duration.</p><p>GM Notes: Spells such as lesser restoration, remove curse, or resting in a insect proof shelter may end or suppress the effect.</p></section>"
         }
       }
     },
@@ -1658,6 +1707,41 @@
         }
       }
     },
+    "Goblin Warrior (Bow) CR1/4": {
+      "name": "地精武者（弓）CR1/4",
+      "tokenName": "地精武者",
+      "items": {
+        "Nimble Escape": {
+          "name": "迅捷逃逸",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 执行 &Reference[Disengage] 或 &Reference[Hide] 动作。</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "耗用"
+            }
+          },
+          "effects": {
+            "Apply Hide Action to Target": {
+              "name": "执行躲藏动作"
+            }
+          }
+        },
+        "Scimitar": {
+          "name": "弯刀",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
+        },
+        "Shortbow": {
+          "name": "短弓",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
+        },
+        "Leather Armor": {
+          "name": "皮甲"
+        },
+        "Shield": {
+          "name": "盾牌",
+          "description": "<p>你必须拥有盾牌的受训才能从一面盾牌中获得其护甲等级的增益。</p>"
+        }
+      }
+    },
     "Giant Abomination CR4": {
       "name": "巨人憎恶 CR4",
       "tokenName": "巨人憎恶",
@@ -1929,6 +2013,41 @@
     "Prisoner Blindfolded": {
       "name": "蒙眼人质",
       "tokenName": "蒙眼人质"
+    },
+    "Goblin Warrior (Sword) CR1/4": {
+      "name": "地精武者（剑）CR1/4",
+      "tokenName": "地精武者",
+      "items": {
+        "Nimble Escape": {
+          "name": "迅捷逃逸",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 执行 &Reference[Disengage] 或 &Reference[Hide] 动作。</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "耗用"
+            }
+          },
+          "effects": {
+            "Apply Hide Action to Target": {
+              "name": "执行躲藏动作"
+            }
+          }
+        },
+        "Scimitar": {
+          "name": "弯刀",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
+        },
+        "Shortbow": {
+          "name": "短弓",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
+        },
+        "Leather Armor": {
+          "name": "皮甲"
+        },
+        "Shield": {
+          "name": "盾牌",
+          "description": "<p>你必须拥有盾牌的受训才能从一面盾牌中获得其护甲等级的增益。</p>"
+        }
+      }
     },
     "Human Fighter CR1": {
       "name": "人类战士 CR1",

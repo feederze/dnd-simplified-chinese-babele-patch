@@ -43,25 +43,25 @@
         }
       }
     },
-    "Colossus Cleaver (Rare) v1": {
-      "name": "巨像斩斧（珍稀）v1",
-      "description": "<p><em>武器（巨斧），珍稀（需战士或野蛮人同调）</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“好斧头……善良的斧头……现在我们砍倒面前的一切！”</em></p></div><hr><p>你以此魔法武器进行的攻击检定和伤害掷骰获得 +1 加值。</p><p>巨像斩斧是一把威力强大的双手巨斧，蕴含着传古术法。其斧柄由坚固的橡木打造而成，刀锋则是由独特的精金和秘银混合锻造而成。</p><hr><p><strong>巨人之力。</strong>每日一次，你可以说出魔法咒语“变大！”来激活此附魔。激活后，你的体型变为大型，持续 1 分钟。在此形态下，你将获得以下效应：</p><ul><li><p><strong>力量增长。</strong>你的力量属性值增加 +2。</p></li><li><p><strong>斩斧伸触</strong>。巨像斩斧的触及距离增加 5 尺。</p></li><li><p><strong>碾压打击。</strong>使用巨像斩斧进行的攻击将额外造成 1d6 点伤害。</p></li></ul><img style=\"border: none\" src=\"modules/boss-loot-adventures-premium/artwork/070-adv-assets-colossus/art-transparent-background-colossus-cleaver-600x600.webp\" alt=\"Colossus Cleaver\">",
+    "Colossus Cleaver (Rare) v2": {
+      "name": "Colossus Cleaver (Rare) v2",
+      "description": "<p><em>Weapon (greataxe), rare (requires attunement by a fighter or barbarian)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“Nice Axe... Good Axe... Now we cut and cleave all before us!”</em></p></div><hr /><p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>Colossus Cleaver is a formidable greataxe infused with ancient magic. Its handle is crafted from sturdy oak and the blade is forged from a unique blend of adamantium and mithril.</p><hr /><p><strong>Giant's Might.</strong> Once per day, you can activate the enchantment by speaking the command word \"Colossify.\" When activated, your size becomes Large for a duration of 1 minute. While in this form, you gain the following:</p><ul><li><p><strong>Strength Increase</strong>. Your Strength score increases by 2.</p></li><li><p><strong>Cleaver's Reach</strong>. The range of the Colossus Cleaver increases by 5ft.</p></li><li><p><strong>Crushing Blow</strong>. Attacks made with Colossus Cleaver deal an additional 1d6 damage.</p></li></ul><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/070-adv-assets-colossus/art-transparent-background-colossus-cleaver-600x600.webp\" alt=\"Colossus Cleaver\" />",
       "activities": {
         "attack": {
-          "chatFlavor": "“好斧头……善良的斧头……现在我们砍倒面前的一切！”"
+          "chatFlavor": "Nice Axe... Good Axe... Now we cut and cleave all before us!"
         },
         "Activate Giant’s Might": {
-          "name": "激活巨人之力",
-          "chatFlavor": "变大"
+          "name": "Activate Giant’s Might",
+          "chatFlavor": "Colossify"
         },
         "End Giant’s Might": {
-          "name": "结束巨人之力"
+          "name": "End Giant’s Might"
         }
       },
       "effects": {
         "Giant's Might": {
-          "name": "巨人之力",
-          "description": "<p>删除此主动效应以结束巨人之力。</p>"
+          "name": "Giant's Might",
+          "description": "<p>Delete this Active Effect to end Giant's Might.</p>"
         }
       }
     },
@@ -537,6 +537,29 @@
         }
       }
     },
+    "Spin-a-Trix (Very Rare) v1": {
+      "name": "Spin-a-Trix (Very Rare) v1",
+      "description": "<p><em>Wondrous item, very rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“This magical trinket has a name that's quite funny,</em></p><p><em>It will make your combat prowess much sunnier</em></p><p><em>It's runes of Damiro, Protere, Vitari,</em></p><p><em>Will sharpen your skills so you won't be outwary'd!</em></p><p><em>So spin the runes, and watch those foes run,</em></p><p><em>For it's the Spin-a-Trix Bracer of Fun!”</em></p></div><hr /><p>This bracer is crafted from leather and features three polished glass-like stones, each with a glowing rune on its surface.</p><hr /><p>As an action, you must say the activation word \"<strong>Spin-a-Trix</strong>\". The runes start to spin rapidly for 3 seconds. When they come to a stop, they unleash a unique magical effect that enhances your combat abilities for 1 minute.</p><p>You can use this ability again after a long rest.</p><p>Roll [[/r 3d6]]. Each die determines the rune that appears in one slot of the bracer (left, middle, right). The rune grants its effect as shown in the table.</p><table><tbody><tr><th style=\"text-align:left\"><p>Rune</p></th><th style=\"text-align:left\"><p>1d6 Roll</p></th><th style=\"text-align:left\"><p>Effect</p></th></tr><tr><td><p>Damiro</p></td><td><p>1-2</p></td><td><p>+2 damage on all your attacks</p></td></tr><tr><td><p>Protere</p></td><td><p>3-4</p></td><td><p>+1 AC</p></td></tr><tr><td><p>Vitari</p></td><td><p>5-6</p></td><td><p>+10 temporary HP</p></td></tr></tbody></table><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/071-adv-assets-charging-bull/art-transparent-background-spin-a-trix-600x600.webp\" alt=\"Spin a Trix\" />",
+      "activities": {
+        "utility": {
+          "roll": "Spin-a-Trix"
+        }
+      },
+      "effects": {
+        "Damiro": {
+          "name": "Damiro",
+          "description": "<p>+2 damage on all your attacks</p>"
+        },
+        "Protere": {
+          "name": "Protere",
+          "description": "<p>+1 AC</p>"
+        },
+        "Vitari": {
+          "name": "Vitari",
+          "description": "<p>+10 temporary HP</p>"
+        }
+      }
+    },
     "Death Kiss Blade (Rare) v1": {
       "name": "死吻之刃（珍稀）v1",
       "description": "<p><em>武器（长剑），珍稀（需同调）</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“我们已将他团团围住，他已落入我们的掌控之中。然而他却一动不动，仿佛在冥想，手握着鞘中的剑柄，沉着而冷酷。我们从未见他动过，只是这死亡的轻风，一阵微弱的空气与刀锋的呼啸声，他的身影似乎在一瞬间消逝。然后一切都结束了。他依旧一动不动，手中握着出鞘的刀锋，鲜血滴落。而我周围全是尸体，被砍得支离破碎。我得以幸免，是为了发出警告：追捕他，就会有同样的下场。而我所能做的，只有逃跑……”</em></p></div><hr><p>你用此魔法武器发动的攻击检定和伤害掷骰获得 +1 加值。</p><hr><p>这把守卫之刃被打造成了骷髅的形状，其眼窝散发着诡异的红光。刀身修长而光滑，边缘锋利无比，杀伤力极强。</p><p><strong>灵巧。</strong>当你使用灵巧武器进行攻击时，你可以选择使用力量调整值或敏捷调整值来进行攻击检定和伤害掷骰。但两种掷骰必须使用相同的调整值。</p><hr><p><strong>死吻攻击。</strong>作为一次动作，你可以施展此攻击技巧。你能在瞬间对距离你 20 尺内的所有敌人进行一次近战攻击。你可以使用此能力每长休一次。</p><img style=\"border: none\" src=\"modules/boss-loot-adventures-premium/artwork/070-adv-assets-colossus/art-transparent-background-death-kiss-blade-600x600.webp\" alt=\"Death Kiss Blade\">",
@@ -694,6 +717,20 @@
         }
       }
     },
+    "Helm of the Charging Bull v1": {
+      "name": "Helm of the Charging Bull v1",
+      "description": "<p><em>Wondrous item, very rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"A symbol of strength and courage, those who have been fortunate enough to experience its power have found themselves unstoppable on the battlefield, charging forward with strength and vigor unmatched by any other.\"</em></p></div><hr /><p>This ancient magical helm is made from silver metal, with two large horns extending from the sides.</p><p>Only those with a Strength of 14 or higher are capable of attuning to and properly wearing this helm.</p><hr /><p><strong>Mighty Charge</strong>. As an action use your movement to charge at least 20ft towards a creature you can clearly see with no other obstacles in the way. The target must make a DC 15 Dexterity saving throw. On a failed save, the creature takes [[/r 4d4]] bludgeoning damage, is thrown 15ft back, knocked @UUID[Compendium.dnd5e.rules.w7eitkpD7QQTB6j0.JournalEntryPage.y0TkcdyoZlOTmAFT]{Prone}, and is @UUID[Compendium.dnd5e.rules.w7eitkpD7QQTB6j0.JournalEntryPage.ZyZMUwA2rboh4ObS]{Stunned} until the end of its next turn. On a successful save, it takes half damage and is not thrown back. This ability works only against creatures of size Tiny, Small, or Medium.</p><p>This item has 2 charges. It regains expended charges after a long rest.</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/071-adv-assets-charging-bull/art-transparent-background-helm-of-the-charging-bull-600x600.webp\" alt=\"Helm of the Charging Bull\" />",
+      "effects": {
+        "Prone": {
+          "name": "Prone",
+          "description": "<p>Due to being thrown 15 feet away, the target is &amp;Reference[prone apply=false].</p>"
+        },
+        "Stunned": {
+          "name": "Stunned",
+          "description": "<p>Due to being thrown 15 feet away, the target is &amp;Reference[stunned apply=false].</p>"
+        }
+      }
+    },
     "Bracers of Ignition (Uncommon) v2": {
       "name": "引火护腕（非普通）v2",
       "description": "<div id=\"blfx-embedded-hide-description\"><p><em>奇物，非普通（需同调）</em></p><div class=\"block purple\" id=\"book\" style=\"background:#aa88aa55\"><p><em>\"凡火岂敢比龙炎\"</em></p><p><em>\"凡焰焉能敌龙息\"</em></p><p><em>\"凡烬怎堪承龙怒\"</em></p></div><hr /><p>这些护腕由一条青年红龙的龙鳞制成。鳞片炽热依旧，但佩戴起来却很舒适。</p><hr /></div><p><strong>狂焰袭。</strong> 穿戴该对护腕时，你的徒手攻击和近战武器攻击会额外造成 [[/roll 1d4]] 点火焰伤害。</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/059-red-dragon/art-transparent-background-bracers-of-ignition-600x600.webp\" alt=\"Bracers of Ignition\" />",
@@ -747,6 +784,29 @@
     "Glove of Healing Slap v1": {
       "name": "巴掌治愈手套 v1",
       "description": "<p><em>奇物，极珍稀</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“一掌抚创，一笑封伤，掌心印痕相拥。此手套乃小丑中的小丑，让你笑得合不拢嘴，福气满满！”</em></p></div><hr><p>这只魔法手套以绿、红、黄三色皮革缝制，饰以斑斓的小丑图案与铃铛，举手投足皆叮当作响。</p><hr><p><strong>疗愈巴掌。</strong> 当你佩戴此手套时，以一个动作，你可以对 5 尺内一名自愿或失能的生物扇出一记生风大巴掌。目标恢复 [[/roll 4d6]] + 你的感知调整值点生命值。巴掌会在其面颊留下一只夸张的手掌印持续 4 小时。若目标非自愿，需要进行一次DC 17 的敏捷豁免以试图避开。</p><p>一旦使用，此能力在下一次长休前将无法再次使用。</p><img style=\"border: none\" src=\"modules/boss-loot-adventures-premium/artwork/066-adv-assets/art-transparent-background-glove-of-healing-slap-600x600.webp\" alt=\"Healing Slap\">"
+    },
+    "Spin-a-Trix (Rare) v1": {
+      "name": "Spin-a-Trix (Rare) v1",
+      "description": "<p><em>Wondrous item, rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“This magical trinket has a name that's quite funny,</em></p><p><em>It will make your combat prowess much sunnier</em></p><p><em>It's runes of Damiro, Protere, Vitari,</em></p><p><em>Will sharpen your skills so you won't be outwary'd!</em></p><p><em>So spin the runes, and watch those foes run,</em></p><p><em>For it's the Spin-a-Trix Bracer of Fun!”</em></p></div><hr /><p>This bracer is crafted from leather and features three polished glass-like stones, each with a glowing rune on its surface.</p><hr /><p>As an action, you must say the activation word \"<strong>Spin-a-Trix</strong>\". The runes start to spin rapidly for 3 seconds. When they come to a stop, they unleash a unique magical effect that enhances your combat abilities for 1 minute.</p><p>You can use this ability again after a long rest.</p><p>Roll [[/r 3d6]]. Each die determines the rune that appears in one slot of the bracer (left, middle, right). The rune grants its effect as shown in the table.</p><table><tbody><tr><th style=\"text-align:left\"><p>Rune</p></th><th style=\"text-align:left\"><p>1d6 Roll</p></th><th style=\"text-align:left\"><p>Effect</p></th></tr><tr><td><p>Damiro</p></td><td><p>1-2</p></td><td><p>+1 damage on all your attacks</p></td></tr><tr><td><p>Protere</p></td><td><p>3-4</p></td><td><p>+1 AC</p></td></tr><tr><td><p>Vitari</p></td><td><p>5-6</p></td><td><p>+5 temporary HP</p></td></tr></tbody></table><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/071-adv-assets-charging-bull/art-transparent-background-spin-a-trix-600x600.webp\" alt=\"Spin a Trix\" />",
+      "activities": {
+        "utility": {
+          "roll": "Spin-a-Trix"
+        }
+      },
+      "effects": {
+        "Damiro": {
+          "name": "Damiro",
+          "description": "<p>+1 damage on all your attacks</p>"
+        },
+        "Protere": {
+          "name": "Protere",
+          "description": "<p>+1 AC</p>"
+        },
+        "Vitari": {
+          "name": "Vitari",
+          "description": "<p>+5 temporary HP</p>"
+        }
+      }
     },
     "Bracers of Ignition (Rare) v2": {
       "name": "引火护腕（珍稀）v2",
