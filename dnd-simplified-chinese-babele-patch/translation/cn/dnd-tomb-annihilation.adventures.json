@@ -1758,26 +1758,26 @@
               "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
             },
             "Sting": {
-              "name": "蜇刺",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>目标必须进行一次[[/save format=long]]，否则将&Reference[poisoned apply=false]{中毒 poisoned}1分钟。目标可以在每个自己的回合结束时重复该豁免，成功则结束该效应。</p>",
+              "name": "钉刺",
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>目标必须成功进行一次[[/save format=long]]，豁免失败则&Reference[poisoned apply=false]{中毒} 1分钟。目标可以在每个其自己回合结束时再进一次该豁免，豁免成功则终止该效应。</p>",
               "effects": {
                 "Poisoned": {
                   "name": "中毒",
-                  "description": "<p>目标因牵绊魔鬼的蜇刺而&Reference[poisoned apply=false]{中毒 poisoned}1分钟。</p>"
+                  "description": "<p>你因骨魔的钉刺&Reference[poisoned apply=false]{中毒} 1 分钟。</p>"
                 }
               }
             },
             "Devil Sight": {
               "name": "魔鬼视觉",
-              "description": "<p>魔法黑暗不会妨碍魔鬼的黑暗视觉。</p>"
+              "description": "<p>魔法黑暗不会阻碍魔鬼的黑暗视觉。</p>"
             },
             "Magic Resistance": {
               "name": "魔法抗性",
-              "description": "<p>魔鬼在对抗法术和其他魔法效应的豁免中具有优势。</p>"
+              "description": "<p>魔鬼对抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Multiattack": {
               "name": "多重攻击",
-              "description": "<p>魔鬼发动三次攻击: 两次用它的[[/item .KjxsSFx9xv2HLtMX]]{爪击 claws}, 一次用它的[[/item .iFHGL8wlqBtZAdHr]]{蜇刺 sting}。</p>"
+              "description": "<p>骨魔发动三次攻击：[[/item .KjxsSFx9xv2HLtMX]]{爪击}，一次[[/item .iFHGL8wlqBtZAdHr]]{钉刺}攻击。</p>"
             }
           }
         },
@@ -1786,8 +1786,8 @@
           "tokenName": "雷龙",
           "items": {
             "Stomp": {
-              "name": "践踏",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]], 且目标必须成功进行一次[[/save format=long]]否则将被击倒&amp;Reference[Prone apply=false]{倒地 prone}。</p>",
+              "name": "重踏",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]，目标必须成功通过一次[[/save format=long]]否则应击&Reference[Prone apply=false]{倒地}。</p>",
               "effects": {
                 "Prone": {
                   "name": "倒地",
@@ -1807,15 +1807,15 @@
           "items": {
             "Multiattack": {
               "name": "多重攻击",
-              "description": "<p>食腐虫发动两次攻击: 一次用它的[[/item Tentacles]]和一次啃咬。</p>"
+              "description": "<p>食腐虫发动两次攻击：一次[[/item Tentacles]]攻击和一次啃咬攻击。</p>"
             },
             "Tentacles": {
-              "name": "触手",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]], 且目标必须成功通过一次[[/save con 13 format=long]]否则将被&Reference[Poisoned apply=false]{中毒 Poisoned}1分钟。</p><p>直到此毒素结束, 目标将&Reference[Paralyzed apply=false]{麻痹 Paralyzed}。目标可以在其每个自己的回合结束时重复该豁免, 成功则结束毒素效应。</p>",
+              "name": "触须",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]，且目标必须成功通过一次[[/save con 13 format=long]]，否则在 1 分钟内陷入&amp;Reference[Poisoned apply=false]{中毒}。</p><p>在中毒持续期间，目标同时陷入&amp;Reference[Paralyzed apply=false]{麻痹}。目标可以在其每个回合结束时重复该豁免，成功则终止自身的中毒状态。</p>",
               "effects": {
                 "Poisoned & Paralyzed": {
-                  "name": "中毒&麻痹",
-                  "description": "<p>目标&amp;Reference[Poisoned apply=false]{中毒 Poisoned}1分钟。</p><p>直到此毒素结束, 目标将&amp;Reference[Paralyzed apply=false]{麻痹 Paralyzed}。目标可以在其每个回合结束时重复该豁免, 成功则结束毒素效应。</p>"
+                  "name": "中毒并麻痹",
+                  "description": "<p>目标陷入&Reference[Poisoned apply=false]{中毒}。在中毒持续期间，目标同时陷入&Reference[Paralyzed apply=false]{麻痹}。目标可以在其每个回合结束时重复该豁免，成功则终止自身的中毒状态。</p>"
                 }
               }
             },
@@ -1825,11 +1825,11 @@
             },
             "Keen Smell": {
               "name": "敏锐嗅觉",
-              "description": "<p>该[[lookup @name lowercase]]在依赖嗅觉的感知(察觉)检定上具有优势。</p>"
+              "description": "<p>[[lookup @name lowercase]]进行依赖嗅觉的感知（察觉）检定时具有优势。</p>"
             },
             "Spider Climb": {
               "name": "蛛行",
-              "description": "<p>该[[lookup @name lowercase]]可以攀爬困难表面, 包括头朝下在天花板上, 而无需进行属性检定。</p>"
+              "description": "<p>[[lookup @name lowercase]]可以攀爬在难以攀爬的表面上，包括倒吊在天花板上，且不需要进行属性检定。</p>"
             }
           }
         },
@@ -1839,83 +1839,83 @@
           "items": {
             "Multiattack": {
               "name": "多重攻击",
-              "description": "<p>勇士用它的[[/item .PCXrQGc6dhwdsmrT]]或它的[[/item .cOYinpp0ZB8ftlnM]]发动三次攻击</p>"
+              "description": "<p>勇士发动三次[[/item .PCXrQGc6dhwdsmrT]]{巨剑}或[[/item .cOYinpp0ZB8ftlnM]]{短弓}攻击。</p>"
             },
             "Greatsword": {
               "name": "巨剑",
-              "description": "<p>[[/attack extended]]. 如果勇士剩余的生命值超过其总生命值的一半, 则为[[/damage extended average]]。</p>",
+              "description": "<p>[[/attack extended]]。如果勇士的生命值多于一半，则造成[[/damage extended average]]伤害。</p>",
               "activities": {
                 "Attack: Half or Less HP": {
-                  "name": "攻击: 生命值一半或更少"
+                  "name": "攻击：生命值少于一半"
                 }
               }
             },
             "Shortbow": {
               "name": "短弓",
-              "description": "<p>[[/attack extended]]. 如果勇士剩余的生命值超过其总生命值的一半, 则为[[/damage extended average]]。</p>",
+              "description": "<p>[[/attack extended]]。如果勇士的生命值多于一半，则造成[[/damage extended average]]伤害。</p>",
               "activities": {
                 "Attack: Half or Less HP": {
-                  "name": "攻击：生命值一半或更少"
+                  "name": "攻击：生命值少于一半"
                 }
               }
             },
             "Plate Armor": {
               "name": "板甲",
-              "description": "<p>板甲由塑形的、互锁的金属板组成, 覆盖全身。一套板甲包括铁手套、重型皮靴、一个带面甲的头盔, 以及盔甲下的厚垫层。搭扣和皮带将重量分散到全身。</p>"
+              "description": "<p>板甲由覆盖全身，且相互连接的模铸金属板组成。一套板甲包括护手、重皮靴、一顶附面甲的头盔以及在护甲底层的厚重的布甲。其锁扣和皮带结构可以将护甲重量分配到身体各处。</p>"
             },
             "Indomitable": {
               "name": "不屈",
-              "description": "<p>勇士重投一次失败的豁免检定。</p>"
+              "description": "<p>勇士重骰一次失败的豁免。</p>"
             },
             "Second Wind": {
               "name": "回气",
-              "description": "<p>以一个附赠动作, 勇士可以恢复20点生命值。</p>"
+              "description": "<p>以一个附赠动作, 勇士恢复 20 点生命值。</p>"
             }
           }
         },
         "Chwinga": {
-          "name": "Chwinga",
-          "tokenName": "Chwinga",
+          "name": "怯蕴阿灵",
+          "tokenName": "怯蕴阿灵",
           "description": "<p>Chwinga (发音为 cheh-WING-ah) 是一种微小的元素精魄, 生活在远离文明的植物、岩石和河流中。它们非常害羞, 喜欢不被看见地移动。</p><p>如果有两个或更多的chwingas生活在同一区域, 每一个都会在不同的植物、岩石或淡水体中寻找庇护。虽然没有两个chwingas看起来完全一样, 但它们类似于6英寸高的活动玩偶, 戴着奇怪的面具, 有着细长的四肢和狂野的头发。它们的出现有时会被凉爽的微风、花朵的甜香和飞舞的萤火虫所预示。它们的存在使自然环境更加繁茂和充满活力。</p><p><em><strong>对类人生物的迷恋</strong></em>. Chwingas会避开大多数其他生物, 但它们觉得文明的装饰品很迷人。它们对穿盔甲、携带武器、使用工具和烹饪食物的生物感到困惑。当一个chwinga遇到一个或多个类人生物时, 它的好奇心有时会战胜一切, 它会短暂地跟踪这些生物来观察它们。如果它喜欢上某个特定的类人生物, chwinga可能会用它的戏法来帮助它, 或者在离开前赠予一份魔法礼物。吸引chwinga到特定类人生物的特征各不相同。在某些情况下, chwinga可能只是喜欢一个类人生物走路的方式或梳理头发的方式。其他时候, 它可能会被一个类人生物演奏音乐或吃大量食物的能力所迷住。</p><p><em><strong>元素本质</strong></em>. Chwingas会睡觉, 但不需要空气、食物或饮料。它们没有名字, 也没有说话的能力。当一个chwinga死亡时, 它会变成一把花瓣、一团花粉、一个类似其前身的石像、一块光滑的石头弹珠或一滩淡水。</p>",
           "items": {
             "Spellcasting": {
               "name": "施法",
-              "description": "<p>chwinga施放以下法术之一, 无需材料或言语成分:</p><p>随意: <em>[[/item .xhZvYIGivN6BSTrD]]{德鲁伊伎俩 druidcraft}, [[/item .10qa0JgTLx1LxG6g]]{神导术 guidance}, [[/item .RgNS3EXZM2u2fmjg]]{行动无踪 pass without trace}, [[/item .Oxh3TG4gRyB3lEDR]]{抗性 resistance}</em></p>"
+              "description": "<p>怯蕴灵的天生关键施法属性为感知。它天生能施放以下法术而无需语言与材料成分：</p><p>随意：<em>[[/item .xhZvYIGivN6BSTrD]]{德鲁伊伎俩}，[/item .10qa0JgTLx1LxG6g]]{神导术}，[[/item .RgNS3EXZM2u2fmjg]]{行动无踪}，[[/item .Oxh3TG4gRyB3lEDR]]{抗性}</em></p>"
             },
             "Magical Gift": {
-              "name": "魔法礼物",
-              "description": "<p>chwinga以其5尺内可见的一个类人生物为目标。目标获得一个由DM选择的超自然护符。有关超自然护符的更多信息, 请参阅<em>《地下城主指南》</em>。</p>",
+              "name": "魔法赠礼",
+              "description": "<p>怯蕴阿灵选择一个5尺内它能够看见的类人生物。目标获得一项DM选择的超自然赠礼护符。见<em>《地下城主指南》</em>以获得更多关于超自然赠礼护符的信息。</p>",
               "activities": {
                 "Expend Use": {
-                  "name": "消耗使用次数"
+                  "name": "耗用"
                 }
               }
             },
             "Natural Shelter": {
               "name": "自然庇护所",
-              "description": "<p>chwinga魔法般地躲进其空间内的一块岩石、一株活植物或一处天然淡水源中。在此庇护所内, chwinga不能成为任何攻击、法术或其他效应的目标, 且该庇护所不会削弱chwinga的盲视能力。chwinga可以用其动作从庇护所中出来。如果其庇护所被摧毁, chwinga会被迫出来并出现在庇护所原来的空间, 但不会受到其他伤害。</p>"
+              "description": "<p>怯蕴阿灵魔法地在它所处空间中的岩石，一株活的植物或一汪天然水源中得到庇护。处于庇护所中时，怯蕴阿灵不能被选定为任何法术、攻击或其他效果的目标，庇护所也不影响怯蕴阿灵的盲视。怯蕴阿灵能够用一个动作离开庇护所。当自然庇护被摧毁时，怯蕴阿灵必须离开庇护所并出现在庇护所的位置，除此之外它不会受到任何伤害。</p>"
             },
             "Evasion": {
               "name": "反射闪避",
-              "description": "<p>当chwinga受到一个允许它进行敏捷豁免以只受一半伤害的效应时, 如果它成功通过豁免, 则不受任何伤害, 如果失败, 则只受一半伤害。</p>"
+              "description": "<p>当怯蕴阿灵在成为某一范围效应影响对象时，若该效应允许你通过成功的敏捷豁免来使伤害减半，则怯蕴阿灵在该豁免成功时不受伤害，而豁免失败时只受一半伤害。</p>"
             },
             "Unusual Nature": {
-              "name": "不寻常的本质",
-              "description": "<p>chwinga不需要空气、食物或饮料。当它死亡时, 它会变成一把花瓣、一团花粉、一个类似其前身的石像、一个光滑石头的小球体或一滩淡水(由你选择)。</p>"
+              "name": "非凡本质",
+              "description": "<p>怯蕴阿灵不需要食物，水，空气与睡眠。当怯蕴阿灵死亡时，它的身体会化作几瓣花瓣，一阵花粉，一尊类似于他先前身体的小石像，一面光滑的圆球或一滩清水（由你选择）。</p>"
             },
             "Druidcraft": {
               "name": "德鲁伊伎俩",
-              "description": "<p>你向自然之灵低语, 在施法距离内创造出以下一种效果:</p>\n<ul>\n<li>你创造一个微小、无害的感官效果, 预测你所在位置未来24小时的天气。这个效果可能表现为晴天的金色圆球、雨天的云、雪天的雪花等等。这个效果持续1轮。</li>\n<li>你瞬间让一朵花绽放、一个种子荚打开或一个叶芽萌发。</li>\n<li>你创造一个瞬间的、无害的感官效果, 例如落叶、一阵风、小动物的声音或臭鼬的微弱气味。该效果必须在一个5尺的立方体内。</li>\n<li>你瞬间点燃或熄灭一支蜡烛、一支火把或一个小营火。</li>\n</ul>"
+              "description": "<p>你向自然之魂低语，并创造以下效应之一：</p>\n<ul>\n<li>你创造一个微小而无害的感官效应，并以之预报你所在地接下来 24 小时的天气状况。该效应可表现为一个代表晴空的金球，一朵代表雨天的云彩，代表雪日而飘飞的雪花等等。该效应将持续 1 轮。</li>\n<li>你可以立即让一朵鲜花绽放，一颗种子破壳，一片叶蕾发芽。</li>\n<li>你创造一个微小而无害的即时感官效应，如落叶，微风，小动物的动静或者臭鼬的微弱气味。该效应只能在 5 尺的立方空间内起效。</li>\n<li>你可以立即点亮或熄灭一根蜡烛、一把火把或一处小篝火。</li>\n</ul>"
             },
             "Guidance": {
               "name": "神导术",
-              "description": "<p>你触摸一个自愿的生物。在法术结束前, 目标可以掷一个d4, 并将掷出的数字加到其选择的一次属性检定上。它可以在进行属性检定之前或之后掷骰。然后法术结束。</p>"
+              "description": "<p>你触碰一个自愿的生物。在法术终止前，目标可以选择在一次属性检定时额外掷一粒 d4，并将所得数值加入检定结果中。它可以在进行属性检定之前或之后掷骰。法术随后即终止。</p>"
             },
             "Resistance": {
-              "name": "抗性",
-              "description": "<p>你触摸一个自愿的生物。在法术结束前, 目标可以掷一个d4, 并将掷出的数字加到其选择的一次豁免检定上。它可以在进行豁免检定之前或之后掷骰。然后法术结束。</p>",
+              "name": "抵抗术",
+              "description": "<p>你触碰一个自愿生物。在该法术结束前，目标可以投掷一枚d4，并将掷出的结果加到它选择的一次豁免上。它可以在进行豁免检定之前或之后投掷该骰子。随后该法术结束。</p>",
               "materials": {
-                "value": "一个微型时钟"
+                "value": "一只微型钟表"
               }
             },
             "Pass without Trace": {
@@ -1933,45 +1933,45 @@
           "items": {
             "Shield": {
               "name": "盾",
-              "description": "<p>盾牌由木头或金属制成, 用一只手携带。持用盾牌会使你的护甲等级增加2。你一次只能从一个盾牌中受益。</p>"
+              "description": "<p>盾牌通常由木材或金属制成，可以单手进行持用。持用一面盾牌可以令你的护甲等级 +2。不过同一时间里你只能从一面盾牌中受益。</p>"
             },
             "Brave": {
               "name": "勇气",
-              "description": "<p>该[[lookup @name lowercase]]在对抗被恐慌的豁免检定中具有优势。</p>"
+              "description": "<p>[[lookup @name lowercase]]为抵抗恐慌而作的豁免检定具有优势。</p>"
             },
             "Brute": {
               "name": "残暴",
-              "description": "<p>当[[lookup @name lowercase]]用近战武器命中时, 该武器会造成额外一个伤害骰 (已包含在攻击中)。</p>"
+              "description": "<p>[[lookup @name lowercase]]的近战武器攻击命中目标时，其伤害加上额外一粒伤害骰（已包含在攻击条目中）。</p>"
             },
             "Multiattack": {
               "name": "多重攻击",
-              "description": "<p>该[[lookup @name lowercase]]发动三次近战攻击或两次远程攻击。</p>"
+              "description": "<p>[[lookup @name lowercase]]发动三次近战攻击，或两次远程攻击。</p>"
             },
             "Spear": {
               "name": "矛",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]] 或 [[/damage twoHanded average]] (如果用双手进行近战攻击)。</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]，或使用双手发动近战攻击时[[/damage twoHanded average]] 。</p>"
             },
             "Shield Bash": {
               "name": "盾击",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]]. 如果目标是中型或更小的生物，它必须成功进行一次[[/save format=long]]豁免，否则将被击倒&amp;Reference[prone apply=false]{倒地 prone}。</p>",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。如果目标是一个中型或更小体型生物，则目标生物必须成功通过一次[[/save format=long]]否则将应击&Reference[prone apply=false]{倒地}。</p>",
               "effects": {
                 "Prone": {
                   "name": "倒地",
-                  "description": "<p>目标被攻击生物的盾牌击中而&amp;Reference[prone apply=false]{倒地 prone}。</p>"
+                  "description": "<p>你被攻击生物的盾牌命中而&Reference[Prone apply=false]{倒地}。</p></p>"
                 }
               }
             },
             "Parry": {
               "name": "格挡",
-              "description": "<p>该[[lookup @name lowercase]]对其AC增加3, 以对抗一次会命中它的近战攻击。要做到这一点, [[lookup @name lowercase]]必须能看到攻击者并且正在持用一把近战武器。</p>"
+              "description": "<p>该[[lookup @name lowercase]]在被一次近战攻击命中时，其AC加上 3。此时该[[lookup @name lowercase]]必须能看见攻击者，且有在持用一把近战武器。</p>"
             },
             "Spider Climb": {
               "name": "蛛行",
-              "description": "<p>该[[lookup @name lowercase]]可以攀爬困难的表面，包括倒挂在天花板上，而无需进行属性检定。</p>"
+              "description": "<p>[[lookup @name lowercase]] 可以在难以攀爬的表面上攀爬，包括沿着天花板移动，且不需要为此进行属性检定。</p>"
             },
             "Immutable Form": {
-              "name": "形态不变",
-              "description": "<p>该[[lookup @name lowercase]]免疫任何会改变其形态的法术或效应。</p>"
+              "name": "不变形态",
+              "description": "<p>[[lookup @name lowercase]]免疫任何可以改变其形态的法术或效应。</p>"
             }
           },
           "effects": {
@@ -1987,40 +1987,40 @@
           "items": {
             "Slam": {
               "name": "猛击",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>如果目标是一个生物, 它必须成功通过一次[[/save]]豁免, 否则其生命值上限将减少等同于所受伤害的数值。如果此攻击将其生命值上限降至0, 则目标死亡。此效果将持续至被<em>高等复原术</em>或其他魔法移除为止。</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>如果目标为一个生物，则它必须进行一次[[/save]]豁免，豁免失败者的生命值上限将受到数值等同于伤害值的减损。如果该攻击使目标的生命值上限降至 0，则目标死亡。该减损将一直持续至被法术<em>高等复原术 greater restoration</em>或其他魔法移除。</p>"
             },
             "Haste": {
-              "name": "加速术",
-              "description": "<p>直到其下个回合结束, 该魔像魔法性地获得AC+2加值, 进行敏捷豁免时具有优势, 并且可以用其猛击攻击作为附赠动作。</p>"
+              "name": "加速",
+              "description": "<p>魔像直至自己的下一回合结束前以魔法获得一个 +2 的AC加值，其敏捷豁免具有优势，并且能够以一个附赠动作使用它的猛击攻击。</p>"
             },
             "Magic Resistance": {
               "name": "魔法抗性",
-              "description": "<p>该魔像在对抗法术和其他魔法效应的豁免中具有优势。</p>"
+              "description": "<p>魔像抵抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Berserk": {
               "name": "狂暴",
-              "description": "<p>每当魔像以60或更少的生命值开始其回合时, 投一个[[/r d6]]。如果结果为6, 魔像进入狂暴状态。在狂暴状态下的每个回合, 魔像会攻击它能看见的最近的生物。如果没有足够近的生物可供移动和攻击, 魔像会攻击一个物件, 优先选择比自己小的物件。一旦魔像进入狂暴状态, 它会一直如此, 直到被摧毁或恢复所有生命值。</p>"
+              "description": "<p>魔像以 60 或更低生命值开始其自己回合时骰一次[[/r d6]]，骰值为 6 时，魔像开始失心狂怒。魔像将在狂怒持续期间每个自己回合里攻击距离它最近且它能看见的生物。如果在其移动并攻击的范围内没有符合条件的生物，则该魔像将攻击一个物件，并且会优先选择比自己体型尺寸更小的物件。魔像一旦开始狂怒，便会一直持续到被破坏或回复所有生命值为止。</p>"
             },
             "Immutable Form": {
-              "name": "形态不变",
-              "description": "<p>该魔像免疫任何会改变其形态的法术或效应。</p>"
+              "name": "不变形态",
+              "description": "<p>魔像免疫任何可以改变其形态的法术或效应。</p>"
             },
             "Magic Weapons": {
               "name": "魔法武器",
-              "description": "<p>该魔像的武器攻击是魔法性的。</p>"
+              "description": "<p>魔像的武器攻击视为魔法攻击。</p>"
             },
             "Acid Absorption": {
               "name": "强酸吸收",
-              "description": "<p>每当魔像受到强酸伤害时, 它不会受到伤害, 而是恢复等同于所受强酸伤害的生命值。</p>"
+              "description": "<p>魔像受强酸伤害时不会损伤，反而会恢复与伤害值相等的生命值。</p>"
             },
             "Multiattack": {
               "name": "多重攻击",
-              "description": "<p>该魔像发动两次[[/item .vEEJei0CNaNbfQ2w]]{猛击 slam}攻击。</p>"
+              "description": "<p>魔像发动两次[[/item .vEEJei0CNaNbfQ2w]]{猛击}攻击。</p>"
             }
           }
         },
         "Commoner (Female)": {
-          "name": "平民(女性)",
+          "name": "平民（女性）",
           "tokenName": "平民",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
@@ -2031,7 +2031,7 @@
           }
         },
         "Commoner (Male)": {
-          "name": "平民(男性)",
+          "name": "平民（男性）",
           "tokenName": "平民",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
@@ -2051,8 +2051,8 @@
               "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
             },
             "Constrict": {
-              "name": "紧勒",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>目标&amp;Reference[grappled](逃脱DC 14)。直到此擒抱结束, 该生物被束缚, 且该蛇不能紧勒另一个目标。</p>"
+              "name": "绞缠",
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>且目标&Reference[grappled apply=false]{受擒}（逃脱DC 14）。直到擒抱解除前目标被&Reference[restrained apply=false]{束缚}，且该蛇不能绞缠另一目标。</p>"
             }
           }
         },
@@ -2063,16 +2063,16 @@
           "items": {
             "Bite": {
               "name": "啃咬",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>目标必须成功通过一次[[/save]]豁免, 否则将&amp;Reference[poisoned apply=false]24小时。直到此毒素效果结束, 目标&amp;Reference[unconscious apply=false]。另一个生物可以用一个动作摇醒目标。</p>",
+              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>目标必须进行一次[[/save]]豁免，豁免失败则陷入24小时的&Reference[poisoned apply=false]状态。中毒期间目标陷入&Reference[unconscious apply=false]。其他生物可以用一个动作来摇醒该目标。</p>",
               "effects": {
                 "Poisoned": {
                   "name": "中毒",
-                  "description": "<p>直到此毒素效果结束, 目标陷入昏迷。另一个生物可以用一个动作摇醒目标。</p>"
+                  "description": "<p>中毒期间目标陷入昏迷。其他生物可以用一个动作来摇醒该目标。</p>"
                 }
               }
             },
             "Constrict": {
-              "name": "紧勒",
+              "name": "绞缠",
               "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>目标被擒抱(逃脱[[/check]])。直到此擒抱结束, 目标被束缚, 且该[[lookup @name lowercase]]不能紧勒另一个目标。</p>",
               "activities": {
                 "Escape Check": {
@@ -2663,7 +2663,7 @@
             },
             "Plate Armor": {
               "name": "板甲",
-              "description": "<p>板甲由塑形的、相互连锁的金属板组成,覆盖全身。一套板甲包括铁手套、重型皮靴、一个带面甲的头盔,以及护甲下面的厚垫层。搭扣和皮带将重量分散到全身。</p>"
+              "description": "<p>板甲由覆盖全身，且相互连接的模铸金属板组成。一套板甲包括护手、重皮靴、一顶附面甲的头盔以及在护甲底层的厚重的布甲。其锁扣和皮带结构可以将护甲重量分配到身体各处。</p>"
             },
             "Longbow": {
               "name": "长弓",
@@ -2928,7 +2928,7 @@
             },
             "Immutable Form": {
               "name": "形态不变",
-              "description": "<p>魔像免疫任何会改变其形态的法术或效应。</p>"
+              "description": "<p>魔像免疫任何可以改变其形态的法术或效应。</p>"
             },
             "Lightning Absorption": {
               "name": "闪电吸收",
@@ -2936,7 +2936,7 @@
             },
             "Magic Resistance": {
               "name": "魔法抗性",
-              "description": "<p>魔像在对抗法术和其他魔法效应的豁免检定中具有优势。</p>"
+              "description": "<p>魔像抵抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Magic Weapons": {
               "name": "魔法武器",
@@ -4680,7 +4680,7 @@
           "items": {
             "Plate Armor": {
               "name": "板甲",
-              "description": "<p>板甲由覆盖全身的定型、互锁的金属板组成。一套板甲包括铁手套、重型皮靴、带面甲的头盔以及盔甲下的厚垫层。搭扣和皮带将重量分布到全身。</p>"
+              "description": "<p>板甲由覆盖全身，且相互连接的模铸金属板组成。一套板甲包括护手、重皮靴、一顶附面甲的头盔以及在护甲底层的厚重的布甲。其锁扣和皮带结构可以将护甲重量分配到身体各处。</p>"
             },
             "Multiattack": {
               "name": "多重攻击",
@@ -6341,7 +6341,7 @@
               "description": "<p>[[/attack extended]]. 如果该勇士的生命值大于其总生命值的一半,则造成[[/damage extended average]]伤害。</p>",
               "activities": {
                 "Attack: Half or Less HP": {
-                  "name": "攻击：一半或更少生命值"
+                  "name": "攻击：生命值少于一半"
                 }
               }
             },
@@ -6350,13 +6350,13 @@
               "description": "<p>[[/attack extended]]. 如果该勇士的生命值大于其总生命值的一半,则造成[[/damage extended average]]伤害。</p>",
               "activities": {
                 "Attack: Half or Less HP": {
-                  "name": "攻击：一半或更少生命值"
+                  "name": "攻击：生命值少于一半"
                 }
               }
             },
             "Indomitable": {
               "name": "不屈",
-              "description": "<p>[[lookup @name]]可以重投一次失败的豁免。</p>"
+              "description": "<p>[[lookup @name]]重骰一次失败的豁免。</p>"
             },
             "Second Wind": {
               "name": "回气",
@@ -6768,11 +6768,11 @@
           "items": {
             "Immutable Form": {
               "name": "不变形态",
-              "description": "<p>魔像免疫任何会改变其形态的法术或效果。</p>"
+              "description": "<p>魔像免疫任何可以改变其形态的法术或效应。</p>"
             },
             "Magic Resistance": {
               "name": "魔法抗性",
-              "description": "<p>魔像在对抗法术和其他魔法效应的豁免检定上具有优势。</p>"
+              "description": "<p>魔像抵抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Magic Weapons": {
               "name": "魔法武器",
@@ -7297,7 +7297,7 @@
             },
             "Plate Armor": {
               "name": "板甲",
-              "description": "<p>板甲由成形的、相互扣合的金属板组成,覆盖全身。一套板甲包括手套、重型皮靴、带面甲的头盔,以及盔甲下的厚垫层。搭扣和带子将重量分散到全身。</p>"
+              "description": "<p>板甲由覆盖全身，且相互连接的模铸金属板组成。一套板甲包括护手、重皮靴、一顶附面甲的头盔以及在护甲底层的厚重的布甲。其锁扣和皮带结构可以将护甲重量分配到身体各处。</p>"
             },
             "Berserk": {
               "name": "狂暴",
@@ -7309,7 +7309,7 @@
             },
             "Immutable Form": {
               "name": "形态不变",
-              "description": "<p>魔像免疫任何会改变其形态的法术或效应。</p>"
+              "description": "<p>魔像免疫任何可以改变其形态的法术或效应。</p>"
             },
             "Lightning Absorption": {
               "name": "闪电吸收",
@@ -7317,7 +7317,7 @@
             },
             "Magic Resistance": {
               "name": "魔法抗性",
-              "description": "<p>魔像在对抗法术和其他魔法效应的豁免检定上具有优势。</p>"
+              "description": "<p>魔像抵抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Magic Weapons": {
               "name": "魔法武器",
@@ -10534,7 +10534,7 @@
           "items": {
             "Plate Armor": {
               "name": "Plate Armor",
-              "description": "<p>Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.</p>"
+              "description": "<p>板甲由覆盖全身，且相互连接的模铸金属板组成。一套板甲包括护手、重皮靴、一顶附面甲的头盔以及在护甲底层的厚重的布甲。其锁扣和皮带结构可以将护甲重量分配到身体各处。</p>"
             },
             "Multiattack": {
               "name": "Multiattack",
