@@ -29,14 +29,16 @@ def process_json_files(root_dir):
                     # 处理JSON数据
                     update_name_fields(data)
                     
-                    # 写到/translate/cn-with-english目录
-                    translate_dir = os.path.join(os.path.dirname(file_path), "cn-with-english")
+                    # 写到/translation/cn-with-english目录（与cn目录同级）
+                    # 获取translation目录路径
+                    translation_dir = os.path.dirname(root_dir)
+                    translate_dir = os.path.join(translation_dir, "cn-with-english")
                     os.makedirs(translate_dir, exist_ok=True)
                     translate_file_path = os.path.join(translate_dir, file)
                     with open(translate_file_path, 'w', encoding='utf-8') as f:
                         json.dump(data, f, ensure_ascii=False, indent=2)
                     
-                    print(f"已处理文件: {file_path}")
+                    print(f"已处理文件: {file_path} -> {translate_file_path}")
                 except Exception as e:
                     print(f"处理文件时出错 {file_path}: {e}")
 
