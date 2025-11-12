@@ -1,0 +1,2736 @@
+{
+  "label": "特性",
+  "folders": {
+    "Hag Coven Features": "鬼婆集会特性",
+    "Lair Actions": "巢穴动作",
+    "Mystic Connection": "神秘联结",
+    "Bird": "鸟",
+    "Powers": "能力",
+    "Bear": "熊",
+    "Fiend Traits": "邪魔特质",
+    "Ancestry Features": "先祖特性",
+    "Retainer Features": "随从特性",
+    "Cat": "猫",
+    "Animal Optional Features": "动物可选特性",
+    "Companion Features": "伴日特性",
+    "Environment Traits": "环境特质",
+    "Insect": "昆虫",
+    "Ancestries": "先祖传承"
+  },
+  "entries": {
+    "Earthen Strength": {
+      "name": "大地之力 Earthen Strength",
+      "description": "<p>以一个附赠动作，你的肢体变得沉重，并在1分钟内以惊人的力量挥舞。在持续时间内，当你以一次近战武器攻击命中体型不比你大超过一个等级或更小的生物时，该生物也会被击倒&amp;Reference[prone]。一旦你使用了这个附赠动作，直到你完成一次长休前，你都不能再次这样做。</p>",
+      "effects": {
+        "Earthen Strength": {
+          "name": "大地之力 Earthen Strength"
+        }
+      }
+    },
+    "Poisoned Blade": {
+      "name": "中毒刀锋 Poisoned Blade",
+      "description": "<p>作为一个附赠动作，该潜伏者用特殊毒素涂抹一把匕首，效果持续1小时或直到潜伏者用标志性攻击命中一个生物。被涂毒匕首命中的生物必须进行一次[[/save]]豁免。豁免失败时，目标受到[[/damage]]伤害并&amp;reference[poisoned]1分钟（豁免在回合结束时结束）。豁免成功时，目标仅受到一半伤害且不会中毒。</p><fieldset><legend>Foundry 注</legend><p>该附魔应仅应用于潜伏者的标志性攻击。</p></fieldset>",
+      "activities": {
+        "Coat Dagger": {
+          "name": "外套匕首 Coat Dagger",
+          "affects": {
+            "special": "目标的标志性攻击武器。"
+          }
+        },
+        "Coated Poison Save": {
+          "name": "涂毒豁免 Coated Poison Save",
+          "condition": "命中时。",
+          "affects": {
+            "special": "被该攻击命中的生物。"
+          }
+        }
+      },
+      "effects": {
+        "Poisoned Blade": {
+          "name": "中毒刀锋 Poisoned Blade",
+          "description": "<p>你的匕首涂有特殊毒素，持续1小时或直到你用标志性攻击命中一个生物。如果被匕首命中，该生物必须进行一次体质豁免，豁免失败则受到毒素伤害并中毒1分钟（豁免在回合结束时结束），豁免成功则受到一半伤害且不会中毒。</p>"
+        }
+      }
+    },
+    "Bite Attack": {
+      "name": "啃咬攻击 Bite Attack",
+      "description": "<p>[[lookup @name lowercase]]可以使用它们的牙齿进行[[lookup @name lowercase]]选择的[[Attack Roll]]，使用[[Strength]]或[[Dexterity]]进行[[unarmed strike]]。当[[lookup @name lowercase]]用牙齿命中时，该打击造成1d6 + [[lookup @name lowercase]]的[[Strength]]或[[Dexterity]][[modifier]][[piercing damage]]，而非通常[[unarmed strike]]造成的[[bludgeoning damage]]。</p>"
+    },
+    "Lair Actions: Ruined Keep": {
+      "name": "巢穴动作：残破要塞 Lair Actions: Ruined Keep",
+      "description": "<p>在先攻值20时(出现等值时视为后手)，这座毁损要塞生物可以执行下列巢穴动作之一；该生物不能连续两轮执行相同的巢穴动作：</p><p><strong>崩落碎石。</strong>建筑结构的碎块在毁损要塞生物周围30尺范围内崩塌成三个5尺立方体。位于这些区域的生物必须进行一次DC 12，外加[[lookup @prof.flat]]的敏捷豁免，豁免失败则受到[[lookup @prof.flat]]d6钝击伤害。这些区域变为困难地形。</p><p><strong>急速陷落。</strong>毁损要塞生物使其周围30尺内一处5尺见方的地板塌陷，向下层打开一个缺口。位于该区域的中型或更小的生物必须进行一次DC 12，外加[[lookup @prof.flat]]的敏捷豁免，豁免失败则会跌落至下层。</p><p><strong>摇摇欲坠。</strong>腐朽的梁木与破损的砖石剧烈摇晃，移位，倾颓。毁损要塞生物周围60尺内的其他所有生物必须进行一次DC 12，外加[[lookup @prof.flat]]的力量豁免，豁免失败则倒地&amp;Reference[prone]。飞行生物自动通过该豁免。</p>",
+      "activities": {
+        "Crumbling Rubble": {
+          "name": "碎裂的瓦砾 Crumbling Rubble"
+        },
+        "Express Descent": {
+          "name": "急速下降 Express Descent"
+        },
+        "Swaying Structure": {
+          "name": "摇摇欲坠的结构 Swaying Structure"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Thrashing Tail": {
+      "name": "甩尾 Thrashing Tail",
+      "description": "<p>作为一个动作，该猎人可对大型或更小的生物发动一次标志性攻击。若命中，目标必须进行一次[[/save]]豁免，否则将倒地&amp;reference[prone]。当猎人位于该倒地目标5尺范围内时，除非使用动作进行[[/check]]检定，否则目标无法起身。若检定成功，目标可以起身。</p>",
+      "activities": {
+        "Stand Up Check": {
+          "name": "起身检定 Stand Up Check",
+          "condition": "当目标试图站起来时。",
+          "affects": {
+            "special": "目标试图站起来。"
+          }
+        }
+      }
+    },
+    "Liquefied Meal": {
+      "name": "液化餐食 Liquefied Meal",
+      "description": "<p>飞龙猛扑向5尺内一个大型或更小的生物，试图用强酸融化猎物的肉体并饮下。目标必须进行一次[[/save]]豁免，否则倒地并受到[[/damage]]伤害。飞龙获得等于所造成强酸伤害的临时生命值。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "大型或更小的"
+          }
+        }
+      }
+    },
+    "Relentless Rush": {
+      "name": "无尽冲锋 Relentless Rush",
+      "description": "<p>当铁匠未处于失能状态且受到伤害但未被直接杀死时，他们可以在生命值扣除结算前对敌人发动一次攻击（无需动作）。若该攻击命中，铁匠将恢复两倍熟练加值的生命值。</p>",
+      "activities": {
+        "heal": {
+          "condition": "当使用此特性发动的攻击命中时。"
+        }
+      }
+    },
+    "Melting Grasp": {
+      "name": "熔融之握 Melting Grasp",
+      "description": "<p>当据点用标志性攻击命中一个生物时，该生物额外受到[[lookup @prof.flat]]d4点火焰伤害。如果目标正持用一把普通的金属武器，据点会部分熔化目标的武器，使其攻击和伤害骰获得永久的−2减值。如果目标正持用一把超自然的金属武器，该减值仅持续1小时。</p>",
+      "activities": {
+        "Mundane Weapon Penalty": {
+          "name": "凡俗武器减值 Mundane Weapon Penalty",
+          "condition": "当据点用标志性攻击命中一个生物时。",
+          "affects": {
+            "special": "一把普通的金属武器。"
+          }
+        },
+        "Supernatural Weapon Penalty": {
+          "name": "超自然武器减值 Supernatural Weapon Penalty",
+          "condition": "当据点用标志性攻击命中一个生物时。",
+          "affects": {
+            "special": "一把超自然的金属武器。"
+          }
+        },
+        "Use + Extra Damage": {
+          "name": "使用 + 额外伤害 Use + Extra Damage",
+          "condition": "当据点使用标志性攻击命中一个生物时。"
+        }
+      },
+      "effects": {
+        "Melting Grasp - Mundane": {
+          "name": "熔融之握 - 凡俗 Melting Grasp - Mundane"
+        },
+        "Melting Grasp - Supernatural": {
+          "name": "熔融之握 - 超自然 Melting Grasp - Supernatural"
+        }
+      }
+    },
+    "True Name": {
+      "name": "真名 True Name",
+      "description": "<p>如果一个生物在[[lookup @name lowercase]]60尺内能听到它大声说出[[lookup @name lowercase]]的真名，[[lookup @name lowercase]]将在24小时内失去其伤害抗性，伤害免疫和魔鬼魅惑反应。</p><fieldset><legend>Foundry 注</legend><p>此特性附带一个被动效果，当怪物听到其名字时将其切换为“开启”状态以移除伤害抗性和免疫。</p></fieldset>",
+      "effects": {
+        "True Name": {
+          "name": "真名 True Name",
+          "description": "<p>该生物的真名已被念出，它们在24小时内失去伤害抗性、伤害免疫和魔鬼魅惑反应。</p>"
+        }
+      }
+    },
+    "Lair Actions: Xaantikorijek": {
+      "name": "巢穴动作：Xaantikorijek Lair Actions: Xaantikorijek",
+      "description": "<p>在其巢穴内战斗时，赞提科里耶克可以执行巢穴动作。在先攻值20时（出现等值时视为后手），他能执行一个巢穴动作以产生下列效应其一；他不能连续两轮使用相同的巢穴动作：</p><p><strong>回荡咆哮。</strong> 赞提科里耶克发出一声响彻巢穴的咆哮。巢穴内的每个敌人必须进行一次[[/save]]豁免，豁免失败则受到[[/damage average]]伤害，豁免成功则伤害减半。</p><p><strong>流沙领域。</strong> 赞提科里耶克魔法性地转变其周边120尺内一个可见点的20尺方格区域，将其化为流动的流沙。直到下一轮先攻值20前，该区域视为困难地形，且在其回合开始时位于该区域或该回合首次进入该区域的生物将陷入&amp;Reference[束缚]。生物可用其动作进行一次[[/check strength 15]]检定，成功则使自己或一个触及范围内的生物挣脱束缚。若地面恢复正常时仍有生物以此方式受困，则其保持束缚状态且挣脱DC扩展至[[/check strength 20]]{20}。</p><p><strong>龙族忆识。</strong> 赞提科里耶克汲取自身对失传魔法的记忆，并选择巢穴内一个可见的单一生物。赞提科里耶克将洞悉该生物生命中的重要秘密与细节。此外，直到下一轮先攻值20前，赞提科里耶克对该目标发动的攻击检定具有优势。</p>",
+      "activities": {
+        "Echoing Roar": {
+          "name": "回响咆哮 Echoing Roar"
+        },
+        "Quicksand": {
+          "name": "流沙 Quicksand"
+        },
+        "Wyrm's Memories": {
+          "name": "古龙记忆 Wyrm's Memories"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        },
+        "Memorized": {
+          "name": "已记忆 Memorized",
+          "description": "<p>Xaantikorijek在攻击你时具有优势，此优势持续到下一轮先攻值20结束。</p>"
+        }
+      }
+    },
+    "Call of the Dead": {
+      "name": "亡者呼唤 Call of the Dead",
+      "description": "<p>当谄媚魔用其标志性攻击命中一个生物时，目标还必须成功通过一次[[/save]]豁免，否则将对谄媚魔陷入&amp;reference[恐慌]状态，持续1分钟（豁免于其回合结束时终止）。</p>",
+      "activities": {
+        "save": {
+          "condition": "当随从使用标志性攻击命中一个生物时。",
+          "affects": {
+            "special": "被该攻击命中的生物。"
+          }
+        }
+      }
+    },
+    "Storm of Talons": {
+      "name": "利爪暴风 Storm of Talons",
+      "description": "<p>该[[lookup @name lowercase]]移动至其速度上限且不触发借机攻击，然后可俯冲向5尺内的单一生物。目标必须进行一次DC [[lookup @save.dc.value activity=9rAX8IDpkPN3GR5s]]敏捷豁免。豁免失败则目标受到[[lookup @prof.flat]]d10挥砍伤害，并陷入&amp;Reference[blinded]状态直至该[[lookup @name lowercase]]的下个回合结束。豁免成功则目标仅受半数伤害且不陷入目盲。</p>"
+    },
+    "Vanish for One": {
+      "name": "一人匿踪 Vanish for One",
+      "description": "<p><em>2环心灵感应异能</em></p><p>你在射程内一个你能看见的生物视线中隐匿自身。目标必须进行感知豁免，否则你在持续时间内对其变为&amp;reference[invisible]（豁免在回合结束时结束）。若你攻击该生物、对其造成伤害或创造迫使其进行豁免的效果，此效应提前终止。</p><p><strong>升阶效应。</strong>当你显能此异能时，可将其环阶提升1环，使其显能时间变为1附赠动作。</p>",
+      "activities": {
+        "Vanish for One": {
+          "name": "单人匿踪 Vanish for One"
+        },
+        "Vanish for One: Increased Order (Bonus Action)": {
+          "name": "一人消逝：强化秩序（附赠动作） Vanish for One: Increased Order (Bonus Action)"
+        }
+      }
+    },
+    "Aerial Pursuit": {
+      "name": "空中追击 Aerial Pursuit",
+      "description": "<p>当该鸟在它们的回合开始时处于空中，它们可以将飞行速度提升至三倍，直到其回合结束。如果它们在该回合中下降至少30尺，则其在回合结束前进行的下一次攻击具有优势。(取代高速俯冲特性。)</p>",
+      "activities": {
+        "utility": {
+          "condition": "当在空气中开始其回合时。"
+        }
+      }
+    },
+    "Adhesive Pseudopods": {
+      "name": "黏性伪足 Adhesive Pseudopods",
+      "description": "<p>[[lookup @name lowercase]]试图附着在其5尺范围内的每个其选择的生物身上。每个目标必须进行一次[[/save]]豁免，或陷入&amp;reference[grappled]状态（逃脱DC 10，外加[[lookup @prof.flat]]）。</p>"
+    },
+    "Adept Climber": {
+      "name": "熟练攀爬者 Adept Climber",
+      "description": "<p>该熊拥有25尺的攀爬速度。</p>",
+      "effects": {
+        "Adept Climber": {
+          "name": "熟练攀爬者 Adept Climber",
+          "description": "<p>你拥有25尺的攀爬速度。</p>"
+        }
+      }
+    },
+    "Lair Actions: Forzaantilirys": {
+      "name": "巢穴动作：Forzaantilirys Lair Actions: Forzaantilirys",
+      "description": "<p>在她的巢穴内战斗时，福赞蒂莉瑞丝可以执行巢穴动作。在先攻值20时（出现等值时视为后手），她可以执行一次巢穴动作以产生下列效应其一；她不能连续两轮使用相同的巢穴动作：</p><p><strong>烈焰步伐。</strong> 福赞蒂莉瑞丝在一阵火焰中短暂消失，并传送至她30尺内她能看见的一个未占据空间。在福赞蒂莉瑞丝离开的空间5尺内的每个生物必须进行一次[[/save activity=QNglKIr6nYMQWPZZ]]豁免，否则受到[[/damage average activity=QNglKIr6nYMQWPZZ]]伤害。</p><p><strong>坚毅之光。</strong> 福赞蒂莉瑞丝在她120尺内她能看见的一点处，使一道冲击性的光芒在一个30尺半径球状区域内爆发。该区域内的每个生物必须进行一次[[/save activity=i3RcrjrOQanY3yfO]]豁免，否则受到[[/damage average activity=i3RcrjrOQanY3yfO]]伤害并被沿任意水平方向移动最多20尺。</p><p><strong>激怒。</strong> 福赞蒂莉瑞丝将炽烈的狂暴注入她120尺内她能看见的一个单一生物。该生物必须进行一次[[save activity=CD1fMQvPwxxFSkDj]]豁免。豁免失败，目标受到[[/damage average activity=CD1fMQvPwxxFSkDj]]伤害，并且直到其下一回合结束前，其攻击检定具有优势，且针对其的攻击也具有优势。</p>",
+      "activities": {
+        "Flaming Step": {
+          "name": "烈焰步伐 Flaming Step"
+        },
+        "Hard Light": {
+          "name": "硬光 Hard Light"
+        },
+        "Inflame": {
+          "name": "煽动 Inflame"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        },
+        "Inflamed": {
+          "name": "发炎 Inflamed",
+          "description": "<p>直到你的下个回合结束，你在攻击检定上具有优势，而针对你的攻击也具有优势。</p>"
+        }
+      }
+    },
+    "Food Grab": {
+      "name": "食物抢夺 Food Grab",
+      "description": "<p>当雏龙用标志性攻击命中一个中型或更小的生物时，目标也会&amp;reference[grappled]（逃脱DC 10，外加[[lookup @prof.flat]]）。然后雏龙可移动至多其飞行术速度，且不触发借机攻击（无需动作）。在擒抱目标时，雏龙无法攻击另一个生物。</p>",
+      "activities": {
+        "Consume Usage": {
+          "name": "消耗使用次数 Consume Usage",
+          "condition": "当该侍从用标志性攻击命中一个中型或更小的生物时。",
+          "affects": {
+            "special": "被该攻击命中的生物。"
+          }
+        }
+      }
+    },
+    "Essence Drainer": {
+      "name": "精华汲取者 Essence Drainer",
+      "description": "<p>当你以一次攻击命中一个生物时，你可以造成2d6点额外伤害。你恢复等同于该额外伤害的生命值。你可以使用此额外伤害的次数等于你的熟练加值，完成一次长休后恢复全部使用次数。</p>"
+    },
+    "Gobbling Bite": {
+      "name": "狼吞虎咽啃咬 Gobbling Bite",
+      "description": "<p>[[lookup @name lowercase]]以优势进行一次标志性攻击。若命中，该攻击额外造成[[lookup @prof]]点暗蚀伤害，且[[lookup @name lowercase]]恢复等同于所造成暗蚀伤害的生命值。</p>"
+    },
+    "Heat Seeker": {
+      "name": "热源追踪者 Heat Seeker",
+      "description": "<p>作为一个动作，该战术家发动一次标志性攻击，但无需为其进行攻击检定。相反，这次攻击自动命中，且目标30尺范围内的每个盟友都可以使用其反应向目标移动至多其速度的距离。</p>",
+      "activities": {
+        "Consume Usage": {
+          "name": "消耗使用次数 Consume Usage",
+          "range": {
+            "special": "标志性攻击的目标是射程的起点。"
+          }
+        }
+      }
+    },
+    "Harpy Song": {
+      "name": "鸟妖之歌 Harpy Song",
+      "description": "<p>作为一个动作，这只雏鸟开始歌唱1分钟。所有在雏鸟60尺范围内、能听到其歌声且理解通用语或巨人语的生物，必须进行一次[[/save]]豁免，否则将被雏鸟&reference[charmed]，直到它们听不到雏鸟的歌声为止。以此方式被魅惑时，生物不能自愿伤害雏鸟的任何盟友。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "必须能够听到侍从的声音并理解通用语或巨人语。"
+          }
+        }
+      }
+    },
+    "Wide Sweep": {
+      "name": "大范围横扫 Wide Sweep",
+      "description": "<p>作为一个动作，猛击者挥舞其尖刺短棒划出一个巨大的圆圈，对10尺内的每个敌人进行一次标志性攻击。此攻击在攻击和伤害骰上具有+[[lookup @prof]]加值，且如果它命中一个大型或更小的生物，猛击者可以将目标推开至多10尺。</p><fieldset><legend>Foundry 注</legend><p>此特性的行动可用于赋予随从一个效果，使其在攻击和伤害骰上暂时获得熟练加值。</p></fieldset>",
+      "effects": {
+        "Wide Sweep": {
+          "name": "大范围横扫 Wide Sweep"
+        }
+      }
+    },
+    "Crafty": {
+      "name": "狡猾 Crafty",
+      "description": "<p>[[lookup @name lowercase]]在离开敌人的触及范围时，不触发借机攻击。</p>"
+    },
+    "Tongue Grab": {
+      "name": "舌缚擒拿 Tongue Grab",
+      "description": "<p>[[lookup @name lowercase]]发动一次标志性攻击。若命中，目标还将陷入&amp;Reference[grappled]状态（逃脱DC 10，外加[[lookup @prof.flat]]）。此&amp;Reference[grappled]状态持续期间，目标处于&amp;Reference[restrained]状态，且[[lookup @name lowercase]]无法对其他目标发动标志性攻击。</p>"
+    },
+    "Low-Light Senses": {
+      "name": "微光感官 Low-Light Senses",
+      "description": "<p>该[[lookup @name lowercase]]获得&amp;Reference[盲视]或&amp;Reference[黑暗视觉]，范围为60尺。</p>",
+      "effects": {
+        "Darkvision": {
+          "name": "黑暗视觉 Darkvision"
+        },
+        "Blindsight": {
+          "name": "盲视 Blindsight"
+        }
+      }
+    },
+    "Night Hunter": {
+      "name": "暗夜猎手 Night Hunter",
+      "description": "<p>这只鸟拥有{黑暗视觉 darkvision}，范围为120尺，并且在{敏捷（隐匿）检定}上具有+5{加值}。</p>",
+      "effects": {
+        "Night Hunter": {
+          "name": "夜之猎手 Night Hunter",
+          "description": "<p>你拥有{黑暗视觉 darkvision}，范围可达120尺，并且在{敏捷（隐匿）检定 Dexterity (Stealth) checks}上获得+5加值。</p>"
+        }
+      }
+    },
+    "Eruption": {
+      "name": "爆发 Eruption",
+      "description": "<p>作为一个动作，该据点爆发，从其头部喷射出一片30尺锥状的泥土和熔岩。该区域内的每个生物必须进行一次[[/save]]豁免。豁免失败时，目标受到[[/damage]]伤害并被击&amp;reference[prone]。豁免成功时，目标仅受到一半伤害且不会被击倒。熔岩会绕过拐角蔓延，并点燃该区域内未被穿戴或携带的可燃物。</p>"
+    },
+    "Lair Actions: Tomb": {
+      "name": "巢穴动作：墓穴 Lair Actions: Tomb",
+      "description": "<p>在先攻值20（出现等值时视为后手）时，该陵墓生物可以执行下列巢穴动作之一；该陵墓生物不能连续两轮执行相同的巢穴动作：</p><p><strong>苦痛合唱。</strong> 陵墓生物号令亡者之魂哀嚎。陵墓生物120尺范围内的每个生物必须进行一次DC 12，外加[[lookup @prof.flat]]的感知豁免，豁免失败则对陵墓生物陷入&amp;Reference[frightened]状态，持续至下一轮先攻值20结束。</p><p><strong>亵渎之地。</strong> 陵墓生物汲取环境中的暗蚀能量，获得2 × [[lookup @prof]]点临时生命值。这些临时生命值持续至下一轮先攻值20结束。</p><p><strong>墓穴之握。</strong> 不安亡者的尸骸与灵魂试图将生者拖入坟墓。陵墓生物60尺范围内的所有地面变为困难地形，持续至下一轮先攻值20结束。亡灵生物无视此困难地形。</p>",
+      "activities": {
+        "Chorus of Torment": {
+          "name": "苦痛合唱 Chorus of Torment"
+        },
+        "Desecrated Ground": {
+          "name": "亵渎之地 Desecrated Ground"
+        },
+        "Grave Grasp": {
+          "name": "墓穴之握 Grave Grasp"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Dream Spores": {
+      "name": "梦尘 Dream Spores",
+      "description": "<p><em>5环心灵感应能力</em></p><p>你释放出一阵灵能孢子。每个你能看见的,位于你30尺范围内的生物必须进行一次[[/save]]豁免,否则将在持续时间内被你&amp;reference[charmed]。以此方式被魅惑时,生物必须在它的回合中使用移动力,通过最安全的可用路线移动到距离你10尺范围内。</p><p>以此方式被魅惑的生物每当受到伤害时,可以重复该豁免,成功则结束其身上的该效应。</p>"
+    },
+    "Enraged Barrage": {
+      "name": "狂怒连射 Enraged Barrage",
+      "description": "<p>作为一个动作，守护者发动一次标志性攻击。其30尺内能看见他的每位盟友可以使用一个反应来发动一次武器攻击，施展一个施法时间为1动作的戏法，或显现一个显现时间为1动作的1环异能。</p>",
+      "activities": {
+        "utility": {
+          "affects": {
+            "special": "可以看到怪物。"
+          }
+        }
+      }
+    },
+    "Lair Actions: Medusa": {
+      "name": "巢穴动作: 美杜莎 Lair Actions: Medusa",
+      "description": "<p>当在其巢穴内战斗时，美杜莎可以执行巢穴动作。在先攻值20时（出现等值时视为后手），美杜莎可以执行一次巢穴动作以产生下列效应其一；美杜莎不能连续两轮使用相同的巢穴动作：</p><p><strong>毒液喷淋。</strong>黑色毒液如雨般降下，形成一个以美杜莎可见的90尺内某点为中心，10尺半径、40尺高的柱状区域。该区域内的每个生物必须进行[[/save activity=IyArTlR8LAG4MNlX]]豁免，否则直到下一轮先攻值20结束时陷入&amp;Reference[poisoned]状态。</p><p><strong>暗影步。</strong>美杜莎传送至多30尺至一个其可见的未占据空间。</p><p><strong>石像哀嚎。</strong>美杜莎巢穴中的雕像发出痛苦的尖叫。美杜莎60尺内能听见此声音的每个敌人必须进行[[/save activity=cRdiksuXlRvRMSss]]豁免，否则直到下一轮先攻值20结束时对美杜莎陷入&amp;Reference[frightened]状态。</p>",
+      "activities": {
+        "Venom Shower": {
+          "name": "毒液之雨 Venom Shower"
+        },
+        "Shadowstep": {
+          "name": "影步 Shadowstep"
+        },
+        "Stony Wail": {
+          "name": "石之哀嚎 Stony Wail"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Tunnel-Adapted": {
+      "name": "隧道适应 Tunnel-Adapted",
+      "description": "<p>在不挤压的情况下，[[lookup @name lowercase]]可以穿过比其体型小一级生物足够大的空间。</p>"
+    },
+    "Mind Splinter": {
+      "name": "心灵裂片 Mind Splinter",
+      "description": "<p><em>1环心灵感应异能</em></p><p>你尝试从射程内一个生物的意识中抹除自身形象。对目标进行一次远程异能攻击。命中时，目标受到1d6心灵伤害，且你在其眼中变为&amp;reference[invisible]状态，持续至你的下个回合开始。</p><p>当你达到5级（2d6）、11级（3d6）和17级（4d6）时，该异能的伤害增加1d6。</p>"
+    },
+    "Drown": {
+      "name": "溺毙 Drown",
+      "description": "<p>作为一个动作，学徒选择三个其可见范围内60尺内的生物。每个目标都感觉肺部仿佛正在被水填满，并且必须进行一次[[/save]]豁免。能够呼吸水或不需要空气的生物自动在此豁免中成功。豁免失败时，目标受到[[/damage]]伤害，并且在1分钟内，它们无法说话，其速度减半，并且陷入&amp;reference[dazed apply=false]状态（豁免于其回合结束时结束）。豁免成功时，目标受到一半伤害且无其他效果。目标5尺内的另一个生物可以使用其动作进行一次DC 10，外加[[lookup @prof.flat]]力量（运动）或智力（医药）检定，成功则结束该效果。</p>",
+      "effects": {
+        "Drowning": {
+          "name": "溺水 Drowning",
+          "description": "<p>你无法说话，你的速度减半，并且你陷入晕眩（豁免通过则于回合结束时结束）。另一个生物可以用一个动作进行一次力量（运动）或智力（医药）检定来终止此效果。</p>"
+        }
+      }
+    },
+    "Explosion": {
+      "name": "爆炸 Explosion",
+      "description": "<p>作为一个动作，战术家向其可见的120尺范围内某点投掷一个火球。火球爆炸形成一个20尺半径的球状区域，迫使该区域内每个敌人进行[[/save]]豁免。豁免失败时，生物受到[[/damage]]伤害并被推离区域中心20尺。豁免成功时，生物仅受半数伤害且不会被推动。火焰会绕过拐角蔓延，并引燃区域内未被穿戴或携带的可燃物。</p>"
+    },
+    "Desert Dweller": {
+      "name": "沙漠居民 Desert Dweller",
+      "description": "<p>野猫会忽略由泥土和沙子造成的困难地形。它们能耐受高达120华氏度的温度，并且只要有新鲜食物就不需要饮水。</p>"
+    },
+    "Shield Bash": {
+      "name": "盾击 Shield Bash",
+      "description": "<p>十夫长试图扳倒一个距其5尺内的中型或更小的生物。该目标必须进行一次[[/save]]豁免，否则被击倒&amp;reference[prone]。无论豁免成功与否，十夫长随后都会对触及范围内的任意生物发动两次标志性攻击。</p>"
+    },
+    "Ruin Climber": {
+      "name": "废墟攀登者 Ruin Climber",
+      "description": "<p>该[[lookup @name lowercase]]生物的攀爬速度等于其步行速度。</p>",
+      "effects": {
+        "Ruin Climber": {
+          "name": "废墟攀登者 Ruin Climber"
+        }
+      }
+    },
+    "Retch": {
+      "name": "作呕 Retch",
+      "description": "<p>该[[lookup @name lowercase]]向一个15尺锥形区域喷吐垃圾。该区域内的每个生物必须进行一次DC [[lookup @save.dc.value activity=GJK2DtQmWUfdgAuS]]体质豁免。豁免失败时，该生物受到[[lookup @prof.flat]]d6毒素伤害并陷入&amp;Reference[poisoned]状态。豁免成功时，该生物仅受到一半伤害且不会中毒。</p>"
+    },
+    "Shredding Claws": {
+      "name": "撕裂爪击 Shredding Claws",
+      "description": "<p>该[[lookup @name lowercase]]对同一目标发动三次标志性的爪击。目标必须进行一次DC [[lookup @save.dc.value activity=fqxtTdPvsTxLjWQg]]魅力豁免，否则将陷入对[[lookup @name lowercase]]的&amp;Reference[恐慌]状态，持续1分钟（豁免在回合结束时结束）。</p>"
+    },
+    "Lair Actions: Underground": {
+      "name": "巢穴动作：地下 Lair Actions: Underground",
+      "description": "<p>在先攻值20时(出现等值时视为后手)，该地下生物可以执行下列巢穴动作之一；该地下生物不能连续两轮执行相同的巢穴动作：</p><p><strong>黑暗云团。</strong> 该地下生物在其周边60尺范围内一个可见点位创造一片20尺半径的魔法黑暗区域。该地下生物可以看穿这片黑暗，黑暗效果持续到下一轮先攻值20时结束，除非被<em>解除魔法</em>法术提前终止。其他具有黑暗视觉的生物无法看穿此黑暗，且除非由3环或更高阶法术创造的光亮，否则无法驱散此黑暗。</p><p><strong>盛宴呼唤。</strong> 该地下生物发出狂乱的嘶吼。直至下一轮先攻值20时结束前，该地下生物周边300尺内能听到其声音的盟友都会陷入狂怒。狂怒状态下，生物进行近战武器攻击检定具有优势，而对其进行的攻击检定也具有优势。</p><p><strong>诡诈地动。</strong> 该地下生物引发地面震颤。其周边30尺内的每个生物必须成功通过一次DC 12，外加[[lookup @prof.flat]]的力量豁免，否则被击倒&Reference[prone]。</p>",
+      "activities": {
+        "Cloud of Darkness": {
+          "name": "黑暗之云 Cloud of Darkness"
+        },
+        "Feasting Call": {
+          "name": "盛宴呼唤 Feasting Call"
+        },
+        "Treacherous Ground": {
+          "name": "险恶地形 Treacherous Ground"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        },
+        "Enraged": {
+          "name": "狂怒 Enraged",
+          "description": "<p>你在近战武器攻击检定上具有优势，而针对你的攻击检定也具有优势。</p>"
+        }
+      }
+    },
+    "Spined Skin": {
+      "name": "棘刺皮肤 Spined Skin",
+      "description": "<p>作为一个附赠动作，你使你的皮肤在1分钟内长出带毒的尖刺。在持续时间内，一个接触你或用近战攻击命中你的生物受到5（1d10）点穿刺伤害，并且他们必须进行一次对抗你异能豁免DC的体质豁免，若失败则中毒1分钟（豁免在回合结束时结束）。一旦你使用此附赠动作，直到你完成一次长休前你都无法再次使用。</p>",
+      "activities": {
+        "save": {
+          "condition": "当一个生物接触你或用一次近战攻击击中你时。"
+        }
+      },
+      "effects": {
+        "Spined Skin": {
+          "name": "棘皮 Spined Skin",
+          "description": "<p>任何接触你或用近战攻击命中你的生物受到5（1d10）点穿刺伤害，且它们必须进行一次体质豁免，若失败则中毒1分钟。</p>"
+        }
+      }
+    },
+    "Earthshaker": {
+      "name": "撼地者 Earthshaker",
+      "description": "<p>[[lookup @name lowercase]]猛击地面，其10尺范围内的每个生物必须进行一次DC [[lookup @save.dc.value activity=vYUT7FuG0cW53v3i]] 敏捷豁免，失败则陷入&amp;Reference[倒地]状态。[[lookup @name lowercase]]的看护者在此次豁免中自动成功。</p>"
+    },
+    "Hunt from the Shadows": {
+      "name": "阴影狩猎 Hunt from the Shadows",
+      "description": "<p>你获得60尺范围的{黑暗视觉 darkvision}。如果你已经拥有{黑暗视觉 darkvision}，其范围增加60尺。此外，若你尚未掌握{隐匿 Stealth}技能则获得该技能熟练项，且你使用该技能进行任何属性检定时{你的熟练加值 your proficiency bonus}翻倍。</p>",
+      "effects": {
+        "Hunt from the Shadows": {
+          "name": "阴影狩猎 Hunt from the Shadows",
+          "description": "<p>你拥有60尺{黑暗视觉 darkvision}，并在{隐匿 Stealth}技能上具有{专精 expertise}。</p>"
+        }
+      }
+    },
+    "Clever Goop": {
+      "name": "聪明黏液 Clever Goop",
+      "description": "<p>[[lookup @name lowercase]]采取躲藏动作并发动一次标志性攻击（以任一秩序）。如果攻击命中大型或更小的生物，目标被击倒&amp;Reference[prone]。当[[lookup @name lowercase]]以这种方式隐藏时，他们可以接近生物或移动到明显可见的区域，而不会自动暴露其位置。</p>"
+    },
+    "Oozomorphism": {
+      "name": "泥形转化 Oozomorphism",
+      "description": "<p>以一个附赠动作，你变得无定形5分钟，连同你所穿戴或携带的任何装备。在持续时间内，你可以穿过窄至1英寸宽的空间而无需挤入，并且你对钝击、穿刺和挥砍伤害具有抗性。一旦你使用此附赠动作，直到完成一次长休前你无法再次这样做。</p>",
+      "effects": {
+        "Oozomorphism": {
+          "name": "泥怪形态 Oozomorphism",
+          "description": "<p>你可以穿过窄至1英寸宽的空间而无需挤身，并且你对钝击、穿刺和挥砍伤害具有抗性。</p>"
+        }
+      }
+    },
+    "Memory Thief": {
+      "name": "记忆窃贼 Memory Thief",
+      "description": "<p><em>4环异能, 专注</em></p><p>该特工以灵能掠夺一个他们能看见的30尺内生物的心智。目标必须进行一次[[/save]]豁免。豁免失败时, 目标受到[[/damage average]]伤害, 且在1分钟内, 目标的熟练加值累计降低1点, 而特工在攻击和伤害骰以及每个特性的豁免DC上获得累计+1加值。豁免成功时, 目标仅受到一半伤害且其熟练加值不会被降低。熟练加值降至0的生物无法形成新思想或说话, 并且其在属性检定, 攻击骰和豁免上具有劣势。</p><fieldset><legend>Foundry 注</legend><p>为支持累计效果, 此物品上活动的效果必须手动拖动到目标角色卡上。</p></fieldset>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "该侍从必须能够看见目标。"
+          }
+        },
+        "Grant Self Bonus": {
+          "name": "赋予自身加值 Grant Self Bonus",
+          "condition": "此特性豁免失败后的后续效果。"
+        }
+      },
+      "effects": {
+        "Memory Thief: Target": {
+          "name": "记忆窃贼：目标 Memory Thief: Target",
+          "description": "<p>你的熟练加值减少1。若此效果使你的熟练加值降至0，你将无法形成新思绪或开口说话，且在属性检定、攻击骰和豁免骰上具有劣势。</p>"
+        },
+        "Memory Thief: Self Bonus": {
+          "name": "记忆窃贼：自身加值 Memory Thief: Self Bonus",
+          "description": "<p>你的攻击和伤害骰，以及所有特性的豁免DC获得累计+1加值。</p>"
+        }
+      }
+    },
+    "Powerful Impact": {
+      "name": "强力冲击 Powerful Impact",
+      "description": "<p>如果该鸟在其回合内至少下降20尺，并紧接着以撕裂爪攻击或爪击命中，则目标额外受到7（2d6）点钝击伤害。（+1挑战等级（CR））</p>",
+      "effects": {
+        "Powerful Impact": {
+          "name": "强力冲击 Powerful Impact",
+          "description": "<p>你的挑战等级（CR）增加1。</p>"
+        }
+      }
+    },
+    "Decapitating Strike": {
+      "name": "断首斩击 Decapitating Strike",
+      "description": "<p>当这只鸟对微型目标造成重击时，目标将被斩首。若目标失去头部无法存活，则会立即死亡。</p>"
+    },
+    "Lair Actions: Enchanted Forest": {
+      "name": "巢穴动作：魔法森林 Lair Actions: Enchanted Forest",
+      "description": "<p>在先攻值20时（出现等值时视为后手），该魔法森林生物可以执行下列巢穴动作之一；该魔法森林生物不能连续两轮执行相同的巢穴动作：</p><p><strong>沸腾植物。</strong> 该魔法森林生物使根须与藤蔓在其周围暂时生长；直至下一轮的先攻值20时，该魔法森林生物周围30尺内的地面成为困难地形。</p><p><strong>扭结根须。</strong> 魔法森林生物巢穴中的植被成为其力量的导管。该魔法森林生物可以指定其90尺内接触此类植物的生物为目标。目标必须进行一次DC 12，外加[[lookup @prof.flat]]的感知豁免，豁免失败则受到[[lookup @prof.flat]]d6心灵伤害，并且陷入&amp;Reference[grappled]状态（逃脱DC 12，外加[[lookup @prof.flat]]）。</p><p><strong>妖精辉光。</strong> 该魔法森林生物在其可见的120尺范围内一点创造一片20尺立方区域的舞光术。该区域内能看见这些光亮的每个生物必须进行一次DC 12，外加[[lookup @prof.flat]]的感知豁免。豁免失败则生物陷入&amp;Reference[blinded]状态，周身轮廓发光，并散发10尺半径的微光光照，持续至下一轮的先攻值20结束。攻击者若能看见受影响生物，则对其进行的攻击骰具有优势，且受影响生物无法从隐形状态中获得效益。</p>",
+      "activities": {
+        "Frothing Flora": {
+          "name": "沸腾花丛 Frothing Flora"
+        },
+        "Writhing Roots": {
+          "name": "扭曲根须 Writhing Roots",
+          "affects": {
+            "special": "任何接触到的植物生命"
+          }
+        },
+        "Faerie Lights": {
+          "name": "妖精之光 Faerie Lights"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Shockwave": {
+      "name": "冲击波 Shockwave",
+      "description": "<p><em>2环心灵遥控异能</em></p><p>你释放出一道灵能冲击波。距离你10尺内的每个生物必须进行一次力量豁免，若失败则被直接推开至多10尺远离你。</p>"
+    },
+    "Mentor": {
+      "name": "导师 Mentor",
+      "description": "@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe02.JournalEntryPage.00mentor00000000 inline] <fieldset><legend>Foundry 注</legend><p>此特性提供数个\\\"召唤\\\"活动,将使随从获得正确的生命值数量,并调整其熟练加值以匹配其看护者。每个活动都针对不同的随从生命骰体型(d6,d8,d10,或d12)进行配置。</p></fieldset>",
+      "activities": {
+        "d6 Retainer": {
+          "name": "d6名随从 d6 Retainer"
+        },
+        "d8 Retainer": {
+          "name": "d8随从 d8 Retainer"
+        },
+        "d10 Retainer": {
+          "name": "d10随从 d10 Retainer"
+        },
+        "d12 Retainer": {
+          "name": "d12 随从 d12 Retainer"
+        }
+      }
+    },
+    "Adjuration": {
+      "name": "劝诫 Adjuration",
+      "description": "<p>作为附赠动作，该侍从向其60尺内一个可见的盟友施加一道炼狱祝福。在该盟友于侍从下一回合开始前进行的下一次攻击检定中，其可额外获得+[[lookup @prof]]加值。若攻击命中，则额外造成[[lookup @prof]]点伤害。</p>",
+      "activities": {
+        "utility": {
+          "affects": {
+            "special": "该怪物必须看见目标。"
+          }
+        }
+      },
+      "effects": {
+        "Infernal Blessing": {
+          "name": "炼狱祝福 Infernal Blessing",
+          "description": "<p>该生物的下一次攻击在攻击和伤害上获得加值。该加值等于随从的熟练加值。</p>"
+        }
+      }
+    },
+    "Flesh to Diamonds": {
+      "name": "血肉化钻 Flesh to Diamonds",
+      "description": "<p>以一个附赠动作，你可用一层硬化的水晶和宝石覆盖你的皮肤，持续10分钟。在此期间，你对钝击、穿刺和挥砍伤害具有抗性。一旦你使用了这个附赠动作，直到你完成一次长休前，你无法再次这样做。</p>",
+      "effects": {
+        "Flesh to Diamonds": {
+          "name": "血肉化钻 Flesh to Diamonds"
+        }
+      }
+    },
+    "Reinforce": {
+      "name": "增援 Reinforce",
+      "description": "<p>当十夫长看到30尺内的一个盟友成为攻击目标时，十夫长可以用反应向其移动最多等同于自身速度的距离。若十夫长在移动结束时位于目标5尺范围内，则目标的AC获得+[[lookup @prof.flat]]加值，持续至十夫长下个回合开始，此效果对触发该反应的攻击同样生效。</p>",
+      "activities": {
+        "Move": {
+          "name": "移动 Move",
+          "condition": "30尺内的一名盟友成为攻击目标。"
+        }
+      },
+      "effects": {
+        "Reinforce": {
+          "name": "增援 Reinforce",
+          "description": "<p>目标在其AC上获得一个+熟练加值的加值，此效果持续到该随从的下个回合开始为止，此加值对触发此能力的攻击也有效。</p>"
+        }
+      }
+    },
+    "Acid-Enhanced": {
+      "name": "强酸强化 Acid-Enhanced",
+      "description": "<p>以一个附赠动作，你使你的双手在1分钟内渗出强酸。在渗出强酸期间，你的近战武器攻击和徒手打击额外造成1d8强酸伤害。一旦你使用了这个附赠动作，直到完成一次长休前你都无法再次使用。</p>",
+      "effects": {
+        "Acid-Enhanced": {
+          "name": "强酸强化 Acid-Enhanced"
+        }
+      }
+    },
+    "Hear the Unseen": {
+      "name": "听见无形 Hear the Unseen",
+      "description": "<p>在[[lookup @name lowercase]]的回合开始时，它可以发出一阵次声波颤音（无需动作）。如果它没有处于耳聋状态，它就能感知到周围环境，包括200尺内未被全身掩护的隐形和隐藏生物，直到其回合结束。</p>",
+      "effects": {
+        "Hear the Unseen": {
+          "name": "聆听无形 Hear the Unseen",
+          "description": "<p>在你的回合结束前，你可以看清周围环境，包括200尺内未被&Reference[Total Cover]完全遮挡的隐形和隐藏生物。</p>"
+        }
+      }
+    },
+    "Lesser Petrifying Eye Beams": {
+      "name": "弱效石化眼棱射线 Lesser Petrifying Eye Beams",
+      "description": "<p>[[lookup @name lowercase]]以30尺内一个它可见的单一生物为目标。该目标必须进行一次DC [[lookup @save.dc.value activity=DQ1AS86VKkCTpmfJ]]体质豁免，失败则因魔法开始变为石头而陷入&amp;Reference[restrained]状态。以此方式被束缚的生物必须在其回合结束时重复该豁免。豁免成功则效应终止。豁免失败则该生物被&amp;reference[petrified]1小时，或直到被<em>治愈病痛</em>异能、<em>次级复原术</em>法术或类似的超自然效应所解除。</p>",
+      "effects": {
+        "Turning to Stone": {
+          "name": "石化 Turning to Stone",
+          "description": "<p>你正在化为石头。你必须在每个自己回合结束时重复该豁免，成功则终止此效应。豁免失败时，你将陷入&amp;reference[petrified]状态持续1小时。</p>"
+        }
+      }
+    },
+    "Reality Pull": {
+      "name": "现实牵引 Reality Pull",
+      "description": "<p>[[lookup @name lowercase]]扭曲其周围60尺内至多[[lookup @prof]]名敌人的现实。每个目标必须进行一次DC [[lookup @save.dc.value activity=S4uv3t1EQGlHrbw2]]力量豁免，若失败则被直接拉向[[lookup @name lowercase]]最多20尺。</p>"
+    },
+    "Hop": {
+      "name": "跳跃 Hop",
+      "description": "<p>该[[lookup @name lowercase]]以一个附赠动作跳跃[[lookup @attributes.movement.walk]]尺。</p>"
+    },
+    "Deserved Transfer": {
+      "name": "应得转移 Deserved Transfer",
+      "description": "<p><em>2环变形异能</em></p><p>你向射程内的一名生物发射一道吸取心灵能量的箭矢。对目标进行一次远程异能攻击。命中时，目标受到[[/damage average]]伤害，且心灵能量会弹射至你视野内30尺内的另一名生物。第二名生物获得等于所造成伤害一半的临时生命值。</p><p><strong>升阶效果。</strong>当你显现此异能时，可使其环阶提升1环或更高。每提升1环，伤害增加2d8。</p>"
+    },
+    "Wrenching Bite": {
+      "name": "拧咬 Wrenching Bite",
+      "description": "<p>作为一个动作，猎手对大型或更小的生物发动一次标志性攻击。若命中，目标将陷入&amp;reference[grappled]状态（逃脱DC 10，外加[[lookup @prof.flat]]）。在受擒状态结束前，目标会在其每回合结束时受到[[/damage]]伤害，且猎手无法对另一个目标使用其扭力啃咬。</p>",
+      "activities": {
+        "Use": {
+          "name": "使用 Use"
+        },
+        "Repeating Damage": {
+          "name": "重复伤害 Repeating Damage",
+          "condition": "在被擒抱目标的回合结束时。",
+          "range": {
+            "special": "受擒的目标。"
+          }
+        }
+      }
+    },
+    "Darkvision": {
+      "name": "黑暗视觉 Darkvision",
+      "description": "<p>该集群拥有30尺范围的黑暗视觉darkvision。</p>",
+      "effects": {
+        "Darkvision": {
+          "name": "黑暗视觉 Darkvision",
+          "description": "<p>你拥有30尺射程的黑暗视觉。</p>"
+        }
+      }
+    },
+    "Devil": {
+      "name": "魔鬼 Devil",
+      "description": "<p>将其他 ancestries 的资料卡转换为魔鬼时，该生物的挑战等级提升1。若将魔鬼资料卡转换为其他 ancestry，该生物的挑战等级降低1。</p><p>魔鬼具有以下定义特性：</p><p><strong>体型。</strong> 魔鬼的体型为中型。</p><p><strong>类型。</strong> 魔鬼的类型为邪魔。</p><p><strong>速度。</strong> 魔鬼的步行速度为30尺。</p><p><strong>伤害抗性：</strong> 魔鬼对来自凡俗攻击的钝击、穿刺和挥砍伤害具有抵抗力。</p><p><strong>伤害免疫：</strong> 魔鬼免疫火焰伤害。</p><p><strong>状态免疫：</strong> 魔鬼不能被魅惑。</p><p><strong>黑暗视觉。</strong> 魔鬼具有120尺范围的黑暗视觉。</p><p><strong>语言：</strong> 魔鬼能说、读、写通用语和炼狱语。</p><p><strong>真名。</strong> 若魔鬼能听见60尺内某生物大声说出其真名，魔鬼将在24小时内失去其伤害抗性与免疫，以及魔鬼魅惑反应。</p><p><strong>魔鬼魅惑 (1/日)。</strong> 当魔鬼成为其60尺内可见生物的 attack、能力、法术或其他效果的目标时，魔鬼可用反应迫使该生物进行魅力豁免。此豁免DC等于8 + 魔鬼的熟练加值 + 魔鬼的智力、感知或魅力调整值（取最高者）。豁免失败则生物被魔鬼魅惑直至其下一回合开始，且魔鬼为触发效果选择一个新的可见目标。新目标必须处于触发效果的射程内。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义特性"
+        }
+      }
+    },
+    "Lair Actions: Cave": {
+      "name": "巢穴动作：洞穴 Lair Actions: Cave",
+      "description": "<p>在先攻值20时（出现等值时视为后手），该洞穴生物可以执行下列巢穴动作之一；该洞穴生物不能连续两轮执行相同的巢穴动作：</p><p><strong>岩石壁垒。</strong> 该洞穴生物魔法性地吸引附近的石块，形成一套石质护甲，使其获得+[[lookup @prof.flat]]的AC加值，但速度减少10尺。该生物在下一轮的先攻值20结束时失去此护甲。</p><p><strong>战略阻塞。</strong> 该洞穴生物导致松动的岩石坠落，在其60尺范围内某一点为中心形成一个15尺立方的坚实土石体。该区域内的每个生物必须进行一次DC 12，外加[[lookup @prof.flat]]的敏捷豁免。豁免失败，则生物受到[[lookup @prof.flat]]d6钝击伤害，并被推至该区域外、由洞穴生物选择的最近未占据空间。豁免成功，则生物不受伤害，并可移动至该区域外、由自己选择的最近未占据空间。触及该立方体的生物可以消耗一个动作，移除一块与其所占据空间同等大小的立方体部分。</p><p><strong>地颤。</strong> 该洞穴生物在其可视范围内60尺某一点为中心引发地震。位于该点30尺范围内地面上的所有其他生物必须成功通过一次DC 12，外加[[lookup @prof.flat]]的力量豁免，否则陷入&amp;Reference[prone]状态。</p>",
+      "activities": {
+        "Rocky Bulwark": {
+          "name": "岩石壁垒 Rocky Bulwark"
+        },
+        "Strategic Blockage": {
+          "name": "战略阻塞 Strategic Blockage"
+        },
+        "Tremor": {
+          "name": "震颤 Tremor",
+          "affects": {
+            "special": "区域中地面上的每个生物。"
+          }
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        },
+        "Rocky Bulwark": {
+          "name": "岩石壁垒 Rocky Bulwark"
+        }
+      }
+    },
+    "Bombs Away": {
+      "name": "炸弹来袭 Bombs Away",
+      "description": "<p>[[lookup @name lowercase]]向上飞行至其速度，且不触发借机攻击。如果[[lookup @name lowercase]]擒抱着一个生物，受擒状态不会使[[lookup @name lowercase]]的速度减半，且[[lookup @name lowercase]]可在此次移动过程中随时结束受擒状态。若[[lookup @name lowercase]]在其回合结束前解除受擒状态，且目标因坠落受到钝击伤害，则目标额外受到[[lookup @prof]]钝击伤害。</p>"
+    },
+    "Magic Purge": {
+      "name": "魔法净化 Magic Purge",
+      "description": "<p>[[lookup @name lowercase]]向30尺内一个其可见的生物喷吐腐化的魔法能量。目标必须进行一次DC [[lookup @save.dc.value activity=kvbFezJfORU276hl]]体质豁免。豁免失败,目标受到[[lookup @prof.flat]]d8力场伤害并陷入&amp;Reference[dazed]状态直到[[lookup @name lowercase]]的下个回合开始。豁免成功,目标受到一半伤害且不会陷入晕眩。</p>"
+    },
+    "Vile Stench": {
+      "name": "恶臭 Vile Stench",
+      "description": "<p>以一个附赠动作，你使身体向空气中排出毒素。你周围10尺内每个由你选择且需要呼吸的生物，必须进行一次对抗你 Exploit 豁免 DC 的体质豁免，豁免失败则中毒且速度减半，持续1分钟（豁免于其回合结束时终止）。一旦你使用此附赠动作，直到完成一次长休前无法再次使用。</p>",
+      "effects": {
+        "Vile Stench": {
+          "name": "恶臭 Vile Stench"
+        }
+      }
+    },
+    "Fortify Weapon": {
+      "name": "强化武器 Fortify Weapon",
+      "description": "<p>作为附赠动作，铁匠触碰一把武器并打磨它。在1分钟内，该武器变为魔法武器并造成额外[[lookup @prof]]伤害。</p><fieldset><legend>Foundry 注</legend><p>此特性上的附魔系行动当前使用目标的熟练加值。</p></fieldset>",
+      "activities": {
+        "enchant": {
+          "affects": {
+            "special": "一把武器。"
+          }
+        }
+      },
+      "effects": {
+        "Fortified Weapon": {
+          "name": "筑防武器 Fortified Weapon",
+          "description": "<p>该武器造成额外的熟练加值伤害。</p>"
+        }
+      }
+    },
+    "Ground Stomp": {
+      "name": "地面重踏 Ground Stomp",
+      "description": "<p>作为一个动作，定身者重踏地面。定身者10尺范围内的每个生物必须进行一次[[/save]]豁免，否则被击倒&amp;reference[prone]。随后定身者可以对一个倒地生物进行一次触及10尺的标志性攻击。</p>"
+    },
+    "Pack Tactics": {
+      "name": "集群战术 Pack Tactics",
+      "description": "<p>如果野猫的至少一个盟友在目标5尺内且该盟友未失能，则野猫对该生物进行的攻击检定具有优势。</p>"
+    },
+    "Underground Senses": {
+      "name": "地下感官 Underground Senses",
+      "description": "<p>该[[lookup @name lowercase]]获得以下感官之一：&Reference[darkvision]至300尺范围，&Reference[tremorsense]至120尺范围，或&Reference[blindsight]至60尺范围。</p>",
+      "effects": {
+        "Darkvision": {
+          "name": "黑暗视觉 Darkvision"
+        },
+        "Tremorsense": {
+          "name": "颤动感知 Tremorsense"
+        },
+        "Blindsight": {
+          "name": "盲视 Blindsight"
+        }
+      }
+    },
+    "Decimation of Magic": {
+      "name": "魔法大灭绝 Decimation of Magic",
+      "description": "<p>以一个附赠动作，你激发内在的魔法抗力。在1分钟内，你对所有由法术和魔法效应造成的伤害具有抗性。一旦你使用此附赠动作，直到完成一次长休前你都无法再次使用。</p>",
+      "effects": {
+        "Decimation of Magic": {
+          "name": "魔法浩劫 Decimation of Magic"
+        }
+      }
+    },
+    "Minion": {
+      "name": "仆从 Minion",
+      "description": "<p>如果[[lookup @name lowercase]]因一次攻击而受到伤害，或因一次失败的豁免而受到伤害，其生命值将降至0。如果[[lookup @name lowercase]]因其他效应而受到伤害，当该伤害等于或超过其生命值上限时，该生物将死亡；否则其不会受到伤害。</p>"
+    },
+    "Venomous Bite": {
+      "name": "毒液啃咬 Venomous Bite",
+      "description": "<p>当固执者用标志性攻击命中一个生物时，固执者会向目标注入毒液。目标必须进行一次[[/save]]豁免。豁免失败时，目标受到[[lookup @prof.flat]]d6毒素伤害并陷入&amp;reference[poisoned]状态，直至固执者的下个回合开始。豁免成功时，目标仅受到一半伤害且不会中毒。</p>",
+      "activities": {
+        "save": {
+          "condition": "当随从用标志性攻击命中一个生物时。",
+          "affects": {
+            "special": "与触发的标志性攻击相同目标。"
+          }
+        }
+      }
+    },
+    "Lair Actions: Lord Syuul": {
+      "name": "巢穴动作：君主西乌尔 Lair Actions: Lord Syuul",
+      "description": "<p>在终末赘生物内部战斗时，君主休尔可以命令他周围的活体要塞。在先攻值20时（出现等值时视为后手），大脑处理器嗡鸣作响，休尔从以下巢穴动作中选择一项发动；他不能连续两轮使用相同的巢穴动作：</p><p><strong>赘瘤进军。</strong> 两个赘瘤之口可以各自沿着墙壁朝休尔选择的方向移动最多30尺。</p><p><strong>尖啸防护。</strong> 肉质口部的灵能投影覆盖君主休尔，并向他的攻击者尖啸。当一个生物在君主休尔5尺范围内以近战攻击命中他时，攻击者必须进行一次[[/save]]豁免，失败则受到[[/damage average]]伤害。这些口部在下一轮的先攻值20结束时消失。</p><p><strong>血肉之墙。</strong> 休尔创造出一道血肉之墙，在他能看见的房间墙壁上的两点之间沿直线延伸。该墙壁从地板延伸至天花板，并且有5尺厚。墙壁每5尺立方格具有AC 10和20生命值。</p>",
+      "activities": {
+        "Excremus March": {
+          "name": "埃克斯克雷默斯行军 Excremus March"
+        },
+        "Screaming Protection": {
+          "name": "尖叫防护 Screaming Protection"
+        },
+        "Wall of Flesh": {
+          "name": "血肉之墙 Wall of Flesh"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Terranova": {
+      "name": "泰拉诺瓦 Terranova",
+      "description": "<p>地面上[[lookup @name lowercase]]周围10尺内的每个生物必须进行一次DC [[lookup @save.dc.value activity=hQgPF37PeBdGBeZe]]力量豁免，失败则受到1d6加[[lookup @prof]]钝击伤害并被击倒&amp;Reference[prone]。若生物此项豁免失败值达到5或更高，则会被地面&amp;Reference[restrained]（豁免于其回合结束时结束）。生物可用其动作解救自身或触及范围内的另一生物，以此终止该效果。</p>"
+    },
+    "Push Through": {
+      "name": "奋力推进 Push Through",
+      "description": "<p>该[[lookup @name lowercase]]移动至多等同于其步行速度的距离，且不触发借机攻击。在此过程中，其可以穿过大型或更小的生物的空间，如同其为困难地形一般。若该[[lookup @name lowercase]]在此次移动中进入另一生物的空间，则该生物必须进行一次DC [[lookup @save.dc.value activity=iw6vgRwTZOrD6LxI]]力量豁免，豁免失败则被击倒&amp;Reference[prone]。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "大型或更小的"
+          }
+        }
+      }
+    },
+    "Whispers of the Dead": {
+      "name": "亡者低语 Whispers of the Dead",
+      "description": "<p>作为一个动作，该谄媚者选择其30尺内可见的至多[[lookup @prof.flat]]个生物。每个目标必须进行一次[[/save]]豁免检定，否则对其最近的盟友发动一次攻击（无需动作）。恐慌生物在此豁免检定中具有劣势。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "必须对随从可见。"
+          }
+        }
+      }
+    },
+    "Noxious Vines": {
+      "name": "剧毒藤蔓 Noxious Vines",
+      "description": "<p>剧毒的藤蔓从鬼婆身上甩出。鬼婆30尺范围内的每个敌人必须进行一次[[/save]]豁免，豁免失败则受到[[/damage average]]伤害，豁免成功则伤害减半。鬼婆30尺范围内的每个盟友恢复18 (4d8)点生命值。</p>",
+      "activities": {
+        "heal": {
+          "condition": "伤害骰的后续效果。"
+        }
+      }
+    },
+    "Snake Spit": {
+      "name": "蛇涎 Snake Spit",
+      "description": "<p>作为一个附赠动作，该顽固生物会向5尺内的一个生物眼睛吐唾毒液。目标必须进行一次[[/save]]豁免检定，否则直到其下一回合结束前陷入&amp;reference[目盲]状态。</p>"
+    },
+    "HVWQKhfuEIj0yQFo": {
+      "name": "亡者低语 HVWQKhfuEIj0yQFo",
+      "description": "<p>作为一个动作，[[lookup @name lowercase]]选择其30尺内可见的至多[[lookup @prof.flat]]个生物。每个目标必须进行一次[[/save]]豁免检定，否则会攻击其最近的盟友（无需动作）。恐慌生物在此豁免检定中具有劣势。</p>"
+    },
+    "Maw of the Mound": {
+      "name": "土丘巨口 Maw of the Mound",
+      "description": "<p>以一个附赠动作，你可以进行一次徒手打击来啃咬一名敌人。你可以使用敏捷或力量进行这次攻击的攻击检定和伤害掷骰。命中时，这次打击造成1d6 + 你的敏捷或力量调整值的穿刺伤害，而非徒手打击通常造成的钝击伤害，并且你获得临时生命值，数值等于造成的伤害。你可以进行此攻击的次数等于你的熟练加值，并且你在完成一次长休后重新获得所有已使用的次数。</p>",
+      "activities": {
+        "Strength Attack": {
+          "name": "力量攻击 Strength Attack"
+        },
+        "Dexterity Attack": {
+          "name": "敏捷攻击 Dexterity Attack"
+        }
+      }
+    },
+    "Ocean Hunter": {
+      "name": "海洋猎手 Ocean Hunter",
+      "description": "<p>当该鸟在其回合开始时位于水面之上，直到其回合结束前，其攻击不会因处于{水下 underwater}而具有{劣势 disadvantage}。</p>"
+    },
+    "Phase": {
+      "name": "相位 Phase",
+      "description": "<p><em>4环变化系异能</em></p><p>你将心灵能量灌注于自身及所有穿戴携带的物件，使其能穿透固体。在持续时间内，你可以穿越生物和物件，如同穿越困难地形。若你在物件内部结束回合，将受到1d10力场伤害。若此异能结束时你正处于某生物或物件内部，你将被弹射至最近且由你选择的未占据空间。</p><p><strong>升阶效果。</strong>当你显能此异能时，可提升其环阶1环或更高。每提升1环，你就能额外指定一个距你5尺内的生物作为目标。</p>",
+      "effects": {
+        "Phase": {
+          "name": "相位 Phase",
+          "description": "<p>在1分钟内，你可以如同穿越困难地形一般穿过其他生物和物件。如果你在一个物件内部结束你的回合，你将受到1d10点力场伤害。若此能力在你处于某个生物或物件内部时结束，你将被排挤出该生物或物件，出现在由你选择的最邻近的未占据空间。</p>"
+        }
+      }
+    },
+    "Angry Denial": {
+      "name": "愤怒的否定 Angry Denial",
+      "description": "<p>当该猛击者从5尺内一个它能看见的生物处受到伤害时，该猛击者可以使用其反应来改为不受伤害并对该生物发动一次标志性攻击。</p>",
+      "activities": {
+        "Prevent Damage": {
+          "name": "防止伤害 Prevent Damage",
+          "condition": "当该怪物受到其能看见的5尺内一个生物造成的伤害时。"
+        }
+      }
+    },
+    "Superior Sprint": {
+      "name": "卓越冲刺 Superior Sprint",
+      "description": "<p>当野猫在战斗中的回合移动时，它们可以将速度提升至四倍直到回合结束。（取代疾驰特性。）</p>"
+    },
+    "Lair Actions: Olothec": {
+      "name": "巢穴动作：奥洛塞克 Lair Actions: Olothec",
+      "description": "<p>当在其巢穴内战斗时，奥洛塞克可以执行巢穴动作。在先攻值20时（出现等值时视为后手），奥洛塞克可以执行一个巢穴动作以产生下列效应其一；奥洛塞克不能连续两轮使用相同的巢穴动作：</p><p><strong>灾厄传送。</strong>一股灵能冲击波席卷奥洛塞克周围60尺内它能看见的至多两个生物。每个生物必须进行一次[[/save activity=T3kHtLhu2s4vC4DK]]豁免，否则将被传送至奥洛塞克能看见的60尺内一处未占据空间。</p><p><strong>心灵震爆。</strong>奥洛塞克指定其周围30尺内至多两个正受其退化触须粘液效果影响的生物为目标。每个目标受到[[/damage average activity=HElQfzu8rNsl2Z3V]]伤害，且奥洛塞克恢复生命值，其数值等于受到的总伤害。</p><p><strong>粘液喷发。</strong>一股剧毒粘液从通道或洞穴中喷发，以奥洛塞克周围120尺内至多三个生物为目标。每个目标必须进行一次[[/save activity=3KGsU6EFfqlGC8un]]豁免，否则将陷入&amp;Reference[poisoned]状态直至其下一回合结束。</p>",
+      "activities": {
+        "Baleful Teleport": {
+          "name": "凶兆传送 Baleful Teleport"
+        },
+        "Psychic Shock": {
+          "name": "心灵冲击 Psychic Shock"
+        },
+        "Slime Eruption": {
+          "name": "粘液喷发 Slime Eruption"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Misleading Strike": {
+      "name": "误导打击 Misleading Strike",
+      "description": "<p>以一个动作，该侍从发动一次标志性攻击。若命中，目标必须使用其反应（若可用），对侍从选择的一个生物发动一次武器攻击。</p>"
+    },
+    "Agile Landing": {
+      "name": "灵巧着陆 Agile Landing",
+      "description": "<p>只要未处于失能状态，野猫从40尺或更低高度坠落时不会受到伤害。</p>"
+    },
+    "Attach": {
+      "name": "附着 Attach",
+      "description": "<p>[[lookup @name lowercase]]对一名生物发动一次标志性攻击。若命中，目标额外受到[[lookup @prof.flat]]d6点穿刺伤害，且[[lookup @name lowercase]]会附着在目标身上并进入其空间。附着期间，[[lookup @name lowercase]]随目标移动且无法攻击目标以外的任何生物。若[[lookup @name lowercase]]在附着时以攻击命中目标，目标额外受到[[lookup @prof.flat]]d6点穿刺伤害。[[lookup @name lowercase]]可用动作或附赠动作脱离，移动5尺至未占据空间且不触发借机攻击。当[[lookup @name lowercase]]陷入受擒,失能,倒地,束缚状态，或单回合受到超过[[@prof.flat * 5]]伤害时也会脱离。</p>"
+    },
+    "Angulotl": {
+      "name": "安古洛特 Angulotl",
+      "description": "<p>一只安古洛特具有以下定义特性：</p><p><strong>体型。</strong> 安古洛特的体型为小型。</p><p><strong>类型。</strong> 安古洛特的类型为类人生物。</p><p><strong>速度。</strong> 安古洛特拥有20尺步行速度，20尺攀爬速度，和30尺游泳速度。</p><p><strong>伤害免疫。</strong> 安古洛特免疫毒素伤害。</p><p><strong>黑暗视觉。</strong> 安古洛特拥有60尺范围的黑暗视觉。</p><p><strong>语言。</strong> 安古洛特可以说、读、写安古洛特语。</p><p><strong>水陆两栖。</strong> 安古洛特可以呼吸空气和水。</p><p><strong>毒性体质。</strong> 当一个生物在5尺内以近战攻击命中安古洛特或接触安古洛特时，该生物受到2（1d4）毒素伤害。</p><p><strong>跳跃。</strong> 安古洛特可以以一个附赠动作跳跃最多等同于其步行速度的尺数。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义特性"
+        }
+      }
+    },
+    "Agile Flyer": {
+      "name": "灵巧飞行者 Agile Flyer",
+      "description": "<p>在空中时，该鸟类在敏捷豁免和敏捷(特技)检定上获得+5加值。</p><fieldset><legend>Foundry 注</legend><p>如果该鸟类具有飞行状态，此加值将自动启用。</p></fieldset>",
+      "effects": {
+        "Agile Flyer": {
+          "name": "灵巧飞行者 Agile Flyer",
+          "description": "<p>当你在空中时，你的敏捷豁免和敏捷(特技)检定具有+5加值。</p>"
+        }
+      }
+    },
+    "Defensive Eruption": {
+      "name": "防御性爆发 Defensive Eruption",
+      "description": "<p>以一个附赠动作,你释放出一股防护能量。你周围30尺内的每个敌人必须进行一次敏捷豁免,对抗你的战技豁免DC。豁免失败时,该生物受到4d6火焰伤害并被击倒&Reference[prone]。豁免成功时,该生物受到一半伤害且不会被击倒。此外,你和你周围30尺内的盟友在其下一次攻击检定上具有优势,此效果持续至你的下个回合开始前。一旦你使用此附赠动作,直到完成一次长休前你都无法再次使用。</p>"
+    },
+    "Gnoll": {
+      "name": "豺狼人 Gnoll",
+      "description": "<p>豺狼人具有以下定义特性：</p><p><strong>体型。</strong> 豺狼人的体型为中型。</p><p><strong>类型。</strong> 豺狼人的类型为邪魔。</p><p><strong>速度。</strong> 豺狼人的步行速度为30尺。</p><p><strong>黑暗视觉。</strong> 豺狼人拥有60尺范围的黑暗视觉。</p><p><strong>语言。</strong> 豺狼人可以说、读、写深渊语和豺狼人语。</p><p><strong>啃咬攻击。</strong> 豺狼人可以用牙齿进行徒手打击，使用力量或敏捷（由豺狼人选择）进行攻击检定。当豺狼人用牙齿命中时，该打击造成1d4 + 豺狼人力量或敏捷调整值的穿刺伤害，而非徒手打击通常的钝击伤害。</p><p><strong>死亡狂乱。</strong> 当豺狼人能看到的30尺内的一个盟友生命值降至0时，豺狼人可以使用其反应移动至多其速度的一半并进行一次啃咬攻击。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义性特性"
+        }
+      }
+    },
+    "Trample": {
+      "name": "践踏 Trample",
+      "description": "<p>该[[lookup @name lowercase]]移动至其速度上限。在此次移动期间，其可穿过其他生物的空间。每个该[[lookup @name lowercase]]穿过其空间的大型或更小的生物必须进行一次DC [[lookup @save.dc.value activity=EvhcQy2rVabKDDk8]]力量豁免。豁免失败则生物受到[[lookup @prof.flat]]d6钝击伤害并被击倒&amp;Reference[prone]。豁免成功则生物仅受半数伤害且不会被击倒。</p>"
+    },
+    "Entomb": {
+      "name": "活埋 Entomb",
+      "description": "<p>以一个附赠动作，束缚者召唤带刺藤蔓包围一个其可见的60尺内的生物。目标必须进行一次[[/save]]豁免。豁免失败时，目标受到[[/damage]]伤害并被&amp;reference[restrained apply=false]。以此方式被束缚期间，目标处于&amp;reference[blinded apply=false]状态。豁免成功时，目标仅受到一半伤害且不被束缚。</p><p>生物可用其动作进行一次[[/check]]检定，成功则解救自身或触及范围内的另一生物。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "必须可见。"
+          }
+        },
+        "Freeing Check": {
+          "name": "挣脱检定 Freeing Check"
+        }
+      },
+      "effects": {
+        "Entombed": {
+          "name": "活埋 Entombed",
+          "description": "<p>你处于束缚和目盲状态。你或另一个生物可以进行一次力量（运动）或敏捷（特技）检定来使你脱困。</p>"
+        }
+      }
+    },
+    "Lion's Leap": {
+      "name": "雄狮之跃 Lion's Leap",
+      "description": "<p>[[lookup @name lowercase]]移动至多一半速度且不触发借机攻击。若其以此移动结束于地面，其5尺内的每个生物必须进行一次DC [[lookup @save.dc.value activity=maTiaBBAgTLRMHpY]]力量豁免，失败则被击倒&amp;Reference[prone]。</p>"
+    },
+    "Throw Away": {
+      "name": "扔掉 Throw Away",
+      "description": "<p>作为一个动作，猛击者抓住一个其可见的5尺内自愿的中型或更小的生物，并将该生物投掷到猛击者30尺内的一个未占据空间。如果该生物落在敌人5尺内，该生物可以使用一个反应对该敌人进行一次近战攻击。</p>",
+      "activities": {
+        "Toss": {
+          "name": "投掷 Toss",
+          "affects": {
+            "special": "一个自愿的中型或更小的生物。"
+          }
+        }
+      }
+    },
+    "Fearsome Gore": {
+      "name": "恐怖重击 Fearsome Gore",
+      "description": "<p>作为一个动作，毁灭者对其5尺范围内的一个生物发动一次标志性攻击。命中时，该攻击造成额外[[/damage]]伤害，且目标必须进行一次DC [[lookup @save.dc.value activity=SmzJaFh0pZ8vTpy0]]感知豁免，失败则直到毁灭者下个回合结束前陷入&amp;reference[frightened]状态。</p>",
+      "activities": {
+        "save": {
+          "condition": "攻击的后续动作。"
+        }
+      }
+    },
+    "Infernal Ichor": {
+      "name": "炼狱腐液 Infernal Ichor",
+      "description": "<p>当[[lookup @name lowercase]]死亡时，其尸体会喷溅出灼热的橙色腐液。每个位于[[lookup @name lowercase]]5尺范围内的生物将受到等于[[lookup @name lowercase]]熟练加值的火焰伤害。</p>",
+      "activities": {
+        "damage": {
+          "condition": "该怪物死亡。"
+        }
+      }
+    },
+    "Crafty Boogie": {
+      "name": "狡猾的布吉 Crafty Boogie",
+      "description": "<p>以一个附赠动作，你为你所能看见的另一生物制造一个分心。该生物可以使用一个反应移动至多其速度的距离，且不触发借机攻击。一旦你使用此附赠动作，直至你完成一次短休或长休前，你无法再次这样做。</p>"
+    },
+    "Villain Actions": {
+      "name": "反派动作 Villain Actions",
+      "description": "<p>该[[lookup @name lowercase]]拥有三个反派动作。它们可以在遭遇中于一名敌人的回合后使用每个动作各一次。它们可以按任意顺序使用这些动作，但每轮只能使用一个。</p><p>[[/item .item-id-1]]</p><p>[[/item .item-id-2]]</p><p>[[/item .item-id-3]]</p>"
+    },
+    "Mind Link": {
+      "name": "心灵链接 Mind Link",
+      "description": "<p>[[lookup @name]]可以通过心灵感应与任何紫晶之刃首领进行交流，无论距离多远，只要他们处于同一位面即可。</p>"
+    },
+    "Ursine Might": {
+      "name": "熊之力量 Ursine Might",
+      "description": "<p>以一个附赠动作，你以巨熊之力强化自身。在接下来的1分钟内，你基于力量的攻击造成额外1d10伤害，并且在力量检定和豁免上具有优势。一旦你使用了这个附赠动作，直到完成一次长休前你都无法再次使用。</p>",
+      "effects": {
+        "Ursine Might": {
+          "name": "熊之威能 Ursine Might",
+          "description": "<p>你基于力量的攻击造成额外1d10伤害, 并且在力量检定和豁免上具有优势。</p>"
+        }
+      }
+    },
+    "Touch of Rot": {
+      "name": "腐朽之触 Touch of Rot",
+      "description": "<p>当[[lookup @name lowercase]]以近战攻击命中目标时，该攻击额外造成[[lookup @prof]]点暗蚀伤害。</p>",
+      "effects": {
+        "Touch of Rot": {
+          "name": "腐朽之触 Touch of Rot"
+        }
+      }
+    },
+    "Lethe": {
+      "name": "忘川 Lethe",
+      "description": "<p>当[[lookup @name lowercase]]的灵魂计数为0时，他们在攻击检定上具有优势，在豁免上具有劣势，且其智力属性变为3（-4）。此外，[[lookup @name lowercase]]必须在每个回合用移动力尽可能靠近其通过灵魂视觉感知到的最近生物，随后若其有能力，则必须用动作发动攻击并试图杀死该生物。在灵魂计数增加1之前，[[lookup @name lowercase]]无法以任何其他目的行动。</p>",
+      "effects": {
+        "Lethe": {
+          "name": "忘川 Lethe",
+          "description": "<p>当该恶魔的灵魂计数为0时，他们在攻击检定上具有优势，在豁免上具有劣势，且智力属性变为3。此外，他们必须在每个回合中使用其移动力尽可能靠近他们通过灵魂视觉能感知到的最近生物，然后如果可能，他们必须使用其动作来攻击并试图杀死该生物。在灵魂计数增加1之前，无法以任何其他目的行动。</p>"
+        }
+      }
+    },
+    "This Way!": {
+      "name": "这边走！ This Way!",
+      "description": "<p>以一个动作，死亡守卫移动至多其速度的距离，且不触发借机攻击。死亡守卫在此次移动过程中5尺内经过的每个盟友，都可以使用一个反应，朝与死亡守卫相同的方向移动至多其速度的距离，且不触发借机攻击。直到死亡守卫的下个回合开始前，针对这些盟友的攻击都具有劣势。</p>",
+      "effects": {
+        "This Way!": {
+          "name": "这边走！ This Way!",
+          "description": "<p>针对你的攻击具有劣势。</p>"
+        }
+      }
+    },
+    "Engulf": {
+      "name": "吞噬 Engulf",
+      "description": "<p>[[lookup @name lowercase]]试图将一个大型或更小的生物拉入其体内5尺范围内。目标必须进行一次DC [[lookup @save.dc.value activity=UQFGW1F3DhxyDTvJ]]力量豁免。若失败，目标会被拉入[[lookup @name lowercase]]所在空间，受到[[lookup @prof.flat]]d8毒素伤害并被吞噬。若成功，该生物仅受到一半伤害，不会移动且不会被吞噬。</p><p>被吞噬的生物陷入束缚状态，对[[lookup @name lowercase]]外部的攻击和其他效果具有全身掩护，并在[[lookup @name lowercase]]的每个回合开始时受到[[lookup @prof.flat]]d8毒素伤害。当[[lookup @name lowercase]]移动时，被吞噬的生物会随之移动。被吞噬的生物可通过执行动作进行DC [[lookup @check.dc.value activity=3wz552jGQz2cjC72]]力量检定来尝试逃脱。若成功，该生物获得自由并位移至[[lookup @name lowercase]]5尺内一个自选的未占据空间。</p><p>[[lookup @name lowercase]]最多可同时吞噬一个大型生物或至多四个中型或更小的生物。</p>"
+    },
+    "Time Raider": {
+      "name": "时间掠夺者 Time Raider",
+      "description": "<p>时间掠夺者具有以下定义特性：</p><p><strong>体型。</strong> 时间掠夺者的体型为中型。</p><p><strong>种类。</strong> 时间掠夺者的种类为类人生物。</p><p><strong>速度。</strong> 时间掠夺者的步行速度为30尺。</p><p><strong>伤害抗性。</strong> 时间掠夺者对心灵伤害具有抵抗力。</p><p><strong>状态免疫。</strong> 时间掠夺者不会陷入目盲或魅惑状态。</p><p><strong>黑暗视觉。</strong> 时间掠夺者拥有120尺范围的黑暗视觉。</p><p><strong>语言。</strong> 时间掠夺者可以说、读、写通用语和库兰佐语。</p><p><strong>心灵伤痕。</strong> 时间掠夺者免疫任何感知其情绪、读取其思想、侦测其谎言或揭示其阵营或位置的效果。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义性特性"
+        }
+      }
+    },
+    "Kobold": {
+      "name": "狗头人 Kobold",
+      "description": "<p>狗头人具有以下定义特性：</p><p><strong>体型。</strong> 狗头人的体型为小型。</p><p><strong>类型。</strong> 狗头人的类型为类人生物。</p><p><strong>速度。</strong> 狗头人拥有30尺步行速度。</p><p><strong>黑暗视觉。</strong> 狗头人拥有60尺范围的黑暗视觉。</p><p><strong>语言：</strong> 狗头人能够说、读、写通用语和龙语。</p><p><strong>护盾术？护盾术！</strong> 当狗头人5尺范围内存在至少一名同样拥有此特性、正持用护盾且未陷入失能或倒地状态的盟友时，其护甲等级：获得+1加值。要从此特性获得效益，狗头人必须持用护盾。</p><p><strong>装备。</strong> 狗头人持有一面护盾。当狗头人持用护盾时，其护甲等级：获得+2加值。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义特性"
+        }
+      }
+    },
+    "Crimson Feast": {
+      "name": "猩红盛宴 Crimson Feast",
+      "description": "<p>[[lookup @name lowercase]]试图进入一个它可见的，位于其5尺内，且不是构装生物或亡灵的生物体内。目标必须进行一次DC [[lookup @save.dc.value activity=ie35ujg421G38gQN]]体质豁免。豁免失败，[[lookup @name lowercase]]会融入目标体内，目标受到[[lookup @prof.flat]]d6暗蚀伤害，成为[[lookup @name lowercase]]的宿主，并且在[[lookup @name lowercase]]离开宿主前陷入中毒状态。</p><p>在融入期间，[[lookup @name lowercase]]对于源自宿主外部的攻击和其他效果具有全身掩护，并且除了使用附赠动作离开宿主外不能执行任何动作。在[[lookup @name lowercase]]的每个回合开始时，宿主必须进行一次DC [[lookup @save.dc.value activity=ie35ujg421G38gQN]]体质豁免。豁免失败，宿主受到[[lookup @prof.flat]]d6暗蚀伤害并保持融合状态。豁免成功，宿主受到一半伤害且[[lookup @name lowercase]]离开宿主。如果宿主死亡，或受到<em>治愈病痛</em>异能、<em>防护毒素</em>或<em>次级复原术</em>法术，或类似的超自然效果影响，[[lookup @name lowercase]]会离开宿主。</p><p>当[[lookup @name lowercase]]离开宿主时，它会进入宿主5尺内的一个未占据空间。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "谁不是构装生物或亡灵"
+          }
+        }
+      }
+    },
+    "Lizardfolk": {
+      "name": "蜥蜴人 Lizardfolk",
+      "description": "<p>蜥蜴人具有以下定义特征：</p><p><strong>体型。</strong> 蜥蜴人的体型为中型。</p><p><strong>类型。</strong> 蜥蜴人的类型为类人生物。</p><p><strong>速度。</strong> 蜥蜴人的步行速度为30尺，游泳速度为30尺。</p><p><strong>语言。</strong> 蜥蜴人可以说、读、写通用语和龙语。</p><p><strong>水陆两栖。</strong> 蜥蜴人可以在空气和水中呼吸。</p><p><strong>啃咬攻击。</strong> 蜥蜴人可以用牙齿进行徒手打击，使用力量或敏捷（由蜥蜴人选择）进行攻击检定。当蜥蜴人用牙齿命中时，该打击造成1d6 + 蜥蜴人力量或敏捷调整值的穿刺伤害，而非徒手打击通常造成的钝击伤害。</p><p><strong>断尾求生 (1/日)。</strong> 如果蜥蜴人在力量或敏捷豁免中失败，他可以使用反应舍弃尾巴，改为成功。他在完成一次长休后重新长出尾巴。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义特性"
+        }
+      }
+    },
+    "Clever Claws": {
+      "name": "灵巧爪击 Clever Claws",
+      "description": "<p>该熊可以用其长爪代替盗贼工具来开锁，并且在此过程中进行的敏捷检定获得+3加值。</p>",
+      "effects": {
+        "Clever Claws": {
+          "name": "灵巧爪击 Clever Claws",
+          "description": "<p>你在使用盗贼工具开锁时获得+3加值，你可以用你的爪击代替工具来进行此类检定。</p>"
+        }
+      }
+    },
+    "Speak with Beasts and Plants": {
+      "name": "与野兽和植物交谈 Speak with Beasts and Plants",
+      "description": "<p>该[[lookup @name lowercase]]可以与野兽和植物沟通，仿佛它们共享一种语言。</p>"
+    },
+    "Blood for Blood": {
+      "name": "血债血偿 Blood for Blood",
+      "description": "<p>作为对死亡守卫可见的5尺内盟友被一次攻击命中的反应，死亡守卫将该攻击重定向至自身，可能导致该次攻击失手。若攻击者在死亡守卫5尺内，该侍从可对攻击者进行一次标志性攻击。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当死亡守卫能看见的盟友在5尺内被一次攻击命中时。"
+        }
+      }
+    },
+    "Chaotic Form": {
+      "name": "混乱形态 Chaotic Form",
+      "description": "<p>以一个附赠动作，你将伴日的混乱能量引导至自身，不断改变你的形态并使你更难被命中。当你使用此附赠动作时，以及在接下来1分钟的每一轮开始时，投掷一个d6。你的护甲等级增加所掷数值，直至你的下一轮开始。一旦你使用此附赠动作，直到完成一次长休前你都无法再次使用。</p>",
+      "activities": {
+        "utility": {
+          "roll": "护甲等级加值"
+        }
+      },
+      "effects": {
+        "Chaotic Form": {
+          "name": "混乱形态 Chaotic Form"
+        }
+      }
+    },
+    "One-Kobold Army": {
+      "name": "独行狗头人军队 One-Kobold Army",
+      "description": "<p>十夫长移动至多等于其速度的距离，然后发动等同于其5尺范围内敌人数量（至少三次攻击）的标志性攻击。范围内的每个敌人必须至少被攻击一次。若命中，目标必须进行一次[[/save]]豁免，否则将对十夫长陷入&amp;reference[恐慌]状态持续1分钟（豁免于回合结束时终止）。</p>",
+      "effects": {
+        "One-Kobold Army": {
+          "name": "一个狗头人军队 One-Kobold Army",
+          "description": "<p>目标对该侍从陷入恐慌状态，持续1分钟（豁免通过则在其回合结束时终止）。</p>"
+        }
+      }
+    },
+    "Crushing Grip": {
+      "name": "粉碎之握 Crushing Grip",
+      "description": "<p>这只鸟强有力的爪子会碾压它们所擒抱或依附的生物。目标必须进行一次[[/save]]豁免，豁免失败则受到[[/damage average]]伤害，豁免成功则伤害减半。</p>"
+    },
+    "Lair Actions: Shtriga Nonna": {
+      "name": "巢穴动作：Shtriga Nonna Lair Actions: Shtriga Nonna",
+      "description": "<p>当在其巢穴内战斗时，女巫诺娜可以执行巢穴动作。在先攻值20时（出现等值时视为后手），她可以执行一个巢穴动作以产生下列效应其一；女巫诺娜不能连续两轮使用相同的巢穴动作：</p><p><strong>把你养肥。</strong> 女巫诺娜选择她所能看见的、距离她60尺内的一个地面点。一场由意大利面、姜饼和烤鹅组成的20尺方格盛宴以该点为中心出现在地面上，持续到下一轮先攻值20结束。当盛宴出现时，位于该区域内的每个生物必须进行一次[[/save activity=uMP85ry32yVu2dBn]]豁免，否则在持续时间内因丰盛的食物而陷入&amp;Reference[dazed]状态。该盛宴对所有除女巫诺娜以外的生物而言均为困难地形。</p><p><strong>绝望猫咪。</strong> 幻影猫咪向女巫诺娜所能看见的、距离她60尺内的三个敌人发出嘶嘶声。每个目标必须进行一次[[/save activity=Us0vItiPjNG0QYg5]]豁免，否则其速度减半且无法恢复生命值，持续到下一轮先攻值20结束。</p><p><strong>糖与香料。</strong> 魔法香草和香料如雨般降下，形成一个以女巫诺娜所能看见的、距离她120尺内的一点为中心的20尺半径球状区域。该区域内的每个生物必须进行一次[[/save activity=oeGimGcpp0qgJiTv]]豁免，否则在体质和感知豁免上具有劣势，持续到下一轮先攻值20结束。</p>",
+      "activities": {
+        "Fatten You Up": {
+          "name": "把你养肥 Fatten You Up"
+        },
+        "Kitties of Despair": {
+          "name": "绝望者之猫 Kitties of Despair"
+        },
+        "Sugar and Spice": {
+          "name": "糖与香料 Sugar and Spice"
+        }
+      },
+      "effects": {
+        "Kitties of Despair": {
+          "name": "绝望者之猫 Kitties of Despair",
+          "description": "<p>你的速度减半，并且在下一轮先攻值20之前无法恢复生命值。</p>"
+        },
+        "Sugar and Spice": {
+          "name": "糖与香料 Sugar and Spice",
+          "description": "<p>直到下一轮先攻值20结束时，你在体质和感知豁免上具有劣势。</p>"
+        },
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Arctic Traveler": {
+      "name": "极地旅者 Arctic Traveler",
+      "description": "<p>该熊在避免获得力竭的豁免上具有优势，能够忍受低至-50华氏度的寒冷温度，并且可以忽略由冰或雪造成的困难地形。</p>"
+    },
+    "Ferocity": {
+      "name": "凶猛 Ferocity",
+      "description": "@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe02.JournalEntryPage.00ferocity000000 inline]",
+      "activities": {
+        "Gain Ferocity": {
+          "name": "获得凶蛮 Gain Ferocity",
+          "roll": "获得狂暴",
+          "condition": "伴日在其和其照护者的回合开始时未处于失能状态。"
+        },
+        "Prevent Rampage": {
+          "name": "阻止狂暴 Prevent Rampage"
+        },
+        "End of Combat": {
+          "name": "战斗结束 End of Combat"
+        }
+      }
+    },
+    "Burning Embrace": {
+      "name": "燃烧拥抱 Burning Embrace",
+      "description": "<p>作为一个动作，该据点对射程内的一个生物发动一次标志性攻击。如果攻击命中，目标还会陷入受擒状态（逃脱DC 10，外加[[lookup @prof.flat]]）。以此方式受擒时，目标被束缚，并在其每回合开始时受到[[lookup @prof.flat]]d6火焰伤害。</p>",
+      "activities": {
+        "Use": {
+          "name": "使用 Use"
+        },
+        "Repeating Damage": {
+          "name": "重复伤害 Repeating Damage",
+          "condition": "在受擒目标回合开始时。",
+          "affects": {
+            "special": "被擒抱的目标。"
+          }
+        }
+      }
+    },
+    "Powerful Jaws": {
+      "name": "强力撕咬 Powerful Jaws",
+      "description": "<p>该熊的啃咬攻击额外造成4（1d8）伤害，且对植物造成最大伤害。（拥有此特性的熊无法执行多重攻击Multiattack动作。）</p>"
+    },
+    "Backdraft": {
+      "name": "回火 Backdraft",
+      "description": "<p>[[lookup @name lowercase]]向上飞行至其速度，且不触发借机攻击。当[[lookup @name lowercase]]结束此移动时，其周围15尺内的每个生物必须进行一次DC[[lookup @save.dc.value activity=aPKHXaVoLBWbZxYt]]力量豁免。豁免失败，该生物受到[[lookup @prof.flat]]d6钝击伤害并应击倒地。豁免成功，该生物仅受到一半伤害且不会倒地。</p>"
+    },
+    "Mind Scream": {
+      "name": "心灵尖啸 Mind Scream",
+      "description": "<p><em>3环心灵感应异能</em></p><p>你以灵能刺穿射程内每个可见敌人的心智。每个目标必须进行智力豁免,豁免失败则受到5d6心灵伤害,成功则伤害减半。因该伤害生命值降至0的生物将自动稳定伤势。</p><p><strong>升阶效果。</strong>当你展现此异能时,可使其环阶提升1或更多。每提升1环,伤害增加2d6。</p>"
+    },
+    "Rotting Hooves": {
+      "name": "腐烂蹄足 Rotting Hooves",
+      "description": "<p>该[[lookup @name lowercase]]移动至多等同于其速度的距离且不触发借机攻击，然后发动一次标志性攻击。若命中，该攻击额外造成[[lookup @prof]]钝击伤害，且目标必须进行一次[[/save]]豁免，否则将陷入&amp;Reference[poisoned]状态直至该[[lookup @name lowercase]]的下一回合开始。</p>"
+    },
+    "Tail Sweep": {
+      "name": "扫尾攻击 Tail Sweep",
+      "description": "<p>[[lookup @name lowercase]]用尾巴扫过一片15尺锥形区域。该区域内的每个生物必须进行一次[[/save]]豁免，否则将受到[[/damage]]伤害并被推离[[lookup @name lowercase]]至多10尺远。</p>"
+    },
+    "Phasing Charge": {
+      "name": "相位冲锋 Phasing Charge",
+      "description": "<p>当特工使用标志性攻击命中一个生物时，他们可以尝试传送目标。目标必须进行一次[[/save]]豁免检定，否则将被传送至多30尺，到达特工可见的地面上一个未被占据的空间。</p>",
+      "activities": {
+        "save": {
+          "condition": "当随从使用标志性攻击命中一个生物时。",
+          "affects": {
+            "special": "被标志性攻击命中的生物。"
+          }
+        }
+      }
+    },
+    "Poisoned Sting": {
+      "name": "中毒刺击 Poisoned Sting",
+      "description": "<p>[[lookup @name lowercase]]用它们的尾巴刺击10尺内的一个目标。该目标必须进行一次DC [[lookup @save.dc.value activity=uUTbMYf7WVK54fye]]体质豁免。豁免失败，目标受到[[lookup @prof.flat]]d10毒素伤害并陷入&amp;reference[dazed]状态直至其下一回合结束。豁免成功，目标受到一半伤害且不会陷入晕眩。</p>",
+      "effects": {
+        "Poisoned Sting": {
+          "name": "中毒刺击 Poisoned Sting",
+          "description": "<p>目标陷入&amp;reference[dazed]状态直到其下一个回合结束。</p>"
+        }
+      }
+    },
+    "Lair Actions: Swamp": {
+      "name": "巢穴动作：沼泽 Lair Actions: Swamp",
+      "description": "<p>在先攻值20时（出现等值时视为后手），该沼泽生物可以执行下列巢穴动作之一；该沼泽生物不能连续两轮执行相同的巢穴动作：</p><p><strong>沼泽伪装。</strong> 该沼泽生物可以移动至多其速度一半的距离，然后进行一次敏捷（隐匿）检定以躲藏，即使其正被其他生物观察。</p><p><strong>沼泽毒气。</strong> 该沼泽生物选择其所能看见、距离其120尺范围内的一个地面点，使一团酸性沼泽毒气从该点喷发。除了该沼泽生物外，每个位于以该点为中心、20尺立方区域内的生物必须进行一次DC 12外加[[lookup @prof.flat]]的体质豁免，若失败则受到[[lookup @prof.flat]]d6强酸伤害。</p><p><strong>沼泽医药。</strong> 该沼泽生物汲取沼泽的生命能量，并恢复[[lookup @prof.flat]]d6生命值。</p>",
+      "activities": {
+        "Swamp Camouflage": {
+          "name": "沼泽伪装 Swamp Camouflage"
+        },
+        "Swamp Gas": {
+          "name": "沼泽气体 Swamp Gas"
+        },
+        "Swamp Medicine": {
+          "name": "沼泽医药 Swamp Medicine"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Fearsome Growl": {
+      "name": "骇人咆哮 Fearsome Growl",
+      "description": "<p>这头熊发出一声威猛的咆哮。每个在熊15尺范围内且能听到其声音的生物必须进行一次DC 13的感知豁免，若失败则直到熊的下个回合结束前对熊陷入&amp;reference[frightened]状态。成功通过豁免的生物将在24小时内对所有熊的威猛咆哮效果免疫。</p>",
+      "effects": {
+        "Fearsome Growl Immunity": {
+          "name": "慑人咆哮免疫 Fearsome Growl Immunity",
+          "description": "<p>你在24小时内对所有熊的骇人咆哮免疫。</p>"
+        }
+      }
+    },
+    "Flurry of Fangs": {
+      "name": "利齿连击 Flurry of Fangs",
+      "description": "<p>作为一个动作，啃噬者对其5尺内至多[[lookup @prof.flat]]个生物发动一次标志性攻击。</p>",
+      "activities": {
+        "Attack Nearby Creatures": {
+          "name": "攻击附近生物 Attack Nearby Creatures"
+        }
+      }
+    },
+    "Lair Actions: Yserthrax": {
+      "name": "巢穴动作：伊瑟斯瑞克斯 Lair Actions: Yserthrax",
+      "description": "<p>在她的巢穴内战斗时, 伊瑟斯瑞克斯可以执行巢穴动作。在先攻值20时(出现等值时视为后手), 她可以执行一个巢穴动作以产生下列效应其一; 她不能连续两轮使用相同的巢穴动作:</p><p><strong>全视之眼。</strong> 伊瑟斯瑞克斯将她的感官投射至整个巢穴, 在每一个表面都睁开翠绿的眼睛。直到下一轮先攻值20结束前, 伊瑟斯瑞克斯可以看到巢穴内的每一个生物。</p><p><strong>邪异脓溃。</strong> 伊瑟斯瑞克斯从她可见的, 距离她120尺内的一点释放出一股邪异能量。以该点为中心, 20尺半径球状区域内的每个生物必须进行一次[[/save activity=cjdCJWuhrXqHGduH]]豁免。豁免失败, 该生物受到[[/damage average]]伤害, 并且直到完成一次长休前, 其生命值上限减少的数值等于所受到的伤害。豁免成功, 该生物受到一半伤害且其生命值上限不会减少。</p><p><strong>远古低语。</strong> 伊瑟斯瑞克斯向她可见的, 距离她120尺内, 至多三个受其腐败特性腐化的生物低语一句扭曲的咒语。每个目标必须成功通过一次[[/save activity=DWO79lDlMrrNFNHJ]]豁免, 否则若其反应动作可用, 则必须使用反应动作, 按照伊瑟斯瑞克斯选择的方向移动至多其速度的距离。</p>",
+      "activities": {
+        "All-Seeing": {
+          "name": "全视 All-Seeing"
+        },
+        "Eldritch Suppuration": {
+          "name": "邪秽化脓 Eldritch Suppuration"
+        },
+        "Elder Whispers": {
+          "name": "长者低语 Elder Whispers",
+          "affects": {
+            "special": "被她的腐败特性所腐化"
+          }
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Dazing Slash": {
+      "name": "晕眩斩击 Dazing Slash",
+      "description": "<p>[[lookup @name lowercase]]发动一次标志性攻击。若命中，该攻击造成额外[[lookup @prof]]点挥砍伤害，且目标必须进行[[/save]]豁免，失败则陷入&amp;reference[dazed]状态直至[[lookup @name lowercase]]的下个回合开始。</p>"
+    },
+    "Grasping Detritus": {
+      "name": "缠绕残骸 Grasping Detritus",
+      "description": "<p>鬼婆召唤出魔法海藻和鱼内脏来束缚敌人。每个位于鬼婆发出的30尺锥状区域内的敌人必须进行一次[[/save]]豁免。豁免失败时，目标受到[[/damage average]]伤害并被&amp;reference[restrained]直到鬼婆的下个回合结束。豁免成功时，目标受到一半伤害且不被束缚。</p>"
+    },
+    "Protector": {
+      "name": "守护者 Protector",
+      "description": "<p>这只奇美拉被神圣地绑定于另一个生物，后者是它的守护对象。当奇美拉和其守护对象处于同一位面时，守护对象可通过心灵感应与奇美拉交流，且奇美拉能感知到守护对象的距离和方位。若奇美拉位于守护对象60尺范围内，守护对象承受的任何伤害的一半（向上取整）会转移至奇美拉。</p>"
+    },
+    "Sa33Q0WPc2sbIHFe": {
+      "name": "啃咬攻击 Sa33Q0WPc2sbIHFe",
+      "description": "<p>[[lookup @name lowercase]]可以使用它们的牙齿进行[[/item Unarmed Strike]]，使用力量或敏捷（[[lookup @name lowercase]]的选择）进行攻击检定。当[[lookup @name lowercase]]用牙齿命中时，该打击造成1d4 + [[lookup @name lowercase]]的力量或敏捷调整值的穿刺伤害，而非徒手打击通常造成的钝击伤害。</p>"
+    },
+    "Energy Eyes": {
+      "name": "能量之眼 Energy Eyes",
+      "description": "<p><em>3环心灵异能</em></p><p>你从双眼向射程内一个你能看见的生物射出元素能量。目标必须进行一次[[/save]]豁免检定,豁免失败则受到5d10伤害,成功则只受一半伤害。从下列伤害类型中选择一种:寒冷,火焰,闪电,或光耀。</p><p><strong>升阶。</strong>当你展现此异能时,可将其环阶提升1环或更高。每提升1环,伤害增加2d10。</p>"
+    },
+    "Volcanic Blow": {
+      "name": "火山喷发 Volcanic Blow",
+      "description": "[[lookup @name lowercase]]向一个其可见的60尺内的点喷吐火焰爆炸。以该点为中心，10尺半径球状区域内的每个生物必须进行一次DC [[lookup @save.dc.value activity=okEmK1rmj42YmeUc]] 敏捷豁免，豁免失败则受到[[lookup @prof.flat]]d6火焰伤害，豁免成功则伤害减半。"
+    },
+    "Sneak and Stab": {
+      "name": "潜伏者和刺杀 Sneak and Stab",
+      "description": "<p>作为附赠动作，潜伏者执行躲藏动作。如果潜伏者在同一回合里用一次攻击命中了一个他们对其处于躲藏状态的生物，该生物受到额外[[lookup @prof.flat]]d10点穿刺伤害，并且潜伏者可以立即再次执行躲藏动作(无需任何动作)。</p>",
+      "activities": {
+        "Consume Usage": {
+          "name": "消耗使用次数 Consume Usage"
+        },
+        "Extra Damage": {
+          "name": "额外伤害 Extra Damage",
+          "condition": "如果潜伏者用一次攻击命中了其处于隐藏状态下的生物，且该攻击发生在同一回合里。",
+          "range": {
+            "special": "与触发攻击的射程相同。"
+          }
+        }
+      }
+    },
+    "Bugbear": {
+      "name": "熊地精 Bugbear",
+      "description": "<p>熊地精具有以下定义性特征：</p><p><strong>体型。</strong> 熊地精的体型为中型。</p><p><strong>种类。</strong> 熊地精的种类为类人生物。</p><p><strong>速度。</strong> 熊地精的步行速度为30尺。</p><p><strong>黑暗视觉darkvision。</strong> 熊地精拥有60尺范围的黑暗视觉。</p><p><strong>语言：</strong> 熊地精可以说、读、写通用语和地精语。</p><p><strong>熊地精的激励。</strong> 位于熊地精15尺范围内且能看见或听见其声音的盟友类人生物，在进行感知和魅力豁免时具有优势。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义性特性"
+        }
+      }
+    },
+    "Punishing Shake": {
+      "name": "惩戒之握 Punishing Shake",
+      "description": "<p>该[[lookup @name lowercase]]移动至多其{速度 Speed}并对{单一目标 one target}发动一次标志性的{啃咬 Bite}{攻击 Attack}。若{攻击 Attack}命中{且目标 and the target}为{中型 Medium}{或更小的 or smaller}，该[[lookup @name lowercase]]还会摇晃并将其水平抛飞至多10{尺 feet}远。若{目标 the target}撞上坚实表面，其将被击倒&amp;Reference[prone]并额外受到[[/damage @prof bludgeoning]]{钝击 Bludgeoning}{伤害 damage}。</p>"
+    },
+    "Hypnotic Sleep": {
+      "name": "催眠睡眠术 Hypnotic Sleep",
+      "description": "<p>以一个附赠动作，猎杀无人机发出催眠音波。每个在猎杀者5尺范围内且能听到该音波的生物必须进行一次[[/save]]豁免，否则将陷入&reference[unconscious]状态1分钟。昏迷的目标会在受到伤害、猎杀者陷入失能、猎杀者移动到距目标超过5尺远、或其他生物使用动作唤醒目标时苏醒。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "必须能够听见侍从者。"
+          }
+        }
+      }
+    },
+    "Undying Hunger": {
+      "name": "不朽饥渴 Undying Hunger",
+      "description": "<p>该[[lookup @name lowercase]]可以感知其30尺范围内每个不是&amp;Reference[Construct]{构装生物 Construct}或&amp;Reference[Undead]{亡灵 Undead}的生物，如同该[[lookup @name lowercase]]拥有&amp;Reference[blindsight]{盲视 Blindsight}。</p>",
+      "effects": {
+        "Undying Hunger": {
+          "name": "不朽饥渴 Undying Hunger"
+        }
+      }
+    },
+    "Brutal Charge": {
+      "name": "野蛮冲撞 Brutal Charge",
+      "description": "<p>该[[lookup @name lowercase]]移动至多等同于其速度的距离，且不触发借机攻击。在此次移动期间或结束时，其可以对单一目标进行一次标志性攻击。</p>"
+    },
+    "Hobgoblin": {
+      "name": "大地精 Hobgoblin",
+      "description": "<p>大地精具有以下定义特性：</p><p><strong>体型。</strong> 大地精的体型为中型。</p><p><strong>种类。</strong> 大地精的种类为类人生物。</p><p><strong>速度。</strong> 大地精的步行速度为30尺。</p><p><strong>伤害抗性。</strong> 大地精具有火焰伤害抗性。</p><p><strong>黑暗视觉。</strong> 大地精拥有60尺范围的黑暗视觉。</p><p><strong>语言。</strong> 大地精能说、读、写通用语、地精语和炼狱语。</p><p><strong>炼狱腐液。</strong> 当大地精死亡时，其尸体会喷溅出燃烧的橙色腐液。大地精周围5尺范围内的每个生物受到等于大地精熟练加值的火焰伤害。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义特性"
+        }
+      }
+    },
+    "Astral Presence": {
+      "name": "星界存在 Astral Presence",
+      "description": "<p>作为一个动作，谄媚者变为&amp;reference[invisible]状态，持续1分钟或直到他们使用一个附赠动作来结束此效果。在隐形时，谄媚者可以穿过生物和物件，如同它们是&amp;reference[difficult terrain]，并且谄媚者的标志性攻击对无法看见他们的生物额外造成[[lookup @prof.flat]]伤害。如果谄媚者在一个物件内结束其回合，则受到5（1d10）力场伤害。</p>",
+      "activities": {
+        "Become Invisible": {
+          "name": "隐形 Become Invisible"
+        },
+        "Extra Damage": {
+          "name": "额外伤害 Extra Damage",
+          "condition": "当该侍从使用标志性攻击命中一个生物时。"
+        },
+        "Self Damage": {
+          "name": "自身伤害 Self Damage",
+          "condition": "当该随从在物件内结束其回合时。"
+        }
+      },
+      "effects": {
+        "Astral Presence": {
+          "name": "星界显现 Astral Presence",
+          "description": "<p>该侍从在持续时间内保持隐形，或直到它使用一个附赠动作来结束此效果。</p><p>当隐形时，该谄媚者可以穿过生物和物件，如同它们是困难地形，并且它的标志性攻击造成额外伤害。如果该谄媚者在一个物件内结束它的回合，它将受到力场伤害。</p>"
+        }
+      }
+    },
+    "Shield? Shield!": {
+      "name": "护盾术？护盾术！ Shield? Shield!",
+      "description": "<p>当[[lookup @name lowercase]]在5尺内至少有一名同样拥有此特性、正持用{护盾术 shield}且未处于{失能 incapacitated}或{倒地 prone}状态的{盟友 ally}时，其{护甲等级： AC}获得+1{加值 bonus}。要从此特性获得{效益 benefit}，[[lookup @name lowercase]]必须持用{护盾术 shield}。</p>",
+      "effects": {
+        "Shield? Shield!": {
+          "name": "护盾术？护盾术！ Shield? Shield!"
+        }
+      }
+    },
+    "Transmute Ground": {
+      "name": "改变地形 Transmute Ground",
+      "description": "<p>[[lookup @name lowercase]]选择一个其可见范围内30尺内的10尺方格区域。每个站在该区域内的生物必须进行DC [[lookup @save.dc.value activity=YufZSxk1lBF7Sicw]]力量豁免，否则会部分陷入地面并受到&amp;Reference[restrained]。生物可用其动作进行DC [[lookup @check.dc.value activity=FAfgy7zoNTyyLvz1]]力量（运动）检定，成功时可使自身或触及范围内的另一生物挣脱，并终止被释放生物的束缚状态。</p>"
+    },
+    "Sickening Sympathy": {
+      "name": "病态共鸣 Sickening Sympathy",
+      "description": "<p><em>2环心灵感应异能</em></p><p>发动该触发攻击的生物必须进行一次体质豁免，若失败则将持续感应到目标的反胃痛楚，直至其下一回合结束前陷入&amp;reference[中毒]状态。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你所见的30尺内的另一个生物被一次攻击命中时。"
+        }
+      }
+    },
+    "Liquefy": {
+      "name": "液化 Liquefy",
+      "description": "<p><em>3环变形异能</em></p><p>你以灵能向攻击者倾泻变形能量。攻击者必须进行一次体质豁免，若失败则被推离你5尺，并且在其下一回合结束前受到&amp;reference[restrained]状态，因为其下半身暂时融化成不可移动的粘稠物。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你被5尺内的一个生物的攻击命中时。"
+        }
+      }
+    },
+    "Crystallize": {
+      "name": "结晶 Crystallize",
+      "description": "<p>[[lookup @name lowercase]]从地面召唤出尖锐的晶体，形成一个以自身为中心、20尺半径的球状区域。直到[[lookup @name lowercase]]的下个回合开始前，该区域对其敌人而言成为困难地形，当敌人进入或在区域内移动时，每移动5尺就会受到2×[[lookup @prof.flat]]点穿刺伤害。</p>"
+    },
+    "Vicinity Shift": {
+      "name": "区域位移 Vicinity Shift",
+      "description": "<p>[[lookup @name lowercase]]和其30尺范围内的每个盟友在伤害骰上获得+[[lookup @prof]]加值，且速度翻倍，持续至[[lookup @name lowercase]]的下个回合开始。此外，[[lookup @name lowercase]]可在此动作中发动一次标志性攻击。</p>",
+      "effects": {
+        "Vicinity Shift": {
+          "name": "区域转移 Vicinity Shift"
+        }
+      }
+    },
+    "Hypnotic Mane": {
+      "name": "催眠鬃毛 Hypnotic Mane",
+      "description": "<p>[[lookup @name lowercase]]周围10尺范围内的每个生物必须进行一次DC [[lookup @save.dc.value activity=HFBgEEKvKTbJ9Jyx]]感知豁免，豁免失败则被[[lookup @name lowercase]]魅惑，直至[[lookup @name lowercase]]的下个回合结束。以此方式被魅惑期间，生物陷入失能状态且速度降至0。若以此方式被魅惑的生物受到伤害，或有其他生物使用动作将其摇醒，则该生物身上的此状态结束。</p>",
+      "effects": {
+        "Hypnotic Mane": {
+          "name": "催眠鬃毛 Hypnotic Mane"
+        }
+      }
+    },
+    "Wind Hover": {
+      "name": "风之悬停 Wind Hover",
+      "description": "<p>这只鸟可以在飞行时悬停。</p>",
+      "effects": {
+        "Wind Hover": {
+          "name": "风之悬停 Wind Hover",
+          "description": "<p>你在飞行时可以悬停。</p>"
+        }
+      }
+    },
+    "Piscine Transformation": {
+      "name": "鱼类变形 Piscine Transformation",
+      "description": "<p>3阶变形异能</p><p>你向射程内一个你能看见的类人生物发射一道变形能量脉冲。目标必须进行一次感知豁免，否则将在持续时间内经历你选择的下列变形之一。目标可以选择主动豁免失败。</p><p><strong>头部。</strong> 目标的头部转变为鱼头，尺寸与其身体成比例。他们无法说话。</p><p><strong>腿部。</strong> 目标的双腿变为鳍状。其步行速度降低至10尺（除非原步行速度更慢），并获得30尺游泳速度。</p><p><strong>躯干。</strong> 目标的躯干变为带鳃的鱼身。他们只能在水下呼吸，且能屏息1小时。若此变形生效时目标未处于水下，则开始窒息。</p><p><strong>升阶效果。</strong> 当你显能此异能时，可提升2阶以瞄准任意生物（不限类人生物），只要其具备你想要变形的身体部位。</p><p>此外，你可提升此异能2阶使其持续时间延长至1小时。</p>",
+      "effects": {
+        "Piscine Transformation (Head)": {
+          "name": "鱼类变形（头部） Piscine Transformation (Head)",
+          "description": "<p>你的头部变成了一条鱼的头部，大小与你的身体成比例。你无法说话。</p>"
+        },
+        "Piscine Transformation (Legs)": {
+          "name": "鱼形变形（腿部） Piscine Transformation (Legs)",
+          "description": "<p>你的双腿变为鳍。你的步行速度降低至10尺（除非你的步行速度原本更慢），并且你获得30尺的游泳速度。</p>"
+        },
+        "Piscine Transformation (Torso)": {
+          "name": "水生变形（躯干） Piscine Transformation (Torso)",
+          "description": "<p>你的躯干变为带有鳃的鱼身。你只能在水下呼吸，并且可以屏住呼吸1小时。若此变形生效时你未处于水下环境，你将开始窒息。</p>"
+        }
+      }
+    },
+    "Reinforce Armor": {
+      "name": "强化护甲 Reinforce Armor",
+      "description": "<p>作为一个附赠动作，铁匠触碰一件护甲并加固它。在接下来的10分钟内，穿着该护甲的生物获得一个护甲等级：加值，该加值等于铁匠熟练加值的一半。</p><fieldset><legend>Foundry 注</legend><p>此特性上的附魔系行动目前使用目标的熟练加值。</p></fieldset>",
+      "activities": {
+        "enchant": {
+          "affects": {
+            "special": "一件护甲。"
+          }
+        }
+      },
+      "effects": {
+        "Reinforced Armor": {
+          "name": "强化护甲 Reinforced Armor",
+          "description": "<p>这件护甲提供的额外护甲等级：等于兽人铁匠熟练加值的一半。</p>"
+        }
+      }
+    },
+    "XbFOmnwuNWgBHC1A": {
+      "name": "野蛮冲锋 XbFOmnwuNWgBHC1A",
+      "description": "[[lookup @name lowercase]]可以移动至多其速度的距离，且不触发借机攻击。在此次移动期间或结束时，他们可以对触及范围内的单一目标进行一次标志性攻击。"
+    },
+    "XdiqHgdnW18YRRex": {
+      "name": "熟练攀爬者 XdiqHgdnW18YRRex",
+      "description": "<p>野猫的攀爬速度为25尺。</p>",
+      "effects": {
+        "Adept Climber": {
+          "name": "熟练攀爬者 Adept Climber",
+          "description": "<p>你拥有25尺的攀爬速度。</p>"
+        }
+      }
+    },
+    "Ruin Delver": {
+      "name": "废墟探索者 Ruin Delver",
+      "description": "<p>当[[lookup @name lowercase]]位于提供&amp;Reference[half cover]的物件后方时，他们将被视为拥有&amp;Reference[three-quarters cover]。</p>"
+    },
+    "Sting": {
+      "name": "刺针 Sting",
+      "description": "<p><em>近战武器攻击：</em>命中+4，触及5尺，单一目标。<em>命中：</em>2（1d4）点穿刺伤害外加7（2d6）毒素伤害，若该集群生命值减半或更少则造成1点穿刺伤害。（取代啃咬攻击）</p>",
+      "activities": {
+        "Attack - Full Hit Points": {
+          "name": "攻击 - 满生命值 Attack - Full Hit Points"
+        },
+        "Attack - Half Hit Points": {
+          "name": "攻击 - 半数生命值 Attack - Half Hit Points"
+        }
+      }
+    },
+    "Psychic Scar": {
+      "name": "心灵创伤 Psychic Scar",
+      "description": "<p>该[[lookup @name lowercase]]免疫任何能感知其情绪, 读取其思想, 揭示其在说谎, 或揭示其阵营或位置的效果。</p>"
+    },
+    "YJNHM1XkPbZygMZ7": {
+      "name": "亡者呼唤 YJNHM1XkPbZygMZ7",
+      "description": "<p>当[[lookup @name lowercase]]用招牌攻击命中一个生物时，[[/save]]豁免失败的目标还会对[[lookup @name lowercase]]陷入&amp;reference[恐慌]状态持续1分钟（豁免于回合结束时终止）。</p>",
+      "activities": {
+        "save": {
+          "condition": "当幽魂谄媚者用其标志性攻击命中一个生物时。"
+        }
+      }
+    },
+    "Flyer": {
+      "name": "飞行者 Flyer",
+      "description": "<p>该集群拥有30尺的飞行速度。</p>",
+      "effects": {
+        "Flyer": {
+          "name": "飞行者 Flyer",
+          "description": "<p>你拥有30尺的飞行速度。</p>"
+        }
+      }
+    },
+    "Phantoms Abound": {
+      "name": "幻影丛生 Phantoms Abound",
+      "description": "<p>鬼婆用敌人最恐惧的幻象填满其周围区域。鬼婆30尺范围内的每个敌人都必须进行一次[[/save]]豁免。豁免失败时，目标受到[[/damage average]]伤害，陷入&amp;reference[prone]倒地状态，且若鬼婆位于目标5尺范围内，鬼婆可对其发动一次托梦术爪击。豁免成功时，目标仅受半数伤害，不会倒地，且鬼婆不会对其发动攻击。</p>"
+    },
+    "Silent Pounce": {
+      "name": "无声突袭 Silent Pounce",
+      "description": "<p>该[[lookup @name lowercase]]传送至一个其可见的未占据空间，距离30尺。在传送之前或之后，该[[lookup @name lowercase]]可以进行一次标志性攻击。若攻击命中，目标将被击倒&amp;Reference[prone]。</p>"
+    },
+    "Lair Actions: Lich": {
+      "name": "巢穴动作：巫妖 Lair Actions: Lich",
+      "description": "<p>当在其巢穴内战斗时，巫妖可以执行巢穴动作。在先攻值20时（出现等值时视为后手），巫妖可以执行一个巢穴动作以产生下列效应其一；巫妖不能连续两轮使用同一个巢穴动作：</p><p><strong>灵魂汲取。</strong> 巫妖选择其90尺内能看见的两名敌人。每个目标必须进行一次[[/save activity=23v6ptrEBV81PkL0]]豁免，否则受到[[/damage average activity=23v6ptrEBV81PkL0]]伤害，因为巢穴吸收了其灵魂碎片。</p><p><strong>精魄护壳。</strong> 巫妖召唤精魄环绕自身，直至下一轮先攻值20结束。在此持续时间内，以近战攻击命中巫妖的生物必须进行一次[[/save activity=9Iq1JIms8x3qorrk]]豁免，否则被&amp;Reference[dazed]直至该生物下一回合开始。</p><p><strong>天生邪首。</strong> 巫妖通过巢穴将其灵魂石的力量放大到其90尺内能看见的一个生物身上。目标必须进行一次[[/save activity=diPBGpHU5SBBvd2p]]豁免，否则若可用则使用其反应，移动至多其速度，并对巫妖指定的一个生物发动一次武器攻击。</p>",
+      "activities": {
+        "Soul Sip": {
+          "name": "灵魂汲取 Soul Sip"
+        },
+        "Spirit Shell": {
+          "name": "精魄护壳 Spirit Shell",
+          "affects": {
+            "special": "一个用近战攻击命中舔舐的生物。"
+          }
+        },
+        "Unnatural Born Leader": {
+          "name": "天生领袖 Unnatural Born Leader"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Cackle": {
+      "name": "咯咯笑 Cackle",
+      "description": "<p>位于[[lookup @name lowercase]]30尺内且能听到其声音的每个敌人必须进行一次DC[[lookup @save.dc.value activity=EUVhk14bJVk5AFY8]]豁免,否则受到[[lookup @prof.flat]]d4伤害并陷入对[[lookup @name lowercase]]的&amp;Reference[frightened]状态,持续至[[lookup @name lowercase]]的下个回合开始。</p>"
+    },
+    "Stone Gaze": {
+      "name": "石化凝视 Stone Gaze",
+      "description": "<p>作为一个动作，该顽固者从其眼中向30尺内一个它能看见的生物发射能量光束。目标必须进行一次[[/save]]豁免，否则开始石化并被&amp;reference[束缚]。</p><p>以此方式被束缚的目标必须在其下一回合结束时重复该豁免。豁免成功则效果结束。豁免失败则该生物被&amp;reference[石化]1小时，或被4环或更高环阶的<em>治愈病痛</em>异能、<em>{高等复原术 greater restoration}</em>法术或类似的超自然效果恢复。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "必须可见。"
+          }
+        }
+      }
+    },
+    "Amphibious": {
+      "name": "水陆两栖 Amphibious",
+      "description": "<p>该[[lookup @name lowercase]]可以呼吸空气和水。</p>"
+    },
+    "Shared Condition": {
+      "name": "共享状态 Shared Condition",
+      "description": "<p>当[[lookup @name]]陷入目盲, 魅惑, 呆滞, 耳聋, 恐慌, 麻痹, 或震慑状态时, 他可以选择一个60尺内自愿且未陷入该状态或对其免疫的紫晶匕首首领。随后该被选生物在持续时间内获得该状态, 而[[lookup @name]]则失去该状态。即使处于失能状态, 他也能使用此反应。</p>"
+    },
+    "Desert Warrior": {
+      "name": "沙漠武者 Desert Warrior",
+      "description": "<p>你无视由泥土或沙子造成的困难地形,并且你被视为天生适应炎热气候。</p><p>此外,你可以使用一个附赠动作来激活一道如同沙漠幻影般在你周围闪烁的灵光。在1分钟内,你和你10尺内的盟友在进行体质豁免,以及对抗被魅惑、恐慌或应击倒地的豁免时,获得+PB加值。一旦你使用了这个附赠动作,直到你完成一次长休前,你都无法再次使用它。</p>",
+      "effects": {
+        "Desert Warrior": {
+          "name": "沙漠武者 Desert Warrior",
+          "description": "<p>你和10尺内的盟友在体质豁免，以及对抗被魅惑、恐慌或应击倒地的豁免上具有+PB加值。</p>"
+        }
+      }
+    },
+    "Coiling Claws": {
+      "name": "盘卷之爪 Coiling Claws",
+      "description": "<p>该[[lookup @name lowercase]]对中型或更小的生物发动一次标志性攻击。若命中，目标将&amp;Reference[grappled]（逃脱DC 10，外加[[lookup @prof.flat]]）。此&amp;reference[restrained]状态持续至受擒结束，且该[[lookup @name lowercase]]无法对其他目标发动标志性攻击。</p>"
+    },
+    "Poison Gaze": {
+      "name": "毒素凝视 Poison Gaze",
+      "description": "<p>该[[lookup @name lowercase]]选择其15尺内可见的最多三个生物。每个生物必须进行一次DC 10加[[lookup @prof.flat]]的体质豁免，或直到该[[lookup @name lowercase]]的下个回合开始前陷入&amp;Reference[poisoned]状态。</p>"
+    },
+    "Anomalous Terrain": {
+      "name": "异常地形 Anomalous Terrain",
+      "description": "[[lookup @name lowercase]]周围10尺区域对其敌人变为困难地形，持续至其下一回合开始。当敌人在其回合内首次进入该区域或在该区域内开始其回合时，必须进行一次DC [[lookup @save.dc.value activity=onGc5rDvqii1Fmu8]]敏捷豁免，豁免失败则受到[[lookup @prof.flat]]d4点力场伤害。"
+    },
+    "Riverkith": {
+      "name": "河族 Riverkith",
+      "description": "<p>你获得等于你步行速度的游泳速度，并且可以屏息长达15分钟。此外，作为附赠动作，你可以向30尺锥状区域喷吐闪电。锥状区域内的每个生物必须进行一次对抗你 exploit 豁免DC的敏捷豁免，豁免失败则受到6d6闪电伤害，成功则仅受一半伤害。一旦你使用此附赠动作，在完成一次长休前无法再次使用。</p>",
+      "effects": {
+        "Riverkith": {
+          "name": "河族 Riverkith"
+        }
+      }
+    },
+    "Sinkhole": {
+      "name": "地陷坑 Sinkhole",
+      "description": "<p>该[[lookup @name lowercase]]向上掘进至其速度，并目标为它们能感知到的地表上10尺内的一个生物。该目标必须进行一次DC [[lookup @save.dc.value activity=sDd14vKGu8oxYkks]]力量豁免，否则将被地面&amp;Reference[restrained]直到该[[lookup @name lowercase]]的下一个回合开始。</p>"
+    },
+    "Fungal Infestation": {
+      "name": "真菌侵染 Fungal Infestation",
+      "description": "<p>该[[lookup @name lowercase]]覆盖着层层有毒真菌。它们对毒素伤害具有免疫。当该[[lookup @name lowercase]]在一个回合中首次受到伤害时，其周围5尺内的每个生物都会受到[[/damage]]伤害。</p>",
+      "activities": {
+        "damage": {
+          "condition": "该生物在一个回合中受到伤害。"
+        }
+      },
+      "effects": {
+        "Fungal Infestation": {
+          "name": "真菌侵染 Fungal Infestation"
+        }
+      }
+    },
+    "Shadow Blend": {
+      "name": "暗影融合 Shadow Blend",
+      "description": "<p>在微光光照或黑暗环境下，该地下生物可以执行&amp;Reference[Hide]动作作为一个附赠动作。</p>",
+      "activities": {
+        "Hide": {
+          "name": "躲藏 Hide"
+        }
+      }
+    },
+    "Rend and Roast": {
+      "name": "撕裂与炙烤 Rend and Roast",
+      "description": "<p>该[[lookup @name lowercase]]对同一目标发动两次招牌攻击，然后对其喷吐火焰。目标必须进行一次[[/save]]豁免，豁免失败则受到[[/damage activity=3e5nD3gBrh2qsszu]]伤害，豁免成功则仅受半数伤害。</p>",
+      "activities": {
+        "Signature Attack": {
+          "name": "标志性攻击 Signature Attack"
+        },
+        "Breathe Fire": {
+          "name": "喷吐火焰 Breathe Fire"
+        }
+      }
+    },
+    "Wraithstep": {
+      "name": "幽魂步 Wraithstep",
+      "description": "<p>以一个动作，该自由斗士变为&amp;reference[invisible apply=false]状态，持续1分钟。在隐形期间，该自由斗士对来自普通攻击的钝击、穿刺和挥砍伤害具有抗性，并且可以穿过其他生物和物件，如同它们是困难地形。如果该自由斗士在物件内部结束其回合，则受到[[/damage 1d10 average force]]伤害。</p>",
+      "effects": {
+        "Wraithstep": {
+          "name": "幽魂步 Wraithstep",
+          "description": "<p>你处于隐形状态。在隐形期间，你对来自普通攻击的钝击、穿刺和挥砍伤害具有抗性，并且你可以穿过其他生物和物体，如同它们是困难地形。</p>"
+        }
+      }
+    },
+    "Weaving Knives": {
+      "name": "织法匕首 Weaving Knives",
+      "description": "<p>作为一个动作，潜伏者移动至多其速度的距离且不触发借机攻击。在移动之前、期间或之后，他们可以发动两次标志性攻击。</p>"
+    },
+    "I'm You": {
+      "name": "我就是你。 I'm You",
+      "description": "<p>该[[lookup @name lowercase]]使用其变形生物特性，变形为它可见的5尺内一个大型或更小的生物。除体型外，该[[lookup @name lowercase]]的资料卡不会改变，且该[[lookup @name lowercase]]会在其下一回合开始时恢复原形。</p><p>变形后，该[[lookup @name lowercase]]可对它所模仿形态的目标进行一次标志性攻击。无论命中与否，目标都必须进行一次DC[[lookup @save.dc.value activity=XXFEtNCrhT44cD8L]]感知豁免。豁免失败，针对目标的攻击具有优势，且目标在攻击骰和豁免上具有劣势，直到该[[lookup @name lowercase]]的下一回合开始。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "大型或更小的"
+          }
+        }
+      },
+      "effects": {
+        "I'm You": {
+          "name": "我就是你。 I'm You",
+          "description": "<p>对抗该目标的攻击具有优势，且目标在攻击检定和豁免上具有劣势，直到拟身怪的下个回合开始。</p>"
+        }
+      }
+    },
+    "Reptilian Escape": {
+      "name": "爬虫逃遁 Reptilian Escape",
+      "description": "<p>如果[[lookup @name lowercase]]在力量或敏捷豁免中失败，他们可以使用反应来失去尾巴并改为成功。他们在完成一次长休后重新长出尾巴。</p>",
+      "activities": {
+        "Lose Tail": {
+          "name": "失去尾巴 Lose Tail",
+          "condition": "该怪物未通过一次力量或敏捷豁免。"
+        }
+      }
+    },
+    "Burrower": {
+      "name": "掘地者 Burrower",
+      "description": "<p>该集群拥有5尺的掘穴速度。</p>",
+      "effects": {
+        "Burrower": {
+          "name": "掘地者 Burrower",
+          "description": "<p>你拥有5尺的掘穴速度。</p>"
+        }
+      }
+    },
+    "Death Frenzy": {
+      "name": "死亡狂乱 Death Frenzy",
+      "description": "<p>当[[lookup @name lowercase]]能看见的盟友在30尺内生命值降至0时，[[lookup @name lowercase]]可用反应移动至多其速度一半的距离并发动一次啃咬攻击。</p>",
+      "activities": {
+        "utility": {
+          "condition": "该怪物可见的30尺内一名盟友生命值降至0。"
+        }
+      }
+    },
+    "Pummel": {
+      "name": "猛击 Pummel",
+      "description": "<p>该[[lookup @name lowercase]]发动一次标志性攻击。若命中，目标同时陷入&amp;Reference[grappled]状态（逃脱DC 10外加[[lookup @prof.flat]]）。以此方式受擒期间，该[[lookup @name lowercase]]的攻击（含触发此次攻击）额外造成[[lookup @prof]]伤害，若目标为大型或更小的体型则陷入&amp;Reference[restrained]状态，且该[[lookup @name lowercase]]无法对其他目标发动标志性攻击。</p>"
+    },
+    "Acidic Nature": {
+      "name": "酸性自然 Acidic Nature",
+      "description": "<p>沼泽的自然酸性使[[lookup @name lowercase]]获得强酸伤害抗性。如果该生物已具有强酸伤害抗性，则改为获得强酸伤害免疫。</p>",
+      "effects": {
+        "Acidic Nature": {
+          "name": "酸性自然 Acidic Nature"
+        }
+      }
+    },
+    "Soul Devourer": {
+      "name": "噬魂者 Soul Devourer",
+      "description": "<p>当[[lookup @name lowercase]]将一个非构装生物或亡灵的生物生命值降至0点，或对一个垂死生物造成伤害时，该生物必须进行一次DC 11感知豁免。豁免失败时，[[lookup @name lowercase]]将吞噬该生物的灵魂，并使[[lookup @name lowercase]]的灵魂计数增加1。以此方式被吞噬灵魂的生物会立即死亡，且除<em>祈愿术</em>法术外无法通过任何方式复活。</p>",
+      "activities": {
+        "Gain Soul": {
+          "name": "获得灵魂 Gain Soul"
+        }
+      }
+    },
+    "Filthy Scratch": {
+      "name": "污秽抓痕 Filthy Scratch",
+      "description": "<p>[[lookup @name lowercase]]抓挠一个其周围5尺内可见的生物。该目标必须进行一次[[/save]]豁免。豁免失败时，目标受到[[/damage]]伤害并陷入&amp;reference[poisoned]状态，直至[[lookup @name lowercase]]的下一回合开始。以此法中毒期间，目标无法恢复生命值。豁免成功时，目标仅受到一半伤害且不会中毒。</p>"
+    },
+    "Telekinetic Repulsion": {
+      "name": "念力斥力 Telekinetic Repulsion",
+      "description": "<p>作为一个动作，该特工释放一道强大的能量脉冲。特工周围10尺内的每个敌人必须进行一次[[/save]]豁免检定。豁免失败时，一个生物受到[[/damage]]伤害并被推开至多10尺远离特工。豁免成功时，一个生物受到一半伤害且不会被推开。</p>"
+    },
+    "Orc": {
+      "name": "兽人 Orc",
+      "description": "<p>兽人具有以下定义性特征：</p><p><strong>体型。</strong> 兽人的体型为中型。</p><p><strong>类型。</strong> 兽人的类型为类人生物。</p><p><strong>速度。</strong> 兽人的步行速度为35尺。</p><p><strong>黑暗视觉。</strong> 兽人拥有60尺范围的黑暗视觉。</p><p><strong>语言。</strong> 兽人能够说、读、写通用语和兽人语。</p><p><strong>不屈(1/回合)。</strong> 当兽人未处于失能状态且生命值被降至0但未被直接杀死时，可在生命值降低生效前对敌人发动一次攻击(无需动作)。若攻击命中且其伤害将目标生命值降至0，则兽人改为降至1点生命值而非0点生命值。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义特性"
+        }
+      }
+    },
+    "Roll Out": {
+      "name": "骰出 Roll Out",
+      "description": "<p>[[lookup @name lowercase]]以直线移动至多等同于其步行速度的距离，且不触发借机攻击。[[lookup @name lowercase]]可以在一处包含另一生物的空间结束此移动。若其如此做，该生物受到2 × PB的钝击伤害，每移动10尺便计算一次，且其必须进行一次DC [[lookup @save.dc.value activity=CqVqkBEC7siK1a95]]力量豁免。豁免失败则该生物被击倒&amp;reference[prone]。豁免成功则将该生物从[[lookup @name lowercase]]所在空间推开5尺，移至其选择的一处未占据空间。</p>"
+    },
+    "Invigorated March": {
+      "name": "振奋行军 Invigorated March",
+      "description": "<p><em>3环变形异能</em></p><p>你向射程内一个可见生物的精神领域释放一股心灵激荡能量。该生物若可用反应，则可消耗反应以其速度移动，且不触发借机攻击。</p><p><strong>升阶效应。</strong>当你展现此异能时，可使其秩序提升1或更高。每提升1阶，你就能额外指定一个目标生物。</p>"
+    },
+    "Lair Actions: Overmind": {
+      "name": "巢穴动作：超脑 Lair Actions: Overmind",
+      "description": "<p>在巢穴内战斗时，主脑可以执行巢穴动作。在先攻值20时（出现等值时视为后手），主脑可以消耗一个巢穴动作来产生下列效应其一；主脑不能连续两轮使用相同的巢穴动作：</p><p><strong>浊气喷涌。</strong>主脑在其60尺范围内指定的天花板、地板或墙壁上开启一个孔洞，喷发出20尺半径的恶臭气体球状区域，该区域持续存在至下一轮先攻值20结束。当生物首次进入该区域或在该区域开始其回合时，必须进行[[/save activity=WuqfLH7hVAjKb9rp]]豁免，豁免失败则陷入&amp;Reference[poisoned]{中毒 poisoned}状态直至其下一回合开始。</p><p><strong>粘液倾泻。</strong>粘稠的黏液从天花板落向主脑120尺内的一个敌人。该生物必须进行[[/save activity=fZ3yk0EqQj0Q2VT5]]豁免，豁免失败则对火焰和闪电伤害易伤。此效果在生物受到火焰或闪电伤害时结束，或持续至下一轮先攻值20结束。</p><p><strong>念动力禁锢。</strong>一股隐形力场试图擒抱主脑60尺内的三名敌人。每个生物必须进行[[/save activity=sKya8LweIKk0StjP]]豁免。豁免失败时，该生物速度变为0并垂直上升20尺悬停空中，此状态持续至下一轮先攻值20结束，届时他们将&amp;Reference[falling]{坠落 falling}。</p>",
+      "activities": {
+        "Gas Belch": {
+          "name": "气体喷吐 Gas Belch"
+        },
+        "Slime Shower": {
+          "name": "粘液喷淋 Slime Shower"
+        },
+        "Telekinetic Hold": {
+          "name": "念力束缚 Telekinetic Hold"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        },
+        "Slime Shower": {
+          "name": "粘液之雨 Slime Shower",
+          "description": "<p>你对火焰和闪电伤害易伤。此效果在你受到火焰或闪电伤害时结束，或在下一轮先攻值20时结束。</p>"
+        },
+        "Telekinetic Hold": {
+          "name": "念力束缚 Telekinetic Hold",
+          "description": "<p>你的速度为0，并且你被悬在20尺高的空中，直到下一轮先攻值20结束时，此时你会坠落。</p>"
+        }
+      }
+    },
+    "Lair Actions: Vampire": {
+      "name": "巢穴动作：吸血鬼 Lair Actions: Vampire",
+      "description": "<p>在巢穴内战斗时，吸血鬼可以执行巢穴动作。在先攻值20时（出现等值时视为后手），吸血鬼可以执行一个巢穴动作以产生下列效应其一；吸血鬼不能连续两轮使用相同的巢穴动作：</p><p><strong>暗夜仆从。</strong> 蝙蝠与昆虫组成的集群环绕吸血鬼飞行，并随其移动。吸血鬼周围30尺范围内的区域对其他生物而言处于&amp;Reference[重度遮蔽]状态，此效应持续至下一轮先攻值20结束。</p><p><strong>血雨倾盆。</strong> 吸血鬼指定一个其可见的60尺内的点。血液如雨般降下，形成一个以此点为中心、40尺高、10尺半径的柱状区域，此效应持续至下一轮先攻值20结束。当柱状区域内非亡灵生物受到暗蚀伤害时，额外受到[[/damage average]]伤害。</p><p><strong>臣服吾欲。</strong> 吸血鬼对周围生物施加意志威压。吸血鬼周围60尺内能听到其声音的每个生物必须进行[[/save]]豁免，若失败则被吸血鬼&amp;Reference[魅惑]直至其本回合结束。每个被魅惑的生物必须立即使用其反应（若可用），对另一生物发动近战攻击，对自身发动近战攻击，或进入&amp;Reference[倒地]状态（由吸血鬼选择）。</p>",
+      "activities": {
+        "Children of the Night": {
+          "name": "暗夜子嗣 Children of the Night"
+        },
+        "Blood Rain": {
+          "name": "血雨 Blood Rain",
+          "affects": {
+            "special": "谁不是亡灵"
+          }
+        },
+        "Obey My Desire": {
+          "name": "服从我的欲望 Obey My Desire"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Familiar": {
+      "name": "魔宠 Familiar",
+      "description": "<p>这只幼龙可以作为魔宠侍奉另一生物，与其自愿的伴日形成心灵联结telepathic bond。当两者存在牵绊时，只要彼此距离在1英里内，伴日就能感知幼龙的感官信息。此外，当幼龙使用真实视觉动作时，与其保持物理接触的伴日也将获得真实视觉。任意一方均可随时终止此牵绊。</p>",
+      "activities": {
+        "Truesight": {
+          "name": "真实视觉 Truesight",
+          "affects": {
+            "special": "伴日。"
+          }
+        }
+      },
+      "effects": {
+        "Truesight": {
+          "name": "真实视觉 Truesight",
+          "description": "<p>当雏龙使用其真实视觉动作时，若你与雏龙保持物理接触，你也将获得真实视觉。</p>"
+        }
+      }
+    },
+    "Lightning Bomb": {
+      "name": "闪电炸弹 Lightning Bomb",
+      "description": "<p>[[lookup @name lowercase]]周围10尺范围内的每个生物必须进行一次DC [[lookup @save.dc.value activity=Emnktqn2nomJJqaz]]敏捷豁免，豁免失败则受到[[lookup @prof.flat]]d8闪电伤害，豁免成功则伤害减半。</p>"
+    },
+    "Clawing Frenzy": {
+      "name": "疯狂爪击 Clawing Frenzy",
+      "description": "<p>[[lookup @name lowercase]]对其5尺内[[lookup @prof.flat]]个自选目标发动一次标志性爪击。在其回合结束时，[[lookup @name lowercase]]每有一次攻击未命中就获得1点凶悍。</p>",
+      "activities": {
+        "Regain Ferocity": {
+          "name": "重获凶蛮 Regain Ferocity"
+        }
+      }
+    },
+    "Fungicea": {
+      "name": "真菌灵 Fungicea",
+      "description": "<p>蘑菇从你的身体上发芽。作为长休的一部分，你可以将它们合成为一剂治疗药水。一个生物可以用附赠动作消耗该药水，恢复[[lookup @prof.flat]]d6生命值。该药水在制作完成24小时后失去效力。</p>"
+    },
+    "Crawling Menace": {
+      "name": "匍匐灾厄 Crawling Menace",
+      "description": "<p>你可以使用一个附赠动作，变得在地面上如同站立时一样灵巧。持续1小时，匍匐不会消耗你额外的移动力，生物对你的攻击检定具有劣势，处于&Reference[prone apply=false]状态不会使其他生物攻击你时具有优势，且倒地状态不会使你的攻击具有劣势。一旦你使用此附赠动作，直到完成一次长休前都无法再次使用。</p>",
+      "effects": {
+        "Crawling Menace": {
+          "name": "匍匐威胁 Crawling Menace",
+          "description": "<p>匍匐不会消耗你额外的移动力，生物对你发动的攻击检定具有劣势，倒地状态不会让其他生物对你发动的攻击具有优势，且倒地状态不会让你发动的攻击具有劣势。</p>"
+        }
+      }
+    },
+    "Swimmer": {
+      "name": "游泳者 Swimmer",
+      "description": "<p>该野猫拥有30尺的游泳速度。</p>",
+      "effects": {
+        "Swimmer": {
+          "name": "游泳者 Swimmer",
+          "description": "<p>你拥有30尺的游泳速度。</p>"
+        }
+      }
+    },
+    "Bite Rampage": {
+      "name": "啃咬狂袭 Bite Rampage",
+      "description": "<p>[[lookup @name lowercase]]对其5尺内[[lookup @prof]]个由其自选的目标发动标志性攻击。若命中，目标将被击倒&amp;Reference[prone]。</p>"
+    },
+    "Wind Sweep": {
+      "name": "风扫 Wind Sweep",
+      "description": "<p>作为附赠动作，该雏鸟移动至多等于其飞行速度的距离，且不触发借机攻击。若其以此移动结束时位于其可见的敌人5尺内，则该雏鸟可对其发动一次标志性攻击。</p>",
+      "activities": {
+        "Move": {
+          "name": "移动 Move"
+        }
+      }
+    },
+    "Control Projectiles": {
+      "name": "控制投射物 Control Projectiles",
+      "description": "<p><em>2环心灵遥控telekinesis异能</em></p><p>你通过心灵遥控能力影响抛射物的飞行轨迹。该攻击检定获得优势或劣势（由你选择）。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你可见的60尺内一个生物进行一次远程武器攻击时。"
+        }
+      }
+    },
+    "Trumpeting Howl": {
+      "name": "号角般的嚎叫 Trumpeting Howl",
+      "description": "<p>[[lookup @name lowercase]]周围30尺内能听到其声音的每个敌人都必须进行一次DC [[lookup @save.dc.value activity=kHevFkbPSWGkBbLt]]感知豁免，失败则直到[[lookup @name lowercase]]的下个回合结束前对其陷入&amp;reference[frightened]状态。</p>",
+      "effects": {
+        "Trumpeting Howl": {
+          "name": "号角般的嚎叫 Trumpeting Howl",
+          "description": "<p>&reference[frightened]直到该怪物下一回合结束。</p>"
+        }
+      }
+    },
+    "Blood Puppet": {
+      "name": "血偶 Blood Puppet",
+      "description": "<p>作为一个动作，管家选择一个他们能看到的60尺内的生物。目标必须进行一次[[/save]]豁免，否则按照管家选择的方向移动最多其速度的距离。在此移动期间，管家可以迫使他们向管家选择的一个生物发动一次攻击（无需动作）。</p>"
+    },
+    "Human": {
+      "name": "人类 Human",
+      "description": "<p>人类具有以下定义性特征：</p><p><strong>体型。</strong> 人类的体型为中型。</p><p><strong>种类。</strong> 人类的种类为类人生物。</p><p><strong>速度。</strong> 人类的步行速度为30尺。</p><p><strong>语言。</strong> 人类可以说、读、写通用语。</p><p><strong>趁势突袭(3/日)。</strong> 当人类发动攻击时，其攻击检定具有优势。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义性特性"
+        }
+      }
+    },
+    "Armor of Decay": {
+      "name": "腐朽护甲 Armor of Decay",
+      "description": "<p>该[[lookup @name lowercase]]具有暗蚀伤害抗性，并且免疫毒素伤害和中毒状态。</p>",
+      "effects": {
+        "Armor of Decay": {
+          "name": "腐朽护甲 Armor of Decay"
+        }
+      }
+    },
+    "Excoriating Acid": {
+      "name": "剥蚀强酸 Excoriating Acid",
+      "description": "<p>作为一个动作，该窃贼将一个强酸瓶投向其视野内20尺范围内的一点。瓶子碎裂，该点10尺范围内的每个生物必须进行一次[[/save]]豁免，豁免失败则受到[[/damage]]伤害，豁免成功则仅受一半伤害。</p>"
+    },
+    "Kinetic Clamp": {
+      "name": "动能钳制 Kinetic Clamp",
+      "description": "<p>以一个附赠动作，自由佣兵尝试以念力擒握一个他们可见的60尺内的单一生物。目标必须进行一次DC 10外加[[lookup @prof.flat]]的力量豁免。豁免失败时，目标受到[[lookup @prof.flat]]d6的力场伤害，并且被&amp;reference[restrained]直到自由佣兵的下个回合开始。豁免成功时，目标受到一半伤害且不被束缚。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "必须可见。"
+          }
+        }
+      }
+    },
+    "Scavenger's Resilience": {
+      "name": "清道夫的韧性 Scavenger's Resilience",
+      "description": "<p>该鸟在体质豁免上具有优势，并且对毒素伤害具有抗性。</p>",
+      "effects": {
+        "Scavenger's Resilience": {
+          "name": "清道夫的韧性 Scavenger's Resilience",
+          "description": "<p>你在体质豁免上具有优势，并且对毒素伤害具有抗性。</p>"
+        }
+      }
+    },
+    "Shatter": {
+      "name": "粉碎音波 Shatter",
+      "description": "<p>[[lookup @name lowercase]]从其体内向10尺范围内的每个敌人喷射出锯齿状的水晶。每个目标必须进行一次DC [[lookup @save.dc.value activity=RrtJ8Un42ydzmXKl]]敏捷豁免，豁免失败则受到[[lookup @prof.flat]]d6点穿刺伤害，豁免成功则伤害减半。</p>"
+    },
+    "Durable": {
+      "name": "坚韧 Durable",
+      "description": "<p>该集群的生命值上限翻倍，并且拥有15的护甲等级，体质豁免获得+5加值，以及在体质豁免上具有优势。（+1 挑战等级（CR））</p><fieldset><legend>Foundry 注</legend><p>此物品包含一个效果，将自动应用此特性的全部词条，除了翻倍的生命值上限。</p></fieldset>",
+      "effects": {
+        "Durable": {
+          "name": "耐久 Durable",
+          "description": "<p>你的生命值翻倍，你的护甲等级为15，体质豁免获得+5加值，并且在体质豁免上具有优势。(+1 挑战等级（CR）)</p>"
+        }
+      }
+    },
+    "Unleash Sunlight": {
+      "name": "释放阳光 Unleash Sunlight",
+      "description": "<p>以一个附赠动作，你使你的皮肤闪耀出灿烂的光芒。你周围10尺内每个你能看见且由你选择的生物，必须进行一次对抗你异能豁免DC的体质豁免，若失败则被&amp;Reference[blinded]1分钟（豁免于其回合结束时终止）。一旦你使用了这个附赠动作，直到你完成一次长休前都不能再次使用。</p>"
+    },
+    "Halting Shot": {
+      "name": "阻滞射击 Halting Shot",
+      "description": "<p>作为一个动作，守护者发动一次标志性攻击。若命中，目标的速度将降至0，直到其下一个回合结束。</p>",
+      "effects": {
+        "Halting Shot": {
+          "name": "阻滞射击 Halting Shot",
+          "description": "<p>该生物的速度降至0，直到其下一个回合结束。</p>"
+        }
+      }
+    },
+    "iXmIVsgWCHCTOs9B": {
+      "name": "魔宠 iXmIVsgWCHCTOs9B",
+      "description": "<p>雪狐可以作为魔宠为另一个生物服务，与其自愿的伴日形成心灵联结。当两者存在牵绊时，只要彼此相距1英里以内，伴日就能感知雪狐所感知的事物。此外，雪狐可以使用伴日的熟练加值进行属性检定，并且在长休结束时获得临时生命值，数值等于伴日的熟练加值。任意一方均可随时终止此牵绊。</p>"
+    },
+    "Soul Thief": {
+      "name": "窃魂者 Soul Thief",
+      "description": "<p>作为一个动作，死亡守卫将自身笼罩在黑暗能量中。死亡守卫恢复[[lookup @prof.flat]]d6点生命值，且死亡守卫5尺范围内的每个敌人必须进行一次[[/save]]豁免。豁免失败时，目标承受[[/damage]]伤害。豁免成功时，目标承受一半伤害。</p>",
+      "activities": {
+        "Soul Thief Healing": {
+          "name": "灵魂窃贼治疗 Soul Thief Healing"
+        },
+        "Soul Thief Damage": {
+          "name": "灵魂窃贼伤害 Soul Thief Damage"
+        }
+      }
+    },
+    "Ear to the Ground": {
+      "name": "耳目众多 Ear to the Ground",
+      "description": "<p>以一个附赠动作，你获得60尺范围的颤动感知，持续10分钟。一旦你使用此附赠动作，直至完成一次长休前你都无法再次使用。</p>",
+      "effects": {
+        "Ear to the Ground": {
+          "name": "耳目众多 Ear to the Ground",
+          "description": "<p>你拥有60尺射程的颤动感知。</p>"
+        }
+      }
+    },
+    "Bugbear's Inspiration": {
+      "name": "熊地精的激励 Bugbear's Inspiration",
+      "description": "<p>在[[lookup @name lowercase]]周围15尺内能看到或听到其声音的友方类人生物，在进行感知和魅力豁免检定时具有优势。</p>"
+    },
+    "One with the Swamp": {
+      "name": "与沼泽融为一体 One with the Swamp",
+      "description": "<p>该[[lookup @name lowercase]]在感知（察觉）检定中具有优势，用于察觉沼泽中没有此特性的生物。</p>"
+    },
+    "Stone Pereon": {
+      "name": "石像人 Stone Pereon",
+      "description": "<p>以一个附赠动作，你在背上显现出坚韧的体节，持续10分钟。在持续时间内，你的AC获得+2加值且不能被夹击。一旦你使用此附赠动作，直到完成一次长休前你都无法再次使用。</p>",
+      "effects": {
+        "Stone Pereon": {
+          "name": "石像人 Stone Pereon",
+          "description": "<p>你的AC获得+2加值且不能被夹击</p>"
+        }
+      }
+    },
+    "Lash Out": {
+      "name": "猛烈挥击 Lash Out",
+      "description": "<p>以一个附赠动作，束缚者向其30尺内一个可见生物甩出藤蔓。目标必须进行一次[[/save]]豁免，否则被拉向束缚者最多10尺并&amp;reference[grappled]（逃脱DC 10，外加[[lookup @prof.flat]]）。此受擒状态持续期间，束缚者对该目标的攻击额外造成[[lookup @prof]]钝击伤害。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "必须可见。"
+          }
+        },
+        "Bonus Damage": {
+          "name": "加值伤害 Bonus Damage",
+          "condition": "当侍从使用此特性命中一个它已擒抱的生物时。",
+          "affects": {
+            "special": "必须被拥有此特性的随从擒抱。"
+          }
+        }
+      }
+    },
+    "Quick Drink": {
+      "name": "快速畅饮 Quick Drink",
+      "description": "<p>该[[lookup @name lowercase]]发动一次标志性攻击。若命中，目标额外受到[[lookup @prof.flat]]d4点穿刺伤害，并陷入&amp;Reference[poisoned]状态直至其下个回合结束。</p>"
+    },
+    "l1oXsSD2BygosERl": {
+      "name": "记忆窃贼 l1oXsSD2BygosERl",
+      "description": "<p><em>4环变形异能</em></p><p>你掠夺30尺内一个你能看见的生物的心智。目标必须进行一次智力豁免。豁免失败时,目标受到4d10心灵伤害,其熟练加值降低1点,且在持续时间内你的攻击检定与异能豁免DC获得+1加值。</p><p><strong>升阶。</strong>当你展现此异能时,可使其环阶提升1环或更高。每提升1环,伤害增加2d10。</p>",
+      "effects": {
+        "Stolen Memories": {
+          "name": "被窃取的记忆 Stolen Memories",
+          "description": "<p>在该能力的持续时间内，你的熟练加值减少1。</p>"
+        },
+        "Gained Memories": {
+          "name": "获得的记忆 Gained Memories",
+          "description": "<p>在该能力的持续时间内，你的攻击骰和你的能力豁免DC获得+1加值。</p>"
+        }
+      }
+    },
+    "Horrific Feast": {
+      "name": "恐怖盛宴 Horrific Feast",
+      "description": "<p>当噬咬者用其标志性攻击将生物的生命值降至0时，他们可以在此次攻击中消耗该生物的一部分，获得[[/heal]]。位于噬咬者30尺范围内且能看见其的每个敌人必须进行[[/save]]豁免检定，否则直到噬咬者下个回合结束前，都会对噬咬者产生&amp;reference[frightened]状态。</p>",
+      "activities": {
+        "Consume Usage and Heal": {
+          "name": "消耗使用次数并施展医疗术 Consume Usage and Heal",
+          "condition": "当这位随从用其标志性攻击将生物的生命值降至0时。"
+        },
+        "Frightened Save": {
+          "name": "恐慌豁免 Frightened Save",
+          "condition": "当该侍从用其标志性攻击将生物的生命值降至0时。",
+          "affects": {
+            "special": "必须见到这位侍从。"
+          }
+        }
+      }
+    },
+    "Draconic Aberration": {
+      "name": "龙语异怪 Draconic Aberration",
+      "description": "<p>正如伊瑟斯瑞克斯是一头拥有神秘力量的龙类，你可以赋予这座地下城中的无言低语者和其他异怪龙类特征。你可以对巢穴中任何异怪资料卡实施以下改动，让曾经面对过无言低语者及其造物的角色感到惊讶，同时展现像伊瑟斯瑞克斯这样的强大龙类能够通过魔法扭曲周围生物：</p><p><strong>龙鳞。</strong> [[lookup @name lowercase]]覆盖着龙鳞。其AC提升2点。</p><p><strong>龙翼。</strong> [[lookup @name lowercase]]拥有皮革质感的龙翼。若[[lookup @name lowercase]]已具备飞行速度，其飞行改为由龙翼驱动而非灵能力量。若[[lookup @name lowercase]]原本没有飞行速度，则获得等于其步行速度的飞行速度。</p><p><strong>毒素免疫。</strong> [[lookup @name lowercase]]免疫毒素伤害和中毒状态。</p><p><strong>龙类感官。</strong> [[lookup @name lowercase]]熟练于察觉技能，且进行任何运用察觉的属性检定时其熟练加值翻倍。若[[lookup @name lowercase]]不具备盲视，则获得30尺范围的盲视。</p><p><strong>吐息武器。</strong> 作为一个动作，[[lookup @name lowercase]]向30尺锥状区域喷吐毒雾。区域内每个生物必须进行一次DC[[lookup @save.dc.value activity=lJC6bznlHCMBFWFV]]体质豁免。豁免失败时，生物受到[[/damage activity=lJC6bznlHCMBFWFV]]伤害并陷入&Reference[poisoned]状态1分钟（在其回合结束时豁免成功则终止）。豁免成功时，生物受到一半伤害且不会中毒。[[lookup @name lowercase]]完成一次长休前无法再次使用此动作。</p><p><strong>淬毒武器。</strong> 当[[lookup @name lowercase]]以近战武器攻击命中生物时，该攻击额外造成5（1d10）毒素伤害。</p>",
+      "activities": {
+        "Breath Weapon": {
+          "name": "吐息武器 Breath Weapon"
+        }
+      },
+      "effects": {
+        "Poison-Infused Weapons": {
+          "name": "毒素灌注武器 Poison-Infused Weapons",
+          "description": "<p>当该异怪以一次近战武器攻击命中一个生物时，该攻击额外造成5（1d10）毒素伤害。</p>"
+        },
+        "Scales": {
+          "name": "鳞片 Scales",
+          "description": "<p>该异怪全身覆盖着龙类鳞片。其护甲等级增加2。</p>"
+        },
+        "Wings": {
+          "name": "翅膀 Wings"
+        },
+        "Poison Immunity": {
+          "name": "毒素免疫 Poison Immunity",
+          "description": "<p>该异怪对毒素伤害和中毒状态具有免疫。</p>"
+        },
+        "Draconic Senses": {
+          "name": "龙语感官 Draconic Senses",
+          "description": "<p>该异怪在察觉技能上具有熟练，并且任何使用察觉的属性检定，其熟练加值翻倍。如果该异怪没有盲视，则其获得30尺范围的盲视。</p>"
+        }
+      }
+    },
+    "Wash Away": {
+      "name": "冲刷殆尽 Wash Away",
+      "description": "<p>作为附赠动作，该学徒驾驭着一道汹涌的波浪。他们对5尺内的一个敌人发动一次标志性攻击，并移动至多等同于其步行速度的距离，且不触发借机攻击。若攻击命中，则额外造成[[lookup @prof]]点钝击伤害。</p>"
+    },
+    "Deafening Song": {
+      "name": "震耳之歌 Deafening Song",
+      "description": "<p>该集群发出一阵震耳欲聋的嗡鸣。其周围15尺范围内的每个生物必须进行一次[[/save]]豁免，否则陷入&amp;reference[耳聋]状态（豁免于回合结束时终止）。</p>"
+    },
+    "Take Away": {
+      "name": "受到 Take Away",
+      "description": "<p>当新信徒用标志性攻击命中一个生物时，新信徒会擒抱住目标。目标陷入&amp;reference[grappled]状态（逃脱DC 10 + [[lookup @prof.flat]]），且新信徒可移动至多其速度的距离且不触发借机攻击（无需动作）。若被擒抱生物为中型或更小的体型，其不会消耗新信徒的额外移动力。</p>"
+    },
+    "Presence of Inspiration": {
+      "name": "灵感显现 Presence of Inspiration",
+      "description": "<p>作为附赠动作，守护者激励30尺内能听见其声音的每位盟友，使其在攻击检定上获得优势，此效应持续至守护者的下个回合开始。</p>",
+      "effects": {
+        "Presence of Inspiration": {
+          "name": "灵感显现 Presence of Inspiration",
+          "description": "<p>该生物在攻击检定上具有优势。</p>"
+        }
+      }
+    },
+    "Lair Actions: Qazyldrath": {
+      "name": "巢穴动作：Qazyldrath Lair Actions: Qazyldrath",
+      "description": "<p>在其巢穴内战斗时，卡兹尔德拉斯可以执行巢穴动作。在先攻值20时（出现等值时视为后手），卡兹尔德拉斯可以执行一个巢穴动作以产生下列效应其一；卡兹尔德拉斯不能连续两轮使用相同的巢穴动作：</p><p><strong>酸性气体。</strong>腐蚀性气体在卡兹尔德拉斯可见的120尺内一点为中心，爆发形成10尺半径球状区域。该区域内的每个生物必须进行[[/save activity=NxrwQpcaoM9d8lMi]]豁免，否则受到[[/damage average activity=NxrwQpcaoM9d8lMi]]伤害。</p><p><strong>吞噬光亮。</strong>卡兹尔德拉斯熄灭其可见的120尺内的一个或多个光源。卡兹尔德拉斯为每个被其熄灭的光源恢复5(1d10)生命值：</p><p><strong>饥饿之暗。</strong>攫取的阴影会吸取卡兹尔德拉斯120尺内处于微光光照或黑暗术中的每个敌人的活力。每个目标必须进行[[/save activity=NUMkqOF2fhmFXJwX]]豁免，否则受到[[/damage average activity=NUMkqOF2fhmFXJwX]]伤害并被&amp;Reference[束缚]直到下一轮的先攻值20结束。</p>",
+      "activities": {
+        "Acidic Gas": {
+          "name": "酸性气体 Acidic Gas"
+        },
+        "Consume Light": {
+          "name": "消耗光亮术 Consume Light",
+          "affects": {
+            "special": "光源"
+          }
+        },
+        "Hungry Gloom": {
+          "name": "饥饿之暗 Hungry Gloom"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Caregiver": {
+      "name": "照护者 Caregiver",
+      "description": "@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe02.JournalEntryPage.00caregiver00001 inline] <fieldset><legend>Foundry 注</legend><p>此特性提供一个\\\"召唤\\\"行动，将为伴日提供正确的生命值数量，并调整其熟练加值以匹配其照料者。</p></fieldset>"
+    },
+    "Hellbitten Knives": {
+      "name": "地狱之咬匕首 Hellbitten Knives",
+      "description": "<p>作为附赠动作，该随从将地狱火注入其匕首。在1分钟内，其标志性攻击额外造成[[lookup @prof]]点火焰伤害并忽略伤害抗性。</p><fieldset><legend>Foundry 注</legend><p>该附魔系行动应仅用于强化此随从的标志性攻击。</p></fieldset>",
+      "activities": {
+        "enchant": {
+          "affects": {
+            "special": "目标为该随从的标志性攻击。"
+          }
+        }
+      },
+      "effects": {
+        "Hellbitten Knives": {
+          "name": "地狱噬咬双刃 Hellbitten Knives",
+          "description": "<p>在1分钟内，你的标志性攻击额外造成熟练加值的火焰伤害并忽略伤害抗性。</p>",
+          "changes": {
+            "system.description.value": "<fieldset><legend>地狱之噬匕首</legend><p>该攻击无视伤害抗性。</p></fieldset>"
+          }
+        }
+      }
+    },
+    "Pounce": {
+      "name": "猛扑 Pounce",
+      "description": "<p>该[[lookup @name lowercase]]移动至其速度上限并对单一目标发动一次标志性攻击，命中时造成额外[[lookup @prof]]伤害。若目标为大型或更小的，则目标陷入&amp;Reference[受擒]状态（逃脱DC 10，外加[[lookup @prof.flat]]），且该[[lookup @name lowercase]]在受擒状态结束前无法攻击其他生物。</p>"
+    },
+    "Tackle": {
+      "name": "抱摔 Tackle",
+      "description": "<p>[[lookup @name lowercase]]移动至多等同于其{速度 Speed}的距离且不触发{借机攻击 opportunity attacks}，并发动一次标志性{攻击 Attack}。若{命中 hit}，{目标 target}同时陷入&amp;Reference[grappled]状态（{逃脱DC escape DC}为10，外加[[lookup @prof.flat]]）。以此法被擒抱期间，{目标 target}将处于&amp;Reference[dazed]与&amp;Reference[restrained]状态。</p>"
+    },
+    "Blood Bondage": {
+      "name": "血之束缚 Blood Bondage",
+      "description": "<p>作为一个动作，该总管禁锢30尺内至多[[lookup @prof.flat]]名生物的心脏。每个目标必须进行一次[[/save]]豁免。豁免失败时，一个生物受到[[/damage]]伤害并被&amp;reference[paralyzed]1分钟(豁免于其回合结束时终止)。豁免成功时，一个生物受到一半伤害且不陷入麻痹。</p>"
+    },
+    "Blip Strike": {
+      "name": "闪击 Blip Strike",
+      "description": "<p>以一个附赠动作，该自由佣兵可传送至多30尺至一个其可见的未占据空间。若该空间位于该自由佣兵可见的一个敌人5尺内，其可作为此附赠动作的一部分，以优势对该敌人进行一次标志性攻击。</p>",
+      "activities": {
+        "utility": {
+          "affects": {
+            "special": "必须是未占据且可见的。"
+          }
+        }
+      }
+    },
+    "Monstrous Companion": {
+      "name": "畸形伴日 Monstrous Companion",
+      "description": "@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe02.JournalEntryPage.00statistics0000 inline]",
+      "effects": {
+        "Monstrous Companion": {
+          "name": "畸形伴日 Monstrous Companion"
+        }
+      },
+      "advancement": {
+        "Signature Damage": {
+          "title": "标志性伤害"
+        },
+        "Companion Features": {
+          "title": "伴日特性"
+        }
+      }
+    },
+    "Battlefield Medicine": {
+      "name": "战场医药 Battlefield Medicine",
+      "description": "<p>作为一个动作，该雇佣兵恢复其5尺内一个可见生物[[lookup @prof.flat]]d8点生命值。</p>",
+      "activities": {
+        "heal": {
+          "affects": {
+            "special": "必须可见。"
+          }
+        }
+      }
+    },
+    "Verdant Roundup": {
+      "name": "翠绿围捕 Verdant Roundup",
+      "description": "<p>[[lookup @name lowercase]]以30尺内至多[[lookup @prof.flat]]个大型或更小的生物为目标。每个目标必须进行一次[[/save]]豁免，失败则被向[[lookup @name lowercase]]的方向拉近最多15尺并受到[[/damage]]伤害。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "大型或更小的"
+          }
+        }
+      }
+    },
+    "Devilish Charm": {
+      "name": "魔鬼般的魅惑 Devilish Charm",
+      "description": "<p>当[[lookup @name lowercase]]成为其60尺内可见生物发动的攻击、威能、法术或其他效果的目标时，[[lookup @name lowercase]]可以使用反应迫使该生物进行一次魅力豁免。此豁免DC等于8 + [[lookup @name lowercase]]的熟练加值 + [[lookup @name lowercase]]的智力、感知或魅力调整值（取最高者）。豁免失败时，该生物被[[lookup @name lowercase]]魅惑直至其下一回合开始，且[[lookup @name lowercase]]为触发效果选择一个新的可见目标。新目标必须位于触发效果的射程内。</p><fieldset><legend>Foundry 注</legend><p>豁免DC默认设置为施法属性；你可以手动调整生物使其具有基于智力、感知或魅力的施法能力，或在豁免行动中调整DC计算方式。</p></fieldset>",
+      "activities": {
+        "save": {
+          "condition": "该怪物成为一次攻击、威能、法术或其他效果的目标。",
+          "affects": {
+            "special": "触发此效果的生物"
+          }
+        }
+      },
+      "effects": {
+        "Devilish Charm": {
+          "name": "魔鬼般的魅惑 Devilish Charm",
+          "description": "<p>该生物被该怪物&amp;reference[charmed]直到该生物的下个回合开始。</p>"
+        }
+      }
+    },
+    "Powerful Leap": {
+      "name": "强力跳跃 Powerful Leap",
+      "description": "<p>野猫的跳跃距离翻倍，无论是否有助跑。它们可以选择使用其力量或敏捷属性来决定其跳跃距离。</p>"
+    },
+    "Swamp Stride": {
+      "name": "沼泽疾行 Swamp Stride",
+      "description": "<p>该[[lookup @name lowercase]]忽略由沼泽自然条件造成的困难地形。</p>"
+    },
+    "Mental Lance": {
+      "name": "精神骑枪 Mental Lance",
+      "description": "<p><em>3环心灵感应能力</em></p><p>你以精神力量攻击射程内一个你能看见的生物。目标必须进行一次感知豁免。豁免失败时，目标受到4d10心灵伤害，并在持续时间内对你陷入&amp;reference[frightened]状态（豁免在回合结束时结束）。豁免成功时，目标只受到一半伤害，且不会陷入恐慌。</p><p><strong>升阶效果。</strong>当你施展此能力时，可将其环阶提升1环或更多。每提升1环，伤害增加2d10。</p>"
+    },
+    "Death from Above!": {
+      "name": "从天而降的死亡！ Death from Above!",
+      "description": "<p>以一个附赠动作，该窃贼可跳跃至多等同于其步行速度的距离，且不触发借机攻击。若在此跳跃过程中越过一个敌人，该窃贼可对那个敌人进行一次具有优势的标志性攻击。若命中，此攻击额外造成[[lookup @prof]]点穿刺伤害。</p>",
+      "activities": {
+        "Bonus Damage": {
+          "name": "额外伤害 Bonus Damage",
+          "condition": "在跃过一名敌人并用标志性攻击击中他们之后。"
+        }
+      }
+    },
+    "Lay Low": {
+      "name": "低调行事 Lay Low",
+      "description": "<p>当夜贼在隐藏状态下用标志性攻击命中一个生物时，夜贼可以使用他们的反应保持隐藏。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当该随从处于隐藏状态时对一个生物造成命中。"
+        }
+      }
+    },
+    "Halberd Master": {
+      "name": "戟术大师 Halberd Master",
+      "description": "<p>当一个生物进入雇佣兵触及范围内的空间时，该雇佣兵使用反应以优势对其发动一次标志性攻击。若此攻击命中，则额外造成[[lookup @prof.flat]]d6挥砍伤害。</p>",
+      "activities": {
+        "Extra Damage": {
+          "name": "额外伤害 Extra Damage",
+          "condition": "当一个生物进入随从触及范围内的空间时。"
+        }
+      }
+    },
+    "Sprint": {
+      "name": "冲刺 Sprint",
+      "description": "<p>当该熊在战斗中的回合移动时，其速度可提升至三倍，此效果持续至其回合结束。</p>"
+    },
+    "Of Unusual Size": {
+      "name": "体型异于寻常 Of Unusual Size",
+      "description": "<p>如果该[[lookup @name lowercase]]是小型或微型，它们的体型扩展至中型，并且它们的生命骰类型变为d8。如果原本是小型，这使它们每个生命骰获得1点额外生命值，或者如果原本是微型，则每个生命骰获得2点额外生命值</p><fieldset><legend>Foundry 注</legend><p>效果无法提供这些调整，必须手动完成。</p></fieldset>"
+    },
+    "Exploit Opening": {
+      "name": "趁虚而入 Exploit Opening",
+      "description": "<p>当[[lookup @name lowercase]]发动攻击时，他们在攻击检定上具有优势。</p>",
+      "activities": {
+        "utility": {
+          "condition": "该怪物发动一次攻击。"
+        }
+      }
+    },
+    "Fire Breath": {
+      "name": "火焰吐息 Fire Breath",
+      "description": "<p>该[[lookup @name lowercase]]向一个15尺锥形区域喷吐火焰。该区域内的每个生物必须进行一次DC [[lookup @save.dc.value activity=tZkxlrjjISRyJcxL]]敏捷豁免，豁免失败则受到[[lookup @prof.flat]]d6火焰伤害，豁免成功则伤害减半。</p>"
+    },
+    "Coagulate": {
+      "name": "凝结 Coagulate",
+      "description": "<p>作为一个动作，管家强化30尺内至多[[lookup @prof.flat]]个生物的血脉。每个目标可以消耗1个生命骰，投掷它并恢复生命值，数值等于投掷结果的两倍加上其体质调整值。</p>"
+    },
+    "Ride the Lightning": {
+      "name": "驾驭闪电 Ride the Lightning",
+      "description": "<p>作为一个动作，该学徒使其敌人的神经系统过载。学徒发动一次标志性攻击，若对生物造成伤害，目标必须进行一次[[/save]]豁免。豁免失败时，目标陷入&amp;reference[incapacitated apply=false]状态且速度减半，持续至其下一回合结束。</p>",
+      "effects": {
+        "Supercharged Nervous System": {
+          "name": "超负荷神经系统 Supercharged Nervous System",
+          "description": "<p>直到你的下一个回合结束，你陷入失能状态且你的速度减半。</p>"
+        }
+      }
+    },
+    "Rending Teeth": {
+      "name": "撕裂之牙 Rending Teeth",
+      "description": "<p>以一个附赠动作，你可以将牙齿生长为天生武器，在1分钟内你可以用它进行徒手打击。你可以使用力量或敏捷进行牙齿的攻击和伤害掷骰，其造成1d6 + 你的力量或敏捷调整值的穿刺伤害，而非徒手打击通常的钝击伤害。在你的回合中首次用此攻击命中敌人时，你和你的伴日恢复生命值，数值等于造成的伤害。一旦你使用了这个附赠动作，直到完成一次长休前你都无法再次使用。</p>",
+      "activities": {
+        "Strength Attack": {
+          "name": "力量攻击 Strength Attack"
+        },
+        "Dexterity Attack": {
+          "name": "敏捷攻击 Dexterity Attack"
+        }
+      },
+      "effects": {
+        "Rending Teeth": {
+          "name": "撕裂利齿 Rending Teeth"
+        }
+      }
+    },
+    "r7XXaFn9IbAr3gSa": {
+      "name": "趁虚而入 r7XXaFn9IbAr3gSa",
+      "description": "<p>该雇佣兵采取攻击动作，每次攻击均具有优势，并在命中时额外造成[[lookup @prof.flat]]d4点挥砍伤害。</p>",
+      "activities": {
+        "Extra Damage": {
+          "name": "额外伤害 Extra Damage",
+          "condition": "使用此特性进行攻击后的后续动作。",
+          "affects": {
+            "special": "被该攻击命中的生物。"
+          }
+        },
+        "Consume Usage": {
+          "name": "消耗使用次数 Consume Usage"
+        }
+      }
+    },
+    "Swooping Attack": {
+      "name": "俯冲攻击 Swooping Attack",
+      "description": "<p>[[lookup @name lowercase]]移动至多等同于其速度的距离，且不触发借机攻击。在此次移动期间或之后，他们可以对单一目标进行一次标志性攻击。若命中，目标必须进行一次[[/save]]豁免，否则将掉落其手持的一件物品。</p>"
+    },
+    "Lair Actions: Sewer": {
+      "name": "巢穴动作：下水道 Lair Actions: Sewer",
+      "description": "<p>在先攻值20时（出现等值时视为后手），该下水道生物可以执行下列巢穴动作之一；该下水道生物不能连续两轮执行相同的巢穴动作：</p><p><strong>塌陷。</strong> 该下水道生物从天花板扒落碎石或推倒一根古老的立柱，导致下水道隧道在以该下水道生物可见的60尺内一点为中心的15尺立方区域发生部分坍塌。该区域内的生物必须进行DC [[lookup @save.dc.value activity=kYgdwhKhMs0kgwUG]] 敏捷豁免，否则因坠落的碎石受到[[lookup @prof.flat]]d6钝击伤害。此外，烟尘和碎石在接下来的一轮内会重度遮蔽该区域，并且该区域变为困难地形。</p><p><strong>覆盖淤泥。</strong> 该下水道生物碾碎其附近的一处真菌丛，释放出一团有毒孢子。该下水道生物30尺范围内的每个生物必须进行DC [[lookup @save.dc.value activity=n77q4Knc7LcKhSFA]] 体质豁免，否则直到下一轮先攻值20结束时陷入&amp;Reference[poisoned]状态。</p><p><strong>开启阀门。</strong> 该下水道生物转动一个阀门或破坏一根管道，导致污水从该下水道生物60尺内的一点喷涌而出。从该点起始的10尺宽、60尺长的线状区域内的每个生物必须进行DC [[lookup @save.dc.value activity=nRvytnB4Kendt7sY]] 力量豁免，否则在污水中&amp;Reference[prone]并被向污水源头反方向推开15尺。</p>",
+      "activities": {
+        "Cave-In": {
+          "name": "塌陷 Cave-In"
+        },
+        "Covered in Muck": {
+          "name": "浑身泥泞 Covered in Muck"
+        },
+        "Open Valves": {
+          "name": "打开阀门 Open Valves"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Child of the Night": {
+      "name": "暗夜之子 Child of the Night",
+      "description": "<p>作为对受到伤害的反应，新教徒消失在一团蝙蝠和昆虫组成的云雾中。新教徒10尺范围内的每个敌人都必须进行一次[[/save]]豁免检定。豁免失败时，一个生物受到[[/damage]]伤害。豁免成功时，该生物仅受到一半伤害。在该回合结束时，新教徒在其消失处30尺内一个未被占据的空间重新凝聚成形。</p>",
+      "activities": {
+        "save": {
+          "condition": "当随从受到伤害时。"
+        }
+      }
+    },
+    "Rockbreaker": {
+      "name": "破岩者 Rockbreaker",
+      "description": "<p>[[lookup @name lowercase]]肢体周围的几丁质利爪或刀刃赋予它们30尺的掘穴速度。</p>",
+      "effects": {
+        "Rockbreaker": {
+          "name": "碎岩者 Rockbreaker"
+        }
+      }
+    },
+    "Multiattack": {
+      "name": "多重攻击Multiattack。 Multiattack",
+      "description": "<p>该集群发动两次[[/item Bite]]攻击。（+1挑战等级（CR））</p>",
+      "effects": {
+        "Multiattack": {
+          "name": "多重攻击Multiattack。 Multiattack"
+        }
+      }
+    },
+    "Grabbed from Above": {
+      "name": "被上方擒抱 Grabbed from Above",
+      "description": "<p>该[[lookup @name lowercase]]对中型或更小的生物发动一次标志性攻击。若命中，且目标原本未处于&amp;Reference[grappled]状态，则其同时陷入&amp;Reference[grappled]状态（逃脱DC为10，外加[[lookup @prof.flat]]）。目标以此方式受擒期间将处于&amp;Reference[restrained]状态，且该[[lookup @name lowercase]]无法对其他目标发动标志性攻击。</p>"
+    },
+    "Fissure Force": {
+      "name": "裂隙力场 Fissure Force",
+      "description": "<p>以一个动作，你可以通过泥土、沙地或坚石传递震动。你当前空间30尺内的区域对敌人变为困难地形，持续1分钟。在此持续时间内，在该区域内开始其回合的敌人必须进行对抗你战技豁免DC的敏捷豁免，若失败则被击倒&amp;Reference[prone]。一旦你使用此动作，在完成一次长休前无法再次使用。</p>"
+    },
+    "tAp7x44j1cn6kJO2": {
+      "name": "星界显形 tAp7x44j1cn6kJO2",
+      "description": "<p>作为动作，[[lookup @name lowercase]]变为&amp;reference[invisible]持续1分钟或直到他们使用附赠动作结束此效果。隐形时，他们可以穿过生物和物件，如同它们是困难地形，并且他们的标志性攻击对无法看见他们的生物造成额外[[lookup @prof]]伤害。若[[lookup @name lowercase]]在物件内部结束其回合，则受到[[/damage 1d10 force average]]伤害。</p>",
+      "activities": {
+        "Become Invisible": {
+          "name": "隐形 Become Invisible"
+        }
+      }
+    },
+    "Used to Filth": {
+      "name": "惯于污秽 Used to Filth",
+      "description": "<p>该[[lookup @name lowercase]]获得对毒素伤害的抗性和对中毒状态的免疫。如果该生物已经拥有对毒素伤害的抗性，则改为获得对毒素伤害的免疫。</p>",
+      "effects": {
+        "Used to Filth": {
+          "name": "惯于污秽 Used to Filth"
+        }
+      }
+    },
+    "Damage Resistances": {
+      "name": "伤害抗性 Damage Resistances",
+      "description": "<p>该[[lookup @name lowercase]]对来自普通攻击的钝击、穿刺和挥砍伤害具有抵抗力。</p>",
+      "effects": {
+        "Damage Resistances": {
+          "name": "伤害抗性 Damage Resistances",
+          "description": "<p>该魔鬼对来自普通攻击的钝击、穿刺和挥砍伤害具有抵抗力。</p>"
+        }
+      }
+    },
+    "Blood Seeker": {
+      "name": "血之猎手 Blood Seeker",
+      "description": "<p>作为一个动作，该新信徒向其60尺内可见的一个生物移动最多等于其速度的距离。如果该新信徒在移动结束时位于该生物5尺内，则目标必须进行一次[[/save]]豁免，失败则被&amp;reference[擒抱]（逃脱DC 10 + [[lookup @prof.flat]]）并受到[[/damage]]伤害。该新信徒恢复等同于所造成暗蚀伤害一半的生命值。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "必须对侍从可见。"
+          }
+        }
+      }
+    },
+    "Living Forest": {
+      "name": "活体森林 Living Forest",
+      "description": "<p>一片扭曲的树丛在以[[lookup @name lowercase]]为中心的30尺半径内繁茂生长。薄雾轻微遮蔽该区域，色彩斑斓的藤蔓与摇曳的植被使其地面成为{困难地形 difficult terrain}。戏谑的声音在低语轻笑，使该区域内其他{生物 Creature}为维持{法术 Spells}及类似效果的{专注 concentration}而进行的{豁免 Saving Throws}具有{劣势 disadvantage}。闪烁的微光会驱散该区域内由3环或更低环阶{法术 Spells}创造的{魔法黑暗 Magical darkness}。（为{生物 Creature}添加此特质时，可选择排除其中一项或多项效果。）</p>"
+    },
+    "uk7f5l18s8AfbsLq": {
+      "name": "野蛮冲锋 uk7f5l18s8AfbsLq",
+      "description": "<p>[[lookup @name lowercase]]移动至多等同于其速度的距离，且不触发借机攻击。在此次移动期间或之后，他们可以对单一目标进行一次标志性攻击。</p>"
+    },
+    "Griffon-Hearted": {
+      "name": "狮鹫之心 Griffon-Hearted",
+      "description": "<p>以一个动作，你可以飞行至多两倍于你步行速度的距离，且不触发借机攻击。在此次移动期间，你可以进入其他生物的空间，且这些空间对你而言不视为困难地形。在此次移动中，你首次进入每个生物的空间时，它们必须进行一次力量豁免，豁免失败则受到钝击伤害，伤害数值等于你的兽心等级，并被击倒&Reference[prone]。一旦你使用此动作，直到完成一次长休前，你无法再次使用。</p>"
+    },
+    "Furious Charge": {
+      "name": "狂暴冲锋 Furious Charge",
+      "description": "<p>作为一个动作，毁灭者移动至多等于其速度的距离。在此移动结束时，其可以进行一次标志性攻击。若该攻击命中一个大型或更小的生物，目标被推离毁灭者至多10尺，且毁灭者及其盟友对目标的攻击检定具有优势，持续至毁灭者的下个回合结束。</p>",
+      "effects": {
+        "Advantageous Target": {
+          "name": "优势目标 Advantageous Target",
+          "description": "<p>攻击者在对你发动的攻击中具有优势，此优势持续到毁灭者的下一个回合结束。</p>"
+        }
+      }
+    },
+    "Relentless": {
+      "name": "不屈 Relentless",
+      "description": "<p>当[[lookup @name lowercase]]未处于失能状态，且其生命值被降至0点但未被直接杀死时，可在生命值结算前对敌人发动一次攻击（无需动作）。若该攻击命中且造成的伤害使目标生命值降至0点，则[[lookup @name lowercase]]的生命值将降至1点而非0点。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当生命值降至0时。"
+        }
+      }
+    },
+    "Frenzied Bite": {
+      "name": "狂乱啃咬 Frenzied Bite",
+      "description": "<p>当啃噬者可见的30尺内一个生物的生命值降至0时，啃噬者可用反应移动至多其速度一半的距离，随后发动一次标志性攻击。命中时，该攻击额外造成[[@prof.flat]]点穿刺伤害。</p>",
+      "activities": {
+        "Move and Attack": {
+          "name": "移动和攻击 Move and Attack",
+          "condition": "当噬咬者能看见的射程内一个生物的生命值降至0时。"
+        },
+        "Extra Damage": {
+          "name": "额外伤害 Extra Damage",
+          "condition": "当作为此反应一部分发动的攻击命中时。"
+        }
+      }
+    },
+    "Toxiferous": {
+      "name": "毒害 Toxiferous",
+      "description": "<p>当一个生物在5尺内以近战攻击命中[[lookup @name lowercase]]或接触[[lookup @name lowercase]]时，该生物受到2（1d4）毒素伤害。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当一个生物在距离该怪物5尺范围内用一次近战攻击命中它，或触碰到该怪物时。"
+        }
+      }
+    },
+    "Bear Hug": {
+      "name": "熊抱 Bear Hug",
+      "description": "<p>[[lookup @name lowercase]]试图擒抱并挤压一个它在5尺内可见的生物。该目标必须进行一次DC [[lookup @save.dc.value activity=SltnjVdSchMAZ9BK]]敏捷豁免。豁免失败时，目标受到[[lookup @prof.flat]]d10钝击伤害并陷入&amp;Reference[grappled]状态（逃脱DC 10，外加[[lookup @prof.flat]]）。豁免成功时，目标仅受到一半伤害且不会陷入受擒状态。在此次受擒状态结束前，目标同时处于&amp;Reference[restrained]状态。若[[lookup @name lowercase]]对另一目标使用熊抱或对另一目标发动标志性攻击，则此次受擒状态立即终止。</p>"
+    },
+    "Retaliatory Charge": {
+      "name": "反击冲锋 Retaliatory Charge",
+      "description": "<p>当灭者能看见的40尺内的一个生物对灭者造成伤害时，灭者可以使用一个反应向该生物移动至多其速度的距离。如果灭者以此移动在距该生物5尺内结束，则其可以对该生物发动两次标志性攻击，这些攻击和伤害骰具有+[[lookup @prof]]加值。</p><fieldset><legend>Foundry 注</legend><p>此特性上的行动包含一个可以添加到随从上的效果，以授予攻击和伤害骰的临时加值。</p></fieldset>",
+      "activities": {
+        "utility": {
+          "condition": "当射程内的一个生物对该侍从造成伤害时。",
+          "affects": {
+            "special": "造成该伤害的生物。"
+          }
+        }
+      },
+      "effects": {
+        "Retaliatory Charge": {
+          "name": "反击冲锋 Retaliatory Charge"
+        }
+      }
+    },
+    "Beacon": {
+      "name": "信标 Beacon",
+      "description": "当战术家以标志性攻击命中时，目标5尺范围内的每个生物可以使用反应对目标发动一次近战武器攻击。",
+      "activities": {
+        "Consume Usage": {
+          "name": "消耗使用次数 Consume Usage",
+          "condition": "当战术家以标志性攻击命中时。",
+          "range": {
+            "special": "标志性攻击的目标是射程的起点。"
+          }
+        }
+      }
+    },
+    "Ruin Runner": {
+      "name": "废墟行者 Ruin Runner",
+      "description": "<p>该[[lookup @name lowercase]]忽略困难地形</p>"
+    },
+    "Tree Stride": {
+      "name": "树跃术 Tree Stride",
+      "description": "<p>每回合一次，[[lookup @name lowercase]]可以用10尺移动力魔法般地步入触及范围内的一棵活树，并从距离第一棵树60尺内的第二棵活树中出现，出现在距离第二棵树5尺内的一个未占据空间。两棵树必须与[[lookup @name lowercase]]的体型相同或更大。</p>"
+    },
+    "In All Your Faces!": {
+      "name": "全砸你脸上！ In All Your Faces!",
+      "description": "<p>该[[lookup @name lowercase]]混乱地四处弹跳，将毒素涂抹在自身5尺范围内的每个敌人身上。</p><p>每个目标必须进行DC [[lookup @save.dc.value activity=uQp08LFdazjvTJyo]]体质豁免，失败则受到1d6加上[[lookup @prof]]毒素伤害，并在该爬行者的下一回合结束前陷入&amp;Reference[blinded]状态。距离以此方式目盲的目标5尺内的生物，可用其动作擦除目标身上的毒素，从而终止该目标的状态。</p>"
+    },
+    "Rotwake Charge": {
+      "name": "腐潮冲锋 Rotwake Charge",
+      "description": "[[lookup @name lowercase]]移动至多等于其速度的距离，且不触发借机攻击，同时污染其蹄下的地面，使其对敌人而言成为普通的困难地形，持续至[[lookup @name lowercase]]的下个回合开始。在此次移动期间，[[lookup @name lowercase]]可以穿过大型或更小的生物的空间，如同该空间是困难地形。当一个生物在一回合中首次进入被污染的地面或在其内开始其回合时，该生物必须进行一次[[/save]]豁免，豁免失败则受到[[/damage]]伤害，豁免成功则仅受到一半伤害。"
+    },
+    "Slime Servant": {
+      "name": "史莱姆仆从 Slime Servant",
+      "description": "<p>如果一个生物在奥洛塞克的退化触须攻击的粘液效果下持续停留1分钟，该效果结束，其肉体将退化至一种半透明的原初状态。该生物失去记忆和自我意识，变成一个忠于奥洛塞克的粘液仆从NPC。粘液仆从保留其全部原始资料卡，并获得以下特质：</p><p><strong>水陆两栖。</strong> 粘液仆从可以呼吸空气和水。其获得等于其步行速度的游泳速度（若其原本没有相等或更快的游泳速度）。</p><p><strong>原初心智。</strong> 粘液仆从无法被魅惑或恐慌。</p><p><strong>仆从感官。</strong> 奥洛塞克能感知粘液仆从所感知的一切，若粘液仆从能够说话，奥洛塞克可通过其身体发声。</p><p>只有<em>祈愿术</em>法术能恢复粘液仆从的记忆并将其恢复至原始状态。</p>",
+      "effects": {
+        "Slime Servant": {
+          "name": "史莱姆仆从 Slime Servant",
+          "description": "<p>你的游泳速度等于你的步行速度。你无法被魅惑或恐慌。</p>",
+          "changes": {
+            "name": "{} (史莱姆仆从) changes"
+          }
+        }
+      }
+    },
+    "Disease Carrier": {
+      "name": "疾病携带者 Disease Carrier",
+      "description": "<p>当该集群以攻击命中一个生物时，目标必须进行一次[[/save]]豁免，否则将&amp;reference[poisoned]（豁免在回合结束时结束）。</p>",
+      "activities": {
+        "save": {
+          "condition": "当被一次攻击命中时。"
+        }
+      }
+    },
+    "Deadly Bite": {
+      "name": "致命啃咬 Deadly Bite",
+      "description": "<p>当野猫用啃咬攻击命中倒地生物时，该攻击视为重击。</p>"
+    },
+    "Ankle Biter": {
+      "name": "脚踝啃咬者 Ankle Biter",
+      "description": "<p>该[[lookup @name lowercase]]移动至其速度上限且不触发借机攻击，并发动一次标志性攻击。若命中，且目标为中型或更小的生物，则目标还会被击倒&amp;Reference[prone]并被该[[lookup @name lowercase]]擒抱&amp;Reference[grappled]（逃脱DC 10，外加[[lookup @prof.flat]]）。</p>"
+    },
+    "Lair Actions: Durixaviinox": {
+      "name": "巢穴动作：杜里萨维诺克斯 Lair Actions: Durixaviinox",
+      "description": "<p>在其巢穴内战斗时，杜里萨维奥诺克斯可以使用巢穴动作。在先攻值20时（出现等值时视为后手），他可以执行一个巢穴动作以产生下列效应其一；他不能连续两轮使用同一个巢穴动作：</p><p><strong>陨落军团。</strong> 杜里萨维奥诺克斯召唤其陨落武者的精魄，攻击其90尺内他能看见的至多五个生物。每个目标必须进行一次[[save activity=nZjUSJANTKfKO7cz]]豁免，否则将受到[[/damage activity=nZjUSJANTKfKO7cz average]]点来自幽魂箭矢的伤害。</p><p><strong>冰雹风暴。</strong> 杜里萨维奥诺克斯在其120尺内他能看见的一点创造一片魔法冰雹风暴，形成一个30尺立方区域。该暴风持续到下一轮的先攻值20结束。其区域为困难地形，并且在一个回合中首次进入暴风或在其内开始其回合的生物必须进行一次[[/save]]豁免，否则将受到[[/damage activity=3saL054ntFGGMzzY average]]点伤害。</p><p><strong>君威。</strong> 每个在杜里萨维奥诺克斯120尺内开始其回合且意识到他存在的敌人必须进行一次[[/save activity=aHJmFqWvEbwBAfNE]]豁免，否则将对他陷入&amp;Reference[frightened]状态，直到下一轮的先攻值20结束。</p>",
+      "activities": {
+        "Fallen Army": {
+          "name": "堕落军队 Fallen Army"
+        },
+        "Hailstorm": {
+          "name": "冰雹风暴 Hailstorm"
+        },
+        "Sovereignty": {
+          "name": "主权 Sovereignty"
+        }
+      },
+      "effects": {
+        "Lair Actions": {
+          "name": "巢穴动作 Lair Actions"
+        }
+      }
+    },
+    "Goblin": {
+      "name": "地精 Goblin",
+      "description": "<p>一个地精具有以下定义特性：</p><p><strong>体型。</strong> 该地精的体型为小型。</p><p><strong>类型。</strong> 该地精的类型为类人生物。</p><p><strong>速度。</strong> 该地精的步行速度为30尺，攀爬速度为20尺。</p><p><strong>黑暗视觉。</strong> 该地精拥有60尺范围的黑暗视觉。</p><p><strong>语言。</strong> 该地精可以说、读、写通用语和地精语。</p><p><strong>狡诈。</strong> 该地精从敌人的触及范围移动时不会触发借机攻击。</p>",
+      "advancement": {
+        "Defining Features": {
+          "title": "定义特性"
+        }
+      }
+    },
+    "Glide": {
+      "name": "滑翔 Glide",
+      "description": "<p>该鸟可以在水平飞行时进行一次短休。</p>"
+    },
+    "Swallow": {
+      "name": "吞噬 Swallow",
+      "description": "<p>[[lookup @name lowercase]]尝试吞下其5尺内的一个中型或更小的生物。目标必须进行一次DC [[lookup @save.dc.value activity=iTI2tMHHrlKySHKE]] 敏捷豁免。豁免失败时，目标受到[[lookup @prof.flat]]d6钝击伤害并被吞下。豁免成功时，目标受到一半伤害且不会被吞下。[[lookup @name lowercase]]一次只能吞下一个单一目标。</p><p>被吞下的目标陷入目盲和束缚，对[[lookup @name lowercase]]外部的攻击和其他效果具有全身掩护，并在[[lookup @name lowercase]]的每个回合开始时受到[[lookup @prof.flat]]d6强酸伤害。每当[[lookup @name lowercase]]受到伤害时，其必须进行一次体质豁免，否则会吐出被吞下的生物，该生物在[[lookup @name lowercase]]5尺内一个未占据空间倒地。该豁免的DC等于10或触发伤害的一半，取较高者。若[[lookup @name lowercase]]陷入失能或死亡，被吞下的生物不再受[[lookup @name lowercase]]束缚，并能用5尺移动从尸体中逃脱，离开时倒地。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "中型或更小的"
+          }
+        }
+      },
+      "effects": {
+        "Swallow": {
+          "name": "吞噬 Swallow"
+        }
+      }
+    },
+    "Owlie Oop": {
+      "name": "奥利·乌普 Owlie Oop",
+      "description": "<p>该[[lookup @name lowercase]]向上跳跃至其一半的速度，且不触发借机攻击。当它们落地时，5尺范围内的每个生物必须进行一次DC [[lookup @save.dc.value activity=zokDDGpdMr1aXOh6]]力量豁免，或被打倒&amp;Reference[prone]。</p>"
+    },
+    "Mountain Dweller": {
+      "name": "山居者 Mountain Dweller",
+      "description": "<p>野猫会忽略由雪、冰或陡坡造成的困难地形。</p>"
+    }
+  }
+}
