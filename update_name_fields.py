@@ -1,20 +1,34 @@
 import os
 import json
 
-def update_name_fields(obj, parent_key=None):
+SKIP_KEYS = ["activities", "effects"]
+def update_name_fields(obj, parent_key=None, parent_keys=None):
     """递归遍历JSON对象，更新name字段"""
+    # 初始化parent_keys列表
+    if parent_keys is None:
+        parent_keys = []
+    
+    # 如果有新的parent_key，添加到parent_keys列表中
+    if parent_key:
+        current_parent_keys = parent_keys + [parent_key]
+    else:
+        current_parent_keys = parent_keys.copy()
+    
     if isinstance(obj, dict):
         for key, value in obj.items():
-            # 如果当前键是"name"且值是字符串，就更新它
+            # 如果当前键是"name"且值是字符串，检查是否需要更新
             if key == "name" and isinstance(value, str) and parent_key:
-                obj[key] = f"{value} {parent_key}"
+                # 检查是否有任何上级key包含"activites"或"effect"
+                should_skip = any(skip_key in pk for skip_key in SKIP_KEYS for pk in current_parent_keys)
+                if not should_skip and parent_key not in value:
+                    obj[key] = f"{value} {parent_key}"
             # 递归处理嵌套对象
             elif isinstance(value, (dict, list)):
-                update_name_fields(value, key)
+                update_name_fields(value, key, current_parent_keys)
     elif isinstance(obj, list):
         for item in obj:
             if isinstance(item, (dict, list)):
-                update_name_fields(item, parent_key)
+                update_name_fields(item, parent_key, current_parent_keys)
 
 def process_json_files(root_dir):
     """遍历目录下所有JSON文件并处理"""
