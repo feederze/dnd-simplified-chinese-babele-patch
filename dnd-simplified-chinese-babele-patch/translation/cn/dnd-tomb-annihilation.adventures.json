@@ -4,7 +4,7 @@
     "Tomb of Annihilation": {
       "name": "湮灭之墓",
       "description": "<p>查看此版本的 <a href=\"https://github.com/foundryvtt/foundryvtt-premium-content/discussions?discussions_q=label%3Adnd-tomb-annihilation\">改动日志</a>。</p><p>湮灭之墓将玩家吸引到楚尔特，这是一个被群山环绕、热带雨林密布的神秘半岛。</p><p>街头和酒馆里谈论的都是所谓的死亡诅咒：一种折磨所有曾被复活者的消耗性疾病。受害者每日愈发消瘦衰弱，缓慢而坚定地走向他们曾被剥夺的死亡。</p><p>当他们最终屈服时，就无法再被复活——无论过去是否曾获得过那奇迹，别人也无法被复活。神殿与神术学者对这样影响整个区域，甚至可能波及全世界的诅咒束手无策。</p>",
-      "caption": "Challenge your players to work together to navigate Chult, solve puzzles, and survive the myriad deadly encounters in the Tomb of the Nine Gods as they investigate the mysterious Death Curse that has overtaken the world in this ready-to-play adventure for Foundry Virtual Tabletop.",
+      "caption": "挑战你的玩家协力穿越楚尔特、破解谜题，并在九神之墓中经受种种致命遭遇的考验——在这部为 Foundry Virtual Tabletop 准备的即开即玩的冒险中，他们将调查席卷世界的神秘死亡诅咒。",
       "scenes": {
         "Merchant Prince's Villa": {
           "name": "贸易亲王别墅"
@@ -2223,7 +2223,7 @@
           "items": {
             "Bite": {
               "name": "啃咬",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>且目标Reference[grappled apply=false]{受擒}（逃脱DC 12）。直至擒抱解除，目标陷入被&Reference[restrained apply=false]{束缚}状态，且该鳄鱼不能啃咬另一个目标。</p>",
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>且目标Reference[grappled apply=false]{受擒}（逃脱DC 12）。直至擒抱解除，目标陷入被&Reference[restrained apply=false]{束缚}状态，且该鳄鱼不能啃咬另一个目标。</p>",
               "activities": {
                 "Escape Check": {
                   "name": "逃脱检定"
@@ -3224,7 +3224,7 @@
             },
             "Constrict": {
               "name": "绞缠",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target is &amp;Reference[grappled apply=false] (escape DC 16). Until this grapple ends, the creature is &amp;Reference[restrained apply=false], and the snake can't constrict another target.</p>",
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>目标&Reference[grappled apply=false]{受擒}（逃脱DC 16）。直到擒抱解除前目标被&Reference[restrained apply=false]{束缚}，且该蛇不能绞缠另一目标。</p>",
               "activities": {
                 "Escape Check": {
                   "name": "逃脱检定"
@@ -3232,44 +3232,44 @@
               },
               "effects": {
                 "Grappled & Restrained": {
-                  "name": "Grappled & Restrained",
-                  "description": "<p>The target is &amp;Reference[grappled apply=false] (escape DC 16). Until this grapple ends, the creature is &amp;Reference[restrained apply=false].</p>"
+                  "name": "受擒并束缚",
+                  "description": "<p>你陷入&Reference[grappled apply=false]{受擒}（逃脱DC 16）。直到擒抱解除前你被&Reference[restrained apply=false]{束缚}</p>"
                 }
               }
             }
           }
         },
         "Giant Crocodile": {
-          "name": "Giant Crocodile",
-          "tokenName": "Giant Crocodile",
+          "name": "巨鳄鱼",
+          "tokenName": "巨鳄鱼",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Hold Breath": {
               "name": "屏息",
-              "description": "<p>The crocodile can hold its breath for <strong>30 minutes</strong>.</p>"
+              "description": "<p>鳄鱼可以憋气<strong> 30 分钟</strong>。</p>"
             },
             "Multiattack": {
               "name": "多重攻击",
-              "description": "<p>The crocodile makes two attacks: one with its [[/item .u7eurp95tuW3tYGl]]{bite} and one with its [[/item .VkCVMF2SvsuYWWYg]]{tail}.</p>"
+              "description": "<p>鳄鱼发动两次攻击：[[/item .u7eurp95tuW3tYGl]]{啃咬}和一次[[/item .VkCVMF2SvsuYWWYg]]{尾击}。 </p>"
             },
             "Bite": {
               "name": "啃咬",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target is &amp;Reference[grappled] (escape DC 16). Until this grapple ends, the target is restrained, and the crocodile can't bite another target.</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>且目标Reference[grappled apply=false]{受擒}（逃脱DC 16）。直至擒抱解除，目标陷入被&Reference[restrained apply=false]{束缚}状态，且该鳄鱼不能啃咬另一个目标。</p>"
             },
             "Tail": {
               "name": "尾击",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is a creature, it must succeed on a [[/save]] saving throw or be knocked &amp;Reference[prone].</p>"
+              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>如果目标是生物，则其必须成功通过一次[[/save]]，否则将应击&Reference[prone]{倒地}。</p>"
             }
           }
         },
         "Giant Four-Armed Gargoyle": {
-          "name": "Giant Four-Armed Gargoyle",
-          "tokenName": "Giant Four-Armed Gargoyle",
-          "description": "<p>Only @UUID[Actor.toaAcererak00000]{Acererak} knows the secret of creating these creatures. A giant four-armed gargoyle stands 8 to 9 feet tall and weighs roughly five thousand pounds. It is typically employed as a tomb guardian, rending intruders with its fangs and deadly claws. For more information on gargoyles, see the <em>Monster Manual</em>.</p>",
+          "name": "四臂巨石像鬼",
+          "tokenName": "四臂巨石像鬼",
+          "description": "<p>只有@UUID[Actor.toaAcererak00000]{阿瑟瑞克} 知道如何制造这种生物。一只四臂巨石像鬼身高大约 8~9 尺，重量约五千磅。这种家伙常被用作墓穴守卫，它的尖牙利爪被用来驱逐来犯者。石像鬼的更多信息见<em>《怪物图鉴》</em>。</p>",
           "items": {
             "Multiattack": {
               "name": "多重攻击",
-              "description": "<p>The gargoyle makes five attacks: one with its [[/item Bite]] and four with its [[/item Claw]].</p>"
+              "description": "<p>石像鬼发动五次攻击：一次[[/item Bite]]{啃咬}和四次[[/item Claw]]{爪击}。</p>"
             },
             "Bite": {
               "name": "啃咬",
@@ -3281,36 +3281,36 @@
             },
             "False Appearance": {
               "name": "拟形",
-              "description": "<p>While the gargoyle remains motionless, it is indistinguishable from an inanimate statue.</p>"
+              "description": "<p>石像鬼静止不动时，外表与一尊无生命的塑像一模一样。</p>"
             }
           }
         },
         "Giant Frog": {
-          "name": "Giant Frog",
-          "tokenName": "Giant Frog",
+          "name": "巨蛙",
+          "tokenName": "巨蛙",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Amphibious": {
               "name": "水陆两栖",
-              "description": "<p>The frog can breathe air and water.</p>"
+              "description": "<p>青蛙可以在空气和水中呼吸。</p>"
             },
             "Standing Leap": {
-              "name": "Standing Leap",
-              "description": "<p>The frog's long jump is up to <strong>20 ft.</strong> and its high jump is up to <strong>10 ft.</strong>, with or without a running start.</p>"
+              "name": "立定起跳",
+              "description": "<p>蟾蜍不需要助跑就可以跳<strong> 20 尺</strong>远、<strong>10 尺</strong>高，且视为移动的一部分。</p>"
             },
             "Bite": {
               "name": "啃咬",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target is &amp;Reference[grappled] (escape DC 11). Until this grapple ends, the target is restrained, and the frog can't bite another target.</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>且目标Reference[grappled apply=false]{受擒}（逃脱DC 11）。直至擒抱解除，目标陷入被&Reference[restrained apply=false]{束缚}状态，且该巨蛙不能啃咬另一个目标。</p>"
             },
             "Swallow": {
-              "name": "Swallow",
-              "description": "<p>The frog makes one bite attack against a Small or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends.</p><p>The swallowed target is &amp;Reference[blinded] and &amp;Reference[restrained], it has total cover against attacks and other effects outside the frog, and it takes [[/damage average]] damage at the start of each of the frog's turns. The frog can have only one target swallowed at a time.</p><p>If the frog dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 ft. of movement, exiting prone.</p>"
+              "name": "吞咽",
+              "description": "<p>青蛙对正被它擒抱的小型或更小体型生物发动一次啃咬攻击。若该攻击命中，则目标被吞下并结束其受擒抱状态。</p> <p>被吞下的目标陷入&Reference[blinded]且被&Reference[restrained]，其对于青蛙身体外的攻击或效应视为处于全掩护，并在每次该青蛙的回合开始时受到[[/damage average]]伤害。青蛙不能同时吞咽多于一个的生物。</p> <p>如果该青蛙死亡，则被吞下的生物将不再受束缚，且可以消耗 5 尺移动力逃出，然后在尸体旁现身并陷入倒地状态。</p>"
             }
           }
         },
         "Giant Lizard": {
-          "name": "Giant Lizard",
-          "tokenName": "Giant Lizard",
+          "name": "巨蜥蜴",
+          "tokenName": "巨蜥蜴",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Bite": {
@@ -3320,117 +3320,117 @@
           }
         },
         "Giant Poisonous Snake": {
-          "name": "Giant Poisonous Snake",
-          "tokenName": "Giant Poisonous Snake",
+          "name": "巨毒蛇",
+          "tokenName": "巨毒蛇",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Bite": {
               "name": "啃咬",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must make a [[/save format=long]], taking [[/damage average activity=dnd5eactivity100]] damage on a failed save, or half as much damage on a successful one.</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>且目标必须进行一次[[/save format=long]]，豁免失败则受到[[/damage average activity=dnd5eactivity100]]伤害，豁免成功则伤害减半。</p>"
             }
           }
         },
         "Giant Scorpion": {
-          "name": "Giant Scorpion",
-          "tokenName": "Giant Scorpion",
+          "name": "巨蝎",
+          "tokenName": "巨蝎",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Multiattack": {
               "name": "多重攻击",
-              "description": "<p>The scorpion makes three attacks: two with its [[/item .OJ2b64O3e1nni21W]]{claws} and one with its [[/item .q6uVUHWyzht5OpwV]]{sting}.</p>"
+              "description": "<p>蝎子发动三次攻击：[[/item .OJ2b64O3e1nni21W]]{爪击}和一次[[/item .q6uVUHWyzht5OpwV]]{钉刺}。</p>"
             },
             "Claw": {
               "name": "爪击",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target is &amp;Reference[grappled] (escape DC 12). The scorpion has two claws, each of which can grapple only one target.</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>且目标&amp;Reference[grappled]{受擒}（逃脱DC 12）。蝎子有两只钳爪，其每只爪子只能擒抱一个目标。</p>"
             },
             "Sting": {
-              "name": "Sting",
-              "description": "<p>&amp;Reference[grappled]</p><p>The target must make a [[/save]] saving throw, taking [[/damage average activity=dnd5eactivity100]] damage on a failed save, or half as much damage on a successful one.</p>"
+              "name": "钉刺",
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>且目标必须成功通过一次[[/save]]豁免，否则将受到[[/damage average activity=dnd5eactivity100]]伤害，豁免成功则伤害减半。</p>"
             }
           }
         },
         "Giant Snapping Turtle": {
-          "name": "Giant Snapping Turtle",
-          "tokenName": "Giant Snapping Turtle",
-          "description": "<p>Giant snapping turtles can grow to be 12 feet in diameter. Although they appear slow and ponderous, they are capable of startling bursts of speed and will aggressively attack smaller creatures that approach them. One snap of a giant turtle’s jaws can cut a human in half, and these creatures aren’t fussy about what they eat.</p>",
+          "name": "巨鳄龟",
+          "tokenName": "巨鳄龟",
+          "description": "<p>巨鳄龟的直径可达 12 尺。尽管看上去缓慢迟钝，但它们实际上可以做到夸张的加速，且对接近它们的体型更小的生物发起侵略性的攻击。巨龟的一口可以咬断一个人类的躯干，而它们对食物也不怎么挑剔。</p>",
           "items": {
             "Bite": {
               "name": "啃咬",
               "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Amphibious": {
-              "name": "Amphibious",
-              "description": "<p>The turtle can breathe air and water.</p>"
+              "name": "水陆两栖",
+              "description": "<p>[[lookup @name]]可以在空气和水中呼吸。</p>"
             },
             "Stable": {
-              "name": "Stable",
-              "description": "<p>Whenever an effect knocks the turtle prone, it can make a [[/save format=long]] to avoid being knocked prone. A prone turtle is upside down. To stand up, it must succeed on a [[/check format=long]] on its turn and then use all its movement for that turn.</p>",
+              "name": "稳定姿态",
+              "description": "<p>当某种效应使巨鳄龟陷入倒地时，它可以进行一次[[/save format=long]]，豁免成功则避免倒地。倒地的巨龟处于四脚朝天状态。要想站起来，它必须在自己回合内进行一次[[/check format=long]]，检定成功则耗尽当前回合的所有移动力脱离倒地状态，检定失败则依然倒地。</p>",
               "effects": {
                 "Prone": {
-                  "name": "Prone"
+                  "name": "倒地"
                 }
               }
             }
           }
         },
         "Giant Spider": {
-          "name": "Giant Spider",
-          "tokenName": "Giant Spider",
+          "name": "巨蜘蛛",
+          "tokenName": "巨蜘蛛",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Spider Climb": {
-              "name": "Spider Climb",
-              "description": "<p>The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.</p>"
+              "name": "蛛行",
+              "description": "<p>蜘蛛可以攀爬在难以攀爬的表面上，包括倒吊在天花板上，且不需要进行属性检定。</p>"
             },
             "Web Sense": {
-              "name": "Web Sense",
-              "description": "<p>While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.</p>"
+              "name": "蛛网感知",
+              "description": "<p>与蛛网接触时，蜘蛛得知与同一张蛛网接触的其他生物的确切位置。</p>"
             },
             "Web Walker": {
-              "name": "Web Walker",
-              "description": "<p>The spider ignores movement restrictions caused by webbing.</p>"
+              "name": "蛛网行者",
+              "description": "<p>蜘蛛在蛛网上移动时无视蛛网造成的移动限制。</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must make a [[/save format=long]], taking [[/damage average activity=dnd5eactivity100]] damage on a failed save, or half as much damage on a successful one.</p><p>If the poison damage reduces the target to 0 hit points, the target is stable but &amp;Reference[poisoned apply=false]{poisoned} for 1 hour, even after regaining hit points, and is &amp;Reference[paralyzed apply=false]{paralyzed} while poisoned in this way.</p>",
+              "name": "啃咬",
+              "description": "<p>[[/attack extended]]。[[/damage extended]]。</p> <p>目标必须进行一次 [[/save format=long]]（DC 11）的体质豁免，豁免失败则受到 [[/damage average activity=dnd5eactivity100]]伤害，豁免成功则伤害减半。</p><p>如果该毒素伤害将目标生命值降至 0，则目标伤势稳定但&Reference[poisoned apply=false]{中毒}1 小时，即使恢复生命值也无法摆脱该中毒效应，且其在以该方式中毒期间同时陷入&amp;Reference[paralyzed apply=false]{麻痹}。</p>",
               "effects": {
                 "Poisoned & Paralyzed": {
-                  "name": "Poisoned & Paralyzed",
-                  "description": "<p>If the poison damage reduces the target to 0 hit points, the target is stable but &amp;Reference[poisoned apply=false]{poisoned} for 1 hour, even after regaining hit points, and is &amp;Reference[paralyzed apply=false]{paralyzed} while poisoned in this way.</p>"
+                  "name": "中毒并麻痹",
+                  "description": "<p>如果该毒素伤害将目标生命值降至 0，则目标伤势稳定但&Reference[poisoned apply=false]{中毒}1 小时，即使恢复生命值也无法摆脱该中毒效应，且其在以该方式中毒期间同时陷入&amp;Reference[paralyzed apply=false]{麻痹}。</p>"
                 }
               }
             },
             "Web": {
-              "name": "Web",
-              "description": "<p>[[/attack extended]]. <em>Hit:</em> The target is &amp;Reference[restrained] by webbing.</p><p>As an action, the restrained target can make a [[/check]] check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage).</p>"
+              "name": "蛛网",
+              "description": "<p>[[/attack extended]]。<em>命中：</em> 目标受蛛网&Reference[restrained]。</p> <p>作为一个动作，被束缚者可以进行一次 [[/check]]检定，检定通过则挣脱蛛网。蛛网也可以被攻击和被破坏（AC 10；5 点生命值；火焰易伤；免疫钝击、毒素和心灵伤害）。</p>"
             }
           }
         },
         "Giant Strider": {
-          "name": "Giant Strider",
-          "tokenName": "Giant Strider",
+          "name": "巨阔步鸟",
+          "tokenName": "巨阔步鸟",
           "items": {
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Fire Burst": {
-              "name": "Fire Burst",
-              "description": "<p>The giant strider hurls a gout of flame at a point it can see within 60 feet of it. Each creature in a 10-foot-radius sphere centered on that point must make a [[/save format=long]], taking [[/damage average]] damage on a failed save, or half as much damage on a successful one. The fire spreads around corners, and it ignites flammable objects in that area that aren’t being worn or carried.</p>"
+              "name": "火焰爆发",
+              "description": "<p>巨阔步鸟向 60 尺内可见的一点投掷出一团火焰。在以投掷点为中心 10 尺半径的球形区域内的每一个生物必须进行一次 [[/save format=long]]，失败则受到[[/damage average]]伤害，成功则伤害减半。火焰会扩散过转角并点燃范围内没有被穿戴或携带的可燃物。</p>"
             },
             "Fire Absorption": {
-              "name": "Fire Absorption",
-              "description": "<p>Whenever the giant strider is subjected to fire damage, it takes no damage and regains a number of hit points equal to half the fire damage dealt.</p>"
+              "name": "火焰吸收",
+              "description": "<p>每当巨阔步鸟受到火焰伤害，它将不受到任何伤害且恢复等于该伤害值一半的生命值。</p>"
             }
           }
         },
         "Giant Wasp": {
-          "name": "Giant Wasp",
-          "tokenName": "Giant Wasp",
+          "name": "巨黄蜂",
+          "tokenName": "巨黄蜂",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Sting": {
-              "name": "Sting",
+              "name": "钉刺",
               "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must make a [[/save]] saving throw, taking [[/damage average activity=dnd5eactivity100]] damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.</p>"
             }
           }
@@ -3445,22 +3445,22 @@
               "description": "<p>The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.</p>"
             },
             "Bite": {
-              "name": "Bite",
+              "name": "啃咬",
               "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must make a [[/save format=long]], taking [[/damage average activity=dnd5eactivity100]] damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but &amp;Reference[poisoned apply=false]{poisoned} for 1 hour, even after regaining hit points, and is &amp;Reference[paralyzed apply=false]{paralyzed} while poisoned in this way.</p>",
               "effects": {
                 "Poisoned & Paralyzed": {
-                  "name": "Poisoned & Paralyzed",
+                  "name": "中毒并麻痹",
                   "description": "<p>If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.</p>"
                 }
               }
             },
             "Web Sense": {
               "name": "Web Sense",
-              "description": "<p>While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.</p>"
+              "description": "<p>与蛛网接触时，蜘蛛得知与同一张蛛网接触的其他生物的确切位置。</p>"
             },
             "Web Walker": {
-              "name": "Web Walker",
-              "description": "<p>The spider ignores movement restrictions caused by webbing.</p>"
+              "name": "蛛网行者",
+              "description": "<p>蜘蛛在蛛网上移动时无视蛛网造成的移动限制。</p>"
             }
           }
         },
@@ -3473,12 +3473,12 @@
               "description": "<p>The girallon makes five attacks: one with its [[/item Bite]] and four with its [[/item Claw]].</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Claw": {
               "name": "Claw",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Aggressive": {
               "name": "Aggressive",
@@ -3500,12 +3500,12 @@
               "description": "<p>The [[lookup @name lowercase]] makes five attacks: one with its [[/item Bite]] and four with its [[/item Claw]].</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Claw": {
               "name": "Claw",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Aggressive": {
               "name": "Aggressive",
@@ -3609,11 +3609,11 @@
             },
             "Scimitar": {
               "name": "Scimitar",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Shortbow": {
               "name": "Shortbow",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
@@ -3643,11 +3643,11 @@
             },
             "Scimitar": {
               "name": "Scimitar",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Javelin": {
               "name": "Javelin",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
@@ -3696,16 +3696,16 @@
               "description": "<p>The slaad makes three attacks: one with its [[/item Bite]] and two with its [[/item Claws]] or greatsword.</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Claws": {
               "name": "Claws",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Greatsword": {
               "name": "Greatsword",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Shapechanger": {
               "name": "Shapechanger",
@@ -3870,8 +3870,8 @@
               }
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Euphoria Breath": {
               "name": "Euphoria Breath",
@@ -4244,7 +4244,7 @@
               "description": "<p>The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:</p><p>Cantrips (at will): [[/item .kjmjY0zlE6IEiQVL]]{mending}, [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy}</p><p>1st level (4 slots): [[/item .arzCrMRgcNiQuh43]]{command}, [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .jZ6JNykRtdQ90MOo]]{shield of faith}</p><p>2nd level (3 slots): [[/item .3MYDjS6k9IYL0aTj]]{calm emotions}, [[/item .3Lo9boi7P2ro6QV4]]{hold person}</p><p>3rd level (3 slots): [[/item .pO4zGe5LmFIYqJiL]]{bestow curse}, [[/item .cg50KpBkBdPK6vPL]]{clairvoyance}</p><p>4th level (3 slots): [[/item .pxpb2eOB6bv4phAf]]{banishment}, [[/item .da0a1t2FqaTjRZGT]]{freedom of movement}</p><p>5th level (2 slots): [[/item .5e1xTohkzqFqbYH4]]{flame strike}, [[/item .JQyigMNPiDnGI18b]]{geas}</p><p>6th level (1 slot): [[/item .XzkJpE6XpZfKjODD]]{true seeing}</p>"
             },
             "Bite": {
-              "name": "Bite",
+              "name": "啃咬",
               "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must make a [[/save]] saving throw, taking [[/damage average activity=dnd5eactivity100]] damage on a failed save, or half as much damage on a successful one.</p>"
             },
             "Spit Poison": {
@@ -4413,7 +4413,7 @@
           "items": {
             "Tail": {
               "name": "Tail",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
@@ -4470,7 +4470,7 @@
               "description": "<p>The shark can breathe only underwater.</p>"
             },
             "Bite": {
-              "name": "Bite",
+              "name": "啃咬",
               "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
             }
           }
@@ -4501,7 +4501,7 @@
               "description": "<p>The hydra makes as many [[/item .fYE4f0Oa2I0MetId]]{bite} attacks as it has heads.</p>"
             },
             "Bite": {
-              "name": "Bite",
+              "name": "啃咬",
               "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
             }
           }
@@ -4543,8 +4543,8 @@
               "description": "<p>The [[lookup @name lowercase]] has advantage on an attack roll against a creature if at least one of the jackal's allies is within 5 ft. of the creature and the ally isn't incapacitated.</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
@@ -4554,8 +4554,8 @@
           "description": "<p>A jaculi (pronounced jah-KOO-lee) is a 15-foot-long snake that can alter the color and texture of its scales to camouflage itself. Altering its appearance to resemble wood or stone, it coils around pillars and tree trunks from which it launches itself like a javelin, striking with great force and accuracy.</p><p>Jaculis are found in damp climates, and their preferred habitats are rain forests and cool dungeons. The shed skin of the jaculi is coveted for use in crafting <em>@UUID[Compendium.dnd5e.items.Item.hSY1b8yi8JWw2blf]{boots of striding and springing}</em> and <em>cloak of invisibility</em>.</p>",
           "items": {
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Camouflage": {
               "name": "Camouflage",
@@ -4567,7 +4567,7 @@
             },
             "Spring": {
               "name": "Spring",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
@@ -4581,8 +4581,8 @@
               "description": "<p>The kamadan makes two attacks: one with its [[/item Bite]] or [[/item Claw]] and one with its [[/item Snakes]].</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Claw": {
               "name": "Claw",
@@ -4632,7 +4632,7 @@
               "description": "<p>It can innately cast [[/item .nSg2twWn7f4U8DpJ]]{misty step} at will, requiring no components. Its spellcasting ability is Wisdom.</p>"
             },
             "Bite": {
-              "name": "Bite",
+              "name": "啃咬",
               "description": "<p>[[/attack extended]]. [[/damage extended average]]. If the target is a Medium or smaller creature, it is &amp;Reference[Grappled apply=false]{grappled} (escape DC 17). Until this grapple ends, the target is &amp;Reference[Restrained apply=false]{restrained}, and [[lookup @name]] can't bite another target.</p>",
               "activities": {
                 "Escape Check": {
