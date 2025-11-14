@@ -57,8 +57,11 @@ def process_json_files(root_dir):
                     print(f"处理文件时出错 {file_path}: {e}")
 
 if __name__ == "__main__":
-    # 设置根目录
-    root_dir = "/data/dnd-simplified-chinese-babele-patch/dnd-simplified-chinese-babele-patch/translation/cn"
+    # 设置根目录 - 使用相对路径而不是绝对路径
+    # 获取脚本所在目录
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # 构建相对于脚本的翻译目录路径
+    root_dir = os.path.join(script_dir, "dnd-simplified-chinese-babele-patch", "translation", "cn")
     
     print(f"开始处理目录: {root_dir}")
     process_json_files(root_dir)
