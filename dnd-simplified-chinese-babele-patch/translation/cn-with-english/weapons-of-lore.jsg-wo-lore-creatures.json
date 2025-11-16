@@ -34,7 +34,7 @@
         },
         "Create Food and Water": {
           "name": "造粮术 Create Food and Water",
-          "description": "<p>你在施法距离内的地面上或容器中创造45磅食物和30加仑淡水——两者均有助于抵御饥饿和脱水的危害。食物味道寡淡却营养丰富，并且看起来像一种你选择的食物，水也是干净的。食物24小时内未被食用即会变坏。</p>"
+          "description": "<p>你在施法距离内的地面上或容器中创造 45 磅食物和 30 加仑淡水，该法术创造的食物和水均可用于避免饥饿和脱水的危害。食物味道寡淡却营养丰富，并且看起来像一种你选择的食物，水也是干净的。食物 24 小时内未被食用即会变坏。</p>"
         },
         "Cure Wounds": {
           "name": "疗伤术 Cure Wounds",
@@ -46,11 +46,11 @@
         },
         "Protection from Poison": {
           "name": "防护毒素 Protection from Poison",
-          "description": "<p>你触碰一个生物并结束其身上的&amp;Reference[poisoned]状态。在持续时间内，目标为避免或终止中毒状态所做的豁免具有优势，且具有毒素伤害抗性。</p>",
+          "description": "<p>你触及一名生物并结束其陷入的&Reference[poisoned apply=false]{中毒}状态。在持续时间内，目标为避免陷入或结束中毒状态所做的豁免具有优势，且具有毒素伤害的&Reference[resistance]{抗性}。</p>",
           "effects": {
             "Poison Protection": {
               "name": "毒素防护",
-              "description": "<p><span style=\"font-family:Signika, sans-serif\">在持续时间内，目标为防止或终止中毒状态所做的豁免具有优势，并且对毒素伤害具有抗性。</span></p>"
+              "description": "<p>在持续时间内，你在避免陷入或结束 &Reference[poisoned] 状态的豁免上具有优势，且具有对毒素伤害的抗性。</p>"
             }
           }
         },
@@ -71,7 +71,7 @@
           "effects": {
             "Warded": {
               "name": "受保护的",
-              "description": "<p>在该法术终止前，任何以攻击检定或伤害性法术将该受保护生物作为目标的生物必须进行一次[[/save ability=wis format=long]]，否则必须选择一个新的目标或失去该次攻击或法术。</p><p>若该受保护生物发动一次攻击检定，施展一道法术，或造成伤害，则该法术随之终止。</p>"
+              "description": "<p>任何试图对你进行攻击或对受保护者施放伤害性法术的生物都必须成功通过一次 [[/save ability=wis dc=@attributes.spelldc format=long]] 豁免 ，若豁免失败，该生物必须选定一个新目标，否则将失去本次的攻击或法术。该法术不能保护你免受范围效应（如爆炸或火球）的影响。若你发动一次攻击，施展一道法术，或是造成任何伤害，则该法术随之终止。</p>"
             }
           }
         },
@@ -113,7 +113,7 @@
         },
         "Create Food and Water": {
           "name": "造粮术 Create Food and Water",
-          "description": "<p>你在射程内的地面上或容器中创造45磅食物和30加仑淡水，两者均有助于抵御饥饿和脱水的危害。食物味道寡淡但营养丰富，并且看起来像一种你选择的食物，水也是干净的。食物若在24小时内未被食用即会变坏。</p>"
+          "description": "<p>你在施法距离内的地面上或容器中创造 45 磅食物和 30 加仑淡水，该法术创造的食物和水均可用于避免饥饿和脱水的危害。食物味道寡淡却营养丰富，并且看起来像一种你选择的食物，水也是干净的。食物 24 小时内未被食用即会变坏。</p>"
         },
         "Cure Wounds": {
           "name": "疗伤术 Cure Wounds",
@@ -125,11 +125,11 @@
         },
         "Protection from Poison": {
           "name": "防护毒素 Protection from Poison",
-          "description": "<p>你触碰一名生物并结束其身上的&amp;Reference[poisoned]中毒状态。在持续时间内，目标为避免陷入或终止中毒状态所做的豁免具有优势，且具有毒素伤害抗性。</p>",
+          "description": "<p>你触及一名生物并结束其陷入的&Reference[poisoned apply=false]{中毒}状态。在持续时间内，目标为避免陷入或结束中毒状态所做的豁免具有优势，且具有毒素伤害的&Reference[resistance]{抗性}。</p>",
           "effects": {
             "Poison Protection": {
               "name": "毒素防护",
-              "description": "<p><span style=\"font-family:Signika, sans-serif\">在持续时间内，目标为{避免或结束 中毒}状态所做的{豁免 具有优势}，并且对{毒素 伤害}具有{抗性}。</span></p>"
+              "description": "<p>在持续时间内，你在避免陷入或结束 &Reference[poisoned] 状态的豁免上具有优势，且具有对毒素伤害的抗性。</p>"
             }
           }
         },
@@ -137,7 +137,7 @@
           "name": "庇护术 Sanctuary",
           "description": "<div><p>你为射程内的一名生物施加守护。在法术终止前，任何将受守护生物作为攻击检定或伤害性法术目标的生物都必须进行一次[[/save ability=wis dc=@attributes.spell.dc format=long]]，否则必须选择新目标或失去该次攻击或法术。此法术无法保护受守护生物免受区域效应影响。若受守护生物进行攻击检定、施展法术或造成伤害，则法术终止。</p></div>",
           "materials": {
-            "value": "一面镜子的一片玻璃碎片"
+            "value": "一块镜子碎片"
           },
           "activities": {
             "Cast": {
@@ -150,7 +150,7 @@
           "effects": {
             "Warded": {
               "name": "受保护的",
-              "description": "<p>在该法术终止前，任何以该受保护生物为攻击检定或伤害性法术目标的生物必须进行一次[[/save ability=wis format=long]]，否则必须选择新目标或失去该次攻击或法术。</p><p>若受保护生物发动一次攻击检定，施展一道法术，或是造成任何伤害，则该法术随之终止。</p>"
+              "description": "<p>任何试图对你进行攻击或对受保护者施放伤害性法术的生物都必须成功通过一次 [[/save ability=wis dc=@attributes.spelldc format=long]] 豁免 ，若豁免失败，该生物必须选定一个新目标，否则将失去本次的攻击或法术。该法术不能保护你免受范围效应（如爆炸或火球）的影响。若你发动一次攻击，施展一道法术，或是造成任何伤害，则该法术随之终止。</p>"
             }
           }
         },
@@ -177,13 +177,13 @@
           "effects": {
             "Hopeful": {
               "name": "满怀希望",
-              "description": "<p>目标在感知豁免和死亡豁免上具有优势，且从任何治疗中恢复的生命值均取最大值。</p>"
+              "description": "<p>你在法术持续时间内进行的感知豁免和死亡豁免具有优势。此外，你获得的所有治疗的生命值恢复量都取最大值。</p>"
             }
           }
         },
         "Death Ward": {
           "name": "防死结界 Death Ward",
-          "description": "<p>你触摸一个生物并赋予其一定程度的死亡防护。在法术结束前，当目标的生命值首次将降至0时，改为降至1生命值，随后法术终止。</p><p>若目标受到不造成伤害但会立即致死的效应影响时法术仍在生效，则该效应对目标无效，随后法术终止。</p>",
+          "description": "<p>你触摸一名生物，并给予其对死亡的防护。在法术结束前，当目标的生命值首次降至 0 时，该目标的生命值改为降至 1，随后法术终止。</p><p>目标受到直接致死而不造成伤害的效应影响时，若该法术仍在生效，则改为目标受到的致死效应失效，随后法术终止。</p>",
           "effects": {
             "Protection from Death": {
               "name": "防死结界",
@@ -200,7 +200,7 @@
         },
         "Mass Cure Wounds": {
           "name": "群体疗伤术 Mass Cure Wounds",
-          "description": "<p>一道治愈能量从施法距离内你可见的一点涤荡而出。选择该点周边30尺半径球状区域内的至多六个生物。每个目标恢复生命值等于5d8加上你的施法关键属性调整值。</p><p><strong>使用更高法术位。</strong> 法术位每比5环高一级，治疗量就增加1d8。</p>"
+          "description": "<p>一道治愈能量从施法距离内你指定的一点涤荡而出。你在该点周边 30 尺半径的球状区域内指定至多六个生物，并使每个目标生物恢复 5d8+你的施法属性调整值点生命值。</p><p><strong>升环施法：</strong>使用的法术位每比五环高一环，法术的治疗量就增加 1d8。</p>"
         }
       }
     }

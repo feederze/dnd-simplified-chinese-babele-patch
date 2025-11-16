@@ -3,7 +3,7 @@
   "folders": {
     "Primal Companions": "原初行侣",
     "Example Characters": "范例角色",
-    "Conjurations": "咒唤",
+    "Conjurations": "咒唤物",
     "Summons": "召唤",
     "Conjured Elementals": "咒唤元素",
     "Vehicles": "载具",
@@ -2897,7 +2897,7 @@
           "effects": {
             "Charmed": {
               "name": "魅惑",
-              "description": "<p>目标陷入 &Reference[Charmed apply=false] 状态直至法术结束，或在你或你的盟友对它造成伤害时提前结束。魅惑生物将对你友好。当法术结束时，目标会知道它曾被你魅惑。</p>"
+              "description": "<p>你陷入 &Reference[charmed apply=false] 状态直到法术结束，或者直到施法者或施法者的同伴对它造成伤害。被魅惑的生物将对施法者友好。在法术结束时，生物会知道它曾被施法者魅惑。</p>"
             }
           }
         },
@@ -3910,7 +3910,7 @@
           "name": "箭矢"
         },
         "Dice": {
-          "name": "骰子组",
+          "name": "骰子",
           "description": "<p><strong>属性：</strong>感知</p><p class=\"phb-meta\"><strong>操作：</strong>判断某人是否作弊（DC 10），或赢取游戏（DC 20）</p>",
           "activities": {
             "Catch Cheating": {
@@ -3962,7 +3962,7 @@
           "description": "<p>以一个操作动作，你能把一包铁蒺撒至地面并覆盖你周围 5 尺内的一处 5 尺方形区域。任何生物每回合首次进入这片区域时都必须通过一次DC 15 的敏捷豁免，否则将受到 1 点穿刺伤害，并且移速降至 0，直到其下一回合开始为止。重新收集这些铁蒺藜需要花费 10 分钟时间。</p>",
           "effects": {
             "Slowed": {
-              "name": "缓慢"
+              "name": "缓速"
             }
           }
         },
@@ -4117,7 +4117,7 @@
         },
         "Magic Initiate": {
           "name": "魔法学徒",
-          "description": "<p> 你获得以下增益：</p><p><strong>两道戏法。</strong> 你从 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]{牧师}、@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU]{德鲁伊}或@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz]{法师}的法术列表中选择两道戏法。你从这个专长中习得的法术使用智力、感知或魅力作为施法关键属性（当你选择专长时选择属性）。</p><p><strong>一环法术。</strong>你选择一道一环法术，并始终准备了这道法术。这道法术所属的法术列表，必须与你通过本专长习得的戏法相同。你可以不花任何法术位地施展它一次，并且当你完成长休后，你将重新获得以这种方式施展该法术的能力。你也可以使用你拥有的任意法术位来施展这道法术。</p><p><strong>改变法术。</strong>每当你获得一级新等级，你都能将通过本专长习得的一道法术替换为同法术列表中同等级的另一道法术。</p><p><strong>复选。</strong>你可多次选择本专长，但是你每次都必须选择一个不同的法术列表。</p><section id=\"secret-7JQCSgnGrtu9huzf\" class=\"secret\"><p><strong>Foundry 贴士</strong></p><p>法术在添加到你的角色卡之后要手动修改上面提到的部分。</p></section>"
+          "description": "<p>你获得以下增益：</p><p><strong>两道戏法。</strong> 你从 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]{牧师}、@UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU]{德鲁伊} 或 @UUID[Compendium.dnd-players-handbook.content.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz]{法师} 法术列表中选择两道戏法并习得之。智力、感知或魅力是你通过本专长习得法术的施法属性（在你选择此专长时选定）。</p><p><strong>一环法术。</strong> 从你为本专长的戏法所选的法术列表中再选择一道一环法术。你始终准备着这道法术。你可以无需法术位地施展该法术一次，并在完成长休后重获以此法施展该法术的能力。你也可以使用你拥有的任何法术位来施展该法术。</p><p><strong>改变法术。</strong> 每当你获得一级新等级，你都能将通过本专长习得的一道法术替换为同法术列表中同环阶的另一道法术。</p><p><strong>复选。</strong> 你可多次选择本专长，但是你每次都必须选择一个不同的法术列表。</p><section id=\"secret-7JQCSgnGrtu9huzf\" class=\"secret\"><p><strong>Foundry 备注</strong></p><p>必须手动将上述更改的法术添加到你的角色卡中。</p></section>"
         },
         "Dragonborn": {
           "name": "龙裔",
@@ -4159,7 +4159,7 @@
         },
         "Fire Bolt": {
           "name": "火焰箭",
-          "description": "<p>你对施法距离内一名生物或物件掷出一把火焰，对目标进行一次远程法术攻击。若命中，则目标受到 1d10 点火焰伤害。未被着装或携带的可燃物件被该法术命中时将开始燃烧。</p><p><strong>戏法强化：</strong> 你到达特定等级时，其伤害增加 1d10（5 级 2d10、11 级 3d10、17 级 4d10）。</p>"
+          "description": "<p>你对施法距离内一名生物或物件掷出一把火焰，对目标进行一次远程法术攻击。命中时，目标将受到 [[/damage 1d10 type=fire]]伤害。未被着装或携带的可燃物件被该法术命中时将开始燃烧。</p><p><strong>戏法强化：</strong>到达特定等级后，此戏法的伤害将增加 1d10：5 级（2d10）、11 级（3d10）、17 级（4d10）。</p>"
         },
         "Sleep": {
           "name": "睡眠术",
@@ -4400,7 +4400,7 @@
         },
         "Skilled": {
           "name": "熟习",
-          "description": "<p> 你获得三项自选的技能或工具熟练。</p><p><strong>复选。</strong>你可多次选择本专长。</p><section class=\"secret\" id=\"secret-36vceWBnGWiMkySr\"><p><strong>Foundry 注</strong></p><p>此专长未提供熟练项自动化。你需要切换至角色卡“详细”一栏的“编辑”模式，点击技能旁的圆点来应用所需的熟练和专精。</p></section>"
+          "description": "<p>你获得共计三项自选的技能和工具熟练。</p><p><strong>复选。</strong>你可多次选择本专长。</p><section class=\"secret\" id=\"secret-36vceWBnGWiMkySr\"><p><strong>Foundry Note</strong></p><p>此专长未提供熟练项自动化。你需要切换至角色卡“详细”选项卡的“编辑”模式，点击技能旁的圆点来应用所需的熟练和专精。</p></section>"
         },
         "Orc": {
           "name": "兽人",
@@ -4472,17 +4472,17 @@
         },
         "Heroism": {
           "name": "英雄气概",
-          "description": "<p>你触碰一个自愿生物使其充满勇气。该生物直至法术终止前免疫恐慌状态，且它将在其每回合开始时获得临时生命值，其数值等于你的施法属性调整值。</p><p><strong>升环施法：</strong> 使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，就可以额外指定一个生物作为目标。</p>",
+          "description": "<p>你触碰一个自愿生物使其充满勇气。该生物直至法术终止前免疫恐慌状态，且其将在其每一回合开始时获得等同于你施法属性调整值的临时生命值。</p><p><strong>升环施法：</strong>使用的法术位每比一环高一环，你就可以额外指定一个生物作为目标。</p>",
           "effects": {
             "Bravery": {
               "name": "勇气",
-              "description": "<p>你直至法术终止前免疫恐慌状态，且你将在其每回合开始时获得临时生命值，其数值等于施法者的施法属性调整值。</p>"
+              "description": "<p>你直至法术终止前免疫恐慌状态，且你将在你的每一回合开始时获得临时生命值，其数值等于施法者的施法属性调整值。</p>"
             }
           }
         },
         "Searing Smite": {
           "name": "炽焰斩",
-          "description": "<p>被该次攻击检定命中的目标会在此次攻击中额外受到 1d6 火焰伤害，并被魔法性火焰引燃。直至法术终止前，目标会在每个其回合开始时受到 1d6 点火焰伤害，并进行一次体质豁免。豁免失败则法术继续生效，成功则法术终止。</p><p><strong>升环施法： </strong>使用高于一环的法术位施放本法术时，你使用的法术位每比 1 环高一环，此法术造成的所有伤害都增加 1d6。</p>",
+          "description": "<p>被该次攻击检定命中的目标会在此次攻击中额外受到 [[/damage 1d6 type=fire]]伤害。直至法术终止前，目标会在其每一回合开始时受到 1d6 点火焰伤害，并进行一次体质豁免。豁免失败则法术继续生效，成功则法术终止。</p><p><strong>升环施法：</strong>使用的法术位每比一环高一环，此法术造成的所有伤害都会增加 1d6 点。</p>",
           "activation": {
             "condition": "使用近战武器或徒手打击命中一个生物后立即执行"
           },
@@ -5491,7 +5491,7 @@
         },
         "Parchment": {
           "name": "羊皮纸",
-          "description": "<p>一页羊皮纸能够写满250个手写单词。</p>"
+          "description": "<p>一页羊皮纸能够写满 250 个手写单词。</p>"
         },
         "Robe": {
           "name": "长袍",
@@ -5559,7 +5559,7 @@
         },
         "Sacred Flame": {
           "name": "圣火术",
-          "description": "<p>如同烈焰般的辉光向着施法距离内你能看见的一名生物倾泻而下。目标必须要通过一次敏捷豁免，否则将受到1d8点光耀伤害。在这次豁免检定中，目标无法享受来自半身掩护和四分之三掩护的增益。</p><p><strong>戏法强化。</strong> 该法术的伤害会在你达到下列等级时增加1d8：5级（2d8），11级（3d8），17级（4d8）。</p>",
+          "description": "<p>如同烈焰般的辉光向着施法距离内你能看见的一名生物倾泻而下。目标必须要通过一次敏捷豁免，否则将受到 [[/damage 1d8 type=radiant]]伤害。在这次豁免检定中，目标无法享受来自&Reference[halfcover]{半身掩护}和&Reference[threequarterscover]{四分之三掩护}的增益。</p><p>戏法强化：该法术的伤害会在你达到下列等级时增加 1d8：5 级（2d8），11 级（3d8），17 级 1d8（4d8）。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -5692,7 +5692,7 @@
         },
         "Toll the Dead": {
           "name": "亡者丧钟",
-          "description": "<p>你对着施法距离内一名你可见的生物一指，随后目标10尺内响起一阵哀恸的钟鸣。目标必须通过一次感知豁免，否则将受到1d8点暗蚀伤害。若目标豁免失败时已损失任意数量生命值，则改为令其受到1d12点暗蚀伤害。</p><p><strong>戏法强化。</strong> 到达特定等级后，此戏法的伤害骰将增加一枚：5级（2d8或2d12）、11级（3d8或3d12）、17级（4d8或4d12）。</p>",
+          "description": "<p>你对着施法距离内一名你可见的生物一指，随后目标 10 尺内响起一阵哀恸的钟鸣在距。目标必须通过一次感知豁免，否则将受到 1d8 点暗蚀伤害。若目标豁免失败时已损失任意数量生命值，则改为令其受到 1d12 点暗蚀伤害。</p><p><strong>戏法强化：</strong>到达特定等级后，此戏法的伤害骰将增加一枚：5 级（2d8 或 2d12）、11 级（3d8 或 3d12）、17 级（4d8 或 4d12）。</p>",
           "activities": {
             "Healthy Target": {
               "name": "健康目标",
@@ -5710,17 +5710,17 @@
         },
         "Mind Sliver": {
           "name": "心灵之楔",
-          "description": "<p>指定施法距离内一个你可见的生物，你试图暂时刺入目标的心灵。目标必须通过一次智力豁免。豁免失败将受到1d6点心灵伤害，并且其在你的下回合结束前，进行的下一次豁免检定将获得1d4减值。</p><p><strong>戏法强化。</strong> 到达特定等级后，此戏法的伤害将增加1d6：5级（2d6）、11级（3d6）、17级（4d6）。</p>",
+          "description": "<p>指定施法距离内一个你可见的生物，你试图暂时刺入目标的心灵。目标必须通过一次智力豁免 。豁免失败将受到 [[/damage 1d6 type=psychic]]伤害，并且其在你的下回合结束前，进行的下一次豁免检定将获得 1d4 减值。</p><p><strong>戏法强化：</strong> 到达特定等级后，此戏法的伤害将增加 1d6：5 级（2d6）、11 级（3d6）、17 级（4d6）。</p>",
           "effects": {
             "Slivered": {
-              "name": "楔入",
-              "description": "<p>目标在你下一回合结束前的下一次豁免检定中减去1d4。</p>"
+              "name": "碎裂",
+              "description": "<p>施法者的下一回合结束前，你进行的下一次豁免检定中减去 1d4。</p>"
             }
           }
         },
         "Guidance": {
           "name": "神导术",
-          "description": "<p>你触碰一名自愿生物并选择一项技能。直到法术结束为止，受术生物在进行使用到所选技能的任何属性检定时，该次检定具有1d4加值。</p>",
+          "description": "<p>你触碰一名自愿生物并选择一项技能。直到法术结束为止，受术生物在进行使用到所选技能的任何属性检定时，该次检定具有 1d4 加值。</p>",
           "activities": {
             "Cast": {
               "name": "施展"
@@ -5798,7 +5798,7 @@
         },
         "Ink": {
           "name": "墨水",
-          "description": "<p>墨水一般装在1盎司的瓶子里，足够撰写500页的内容。</p>"
+          "description": "<p>墨水一般装在 1 盎司的瓶子里，足够撰写 500 页的内容。</p>"
         },
         "Oil": {
           "name": "燃油",
@@ -5992,7 +5992,7 @@
         },
         "Light": {
           "name": "光亮术",
-          "description": "<p>你触碰一个体型不超过大型，且未被他人携带/着装的物件。在法术终止前，物件将发出20尺半径的明亮光照，以及其外20尺范围的微光光照 。光的颜色由你决定。</p><p>该物件被不透明的东西完全遮盖时，其光照也将被遮挡。此法术将在你再次施展它时提前终止。</p>",
+          "description": "<p>你触碰一个体型不超过大型，且未被他人携带/着装的物件。在法术终止前，物件将发出 20 尺半径的明亮光照，以及其外 20 尺范围的微光光照 。光的颜色由你决定。</p><p>该物件被不透明的东西完全遮盖时，其光照也将被遮挡。此法术将在你再次施展它时提前终止。</p>",
           "materials": {
             "value": "一只萤火虫或一片磷光苔藓"
           },
@@ -6047,7 +6047,7 @@
         },
         "Feather Fall": {
           "name": "羽落术",
-          "description": "<p>指定施法距离内至多五个正坠落的生物。受术生物的坠落速度在法术持续时间内降低至每回合60尺。如果该生物在法术终止前落地，则其不会受到任何坠落伤害，且着地后法术对该生物的效应随即终止。</p>",
+          "description": "<p>指定施法距离内至多五个正坠落的生物。受术生物的坠落速度在法术持续时间内降低至每回合 60 尺。如果该生物在法术终止前落地，则其不会受到任何坠落伤害，且着地后法术对该生物的效应随即终止。</p>",
           "activation": {
             "condition": "你或距你 60 尺内的可见生物坠落时可用"
           },
@@ -6057,7 +6057,7 @@
         },
         "Mage Armor": {
           "name": "法师护甲",
-          "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础AC变为 13+它的敏捷调整值。当目标穿上护甲时，此法术将提前终止。</p>",
+          "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础 AC 变为 13 + 它的敏捷调整值。目标着装护甲则法术提前终止。</p>",
           "materials": {
             "value": "一块鞣制过的皮革"
           },

@@ -62,7 +62,7 @@
     "Environments": "环境",
     "Titans": "泰坦",
     "Sewer": "下水道",
-    "Shambling Mounds": "蹒跚怪",
+    "Shambling Mounds": "蔓生怪",
     "Otyughs": "食腐兽",
     "Olothec": "奥洛塞克",
     "Ogres": "食人魔",
@@ -155,7 +155,7 @@
           "description": "<p>[[lookup @name lowercase]]沿地面投掷一块巨石，形成一条10尺宽、30尺长的线状区域。此线上的每个生物必须进行一次[[/save]]豁免。豁免失败时，该生物受到[[/damage average]]伤害并倒地&amp;reference[prone]。豁免成功则只受半数伤害且不会倒地。此线上非超自然、未被穿着或携带的每个物件受到[[/damage average]]伤害。巨石滚动终点会碎裂，形成一处10尺方格的困难地形。</p>",
           "activities": {
             "Hurl": {
-              "name": "投掷"
+              "name": "劲力猛投"
             },
             "Difficult Terrain": {
               "name": "困难地形"
@@ -200,7 +200,7 @@
           "description": "<p>[[lookup @name]]发动两次[[/item X8SfOdGn5nICcF92]]攻击。若其处于狂怒状态（见自然狂怒），则改为发动三次猛击攻击。</p>"
         },
         "Entangling Vines": {
-          "name": "缠绕藤蔓 Entangling Vines",
+          "name": "藤蔓纠缠 Entangling Vines",
           "description": "<p>藤蔓从[[lookup @name]]的身体中抽打而出。其30尺范围内的每个敌人必须进行一次[[/save]]豁免，否则受到[[/damage average]]伤害并被&amp;reference[grappled]（逃脱DC 17），同时被直接拉向[[lookup @name]]最多30尺。</p>"
         },
         "Nature's Fury": {
@@ -339,7 +339,7 @@
       "items": {
         "Beak": {
           "name": "喙啄 Beak",
-          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
         },
         "Claw": {
           "name": "爪击 Claw",
@@ -724,11 +724,11 @@
           "description": "<p>[[lookup @name lowercase]]的跳远距离最远可达30尺，跳高高度为15尺，无论是否有助跑。如果[[lookup @name lowercase]]向目标跃出至少20尺，然后用啃咬或爪击命中目标，则目标必须进行一次[[/save]]豁免，否则将被击倒&amp;reference[prone]。</p>"
         },
         "Keen Sight and Smell": {
-          "name": "敏锐视觉和嗅觉 Keen Sight and Smell",
+          "name": "敏锐视听觉 Keen Sight and Smell",
           "description": "<p>该[[lookup @name lowercase]]在依靠视觉和嗅觉进行的感知（察觉）检定中具有优势。</p>"
         },
         "Multiattack": {
-          "name": "多重攻击Multiattack。",
+          "name": "多重攻击 Multiattack",
           "description": "<p>该[[lookup @name lowercase]]发动一次[[/item XOZdnhZUw6XlKsx0]]和一次[[/item jlUmgkowTsqxbqIo]]攻击。</p>"
         },
         "Bear Hug": {
@@ -1706,7 +1706,7 @@
           "description": "<p>[[lookup @name]]爆散成一团尘埃，并对她60尺范围内的每个敌人发动一次枯竭猛击攻击，然后她在其原位置60尺内的一个未占据空间重新凝聚成形。</p>"
         },
         "Last Rites": {
-          "name": "临终仪式 Last Rites",
+          "name": "终末仪式 Last Rites",
           "description": "<p>[[lookup @name]]号令大地将她的敌人活埋。每个位于其30尺范围内的敌人必须进行一次[[/save]]豁免检定。豁免失败时，一个目标承受[[/damage average]]伤害并被封入岩石中。豁免成功时，目标承受一半伤害且不被封入。被封入的生物陷入束缚状态，对岩石外的攻击和其他效果具有全身掩护，并在其每回合结束时承受[[/damage average activity=ftCAUPUSC66YSJ6d]]伤害。若岩石被摧毁（护甲等级：17；生命值：30；免疫毒素和心灵伤害），该生物可获释放。</p>",
           "activities": {
             "End of Turn Damage": {
@@ -1851,7 +1851,7 @@
           "description": "<p>[[lookup @name lowercase]]重踏地面，1d3 + 1个@UUID[Compendium.mcdm-flee-mortals-where-evil-lives.bestiary.Actor.WMmi5aPRZUg3FHDb]{莫勒 Mohlers}从它们周边30尺内未占据的地面冒出。这些莫勒对[[lookup @name lowercase]]抱有善意，并在同一先攻值上紧接[[lookup @name lowercase]]的回合后立即行动。</p>"
         },
         "Rush": {
-          "name": "猛冲 Rush",
+          "name": "冲锋 Rush",
           "description": "<p>该[[lookup @name lowercase]]采取疾行动作。</p>"
         },
         "Sinkhole": {
@@ -1917,7 +1917,7 @@
           "description": "<p>[[lookup @name lowercase]]在其周围120尺内召唤一道长60尺、宽5尺的魔法星雨。该区域内的每个敌人必须进行一次[[/save activity=VNdJRFnKYcRQ46J0]]豁免，豁免失败则受到[[/damage average activity=VNdJRFnKYcRQ46J0]]伤害，豁免成功则仅受半数伤害。该区域内每个其他自愿生物恢复15生命值。</p><p>随后星雨在该区域形成一道10尺高的不透明光耀光墙。位于光墙空间内的每个生物会被以最短路径推出墙外。该生物可选择落在光墙的任一侧。光墙持续1分钟或直到[[lookup @name lowercase]]失能或死亡。任何敌人在其回合内首次进入光墙时，必须进行一次[[/save activity=XpD91EX99dZ2737V]]豁免，豁免失败则受到[[/damage average activity=XpD91EX99dZ2737V]]伤害，豁免成功则仅受半数伤害。</p>",
           "activities": {
             "Initial Cast": {
-              "name": "初始施展"
+              "name": "首次施展"
             },
             "Wall Save": {
               "name": "墙壁豁免"
@@ -2044,7 +2044,7 @@
         },
         "Half Plate Armor": {
           "name": "半身板甲 Half Plate Armor",
-          "description": "<p>半身板甲由成型的金属板组成，覆盖穿戴者的大部分身体。它不包括腿部防护，仅有用皮带固定的简易护胫。</p>"
+          "description": "<p>板甲由覆盖全身，且相互连接的模铸金属板组成。一套板甲包括护手、重皮靴、一顶附面甲的头盔以及在护甲底层的厚重的布甲。其锁扣和皮带结构可以将护甲重量分配到身体各处。</p>"
         }
       }
     },
@@ -3153,7 +3153,7 @@
       "description": "<h3>布雷德贝德尔</h3><p>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.00bredbeddle0000 inline=true]</p>",
       "items": {
         "Executioner's Axe": {
-          "name": "行刑者之斧 Executioner's Axe",
+          "name": "处刑者之斧 Executioner's Axe",
           "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Headless": {
@@ -4333,7 +4333,7 @@
           }
         },
         "Tongue": {
-          "name": "舌头 Tongue",
+          "name": "舌卷 Tongue",
           "description": "<p>[[/attack extended]]。 [[/damage extended]]，并且如果目标是一个生物，他们必须进行一次[[/save]]豁免，否则将被拉向恶魔最多10尺。</p>",
           "activities": {
             "save": {
@@ -5756,7 +5756,7 @@
           }
         },
         "Stone": {
-          "name": "石 Stone",
+          "name": "岩石构装 Stone",
           "description": "<p>[[/attack extended]]。 [[/damage extended]]。如果目标是中型或更小的生物，他们将被击倒&amp;reference[prone]。</p>"
         },
         "Multiattack": {
@@ -5899,7 +5899,7 @@
           }
         },
         "Absorb Magic": {
-          "name": "吸收魔法 Absorb Magic",
+          "name": "吸收魔力 Absorb Magic",
           "description": "<p>当[[lookup @name lowercase]]的看护者在其30尺范围内，且[[lookup @name lowercase]]或其看护者受到3环或更低等级法术影响时，[[lookup @name lowercase]]会吸收该法术的魔法，使其对[[lookup @name lowercase]]及其看护者无效。</p>",
           "activities": {
             "utility": {
@@ -6712,7 +6712,7 @@
         },
         "Half Plate Armor": {
           "name": "半身板甲 Half Plate Armor",
-          "description": "<p>半身板甲由覆盖穿着者大部分身体的成型金属板组成。它不包括腿部防护，仅附带用皮带固定的简易护胫。</p>"
+          "description": "<p>板甲由覆盖全身，且相互连接的模铸金属板组成。一套板甲包括护手、重皮靴、一顶附面甲的头盔以及在护甲底层的厚重的布甲。其锁扣和皮带结构可以将护甲重量分配到身体各处。</p>"
         },
         "Bulwark of Bone": {
           "name": "骸骨壁垒 Bulwark of Bone",
@@ -6915,7 +6915,7 @@
           "name": "炽焰法球 Flaming Sphere",
           "description": "<p>一个直径5尺的火焰球状出现在你指定射程内一处未占据空间，并持续至法术持续时间结束。任何在其回合结束时位于球状5尺内的生物必须进行一次敏捷豁免。豁免失败则受到2d6火焰伤害，成功则伤害减半。</p><p>你可以使用一个附赠动作将球状移动至多30尺。若你用球状撞击一个生物，该生物必须进行对抗球状伤害的豁免，且球状本回合停止移动。</p><p>当你移动球状时，可以引导它越过至多5尺高的障碍，或跳过至多10尺宽的陷坑。球状会点燃未被穿着或携带的可燃物件，并散发20尺半径的明亮光照与额外20尺的微光光照。</p>",
           "materials": {
-            "value": "一点牛脂、一撮硫磺和一把铁粉。"
+            "value": "一小块兽脂、一小撮硫磺石和少量铁粉"
           }
         },
         "Fireball": {
@@ -7738,7 +7738,7 @@
           "description": "<p>紫晶匕首有五个反派团队动作。团队可以在遭遇中每个敌人回合后各使用一次这些动作。团队可以按任意顺序使用这些动作，但每轮只能使用一个。只有当执行该动作的生物在场于该遭遇中且未处于&amp;reference[incapacitated apply=false]状态时，才能执行该动作。</p><ul><li><p>[[/item z6OumybyathUl8nZ]]</p></li></ul>"
         },
         "Cheap Shot": {
-          "name": "廉价射击 Cheap Shot",
+          "name": "卑鄙一击 Cheap Shot",
           "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标必须进行一次[[/save]]豁免。豁免失败时，[[lookup @name]]可以选择令目标陷入&amp;reference[prone]状态，或获得下列状态之一直至目标下个回合结束：</p><ul><li>&amp;reference[blinded]</li><li>&amp;reference[dazed]</li><li>&amp;reference[deafened]</li></ul>",
           "activities": {
             "save": {
@@ -7759,7 +7759,7 @@
       }
     },
     "Crawling Claw": {
-      "name": "匍匐之手 Crawling Claw",
+      "name": "蠕行之爪 Crawling Claw",
       "tokenName": "匍匐之手",
       "description": "<h3>匍匐爪</h3>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.00crawlingclaw00 inline=true]<h3>亡灵</h3>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.00undead00000000 inline=true]",
       "items": {
@@ -8020,7 +8020,7 @@
       "items": {
         "Signature Attack (Beak)": {
           "name": "标志性攻击（喙啄） Signature Attack (Beak)",
-          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
         },
         "Keen Sight": {
           "name": "敏锐视觉 Keen Sight",
@@ -8772,7 +8772,7 @@
         },
         "Spider Climb": {
           "name": "蛛行术 Spider Climb",
-          "description": "<p>[[lookup @name lowercase]]可以攀爬困难的表面，包括在天花板上倒挂，而无需进行属性检定。</p>"
+          "description": "<p>[[lookup @name lowercase]]可以攀爬在难以攀爬的表面上，包括倒吊在天花板上，且不需要进行属性检定。</p>"
         },
         "Web Walker": {
           "name": "蛛网行者Web Walker",
@@ -8806,7 +8806,7 @@
       "description": "<h3>灰烬囤积者</h3>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.00ashenhoarder00 inline=true]\n<h3>巢穴动作</h3>\n<p>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.at6rzlLBGcQupoXv inline]</p>",
       "items": {
         "Arm": {
-          "name": "臂 Arm",
+          "name": "臂击 Arm",
           "description": "<p>[[/attack extended]]。 [[/damage extended]] ([[lookup @name lowercase]]的选择)。</p>"
         },
         "Corpse Carrier": {
@@ -8831,7 +8831,7 @@
           },
           "effects": {
             "Impaled": {
-              "name": "穿刺",
+              "name": "刺穿",
               "description": "<p>你被这头怪物的一根尖刺刺穿，陷入束缚状态，并且在你每个回合开始时受到[[/damage 3d10 necrotic average]]伤害。若此伤害将你的生命值降至0，你将立即死亡。</p><p>其他生物可以消耗动作进行运动检定，成功则使你脱离束缚。若该怪物死亡，你将自动解除束缚状态并脱离尖刺。</p>"
             }
           }
@@ -8887,7 +8887,7 @@
         },
         "Spider Climb": {
           "name": "蛛行术 Spider Climb",
-          "description": "<p>该[[lookup @name lowercase]]能够攀爬困难的表面，包括在天花板上倒挂攀爬，而无需进行属性检定。</p>"
+          "description": "<p>[[lookup @name lowercase]]可以攀爬在难以攀爬的表面上，包括倒吊在天花板上，且不需要进行属性检定。</p>"
         },
         "Multiattack": {
           "name": "多重攻击Multiattack。",
@@ -9204,8 +9204,8 @@
       }
     },
     "Wraith": {
-      "name": "缚灵 Wraith",
-      "tokenName": "缚灵",
+      "name": "邪灵 Wraith",
+      "tokenName": "邪灵",
       "description": "<h3>虚体亡灵</h3>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.00incorporealu00 inline=true]<h3>亡灵</h3>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.00undead00000000 inline=true]",
       "items": {
         "Agonizing Touch": {
@@ -9478,7 +9478,7 @@
       "description": "<h3>菌母</h3><p>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe04.JournalEntryPage.00mycete00000000 inline]</p>",
       "items": {
         "Necrotic Absorption": {
-          "name": "暗蚀吸收 Necrotic Absorption",
+          "name": "暗蚀伤害吸收 Necrotic Absorption",
           "description": "<p>每当[[lookup @name]]受到暗蚀伤害时，她不会受到伤害，而是恢复等同于该暗蚀伤害数值的生命值。</p>"
         },
         "Leather Armor": {
@@ -10159,7 +10159,7 @@
           "activities": {
             "save": {
               "affects": {
-                "special": "中型或更小的"
+                "special": "不超过中型"
               }
             }
           }
@@ -10743,7 +10743,7 @@
           }
         },
         "Envenom": {
-          "name": "淬毒 Envenom",
+          "name": "下毒术 Envenom",
           "description": "<p>[[lookup @name lowercase]]周围30尺内的每个盟友，只要该[[lookup @name lowercase]]未处于失能状态，其武器攻击将额外造成3（1d6）毒素伤害。</p>",
           "activities": {
             "Extra Poison Damage for Allies": {
@@ -11615,7 +11615,7 @@
           }
         },
         "Overgrowth": {
-          "name": "蔓生术 Overgrowth",
+          "name": "繁茂 Overgrowth",
           "description": "<p>该[[lookup @name lowercase]]可以穿过仅1英寸宽的狭窄空间而无需挤入。该[[lookup @name lowercase]]可以占据其他生物的空间，反之亦然。</p>"
         },
         "Supernatural Resistance": {
@@ -12278,7 +12278,7 @@
             "utility": {
               "condition": "当120尺内的另一个中型或更小的生物受到伤害时。",
               "affects": {
-                "special": "中型或更小的"
+                "special": "不超过中型"
               }
             }
           }
@@ -12772,7 +12772,7 @@
           "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标本回合无法进行反应。</p>"
         },
         "Ablaze": {
-          "name": "燃烧 Ablaze",
+          "name": "烈焰包覆 Ablaze",
           "description": "<p>[[lookup @name lowercase]]散发出20尺半径的明亮光照和额外20尺的微光光照，且无法从隐形状态中获得效益。任何在回合开始时正擒抱或&reference[grappled apply=false] [[lookup @name lowercase]]的生物将受到[[/damage average]]伤害。</p>"
         },
         "Multiattack": {
@@ -12796,7 +12796,7 @@
           }
         },
         "Flame Tongue": {
-          "name": "焰舌剑 Flame Tongue",
+          "name": "焰舌 Flame Tongue",
           "description": "<p>[[/attack extended]]。[[/damage extended]]。若目标是一个未被穿着或携带的可燃物件，它将被点燃。</p>"
         }
       }
@@ -13246,7 +13246,7 @@
       }
     },
     "Shadow": {
-      "name": "暗影 Shadow",
+      "name": "黯影 Shadow",
       "tokenName": "暗影",
       "description": "<h3>虚体亡灵</h3>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.00incorporealu00 inline=true]<h3>亡灵</h3>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.00undead00000000 inline=true]",
       "items": {
@@ -13302,7 +13302,7 @@
           "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Distracted": {
-          "name": "分心 Distracted",
+          "name": "分神 Distracted",
           "description": "<p>当[[lookup @name lowercase]]以一次攻击瞄准一个生物时，该攻击射程内的另一个生物可以使用其反应来分散[[lookup @name lowercase]]的注意力。如果[[lookup @name lowercase]]能看到或听到分散注意力的生物，则[[lookup @name lowercase]]会转而以该生物作为攻击目标。</p>"
         },
         "Pummel": {
@@ -14155,7 +14155,7 @@
       "description": "<h3>邃魇神孽</h3>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.00deepdreamer000 inline=true]\n<h3>巢穴动作</h3>\n<p>@Embed[Compendium.mcdm-flee-mortals-where-evil-lives.books.JournalEntry.mcdmfmwl00refe03.JournalEntryPage.GKvkapzOPYSkDsGi inline]</p>",
       "items": {
         "Tendrils": {
-          "name": "触须 Tendrils",
+          "name": "卷须 Tendrils",
           "description": "<p><em>近战强力攻击：</em> [[/attack]]。 [[/damage extended]]。如果目标被[[lookup @name lowercase]]魅惑，[[lookup @name lowercase]]恢复生命值，数值等于所造成心灵伤害的一半。</p>"
         },
         "Psionic Shroud": {
@@ -14677,7 +14677,7 @@
           "description": "<p>如果阿西米亚受到某个效果影响，允许她进行一次敏捷豁免以仅受到一半伤害，那么她成功通过豁免时改为不受伤害，豁免失败时仅受到一半伤害。</p>"
         },
         "Mental Assault": {
-          "name": "精神冲击 Mental Assault",
+          "name": "精神侵害 Mental Assault",
           "description": "<p>每回合一次，当[[lookup @name]]用其灵魂刀锋攻击命中一个生物时，他们可以冲击目标的心智。目标必须进行一次[[/save]]豁免，否则将消耗一个最高可用等级的法术位且不产生任何效果。未能通过此豁免但无法消耗法术位的生物必须改为消耗3个生命骰且不产生任何效果，若无法做到，则额外受到[[/damage average]]伤害。</p>",
           "activities": {
             "save": {
@@ -16391,7 +16391,7 @@
           }
         },
         "Beast of Burden": {
-          "name": "驮兽 Beast of Burden",
+          "name": "驼兽 Beast of Burden",
           "description": "<p>为确定其[[lookup @name lowercase]]的载重, 该生物被视为体型大一级。</p>"
         },
         "Desert Dweller": {
@@ -17044,7 +17044,7 @@
           "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
         },
         "Destabilizing Attack": {
-          "name": "动摇攻击 Destabilizing Attack",
+          "name": "崩离攻击 Destabilizing Attack",
           "description": "<p>[[lookup @name lowercase]]发动一次标志性攻击。若命中，目标在其下个回合结束前进行的下一次攻击也具有劣势。</p>",
           "effects": {
             "Destabilizing Attack": {
