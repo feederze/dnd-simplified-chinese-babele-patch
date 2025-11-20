@@ -968,7 +968,7 @@
             },
             "Pounce": {
               "name": "扑杀 Pounce",
-              "description": "<p>若[[lookup @name lowercase]]向目标直线移动至少 20 尺，然后在同一回合对其发动爪击攻击且命中该目标，则目标必须进行一次[[/save format=long]]，豁免失败者将应击&Reference[Prone apply=false]{倒地}。如果目标陷入倒地，则该[[lookup @name lowercase]]可以用一个附赠动作对目标发动一次[[/item Bite]]{啃咬}攻击。</p>",
+              "description": "<p>若[[lookup @name lowercase]]向目标直线移动至少 30 尺，然后在同一回合对其发动爪击攻击且命中该目标，则目标必须进行一次[[/save format=long]]，豁免失败者将应击&Reference[Prone apply=false]{倒地}。如果目标陷入倒地，则该[[lookup @name lowercase]]可以用一个附赠动作对目标发动一次[[/item Bite]]{啃咬}攻击。</p>",
               "effects": {
                 "Prone": {
                   "name": "倒地",
@@ -7346,80 +7346,80 @@
             },
             "Yellow Blossom": {
               "name": "黄花 Yellow Blossom",
-              "description": "<p>The tri-flower frond chooses one creature it can see within 5 feet of it. The target must succeed on a [[/save format=long]], or it is covered with corrosive sap and takes [[/damage]] damage at the start of each of its turns. Dousing the target with water reduces the acid damage by [[/heal]] per pint or flask of water used.</p>"
+              "description": "<p>三花株选择 5 尺内它能看见的一个生物为目标。目标必须成功通过一次[[/save format=long]]，否则被腐蚀性汁液覆盖，并在其每回合开始时受到[[/damage]]伤害。每向目标浇一品脱或一瓶水，强酸伤害便减少[[/heal]]点。</p>"
             },
             "Red Blossom": {
-              "name": "Red Blossom",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]], and the target is &amp;Reference[Grappled apply=false]{grappled} (escape DC 11). Until this grapple ends, the target takes [[/damage average activity=ll0r77pmg6ktBxOE]] damage at the start of each of its turns. The red blossom can grapple only one target at a time. Another creature within reach of the tri-flower frond can use its action to end the grapple on the target.</p>",
+              "name": "红花 Red Blossom",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]伤害，且目标被&amp;Reference[Grappled apply=false]{擒抱}（逃脱 DC 11）。直至此擒抱结束，目标在其每回合开始时受到[[/damage average activity=ll0r77pmg6ktBxOE]]伤害。红花一次只能擒抱一个目标。位于三花株触及范围内的其他生物可以用其动作来结束目标身上的擒抱。</p>",
               "activities": {
                 "Escape Check": {
-                  "name": "Escape Check"
+                  "name": "逃脱检定"
                 },
                 "Damage While Grappled": {
-                  "name": "Damage While Grappled"
+                  "name": "伤害：擒抱"
                 }
               },
               "effects": {
                 "Grappled": {
-                  "name": "Grappled",
-                  "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled} (escape DC 11). Until this grapple ends, the target takes damage at the start of each of its turns. </p>"
+                  "name": "受擒",
+                  "description": "<p>你&Reference[Grappled apply=false]{受擒} (逃脱DC 11)。直至擒抱终止前，在你每回合开始时受到伤害。</p>"
                 }
               }
             }
           }
         },
         "Tribal Warrior": {
-          "name": "Tribal Warrior",
-          "tokenName": "Tribal Warrior",
+          "name": "部族武者 Tribal Warrior",
+          "tokenName": "部族武者",
           "description": "<p><em>指示物插图由 </em><a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\"><em>Forgotten Adventures</em></a><em> 提供。</em></p>",
           "items": {
             "Hide Armor": {
-              "name": "Hide Armor",
+              "name": "兽皮甲 Hide Armor",
               "description": "<p>一种由厚毛皮制作的粗糙护甲。常见使用人群包括：野蛮人部落、邪恶类人生物以及其他缺少资源制作更好护甲的人。</p>"
             },
             "Pack Tactics": {
               "name": "集群战术 Pack Tactics",
-              "description": "<p>The [[lookup @name lowercase]] has advantage on an attack roll against a creature if at least one of the warrior's allies is within 5 ft. of the creature and the ally isn't incapacitated.</p>"
+              "description": "<p>[[lookup @name lowercase]]至少有一个未处于失能的盟友在目标生物 5 尺内时，其对该生物发动的攻击检定有优势。</p>"
             },
             "Spear": {
-              "name": "Spear",
+              "name": "矛 Spear",
               "description": "<p>[[/attack extended]]。[[/damage extended average]]，或使用双手发动近战攻击时[[/damage twoHanded average]] 。</p>"
             }
           }
         },
         "Triceratops": {
-          "name": "Triceratops",
-          "tokenName": "Triceratops",
-          "description": "<p>One of the most aggressive of the herbivorous dinosaurs, a triceratops possesses great horns and formidable speed, which it uses to gore and trample would-be predators to death.</p>",
+          "name": "三角龙 Triceratops",
+          "tokenName": "三角龙",
+          "description": "<p>作为食草恐龙中最有攻击性的一种，三角龙有着一个均匀而坚固的盾牌状头盖骨。其身怀的巨大犄角和恐怖速度，使之可以刺穿并践踏任何潜在的猎食者。</p>",
           "items": {
             "Gore": {
-              "name": "Gore",
+              "name": "顶撞 Gore",
               "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Stomp": {
-              "name": "Stomp",
+              "name": "践踏 Stomp",
               "description": "<p class=\"p1\">[[/attack extended]]。 [[/damage extended average]]。</p>",
               "activities": {
                 "attack": {
-                  "condition": "one prone creature"
+                  "condition": "一个倒地的生物"
                 }
               }
             },
             "Trampling Charge": {
-              "name": "Trampling Charge",
-              "description": "<p>If the [[lookup @name lowercase]] moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a [[/save format=long]] or be knocked &amp;Reference[prone apply=false]{prone}. If the target is prone, the [[lookup @name lowercase]] can make one stomp attack against it as a bonus action.</p>",
+              "name": "践踏冲锋 Trampling Charge",
+              "description": "<p>若[[lookup @name lowercase]]向目标直线移动至少 20 尺，然后在同一回合对其发动爪击攻击且命中该目标，则目标必须进行一次[[/save format=long]]，豁免失败者将应击&Reference[Prone apply=false]{倒地}。如果目标陷入倒地，则该[[lookup @name lowercase]]可以用一个附赠动作对目标发动一次践踏攻击。</p>",
               "effects": {
                 "Prone": {
                   "name": "倒地",
-                  "description": "<p>The target is knocked &amp;Reference[prone apply=false]{prone}.</p>"
+                  "description": "<p>你应击&Reference[Prone apply=false]{倒地}。</p>"
                 }
               }
             }
           }
         },
         "Troll": {
-          "name": "Troll",
-          "tokenName": "Troll",
+          "name": "巨魔 Troll",
+          "tokenName": "巨魔",
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Bite": {
@@ -7432,15 +7432,15 @@
             },
             "Keen Smell": {
               "name": "敏锐嗅觉 Keen Smell",
-              "description": "<p>The troll has<strong> advantage </strong>on Wisdom (Perception) checks that rely on smell.</p>"
+              "description": "<p>[[lookup @name]]依赖嗅觉所进行的感知（察觉）检定具有优势。</p>"
             },
             "Multiattack": {
               "name": "多重攻击 Multiattack",
-              "description": "<p>The troll makes three attacks: one with its [[/item .R7DpgLP3aFNmAgOc]]{bite} and two with its [[/item .ahGwFmyt6nItUOAK]]{claws}.</p>"
+              "description": "<p>巨魔发动三次攻击：一次[[/item .R7DpgLP3aFNmAgOc]]{啃咬}和两次[[/item .ahGwFmyt6nItUOAK]]{爪击}。</p>"
             },
             "Regeneration": {
               "name": "再生 Regeneration",
-              "description": "<p>The troll regains [[/heal]] at the start of its turn. If the troll takes <strong>acid</strong> or <strong>fire damage</strong>, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate.</p>",
+              "description": "<p>巨魔在其回合开始时回复[[/heal]]。如果巨魔受到<strong>强酸</strong>或<strong>火焰</strong>伤害，则此特质在其下一回合开始时无法生效。只有当巨魔以 0 点生命值开始其回合且无法再生时，它才会死亡。</p>",
               "activities": {
                 "Heal: Start of Turn": {
                   "name": "治疗：回合开始"
@@ -7450,150 +7450,150 @@
           }
         },
         "Tyrannosaurus Rex": {
-          "name": "Tyrannosaurus Rex",
-          "tokenName": "Tyrannosaurus Rex",
-          "description": "<p>This enormous predatory dinosaur terrorizes all other creatures in its territory. It chases anything it thinks it can eat, and there are few creatures it won’t try to devour whole.</p>",
+          "name": "雷克斯暴龙 Tyrannosaurus Rex",
+          "tokenName": "雷克斯暴龙",
+          "description": "<p>这种凶暴的掠食者令所有在其领地里的生物感到恐惧。尽管暴龙体型巨大而且偏胖，但是它依然非常键跑。暴龙会追逐任何它觉得可以吃掉的生物。于此同时，只有极少数生物不在暴龙的菜单上。当没有足够食物的时候，暴龙以腐肉和任何接近腐肉的小型动物维生。</p>",
           "items": {
             "Bite": {
               "name": "啃咬 Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]]. If the target is a Medium or smaller creature, it is &amp;Reference[grappled apply=false]{grappled} (escape DC 17). Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}, and the [[lookup @name lowercase]] can't bite another target.</p>",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]点穿刺伤害。如果目标是中型或更小体型的生物，则它被&amp;Reference[grappled apply=false]{擒抱}（逃脱 DC 17）。直至此擒抱结束，目标被&amp;Reference[restrained apply=false]{束缚}，且[[lookup @name lowercase]]无法啃咬其他目标。</p>",
               "activities": {
                 "Escape Check": {
-                  "name": "Escape Check"
+                  "name": "逃脱检定"
                 }
               },
               "effects": {
                 "Grappled & Restrained": {
-                  "name": "Grappled & Restrained",
-                  "description": "<p>If the target is a Medium or smaller creature, it is &amp;Reference[grappled apply=false]{grappled} (escape DC 17). Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}.</p>"
+                  "name": "受擒并束缚",
+                  "description": "<p>你被&amp;Reference[grappled apply=false]{擒抱}（逃脱 DC 17）。直至此擒抱结束，你被&amp;Reference[restrained apply=false]{束缚}。</p>"
                 }
               }
             },
             "Multiattack": {
               "name": "多重攻击 Multiattack",
-              "description": "<p>The [[lookup @name lowercase]] makes two attacks: one with its [[/item Bite]] and one with its [[/item Tail]]. It can't make both attacks against the same target.</p>"
+              "description": "<p>[[lookup @name]]发动两次攻击：一次[[/item Bite]]{啃咬}和一次[[/item Tail]]{尾击}。两次攻击必须制定不同目标。</p>"
             },
             "Tail": {
-              "name": "Tail",
+              "name": "尾击 Tail",
               "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
         "Tyrannosaurus Zombie": {
-          "name": "Tyrannosaurus Zombie",
-          "tokenName": "Tyrannosaurus Zombie",
+          "name": "暴龙丧尸 Tyrannosaurus Zombie",
+          "tokenName": "暴龙丧尸",
           "items": {
             "Multiattack": {
               "name": "多重攻击 Multiattack",
-              "description": "<p>The [[lookup @name lowercase]] makes two attacks: one with its [[/item Bite]]{bite} and one with its [[/item Tail]]{tail}. It can’t make both attacks against the same target.</p>"
+              "description": "<p>[[lookup @name]]发动两次攻击：一次[[/item Bite]]{啃咬}和一次[[/item Tail]]{尾击}。两次攻击必须制定不同目标。</p>"
             },
             "Bite": {
               "name": "啃咬 Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p><p>If the target is a Medium or smaller creature, it is &amp;Reference[Grappled apply=false] (escape DC [[lookup @skills.ath.passive]]). Until this grapple ends, the target is &amp;Reference[Restrained apply=false] and the tyrannosaurus zombie can’t bite another target or disgorge zombies.</p>",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p><p>如果目标为一个中型或更小体型的生物，则目标被擒抱（逃脱 DC [[lookup @skills.ath.passive]]）。被擒抱期间该目标陷入&amp;Reference[Restrained apply=false]{束缚}状态，且 [[lookup @name]] 不能啃咬其他目标或口吐丧尸。</p>",
               "activities": {
                 "Escape Check": {
-                  "name": "Escape Check"
+                  "name": "逃脱检定"
                 }
               },
               "effects": {
                 "Grappled & Restrained": {
-                  "name": "Grappled & Restrained",
-                  "description": "<p>If the target is a Medium or smaller creature, it is &amp;Reference[Grappled apply=false] (escape DC 17). Until this grapple ends, the target is &amp;Reference[Restrained apply=false]</p>"
+                  "name": "受擒并束缚",
+                  "description": "<p>你被&amp;Reference[grappled apply=false]{擒抱}（逃脱 DC 17）。直至此擒抱结束，你被&amp;Reference[restrained apply=false]{束缚}。</p>"
                 }
               }
             },
             "Tail": {
-              "name": "Tail",
+              "name": "尾击 Tail",
               "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Disgorge Zombie": {
-              "name": "Disgorge Zombie",
-              "description": "<p>As a bonus action, the [[lookup @name lowercase]] can disgorge a normal @UUID[Compendium.dnd5e.monsters.Actor.NAISFPoNNgUCsEyW]{zombie}, which appears in an unoccupied space within 10 feet of it. The disgorged zombie acts on its own initiative count.</p><p>After a zombie is disgorged, roll a [[/r d6#On a roll of 1, the tyrannosaurus zombie runs out of zombies to disgorge and loses this trait]]. On a roll of 1, the tyrannosaurus zombie runs out of zombies to disgorge and loses this trait.</p><p>If the [[lookup @name lowercase]] still has this trait when it dies, [[/r d4#Number of zombies that erupt from the tyrannosaurus zombie corpse.]] normal zombies erupt from its corpse at the start of its next turn. These zombies act on their own initiative count.</p>",
+              "name": "口吐丧尸 Disgorge Zombie",
+              "description": "<p>作为附赠动作，[[lookup @name lowercase]]可以吐出一具普通的@UUID[Compendium.dnd5e.monsters.Actor.NAISFPoNNgUCsEyW]{丧尸}，该丧尸出现在其 10 尺内一处未被占据的空间。被吐出的丧尸按其自身的先攻顺序行动。</p><p>吐出一具丧尸后，掷一次[[/r d6#若骰出 1，则暴龙丧尸耗尽可吐出的丧尸并失去此特质]]。若骰出 1，则暴龙丧尸耗尽可吐出的丧尸并失去此特质。</p><p>如果[[lookup @name lowercase]]死亡时仍拥有此特质，则在其下一回合开始时，有[[/r d4#从暴龙丧尸尸体中爆出的丧尸数量]]具普通丧尸从其尸体中爆出。这些丧尸按其自身的先攻顺序行动。</p>",
               "activities": {
                 "Disgorge Zombie": {
-                  "name": "Disgorge Zombie"
+                  "name": "口吐丧尸"
                 },
                 "Trait Check": {
-                  "name": "Trait Check",
-                  "roll": "Trait Check"
+                  "name": "特质检定",
+                  "roll": "特质检定"
                 },
                 "No. Zombies Erupt": {
-                  "name": "No. Zombies Erupt",
-                  "roll": "No. Zombies Erupt",
-                  "condition": "If the tyrannosaurus zombie still has this trait when it dies"
+                  "name": "丧尸爆发",
+                  "roll": "丧尸爆发",
+                  "condition": "如果暴龙僵尸死时仍拥有该特质"
                 }
               }
             },
             "Undead Fortitude": {
               "name": "不死坚韧 Undead Fortitude",
-              "description": "<p>If damage reduces the [[lookup @name lowercase]] to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.</p>"
+              "description": "<p>当[[lookup @name lowercase]]因非光耀非重击伤害生命值降至 0 时，其进行一次体质豁免（DC为 5 + 所受伤害）。豁免成功则改为将生命值降至 1。</p>"
             }
           }
         },
         "Ukurlahmu": {
-          "name": "Ukurlahmu",
-          "tokenName": "Ukurlahmu",
+          "name": "乌克拉姆 Ukurlahmu",
+          "tokenName": "乌克拉姆",
           "items": {
             "Spellcasting": {
-              "name": "Spellcasting",
-              "description": "<p>The bone naga is a 5th-level spellcaster (spell save DC 12, +4 to hit with spell attacks) that needs only verbal components to cast its spells.</p><p>Cantrip (at will): [[/item .owdtFHADBwvlY3Vq]]{mending}, [[/item .7V3VXj8WHXyCQVhJ]]{sacred flame}, [[/item .fP90dMUnOhs1hpzf]]{thaumaturgy}</p><p>1st level (4 slots): [[/item .1lKLM9WVowSzfmDs]]{command}, [[/item .3sEdBNEm8PuZxkwY]]{shield of faith}</p><p>2nd level (3 slots): [[/item .Cq9Ko7FaNwyUe1QE]]{calm emotions}, [[/item .qaVvGKR612ym3T6o]]{hold person}</p><p>3rd level (2 slots): [[/item .DKWm3XTDMkUPcjsy]]{bestow curse}</p>"
+              "name": "施法 Spellcasting",
+              "description": "<p>骨纳迦是一名 5 级施法者（法术豁免 DC 12，法术攻击命中 +4），其施法仅需言语成分。</p><p>戏法（随意）：[[/item .owdtFHADBwvlY3Vq]]{修复术}，[[/item .7V3VXj8WHXyCQVhJ]]{圣火术}，[[/item .fP90dMUnOhs1hpzf]]{奇术}</p><p>1 环（4 个法术位）：[[/item .1lKLM9WVowSzfmDs]]{命令术}，[[/item .3sEdBNEm8PuZxkwY]]{虔诚护盾}</p><p>2 环（3 个法术位）：[[/item .Cq9Ko7FaNwyUe1QE]]{安定心神}，[[/item .qaVvGKR612ym3T6o]]{人类定身术}</p><p>3 环（2 个法术位）：[[/item .DKWm3XTDMkUPcjsy]]{降咒}</p>"
             },
             "Bite": {
               "name": "啃咬 Bite",
               "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Mending": {
-              "name": "Mending",
-              "description": "<p>This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.</p><p>This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.</p>",
+              "name": "修复术 Mending",
+              "description": "<p>该法术修复你所触碰一个物件上的一处破损或裂缝，例如修复一条断裂的链条，或者一把碎成两半的钥匙、一件撕裂的斗篷、一个漏了的酒袋等。只要破损或断裂处在任意方向上都不超过 1 尺，你就可以不留痕迹地修复它。</p><p>该法术可以物理性地修复一件魔法物品，但无法恢复其上的魔法。</p>",
               "materials": {
                 "value": "两块天然磁石"
               }
             },
             "Sacred Flame": {
-              "name": "Sacred Flame",
-              "description": "<p>Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.</p><p>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>"
+              "name": "圣火术 Sacred Flame",
+              "description": "<p>如同火焰般的辉光向施法距离内你能看见的一个生物倾泻而下。目标必须要进行一次敏捷豁免，豁免失败则受到 1d8 点光耀伤害。目标在这次豁免检定中无法获得半掩护和四分之三掩护的增益。</p><p><strong>戏法强化：</strong> 该法术的伤害会在你达到下列等级时增加 1d8：5 级（2d8），11 级（3d8），17 级 1d8（4d8）。</p>"
             },
             "Thaumaturgy": {
-              "name": "Thaumaturgy",
-              "description": "<p>You create one of the following magical effects within range:</p>\n<ul>\n<li>Your voice booms up to three times as loud as normal for 1 minute.</li>\n<li>You cause flames to flicker, brighten, dim, or change color for 1 minute.</li>\n<li>You cause harmless tremors in the ground for 1 minute.</li>\n<li>You create a sound that originates from a point of your choice within range.</li>\n<li>You cause an unlocked door or window to fly open or slam shut.</li>\n<li>You alter the appearance of your eyes for 1 minute.</li>\n</ul>\n<p>If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.</p>"
+              "name": "奇术 Thaumaturgy",
+              "description": "<p>你在施法距离内创造出下列魔法效应之一：</p>\n<ul>\n<li>你的声音在 1 分钟内变得比常人响两倍。</li>\n<li>你在 1 分钟内使一团火焰闪烁，变亮，变暗或变色。</li>\n<li>你使地面震动 1 分钟（完全无害）。</li>\n<li>你使某种声音自施法距离内一点瞬间发出，例如雷鸣声，鸦叫声或不祥的低语声。</li>\n<li>你使一扇没有锁上的门或窗瞬间打开或关上。</li>\n<li>你在 1 分钟内改变自己眼睛的颜色。</li>\n</ul>\n<p>多次施展该法术时，你可以同时维持最多三个持续 1 分钟的效应。你也可以用一个动作驱散其中一种效应。</p>"
             },
             "Command": {
-              "name": "Command",
-              "description": "<p>You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn't understand your language, or if your command is directly harmful to it.</p><p>Some typical commands and their effects follow. You might issue a command other than one described here. If you do so, the DM determines how the target behaves. If the target can't follow your command, the spell ends.</p><p><strong>Approach.</strong> The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.</p><p><strong>Drop.</strong> The target drops whatever it is holding and then ends its turn.</p><p><strong>Flee.</strong> The target spends its turn moving away from you by the fastest available means.</p><p><strong>Grovel.</strong> The target falls prone and then ends its turn.</p><p><strong>Halt.</strong> The target doesn't move and takes no actions. A flying creature stays aloft, provided that it is able to do so. If it must move to stay aloft, it flies the minimum distance needed to remain in the air.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.</p>"
+              "name": "命令术 Command",
+              "description": "<p>你对施法距离内一个你能看见的生物说出一个单词的命令。目标生物必须通过一次感知豁免，否则在它自己的下一回合中，其必须服从这道命令行事。从以下选项中选择一条命令：</p><p><strong>过来。</strong> 目标以最短最直接的路线向你移动，若其到达你5尺范围内，其会结束自己的回合。</p><p><strong>放下。</strong> 目标放下持握的任何东西，然后结束自己的回合。</p><p><strong>走开。</strong> 目标消耗其整个回合，以最快最有效的方式远离你。</p><p><strong>趴下。</strong> 目标陷入倒地状态并结束自己的回合。</p><p><strong>立定。</strong> 在其回合内，目标不进行移动且不作任何动作和附赠动作。</p><p><strong>升环施法：</strong> 你使用的法术位每比一环高一环，法术就能多影响一个目标。</p>"
             },
             "Shield of Faith": {
-              "name": "Shield of Faith",
-              "description": "<p>A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.</p>",
+              "name": "虔诚护盾 Shield of Faith",
+              "description": "<p>围绕着施法距离内你指定的一个生物出现一片闪着微光的魔法力场。使目标在法术持续时间内 AC 获得+2 加值。</p>",
               "materials": {
-                "value": "A small parchment with a bit of holy text written on it."
+                "value": "一小块写有神圣文字的羊皮纸"
               },
               "effects": {
                 "Shield of Faith": {
-                  "name": "Shield of Faith",
-                  "description": "<p>The target gains it a +2 bonus to AC for the duration.</p>"
+                  "name": "虔诚护盾",
+                  "description": "<p>持续时间内，你的AC获得+2 加值。</p>"
                 }
               }
             },
             "Calm Emotions": {
-              "name": "Calm Emotions",
-              "description": "<p>You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it wishes. If a creature fails its saving throw, choose one of the following two effects. You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.</p><p>Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise.</p>"
+              "name": "安定心神 Calm Emotions",
+              "description": "<p>你试图抑制一群人的强烈情感。指定施法距离内一点，并迫使该点周边半径20尺球状区域内的每个类人生物进行一次魅力豁免。受术生物可以自愿放弃豁免。豁免失败者将由你选择以下两项效应之一对其生效。你可以选择压制任何使目标受魅惑或恐慌的效应。法术终止时，若被压制效应持续时间仍未完结，则该效应继续生效。或者，你也可以选择使目标改变对某个你所指定生物的态度，由敌对变为冷漠。如果目标被攻击，或者被有害法术影响，又或者发现其盟友受到损害，则此效应终止。法术终止时，除非 DM 另行裁决，否则目标的态度恢复敌对。</p>"
             },
             "Hold Person": {
-              "name": "Hold Person",
-              "description": "<p>Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be &amp;Reference[paralyzed] for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them.</p>",
+              "name": "定身类人 Hold Person",
+              "description": "<p>指定施法距离内一个你能看见的类人生物。该目标必须进行一次感知豁免，豁免失败则其在法术持续时间内陷入&Reference[paralyzed]。目标在其每回合结束时可以再进行一次感知豁免，豁免成功则终止其身上该法术的效应。</p><p><strong>升环施法：</strong>使用三环或更高法术位施展该法术时，你使用的法术位每比二环高一环，你就可以额外指定一个类人生物。指定目标时，每个目标生物必须身处其他目标 30 尺范围内。</p>",
               "materials": {
-                "value": "A small, straight piece of iron"
+                "value": "一片直的小铁片"
               },
               "effects": {
                 "Hold Person": {
-                  "name": "Hold Person",
-                  "description": "<p>The target is Paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.</p>"
+                  "name": "定身类人",
+                  "description": "<p>你陷入麻痹期间。你在你的每一回合结束时可以再进行一次感知豁免，豁免成功则终止其自身上该法术的效应。</p>"
                 }
               }
             },
             "Bestow Curse": {
-              "name": "Bestow Curse",
-              "description": "<p>You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:</p>\n<ul>\n<li>Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.</li>\n<li>While cursed, the target has disadvantage on attack rolls against you.</li>\n<li>While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.</li>\n<li>While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.</li>\n</ul>\n<p>A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect.</p><p><strong>At Higher Levels.</strong> If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration.</p>"
+              "name": "降咒 Bestow Curse",
+              "description": "<p>你触碰一名生物。该生物必须进行一次感知豁免并成功通过，否则将在法术持续时间内被诅咒。施展法术时，你从以下诅咒选项选择其一：</p>\n<ul>\n<li>选择一个属性值。受诅咒影响时，目标进行该属性的豁免检定和属性检定时具有劣势。</li>\n<li>受诅咒影响时，目标对你进行的攻击检定具有劣势。</li>\n<li>受诅咒影响时，目标必须在其每回合开始时进行一次感知豁免，豁免失败则浪费掉该回合的动作。</li>\n<li>受诅咒影响时，你的攻击和法术对目标额外造成 1d8 的暗蚀伤害。</li>\n</ul>\n<p>法术移除诅咒可终止此法术的效应。DM 也可以让你选择其他诅咒，但它们不该比上表更强大。诅咒效应最终由 DM 裁定。</p><p><strong>升环施法：</strong> 使用四环或更高法术位施展该法术时，法术的持续时间变为：专注，至多 10 分钟。使用五环或更高法术位时，变为 8 小时。使用七环或更高法术位时，变为 24 小时。使用九环法术位时，法术将持续到被解除。使用五环或更高法术位施展此法术时无需在其持续时间内维持专注。</p>"
             }
           }
         },
@@ -7634,7 +7634,7 @@
               "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Spear": {
-              "name": "Spear",
+              "name": "矛 Spear",
               "description": "<p>[[/attack extended]]. [[/damage extended average]] or [[/damage twoHanded average]] damage if used with two hands to make a melee attack.</p>"
             },
             "Spores": {
@@ -7901,12 +7901,12 @@
               "description": "<p>[[/attack extended]]. [[/damage extended average]]. If the target is Medium or smaller, it is &amp;Reference[Grappled apply=false] (escape DC 13) and pulled 5 feet toward the [[lookup @name lowercase]]. Until this grapple ends, the target is &amp;Reference[Restrained apply=false], the [[lookup @name lowercase]] tries to drown it, and the [[lookup @name lowercase]] can’t constrict another target.</p>",
               "activities": {
                 "Escape Check": {
-                  "name": "Escape Check"
+                  "name": "逃脱检定"
                 }
               },
               "effects": {
                 "Grappled & Restrained": {
-                  "name": "Grappled & Restrained"
+                  "name": "受擒并束缚"
                 }
               }
             },
@@ -7972,7 +7972,7 @@
               "effects": {
                 "Prone": {
                   "name": "倒地",
-                  "description": "<p>The target is knocked &amp;Reference[prone apply=false]{prone}.</p>"
+                  "description": "<p>你应击&Reference[Prone apply=false]{倒地}。</p>"
                 }
               }
             },
@@ -12596,7 +12596,7 @@
               "effects": {
                 "Shield of Faith": {
                   "name": "Shield of Faith",
-                  "description": "<p>The target gains it a +2 bonus to AC for the duration.</p>"
+                  "description": "<p>持续时间内，你的AC获得+2 加值。</p>"
                 }
               }
             },
