@@ -39,9 +39,13 @@ async function autoRegisterBabel() {
         // console.log("有babele!")
         //load the json file into a variable
         await registerAddons(game.babele);
+        let translate_dir = "translation/cn";
+        if (game.settings.get(MODULE_ID, 'makeTitleWithEnglish')) {
+            translate_dir = "translation/cn-with-english";
+        }
         game.babele.register({
             module: MODULE_ID,
-            dir: "translation/cn",
+            dir: translate_dir,
             lang: 'cn'
         });
     }
