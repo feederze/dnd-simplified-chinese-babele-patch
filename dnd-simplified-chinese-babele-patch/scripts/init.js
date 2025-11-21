@@ -19,6 +19,15 @@ Hooks.on('init', () => {
         },
     });
 
+    game.settings.register(MODULE_ID, 'namesetting', {
+        name: '名称双语转换器开关',
+        hint: '',
+        scope: 'world',
+        config: true,
+        default: true,
+        type: Boolean,
+    });
+
     if (game.settings.get(MODULE_ID, 'autoRegisterBabel')) {
         autoRegisterBabel();
     }
