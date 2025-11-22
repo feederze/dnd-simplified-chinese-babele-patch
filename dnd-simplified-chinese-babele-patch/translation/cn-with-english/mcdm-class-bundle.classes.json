@@ -1,0 +1,2797 @@
+{
+  "label": "职业",
+  "folders": {
+    "The Talent": "天赋",
+    "The Beastheart": "野兽之心",
+    "The Illrigger": "魔铳士",
+    "Illrigger Features": "Illrigger特性",
+    "Beastheart Features": "兽心者特性",
+    "Talent Features": "天赋特性",
+    "Telepath Features": "心灵感应特性",
+    "Protector Bond Features": "牵绊守护者特性",
+    "Shadowmaster Features": "暗影大师特性",
+    "Telekinetic Features": "念动特性",
+    "Sanguine Knight Features": "血色骑士特性",
+    "Primordial Bond Features": "原初语牵绊特性",
+    "Painkiller Features": "止痛剂特性",
+    "Resopath Features": "Resopath特性",
+    "Infernal Bond Features": "炼狱牵绊特性",
+    "Hunter Bond Features": "猎手牵绊特性",
+    "Pyrokinetic Features": "热能特性",
+    "Hellspeaker Features": "地狱语者特性",
+    "Beastheart Companion Features": "伴日特性",
+    "Ferocious Bond Features": "凶猛牵绊特性",
+    "Architect of Ruin Features": "毁灭建筑师特性",
+    "Metamorph Features": "蜕变特性",
+    "Maverick Features": "特立独行特性",
+    "Chronopath Features": "时径行者特性"
+  },
+  "entries": {
+    "Mystic Connection: Sporeling": {
+      "name": "神秘联结：孢子幼体 Mystic Connection: Sporeling",
+      "description": "<p>当你以武器攻击命中另一个生物时，你可以将特殊孢子注入攻击中，使目标的攻击检定具有劣势，直至其下一回合结束。你无法再次使用此效益，直至你完成一次短休或长休前。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你以一次武器攻击命中一个生物时。"
+        }
+      },
+      "effects": {
+        "Distracting Spores": {
+          "name": "分散孢子",
+          "description": "<p>直到你的下个回合结束前，你在所有攻击检定中都具有劣势。</p>"
+        }
+      }
+    },
+    "Not in the Face": {
+      "name": "别打脸 Not in the Face",
+      "description": "<p>由于你的心灵感应能力，你的敌人对你产生了一种势不可挡的同情。当一个生物在你施展的能力豁免失败时，你可以瞬间用矛盾的情绪淹没该生物，阻止其攻击你直到你的下一个回合开始。无法被&reference[charmed apply=false]的生物免疫此效果。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当一个生物在你施展的能力上豁免失败时。"
+        }
+      },
+      "effects": {
+        "Not in the Face": {
+          "name": "别打脸",
+          "description": "<p>在该奇才的下个回合开始前，你无法对其进行攻击。</p>"
+        }
+      }
+    },
+    "Deathstrike": {
+      "name": "死亡打击 Deathstrike",
+      "description": "<p>当你用一次近战武器攻击命中一个受禁制生物时，你可以用你的反应在其身上燃烧一道封印，将此次命中转化为重击。当你这样做时，你为燃烧的封印所掷的伤害骰也翻倍。</p><p>你可以使用此反应的次数等于你的熟练加值，并且当你完成一次长休后，你重新获得所有已使用的次数。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你以一次近战武器攻击命中一个受禁生物时。",
+          "affects": {
+            "special": "一个被禁制的生物。"
+          }
+        }
+      }
+    },
+    "Exsanguinate": {
+      "name": "放血 Exsanguinate",
+      "description": "<p>你可以汲取敌人来鼓舞盟友。每当你对一个非构装生物或亡灵的生物燃烧一个或多个印记时，你可以选择30尺内一个你能看见的盟友。该盟友获得临时生命值，数值等于印记对该受禁生物造成的伤害。</p>"
+    },
+    "Mystic Connection: Giant Spider": {
+      "name": "神秘联结：巨蜘蛛 Mystic Connection: Giant Spider",
+      "description": "<p>你获得一种次级感知，能警示你风险。你在先攻检定中具有优势，并且当你未处于&reference[incapacitated apply=false]{失能 Incapacitated}状态时，无法被&reference[surprise]{突袭 Surprised}。</p>",
+      "effects": {
+        "Spider's Senses": {
+          "name": "蜘蛛感官"
+        }
+      }
+    },
+    "Immolate": {
+      "name": "焚身术 Immolate",
+      "description": "<p>引导你的心灵控火能力可以点燃你的敌人。每回合一次,当你使用心灵控火能力或你的火焰爆发特性对生物造成火焰伤害时,你可以使目标着火1分钟。着火期间,目标在其每回合开始时受到等于你熟练加值两倍的火焰伤害。在其每回合结束时,目标可以进行一次敏捷豁免对抗你的异能豁免DC,成功则扑灭自身火焰。</p>",
+      "activities": {
+        "Immolate Creature": {
+          "name": "焚化生物",
+          "condition": "当你使用心灵遥控火焰能力或你的“火力全开”特性对一个生物造成火焰伤害时。"
+        }
+      },
+      "effects": {
+        "Immolated": {
+          "name": "焚身",
+          "description": "<p>在接下来的一分钟内你处于着火状态，并在你的每个回合开始时受到等于该天赋熟练加值两倍的火焰伤害。</p><p>在你的每个回合结束时，你可以进行一次对抗其天赋力量豁免DC的敏捷豁免，若成功则扑灭自己身上的火焰。</p>"
+        }
+      }
+    },
+    "Dark of Hell (8 Ferocity)": {
+      "name": "地狱之暗 (8 凶暴) Dark of Hell (8 Ferocity)",
+      "description": "<p>以一个动作，你使你的伴日散发出10尺半径的魔法黑暗灵光，持续至你的下个回合结束。你和你的伴日可以看透这片随伴日移动的黑暗。</p>",
+      "activities": {
+        "utility": {
+          "affects": {
+            "special": "一位伴日。"
+          }
+        }
+      },
+      "effects": {
+        "Dark of Hell": {
+          "name": "地狱之暗",
+          "description": "<p>你散发出一个10尺半径的魔法黑暗灵光，持续至你的回合结束。你和你的照护者都能看穿这随你移动的黑暗。</p>"
+        }
+      }
+    },
+    "Telekinesis Adept": {
+      "name": "心灵遥控大师 Telekinesis Adept",
+      "description": "<p>当你掷显现骰来学习新的{心灵遥控 telekinesis}异能时, 你可以掷该骰两次并选择任一结果。</p><p>此外, 在你进行显现检定以施展{心灵遥控 telekinesis}异能后, 你可以重掷显现骰并选择任一结果。你可以重掷的显现检定次数等于你的{智力 Intelligence}调整值（至少一次检定）, 在完成一次{长休 Long Rest}后恢复全部使用次数。此特性对单个显现检定只能使用一次。</p>",
+      "activities": {
+        "Adept Telekinesis Manifestation": {
+          "name": "精通心灵遥控显能",
+          "condition": "在你进行一次显能检定以显能心灵遥控能力后。"
+        }
+      }
+    },
+    "Dynamic Power": {
+      "name": "动态之力 Dynamic Power",
+      "description": "<p>当一个中型或更小的生物被你显能的攻击检定命中，或在对抗你显能的豁免中失败时，你可以承受2点负荷来将该目标朝任意方向移动最多15尺，或使其&amp;reference[倒地]。你可以承受3点负荷来用此灵能运力选项影响一个大型生物，或承受4点负荷来影响一个巨型生物。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当一个中型或更小的生物被你显能的一次攻击检定命中，或在你显能时豁免失败。",
+          "affects": {
+            "special": "中型或更小的生物。"
+          }
+        }
+      }
+    },
+    "Lava Geyser (8 Ferocity)": {
+      "name": "熔岩喷泉 (8 凶猛) Lava Geyser (8 Ferocity)",
+      "description": "<p>以一个动作，你在你能看见的、距离你30尺内的地面上某点召唤一股强大的熔岩流。该熔岩形成一个高10尺、半径5尺的柱状区域，并迫使该区域内的每个生物进行一次敏捷豁免。豁免失败时，一个生物受到4d6火焰伤害并被击倒&amp;reference[prone]。豁免成功时，一个生物受到一半伤害且不会被击倒。随后熔岩消散为炽热雾气并消失。</p><p>当你达到17级时，伤害扩展至5d6。</p>"
+    },
+    "Metamorph": {
+      "name": "蜕变者 Metamorph",
+      "description": "<p>你的大脑使你能够改变一个生物的身体化学特性，让你仅凭意念的触及就能愈合伤口、赋予超能力，甚至起死回生。变形者有时被称为变化者，而那些对变形者专精进行正式研究的人，会在身体学院进行学习。</p>"
+    },
+    "Poisonous Primal Strike": {
+      "name": "剧毒原始打击 Poisonous Primal Strike",
+      "description": "<p>在你的每个回合中一次, 当你以一次武器攻击命中一个生物时, 你可以使该攻击对目标造成额外1d8毒素伤害。</p><p>每当你在此职业中提升一个等级, 你可以将此特性的伤害类型更改为列表中的另一种类型。当你达到14级时, 额外伤害扩展至2d8。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当你以武器攻击命中一个生物时。"
+        }
+      }
+    },
+    "Thunderous Primal Strike": {
+      "name": "雷霆原始打击 Thunderous Primal Strike",
+      "description": "<p>在你的每个回合中一次，当你以一次武器攻击命中一个生物时，你可以使该攻击对目标造成额外的1d8点雷鸣伤害。</p><p>每当你在此职业中提升一个等级时，你可以将此特性的伤害类型更改为列表中的另一种类型。当你达到14级时，额外伤害扩展至2d8。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当你用武器攻击命中一个生物时。"
+        }
+      }
+    },
+    "Greater Telepathy": {
+      "name": "高等心灵感应 Greater Telepathy",
+      "description": "<p>你获得随心所欲进行心灵感应交流的能力。你可以与30尺内的任何生物进行心灵感应交谈，无论你们是否共享一种共同语言，该生物都能理解你。你甚至可以与智力低下或不懂任何语言的生物交流，并且一次只能以这种方式与单一生物进行心灵感应交谈。</p><p>此外，作为一个动作，你可以与30尺内你选择的其他自愿生物建立心灵感应链接，生物总数等于你的智力调整值。此链接持续1小时。你和任何目标可以通过此牵绊相互进行心灵感应交流，无论是否共享共同语言。一旦建立此心灵感应链接，交流可以在任何距离进行，但无法延伸至其他位面。如果你处于&reference[incapacitated apply=false]状态或死亡，心灵感应链接将终止。</p><p>你能使用该特性的次数等于你的智力调整值（至少一次），完成一次长休后，恢复全部使用次数。若在已有活跃链接时使用此特性建立新链接，则原有链接将终止。</p>",
+      "activities": {
+        "Forge Telepathic Network": {
+          "name": "锻造心灵感应网络"
+        }
+      },
+      "effects": {
+        "Telepathic Link": {
+          "name": "心灵感应链接",
+          "description": "<p>你与最多五名其他生物建立心灵感应链接，持续一小时。当此链接生效时，你与你链接的任何其他生物都能通过此牵绊以心灵感应相互沟通，无论你们是否使用通用语。</p><p>一旦建立心灵感应链接，沟通可跨越任意距离，但无法延伸至其他位面。若该天赋陷入&reference[incapacitated apply=false]状态或死亡，心灵感应链接即告终止。</p>"
+        }
+      }
+    },
+    "Bravado": {
+      "name": "气派值 Bravado",
+      "description": "<p>当你未穿着任何护甲时，你的护甲等级：等于10 + 你的敏捷调整值 + 你的魅力调整值。你可以使用护盾术shield并仍获得此效益。</p>",
+      "effects": {
+        "Bravado AC Calculation": {
+          "name": "气派值护甲等级计算"
+        }
+      }
+    },
+    "Fury of the Wise": {
+      "name": "智者之怒 Fury of the Wise",
+      "description": "<p>同样在3环时，你与伴日狂暴相处的经验令敢于对抗你的人感到敬畏。如果你尚未拥有威吓技能的熟练项，则获得之。此外，你的魅力（威吓）检定获得等于你感知调整值的加值。</p>",
+      "effects": {
+        "Fury of the Wise": {
+          "name": "智者之怒",
+          "description": "<p>你在魅力(威吓)检定中获得等于你感知调整值的加值。</p>"
+        }
+      }
+    },
+    "Pack Phalanx": {
+      "name": "集群方阵 Pack Phalanx",
+      "description": "<p>在3环时，你和你的伴日学会近距离与敌人交战，以防止他们伤害你所保护的目标。每当你和你的伴日没有处于&reference[incapacitated apply=false]状态，并且都在一个生物的5尺范围内时，该生物对任何非你或你的伴日的目标进行的攻击检定具有劣势。</p>"
+    },
+    "Terrifying Power": {
+      "name": "恐怖力量 Terrifying Power",
+      "description": "<p>当一个生物对抗你展现的能力的豁免失败时，你可以激活此灵能消耗选项。如果该生物的挑战等级等于或低于你的天赋等级（或者对于没有挑战等级的生物，其等级等于或低于你的天赋等级），你获得3点负荷且目标对你&amp;reference[frightened]1分钟。如果该生物的挑战等级或等级高于你的天赋等级，你不会获得负荷且目标不受影响。</p><p>每当以此方式陷入恐慌的生物受到伤害时，它们需进行一次对抗你天赋能力豁免DC的感知豁免，成功则自身结束此状态。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当一个生物在你施展的异能豁免失败时。"
+        }
+      },
+      "effects": {
+        "Terrifying Power": {
+          "name": "恐怖力量",
+          "description": "<p>你对这位天才感到&amp;reference[frightened apply=false]状态，持续一分钟。当你以此方式陷入恐慌状态并受到伤害时，可以针对天才的豁免DC进行一次感知豁免，成功则自身终止此效果。</p>"
+        }
+      }
+    },
+    "Infernal Bond": {
+      "name": "炼狱牵绊 Infernal Bond",
+      "description": "<p>你与你的伴日之间存在着深厚的羁绊……并且与七重地狱之城紧密相连！这或许意味着你们效忠于某位魔鬼，曾一同被囚禁于地狱而后并肩逃脱，亦或是你与一位诞生自下层位面的魔物伴日缔结了契约。无论如何，你已与七重地狱建立联结，能借助伴日的凶暴力量解锁炼狱魔法。</p>",
+      "advancement": {
+        "Infernal Exploit Scaling": {
+          "title": "炼狱语能力强度提升"
+        },
+        "Infernal Exploits": {
+          "title": "炼狱语威能",
+          "hint": "你获得一个你选择的炼狱语专长。你在11级时获得一个额外的你选择的炼狱语专长。每当你在此职业中提升一个等级时，你可以选择一个你已知的炼狱语专长，并将其替换为另一个自然专长，为此你必须拥有相应的兽心等级。"
+        },
+        "Devil's Understanding: Infernal": {
+          "title": "魔鬼的理解：炼狱语",
+          "hint": "你可以说、写和理解炼狱语。"
+        },
+        "Devil's Understanding: Skill": {
+          "title": "魔鬼的理解：技能",
+          "hint": "此外，如果你尚未在奥秘或宗教技能上拥有熟练，则你获得其中一项（由你选择）的熟练。"
+        }
+      }
+    },
+    "Quick Hide (2 Ferocity)": {
+      "name": "快速躲藏 (2 威能) Quick Hide (2 Ferocity)",
+      "description": "<p>每当你执行攻击动作时，你可以激活此战技。本回合中你首次以武器攻击命中一个生物时，你的伴日若能躲藏，则可作为反应执行躲藏动作。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你执行一个攻击动作时。"
+        }
+      }
+    },
+    "Intransigent": {
+      "name": "顽固 Intransigent",
+      "description": "<p>当你处于清醒状态时，你和你选择的10尺内的每个生物对&amp;reference[charmed apply=false]状态免疫。</p>",
+      "effects": {
+        "Intransigent": {
+          "name": "顽固不化",
+          "description": "<p>当你处于清醒状态时，你和每个你选择的10尺内的生物免疫&amp;reference[charmed apply=false]状态。</p>"
+        }
+      }
+    },
+    "Dis's Onslaught": {
+      "name": "迪斯的猛攻 Dis's Onslaught",
+      "description": "<p>每当你使用附赠动作来放置或移动一个印记时，你可以作为同一附赠动作的一部分发动一次武器攻击。</p>"
+    },
+    "Invoke Hell: Embolden Allies": {
+      "name": "唤起地狱：激励盟友 Invoke Hell: Embolden Allies",
+      "description": "<p>以一个附赠动作，你恢复总计等于你痛苦骑士等级五倍的生命值，这些生命值可以由你任意分配给你自身以及30尺内的其他生物。</p>"
+    },
+    "Sutekh's Blessing": {
+      "name": "苏泰克的祝福 Sutekh's Blessing",
+      "description": "<p>当苏泰克接纳你成为他的渎圣骑士时，他授予你掌控鲜血与生命的亵渎权能。你获得宗教技能的熟练项。</p><p>此外，以一个动作，你可以扩展对周围生命的感知。直到你的下个回合结束，你能感知到120尺内拥有血液的生物，无需目视。此能力可穿透多数障碍，但会被1尺厚的石材、1英寸厚的普通金属、薄铅板、或3尺厚的木材或泥土阻挡。你知晓每个生物的距离与方位，以及该生物的类型。你能使用该特性的次数等于你的熟练加值，且完成一次长休后重新获得所有已使用的次数。</p>",
+      "activities": {
+        "Activate Life Sense": {
+          "name": "激活生命感知"
+        }
+      },
+      "effects": {
+        "Sense Life": {
+          "name": "感知生命",
+          "description": "<p>直到你的下一个回合结束，你都能感知到120尺内拥有血液的生物，无需看见它们。此能力可穿透大多数障碍，但会被1尺厚的石头、1英寸厚的通用金属、薄铅板或3尺厚的木头或泥土阻挡。你知道每个生物的距离和方向，以及该生物的类型。</p>"
+        }
+      }
+    },
+    "Keen Senses": {
+      "name": "敏锐感官 Keen Senses",
+      "description": "<p>在14级时，你的感官变得敏锐，如同可怕的掠食者一般。你在依赖听觉、视觉或嗅觉的感知（察觉）检定上具有优势。此外，你可以以一个附赠动作执行搜索动作。</p>",
+      "activities": {
+        "Search": {
+          "name": "搜索"
+        }
+      }
+    },
+    "Flash of Brimstone": {
+      "name": "硫磺闪光 Flash of Brimstone",
+      "description": "<p>当你放置或移动一个印记时，你可以激活此恩惠（无需动作）以魔法性地传送至你能看见的、距离目标5尺内的一个未占据空间。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你放置或移动一个印记时。"
+        }
+      }
+    },
+    "Quid Pro Quo": {
+      "name": "等价交换 Quid Pro Quo",
+      "description": "<p>你可以向地狱军团低语，设下陷阱诱捕敌人并召唤盟友。以一个动作，你可以尝试放逐一个你能看见的、位于你30尺内的生物。目标必须进行一次魅力豁免。豁免失败时，目标将被放逐至地狱废土，持续1分钟，之后他们将回到其离开位置最近的一个未被占据的空间。以此方式被放逐的目标可以在其每个回合结束时重复该豁免，成功则提前结束该效应。一个成功通过此效应豁免的生物将在24小时内对你的此项特性免疫。</p><p>此外，当一个目标以此方式被放逐时，一个@UUID[Compendium.mcdm-class-bundle.actors.Actor.wBSRnPa2GE0uxeOd]（来自MCDM的<em>Flee, Mortals!</em>）或一个@UUID[Compendium.dnd5e.monsters.Actor.MADGs8pWMVyyFOf1]（来自核心规则）会出现在其位置上。该魔鬼视你为盟友并遵循你的命令，直到被放逐的生物不再被放逐，届时该魔鬼会消失。</p><p>一旦你以此方式成功放逐一个生物，直到你完成一次长休前，你无法再次使用此特性。</p>",
+      "effects": {
+        "Quid Pro Quo": {
+          "name": "投桃报李",
+          "description": "<p>你已被放逐至地狱废土，持续1分钟。以此方式被放逐期间，你在自己每回合结束时重复该豁免，豁免成功则提前终止该效应。</p><p>此效应终止时，你返回至距离你所离开空间最近的未占据空间。</p>"
+        }
+      }
+    },
+    "Stinging Swarm (6 Ferocity)": {
+      "name": "刺痛集群（6点凶猛值） Stinging Swarm (6 Ferocity)",
+      "description": "<p>以一个动作，你在一条5尺宽、30尺长的线状区域内召唤出一群蜇人的昆虫。除了你的伴日外，线状区域内的每个生物都必须进行一次体质豁免，豁免失败则受到4d6点穿刺伤害，豁免成功则伤害减半。随后昆虫化为阴影消散。</p><p>当你达到17级时，伤害扩展至5d6。</p>"
+    },
+    "Lightning Eruption (8 Ferocity)": {
+      "name": "闪电爆发 (8 威能) Lightning Eruption (8 Ferocity)",
+      "description": "<p>当你以武器攻击命中一个生物时，该攻击额外造成5d6闪电伤害，且你可以选择你能看见的、位于目标30尺内的另一个生物。该生物必须进行一次敏捷豁免，豁免失败则受到5d6闪电伤害，豁免成功则仅受一半伤害。</p><p>当你达到17级时，两处伤害均提升至6d6。</p>",
+      "activities": {
+        "Extra Damage on Hit": {
+          "name": "命中时造成额外伤害",
+          "condition": "当你以一次武器攻击命中一个生物时。"
+        },
+        "save": {
+          "affects": {
+            "special": "原目标30尺范围内的一个生物。"
+          }
+        }
+      }
+    },
+    "Acidic Primal Strike": {
+      "name": "酸性原始打击 Acidic Primal Strike",
+      "description": "<p>在你的每个回合中一次，当你以武器攻击命中一个生物时，你可以使该攻击对目标造成额外1d8强酸伤害。</p><p>每当你在此职业中提升一个等级，你可以将此特性的伤害类型更改为列表中的另一种类型。当你达到14级时，额外伤害扩展至2d8。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当你以武器攻击命中一个生物时。"
+        }
+      }
+    },
+    "Painkiller": {
+      "name": "止痛剂 Painkiller",
+      "description": "<p><em>作为地狱中身披重甲的死亡部队，止痛者效忠于迪斯帕特，在每一场重大炼狱战役的前线指挥作战。</em></p><p>迪斯帕特统治着战争之城迪斯。当地狱入侵其他世界时，迪斯帕特的军队负责战斗与牺牲。他的止痛者是精通战略的大师，在前线指挥若定，既能激发士兵的敬畏也能唤起恐惧。傲慢的止痛者充满骄傲与狂妄，常常执着于个人形象。</p><p>虽属邪术骑士中最具骑士精神者，但止痛者的侠义早已扭曲。他们接受并尊重单挑决斗的挑战，会迅速惩罚任何试图干预者——但若处于下风，他们会毫不犹豫地作弊；若占优势，则会在解决敌人前傲慢地戏耍对手。</p><p>在软弱或绝望的时刻，异界统治者若见军队面临溃败，可能会向迪斯帕特求援。这位永远热衷于播撒纷争与不和的地狱大公，常会派遣止痛者去统领绝望统治者的军队作为回应。</p><h2>傲慢信条</h2><p>迪斯帕特的精锐突击部队必须是高效的战场指挥官，能快速消灭敌人。止痛者遵循着指引他们统领地狱军团、跨越时空向善良阵营发动战争的教条。</p><p><strong>身先士卒。</strong>我冲锋在每场战斗的最前线，既鼓舞我军士气，亦震慑敌方心神。</p><p><strong>统帅威仪。</strong>所到之处皆由我发号施令。我不会听从缺乏统帅意志者的命令。</p><p><strong>不择手段求胜。</strong>我敬重敌军领袖并以礼相待。但一旦兵刃相向，我会使出浑身解数夺取胜利，并期待对方也是如此。</p><p><strong>士卒皆可牺牲。</strong>我毫不在意士兵生死，他们不过是我为夺取胜利而消耗的资源。</p>",
+      "advancement": {
+        "Dispater's Blessing": {
+          "title": "迪斯帕特的祝福",
+          "hint": "当迪斯帕特接纳你成为他的邪术骑士时，你获得重型护甲的熟练项。"
+        }
+      }
+    },
+    "Blood Price": {
+      "name": "血之代价 Blood Price",
+      "description": "<p>你可以以消耗生命力为代价来强化你的防御。每当你进行一次豁免失败时，你可以消耗一枚你的生命骰，掷出它并将掷出的数值加到该豁免的结果上。</p>",
+      "activities": {
+        "Expend Hit Dice: D6": {
+          "name": "消耗生命骰：D6",
+          "roll": "豁免加值",
+          "condition": "当你进行一次豁免检定失败时。"
+        },
+        "Expend Hit Dice: D8": {
+          "name": "消耗生命骰：D8",
+          "roll": "豁免加值",
+          "condition": "当你豁免失败时。"
+        },
+        "Expend Hit Dice: D10": {
+          "name": "消耗生命骰：D10",
+          "roll": "豁免加值",
+          "condition": "当你进行一次豁免失败时。"
+        },
+        "Expend Hit Dice: D12": {
+          "name": "消耗生命骰：D12",
+          "roll": "豁免加值",
+          "condition": "当你豁免失败时。"
+        }
+      }
+    },
+    "Incontrovertible": {
+      "name": "无可辩驳 Incontrovertible",
+      "description": "<p>被禁制的生物在进行感知和魅力豁免检定时具有劣势。</p>"
+    },
+    "Combat Mastery": {
+      "name": "战斗精通 Combat Mastery",
+      "description": "<p>你的大魔鬼赋予你在某种战斗形式中的非凡技巧。选择以下邪术骑士战斗精通之一：</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.5DhsGwzumrgULn3D]{气派 Bravado}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.iC849FaM1qEcsvV7]{蛮勇 Brutal}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.hC3BMF52g5QjfKxL]{不屈 Inexorable}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.CTeYV3PUGDZdP3ul]{谎言 Lies}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.K2GedFKNoZ4u99qX]{灵巧 Lissome}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.rfvnJR01Cvra80Ux]{无羁 Unfettered}</p>"
+    },
+    "Bedevil": {
+      "name": "折磨 Bedevil",
+      "description": "<p>当你在一个受禁生物身上烙印印记时，你可以激活此恩惠（无需动作）。目标必须在其下个回合结束前进行的下一次豁免检定结果中，减去一个数值，该数值等于你的熟练加值。</p>",
+      "activities": {
+        "utility": {
+          "roll": "豁免检定减益",
+          "condition": "当你在一头被禁制的生物身上烙下印记时。"
+        }
+      }
+    },
+    "Invoke Hell: Enervating Spell": {
+      "name": "召唤地狱：衰弱法术 Invoke Hell: Enervating Spell",
+      "description": "<p>当你使用1环或更高环阶的暗狱骑士法术对一个生物造成伤害时，你可以消耗一道印记（无需动作）并为该法术注入虚弱魔法。目标对该法术的伤害具有易伤。若其原本对该法术伤害具有抗性或免疫，则此抗性或免疫被该法术压制，且目标转而对该伤害具有易伤。</p>"
+    },
+    "Nightmare Terrain": {
+      "name": "梦魇地形 Nightmare Terrain",
+      "description": "<p>你以意念塑造的地形能够伤害你的敌人。在你的操纵地形特性激活期间，每回合开始时，你可以选择在该特性影响区域内你能看见的至多三个生物，并将它们周围的地面塑造成攻击性武器（无需动作）。每个生物必须进行一次对抗你异能法术豁免DC的敏捷豁免，若失败则受到等于你异能等级的钝击、穿刺或挥砍伤害（由你选择）。</p>",
+      "activities": {
+        "Afflict Nightmare": {
+          "name": "折磨梦魇",
+          "condition": "当操纵地形生效时。",
+          "affects": {
+            "special": "位于你操控地形特性区域内的生物。"
+          }
+        }
+      }
+    },
+    "Hellish Wound (4 Ferocity)": {
+      "name": "地狱创伤 (4 凶蛮) Hellish Wound (4 Ferocity)",
+      "description": "<p>当你的伴日以攻击命中一个非构装生物或亡灵的生物时，你可以使该攻击对目标造成一道地狱创伤（无需动作）。在每个其回合开始时，拥有地狱创伤的目标每有一道地狱创伤便失去1d10点生命值。</p><p>若目标获得魔法治疗，或有任何生物用一个动作成功通过一次感知（医药）检定（DC等于你的奇技豁免DC）来止血，则其全部地狱创伤都会闭合。</p><fieldset><legend>Foundry 注</legend><p>Foundry不支持叠加主动效果，但你可以对生物多次应用来自“施加地狱创伤”行动的主动效果。“地狱创伤伤害”行动也可根据目标拥有的创伤数量进行缩放，造成相应数量的伤害。</p></fieldset>",
+      "activities": {
+        "Inflict Hellish Wound": {
+          "name": "造成地狱创伤",
+          "condition": "当你的伴日以攻击命中除构装生物或亡灵外的其他生物时。"
+        },
+        "Hellish Wound Damage": {
+          "name": "地狱创口伤害",
+          "condition": "在一个生物回合开始时。"
+        }
+      },
+      "effects": {
+        "Hellish Wound": {
+          "name": "地狱创伤",
+          "description": "<p>你遭受了一道地狱创伤，在你的每个回合开始时，每有一道地狱创伤，你都会失去[[/r 1d10]]点生命值。</p><p>如果你获得魔法治疗，或一个生物利用其动作并通过一次成功的[[/check wis med]]感知（医疗）检定来止血，你的所有地狱创伤都将愈合。</p>"
+        }
+      }
+    },
+    "Psionic Exertion": {
+      "name": "灵能催迫 Psionic Exertion",
+      "description": "<p>你可以消耗能量来赋予你的力量额外效果。你获得以下你选择的一项灵能运用选项。你在7级、11级和15级时获得额外选项。</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.jsyDOXrdx9i4vP9d]{毁灭之力 Destructive Power}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.45DpPUc6767SS8UM]{动态之力 Dynamic Power}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.O7RLHrlkjgfSoFKN]{扩展之力 Expanded Power}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.cVv6WdTOyIRL6VwD]{迷魅之力 Fascinating Power}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.wwPjUpyG9FiLIRng]{阻滞之力 Halting Power}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.Ndxjw4rZHxgWT5sa]{增幅之力 Magnified Power}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.utciT9AXZyUIvABm]{势不可挡之力 Overwhelming Power}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.tM7LrZKA8LQe5Y8h]{共享之力 Shared Power}</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.5rajtu2fQQPU5PDy]{恐怖之力 Terrifying Power}</p>"
+    },
+    "Master of Hell": {
+      "name": "地狱主宰 Master of Hell",
+      "description": "<p>你学会撕裂一道通往地狱的隙缝，并对其敌人降下地狱之怒。以一个动作，你可以召唤一场地狱暴风，以其中心点为你可见的150尺内一点。选择下列效应之一，该效应将充满以该点为中心、50尺半径的球状区域：</p><p><strong>炼狱镇。</strong> 地狱火如雨般降落在你的敌人身上。该区域内的每个敌人都必须进行一次敏捷豁免。豁免失败时，一个生物受到5d10火焰伤害外加5d10暗蚀伤害，并且其将燃烧1分钟。豁免成功时，一个生物受到一半伤害且不会燃烧。以此方式燃烧的生物必须在其回合结束时重复此豁免，豁免失败则受到1d10火焰伤害外加1d10暗蚀伤害，豁免成功则结束其身上的该效应。此地狱火无法被非魔法手段熄灭。</p><p><strong>瘟疫。</strong> 一股恶臭的瘴气在你的敌人周围盘旋。该区域内的每个敌人都必须进行一次体质豁免。豁免失败时，一个生物受到5d10毒素伤害外加5d10暗蚀伤害，并且变为&amp;reference[poisoned]状态1分钟。豁免成功时，一个生物受到一半伤害且不会中毒。</p><p><strong>黑暗术。</strong> 一场刺骨的暴风袭击你的敌人。该区域内的每个敌人都必须进行一次体质豁免，豁免失败时受到10d10冷冻伤害，豁免成功时受到一半伤害。此外，暴风的阴霾将持续1分钟，在此持续时间内或直到离开该区域前，该区域内的每个敌人都处于&amp;reference[blinded]状态。</p><p>一旦你召唤了一次地狱暴风，你必须完成一次长休后才能再次如此做。</p>",
+      "activities": {
+        "Hellstorm: Inferno": {
+          "name": "地狱风暴：炼狱镇"
+        },
+        "Hellstorm: Pestilence": {
+          "name": "地狱风暴：瘟疫"
+        },
+        "Hellstorm: Darkness": {
+          "name": "地狱风暴：黑暗术"
+        }
+      },
+      "effects": {
+        "Burning Hellfire": {
+          "name": "燃烧地狱火",
+          "description": "<p>你被魔法地狱火覆盖。在你的每个回合结束时，你必须进行一次敏捷豁免，豁免失败则受到[[/damage 1d10火焰 & 1d10暗蚀]]伤害，豁免成功则结束此效果。</p><p>这地狱火无法通过非魔法手段熄灭。</p>"
+        }
+      }
+    },
+    "Mystic Connection: Mimic": {
+      "name": "神秘联结：拟身怪 Mystic Connection: Mimic",
+      "description": "<p>以一个附赠动作，你触及一个小型或更小的非魔法物件并将其变形为任何其他非魔法物件，新物件必须具有大致相同的体型和重量，且其价值不能超过原物件的价值。该物件保持变形状态1小时。如果你移动到距离该物件超过30尺的地方，变形术会提前结束，或者你可以以一个动作选择提前结束它。将任何以此方式变形的材料用作法术的材料部件会导致该法术失败。你不能再次使用此效益，直至你完成一次短休或长休。</p>"
+    },
+    "Mystic Connection: Giant Toad": {
+      "name": "神秘联结：巨蟾蜍 Mystic Connection: Giant Toad",
+      "description": "<p>你可以屏息1小时,并且获得等于你步行速度的游泳速度。此外,即使没有助跑,你也可以进行跳远或跳高,如同你进行了助跑一般。</p>",
+      "effects": {
+        "Mystic Connection: Giant Toad": {
+          "name": "神秘连接：巨蟾蜍",
+          "description": "<p>你可以屏住呼吸1小时，并且你的游泳速度等于你的步行速度。</p>"
+        }
+      }
+    },
+    "Lies": {
+      "name": "谎言 Lies",
+      "description": "<p>你可以选择一种近战武器类型，例如战斧、巨剑或矛。当你使用该类型的武器进行攻击时，你可以用你的魅力调整值，代替力量或敏捷，来进行攻击检定和伤害掷骰。当你完成一次长休后，可以选择新的武器类型以替代先前的选择。</p><fieldset><legend>Foundry 注</legend><p>你可以对此特性使用附魔行动，为所选类型的任意武器进行附魔，使你能够利用魅力调整值进行附魔武器的攻击检定和伤害掷骰。</p></fieldset>",
+      "effects": {
+        "Combat Mastery: Lies": {
+          "name": "战斗精通：谎言",
+          "description": "<p>当你使用此武器攻击时，你可以用你的魅力调整值，代替力量或敏捷，进行攻击检定和伤害掷骰。</p>",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>战斗精通: 谎言</legend>     <p>当你使用此武器攻击时,你可以使用你的魅力调整值,而非力量或敏捷,来进行攻击检定和伤害掷骰。</p> </fieldset>"
+          }
+        }
+      }
+    },
+    "Bloodstroke": {
+      "name": "血击 Bloodstroke",
+      "description": "<p>保护盟友的魔法现在也会汲取敌人的力量。当一名因你的吸血特性而拥有临时生命值的盟友被近战攻击命中时，攻击者将受到等同于你邪术骑士等级的寒冷、火焰或暗蚀伤害（由你选择）。</p><fieldset><legend>Foundry 注</legend><p>目前无法自动将此特性的额外伤害应用于拥有吸血特性所提供临时生命值的生物。可使用此特性上的伤害行动作为替代。</p></fieldset>",
+      "activities": {
+        "Bonus Damage": {
+          "name": "加值伤害"
+        }
+      }
+    },
+    "Diabolic Contract": {
+      "name": "魔鬼契约 Diabolic Contract",
+      "description": "<p>你与一位欢迎你加入荒芜秩序的大魔鬼签订了一份恶魔契约。选择毁灭建筑师(阿斯蒙蒂斯)、地狱代言人(摩洛克)、痛苦杀手(迪斯帕特)、血红骑士(苏泰克)或暗影大师(彼列)作为你的大魔鬼。你的选择将在3环、7环、11环和15环时授予你特性。</p>"
+    },
+    "Mystic Connection: Hellhound": {
+      "name": "神秘联结：地狱犬 Mystic Connection: Hellhound",
+      "description": "<p>以一个附赠动作，你将自身笼罩于地狱火中，持续10分钟。当你以此方式被笼罩时，任何在5尺内以近战攻击命中你、或在该回合内首次接触你的生物将受到2d6火焰伤害。你在完成一次长休前无法再次使用此效益。</p>",
+      "activities": {
+        "Hellfire Shroud Damage": {
+          "name": "地狱火裹尸布伤害",
+          "condition": "当距离你5尺内的一个生物在你被地狱火笼罩时以一次近战攻击命中你。"
+        }
+      },
+      "effects": {
+        "Hellfire Shroud": {
+          "name": "地狱火裹尸布",
+          "description": "<p>在接下来的10分钟内，你被地狱之火所笼罩。当你以此方式被笼罩时，任何在你5尺范围内的生物，若在一个回合内首次以近战攻击命中你或接触你，将受到[[/damage 2d6 fire]]伤害。</p>"
+        }
+      }
+    },
+    "Feral Reflexes (2 Ferocity)": {
+      "name": "野性反射 (2点凶暴) Feral Reflexes (2 Ferocity)",
+      "description": "<p>当你或你的伴日被一次攻击命中时，你可以用你的反应使目标的护甲等级：对抗该次攻击时提高2点。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你或你的伴日被一次攻击命中时。"
+        }
+      }
+    },
+    "Haemal Exchange": {
+      "name": "血质交换 Haemal Exchange",
+      "description": "<p>你已掌握削弱敌人与增强盟友的能力。当一个距离你60尺内的受禁生物进行攻击检定或豁免检定时，你可以用你的反应燃尽其身上的一道印记并转移其力量。目标必须投掷一枚d8骰，并从触发的攻击检定或豁免检定结果中减去投出的数值。</p><p>随后你为30尺内的一名盟友赋能。该盟友下次进行攻击检定或豁免检定时，将投掷一枚d8骰并将投出数值加入检定结果。</p>",
+      "activities": {
+        "Haemal Exchange: Enemy": {
+          "name": "血质交换：敌方",
+          "roll": "攻击/豁免减值",
+          "condition": "当你60尺内一个被禁制的生物进行一次攻击检定或豁免时。",
+          "affects": {
+            "special": "一个被禁制的生物。"
+          }
+        },
+        "Haemal Exchange: Ally": {
+          "name": "血液交换：盟友"
+        }
+      },
+      "effects": {
+        "Haemal Exchange": {
+          "name": "血质交换",
+          "description": "<p>下一次你进行攻击检定或豁免时，你掷一个[[/r d8]]并将掷出的数值加到攻击检定或豁免上。</p>"
+        }
+      }
+    },
+    "Forked Tongue": {
+      "name": "分叉之舌 Forked Tongue",
+      "description": "<p>你可以凭直觉说、读、写炼狱语。</p><p>此外，你还可以说两种你选择的其他语言，但无法读或写它们。当你完成一次长休后，你可以汲取大魔鬼的知识来替换这两种语言中的一种。当你这样做时，选择另一个你知道名称的语言；你会魔法般地忘记之前的语言并获得这个新语言。一旦你以这种方式替换了一种语言，你必须完成一次长休后才能再次这样做。</p><p>从9级开始，此特性额外授予你一种语言，总计三种（除炼狱语外）。此外，你在为确定生物意图或真诚度而进行的感知（洞悉）检定中获得优势。</p>"
+    },
+    "Blood Sport (16 Ferocity)": {
+      "name": "血腥运动 (16 凶暴) Blood Sport (16 Ferocity)",
+      "description": "<p>当你以一次近战武器攻击命中大型或更小的生物时，你可以将目标推开至多30尺远并使其&amp;reference[倒地]。如果目标此次移动结束时位于你的伴日5尺范围内，伴日可以对目标进行一次标志性攻击（无需动作）。若命中，该攻击造成其通常效果，且目标被推开至多30尺远离你的伴日。如果目标此次移动结束时位于你5尺范围内，你可以对目标进行一次近战武器攻击（无需动作），若命中则额外造成4d6伤害。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你以一次近战武器攻击命中一个大型或更小的生物时。"
+        },
+        "Bonus Damage": {
+          "name": "加值伤害"
+        }
+      }
+    },
+    "Spellcasting": {
+      "name": "施法 Spellcasting",
+      "description": "<p>作为一名毁灭建筑师，你可以利用亵渎魔法之源来施展法术。关于施法的通用规则，请参阅核心规则中的“施法”部分。</p><p><strong>戏法。</strong>你从毁灭建筑师法术列表（在本子职业末尾给出）中选择两个戏法。在10级时，你从该列表中再学习一个额外的戏法。</p><p><strong>法术位。</strong>毁灭建筑师施法表显示了你拥有多少个用于施展1环及更高环阶破誓骑法术的法术位。要施展这些法术之一，你必须消耗一个等于或高于该法术环阶的法术位。当你完成一次长休后，你恢复所有已消耗的法术位。</p><p>例如，如果你知晓1环法术 @UUID[Compendium.dnd5e.spells.Item.22dPoeXfaaAv4K3h] 并且有一个1环和一个2环法术位可用，你可以使用其中任意一个法术位来施展<em>炼狱叱喝</em>。</p><p><strong>1环及更高环阶已知法术。</strong>在3级时，你从毁灭建筑师法术列表中选择三个1环法术作为已知法术。</p><p>毁灭建筑师施法表的“已知法术”栏显示了你何时能学习更多1环或更高环阶的破誓骑法术。这些法术都必须是你的法术位所能支持的环阶。例如，当你达到7级时，你学习一个1环或2环的新法术。</p><p>每当你在此职业中提升一级时，你可以将你所知的一个破誓骑法术替换为破誓骑法术列表中的另一个你选择的法术。新法术必须是你拥有法术位支持的环阶。</p><p><strong>施法关键属性。</strong>魅力是你施展法术的施法关键属性，因此每当法术提及你的施法关键属性时，你使用你的魅力。此外，你在设定你所施展法术的豁免DC和使用法术进行攻击检定时，也使用你的魅力调整值。</p><p style=\"text-align:center\"><strong>法术豁免DC</strong> = 8 + 你的熟练加值 + 你的魅力调整值</p><p><strong>法器。</strong>你拥有一个 @UUID[Compendium.mcdm-class-bundle.items.Item.bAArTRV7vMgOupR9]，例如象征你大魔鬼的护符、一件亵渎圣物的碎片、或一个封存着一滴神圣大魔鬼血液的玻璃法球。你可以使用该邪徽作为你施展破誓骑法术的法器。你必须有一只手空闲才能使用邪徽，但这只手可以与你用来执行姿势部件的是同一只手。</p>"
+    },
+    "Infernal Teleport (4 Ferocity)": {
+      "name": "炼狱传送术 (4 凶蛮) Infernal Teleport (4 Ferocity)",
+      "description": "<p>以一个动作，你或你的伴日（由你选择）被盘旋的阴影和烟雾所环绕。目标传送到其起始位置90尺内的一个未占据空间。</p>"
+    },
+    "Marked Prey (4 Ferocity)": {
+      "name": "标记猎物 (4点凶性) Marked Prey (4 Ferocity)",
+      "description": "<p>当你的伴日使用一个需要生物进行豁免的凶猛动作时，你可以用你的反应使该豁免获得劣势。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你的伴日使用一个需要生物进行豁免的凶猛动作时。"
+        }
+      }
+    },
+    "No Escape (1+ Ferocity)": {
+      "name": "无处可逃 (1+凶暴) No Escape (1+ Ferocity)",
+      "description": "<p>在你的回合开始时，当你的伴日获得凶暴且未进入狂暴状态时，你可以消耗至多等同于感知调整值的凶暴值（最低1；无需动作）。直到你的下个回合开始前，你的速度或伴日的速度（由你选择）提升5尺×所消耗的凶暴值。</p><fieldset><legend>Foundry 注</legend><p>当前无法根据动态消耗调整生效效果的增益数值。此特性提供多个可选择的生效效果，具体取决于消耗的凶暴值数量。</p></fieldset>",
+      "activities": {
+        "utility": {
+          "condition": "当你的伴日获得凶暴且未进入狂暴状态时。",
+          "affects": {
+            "special": "你的伴日。"
+          }
+        }
+      },
+      "effects": {
+        "No Escape (1 Ferocity)": {
+          "name": "无处可逃 (1点凶性)",
+          "description": "<p>直到你的下个回合开始前，你的移动速度增加5尺。</p>"
+        },
+        "No Escape (2 Ferocity)": {
+          "name": "无处可逃 (2点凶蛮)",
+          "description": "<p>直到你的下个回合开始前，你的移动速度增加10尺。</p>"
+        },
+        "No Escape (3 Ferocity)": {
+          "name": "无处可逃（3点凶蛮）",
+          "description": "<p>直到你的下个回合开始前，你的移动速度增加3尺。</p>"
+        },
+        "No Escape (4 Ferocity)": {
+          "name": "无处可逃 (4凶暴)",
+          "description": "<p>直到你的下个回合开始前，你的移动速度增加20尺。</p>"
+        },
+        "No Escape (5 Ferocity)": {
+          "name": "无处可逃（5点凶蛮）",
+          "description": "<p>直到你的下个回合开始前，你的移动速度增加25尺。</p>"
+        }
+      }
+    },
+    "Primal Exploits": {
+      "name": "原始威能 Primal Exploits",
+      "description": "<p>从2环开始，你学会引导你伴日的狂怒，将其转化为被称为原始炫技的非凡壮举，这些炫技由你伴日的凶猛驱动。</p><p>你学会三个自选的原始炫技，并在达到10环和17环时各额外学会两个自选的炫技。每当你在此职业中提升一个等级时，你可以选择一项你已知的原始炫技，并将其替换为另一项原始炫技，前提是你必须达到相应的兽心等级。</p><p>部分炫技使用你的反应来激活。其他炫技在特定情况下可用但不需要动作。部分炫技作为攻击动作的一部分激活，在这种情况下，你每回合只能使用一次此类炫技。</p><p>所有炫技都需要你消耗你伴日的凶猛来使用它们。当你使用炫技时，你的伴日必须在距离你60尺范围内，并且其凶猛值必须至少等于该炫技的消耗。当你使用炫技时，该伴日失去等于消耗的凶猛值。即使你的伴日处于&amp;reference[unconscious apply=false]状态，只要其拥有足够的凶猛值，你仍然可以使用炫技。当你的伴日进入狂暴状态时，你不能使用炫技。</p><p>部分炫技允许伴日发动一次标志性攻击。此标志性攻击不能被额外的炫技修改，也不能作为凶猛动作的一部分使用。</p><h3>炫技豁免DC</h3><p>你的部分炫技需要生物进行一次豁免以抵抗炫技的效果。豁免DC计算如下：</p><p style=\"text-align:center\"><strong>炫技豁免DC</strong> = 8 + 你的熟练加值 + 你的感知调整值</p><p>你的炫技豁免使用你的炫技豁免DC，即使触发该豁免的动作是由你的伴日执行的。</p><p>你的炫技豁免DC也会调整你伴日的凶猛动作的DC（见高等凶猛）。</p>"
+    },
+    "Energy Unleashed": {
+      "name": "能量释放 Energy Unleashed",
+      "description": "<p>当你的力量对你造成负担时，你会将部分削弱能量释放到外界。每当你获得负载时，你可以选择一名你能看见的，距离你60尺内的生物。该生物必须进行一次感知豁免，对抗你的天赋能力豁免DC，否则将受到等同于你所获负载数值的1d6心灵伤害。</p>",
+      "activities": {
+        "Unleash Energy": {
+          "name": "释放能量",
+          "condition": "每当你获得压力时。"
+        }
+      }
+    },
+    "Brimstone Teleport (8 Ferocity)": {
+      "name": "硫磺传送 (8 凶蛮) Brimstone Teleport (8 Ferocity)",
+      "description": "<p>以一个动作，你传送至一个你能看见的、30尺内未被占据的空间。你离开的空间周围5尺内的每个生物，以及你目的地空间周围5尺内的每个生物，都必须进行一次敏捷豁免，豁免失败则受到4d6火焰伤害，豁免成功则只受到一半伤害。你和你的伴日不会受到此效果的伤害。</p><p>当你达到17级时，此伤害扩展至5d6。</p>"
+    },
+    "Summon the Wilds": {
+      "name": "召唤荒野 Summon the Wilds",
+      "description": "<p>在18级时，你可以召唤附近的生物形成干扰集群。根据你的所在地点，这群生物可由鸟类、鱼类、昆虫、啮齿动物或其他你选择的类似生物组成。以一个动作，你向这些生物发出呼唤，它们会立即抵达并占据一个以你可见的120尺内某点为中心的30尺立方区域。该集群持续存在1分钟。在你的每个回合，你可以使用一个附赠动作将集群向任意方向移动最多30尺。</p><p>每个在你选择的集群区域内开始其回合的生物，必须进行一次对抗你 Exploit 豁免DC的感知豁免，若失败则在其属性检定、攻击骰和豁免上具有劣势，且其被动感知（察觉）值获得-5减值，直至其下一回合开始。</p><p>你不能再次使用此特性，直至你完成一次短休或长休。</p>",
+      "activities": {
+        "Summon Horde": {
+          "name": "召唤集群"
+        }
+      },
+      "effects": {
+        "Distracting Animal Horde": {
+          "name": "分散注意力的动物群",
+          "description": "<p>直到你的下个回合开始前，你在属性检定、攻击检定和豁免上具有劣势，并且你的被动感知(察觉)值受到-5减值。</p>"
+        }
+      }
+    },
+    "Nature Exploits": {
+      "name": "自然利用 Nature Exploits",
+      "description": "<p>在3级时，你获得一个自选的自然开发能力，其运作方式与你的原始开发能力相同，并在适用时使用你的开发豁免DC。你所选择的开发能力必须是3级时可用的类型。</p><p>你在11级时获得一个额外的自然开发能力。每当你在此职业中提升一个等级时，可以选择一个已掌握的自然开发能力，将其替换为另一个自然开发能力（新能力需符合你当前的兽心等级要求）。</p>"
+    },
+    "Architect of Ruin": {
+      "name": "毁灭建筑师 Architect of Ruin",
+      "description": "<p><em>毁灭建筑师是冷酷而精于算计的奥法骑士，他们侍奉阿斯蒙蒂斯，运用法术、钢铁与诡计，不惜一切代价赢得胜利。</em></p><p>阿斯蒙蒂斯统治着恐惧之城修罗场。他的邪魔骑士们横扫时间线，收集旨在欺骗和恐吓对手的秘密与法术。他与其他大魔鬼之间的战争是一场欺瞒与信息的较量</p><p>他的毁灭建筑师致力于让地狱的敌人陷入寡不敌众和战术被动的境地。这些邪魔骑士在战场上是技艺高超的法术刀锋，尽管有些人会运用研究、渗透和宣传等战术对猎物进行心理博弈。当毁灭建筑师最终与敌人对峙时，优势尽在他们掌握——他们已通过研究、准备并将命运攥于铁腕试炼场，迫使其偏向己方。他们贪婪地追寻黑暗技艺，用不可思议的力量武装自己与阿斯蒙蒂斯。</p><h3>毁灭信条</h3><p>毁灭建筑师在加入荒芜秩序时向阿斯蒙蒂斯立下誓言。这些信条要求他们通过驾驭强大魔法、制造恐惧和散播不信任来摧毁阿斯蒙蒂斯的敌人。</p><p><strong>心灵战场。</strong>待我的部队与你的军队交锋时，你早已充满恐惧并质疑自身力量。我甚至无需动手便能将你击败。</p><p><strong>关键秘密。</strong>一旦掌握你的秘密，我便知晓你的弱点。</p><p><strong>知识即力量。</strong>文化底蕴与钢铁同等强大。我洞悉敌人的每个细节，预判其每一步行动，在博弈开始前便已锁定胜局。</p><p><strong>魔法听我号令。</strong>谋略亦与钢铁同等强大。我驾驭黑暗奥秘技艺来操纵你的感官，瓦解你的决心，淬炼我的刀锋。你的士兵将因恐惧我的刀锋下次会覆上何种黑暗魔法而战栗不已。</p>",
+      "advancement": {
+        "Spells Known": {
+          "title": "已知法术"
+        },
+        "Architect of Ruin: Cantrips": {
+          "title": "毁灭建筑师：戏法",
+          "hint": "你从毁灭建筑师法术列表中选择学习两个戏法。你在10级时从该列表中额外学习一个戏法。"
+        }
+      }
+    },
+    "Furious Rampage": {
+      "name": "狂暴猛冲 Furious Rampage",
+      "description": "<p>在11级时，你的伴日能将狂怒灌注于更强力的打击中。每当你的伴日在狂暴期间用标志性攻击命中你的敌人时，该攻击造成的额外伤害等于伴日的凶猛值（而非其凶猛值的一半）。</p><p>此外，每当你的伴日在狂暴状态下攻击距离你5尺内的目标时，该攻击具有优势。若你在使用狂乱冲锋时攻击距离伴日5尺内的生物，你的攻击也具有优势。</p>"
+    },
+    "Hell's Charmer": {
+      "name": "地狱魅惑者 Hell's Charmer",
+      "description": "<p>在7环时，你的伴日能够驾驭魔鬼的超自然魅惑力，对其他生物施展附魔系魔法。以一个动作，选择你能看见且位于你30尺范围内的单一生物。该生物必须进行一次感知豁免，若你或你的盟友正在与其战斗，则此次豁免具有优势。若豁免成功，该生物会意识到你试图魅惑它，并对你和你的伴日转为敌对。</p><p>若豁免失败，该生物将被你和你的伴日&amp;reference[charmed]10分钟，或直到你或你的盟友对该生物造成任何身体、精神或情感上的伤害。被魅惑的生物对你转为友善。当此效应结束时，被魅惑的生物不会记得在被魅惑期间发生的事情。</p><p>你能使用该特性的次数等于你的感知调整值（至少一次）。你在完成一次长休后恢复全部使用次数。</p>",
+      "effects": {
+        "Hell's Charmer": {
+          "name": "地狱魅惑者",
+          "description": "<p>在接下来的10分钟或直到兽心者或其盟友对你做出任何身体、精神或情感上的伤害行为之前，你处于&amp;reference[charmed apply=false]状态。</p><p>当此效果结束时，你不会记得在被魅惑期间发生的任何事情。</p>"
+        }
+      }
+    },
+    "Sickening Strike (3 Ferocity)": {
+      "name": "病弱打击 (3 凶蛮) Sickening Strike (3 Ferocity)",
+      "description": "<p>你可以在执行攻击动作时激活此异能。本回合中你首次以武器攻击命中一个生物时，目标必须进行一次体质豁免，若失败则直至你的下个回合开始前陷入&amp;reference[poisoned]状态。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你执行一个攻击动作时。"
+        }
+      },
+      "effects": {
+        "Sickening Strike": {
+          "name": "致残打击",
+          "description": "<p>你陷入&amp;reference[poisoned apply=false]状态，直至兽心者的下一个回合开始。</p>"
+        }
+      }
+    },
+    "Infernal Flames (8 Ferocity)": {
+      "name": "炼狱烈焰 (8 凶暴) Infernal Flames (8 Ferocity)",
+      "description": "<p>以一个动作，你使一股火焰从你的伴日处爆发。伴日周围20尺内的每个生物必须进行一次敏捷豁免，豁免失败则受到4d10点火焰伤害，豁免成功则伤害减半。你和你的伴日不会受到此效果的伤害。</p><p>当你达到17级时，伤害扩展至5d10。</p>"
+    },
+    "Freezing Strike (2 Ferocity)": {
+      "name": "冻结打击 (2 凶暴) Freezing Strike (2 Ferocity)",
+      "description": "<p>你可以在执行攻击动作时激活此异能。本回合中你首次以武器攻击命中一个生物时，该攻击额外造成1d6冷冻伤害，且目标的速度减少10尺，持续至你的下个回合开始。</p><p>当你达到5级（2d6）、11级（3d6）和17级（4d6）时，额外伤害增加1d6。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当你执行一个攻击动作时。"
+        }
+      }
+    },
+    "Death Foiled": {
+      "name": "死亡受挫 Death Foiled",
+      "description": "<p>通过消耗灵能，你可以让一个死去的生物复活。在花费1小时专注并接触一个在过去8小时内死亡的生物的遗骸后，你获得8点负荷，并且该生物以1点生命值复活。当该生物复活时，其死亡时影响它的任何毒素或疾病都会被中和或治愈。此能力会闭合所有致命伤并恢复任何缺失的身体部位。</p><p>此外，如果你死亡并且可以在不超过你的负荷上限的情况下获得8点负荷，你将获得8点负荷，并且你的遗骸会在你死亡1小时后重塑。当你的遗骸重塑时，你将如上所述复活。</p><p>你可以使用此特性使一个生物（包括你自己）复活一次，在你完成一次长休后重获此能力。</p>",
+      "activities": {
+        "Resurrect Creature": {
+          "name": "复活生物",
+          "affects": {
+            "special": "在过去八小时内死亡的生物。"
+          }
+        },
+        "Self-Resurrection": {
+          "name": "自我复生",
+          "condition": "当你死亡时，你能获得8点负载而不超过你的负载上限。"
+        }
+      }
+    },
+    "Fiery Primal Strike": {
+      "name": "炽热原始打击 Fiery Primal Strike",
+      "description": "<p>在你的每个回合中一次, 当你以武器攻击命中一个生物时, 你可以使该攻击对目标造成额外的1d8火焰伤害。</p><p>每当你在此职业中提升一个等级, 你可以将此特性的伤害类型更改为列表中的另一种类型。当你达到14级时, 额外伤害扩展至2d8。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当你用武器攻击命中一个生物时。"
+        }
+      }
+    },
+    "Iron Gaol": {
+      "name": "铁牢狱 Iron Gaol",
+      "description": "<p>作为一个动作，你可以触及一个生物并消耗四个印记，尝试将该生物送往地狱。目标必须进行一次魅力豁免，失败则被裂隙拉入你大魔鬼的炼狱都市监狱中。</p><p>如果目标原生自地狱，或其等级或挑战等级为4或更低，他们将永久留在那里并必须自行寻找出路。否则，目标将在监狱中停留1分钟，之后会重新出现在他们离开的空间或最近的未占据空间；该目标可以在其每个回合结束时重复该豁免，成功则提前结束此效应。</p>",
+      "effects": {
+        "Iron Gaol": {
+          "name": "铁狱",
+          "description": "<p>在接下来的一分钟内，你被传送至一位大魔鬼炼狱都市的监狱中，之后你将重新出现在你离开的空间或最近的未占据空间。</p><p>你可以在每个自己回合结束时重复该豁免，若成功则提前结束此效应。</p>"
+        }
+      }
+    },
+    "Primal Strike": {
+      "name": "原始打击 Primal Strike",
+      "description": "<p>在8环时，你获得将原始能量注入武器打击的能力。在你的每个回合中一次，当你用武器攻击命中一个生物时，你可以使该攻击对目标造成额外1d8伤害。伤害类型由你在获得此特性时决定，并从以下列表中选择：强酸、寒冷、火焰、闪电、毒素或雷鸣。</p><p>每当你在此职业中提升一个等级时，你可以将此特性的伤害类型更改为列表中的另一种类型。当你达到14环时，额外伤害扩展至2d8。</p>"
+    },
+    "Primal Warding": {
+      "name": "原始守护 Primal Warding",
+      "description": "<p>在7环时，你学会使用原始魔法来设置由近乎隐形力场构成的陷阱。作为一个动作，你困住一个以你30尺内可见点为中心、10尺见方的地面区域，陷阱持续8小时或被触发为止。设置陷阱时，你可以指定任意数量的特定生物不受其影响。发现陷阱需要通过一次针对你奇术豁免DC的智力（调查）检定。</p><p>进入陷阱区域的生物会触发陷阱，必须进行对抗你奇术豁免DC的体质豁免。若失败，该生物受到4d8力场伤害并陷入&amp;reference[blinded]状态1分钟。若成功，该生物受到一半伤害且不陷入目盲。因陷阱目盲的生物可以在其每回合结束时重复该豁免，成功则结束自身该效应。</p><p>当陷阱被触发时，若你位于陷阱1英里范围内，一道精神警报会通过心灵鸣响提醒你。该鸣响能将你从睡眠中唤醒。若你设置多个陷阱，你能分辨具体是哪一个被触发。</p><p>你可以使用此特性设置数量等于你感知调整值（至少一个）的陷阱。完成一次长休后，你重新获得所有已使用的次数。</p>",
+      "activities": {
+        "Set Trap": {
+          "name": "设下陷阱"
+        }
+      }
+    },
+    "Asmodeus's Interdiction": {
+      "name": "阿斯蒙蒂斯的禁令 Asmodeus's Interdiction",
+      "description": "<p>你在注目的地狱骑士等级时习得下列额外戒律恩惠。一旦你习得由该特性授予的戒律恩惠，你将始终知晓它，且不计入你所知晓的戒律恩惠数量。</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.UeTnwMOHtNUWxAj8]{公理印记 Axiomatic Seals} (7环等级; 被动)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.va0L1fPTXJkkMdKu]{破法者 Spellbreaker} (13环等级)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.fP96YvPZo29R0Q0f]{地狱法师 Hell Mage} (18环等级; 被动)</p>"
+    },
+    "Psionic Evolution": {
+      "name": "灵能进化 Psionic Evolution",
+      "description": "<p>任何从你的灵能坚韧特性中获益的生物在1小时内获得以下额外效益：</p><ul><li><p>该生物免疫疾病,毒素伤害,和&reference[poisoned apply=false]状态。</p></li><li><p>该生物的速度增加10尺。</p></li><li><p>在该生物的每个回合中一次,当它通过攻击,异能或法术对目标造成伤害时,它可以对该目标造成等于你智力调整值(至少1点伤害)的额外心灵伤害。</p></li></ul>",
+      "activities": {
+        "utility": {
+          "condition": "当一个生物获得你的灵能坚韧特性的效益时。"
+        }
+      },
+      "effects": {
+        "Psionic Evolution": {
+          "name": "灵能进化",
+          "description": "<p>当你受益于灵能坚韧特性时，你在接下来的一小时内获得以下额外效益：</p><ul><li><p>你对疾病、毒素伤害和&reference[poisoned apply=false]状态免疫。</p></li><li><p>你的移动速度增加10尺。</p></li><li><p>在你的每个回合中，当你通过攻击、异能或法术对目标造成伤害时，你可以额外造成等于天赋者智力调整值的心灵伤害（最低1点伤害）。</p></li></ul>"
+        }
+      }
+    },
+    "Chronopathy Adept": {
+      "name": "时序通晓者 Chronopathy Adept",
+      "description": "<p>当你掷一次显能骰以学习新的时感异能时，你可以掷该骰两次并选择任一结果。</p><p>此外，在你进行一次显能检定以显现时感异能后，你可以重掷该显能骰并选择任一结果。你可以重掷的显能检定次数等于你的智力调整值（至少一次检定），当你完成一次长休后恢复全部使用次数。你单次显能检定只能使用此特性一次。</p>",
+      "activities": {
+        "Adept Chronopathy Manifestation": {
+          "name": "娴熟时感显化",
+          "condition": "在你进行一次显能检定以显现时序感应异能之后。"
+        }
+      }
+    },
+    "Lissome": {
+      "name": "轻盈 Lissome",
+      "description": "<p>当你以一次近战武器攻击命中一个生物时，你可以消耗你的移动力来移动5尺，且不触发借机攻击。</p>"
+    },
+    "Mystic Connection: Giant Weasel": {
+      "name": "神秘联结：巨鼬 Mystic Connection: Giant Weasel",
+      "description": "<p>以一个附赠动作，你使你的牙齿变为尖利的鼬鼠牙齿，持续1分钟，允许你在距离你5尺内的目标身上以附赠动作发动啃咬攻击。这是一次天生武器攻击，造成1d10点穿刺伤害，并且可以使用你的力量或敏捷调整值进行攻击检定和伤害掷骰。直到你完成一次长休前，你无法再次使用此效益。</p>",
+      "activities": {
+        "Sprout Weasel Teeth": {
+          "name": "芽苗黄鼠狼之牙"
+        },
+        "Weasel Bite": {
+          "name": "黄鼠狼啃咬"
+        }
+      },
+      "effects": {
+        "Weasel-Teeth": {
+          "name": "黄鼠狼牙",
+          "description": "<p>在接下来的1分钟内，你的牙齿会变得像黄鼠狼一样尖锐，使你能够以附赠动作对距离你5尺内的目标发动啃咬攻击。这是一次天生武器攻击，造成1d10点穿刺伤害，并且可以使用你的力量或敏捷调整值进行攻击检定和伤害检定。</p>"
+        }
+      }
+    },
+    "Beastheart": {
+      "name": "兽心 Beastheart",
+      "description": "<p>兽心者是一位与野生动物缔结了友谊牵绊的冒险者，并会随着牵绊的加深而从中汲取力量。兽心者与其忠诚的伴日并肩作战，能够应对最危险的冒险，挑战任何怪物并克服任何障碍。</p>",
+      "advancement": {
+        "1Oqv4lEAiFRJ4YGF": {
+          "hint": "你在力量和感知豁免上获得熟练。"
+        },
+        "gKWdMHxUYlZFMc8d": {
+          "hint": "你获得轻甲、中型护甲和盾牌的熟练项。"
+        },
+        "MbTBzVMftotkVVNE": {
+          "hint": "你获得简易武器、战斧、巨斧、长弓、捕网、弯刀和短剑的熟练项。"
+        },
+        "Primal Exploits": {
+          "title": "原始精粹",
+          "hint": "你习得三个自选的原始天赋，详见下文。你在10级和17级时各习得两个额外的自选原始天赋。每当你在此职业中提升一个等级时，你可以选择一个已知的原始天赋，将其替换为另一个原始天赋，且你必须满足相应的兽心等级要求。"
+        },
+        "Companion Bond": {
+          "title": "伴日牵绊",
+          "hint": "在3环时，你选择一种与你的伴日共享的专门牵绊。选择凶蛮牵绊、猎手牵绊、炼狱牵绊、原初牵绊或守护牵绊。你的选择赋予你3环的特性，并在7环、11环和15环时再次赋予特性。"
+        },
+        "Master Caregiver: Animal Handling": {
+          "title": "大师看护者：驯兽",
+          "hint": "同样在3环时，你获得驯兽技能的熟练。如果你已拥有驯兽熟练，则你在使用该技能进行任何属性检定时，你的熟练加值翻倍。"
+        },
+        "Loyal to the End: Charmed & Frightened Immunity": {
+          "title": "至死不渝：免疫魅惑与恐慌",
+          "hint": "你和你的伴日不能被魅惑或恐慌。"
+        },
+        "Primal Strike Damage": {
+          "title": "原初打击伤害"
+        },
+        "Primal Exploit Damage Scaling": {
+          "title": "原始天赋伤害成长",
+          "hint": "《狂怒复仇》与《粉碎冲锋》的伤害成长"
+        },
+        "Mystic Connection": {
+          "title": "神秘联结",
+          "hint": "你与伴日的连结赋予了一种天赋。你的神秘连结效益取决于你的伴日。如果你获得了新的伴日，新伴日的神秘连结效益将取代旧的。"
+        },
+        "Primal Strike Damage Type": {
+          "title": "原始打击伤害类型",
+          "hint": "选择你的原始打击特性造成的伤害类型。每当你在此职业中提升一个等级时，你可以将伤害类型更改为另一种。"
+        }
+      }
+    },
+    "Heat Seeking": {
+      "name": "热源追踪 Heat Seeking",
+      "description": "<p>你的灵能火焰能够追踪并摧毁目标。你通过火焰点燃特性创造的火焰进行的远程攻击拥有120尺射程。你通过火焰点燃特性进行的所有攻击都无视半身掩护和四分之三掩护。</p><p>此外，通过火焰点燃特性进行的攻击造成的火焰伤害提升至1d8 + 你的智力调整值（最低+1）。</p>"
+    },
+    "Belial's Interdiction": {
+      "name": "彼列的禁令 Belial's Interdiction",
+      "description": "<p>你在指定的魔域骑士等级习得以下额外禁制恩惠。一旦你习得此特性授予的禁制恩惠，你将永久掌握它，且不计入你已知禁制恩惠的数量限制。</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.o7opTXUe1pGL4vUP]{谎言面纱 Veil of Lies} (7级)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.dmpis7LQW0UJQbmY]{地狱刺客 Hell's Assassin} (13级, 被动)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.oarmiAKO3kTMADJv]{黑暗咒灭 Dark Malediction} (18级, 被动)</p>"
+    },
+    "Hunter Bond": {
+      "name": "猎人牵绊 Hunter Bond",
+      "description": "<p>你与你的伴日共享着对狩猎的热爱。你们这对搭档是无声的潜行者，共同合作猎杀各种体型的猎物，无论是为了喂养你的交友术还是为了消灭你的敌人。许多拥有此牵绊的兽心者使用远程武器从远处攻击猎物，而他们的伴日则近身完成致命一击。</p>",
+      "advancement": {
+        "Hunter's Instinct: Survival": {
+          "title": "猎人本能：求生",
+          "hint": "如果你尚未拥有求生技能的熟练项，则获得它。你在使用该技能进行任何属性检定时，你的熟练加值将翻倍。"
+        }
+      }
+    },
+    "Primal Pounce (3 Ferocity)": {
+      "name": "原始猛扑 (3 凶暴) Primal Pounce (3 Ferocity)",
+      "description": "<p>当你的伴日以其标志性攻击命中一个生物时，你可以用你的反应命令伴日擒抱目标。目标必须进行一次敏捷豁免。若失败，伴日会抓住目标且目标陷入&amp;reference[grappled]状态（逃脱DC等于你的奇术豁免DC）。若你的伴日攻击目标以外的其他生物，擒抱也会结束。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你的伴日以他们的标志性攻击命中一个生物时。"
+        }
+      }
+    },
+    "Pyrokinetic": {
+      "name": "热能操控 Pyrokinetic",
+      "description": "<p>通过与万物中蕴含的爆炸性能量互动，你可以用心灵创造并操控火焰。对你而言，所掌控的火焰或许是精美的艺术品，是你炽热激情或狂暴的具象化，又或仅仅是完成工作的工具。控火者有时被称为焚焰师，选择专精控火之道者需在火焰学院修习。</p>",
+      "advancement": {
+        "Flame On Damage": {
+          "title": "火焰伤害"
+        },
+        "Flame On Range": {
+          "title": "火焰射程"
+        }
+      }
+    },
+    "Manipulate Terrain": {
+      "name": "操纵地形 Manipulate Terrain",
+      "description": "<p>你可以塑造周围的地形，通过制造抓攫之手、有意识的藤蔓或其他障碍物来对敌人不利。以一个附赠动作，选择你能看见的、距离你60尺内的一个地面点。以该点为中心的20尺方形区域，对你选择的生物成为&amp;reference[difficultterrain]。该效果在该区域持续1分钟，或直到你再次使用此特性。</p><p>一旦区域建立，你可以在每轮使用一个附赠动作将该区域移动最多20尺，或将你能看见的、在该区域内的一个自愿生物移动至该区域内任意未占据空间。</p><p>你能使用该特性的次数等于你的智力调整值（至少一次），完成一次长休后，恢复全部使用次数。</p>",
+      "activities": {
+        "Create Manipulated Zone": {
+          "name": "创造操控区域"
+        },
+        "Move Manipulated Zone": {
+          "name": "移动操控区域"
+        }
+      }
+    },
+    "Shadow Shroud": {
+      "name": "暗影帷幕 Shadow Shroud",
+      "description": "<p>你可以消耗一道印记，以附赠动作在你自身或你触及的一个生物周围编织半实体阴影斗篷。目标在1分钟内获得+2的AC加值。</p>",
+      "effects": {
+        "Shadow Shroud": {
+          "name": "暗影帷幕",
+          "description": "<p>一层半固态的阴影编织成斗篷环绕着你，使你在接下来的一分钟内获得+2的护甲等级加值。</p>"
+        }
+      }
+    },
+    "Resopath": {
+      "name": "瑞索帕斯 Resopath",
+      "description": "<p>通过纯粹的意志力，你创造并重塑物体与生物，字面意义上让你的美梦和敌人的{梦魇 nightmares}成真。造物法师有时被称为创形者，而选择专精此道的施法者将在造物学院中研习。</p>"
+    },
+    "Conflagrant Channel": {
+      "name": "烈焰导能 Conflagrant Channel",
+      "description": "<p>你可以消耗一个印记，以附赠动作传送到你能看见的60尺内一处未占据空间。</p>",
+      "activities": {
+        "Teleport": {
+          "name": "传送术"
+        }
+      }
+    },
+    "Mystic Connection: Owlbear": {
+      "name": "神秘联结：枭熊 Mystic Connection: Owlbear",
+      "description": "<p>以一个动作，你发出一声鼓舞人心的鸣叫。你周围30尺内所有你能看见且能听到你的生物获得等同于你角色等级的临时生命值。直到完成一次长休前，你无法再次使用此效益。</p>"
+    },
+    "Fiendish Traits": {
+      "name": "魔物特质 Fiendish Traits",
+      "description": "<p>在11级时，你的伴日与地狱的联结使其变得更加邪魔化。为你的伴日选择以下一项特质：</p><p><strong>猬皮。</strong> 你的伴日周身生长出尖刺。当5尺内的生物擒抱伴日或以近战攻击命中它时，该生物受到1d10点穿刺伤害。</p><p><strong>邪魔免疫。</strong> 你的伴日皮肤、毛发或其他表皮组织转为赤红色，且免疫火焰和毒素伤害及中毒状态。</p><p><strong>狱火武器。</strong> 你的伴日天生武器（如利齿或爪击）将萦绕黑色火焰。当伴日使用标志性攻击命中目标时，该攻击额外造成1d6火焰伤害。</p><p><strong>魔翼。</strong> 你的伴日背部萌生皮革质感的翅膀，获得40尺飞行速度。若伴日本身具有翅膀，则其羽翼会呈现邪魔特征且飞行速度扩展至40尺。</p><p>每当你完成一次长休，可将伴日的邪魔特质替换为本列表中的其他特质</p><fieldset><legend>Foundry 注</legend><p>此特性包含一系列可赋予伴日的主动效果。“狱火武器”强化效果亦可用于增强伴日的标志性攻击以提供额外伤害。</p></fieldset>",
+      "activities": {
+        "Fiendish Trait: Barbed Hide": {
+          "name": "魔物特性：猬皮"
+        },
+        "Fiendish Trait: Fiendish Immunities": {
+          "name": "魔物特质：魔物免疫"
+        },
+        "Fiendish Trait: Wings": {
+          "name": "魔物特性：翅膀"
+        },
+        "Fiendish Trait: Fiery Weapons": {
+          "name": "魔物特性：炽焰武器"
+        }
+      },
+      "effects": {
+        "Fiendish Trait: Barbed Hide": {
+          "name": "魔物特性：猬皮",
+          "description": "<p>你的全身长满尖刺。当一个距离你5尺内的生物擒抱你或用一次近战攻击击中你时，该生物受到[[/damage 1d10 穿刺]]伤害。</p>"
+        },
+        "Fiendish Trait: Fiendish Immunities": {
+          "name": "魔物特性：魔物免疫",
+          "description": "<p>你的皮肤、毛发或其他颜色变为红色，并且你免疫火焰和毒素伤害以及&amp;reference[poisoned apply=false]状态。</p>"
+        },
+        "Fiendish Trait: Wings": {
+          "name": "邪魔特性：翅膀",
+          "description": "<p>你背上芽苗出皮革般的翅膀并获得40尺的飞行速度。若你已有翅膀，那些翅膀会呈现恶魔般的外观且你的飞行速度扩展至40尺。</p>"
+        },
+        "Fiendish Trait: Fiery Weapons": {
+          "name": "魔物特性：炽焰武器",
+          "description": "<p>你的天生武器，例如牙齿或爪击，将被黑色火焰覆盖。每当你用标志性攻击命中时，该攻击额外造成1d6火焰伤害。</p>"
+        }
+      }
+    },
+    "Spirit Stampede": {
+      "name": "精魄奔腾 Spirit Stampede",
+      "description": "<p>在11级时，当你的伴日进入狂暴状态，它们会召唤出亡者无形的精魄，这些精魄将随同它们一同狂野奔驰。伴日30尺范围内每个由你选择的生物受到等同于伴日凶暴值的力场伤害。</p><fieldset><legend>Foundry 注</legend><p>此特性可随伴日的凶暴值调整，造成相应数值的伤害。</p></fieldset>",
+      "activities": {
+        "damage": {
+          "condition": "当你的伴日进入狂暴状态时。"
+        }
+      }
+    },
+    "Invigorated Rampage": {
+      "name": "活力狂暴 Invigorated Rampage",
+      "description": "<p>在15级时，你和你的伴日能将怒火转化为势不可挡的打击。当你的伴日在狂暴状态下用其标志性攻击命中另一个生物，或当你使用狂暴冲锋赋予的攻击命中另一个生物时，目标将陷入&amp;reference[Blinded]、&amp;reference[Deafened]或对攻击者&amp;reference[Frightened]状态（由你选择），持续至目标下一个回合结束。</p>"
+    },
+    "Mystic Connection: Basilisk": {
+      "name": "神秘联结：石化蜥蜴 Mystic Connection: Basilisk",
+      "description": "<p>以一个附赠动作，你用一层柔韧的石质覆盖皮肤，持续10分钟。当被石质覆盖时，你对钝击、穿刺和挥砍伤害具有抗性。你在完成一次长休前无法再次使用此效益。</p>",
+      "effects": {
+        "Basilisk Stoneskin": {
+          "name": "石化蜥蜴石肤术"
+        }
+      }
+    },
+    "Acheron's Chain": {
+      "name": "修罗场锁链 Acheron's Chain",
+      "description": "<p>当你使用附赠动作将一个印记放置或移动到大型或更小的生物上时，你可以激活此恩惠（无需动作）。你召唤炼狱锁链擒住目标，迫使其进行一次力量豁免。豁免失败时，你可以选择将该生物向你拉动10尺，或使其陷入&amp;reference[grappled]状态直至你的下个回合结束（逃脱DC等于你的禁制豁免DC）。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你使用一个附赠动作将一个印记放置或移动到一个大型或更小的生物上时。"
+        }
+      }
+    },
+    "Magnified Power": {
+      "name": "放大能量 Magnified Power",
+      "description": "<p>在你进行一次显能检定以显现一个持续时间为1分钟或更长的异能后，你可以承受1点应变来使其持续时间翻倍，最多不超过24小时。</p><p>或者，在你进行一次显能检定以显现一个射程为5尺或更远的异能后，你可以承受1点应变来使该异能的射程翻倍。在你进行一次显能检定以显现一个射程为触及的异能后，你可以承受1点应变来使该异能的射程变为30尺。</p>"
+    },
+    "Primal Understanding": {
+      "name": "原始理解 Primal Understanding",
+      "description": "<p>在3环时，你可以说、写并理解原初语和木族语。</p><p>此外，若你尚未拥有自然技能的熟练项，则获得该熟练项。</p>"
+    },
+    "Invoke Hell: Spellblade": {
+      "name": "地狱呼唤：魔剑士 Invoke Hell: Spellblade",
+      "description": "<p>你可以使用一个动作，同时进行一次近战武器攻击并施展一个你已知的、施法时间为一个动作的炼狱骑士法术。</p>"
+    },
+    "Expanded Power": {
+      "name": "扩展威能 Expanded Power",
+      "description": "<p>在你进行一次显能检定以显能一个创造效应区域的异能后，你可以承受等同于该异能秩序的负荷，以将该效应区域的所有维度翻倍。</p>",
+      "activities": {
+        "utility": {
+          "condition": "在你进行一次显能检定以显现一个创造区域效果的能力之后。"
+        }
+      }
+    },
+    "Beastheart Companion": {
+      "name": "野兽之心伴日 Beastheart Companion",
+      "advancement": {
+        "Beyond Instinct": {
+          "title": "超越本能",
+          "hint": "你的伴日在一个你选择的属性值的豁免上获得熟练，并在一个你选择的下列技能上获得熟练。"
+        },
+        "Loyal to the End": {
+          "title": "至死不渝",
+          "hint": "你的伴日不能被魅惑或恐慌。"
+        },
+        "Improved Signature Attack": {
+          "title": "强化标志攻击"
+        },
+        "Beyond Instinct Bonus Ferocity": {
+          "title": "超越本能加值凶蛮"
+        }
+      }
+    },
+    "Devastator": {
+      "name": "毁灭者 Devastator",
+      "description": "<p>以一个动作，你呼唤迪斯帕特的权威。你发动一次武器攻击，并选择数量至多等于你熟练加值的自愿生物，这些生物必须处于你周围30尺范围内且你能看见。你选择的每个生物可以使用反应发动一次武器攻击或施展一个施法时间为1动作的造成伤害的戏法。</p><p>一旦你使用此动作，在完成一次短休或长休前你不能再次使用它。</p>"
+    },
+    "Chronopath": {
+      "name": "时径行者 Chronopath",
+      "description": "<p>你觉醒的心灵操纵着时间的流动，使其成为万物穿行的另一个维度。与你不同，大多数生物在时间中单向行进，但你能来回观察与游荡，将其减速、加速或令其静止。时径行者有时被称为时间大师，追随时径行者专精道路的人都在时间学院中修行。</p>"
+    },
+    "Dispater's Supremacy": {
+      "name": "迪斯帕特的至高权能 Dispater's Supremacy",
+      "description": "<p>你对受禁制生物的攻击在掷出18至20时造成重击。</p><fieldset><legend>Foundry 注</legend><p>你可以在角色卡上启用“迪斯帕特的至高权能”主动效果，以在攻击受禁制生物时启用扩大的重击范围。</p></fieldset>",
+      "effects": {
+        "Dispater's Supremancy": {
+          "name": "迪斯帕特的至高权柄",
+          "description": "<p>你对受禁目标的攻击在掷出18到20时造成重击。</p>"
+        }
+      }
+    },
+    "Devil's Understanding": {
+      "name": "魔鬼的理解 Devil's Understanding",
+      "description": "<p>从你在3环选择此牵绊开始，你就能说、写和理解炼狱语。</p><p>此外，如果你尚未在奥秘或宗教技能上拥有熟练，则获得其中一项（由你选择）的熟练。</p>"
+    },
+    "Talent": {
+      "name": "天赋 Talent",
+      "description": "<p>异能者是灵能的大师——一种通过纯粹意志力创造的不可思议力量之源。异能者能够移动和改变物质、时间、重力、物理法则，或其他生物的心智。在极少数情况下，有生物天生具备驾驭灵能的潜力。但只有那些经历觉醒——激活异能者能力的事件——之人，才能发掘心智的全部力量。</p>",
+      "advancement": {
+        "Psionic Bastion": {
+          "title": "灵能据点",
+          "hint": "你获得了对自身心智和情绪的精通。你无法被魅惑或恐慌，且魔法或灵能无法使你陷入睡眠术。"
+        },
+        "Psionic Bastion: Psychic Resistance": {
+          "title": "灵能据点：心灵抗性",
+          "hint": "你对心灵伤害具有抗性。"
+        },
+        "Psychic Boost Uses": {
+          "title": "心灵强化使用次数",
+          "hint": "在需要完成一次长休之前，你能够使用心灵增幅特性的次数。"
+        },
+        "Manifestation Die": {
+          "title": "显化骰",
+          "hint": "你的显化骰的体型。"
+        },
+        "1st Order Powers": {
+          "title": "1环秩序法术",
+          "hint": "在1环时，你知晓四个1环异能。你在4环时习得一个额外的1环异能，并在10环时再习得一个。显现1环异能无需进行显现检定。"
+        },
+        "ZzpHNvNvUMXxekUO": {
+          "hint": "你获得轻甲的熟练项。"
+        },
+        "lvHIhrld5UvH4QVp": {
+          "hint": "你获得木棍、匕首、轻弩、木杖、投石索和矛的熟练项。"
+        },
+        "em3tYVZIfmP29KFJ": {
+          "hint": "你在体质和智力豁免上获得熟练。"
+        },
+        "Psionic Exertion": {
+          "title": "灵能激涌",
+          "hint": "你可以消耗你的能量来赋予你的异能额外效果。你获得以下一个你选择的灵能消耗选项。你在7环、11环和15环时获得额外选项。当你显现一个异能时，你只能使用一个灵能消耗选项。"
+        },
+        "UIjg4pS46akoHnbz": {
+          "hint": "你根据所在学院的研究重点选择一个灵能专精。每种专精——时源者、变形者、控火者、复生者、念动者或心灵感应者——都会赋予你反映你训练成果的独特特性。或者，如果你的角色摒弃了学院式的专注训练，你可以选择独行客专精。你在2环选择专精时获得其赋予的特性，并在6环、10环和14环再次获得。"
+        }
+      }
+    },
+    "Red Cant": {
+      "name": "红话 Red Cant",
+      "description": "<p>当你进行一次魅力检定时，你可以消耗一枚印记，将9或更低的d20骰结果视为10。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你进行一次魅力检定时。"
+        }
+      }
+    },
+    "Time Pocket": {
+      "name": "时间口袋 Time Pocket",
+      "description": "<p>你通过心灵暂时将一个生物从空间和时间中移除。以一个动作，你获得3点负荷并集中精神扭曲一个你能看见的120尺内生物周围的时间，该生物必须进行一次对抗你异能法术豁免DC的魅力豁免。豁免失败，该生物受到6d10心灵伤害并消失，在1d4 + 1轮后你的回合结束时重新出现。该生物重新出现在其先前占据的空间，或最近的未占据空间。豁免成功，该生物受到一半伤害且其速度减半直到其下个回合结束。</p>",
+      "activities": {
+        "Shunt into Time Pocket": {
+          "name": "分流至时间口袋"
+        }
+      },
+      "effects": {
+        "Shunted into Time Pocket": {
+          "name": "被抛入时间裂隙",
+          "description": "<p>你被抛入了一个时间裂隙之中。你将在1d4 + 1轮后重新出现在你先前占据的位置，或最近的未占据空间。</p>"
+        },
+        "Time Lag": {
+          "name": "时间滞后",
+          "description": "<p>你的移动速度减半，直到你的下一个回合结束。</p>"
+        }
+      }
+    },
+    "Frenzied Charge": {
+      "name": "狂暴冲锋 Frenzied Charge",
+      "description": "<p>从你在3环选择此牵绊起，你学会追随伴日的狂暴步伐。每当你的伴日进入狂暴状态时，你可以使用反应移动至多等于你速度的距离，并在移动结束时对目标发动一次近战武器攻击。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你的伴日进入狂暴状态时。"
+        }
+      }
+    },
+    "Wicked Deception (3 Ferocity)": {
+      "name": "邪恶欺瞒 (3 凶蛮) Wicked Deception (3 Ferocity)",
+      "description": "<p>作为一个动作，选择一个你能看见的30尺内对你怀有敌意的生物。该生物必须进行一次感知豁免，否则会突然将你和你的伴日视为朋友，直到你的下一个回合结束。在此状态下，该生物无法攻击或以其他方式伤害你或你的伴日。</p><p>如果你或你的伴日攻击了受影响的生物，此效果提前结束。对&reference[charmed apply=false]状态免疫的生物不会受到此利用的影响。</p>",
+      "effects": {
+        "Wicked Deception": {
+          "name": "邪恶欺瞒",
+          "description": "<p>你无法重伤术兽心或他们的伴日，直到他们的下一个回合结束。</p><p>如果兽心或他们的伴日攻击你，此效果提前结束。若你对&reference[charmed apply=false]状态免疫，你同样免疫此剥削技。</p>"
+        }
+      }
+    },
+    "Soul Eater": {
+      "name": "噬魂者 Soul Eater",
+      "description": "<p>当你在一个受禁生物身上烙下印记时，你可以激活此恩惠（无需动作）以获得临时生命值，数值等于你的邪术骑士等级。</p>"
+    },
+    "Invoke Hell: Grand Strategist": {
+      "name": "召唤地狱：大战略家 Invoke Hell: Grand Strategist",
+      "description": "<p>你可以命令你的盟友遵循你的阵型(无需动作)。选择距离你60尺内能听到你声音的一个或多个生物，其数量最多等于你的熟练加值。每个目标可以立即移动至多其速度一半的距离且不触发借机攻击。</p>"
+    },
+    "Infernal Majesty": {
+      "name": "炼狱威严 Infernal Majesty",
+      "description": "<p>你的大魔鬼赐予你承载其部分力量的能力。以一个附赠动作，你引导地狱的威能，在10分钟内获得以下效益：</p><ul><li><p>你获得火焰、寒冷和暗蚀伤害抗性。</p></li><li><p>你的背部显现双翼，获得60尺飞行速度。</p></li><li><p>当你使用血偿时，可使10尺内一个你能看见的敌人受到等同于你生命骰掷骰数值的伤害。</p></li><li><p>当你以武器攻击命中时，你的恐怖力场造成额外2d8伤害而非1d8。</p></li></ul><p>持续时间内，若你死亡，可选择让躯体在爆燃中消失，仅留下装备。若如此做，你的身体将在[[/r 1d6]]天后于地狱某处重塑。身体重塑后，你将复活并恢复全部生命值。</p><p>施展炼狱威仪后，必须完成一次长休才能再次使用。</p>",
+      "effects": {
+        "Infernal Majesty": {
+          "name": "炼狱威严",
+          "description": "<p>你的大魔鬼赐予你承载其部分力量的能力，在接下来的一分钟内赋予你以下效益：</p><ul><li><p>你获得火焰、寒冷和暗蚀伤害抗性。</p></li><li><p>你的背部显现双翼，获得60尺飞行速度。</p></li><li><p>当你使用血偿时，可使10尺内一个你能看见的敌人受到等同于你生命骰掷骰数值的伤害。</p></li><li><p>当你以武器攻击命中时，你的恐怖力场造成额外2d8伤害而非1d8。</p></li></ul><p>持续期间，若你死亡，可选择让躯体在烈焰迸发中消散，仅留下装备。若如此做，你的身体将在[[/r 1d6]]天后于地狱某处重塑。身体重塑后，你将复活并恢复全部生命值。</p><p></p>"
+        }
+      }
+    },
+    "Bring Them Down (4 Ferocity)": {
+      "name": "击倒他们 (4点凶性) Bring Them Down (4 Ferocity)",
+      "description": "<p>当你的伴日用其标志性攻击命中一个生物时，你可以用你的反应命令伴日将目标拽倒在地。该目标必须进行一次力量豁免，否则就会倒地&amp;reference[prone]。</p>"
+    },
+    "Poison Rain (8 Ferocity)": {
+      "name": "毒雨 (8 凶暴) Poison Rain (8 Ferocity)",
+      "description": "<p>以一个动作，你使剧毒的绿雨降落在你能看见的、距离你60尺内的一点为中心的20尺立方区域内。除了你和你的伴日外，区域内的每个生物必须进行一次体质豁免，否则直到你的下个回合结束前陷入&reference[poisoned]状态。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "除了你和你的伴日。"
+          }
+        }
+      }
+    },
+    "Improved Signature Attack": {
+      "name": "强化标志攻击 Improved Signature Attack",
+      "description": "<p>在5环时，当你的伴日以标志性攻击命中时，该攻击额外造成一枚武器伤害骰。此效果在11环时扩展至额外两枚武器伤害骰，在17环时扩展至额外三枚武器伤害骰。</p><p>此外，你的伴日的攻击和凶蛮动作造成的伤害，在克服对非魔法攻击和伤害的抗性与免疫时，视为魔法伤害。</p><fieldset><legend>Foundry 注</legend><p>此特性附带三个主动效果。当你的伴日达到11环和17环时，请将当前主动效果替换为对应版本以提升伴日的标志性攻击伤害骰。</p></fieldset>",
+      "effects": {
+        "Improved Signature Attack (5th Level)": {
+          "name": "强化标志性攻击（5环）"
+        },
+        "Improved Signature Attack (11th Level) (Copy)": {
+          "name": "强化标志性攻击 (11级) (复制)"
+        },
+        "Improved Signature Attack (17th Level) (Copy)": {
+          "name": "强化标志性攻击（17级）（复制）"
+        }
+      }
+    },
+    "Shock Absorption": {
+      "name": "冲击吸收 Shock Absorption",
+      "description": "<p>通过运用你的心灵能量，你为自己提供免受伤害的防护。每当你受到伤害时，你可以用你的反应获得1点心灵负荷并使该伤害减半。</p>",
+      "activities": {
+        "utility": {
+          "condition": "每当你受到伤害时。"
+        }
+      }
+    },
+    "Shielded Mind": {
+      "name": "屏蔽心灵 Shielded Mind",
+      "description": "<p>你的心智本能地保护你免受风险。你在智力、感知和魅力豁免上具有优势，并且免疫那些允许其他生物读取你的思想、判断你是否在说谎、获知你的阵营或获知你的生物类型的能力、法术和其他超自然效果。此外，生物只能在你允许的情况下才能通过心灵感应与你交流。</p>"
+    },
+    "Mind Wings": {
+      "name": "心灵之翼 Mind Wings",
+      "description": "<p>你心灵的力量让你能轻松移动自己和盟友。你获得60尺的飞行速度。</p><p>此外，以一个附赠动作，你可以将60尺内一个你能看见的自愿生物朝任意方向移动最多15尺，包括向上。被向上移动的生物在该移动结束时立刻开始下落。</p>",
+      "activities": {
+        "Move Creature": {
+          "name": "移动生物"
+        }
+      },
+      "effects": {
+        "Mind Wings": {
+          "name": "心灵之翼",
+          "description": "<p>你心灵的力量让你能够轻松地移动自己和盟友。你获得60尺的飞行速度。</p>"
+        }
+      }
+    },
+    "Metamorphosis Adept": {
+      "name": "蜕变专家 Metamorphosis Adept",
+      "description": "<p>当你投掷显现骰以学习一个新的蜕变之力时，你可以投掷该骰两次并选择任一结果使用。</p><p>此外，在你进行一次显现检定以施展蜕变之力后，你可以重掷显现骰并选择任一结果使用。你可以重掷的显现检定次数等于你的智力调整值（至少一次检定），完成一次长休后恢复全部使用次数。你每次只能对单一显现检定使用此特性一次。</p>",
+      "activities": {
+        "Adept Metamorphosis Manifestation": {
+          "name": "娴熟变形显化",
+          "condition": "在你进行一次显能检定以显现一个变形异能后。"
+        }
+      }
+    },
+    "Thunderous Rebuke (6 Ferocity)": {
+      "name": "雷霆反噬 (6 威能) Thunderous Rebuke (6 Ferocity)",
+      "description": "<p>当你或你的伴日被一个距离该目标5尺内的生物以近战攻击命中时，你可以用你的反应迫使攻击者进行一次体质豁免。若豁免失败，攻击者受到3d6雷鸣伤害并被推离目标10尺。若豁免成功，攻击者受到一半伤害且不会被推开。</p><p>当你达到17级时，伤害扩展至4d6。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你或你的伴日被一个距离该目标5尺内的生物以近战攻击命中时。"
+        }
+      }
+    },
+    "Abating Seal": {
+      "name": "消解印记 Abating Seal",
+      "description": "<p>当你可见的一个生物对你或你30尺内的一个盟友造成伤害时，你可以消耗一个印记作为反应，使目标受到的伤害减少等于1d10 + 你邪术骑士等级一半的数值（向下取整）。</p>",
+      "activities": {
+        "Abate Harm": {
+          "name": "消解重伤术",
+          "roll": "伤害减免",
+          "condition": "当你可见的一个生物对你或你30尺内的一个盟友造成伤害时，"
+        }
+      }
+    },
+    "Drag Them (4 Ferocity)": {
+      "name": "拖拽他们（4点凶蛮） Drag Them (4 Ferocity)",
+      "description": "<p>当你的伴日用其标志性攻击命中一个大型或更小的生物，且伴日和目标都站在地面上时，你可以用你的反应命令你的伴日移动目标。目标必须进行一次力量豁免。若失败，伴日朝你选择的任意方向移动至多其一半步行速度，并将目标一同拖拽。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你的伴日以其标志性攻击命中一个大型或更小的生物，且伴日和目标都站在地面上时。"
+        }
+      }
+    },
+    "Marked for Death": {
+      "name": "终亡者 Marked for Death",
+      "description": "<p>你对于自己标记为死亡的目标尤为熟习。在你的每个回合中，你对受禁制生物发起的第一次攻击具有优势。</p>"
+    },
+    "Hellish Frenzy": {
+      "name": "地狱狂怒 Hellish Frenzy",
+      "description": "<p>当你在一只受禁制生物30尺内开始你的回合时，你可以消耗一枚印记来被地狱之力激怒，直到你的下个回合开始。在被激怒期间，你的移动速度翻倍，你的AC获得+2加值，并且当你执行一个攻击动作时，你可以进行一次额外的武器攻击。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你在一个受禁生物的30尺内开始你的回合时。"
+        }
+      },
+      "effects": {
+        "Hellish Frenzy": {
+          "name": "地狱狂怒",
+          "description": "<p>你被地狱的力量所激怒，直至你的下一个回合开始。在被激怒期间，你的移动速度翻倍，你的AC获得+2加值，并且当你执行一个攻击动作时，你可以额外进行一次武器攻击。</p>"
+        }
+      }
+    },
+    "Sutekh's Interdiction": {
+      "name": "苏泰克的禁制 Sutekh's Interdiction",
+      "description": "<p>你在注目的破誓者等级学会以下额外的禁制恩惠。一旦你通过此特性学会一个禁制恩惠，你将始终知晓它，且它不计入你已知的禁制恩惠数量。</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.pf7ePFPTMFrvZf7l]{秽邪转换 Foul Interchange} (7级)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.vXpqZdkMBFNHqsA8]{赤红赠礼 Sanguine Gift} (13级)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.geXUKxec9bettwQj]{以血还血 Blood for Blood} (18级; 被动)</p>"
+    },
+    "Primordial Bond": {
+      "name": "原初语牵绊 Primordial Bond",
+      "description": "<p>你与你的伴日共享着与自然界魔法尤为深厚的联结。通过驾驭伴日的狂怒，你可以运用元素的原初力量来对抗敌人。</p>",
+      "advancement": {
+        "Freezing Strike Damage": {
+          "title": "冻结打击伤害"
+        },
+        "Lava Geyser Damage": {
+          "title": "熔岩喷泉伤害"
+        },
+        "Lightning Eruption Damage": {
+          "title": "闪电爆发伤害"
+        },
+        "Plant Prison Damage": {
+          "title": "植物囚笼伤害"
+        },
+        "Primal Understanding: Languages": {
+          "title": "原始理解：语言",
+          "hint": "你可以说、写和理解原初语和木族语。"
+        },
+        "Primal Understanding: Nature": {
+          "title": "原始理解：自然",
+          "hint": "如果你尚未拥有，则你获得对自然技能的熟练。"
+        },
+        "Nature Exploits": {
+          "title": "自然利用",
+          "hint": "你获得一个自选的自然利用。你在11级时获得一个额外的自选自然利用。每当你在此职业中提升一个等级时，你可以选择一个你已知的自然利用，并将其替换为另一个自然利用，你必须拥有相应的兽心等级才能选择该利用。"
+        }
+      }
+    },
+    "Psionic Bastion": {
+      "name": "灵能据点 Psionic Bastion",
+      "description": "<p>你获得了对心智和情绪的精通。你无法被&amp;reference[charmed apply=false]或&amp;reference[frightened apply=false]，且魔法或灵能无法使你陷入睡眠。此外，你对心灵伤害具有抗性。</p>"
+    },
+    "Axiomatic Seals": {
+      "name": "公理印记 Axiomatic Seals",
+      "description": "<p>阿斯蒙蒂斯的秘密允许你将显现的力量注入你的印记。当你消耗一个或多个印记对生物造成伤害时，你可以激活此恩惠（无需动作）为每个印记的伤害骰添加你的魅力调整值（最低为1）。</p><fieldset><legend>Foundry 注</legend><p>为应用秩序印记的额外伤害，此特性具有一个伤害行动，可根据消耗的印记数量进行使用和调整。</p></fieldset>",
+      "activities": {
+        "Additional Seal Damage": {
+          "name": "额外印记伤害",
+          "condition": "当你消耗一个或多个印记来对一个生物造成伤害时。"
+        }
+      }
+    },
+    "Infernal Conduit": {
+      "name": "炼狱导管 Infernal Conduit",
+      "description": "<p>你可以以自身为代价强化盟友——或为了一己私利汲取敌人的生命力。你拥有一个炼狱导管骰池，其中的骰子为d10。随着炼魔骑士等级提升，池中炼狱导管骰的数量会相应增加，具体数值显示于炼魔骑士表格的炼狱导管骰栏中。</p><p>作为一个动作，你可以接触另一个生物并消耗池中的一枚或多枚骰子。目标必须进行一次对抗你禁制豁免DC的体质豁免。生物可以自愿在此豁免中失败。投掷消耗的骰子并选择下列效应之一：</p><p><strong>激励。</strong> 豁免失败时，目标恢复等同于你所投总数的生命值，而你受到等同于该总数的暗蚀伤害。豁免成功时，目标恢复半数生命值，而你仍受到等同于所投总数的暗蚀伤害。无论豁免成功与否，该暗蚀伤害都无法以任何方式减免，且若此伤害将你的生命值降至0，你会陷入&amp;reference[unconscious]昏迷状态并自动稳定伤势。</p><p><strong>吞噬。</strong> 豁免失败时，目标受到等同于你所投总数的暗蚀伤害，而你恢复等同于该总数的生命值。豁免成功时，目标受到半数伤害，而你恢复等同于目标实际所受伤害值的生命值。无论豁免成功与否，或目标选择在此效应豁免中失败，该暗蚀伤害都无法以任何方式减免。当你的职业等级达到11级时，目标在此效应豁免失败时还会获得一级力竭。此力竭等级可照常消除，且生物因所有炼魔骑士的炼狱导管特性而累计承受的力竭等级不得超过三级。</p><p>你在完成一次长休后恢复所有已消耗的炼狱导管骰。</p>",
+      "activities": {
+        "Infernal Conduit: Invigorate": {
+          "name": "炼狱导管：激励"
+        },
+        "Invigorate": {
+          "name": "精神焕发"
+        },
+        "Devour": {
+          "name": "吞噬"
+        }
+      }
+    },
+    "Strain to Maintain": {
+      "name": "竭力维持 Strain to Maintain",
+      "description": "<p>每当你为维持从此职业获得的一个或多个异能而进行的体质豁免失败时，你可以承受负荷来保持所有你正专注的异能生效。此负荷等于那些异能秩序的总和。</p>",
+      "activities": {
+        "Gain Strain": {
+          "name": "获得压力",
+          "condition": "当你为维持本职业一个或多个威能的专注而进行体质豁免失败时。"
+        }
+      }
+    },
+    "Swift Retribution": {
+      "name": "迅捷报应 Swift Retribution",
+      "description": "<p>当一个被禁制的生物引发你进行借机攻击时，你可以不消耗反应发动该攻击，前提是你未处于&reference[incapacitated apply=false]状态。一旦你获得此恩惠的效益，直到你下个回合开始前都无法再次获得。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当一个被禁制的生物引发你进行借机攻击时。"
+        }
+      }
+    },
+    "Submit": {
+      "name": "提交 Submit",
+      "description": "<p>当你施展一个你所知的炼狱骑士法术时，你可以消耗一个被禁制生物身上的两个印记（无需动作），使其对抗该法术的豁免检定获得劣势。</p>"
+    },
+    "Cold Primal Strike": {
+      "name": "寒冷原始打击 Cold Primal Strike",
+      "description": "<p>在你的每个回合中一次，当你以武器攻击命中一个生物时，你可以使该攻击对目标造成额外1d8冷冻伤害。</p><p>每当你在此职业中提升一个等级时，你可以将此特性的伤害类型更改为列表中的另一种类型。当你达到14级时，额外伤害扩展至2d8。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当你以武器攻击命中一个生物时。"
+        }
+      }
+    },
+    "Break the Earth (14 Ferocity)": {
+      "name": "破土裂地 (14 威猛) Break the Earth (14 Ferocity)",
+      "description": "<p>以一个动作，你在距离你60尺范围内的地面、地板或其他表面上打开一个10尺半径的坑洞。该坑洞最多可达50尺深，具体深度取决于其开口处下方的实际深度。当坑洞开启时，每个位于该区域内的生物必须进行一次敏捷豁免。若失败，该生物坠入坑中，每坠落10尺受到1d6钝击伤害并落地&amp;reference[倒地]。若成功，该生物移动至坑洞边缘一个由它选择的未占据空间。生物无需进行属性检定即可攀爬坑洞的粗糙墙壁。</p>",
+      "activities": {
+        "Pit Fall Damage": {
+          "name": "坠落伤害"
+        }
+      }
+    },
+    "Companion": {
+      "name": "伴日 Companion",
+      "description": "<p>在1环等级，你获得一个伴日生物，它在你的冒险中陪伴你，与你并肩战斗、探索和生活。你可以选择本增刊或其他MCDM增刊中的任意伴日。@UUID[Compendium.mcdm-class-bundle.books.JournalEntry.mcdmcbbeastheart.JournalEntryPage.00tesbeastheart0#companions]{伴日 Companion}部分提供了十五种可供兽心者选择的伴日生物信息，以及使用伴日的规则信息(包括凶暴和进入狂暴)。</p><p>你与伴日之间的超自然联系将它的生命与你的绑定在一起，使你能够帮助伴日克服最严重的创伤。如果你的伴日失去了生命值或已经死亡，你可以花费1分钟时间冥想它的精魄。随后，伴日恢复全部生命值，若已死亡则复活，而你获得一级力竭。如果伴日的身体被摧毁，它会在你5尺范围内重塑形体。</p><fieldset><legend>Foundry 注</legend><p>当你在兽心者职业升级获得伴日时，可以授予伴日@UUID[Compendium.mcdm-class-bundle.classes.Item.OH0gz82nD3wiOTfr]{兽心者伴日 Beastheart Companion}子职业，以便在相应等级赋予它们\\\"超越本能\\\"和\\\"忠诚至终\\\"等特性。</p><p>此外，你可以进入此物品的\\\"放置伴日\\\"和\\\"复活伴日\\\"活动并将你的伴日与之关联，从而在使用此特性时召唤它。</p></fieldset>",
+      "activities": {
+        "Place Companion": {
+          "name": "放置伴日"
+        },
+        "Revive Companion": {
+          "name": "复活伴日"
+        }
+      }
+    },
+    "Primal Shout (6 Ferocity)": {
+      "name": "原始战吼（6点凶蛮） Primal Shout (6 Ferocity)",
+      "description": "<p>作为一个动作，你发出一声威吓性的咆哮。你选择的每个能听到你声音、位于你15尺范围内的生物必须进行一次感知豁免，若失败则直到你的下个回合结束前对你陷入&amp;reference[恐慌]状态。</p>"
+    },
+    "Lightning Primal Strike": {
+      "name": "闪电原初打击 Lightning Primal Strike",
+      "description": "<p>在你的每个回合中一次，当你以武器攻击命中一个生物时，你可以使该攻击对目标造成额外的1d8闪电伤害。</p><p>每当你在此职业中提升一个等级，你可以将此特性的伤害类型更改为列表中的另一种类型。当你达到14级时，额外伤害扩展至2d8。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当你以一次武器攻击命中一个生物时。"
+        }
+      }
+    },
+    "Vile Transmogrification": {
+      "name": "邪恶嬗变 Vile Transmogrification",
+      "description": "<p>你发现了两种运用阿斯蒙蒂斯魔法的新方式：</p><p><strong>恢复印记。</strong>在你的回合中，你可以用一个附赠动作消耗一个法术位，以恢复等同于该法术位环数的印记数量。</p><p><strong>恢复法术位。</strong>在你的回合中，你可以用一个附赠动作消耗任意数量的印记，以恢复一个环数等于该数量三分之一的法术位。例如，你可以消耗六个印记来恢复一个2环法术位。</p>",
+      "activities": {
+        "Regain Seals": {
+          "name": "重获印记"
+        },
+        "Regain Spell Slot: 1st Level": {
+          "name": "恢复法术位：1环"
+        },
+        "Regain Spell Slot: 2nd Level": {
+          "name": "恢复法术位：2环"
+        }
+      }
+    },
+    "Mystic Connection: Earth Elemental": {
+      "name": "神秘联结：土元素 Mystic Connection: Earth Elemental",
+      "description": "<p>以一个附赠动作，你将身体转变为泥土和石头，持续10分钟。在此形态下，你可以穿过由泥土或石头构成的非魔法物件。如果你在物件内部结束回合，你会受到1d10力场伤害并被弹回进入该物件时所在的空格。直到完成一次长休前，你无法再次使用此效益。</p>",
+      "activities": {
+        "Earthglide": {
+          "name": "地行"
+        },
+        "Shunt Damage": {
+          "name": "转移伤害",
+          "condition": "当你在一个物件内结束你的回合时。"
+        }
+      },
+      "effects": {
+        "Earthglide": {
+          "name": "地行",
+          "description": "<p>在接下来的10分钟内，你将身体转化为泥土与岩石。在此形态下，你可穿行于由泥土或岩石构成的非魔法物件。若你在某物件内部结束回合，将受到[[/damage 1d10 force]]伤害并被弹回进入该物件前所在的空间。</p>"
+        }
+      }
+    },
+    "Rapid Manifestation": {
+      "name": "快速显化 Rapid Manifestation",
+      "description": "<p>你使你周围的时间发生偏移，加速显现异能所需的时间。当你显现一个异能时，你可以使用该特性以以下任一方式缩短其显现时间：</p><ul><li><p>你显现一个通常需要附赠动作或反应的异能（无需动作）。你在同一回合内不能施展法术或显现另一个异能，除了施法时间为1动作的戏法或显现时间为1动作的1环异能。</p></li><li><p>你使用一个附赠动作来显现一个通常需要动作的异能。</p></li><li><p>你使用一个动作来显现一个通常需要1分钟的异能。</p></li><li><p>如果一个异能的显现时间大于1分钟，你可以在其正常时间的一半内显现它。</p></li></ul><p>你能使用该特性的次数等于你的智力调整值（至少1次），完成一次长休后，恢复全部使用次数。</p>"
+    },
+    "Reduce Stress": {
+      "name": "减轻压力 Reduce Stress",
+      "description": "<p>你已训练自己的心智以承受更少的压力。当你因显能而获得压力时，你可以将获得的压力减半，最少为1点压力。一旦你使用了此特性，在完成一次短休或长休前，你无法再次使用它。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你因显现异能而获得负荷时。"
+        }
+      }
+    },
+    "Raw Power": {
+      "name": "原始力量 Raw Power",
+      "description": "<p>你原始的精神力量对敌人造成更沉重的打击。你可以在展现任何1环异能时，将你的智力调整值加到其中一次伤害骰上。</p>"
+    },
+    "Hellish Versatility": {
+      "name": "地狱万用性 Hellish Versatility",
+      "description": "<p>在你的每个回合中一次，你可以施展一个你的邪术骑士戏法，以替代你的额外攻击特性所提供的一次攻击。</p>"
+    },
+    "Hunter's Instinct": {
+      "name": "猎人的本能 Hunter's Instinct",
+      "description": "<p>在3环时，你的直觉得到提升，使你成为一位令人生畏的追踪者并赋予你更敏锐的洞察力。若你尚未掌握求生技能，则获得该技能的熟练项。你使用该技能进行属性检定时，熟练加值将翻倍；当你进行感知检读取生物意图或辨识生物是否说谎时，可用求生替代洞悉。</p>"
+    },
+    "Infernal Exploits": {
+      "name": "炼狱语专长 Infernal Exploits",
+      "description": "<p>在3级时，你获得一个自选的炼狱语异能，其运作方式与你的原始异能相同，并在适用时使用你的异能豁免DC。你所选择的异能必须是3级时可用的类型。</p><p>你在11级时获得一个额外的炼狱语异能。每当你在此职业中提升一个等级时，你可以选择一个已知的炼狱语异能，将其替换为另一个炼狱语异能，且你必须具备相应的兽心等级才能进行替换。</p>"
+    },
+    "Invoke Hell: Vitalize": {
+      "name": "地狱呼唤：活力 Invoke Hell: Vitalize",
+      "description": "<p>你可以用振奋的活力鼓舞你的盟友（无需动作）。在1分钟内，你周围30尺内每个你选择的生物在进行属性检定时获得加值，该加值等于你的熟练加值。</p>",
+      "effects": {
+        "Invoke Hell: Vitalize (PB +5)": {
+          "name": "唤起地狱：活力 (PB +5)",
+          "description": "<p>在接下来的1分钟内，你进行的任何属性检定获得+5加值。</p>"
+        },
+        "Invoke Hell: Vitalize (PB +6)": {
+          "name": "唤起地狱：活力 (熟练加值 +6)",
+          "description": "<p>在接下来的1分钟内，你进行的任何属性检定获得+6加值。</p>"
+        },
+        "Invoke Hell: Vitalize (PB +4)": {
+          "name": "唤起地狱：活力 (熟练加值 +4)",
+          "description": "<p>在接下来的1分钟内，你进行的任何属性检定获得+4加值。</p>"
+        },
+        "Invoke Hell: Vitalize (PB +3)": {
+          "name": "唤起地狱：活力（熟练加值+3）",
+          "description": "<p>在接下来的1分钟内，你进行的任何属性检定获得+3加值。</p>"
+        },
+        "Invoke Hell: Vitalize (PB +2)": {
+          "name": "唤起地狱：活力 (PB+2)",
+          "description": "<p>在接下来的1分钟内，你进行的任何属性检定获得+2加值。</p>"
+        }
+      }
+    },
+    "Emotional Intelligence": {
+      "name": "情感智力 Emotional Intelligence",
+      "description": "<p>你觉醒的心灵对他人的情绪极为敏感。每当你进行一次利用欺瞒、洞悉、威吓或游说技能的属性检定时，你获得等于你智力调整值的检定加值（最低+1）。</p>",
+      "effects": {
+        "Emotional Intelligence": {
+          "name": "情绪智力",
+          "description": "<p>你那被唤醒的心灵对他人的情绪极为敏感。每当你进行一次利用欺瞒、洞悉、威吓或游说技能的属性检定时，你获得等于你智力调整值的检定加值（最低+1）。</p>"
+        }
+      }
+    },
+    "Soul's Doom": {
+      "name": "灵魂末日 Soul's Doom",
+      "description": "<p>当你使用附赠动作放置或移动印记时，你可以将印记烙入目标的灵魂。在1分钟内，每当该受禁生物受到伤害时，其将额外受到等于你熟练加值的伤害。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你使用一个附赠动作来放置或移动一个印记时。"
+        }
+      },
+      "effects": {
+        "Soul's Doom": {
+          "name": "灵魂末日",
+          "description": "<p>炼狱封印在接下来的一分钟内灼烧你的灵魂，导致你每当你受到伤害时，额外受到等同于狱铁骑士熟练加值的伤害。</p>"
+        }
+      }
+    },
+    "By the Throat": {
+      "name": "扼喉 By the Throat",
+      "description": "<p>当你使用一个附赠动作将一个印记放置或移动到一个体型不大于你一级的生物身上时，该生物必须进行一次感知豁免，豁免失败则被&amp;reference[束缚]直到其下一回合结束。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你使用一个附赠动作在一个体型不大于你一级的生物身上放置或移动一个印记时。",
+          "affects": {
+            "special": "一个体型至多比你大一级的生物。"
+          }
+        }
+      }
+    },
+    "Chosen Quarry": {
+      "name": "选定猎物 Chosen Quarry",
+      "description": "<p>从你在3环选择此牵绊开始，你和你的伴日可以锁定一个生物作为你们的猎物。每当你的伴日在你回合开始时获得凶暴且未进入狂暴时，你可以消耗4点凶暴来标记一个距离你90尺内的生物（无需动作）。</p><p>该生物成为你的猎物，持续1分钟，或直到你使用此特性将另一个目标标记为你的猎物。每当你或你的伴日用武器攻击命中你的猎物，或通过凶暴动作对其造成伤害时，该猎物额外受到1d6伤害。</p>",
+      "activities": {
+        "Mark Quarry": {
+          "name": "标记猎物",
+          "condition": "每当你的伴日在你的回合开始时获得凶暴且没有进入狂暴状态时。"
+        }
+      },
+      "effects": {
+        "Chosen Quarry": {
+          "name": "选定猎物",
+          "description": "<p>在接下来的1分钟内，每当兽心者或其伴日用武器攻击命中你，或通过凶蛮动作对你造成伤害时，你将额外受到1d6伤害。</p>"
+        }
+      }
+    },
+    "Hurricane Blow (3 Ferocity)": {
+      "name": "飓风打击 (3 凶蛮) Hurricane Blow (3 Ferocity)",
+      "description": "<p>每当你执行攻击动作时，都能激活此战技。本回合中你首次以武器攻击命中生物时，该攻击除造成常规效果外，还可将目标向你远离的方向推动至多10尺。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你执行一个攻击动作时。"
+        }
+      }
+    },
+    "Mystic Connection: Blood Hawk": {
+      "name": "神秘联结：血鹰 Mystic Connection: Blood Hawk",
+      "description": "<p>以一个附赠动作，你获得等同于你步行速度的飞行速度，持续1小时。你在完成一次长休前无法再次获得此效益。</p>",
+      "effects": {
+        "Blood Hawk Flight": {
+          "name": "血鹰飞行",
+          "description": "<p>你的飞行速度等于你的步行速度。</p>"
+        }
+      }
+    },
+    "Telepath": {
+      "name": "心灵感应者 Telepath",
+      "description": "<p>你的灵能之力可以读取并操纵他人的心智。仅凭一个念头，你就能在极远距离与他人无声交流，揭露隐藏的秘密，并将敌人转化为盟友。心灵感应者有时被称为读心者，而那些正式研习心灵感应专精的人会在心智学院进行深造。</p>"
+    },
+    "Plant Prison (5 Ferocity)": {
+      "name": "植物囚笼 (5 凶蛮) Plant Prison (5 Ferocity)",
+      "description": "<p>以一个动作，选择你能看见的30尺内的一个生物。带刺的藤蔓从目标下方的地面爆发，目标必须进行一次敏捷豁免。若豁免失败，目标受到4d6点穿刺伤害并被&amp;reference[束缚]直到你的下个回合开始。若豁免成功，目标受到一半伤害且不被束缚。</p><p>当你达到17级时，伤害扩展至5d6。</p>",
+      "effects": {
+        "Plant Prison": {
+          "name": "植物囚笼",
+          "description": "<p>你被带刺的藤蔓&amp;reference[restrained apply=false]直到兽心者的下一个回合开始。"
+        }
+      }
+    },
+    "Chains from Hell (8 Ferocity)": {
+      "name": "地狱锁链 (8 凶暴) Chains from Hell (8 Ferocity)",
+      "description": "<p>以一个动作，你显化出火焰锁链，试图缠绕至多三个你能看见的30尺内你选择的生物。每个目标必须进行一次敏捷豁免。豁免失败时，目标受到4d6火焰伤害并被&amp;reference[restrained]直到你的下个回合结束。豁免成功时，目标受到一半伤害且不被束缚。</p><p>当你达到17级时，伤害扩展至5d6。</p>"
+    },
+    "Fascinating Power": {
+      "name": "迷人力量 Fascinating Power",
+      "description": "<p>当一个生物对抗你显现的能力的豁免失败时，你可以激活此灵能消耗选项。如果该生物的挑战等级等于或低于你的天赋等级（或者对于没有挑战等级的生物，其等级等于或低于你的天赋等级），你获得2点负荷且目标被你&amp;reference[魅惑]持续1分钟或直到你或你的同伴对其造成任何伤害。如果该生物的挑战等级或等级高于你的天赋等级，你不会获得负荷且目标不受影响。</p><p>以此方式被魅惑的生物对你保持友好。当该状态对目标结束时，它们会得知自己曾被你所魅惑。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当一个生物对抗你显现的能力的豁免失败时。"
+        }
+      },
+      "effects": {
+        "Fascinating Power": {
+          "name": "迷人力量",
+          "description": "<p>你受到该奇才的&amp;reference[charmed apply=false]影响，持续1分钟或直到他们或其同伴对你做出任何伤害性行为。</p><p>以此方式被魅惑期间，你会对该奇才保持友善。此效应结束时，你会意识到自己曾被该奇才魅惑。</p>"
+        }
+      }
+    },
+    "Sentinel Companion": {
+      "name": "哨卫伴日 Sentinel Companion",
+      "description": "<p>在11级时，你的伴日凶猛的警戒心驱使它们攻击那些试图伤害你狼群其他成员的懦夫。当一个生物位于你的伴日5尺范围内，并对除你或你的伴日以外的生物发动攻击时，你可以消耗2点凶暴，使你的伴日利用其反应对攻击者发动一次标志性攻击。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当一个生物在你伴日5尺范围内对一个除你或你伴日以外的生物发动攻击时。"
+        }
+      }
+    },
+    "Last Word": {
+      "name": "最后遗言 Last Word",
+      "description": "<p>当你生命值降至0且仍有未放置的印记时，你体内的地狱火拒绝消亡。你可以消耗最多3个印记并释放一次环绕自身的爆炸（无需动作）。每消耗一个印记投掷3d6。由你选择的30尺内每个生物必须进行一次敏捷豁免。豁免失败时，该生物受到等同于你骰出总和的火焰伤害。豁免成功时，该生物承受半数伤害。若此爆炸对至少一个单一生物造成伤害，你恢复等同于你骰出总和的生命值。</p>"
+    },
+    "Beast Vitality": {
+      "name": "野兽活力 Beast Vitality",
+      "description": "<p>当你于3环选择此牵绊时，你与伴日的连接增强了你的自然活力。你的生命值上限增加3，且在此职业中每提升一个等级时再增加1。</p>",
+      "effects": {
+        "Beast Vitality": {
+          "name": "野兽活力",
+          "description": "<p>你的生命值上限增加3，并且每当你在此职业中提升一个等级时，生命值上限再增加1。</p>"
+        }
+      }
+    },
+    "Allied Weather": {
+      "name": "协同天候 Allied Weather",
+      "description": "<p>在15级时，你伴日周围的天气响应你的意志，痛击伤害它们的敌人。每当你伴日拥有至少1点凶猛值，且被10尺内的生物以近战攻击命中时，选择以下一项效果：</p><ul><li><p>攻击者必须进行一次力量豁免，豁免难度等于你的奇术DC，否则倒地。</p></li><li><p>攻击者必须进行一次敏捷豁免，豁免难度等于你的奇术DC，否则受到等同于你伴日凶猛值的闪电伤害。</p></li></ul><fieldset><legend>Foundry 注</legend><p>此特性可根据伴日的凶猛值调整，造成正确数值的伤害。</p></fieldset>",
+      "activities": {
+        "Allied Weather: Knock Prone": {
+          "name": "协同天候：击倒倒地",
+          "condition": "每当你的伴日拥有至少1点凶暴且被10尺内一个生物以近战攻击命中时。"
+        },
+        "save": {
+          "condition": "每当你的伴日拥有至少1点威猛，并且被一个在其10尺范围内的生物以近战攻击命中时。"
+        }
+      }
+    },
+    "Unleash Hell": {
+      "name": "释放地狱 Unleash Hell",
+      "description": "<p>当你对一个受禁制生物燃烧一个或多个印记时，你可以用你的反应在其周围释放地狱能量的爆炸。目标5尺内每个由你选择的生物必须进行一次敏捷豁免。豁免失败时，该生物受到与印记对受禁制生物造成的伤害相同数量和类型的伤害。豁免成功时，该生物受到一半伤害。</p>"
+    },
+    "Hell's Assassin": {
+      "name": "地狱刺客 Hell's Assassin",
+      "description": "<p>每当你对受禁制生物进行武器攻击或使用印记确定伤害时，若骰子结果为1或2，你可以重掷该骰子并必须使用新的结果。</p><fieldset><legend>Foundry 注</legend><p>当前系统无法追踪对受禁制生物进行武器伤害骰时出现的1点或2点骰值，但印记伤害骰中的1点和2点会自动触发重掷机制。</p></fieldset>",
+      "effects": {
+        "Hell's Assassin": {
+          "name": "地狱刺客"
+        }
+      }
+    },
+    "Dispater's Blessing": {
+      "name": "迪斯帕特的祝福 Dispater's Blessing",
+      "description": "<p>当迪斯帕特接纳你成为他的邪术骑士时，你获得重型护甲的熟练项。</p>"
+    },
+    "Interdiction": {
+      "name": "禁制 Interdiction",
+      "description": "<p>你可以将地狱般的魔法力量注入你的烙印，强化其效果。</p><p>已知禁制恩惠。你从职业描述末尾的“禁制恩惠”部分选择一个你想要的禁制恩惠。随着你在此职业中等级的提升，你将获得额外的自选恩惠，具体如地狱骑士职业表中的禁制恩惠栏所示。每个新恩惠必须是你当前等级可以学习的。例如，当你达到7级时，你可以学习一个2环或7环的新恩惠。</p><p>每当你提升一个地狱骑士等级时，你可以选择一个你已知的恩惠，并将其替换为另一个你可以学习的恩惠。</p><p>使用禁制恩惠。一些恩惠允许你消耗未放置的烙印来激活能力，而另一些则强化你所有的烙印，或赋予你对被禁制生物的优势。</p><p>那些提供被动（或“常驻”）效益的恩惠，例如2环的迅捷报应恩惠，会标有“被动”标签。你无需消耗烙印或执行动作即可从你已知的被动恩惠中获益。所有其他恩惠，例如2环的消减烙印恩惠，必须在回合中激活（例如，通过消耗一个烙印）。无论你知道多少个非被动恩惠，每回合你只能激活其中一个。</p>"
+    },
+    "Hellsight": {
+      "name": "地狱视觉 Hellsight",
+      "description": "<p>你可以消耗一个印记作为动作，获得&amp;reference[truesight]至60尺范围，持续1小时。</p>",
+      "effects": {
+        "Hellsight": {
+          "name": "地狱视觉",
+          "description": "<p>在接下来的1小时内，你获得&amp;reference[truesight]</p>"
+        }
+      }
+    },
+    "Ignore Strain": {
+      "name": "无视重负 Ignore Strain",
+      "description": "<p>你如此频繁地使用力量，以至于你的身体已经适应了它们带来的负荷。每当你完成一次长休时，选择身体负荷、精神负荷或灵魂负荷。在完成下一次长休前，你无视所选类型负荷的效果。</p>"
+    },
+    "Dispater's Interdiction": {
+      "name": "迪斯帕特的禁令 Dispater's Interdiction",
+      "description": "<p>你在注目的破法者等级学会以下额外禁制恩惠。一旦你学会由该特性授予的禁制恩惠，你将始终知晓它，且不计入你已知的禁制恩惠数量。</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.vqmflbqTMKJ0BScP]{念动封印 Telekinetic Seal} (7环)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.aopH9Vyd0CyyL2UJ]{扼喉之握 By the Throat} (13环)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.P66Ld9GXWrxt1HSz]{迪斯帕特至上权 Dispater's Supremacy} (18环; 被动)</p>"
+    },
+    "Mind Surgeon": {
+      "name": "精神外科医生 Mind Surgeon",
+      "description": "<p>仅凭意志之力，你便能愈合生物的创伤或治愈其病痛。以一个动作，你触及一个生物（可以是你自己）并获得不超过你熟练加值的负载值。你每以此方式获得1点负载值，目标就恢复1d10生命值，或者你治愈目标所患的一种疾病，或中和其身上的一种毒素。</p>",
+      "activities": {
+        "Restore Hit Points": {
+          "name": "恢复生命值"
+        },
+        "Neutralize Disease & Poison": {
+          "name": "中和疾病与毒素",
+          "roll": "疾病与毒素被中和"
+        }
+      }
+    },
+    "Terrorizing Force": {
+      "name": "恐怖力场 Terrorizing Force",
+      "description": "<p>你的攻击被赋予了毁灭性的力量。当你获得此特性时，选择一个伤害类型：寒冷、火焰、暗蚀或毒素。当你以武器攻击命中时，额外造成1d8点所选类型的伤害。完成一次长休后，你可以选择不同的伤害类型。</p>",
+      "activities": {
+        "Swap Damage Type": {
+          "name": "替换伤害类型"
+        }
+      },
+      "effects": {
+        "Terrorizing Force: Fire": {
+          "name": "恐怖力场：火焰",
+          "description": "<p>你的攻击被赋予了毁灭性的力量。当你以武器攻击命中时，额外造成1d8点火焰伤害。完成一次长休后，你可以选择一种不同的伤害类型。</p>"
+        },
+        "Terrorizing Force: Necrotic": {
+          "name": "恐怖力场：暗蚀",
+          "description": "<p>你的攻击被赋予了毁灭性的力量。当你以武器攻击命中时，你将额外造成1d8点暗蚀伤害。完成一次长休后，你可以选择一种不同的伤害类型。</p>"
+        },
+        "Terrorizing Force: Poison": {
+          "name": "恐怖力场：毒素",
+          "description": "<p>你的攻击被赋予了毁灭性的力量。当你以武器攻击命中时，你将额外造成1d8毒素伤害。完成一次长休后，你可以选择一种不同的伤害类型。</p>"
+        },
+        "Terrorizing Force: Cold": {
+          "name": "恐怖力场：寒冷",
+          "description": "<p>你的攻击被赋予了毁灭性的力量。当你用武器攻击命中时，你额外造成1d8冷冻伤害。完成一次长休后，你可以选择一种不同的伤害类型。</p>"
+        }
+      }
+    },
+    "Crushing Charge (8 Ferocity)": {
+      "name": "碾压冲锋 (8点凶暴) Crushing Charge (8 Ferocity)",
+      "description": "<p>以一个动作，你沿直线移动至多等同于你速度的距离，且不触发借机攻击。你可以穿过其他生物的空间，但你的移动必须终止于一个未占据空间。除你的伴日外，你穿过的每个空间中的生物必须进行一次力量豁免。若豁免失败，该生物受到4d6钝击伤害并应击倒地。若豁免成功，该生物受到一半伤害且不会应击倒地。</p><p>当你达到17级时，此伤害扩展至5d6。</p>"
+    },
+    "Elemental Shield (3 Ferocity)": {
+      "name": "元素护盾 (3 凶猛值) Elemental Shield (3 Ferocity)",
+      "description": "<p>当你能够看见的30尺内的一个生物受到强酸、寒冷、火焰、闪电或雷鸣伤害时，你可以使用一个反应来使该受影响生物获得对该伤害类型的抗性（包括针对触发此次反应的攻击），直到其下个回合结束。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你所见的30尺内的一个生物受到强酸、寒冷、火焰、闪电或雷鸣伤害时。"
+        }
+      },
+      "effects": {
+        "Elemental Shield: Fire": {
+          "name": "元素护盾：火焰",
+          "description": "<p>直到你的下个回合结束，你拥有火焰伤害抗性。</p>"
+        },
+        "Elemental Shield: Acid": {
+          "name": "元素护盾：强酸",
+          "description": "<p>直到你的下个回合结束，你获得强酸伤害抗性。</p>"
+        },
+        "Elemental Shield: Cold": {
+          "name": "元素护盾：寒冷",
+          "description": "<p>直到你的下个回合结束，你具有对冷冻伤害的抗性。</p>"
+        },
+        "Elemental Shield: Lightning": {
+          "name": "元素护盾：闪电",
+          "description": "<p>直到你的下个回合结束前，你获得闪电伤害抗性。</p>"
+        },
+        "Elemental Shield: Thunder": {
+          "name": "元素护盾：雷鸣",
+          "description": "<p>直到你的下个回合结束，你对雷鸣伤害具有抗性。</p>"
+        }
+      }
+    },
+    "Moloch's Blessing": {
+      "name": "摩洛克的祝福 Moloch's Blessing",
+      "description": "<p>当摩洛克接纳你成为他的地狱骑士时，你获得游说或欺瞒技能的熟练（由你选择）。若你已拥有所选技能的熟练，则你使用该技能进行任何属性检定时，熟练加值翻倍。</p><p>此外，你的巧舌如簧特性额外赋予你一门语言（总计在3环时掌握三门语言，在9环时掌握四门）。当你使用此特性获得的语言交谈时，能听见并理解你话语的生物会潜意识感受到你的魔鬼影响力，这使你在为影响这些生物而进行的魅力检定时具有优势。</p>"
+    },
+    "Hell Mage": {
+      "name": "地狱法师 Hell Mage",
+      "description": "<p>当你或30尺内的盟友在对抗敌人施加的法术或其他魔法效果的豁免中成功时, 你可以立即在该敌人身上放置一个或多个印记, 数量最多等于你的熟练加值。</p>"
+    },
+    "Bend Flame": {
+      "name": "弯曲火焰 Bend Flame",
+      "description": "<p>对控火术的精通使你能够将火焰转化为原始能量并依你的意志操控它。每当你展现一个控火术异能时，你可以选择以下选项之一：</p><ul><li><p>你可以将该异能造成的任何火焰伤害改为力场伤害</p></li><li><p>选择受该异能影响、数量等于该异能秩序的生物。被选中的生物自动通过该异能的豁免检定，且若它们在成功豁免时通常只受一半伤害，则它们不受任何伤害。</p></li></ul>"
+    },
+    "Shared Connection": {
+      "name": "共享连接 Shared Connection",
+      "description": "<p>你可以在自己与其他生物之间建立不可思议的心灵连接。当你通过高等心灵感应特性建立心灵感应链接时，每个被连接的生物获得以下效益：</p><ul><li><p>该生物可以选择聆听、嗅闻并观看其他任一被连接生物所体验的感官信息。</p></li><li><p>每个生物可以以附赠动作执行协助动作来帮助其他被连接生物。</p></li><li><p>生物可以使用协助动作使其他被连接生物的攻击检定获得优势，即使执行协助动作的生物不在攻击目标5尺范围内。</p></li></ul>",
+      "effects": {
+        "Telepathic Bond: Shared Connection": {
+          "name": "心灵联结：共享牵绊",
+          "description": "<p>当你从异能者的高等心灵感应特性中获益时，你获得以下效益：</p><ul><li><p>你可以选择聆听、嗅闻并看见任何其他连接生物所经历的一切。</p></li><li><p>你可以用一个附赠动作执行协助动作来帮助另一个连接生物。</p></li><li><p>即使执行协助动作的生物不在攻击目标5尺范围内，你仍可使用协助动作使另一个连接生物的攻击检定获得优势。</p></li></ul>"
+        }
+      }
+    },
+    "Blood for Blood": {
+      "name": "血债血偿 Blood for Blood",
+      "description": "<p>每当一名盟友从受禁生物处受到伤害时，该受禁生物将受到等同于你熟练加值的暗蚀伤害。</p>",
+      "activities": {
+        "Retaliation Damage": {
+          "name": "反击伤害",
+          "condition": "当一名盟友从被禁生物处受到伤害时。",
+          "affects": {
+            "special": "一个被禁制的生物。"
+          }
+        }
+      }
+    },
+    "Psionic Specialization": {
+      "name": "灵能专精 Psionic Specialization",
+      "description": "<p>你根据学院专攻方向选择一种灵能专精。每种专精——时源使、形变者、炎能士、复源使、念动师或心灵师——都会赋予你反映你训练成果的独特特性。或者，如果你的角色摒弃了学院的专精训练，你可以选择独行客专精。</p><p>你在2环等级选择专精时获得特性，并在6环、10环和14环等级再次获得。</p>"
+    },
+    "Slippery Ploy": {
+      "name": "滑溜伎俩 Slippery Ploy",
+      "description": "<p>当一个生物以攻击、法术或其他魔法效应将你作为目标时，你可以用反应在其身上施加一道印记，并迫使该生物进行一次魅力豁免。豁免失败时，该生物必须选择新目标，或失去此次攻击或效应。</p>",
+      "activities": {
+        "save": {
+          "condition": "当一个生物以一次攻击、法术或其他魔法效应将你作为目标时。"
+        }
+      },
+      "effects": {
+        "Interdiction Seal": {
+          "name": "禁制印记",
+          "description": "<p>一道隐形的炼狱语印记已被施加于你的身体，并持续一分钟。</p>"
+        }
+      }
+    },
+    "Inexorable": {
+      "name": "不屈不挠 Inexorable",
+      "description": "<p>你为每个距离你5尺内的敌对生物获得+1豁免加值，最高加值为+5。</p><fieldset><legend>Foundry 注</legend><p>Foundry目前无法追踪此能力范围内生物的数量。进行豁免检定时，你可以使用环境加值栏位将此额外加值应用至你的豁免。</p></fieldset>"
+    },
+    "Bury the Dead (16 Ferocity)": {
+      "name": "埋葬死者（16点凶蛮） Bury the Dead (16 Ferocity)",
+      "description": "<p>当你和你的伴日位于一个生物5尺内时，你可以使用一个动作，在该生物周围掀起一阵充满碎屑和泥土的恶毒旋风，该生物必须进行一次敏捷豁免。若豁免失败，该生物受到8d6钝击伤害，被击倒&amp;reference[prone]并被&amp;reference[restrained]。若豁免成功，目标受到一半伤害，且不会被击倒或束缚。以此方式被束缚的生物可以使用一个动作进行一次力量（运动）检定对抗你的 Exploit 豁免DC，若检定成功则使自己获得自由。</p>",
+      "effects": {
+        "Buried": {
+          "name": "被掩埋",
+          "description": "<p>你处于&amp;reference[prone apply=false]和&amp;reference[restrained apply=false]状态，被碎石瓦砾掩埋。你可以使用一个动作进行力量（运动）检定，成功则挣脱束缚。</p>"
+        }
+      }
+    },
+    "Hellspeaker": {
+      "name": "地狱代言人 Hellspeaker",
+      "description": "<p><em>这些魅力超凡且善于操控的地狱代言人效忠于摩洛克，他们在战场上穿梭，胁迫敌人成为不知情的盟友。</em></p><p>摩洛克统治着谎言之城冥河，但他的势力范围远不止于此。地狱最杰出的政治家和外交官通过摩洛克的巧妙操纵而声名鹊起。他们对他忠心耿耿，因为他们知道没有摩洛克他们什么都不是——因此他的权力在地狱各处回荡。</p><p>摩洛克的破法骑士是能言善辩的附魔师，用巫术和诡计哄骗敌人自满，直到他们醒来发现自己已受荒芜秩序指挥。这些地狱代言人训练于被称为红话或地狱黑话的艺术。通过理解敌人并将微妙的巫术编织进日常言语，地狱代言人能让敌人感受、思考或做出几乎任何事情以加速地狱的胜利。</p><p>在时间长河中，地狱代言人享有笑面流氓和虚张声势恶棍的名声。作为任何谈判中的资产，地狱代言人深知在谎言的世界里，真相可以像钢铁一样成为强大的武器。</p><h3>欺瞒信条</h3><p>地狱代言人在加入荒芜秩序时向摩洛克宣誓。遵循这些信条，他们渗透到权力的最远端，操纵所有受其影响之人。</p><p><strong>我的声音即是武器。</strong>即使我的附魔法术失败，只要敌人能听见我，他们就是我的。</p><p><strong>怀疑即是确定。</strong>我不需要说服敌人，只需播下怀疑的种子等待它结果。</p><p><strong>信任我。</strong>我每说一个谎言，就会讲十次真话。总是撒谎的人什么也没说。</p><p><strong>绝不说同样的谎言两次。</strong>过度使用的技巧会变得太可预测。保持移动，切换目标，让他们不断猜测。</p>",
+      "advancement": {
+        "Moloch's Blessing: Additional Forked Tongue Language": {
+          "title": "摩洛克的祝福：额外叉状舌语言",
+          "hint": "你的<strong>分叉之舌</strong>特性使你获得一门额外的语言，你可以说（但不能读或写）。"
+        },
+        "Moloch's Blessing": {
+          "title": "摩洛克的祝福",
+          "hint": "你获得游说或欺瞒技能的熟练项（由你选择）。如果你已拥有所选技能的熟练项，则你使用该技能进行任何属性检定时，你的熟练加值将翻倍。"
+        }
+      }
+    },
+    "Brutal": {
+      "name": "残暴 Brutal",
+      "description": "<p>当你用双手持握的近战武器命中一个体型至多比你大一等的生物时，你可以将目标水平移动5尺。若你选择这么做，你可以随后消耗你的移动力进入它们离开的空间。</p>"
+    },
+    "Telekinetic": {
+      "name": "念动力 Telekinetic",
+      "description": "<p>你的灵能让你能够物理性地操控其他物体和生物。整个世界如同一场木偶戏，而你则是牵线人，拉动无形的丝线，令石块、人群乃至建筑腾空飞起。念动者有时被称为移动者，而那些专精于念动之道的人，皆在运动学院中修行。</p>"
+    },
+    "Aid Us, Friend (3 Ferocity)": {
+      "name": "援助我们，交友术 (3 威能) Aid Us, Friend (3 Ferocity)",
+      "description": "<p>每当你进行攻击动作时，你都能激活此战技。在你攻击前或攻击后，你的伴日可以以附赠动作执行协助动作。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你执行攻击动作时。"
+        }
+      }
+    },
+    "Expanding Fury (6 Ferocity)": {
+      "name": "扩张怒火（6点威能） Expanding Fury (6 Ferocity)",
+      "description": "<p>当你的伴日使用一个影响特定距离内生物的血性动作时，你可以用你的反应将该距离扩大10尺。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你的伴日使用一个影响特定距离内生物的动作时。",
+          "affects": {
+            "special": "你的伴日。"
+          }
+        }
+      }
+    },
+    "Extra Attack": {
+      "name": "额外攻击 Extra Attack",
+      "description": "<p>在你的回合中，每当你执行攻击动作时，你可以攻击两次而非一次。</p>"
+    },
+    "Rend (12 Ferocity)": {
+      "name": "撕裂 (12点凶蛮) Rend (12 Ferocity)",
+      "description": "<p>以一个动作，选择你能看见的5尺内的一个生物和你的伴日。你对目标发动一次近战武器攻击，而你的伴日对目标发动一次标志性攻击（无需动作）。如果你们都命中并对目标造成伤害，则目标被击倒&amp;reference[prone]并额外受到6d6点由任一攻击造成的伤害类型（由你选择）。</p>",
+      "activities": {
+        "Use Exploit": {
+          "name": "使用异能"
+        },
+        "Rend Damage": {
+          "name": "撕裂伤害"
+        }
+      }
+    },
+    "Imagination Creation": {
+      "name": "想象造物术 Imagination Creation",
+      "description": "<p>你能凭空变出你所需的物件。以一个动作，你创造任意大型或更小的普通物件，该物件出现在你5尺内一个未被占据的空间中，且你正接触该物件。你可以使用该特性来创造你曾接触过的任何物件的复制品，例如一把钥匙或一尊特定龙类的雕像。此特性不能用于制造具有功能的法术部件。</p><p>如果你停止接触该物件超过5分钟，或直到你再次使用该特性，你所创造的物件就会消失。你能使用该特性的次数等于你的智力调整值（至少一次），完成一次长休后，你重获全部使用次数。</p>",
+      "activities": {
+        "Create Imaginary Object": {
+          "name": "创造虚构物件"
+        }
+      }
+    },
+    "Illrigger": {
+      "name": "Illrigger",
+      "description": "<p>统治地狱七城的大魔鬼们永无止境地策划着阴谋。每一位都永恒地密谋着使其他大魔鬼臣服——登上地狱王座，统一七城及居住其中的每一个炼狱生物，并率领一支无穷无尽的魔鬼大军跨越时间，直至所有世界化为灰烬。</p><p>这些大魔鬼的精英特工便是邪术骑士。作为地狱的骑士、刺客、法师与恐怖突击队，邪术骑士掌控战场、瓦解敌方势力，并执行其大魔鬼的炼狱意志。</p>",
+      "advancement": {
+        "em3tYVZIfmP29KFJ": {
+          "hint": "你获得体质和魅力豁免的熟练。"
+        },
+        "ZzpHNvNvUMXxekUO": {
+          "hint": "你获得轻甲、中型护甲和盾牌的熟练。"
+        },
+        "lvHIhrld5UvH4QVp": {
+          "hint": "你获得简易武器和军用武器的熟练项。"
+        },
+        "Multiclass Proficiencies": {
+          "title": "兼职职业熟练项",
+          "hint": "如果地狱骑士不是你初始职业，以下是你在第一级作为地狱骑士时获得的熟练项：轻甲、中型护甲、盾牌、简易武器和军用武器。"
+        },
+        "Forked Tongue: Infernal": {
+          "title": "分叉之舌：炼狱语",
+          "hint": "你能本能地说、读、写炼狱语。"
+        },
+        "Forked Tongue: Additional Languages": {
+          "title": "分叉之舌：额外语言",
+          "hint": "你可以说两种你选择的其他语言，但你不能读或写它们。"
+        },
+        "Forked Tongue: Additional Language": {
+          "title": "分叉之舌：额外语言",
+          "hint": "你可以额外说一门自选语言，但不能阅读或书写它们。"
+        },
+        "Burning Seals Damage": {
+          "title": "燃烧印记伤害"
+        },
+        "Maximum Seals": {
+          "title": "最大封印数",
+          "hint": "你在休息前能在一个生物身上放置的印记数量。"
+        },
+        "Interdict Boons": {
+          "title": "禁制恩惠",
+          "hint": "你习得一个你选择的禁制恩惠。随着你在此职业中等级提升，你将获得额外的你选择的恩惠，如邪骑职业表的禁制恩惠栏所示。每当你提升一个邪骑等级时，你可以选择一个你已知的恩惠，并将其替换为另一个你可以习得的恩惠。"
+        },
+        "Diabolic Contract": {
+          "title": "魔鬼契约",
+          "hint": "你与一位欢迎你加入荒芜秩序的大魔鬼签订了一份恶魔契约。选择毁灭建筑师(阿斯蒙蒂斯)、地狱代言人(摩洛克)、痛苦杀手(迪斯帕特)、血骑士(苏泰克)或暗影大师(彼列)作为你的大魔鬼。这些子职的详细信息在职业描述之后给出。你的选择将在3环、7环、11环和15环时授予你特性。"
+        },
+        "Combat Mastery": {
+          "title": "战斗精通",
+          "hint": "你的大魔鬼赋予你在某种战斗形式中的非凡技艺。从以下魔契骑士战斗专精中选择其一："
+        },
+        "Terrorizing Force": {
+          "title": "恐怖力场"
+        },
+        "Infernal Conduit Dice": {
+          "title": "炼狱导管骰",
+          "hint": "你所拥有的炼狱导管骰子数量。"
+        }
+      }
+    },
+    "Rejuvenating Ferocity": {
+      "name": "复苏之怒 Rejuvenating Ferocity",
+      "description": "<p>同样在6环时，你的伴日可以汲取自身的狂怒在战斗中恢复活力。你可以使用一个附赠动作来消耗任意数量的伴日凶暴值，伴日恢复的生命值等于所消耗的凶暴值。</p><p>你能使用该特性的次数等于你的感知调整值（至少一次），完成一次长休后，恢复全部使用次数。</p>",
+      "activities": {
+        "heal": {
+          "affects": {
+            "special": "你的伴日。"
+          }
+        }
+      }
+    },
+    "Flame On": {
+      "name": "烈焰燃起 Flame On",
+      "description": "<p>以一个动作，你以灵能方式在你身上创造出一团火焰球。该火焰不会伤害你或你的装备，并在20尺半径内提供明亮光照，以及额外20尺的微光光照。你以此方式一次只能创造一团火焰。</p><p>作为创造火焰所用动作的一部分，或者如果你先前已创造火焰，则可以以一个动作用它进行一次近战或远程灵能攻击。如果你进行远程攻击，你可以将火焰投向距离你最多60尺远的目标。命中时，目标受到等于1d6 + 你智力调整值（最低+1）的火焰伤害。任何被火焰命中的可燃物件，若未被穿着或携带，则会点燃。</p><p>火焰持续存在，直到你用它进行攻击或解散它（无需动作）。如果你陷入&amp;reference[incapacitated apply=false]状态，火焰消失。</p><p>随着你在此职业中达到更高等级，此特性允许你创造不止一团火焰。当你持有多团火焰时进行攻击，你会同时使用所有火焰，为每团火焰分别进行攻击检定，并可将它们导向单一目标或数个目标。你在5级时可创造两团火焰，11级时三团，17级时四团。</p>",
+      "activities": {
+        "Toss Flame (Melee)": {
+          "name": "投掷火焰（近战）"
+        },
+        "Toss Flame (Ranged)": {
+          "name": "掷火（射程）"
+        }
+      }
+    },
+    "Truth Hurts": {
+      "name": "真相伤人 Truth Hurts",
+      "description": "<p>当你开启敌人的心智时，你迫使他们的秘密倾泻而出。每当一个生物在你施展的心灵感应异能豁免失败时，你可以选择以下一项：</p><ul><li><p>你获得任意数量的负荷，然后对该生物造成等同于你以此法获得的每点负荷2d8点的心灵伤害。</p></li><li><p>你获得2点负荷，以心灵感应向该生物提出一个问题，他们会尽其所能地以心灵感应诚实且完整地回答。无法被魅惑的生物免疫此效应。</p></li></ul>",
+      "activities": {
+        "Truth Hurts: Psychic Damage": {
+          "name": "真相伤人：心灵伤害"
+        },
+        "Truth Hurts: Answer Question": {
+          "name": "真相伤人：回答问题",
+          "condition": "当一个生物在你施展的心灵感应异能豁免失败时。"
+        }
+      }
+    },
+    "Destructive Power": {
+      "name": "毁灭之力 Destructive Power",
+      "description": "<p>当你为一种力量骰伤害时，你可以获得等于该力量秩序一半的负荷（最小1点负荷），使你骰出的一半伤害骰子造成该骰子的最大值，而非骰出的数值。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你为一项异能骰伤害时。"
+        }
+      }
+    },
+    "Psychic Boost": {
+      "name": "心灵强化 Psychic Boost",
+      "description": "<p>你学会集中精神，调动储备的心智力量来恢复身体和大脑。你可以使用一个附赠动作来消除等于你的熟练加值的消耗。一旦你使用了此特性，直到完成一次长休前你都无法再次使用它。</p><p>从12级开始，你在两次长休之间可以使用此特性两次，从17级开始，在两次长休之间可以使用三次。</p>",
+      "activities": {
+        "Remove Strain": {
+          "name": "移除压力",
+          "roll": "压力移除"
+        }
+      }
+    },
+    "Imbue Projectile (14 Ferocity)": {
+      "name": "注入投射物（14点威能） Imbue Projectile (14 Ferocity)",
+      "description": "<p>以一个动作，你进行一次远程武器攻击。无论攻击是否命中，一股能量波都会从攻击所使用的武器或弹药中爆发，以你的目标为中心。目标20尺范围内的每个生物（包括目标，但不包括你的伴日）必须进行一次敏捷豁免，豁免失败则受到10d6力场伤害，豁免成功则伤害减半。</p>",
+      "activities": {
+        "save": {
+          "affects": {
+            "special": "所有生物，不包括你的伴日。"
+          }
+        }
+      }
+    },
+    "Resopathy Adept": {
+      "name": "共振病专家 Resopathy Adept",
+      "description": "<p>当你掷显现骰以学习新的共鸣异能时，你可以掷该骰两次并选择任一结果。</p><p>此外，当你进行显现检定以施展共鸣异能后，你可以重掷显现骰并选择任一结果。你能重掷的显现检定次数等于你的智力调整值（至少一次检定），且完成一次长休后恢复全部使用次数。此特性对单个显现检定仅能使用一次。</p>",
+      "activities": {
+        "Adept Resopathy Manifestation": {
+          "name": "娴熟反移情显化",
+          "condition": "在你进行一次显能测试以显现一项灵能异术后。"
+        }
+      }
+    },
+    "Full Force": {
+      "name": "全力场 Full Force",
+      "description": "<p>通过极度的专注，你将全部力量倾注于一项显现的力量中。当你使用一项力量造成伤害时，你可以直接造成最大伤害，而无需投掷伤害骰。一旦你使用了此特性，在完成一次短休或长休前无法再次使用。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你使用异能造成伤害时。"
+        }
+      }
+    },
+    "Synchronized Stealth": {
+      "name": "同步隐匿 Synchronized Stealth",
+      "description": "<p>在11级时，你和你的伴日学会在眨眼间同时隐匿无踪。当你或你的伴日执行躲藏动作时，若另一方能够躲藏，则可作为反应执行躲藏动作。此外，当你在伴日5尺范围内执行躲藏动作时，该动作相关的敏捷（隐匿）检定具有优势。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你的伴日采取躲藏动作时。"
+        }
+      }
+    },
+    "Decay": {
+      "name": "腐朽 Decay",
+      "description": "<p>你可以用你的意念快速加速物体的老化，使其化为尘埃。你可以使用一个动作，在接触一个未被其他生物携带或穿戴的普通物件时获得1点消耗。如果该物件是中型或更小的，它会瓦解成一堆尘埃。如果该物件是大型或更大的，你会瓦解该物件的一个5尺立方部分。</p><p>此外，在接触一个构装生物时，你可以使用一个动作获得最多等同于你熟练加值的消耗。该构装生物必须进行一次感知豁免，对抗你的异能豁免DC，豁免失败时受到2d10暗蚀伤害，每获得1点消耗就造成一次伤害，豁免成功则伤害减半。</p>",
+      "activities": {
+        "Decay Object": {
+          "name": "腐化物件"
+        },
+        "Degrade Construct": {
+          "name": "退化构装生物",
+          "condition": "当你接触一个构装生物时。",
+          "affects": {
+            "special": "一个构装生物。"
+          }
+        }
+      }
+    },
+    "Fiendish Form": {
+      "name": "魔物形态 Fiendish Form",
+      "description": "<p>在15级时，你的伴日可以成为覆盖着鳞片的地狱之子。以一个附赠动作，你可以消耗6点凶暴值将你的伴日转变为邪魔形态，持续1分钟。在此形态下，你的伴日会发生以下变化：</p><ul><li><p>它是一个邪魔。</p></li><li><p>它对钝击、穿刺和挥砍伤害具有抗性。</p></li><li><p>它在为抵抗法术或其他魔法效应而作的豁免上具有优势。</p></li></ul><fieldset><legend>Foundry 注</legend><p>你可以将此特性提供的主动效果应用至你的伴日。</p></fieldset>",
+      "effects": {
+        "Fiendish Form": {
+          "name": "邪魔形态",
+          "description": "<p>在接下来的1分钟内,你获得以下效益:</p><ul><li><p>你的生物类型变为邪魔。</p></li><li><p>你对钝击、穿刺和挥砍伤害具有抗性。</p></li><li><p>你为抵抗法术和其他魔法效应而作的豁免具有优势。</p></li></ul>"
+        }
+      }
+    },
+    "Let's Make a Deal": {
+      "name": "让我们做个交易 Let's Make a Deal",
+      "description": "<p>你可以与盟友达成一项交易——当然，代价不菲。以一个附赠动作，你选择60尺内一个能听到你声音且自愿的盟友。</p><p>在接下来的10分钟内，该生物可以选择在其进行的一次攻击检定或豁免骰中获得优势，并在同一骰值上增加等同于你熟练加值的加值。若此次攻击命中或豁免成功，该生物获得等同于你痛苦骑士等级的临时生命值。若此次攻击未命中或豁免失败，该生物在其下一次攻击检定或豁免骰中具有劣势。此劣势无法以任何方式被优势抵消。一个生物同时只能与你达成一项交易。</p><p>你能使用该特性的次数等于你的熟练加值。当你完成一次长休后，你重获所有已消耗的使用次数。</p>",
+      "activities": {
+        "Strike a Deal": {
+          "name": "达成交易"
+        },
+        "heal": {
+          "condition": "当一个与你达成交易的生物以攻击命中或在其豁免中成功时。"
+        }
+      },
+      "effects": {
+        "Struck Deal": {
+          "name": "达成交易",
+          "description": "<p>在接下来的10分钟内，你可以选择在你进行的一次攻击检定或豁免中获得优势，并在同一骰上增加一个[[lookup @prof]]加值。</p><p>若此攻击命中或此豁免成功，你获得等于炼狱骑士等级的临时生命值。</p><p>若此攻击未命中或此豁免失败，你在下一次进行的攻击检定或豁免中具有劣势。此劣势无法通过任何方式的优势抵消。你每次只能与炼狱骑士订立一项契约。</p>"
+        }
+      }
+    },
+    "Loyal to the End": {
+      "name": "至死不渝 Loyal to the End",
+      "description": "<p>在13级时，即使有害的魔法也无法动摇你和你的伴日对彼此及交友术的忠诚。你和你的伴日不能被&amp;reference[charmed apply=false]或&amp;reference[frightened apply=false]。</p>"
+    },
+    "Manifest Ally": {
+      "name": "显现盟友 Manifest Ally",
+      "description": "<p>你心灵的力量创造出一个或多个前来援助你的活体生物。以一个附赠动作，你获得负载来创造一个无魂生物，其资料卡为你选择的一种野兽，其挑战等级不高于你的天赋等级除以3（向下取整）。你获得的负载等于该生物的挑战等级（最低为1）。</p><p>该生物出现在你能看见的、你30尺内一个未被占据的空间，并在你的先攻值之后行动。该生物能理解你说的任何语言，并尽其所能遵循你的命令。如果你没有向该生物下达任何命令，他们会自卫对抗敌对生物，但除此之外不会执行任何动作。如果你创造的盟友生命值降至0、如果你死亡、如果你再次使用此特性创造另一个盟友、或10分钟后，你的显化盟友会消失。</p>",
+      "activities": {
+        "Manifest Ally": {
+          "name": "显现盟友",
+          "profiles": {
+            "Manifested Ally": {
+              "name": "显现盟友"
+            }
+          }
+        }
+      }
+    },
+    "Moloch's Interdiction": {
+      "name": "摩洛克的禁令 Moloch's Interdiction",
+      "description": "<p>你在指定的恶徒等级习得以下额外禁令恩惠。一旦你习得由该特性授予的禁令恩惠，你将始终知晓它，且不计入你已知的禁令恩惠数量。</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.PFjV9K6O9thzAcI3]{赤色密语 Red Cant} (7级)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.gwpSCEHJy3wojcRK]{滑头伎俩 Slippery Ploy} (13级)</p><p>@UUID[Compendium.mcdm-class-bundle.classes.Item.ARksw5kVVJ21o587]{不容置疑 Incontrovertible} (18级; 被动)</p>"
+    },
+    "Wings When I Need Them (5 Ferocity)": {
+      "name": "需要时展开双翼（5点凶暴值） Wings When I Need Them (5 Ferocity)",
+      "description": "<p>在你的回合开始时，当你的伴日获得凶猛且未进入狂暴时，你可以显现一只幽灵鹰（无需动作）将你或你的伴日（由你选择）抬升至空中。目标获得等于其步行速度的飞行速度，直到其下一回合开始。</p><fieldset><legend>Foundry 注</legend><p>虽然目前无法授予等于你步行速度的飞行速度，但此特性授予的主动效果会默认提供30尺的飞行速度。</p></fieldset>",
+      "activities": {
+        "utility": {
+          "condition": "在你的回合开始时，当你的伴日获得凶暴且未进入狂暴状态时。"
+        }
+      },
+      "effects": {
+        "Wings When I Need Them": {
+          "name": "需要时，展翅翱翔",
+          "description": "<p>你获得飞行速度，其数值等于你的步行速度，此效果持续至你的下个回合开始。</p>"
+        }
+      }
+    },
+    "Spirit Form (14 Ferocity)": {
+      "name": "精魄形态 (14 凶猛) Spirit Form (14 Ferocity)",
+      "description": "<p>以一个附赠动作，你使你和你的伴日变为虚体状态，持续至你的下个回合结束。处于虚体状态时，你们各自对强酸、寒冷、火焰、闪电和雷鸣伤害，以及非魔法攻击的钝击、穿刺和挥砍伤害具有抗性。处于虚体状态时，你和你的伴日各自获得等于你自身步行速度的飞行速度，且你们各自可以穿过其他生物和物件，如同它们为困难地形。若你在一物件内部结束你的回合，则你受到5（1d10）点力场伤害。</p><fieldset><legend>Foundry 注</legend><p>目前无法授予等于你步行速度的飞行速度。此特性授予的“精魄形态”主动效应会给予你和你的伴日一个默认的30尺飞行速度。</p></fieldset>",
+      "activities": {
+        "Enter Spirit Form": {
+          "name": "进入精魄形态",
+          "affects": {
+            "special": "你的伴日和你自己。"
+          }
+        }
+      },
+      "effects": {
+        "Spirit Form": {
+          "name": "精魄形态",
+          "description": "<p>你变为虚体直到你的下个回合结束。处于虚体状态时，你对强酸、寒冷、火焰、闪电和雷鸣伤害，以及非魔法攻击的钝击、穿刺和挥砍伤害具有抗性。</p><p>处于虚体状态时，你拥有等于你步行速度的飞行速度，并且你可以穿过其他生物和物件，如同它们是困难地形。如果你在一个物件内结束你的回合，你将受到[[/damage 1d10 force average]]力场伤害。</p>"
+        }
+      }
+    },
+    "Thrash (4 Ferocity)": {
+      "name": "猛扑 (4 凶暴) Thrash (4 Ferocity)",
+      "description": "<p>当你的伴日用近战标志性攻击命中大型或更小的生物时，你可以用你的反应命令伴日左右猛甩目标，迫使他们进行一次感知豁免。若失败，则该目标在攻击骰上具有劣势，且对其进行的攻击骰具有优势，持续至你的下个回合开始。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你的伴日以近战标志性攻击命中大型或更小的生物时。"
+        }
+      },
+      "effects": {
+        "Thrashed": {
+          "name": "痛击",
+          "description": "<p>你在攻击检定上具有劣势，并且针对你的攻击检定具有优势，直到兽心者的下一个回合开始。</p>"
+        }
+      }
+    },
+    "Superior Interdict": {
+      "name": "超级禁令 Superior Interdict",
+      "description": "<p>你的印记造成的伤害无视目标所具有的任何伤害抗性。</p><p>此外,如果你没有剩余的印记,你可以使用一个附赠动作来恢复一个印记。一旦你以这种方式恢复了一个印记,直到你完成一次长休之前,你都无法再次这样做。</p>",
+      "activities": {
+        "Regain Expended Seal": {
+          "name": "重获已消耗的印记",
+          "condition": "当你没有任何印记剩余时。"
+        }
+      }
+    },
+    "Mystic Connection: Worg": {
+      "name": "神秘联结：座狼 Mystic Connection: Worg",
+      "description": "<p>你的步行速度增加10尺。</p>",
+      "effects": {
+        "Worg Speed": {
+          "name": "座狼速度",
+          "description": "<p>你的步行速度增加10尺。</p>"
+        }
+      }
+    },
+    "Invoke Hell: No Escape": {
+      "name": "召唤地狱：无处可逃 Invoke Hell: No Escape",
+      "description": "<p>以一个附赠动作，你可以呼唤阴影来困住一个你能看见的、距离你30尺内的生物。目标必须进行一次魅力豁免，若其处于微光光照或黑暗术darkness中则具有劣势。豁免失败时，目标的速度减半，且不能自愿移动到距离你超过30尺的位置。若你陷入&reference[incapacitated apply=false]状态或死亡，或目标与你距离超过30尺，则此效应对该目标终止。</p>",
+      "effects": {
+        "Invoked Hell: No Escape": {
+          "name": "召唤地狱：无处可逃",
+          "description": "<p>你的移动速度减半。</p>"
+        }
+      }
+    },
+    "Doomed to the Shadows": {
+      "name": "注定归于暗影 Doomed to the Shadows",
+      "description": "<p>你已完善了你的刺客打击。你从暗影突袭特性中获得的额外伤害提升至等同于你熟练加值的d8骰数（而非该数量的d4骰），并且如果目标处于微光光照或黑暗中，你额外造成2d8伤害（而非额外的1d4伤害）。</p><p>此外，当你使用暗影突袭造成伤害时，你可以用你的反应在生物身上烙印一个印记，使其被&amp;reference[blinded]1分钟，而非造成该印记的伤害。</p>",
+      "activities": {
+        "Burn Seal: Blindness": {
+          "name": "灼烧印记：目盲"
+        }
+      },
+      "effects": {
+        "Doomed to the Shadows": {
+          "name": "注定归于暗影",
+          "description": "<p>你在接下来的1分钟内处于&amp;reference[blinded apply=false]状态。</p>"
+        }
+      }
+    },
+    "Drain Them (4 Ferocity)": {
+      "name": "榨干他们（4点凶蛮） Drain Them (4 Ferocity)",
+      "description": "<p>当你的伴日以其标志性攻击命中另一个生物时，你可以用你的反应使你的伴日恢复生命值，数值等于所造成伤害的一半。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你的伴日用其标志性攻击命中另一个生物时。",
+          "affects": {
+            "special": "你的伴日"
+          }
+        }
+      }
+    },
+    "Wrath of the Pack (4 Ferocity)": {
+      "name": "狼群之怒（4点凶猛值） Wrath of the Pack (4 Ferocity)",
+      "description": "<p>当你以一次攻击命中一个生物且该生物在你伴日的5尺范围内时，你可以让你的伴日对该生物发动一次标志性攻击（无需动作）。若命中，该攻击造成其通常效果，且目标被击倒&amp;reference[prone]。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你以一次攻击命中一个生物，且该生物在你伴日的5尺范围内时。"
+        }
+      }
+    },
+    "Invoke Hell: Turncoat": {
+      "name": "召唤地狱：叛徒 Invoke Hell: Turncoat",
+      "description": "<p>以一个动作，你运用巧舌如簧的能力对付敌人。你选择距离你60尺内、数量至多等于你熟练加值的能听到你声音的敌方生物。每个目标必须进行一次魅力豁免，若失败则须使用其反应对由你指定的单一目标发动一次武器攻击。受此特性影响的生物无法攻击自身。</p>"
+    },
+    "Veil of Lies": {
+      "name": "谎言面纱 Veil of Lies",
+      "description": "<p>以一个附赠动作，你可以消耗一个印记来获得&amp;reference[invisible]状态，持续10分钟或直到你发动攻击或施展法术。</p>"
+    },
+    "Dark Malediction": {
+      "name": "黑暗咒灭 Dark Malediction",
+      "description": "<p>被禁制的生物会散发出10尺半径的{黑暗术 darkness}。凡俗光源无法照亮此{黑暗术 darkness}，但拥有{黑暗视觉 darkvision}的生物可以看穿它。如果此{黑暗术 darkness}的任何部分与由{魔法 Magic}或灵能创造出的{光亮术 light}区域重叠，则重叠的{黑暗术 darkness}区域会被{光亮术 light}照亮。</p>"
+    },
+    "Faithful Companion": {
+      "name": "忠诚伴日 Faithful Companion",
+      "description": "<p>在6环时，你与伴日的超自然联系增强，使你能够更快地协调并与所有盟友更好地团队合作。你不再需要使用附赠动作来命令伴日。相反，只要你未处于&reference[incapacitated apply=false]状态，你可以仅通过无需动作的言语或肢体信号指示他们执行动作。</p><p>此外，当伴日进入狂暴状态时，若你未失能且他们能看见或听到你，他们不会自动移动并攻击最近的生物。取而代之的是，你在你的回合选择伴日移动的位置以及他们使用标志性攻击攻击哪个生物。</p>"
+    },
+    "Mystic Connection: Gelatinous Cube": {
+      "name": "神秘连接：胶质方块 Mystic Connection: Gelatinous Cube",
+      "description": "<p>你的身体变得柔韧且呈胶质。以一个动作或附赠动作，你可以将一个你持有的微型物件吸收进体内，使其他生物无法触及。以一个动作或附赠动作，你可以将已吸收的物件排出至你一只空着的手中，或让其落在你脚边。你最多可同时吸收四个物件。当你死亡时，所有被吸收的物件都会从你体内掉落。</p><p>此外，当距离你5尺内的另一生物以近战攻击命中你时，你可以使用反应对攻击者造成3d6强酸伤害。你在完成一次短休或长休前无法再次使用此效益。</p>",
+      "activities": {
+        "Gelatinous Retaliation": {
+          "name": "凝胶化反击",
+          "condition": "当另一个在你5尺内的生物以一次近战攻击命中你时。"
+        },
+        "Absorb / Excrete Object": {
+          "name": "吸收/排出物件",
+          "condition": "作为一个动作/附赠动作。"
+        }
+      }
+    },
+    "Foul Interchange": {
+      "name": "污秽交换 Foul Interchange",
+      "description": "<p>以一个动作，你选择一个你能看见的30尺内的生物并消耗一个印记来结束其承受的下列状态之一：&reference[blinded]、&reference[charmed]、恍惚、&reference[deafened]、&reference[frightened]、&reference[paralyzed]或&reference[poisoned]。另一个你能看见的60尺内的生物必须进行一次体质豁免，若失败则承受相同状态直到你的下个回合结束。若该生物对该状态免疫，则不会承受该状态，但原生物的状态仍会结束。</p>",
+      "activities": {
+        "Transfer Affliction": {
+          "name": "转移苦难"
+        },
+        "Remove Affliction": {
+          "name": "移除苦痛",
+          "affects": {
+            "special": "一个正遭受目盲、魅惑、失能、耳聋、恐慌、麻痹或中毒状态的生物。"
+          }
+        }
+      }
+    },
+    "Reflective Armor": {
+      "name": "反射护甲 Reflective Armor",
+      "description": "<p>当敌人的攻击被反弹回去时，他们会感受到你的力量。当你使用反应动作激活隐形护甲且触发此反应的攻击未命中时，你可以对触发该反应的生物进行一次攻击检定。若你的攻击命中，目标将受到该触发攻击的伤害，并额外受到等同于你智力调整值的伤害（至少为1点）。</p>",
+      "activities": {
+        "Reflect Attack": {
+          "name": "反射攻击",
+          "condition": "当你使用反应来激活隐形护甲且触发攻击未命中时。"
+        }
+      }
+    },
+    "Protector Bond": {
+      "name": "守护者牵绊 Protector Bond",
+      "description": "<p>对你和你的伴日而言，没有什么比你们的牵绊更重要。你们共享的牵绊增强了你们的攻防能力，让你们愿意以身体和生命为线状 来保护你们的盟友和与你们同行的人。</p>"
+    },
+    "q7nWBIzzjg15C1z5": {
+      "name": "强化标志攻击 q7nWBIzzjg15C1z5",
+      "description": "<p>在5环时，当你的伴日以其标志性攻击命中时，该攻击额外造成一个武器伤害骰。此效果在11环时扩展至额外两个武器伤害骰，在17环时扩展至额外三个伤害骰。</p><p>此外，你的伴日的攻击和凶猛动作造成的伤害，在用于克服对非魔法攻击和伤害的抗性与免疫时，视为魔法伤害。</p>"
+    },
+    "Psionic Powers": {
+      "name": "灵能之力 Psionic Powers",
+      "description": "<p>随着你的灵能潜力被唤醒，你可以通过纯粹的意志力来显能。</p><p><strong>显能属性。</strong>智力是你天赋能力的显能属性，让你心灵的力量能够操纵周围的世界。每当能力提及你的显能属性时，你使用智力。此外，当你为你显能的天赋能力设定豁免DC或进行攻击检定时，你使用你的智力调整值。</p><p style=\"text-align:center\"><strong>能力豁免DC</strong> = 8 + 你的熟练加值 + 你的智力调整值</p><p style=\"text-align:center\"><strong>能力攻击调整值</strong> = 你的熟练加值 + 你的智力调整值</p><p><strong>显能骰。</strong>你拥有一个显能骰，在进行显能测试时使用（见下文）。在1级时，你的显能骰是d4。随着你获得天赋等级，这个骰子会变化，如天赋职业表中的显能骰栏所示。</p><p><strong>显能等级。</strong>每个2环或更高环阶的能力都有一个显能等级，等于其环阶。当你显能一个能力时，你每专注另一个能力，该能力的显能等级就增加1。例如，如果你在专注<em>幻影</em>和<em>火焰抚触</em>的同时尝试显能2环的<em>再现</em>能力，那么<em>再现</em>的显能等级是4。</p><p><strong>显能测试。</strong>每当你显能一个2环或更高环阶的能力时，你必须在能力显能时间结束时进行一次显能测试。要进行显能测试，投掷你的显能骰并记录结果：</p><ul><li><p>如果掷骰结果高于能力的显能等级，你成功显能该能力。</p></li><li><p>如果掷骰结果等于能力的显能等级，你成功显能该能力，然后获得1点负荷。</p></li><li><p>如果掷骰结果低于能力的显能等级，你成功显能该能力，然后获得等于该能力环阶的负荷。</p></li></ul><p>如果你因显能一个能力而获得的负荷量会导致你超过你的负荷上限（见下文“负荷”），你可以选择：要么显能该能力然后立即死亡；要么不显能该能力，不获得负荷，并生命值降至0。</p><h2>负荷</h2><p>显能灵能能力会给显能者的身体、心灵和灵魂带来压力。负荷机制代表了你的天赋角色所承受的这种压力。</p><p><strong>负荷上限。</strong>在1级时，你的负荷上限是5。如果你的负荷曾经超过你的负荷上限，你会死亡。如果你因获得负荷而死亡后被复活，你复活时的负荷等于你的负荷上限。</p><p>随着你获得天赋等级，你的负荷上限会增加，如天赋职业表中的负荷上限栏所示。</p><p><strong>获得负荷。</strong>对于天赋者来说，负荷可以以三种不同的方式体现：</p><ul><li><p>当你获得身体负荷时，你的身体能力会耗尽。</p></li><li><p>当你获得心灵负荷时，你的精神毅力会减弱。</p></li><li><p>当你获得灵魂负荷时，你与自我和现实的联系会减弱。</p></li></ul><p>每当你获得负荷时，你选择它是哪种类型的负荷以及有多少负荷作为该类型应用。例如，如果你在显能一个3环能力时获得3点负荷，你可以选择将这3点负荷全部作为身体、心灵或灵魂负荷；你可以获得2点身体负荷和1点心灵魂负荷；你可以身体、心灵和灵魂各获得1点负荷；等等。</p><p><strong>负荷效果。</strong>随着你获得负荷，你会获得不利的负荷效果，如天赋负荷表所示。这些效果是累积的。例如，如果你有3点身体负荷，你在力量和敏捷检定上具有劣势，并且你的速度减半。</p><p><strong>减少负荷。</strong>当你完成一次短休时，你可以花费生命骰来移除负荷，而不是用它们来恢复生命值。每以此方式花费一个生命骰，你从身体、心灵或灵魂中失去1点负荷（由你选择）。当你完成一次长休时，你的负荷减少至0。</p><h2>能力</h2><p><strong>1环能力：</strong>在1级时，你知晓四个1环能力。你在更高等级时学习你选择的额外1环能力，如天赋职业表中的1环能力栏所示。显能1环能力不需要进行显能测试。</p><p><strong>已知能力。</strong>在1级时，你知晓两个2环能力，这是你能显能的最高环阶能力。当你达到此职业的特定等级时，你可以显能更高环阶的能力：5级时3环能力，9级时4环能力，13级时5环能力，17级时6环能力。</p><p><strong>学习新能力</strong></p><p>在1级时，你只能学习2环能力，并且可以显能1环和2环能力。但随着你等级提高，你能学习的2环或更高环阶能力的数量没有限制。每当你能够显能特定环阶的能力时，你就可以学习该环阶的能力。</p><p>每当你在此职业中提升一个等级时，你可以学习一个新的能力，其环阶在2环和你所能显能的最高环阶之间。此外，当你在本职业中提升一个等级时，你可以选择一个你已经知晓的能力，并用另一个相同或更低环阶（最低2环）的能力替换它。</p><p><strong>向他人学习。</strong>每当你30尺内你能看到的另一个生物显能一个2环或更高环阶的灵能能力，并且该能力是你可以学习且尚未知晓的，你可以使用一个反应来投掷你的显能骰。如果你的掷骰结果高于该能力的基础环阶（忽略显能时能力的任何环阶增加），你开始学习该能力。如果你的掷骰结果低于该能力的基础环阶，你未能学会该能力，并且直到你完成一次长休之前不能再尝试这样做。</p><p><em><strong>学习新能力</strong></em>表显示了你成功观察到一个新能力后学习它需要多长时间。在学习期的每一天，你必须花费1小时除了练习该能力外不做任何事情，并且在此期间你不能尝试学习任何其他新能力。这1小时的练习时间可以作为短休进行。如果你未能在学习期的每一天花费1小时研究该能力，或者如果你在学习期结束前开始学习另一个不同的能力，你必须再次成功观察到该能力才能尝试以此方式学习它。</p><p></p><table><caption>学习新能力</caption><thead><tr><th>环阶</th><th>学习期</th></tr></thead><tbody style=\"text-align:center\"><tr><td>2环</td><td>1天</td></tr><tr><td>3环</td><td>4天</td></tr><tr><td>4环</td><td>8天</td></tr><tr><td>5环</td><td>12天</td></tr><tr><td>6环</td><td>16天</td></tr></tbody></table>",
+      "activities": {
+        "Manifestation Test": {
+          "name": "显化测试",
+          "roll": "显化测试"
+        },
+        "Recover Strain": {
+          "name": "恢复体力消耗",
+          "roll": "压力移除"
+        }
+      }
+    },
+    "Styx's Apathy": {
+      "name": "冥河之漠然 Styx's Apathy",
+      "description": "<p>当你在一个被禁制的生物身上烙下印记时，你可以用你的反应向目标灌注一股异界寒流。直到目标的下个回合结束前，他们无法受到反应。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你在一只受禁生物身上烙下印记时。"
+        }
+      },
+      "effects": {
+        "Styx's Apathy": {
+          "name": "冥河之漠然",
+          "description": "<p>直到你的下一个回合结束前，你无法进行反应。</p>"
+        }
+      }
+    },
+    "Maverick": {
+      "name": "特立独行者 Maverick",
+      "description": "<p>你不属于任何天赋学院。无论你是拒绝了向你发出的邀请，还是你根本不知道这些地方的存在，你对你所掌握的力量并不做特殊区分。通过选择独行侠专精，你磨练了内在能力，使你显现的任何力量都更加有效。</p>"
+    },
+    "Unfettered": {
+      "name": "无拘无束 Unfettered",
+      "description": "<p>当你使用你的@{UUID[Compendium.mcdm-class-bundle.classes.Item.v5tWvb369dg4hgxe]{灾厄禁制 Baleful Interdict}}来放置或燃烧印记时，其射程为60尺而非30尺。当你在6级获得@{UUID[Compendium.mcdm-class-bundle.classes.Item.VAbY2ehoan1mILms]{炼狱导管 Infernal Conduit}}特性时，其射程为30尺而非触及。</p><p>此外，在敌对生物5尺范围内进行远程攻击时，不会使攻击检定承受劣势。</p><fieldset><legend>Foundry 注</legend><p>你可以使用两个附魔活动来增加你的<strong>灾厄禁制</strong>和<strong>炼狱导管</strong>特性的射程。</p></fieldset>",
+      "activities": {
+        "Baleful Interdict: Increase Range": {
+          "name": "凶厄禁制：增加射程"
+        },
+        "Infernal Conduit: Increase Range": {
+          "name": "炼狱语导管：增加射程"
+        }
+      },
+      "effects": {
+        "Unfettered Baleful Interdict": {
+          "name": "无拘厄运禁令",
+          "description": "<p>当你使用你的@{UUID[Compendium.mcdm-class-bundle.classes.Item.v5tWvb369dg4hgxe]{灾厄禁制 Baleful Interdict}来放置或燃烧印记时，其射程为60尺而非30尺。</p>"
+        },
+        "Unfettered Infernal Conduit": {
+          "name": "无拘炼狱导管",
+          "description": "<p>当你使用你的 @UUID[Compendium.mcdm-class-bundle.classes.Item.VAbY2ehoan1mILms]{炼狱通道 Infernal Conduit}特性时，其射程为30尺而非触及。</p>"
+        }
+      }
+    },
+    "Furious Vengeance (5 Ferocity)": {
+      "name": "狂怒复仇 (5 凶暴) Furious Vengeance (5 Ferocity)",
+      "description": "<p>当一个生物用一次近战攻击击中你或你的伴日时，你可以用你的反应对攻击者造成4d6心灵伤害。</p><p>当你触及17级时，该伤害扩展至5d6。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当一个生物用近战攻击命中你或你的伴日时。"
+        }
+      }
+    },
+    "Natural Language": {
+      "name": "自然语言 Natural Language",
+      "description": "<p>从1环起，你就能理解并与你的伴日、所有野兽和怪兽进行口头交流。此特性不允许你交流复杂的想法或问题，但你可以做出简单的陈述（例如向其他生物表明你无意伤害它们）或提出简单的问题（例如最近的水源位置，或者某个外貌独特的特定个体是否最近经过该区域）。</p><p>此类生物的知识和意识受其智力限制，且由DM决定某个特定生物是否处于愿意交流的情绪中。在使用此特性与野兽或怪兽交谈时，你可以进行感知（驯兽）检定来替代魅力检定以影响该生物。</p>"
+    },
+    "Allied Earth": {
+      "name": "联合大地 Allied Earth",
+      "description": "<p>在7环时，你伴日周围的地面会萌发出藤蔓和植物来阻碍敌人。每当你的伴日拥有至少1点凶暴时，其周围10尺内的地面对其敌人而言是困难地形。</p>"
+    },
+    "Invoke Hell: Punishment": {
+      "name": "召唤地狱：惩罚 Invoke Hell: Punishment",
+      "description": "<p>当一个生物通过攻击对你造成伤害时，你可以用你的反应迫使攻击者进行一次感知豁免。豁免失败时，攻击者受到等同于触发攻击对你造成伤害数值的暗蚀伤害。豁免成功时，攻击者受到一半伤害。</p><fieldset><legend>Foundry 注</legend><p>在此特性上使用豁免行动时，你可以输入触发生物造成的伤害数值。</p></fieldset>",
+      "activities": {
+        "save": {
+          "condition": "当一个生物以一次攻击对你造成伤害时。"
+        }
+      }
+    },
+    "Invisible Armor": {
+      "name": "隐形护甲 Invisible Armor",
+      "description": "<p>通过改变来袭攻击的轨迹，你保护自己或盟友免受这些攻击。当你或一个你能看见的30尺内的生物被一次攻击命中时，你能使用一个反应给予该攻击目标一个AC加值。此加值等于你的智力调整值（至少为1），对触发此反应的那次攻击生效，并持续到你的下个回合开始。你能使用该特性的次数等于你的智力调整值（至少一次），完成一次长休后，你重获全部使用次数。</p>",
+      "activities": {
+        "Shield Creature": {
+          "name": "护盾术生物",
+          "roll": "护甲等级加值",
+          "condition": "当你或一个你能看见的30尺内的生物被一次攻击命中时。"
+        }
+      }
+    },
+    "Superior Ferocity": {
+      "name": "超级凶暴 Superior Ferocity",
+      "description": "<p>同样在2环时，每当你的伴日使用一个需要生物进行属性检定或豁免的凶猛动作时，伴日可以使用你的原始侵攻豁免DC来替代正常的DC。</p>"
+    },
+    "Sanguine Knight": {
+      "name": "血红骑士 Sanguine Knight",
+      "description": "<p><em>作为地狱的血骑士，猩红骑士效忠于鲜血君主苏泰赫。他们的法术会汲取敌人的生命力，并将这些窃取的生命力注入炼狱仪式，以此扭转战局。</em></p><p>苏泰赫统治着鲜血之城那罗迦。这位被公认为地狱最强大的术士，身负高阶血爵头衔，于生机神殿中执掌权柄。他是血魔法大师，其核心圈层的祭司与法师皆是血巫妖——这些亡灵施法者的肉身早在数百年前便化为灰烬，如今躯壳由凝固的鲜血铸就。</p><p>苏泰赫麾下的邪骑士均属于名为生机圣杯的教团。圣杯骑士痛饮敌人精华，以此充能法术。其他亵渎之序成员担忧猩红骑士所图不止于助苏泰赫登临地狱王座；有人私语圣杯正密谋将其推上神位。这，自然是叛行。</p><h3>鲜血信条</h3><p>猩红骑士在加入荒芜之序时向苏泰赫立誓。这些誓约令他们执掌渎神血魔法，统御忠诚，播撒恐惧</p><p><strong>彼力即彼弱。</strong> 我以最强者为目标，因其生命力将滋养我的胜利。</p><p><strong>罪愆需偿苦痛。</strong> 与我为敌即是异端。在敌人尝败绩前，必以其苦痛偿付悖逆之罪。</p><p><strong>忠诚得赏。</strong> 我的恩泽令盟友依赖我——亦依赖赋予我力量的鲜血。</p><p><strong>慈悲即权柄。</strong> 施援于盟友时，我彰显自身伟力。每次挽救生命，皆在警示剥夺生命于我不过反掌之间。</p>",
+      "advancement": {
+        "Sutekh's Blessing": {
+          "title": "苏泰克的祝福",
+          "hint": "当塞特赫接纳你成为他的渎圣骑士时，他会授予你掌控鲜血与生命的亵渎权能。你获得宗教技能的熟练项。"
+        }
+      }
+    },
+    "Strike from the Dark": {
+      "name": "暗影突袭 Strike from the Dark",
+      "description": "<p>你懂得从阴影中出击的力量。每回合一次,当你用近战武器攻击命中一个受禁制生物且该攻击检定具有优势时,你可以投掷等同于你熟练加值数量的d4骰,并造成等同于所投总和的额外伤害。若目标处于微光光照或黑暗中,此伤害增加1d4。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当你以一次近战武器攻击命中一个被禁制的生物，且你在该攻击检定上具有优势时。"
+        },
+        "Damage: Dim Light / Darkness": {
+          "name": "伤害：微光光照 / 黑暗术",
+          "condition": "当你以一次近战武器攻击命中一个受禁制生物，且你在该攻击检定中具有优势时。"
+        }
+      }
+    },
+    "Shadowmaster": {
+      "name": "影术大师 Shadowmaster",
+      "description": "<p><em>作为地狱的隐秘刺客，暗影大师效忠于彼列，并精于潜行与伪装。</em></p><p>彼列统治着黑暗之城吉赫南。他致力于通过毒药、折磨和暗杀来统治地狱。他的邪术骑士从阴影中发动袭击，或利用欺瞒手段谋取接近强大统治者的高阶职位。许多暗影大师经营着间谍与刺客网络，而这些下属对其领袖的炼狱渊源一无所知。</p><p>暗影大师发誓不泄露其真实效忠对象，必要时必须自我了断以履行此誓言。许多暗影大师会精心策划自身的暗杀计划，以便在面临暴露风险时，用自身的死亡掩盖真相。当然，这些杀手永远不会知道雇佣他们的人正是其已故的目标。</p><h3>暗影信条</h3><p>暗影大师在加入荒芜秩序时向彼列立下誓言。这些信条要求他们在揭露敌意之前，以盟友身份侍奉彼列的敌人。</p><p><strong>计中之计。</strong> 我的敌人永远不能发现我的真实目标。如有必要，我将牺牲自己来保护我的计划。</p><p><strong>权位之谋。</strong> 我通过洞悉欺瞒对象与藏身于显眼之处，从阴影中掌控一切。</p><p><strong>静待之力。</strong> 我研究我的敌人并有条不紊地建立他们的信任。我的忠诚必须不容置疑，使我最终的背叛变得难以置信。</p><p><strong>犹豫即败。</strong> 虽然我通常依靠代理人行动，但当机会出现时，我能毫不犹豫地高效精准地完成刺杀。</p>",
+      "advancement": {
+        "Strike from the Dark": {
+          "title": "暗影突袭"
+        }
+      }
+    },
+    "Telepathy Adept": {
+      "name": "心灵感应专家 Telepathy Adept",
+      "description": "<p>当你掷显现骰来学习一个新的心灵感应能力时，你可以掷该骰两次并选择任一结果。</p><p>此外，在你进行一次显现检定来展现心灵感应能力后，你可以重掷显现骰并选择任一结果。你能重掷的显现检定次数等于你的智力调整值（至少一次检定），完成一次长休后恢复全部使用次数。此特性对单一显现检定只能使用一次。</p>",
+      "activities": {
+        "Adept Telepathy Manifestation": {
+          "name": "娴熟心灵感应显化",
+          "condition": "在你进行一次显能检定以显能一个心灵感应异能后。"
+        }
+      }
+    },
+    "Shared Power": {
+      "name": "共享力量 Shared Power",
+      "description": "<p>在你进行一次显能检定以显能一个只能以单一生物为目标且不创造效应区域的异能后，你可以承受等于该异能秩序的消耗，以同一异能在射程内指定第二个生物为目标。</p>",
+      "activities": {
+        "utility": {
+          "condition": "在你进行一次显能检定来显能一个只能以单一生物为目标且不创造效应区域的异能之后。",
+          "affects": {
+            "special": "一个同样处于该异能射程内的生物。"
+          }
+        }
+      }
+    },
+    "Beyond Instinct": {
+      "name": "超越本能 Beyond Instinct",
+      "description": "<p>在5环时，得益于你的照料，你的伴日的韧性与多面性得以增长。你和你的伴日获得以下效益：</p><ul><li><p>每当你的伴日在你回合开始时获得凶悍，其额外获得1点凶悍。</p></li><li><p>你的伴日在你选择的一项属性值的豁免上获得熟练。</p></li><li><p>你的伴日在你选择的下列技能之一上获得熟练：特技、驯兽、运动、威吓、调查、察觉、表演、巧手、隐匿或求生。当你的伴日使用调查技能进行属性检定时，可以用感知代替智力；当使用威吓或表演技能进行属性检定时，可以用力量或敏捷代替魅力。</p></li></ul><p>当你在该职业的等级触及10环时，你的伴日获得的额外凶悍扩展至3。你的伴日在你选择的另一项豁免上获得熟练，并在上述列表中再选择一个技能获得熟练。</p><p>当你在该职业的等级触及15环时，你的伴日获得的额外凶悍扩展至5。你的伴日在你选择的另一项豁免上获得熟练，并在上述列表中再选择一个技能获得熟练。</p>"
+    },
+    "Charm Enemy": {
+      "name": "魅惑敌人 Charm Enemy",
+      "description": "<p>当你使用附赠动作在类人生物身上放置印记时，你可以尝试魅惑他们。目标必须进行一次魅力豁免，若失败则被你&reference[charmed]1小时，直至你或你的同伴对其造成任何伤害。被魅惑期间，目标会将你视为友善的相识者。当魅惑状态结束时，目标会意识到自己曾被你所魅惑。</p><p>当你使用此附赠动作时，可额外点燃30尺内一个或多个其他受禁类人生物身上的印记，同时尝试魅惑那些目标。在受到被点燃印记的伤害后，每个目标必须进行一次魅力豁免，否则将受到相同的魅惑效果。</p><p>你能使用该特性的次数等于你的魅力调整值（至少一次），完成一次长休后重新获得所有已使用的次数。</p>",
+      "activities": {
+        "save": {
+          "condition": "当你燃烧一个或多个位于你30尺内被禁制的类人生物上的一个或多个印记时。",
+          "affects": {
+            "special": "一个被禁制的生物。"
+          }
+        }
+      }
+    },
+    "Asmodeus's Blessing": {
+      "name": "阿斯蒙蒂斯的祝福 Asmodeus's Blessing",
+      "description": "<p>当阿斯蒙蒂斯接纳你为一名毁灭建筑师时，他会授予你接触其炼狱知识的权限。你从以下技能中选择一项获得熟练：奥秘、历史、自然或宗教。</p><p>此外，你还能读写由你的分叉之舌所授予的语言，而不仅限于口语交流。</p>"
+    },
+    "Overwhelming Power": {
+      "name": "千钧之力 Overwhelming Power",
+      "description": "<p>当一个生物成功通过你显能的豁免时，你可以承受等同于该异能环阶的负荷，迫使该生物重掷豁免骰并承受等同于你的熟练加值的减值。该生物必须使用新的掷骰结果。</p>",
+      "activities": {
+        "utility": {
+          "roll": "豁免检定罚值",
+          "condition": "当一个生物在你施展的能力豁免中成功时。"
+        }
+      }
+    },
+    "Pyrokinesis Adept": {
+      "name": "念力控火专家 Pyrokinesis Adept",
+      "description": "<p>当你掷显能骰以学习新的控火异能时，你可以掷该骰两次并选择任一结果。</p><p>此外，当你进行显能检定以施展控火异能后，你可以重掷显能骰并选择任一结果。你可重掷的显能检定次数等于你的智力调整值（至少一次），完成一次长休后恢复全部使用次数。此特性对单个显能检定仅能生效一次。</p>",
+      "activities": {
+        "Adept Pyrokinesis Manifestation": {
+          "name": "娴熟控火显化",
+          "condition": "在你进行一次显能检定以显现心灵遥控异能之后。"
+        }
+      }
+    },
+    "Baleful Interdict": {
+      "name": "灾厄禁制 Baleful Interdict",
+      "description": "<p>你获得用地狱之力惩戒生物的能力。在你的回合中一次，你可以对30尺内的一个生物施加一道魔法印记。你可以在用武器攻击命中该目标时施加此印记（无需动作），或使用一个附赠动作对射程内一个你能看见的目标施加此印记。此印记持续1分钟或被燃烧（见下文“燃烧印记”）。带有一个或多个你印记的生物被称为受禁生物。你施加的印记对其他生物隐形，当你能看见一个受禁生物时，印记对你显现为该生物身上发光的符文。</p><p>你在休息前仅能施加有限数量的印记，完成短休或长休后恢复所有印记。你可施加的印记数量随炼狱骑士等级提升而增加，如炼狱骑士表的印记栏所示。</p><p>若受禁生物死亡，你可在自己回合使用附赠动作，将其身上所有印记转移至其30尺内一个你能看见的新生物。当受禁生物死亡且印记转移至新生物时，每个印记的持续时间继续流逝。</p><p><strong>燃烧印记。</strong> 当你30尺内一个你能看见的受禁生物受到除炼狱骑士燃烧印记外任何来源的伤害时，你可以燃烧其身上任意数量的印记，每燃烧一个印记对该生物造成1d6火焰或暗蚀伤害（由你选择）。你在触发伤害后立即造成此伤害。燃烧印记不需要你执行动作，但你在失能状态下无法进行。印记被燃烧后立即消失</p><p>当你在此职业达到5级时，你与大魔鬼的联系得到加强。每个被燃烧的印记额外造成1d6伤害，总计2d6。当你在本职业达到11级（总计3d6）和20级（总计4d6）时，每个印记的伤害再次增加1d6，如炼狱骑士表的印记伤害栏所示。</p><p><strong>禁制豁免。</strong> 你后续获得的职业特性可为你的邪秽禁律附加额外效果，并需要目标进行豁免以抵抗这些效果。这些效果的豁免DC使用你的禁制豁免DC，其计算方式如下：</p><p style=\"text-align:center\"><strong>禁制豁免DC</strong> = 8 + 你的熟练加值 + 你的魅力调整值</p>",
+      "activities": {
+        "Burn Seals": {
+          "name": "燃印",
+          "condition": "当射程内一个被禁制的生物受到来自除炼狱骑士燃烧的印记之外的任何来源的伤害时。",
+          "affects": {
+            "special": "一个被禁制的生物。"
+          }
+        },
+        "Place Seal": {
+          "name": "放置封印"
+        },
+        "Move Seals to New Target": {
+          "name": "将封印转移至新目标",
+          "condition": "当一个被禁制的生物死亡时。"
+        }
+      },
+      "effects": {
+        "Interdiction Seal": {
+          "name": "禁制印记",
+          "description": "<p>一道无形的炼狱印记已被施加于你的身体，并持续一分钟。</p>"
+        }
+      }
+    },
+    "Impaling Shot": {
+      "name": "穿刺射击 Impaling Shot",
+      "description": "<p>当你以远程武器攻击命中一个受禁制生物时，你可以消耗一道印记作为附赠动作，在其防御中制造一个弱点。直到你的下个回合结束前，该生物的AC承受减值，数值等于你的熟练加值。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你以一次远程武器攻击命中一个受禁制生物时。"
+        }
+      },
+      "effects": {
+        "Impaled Defenses: -1": {
+          "name": "穿刺防御：-1",
+          "description": "<p>直到地狱骑士的下个回合结束，你的护甲等级都会承受-1减值。</p>"
+        },
+        "Impaled Defenses: -2": {
+          "name": "穿刺防御：-2",
+          "description": "<p>在邪术骑士的下个回合结束前，你的护甲等级承受-2减值。</p>"
+        },
+        "Impaled Defenses: -3": {
+          "name": "穿刺防御：-3",
+          "description": "<p>直到邪术骑士的下个回合结束前，你的护甲等级将承受-3减值。</p>"
+        },
+        "Impaled Defenses: -6": {
+          "name": "穿刺防御：-6",
+          "description": "<p>直到地狱骑士的下个回合结束，你的护甲等级都会受到-6减值。</p>"
+        },
+        "Impaled Defenses: -5": {
+          "name": "穿刺防御：-5",
+          "description": "<p>在你的护甲等级上承受-5减值，直到该邪术骑士的下个回合结束。</p>"
+        },
+        "Impaled Defenses: -4": {
+          "name": "穿刺防御：-4",
+          "description": "<p>直到邪术骑士的下个回合结束，你的护甲等级都会承受-4减值。</p>"
+        }
+      }
+    },
+    "Sanguine Gift": {
+      "name": "血色赠礼 Sanguine Gift",
+      "description": "<p>当你能够看见的30尺内的一个生物恢复生命值时，你可以消耗一个印记（无需动作）并且该生物恢复额外的生命值，其数值等于你的邪术骑士等级。</p>",
+      "activities": {
+        "Empower Healing": {
+          "name": "强化治疗"
+        }
+      }
+    },
+    "Spellbreaker": {
+      "name": "破法者 Spellbreaker",
+      "description": "<p>当你看见一个在你60尺内的受禁生物施展法术时，你可以用你的反应在其身上燃烧一个或多个印记。当你这样做时，燃烧印记不造成伤害，而是改为对其施展@UUID[Compendium.dnd5e.spells.Item.Ek45cBpVXvJdv1Qy]且不消耗法术位。你每额外燃烧一个印记，你的法术等级便提升1级。</p>"
+    },
+    "Invoke Hell: Honey-Sweet Blades": {
+      "name": "地狱召唤：蜜糖利刃 Invoke Hell: Honey-Sweet Blades",
+      "description": "<p>当你对受禁制生物发动武器攻击时，你可以获得该次攻击的优势（无需动作）。若攻击命中，则视为重击。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你对受禁制生物发动武器攻击时。"
+        }
+      }
+    },
+    "Telekinetic Seal": {
+      "name": "念力封印 Telekinetic Seal",
+      "description": "<p>当一个你能看见的生物移动到距离你5尺范围内时，你可以用你的反应在其身上施加一道印记。当你这样做时，目标必须进行一次感知豁免，若失败则被推离15尺或陷入&amp;reference[prone]状态（由你选择）。</p>",
+      "activities": {
+        "save": {
+          "condition": "当一个生物移动至你5尺范围内时。"
+        }
+      }
+    },
+    "Psionic Toughness": {
+      "name": "灵能坚韧 Psionic Toughness",
+      "description": "<p>你的触碰能增强生物的韧性。以一个动作，你触碰一个生物（可以是你自己）并赋予其以下效益，持续1小时：</p><ul><li><p>该生物的生命值上限和当前生命值提升数值等于你的智力调整值+你的天赋等级（至少为1）。</p></li><li><p>该生物在死亡豁免上具有优势。</p></li></ul><p>你能使用该特性的次数等于你的智力调整值（至少一次），完成一次长休后恢复全部使用次数。</p><fieldset><legend>Foundry 注</legend><p>当前“灵能韧性：提升生命”的主动效果无法随你的天赋等级或智力调整值变化。要正确使用此特性，请将主动效果的值从1编辑为正确的总值。</p></fieldset>",
+      "activities": {
+        "Bestow Psionic Toughness": {
+          "name": "授予灵能坚韧"
+        }
+      },
+      "effects": {
+        "Psionic Toughness: Increased Health": {
+          "name": "灵能坚韧：提升生命值",
+          "description": "<p>在接下来的1小时内，你的最大生命值和当前生命值增加相当于该才艺的智力调整值+其才艺等级。"
+        },
+        "Psionic Toughness: Death Resistance": {
+          "name": "灵能坚韧：死亡抗性",
+          "description": "<p>在接下来的1小时内，你在死亡豁免上具有优势。</p>"
+        }
+      }
+    },
+    "Vengeful Shot": {
+      "name": "复仇射击 Vengeful Shot",
+      "description": "<p>当一个生物对30尺内你或你能看见的盟友发动远程攻击时，你可以消耗一道印记作为反应，对该攻击者发动一次远程武器攻击。若你的攻击命中，将造成等于你邪术骑士等级一半（向下取整）的额外伤害。</p>",
+      "activities": {
+        "damage": {
+          "condition": "当一个生物对你或你能看到的30尺内的盟友发动远程攻击时。"
+        }
+      }
+    },
+    "Invoke Hell: Master of Disguise": {
+      "name": "地狱呼唤：伪装大师 Invoke Hell: Master of Disguise",
+      "description": "<p>作为一个动作，你可以不消耗法术位施展 @UUID[Compendium.dnd5e.spells.Item.A3q2gTNqG6fvNGrv] 法术。</p>"
+    },
+    "Ferocious Bond": {
+      "name": "凶猛牵绊 Ferocious Bond",
+      "description": "<p>一些兽心者和伴日感觉最亲近的时刻，就是当他们放弃全部控制，让本能引导每一个动作时。当你的伴日进入狂暴状态，你能感受到它们每一次暴行的瞬间，这激发了你自身独有的战斗狂怒。</p>",
+      "advancement": {
+        "Fury of the Wise: Intimidation": {
+          "title": "智者之怒：威吓",
+          "hint": "如果你尚未拥有，则获得威吓技能的熟练项。"
+        }
+      }
+    },
+    "Invoke Hell": {
+      "name": "召唤地狱 Invoke Hell",
+      "description": "<p>你的魔鬼契约连接让你能够引导炼狱能量来强化魔法效应。你选择的魔鬼契约赋予你两种地狱呼唤选项，并描述了每种选项的使用方式。</p><p>当你使用地狱呼唤时，你选择要使用的选项。之后你必须完成一次短休或长休才能再次使用地狱呼唤。</p><p>某些地狱呼唤效果需要进行豁免。当你使用这类效果时，DC等同于你的禁令豁免DC。</p>"
+    },
+    "Halting Power": {
+      "name": "阻滞之力 Halting Power",
+      "description": "<p>当中型或更小的生物对抗你显现的能力的豁免失败时，你可以承受2点负荷使目标&reference[restrained]直到你的下个回合开始。你可以承受4点负荷来将此灵能消耗选项作用于大型生物。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当一个中型或更小的生物在你显能的力量豁免中失败时。"
+        }
+      },
+      "effects": {
+        "Halting Power": {
+          "name": "遏止之力",
+          "description": "<p>你被该天才&amp;reference[restrained apply=false]直到其下个回合开始。</p>"
+        }
+      }
+    },
+    "Mystic Connection: Dragon Wyrmling": {
+      "name": "神秘联结：雏龙 Mystic Connection: Dragon Wyrmling",
+      "description": "<p>以一个附赠动作，你将持有的武器灌注龙语力量，持续10分钟。当此力量生效时，使用该武器进行的攻击会额外造成1d10点与你雏龙龙族血统特性相关的伤害类型。直到完成一次长休前，你无法再次使用此效益。</p>",
+      "effects": {
+        "Draconic Weapon: Fire": {
+          "name": "龙语武器：火焰",
+          "description": "<p>使用此武器发动的攻击额外造成1d10冷冻伤害。</p>",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>神秘联结：火焰雏龙</legend>     <p>当此力量生效时,使用该武器发动的攻击额外造成1d10点火焰伤害。</p> </fieldset>",
+            "name": "炽热 {}"
+          }
+        },
+        "Draconic Weapon: Cold": {
+          "name": "龙语武器：寒冷",
+          "description": "<p>使用此武器发动的攻击额外造成1d10冷冻伤害。</p>",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>神秘联结：寒冷雏龙</legend>     <p>当此能力生效时,使用该武器发动的攻击额外造成1d10冷冻伤害。</p> </fieldset>",
+            "name": "寒冷 {}"
+          }
+        },
+        "Draconic Weapon: Lightning": {
+          "name": "龙语武器：闪电",
+          "description": "<p>使用此武器发动的攻击额外造成1d10点闪电伤害。</p>",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>神秘联结：龙类雏龙(闪电)</legend>     <p>当此能力生效时，使用该武器发动的攻击额外造成1d10闪电伤害。</p> </fieldset>",
+            "name": "闪电 {}"
+          }
+        },
+        "Draconic Weapon: Acid": {
+          "name": "龙语武器：强酸",
+          "description": "<p>使用此武器发动的攻击额外造成1d10强酸伤害。</p>",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>神秘联结：强酸雏龙</legend>     <p>此能力生效期间,使用该武器发动的攻击额外造成1d10点强酸伤害。</p> </fieldset>",
+            "name": "酸性 {}"
+          }
+        },
+        "Draconic Weapon: Poison": {
+          "name": "龙语武器：毒素",
+          "description": "<p>使用此武器的攻击额外造成1d10毒素伤害。</p>",
+          "changes": {
+            "system.description.value": "{} <fieldset>     <legend>神秘联结：龙类雏龙（毒素）</legend>     <p>当此能力生效时，使用该武器发动的攻击额外造成1d10毒素伤害。</p> </fieldset>",
+            "name": "剧毒 {}"
+          }
+        }
+      }
+    },
+    "Mystic Connection: Bulette": {
+      "name": "神秘联结：鲨蜥兽 Mystic Connection: Bulette",
+      "description": "<p>以一个附赠动作，你在10分钟内获得等于你步行速度的掘穴速度。直至你完成一次短休或长休前，你无法再次获得此效益。</p>",
+      "effects": {
+        "Mystic Connection: Bulette": {
+          "name": "神秘联结：鲨蜥兽",
+          "description": "<p>你拥有等于你步行速度的掘穴速度。</p>"
+        }
+      }
+    },
+    "Unseen Hunters": {
+      "name": "无形猎手 Unseen Hunters",
+      "description": "<p>在15级时，你可以使用一个动作使你和你的伴日获得&amp;reference[invisible]效果，持续10分钟。在隐形期间，除非你或你的伴日选择留下踪迹，否则你们都无法被非魔法手段追踪。你们中的任何一方都可以用一个附赠动作来结束自身的隐形状态。一旦你使用了此特性，你可以在完成一次长休后再次使用它。</p>",
+      "activities": {
+        "utility": {
+          "affects": {
+            "special": "你自己和你的伴日。"
+          }
+        }
+      },
+      "effects": {
+        "Unseen Hunter": {
+          "name": "无形猎手",
+          "description": "<p>你在接下来的10分钟内处于&reference[invisible apply=false]状态。处于隐形状态时，除非你选择留下踪迹，否则无法通过非魔法手段追踪。</p><p>你可以通过一个{附赠动作 Bonus Action}来终止自身的隐形状态。</p>"
+        }
+      }
+    },
+    "Undying Protector": {
+      "name": "不朽守护者 Undying Protector",
+      "description": "<p>在15级时，你的伴日的狂暴能让你从重伤和重击中支撑下来。若你生命值降至0时能看见你的伴日，你可以消耗2点凶暴以改为生命值降至1。在首次使用后，每次使用此特性，凶暴消耗增加2。当你完成一次短休或长休，凶暴消耗重置为2。</p><fieldset><legend>Foundry 注</legend><p>当你使用此特性时，你可以将凶暴消耗调整为等于你已使用此特性的次数。</p></fieldset>",
+      "activities": {
+        "utility": {
+          "condition": "若你在生命值降至0时能看到你的伴日。"
+        }
+      }
+    },
+    "Thickened Hide": {
+      "name": "厚实毛皮 Thickened Hide",
+      "description": "<p>在7环时，你的伴日的天生防御得到改善，使它们更难被伤害。你的伴日的护甲等级：增加2。</p><fieldset><legend>Foundry 注</legend><p>你可以使用此特性授予你的伴日「厚皮」主动效果，赋予它此特性所赐予的护甲等级：加值。</p></fieldset>",
+      "effects": {
+        "Thickened Hide": {
+          "name": "厚实表皮",
+          "description": "<p>你的护甲等级获得+2加值。</p>"
+        }
+      }
+    },
+    "Mystic Connection: Deinonychus": {
+      "name": "神秘联结：恐爪龙 Mystic Connection: Deinonychus",
+      "description": "<p>你可以以一个附赠动作执行躲藏动作。你可以使用此效益的次数等于你的感知调整值（至少一次），完成一次长休后恢复全部使用次数。</p>"
+    },
+    "Mystic Connection": {
+      "name": "神秘联结 Mystic Connection",
+      "description": "<p>在9级时，你与伴日的联结赋予了一项天赋能力。你的神秘联结效益取决于你的伴日。若你获得新伴日，新伴日的神秘联结效益将取代旧的效益。</p>"
+    },
+    "Strong Mind": {
+      "name": "坚定意志 Strong Mind",
+      "description": "<p>每当你施展一个允许你移动一个或多个生物或物体的异能时，你可以将该异能允许你移动目标的距离增加10尺。</p><p>此外，当你进行一次力量或敏捷豁免时，你可以承受1点负荷来改为进行一次智力豁免，</p>"
+    },
+    "Umbral Killer": {
+      "name": "暗影语杀手 Umbral Killer",
+      "description": "<p>阴影是你的伴日，在你的壮举中助你一臂之力。你获得以下效益：</p><ul><li><p>你获得60尺黑暗视觉。如果你已有黑暗视觉，其射程增加60尺。</p></li><li><p>你的移动速度增加10尺。</p></li><li><p>你在进行躲藏的敏捷（隐匿）检定时具有优势。每当你进行敏捷豁免以仅受到效应的一半伤害时，若豁免成功则改为不受伤害，若豁免失败则受到一半伤害。</p></li></ul>"
+    },
+    "Energizing Rampage": {
+      "name": "能量狂暴 Energizing Rampage",
+      "description": "<p>在7环时，你的伴日在狂暴后仍能保持坚韧。当你的伴日结束暴怒时，其凶暴值降至4而非0。</p>"
+    },
+    "Eyes of the Gate": {
+      "name": "异界之门之眼 Eyes of the Gate",
+      "description": "<p>以一个动作，你可以消耗一枚或多枚印记，尝试将你的感知与你60尺内一个你能看见的生物绑定。目标必须进行一次感知豁免；他们可以自愿在此豁免中失败。豁免失败时，你将与目标的感知绑定，持续小时数等于你所消耗的印记数量，或直到你对另一个生物使用此恩惠。在持续时间内，当目标在你300尺范围内时，你可以使用一个动作通过他们的感官去看和听，获得目标所拥有的任何特殊感官的效益，并且你持续如此直到你使用你的动作回归到你正常的感官。当通过目标的感官感知时，你自身的感官处于&amp;reference[deafened]{耳聋 deafened}和&amp;reference[blinded]{目盲 blinded}状态。</p><p>此外，在持续时间内，你可以放置印记、燃烧它们以及使用禁制恩惠，如同你处于该生物的空间内，但这样做会使该生物意识到这种牵绊。一个意识到牵绊的生物可以使用其动作重复该豁免，成功则结束此恩惠的效果。</p>",
+      "effects": {
+        "Gate-Bound": {
+          "name": "异界之门束缚",
+          "description": "<p>当被束缚的生物在你300尺范围内时，你可以使用一个动作通过其感官进行观察和聆听，获得目标所拥有的任何特殊感官的效益，并且你持续这样做直到你使用动作回归自身正常感官。</p><p>当通过目标的感官进行感知时，你自身的感官处于&reference[deafened apply=false]{耳盲 Deaf}和&reference[blinded apply=false]{目盲 Blinded}状态。</p><p>此外，在持续时间内，你可以如同身处该生物空间般放置印记、焚烧印记并使用禁制恩惠，但这样做会使该生物意识到这种牵绊。察觉到的生物可以使用其动作重复该豁免，成功则终止此恩惠的效果。</p>"
+        }
+      }
+    },
+    "Super Senses": {
+      "name": "超级感官 Super Senses",
+      "description": "<p>流经你身体的灵能增强了你的感官。你在感知（察觉）检定和你的被动感知（察觉）值上获得等于你智力调整值的加值。</p>",
+      "effects": {
+        "Super Senses": {
+          "name": "超级感官",
+          "description": "<p>流经你身体的灵能增强了你的感官。你在感知（察觉）检定和你的被动感知（察觉）值上获得等于你智力调整值的加值。</p>"
+        }
+      }
+    },
+    "Unbreakable Friendship": {
+      "name": "牢不可破的友谊 Unbreakable Friendship",
+      "description": "<p>在20级时，你对伴日的关爱与友谊将原始能量注入该生物体内，使其成为同类中的典范。当你至少拥有1点生命值且你的伴日能看见或听见你时，你与伴日获得以下效益：</p><ul><li><p>你在防止伴日陷入狂暴的感知（驯兽）检定中自动成功。（若你希望伴日故意进入狂暴状态，可选择不进行此项检定。）</p></li><li><p>若你的伴日生命值降至0但未被直接杀死，则改为降至1点生命值。</p></li><li><p>每当你骰先攻时，你的伴日获得1d10点凶暴值。</p></li></ul>",
+      "activities": {
+        "utility": {
+          "affects": {
+            "special": "你的伴日。"
+          }
+        }
+      }
+    },
+    "Fickle Readiness": {
+      "name": "无常备战 Fickle Readiness",
+      "description": "<p>在战斗开始时，你扭曲时间以获取优势。若你在战斗开始时陷入突袭且未处于失能状态，你可以在自己的首个回合正常行动。你也可以承受1点负载，使一个你能看见的、位于你90尺内陷入突袭的生物在其首个回合正常行动。</p><p>此外，每当你进行先攻检定时，你可以交换两个你能看见的、与你同时进行先攻检定的、位于你90尺内生物的先攻值。</p>",
+      "activities": {
+        "Swap Initiative": {
+          "name": "交换先攻",
+          "affects": {
+            "special": "与你同时进行先攻掷骰的生物。"
+          }
+        },
+        "Ready Creature": {
+          "name": "预备生物"
+        }
+      }
+    },
+    "You Die on My Command!": {
+      "name": "你的生死由我命令！ You Die on My Command!",
+      "description": "<p>当一名位于你30尺内且能听到你声音的盟友生命值降至0但未被直接杀死时，你可以用你的反应对其发出秩序呐喊，使其生命值改为降至1点。一旦你使用此反应，直至你完成一次短休或长休前都无法再次使用。</p>",
+      "activities": {
+        "utility": {
+          "condition": "当你30尺内能听到你声音的盟友生命值降至0但未被直接杀死时。",
+          "affects": {
+            "special": "一个能听到你声音的盟友。"
+          }
+        }
+      }
+    },
+    "Master Caregiver": {
+      "name": "照护大师 Master Caregiver",
+      "description": "<p>同样在3环时，你获得驯兽技能的熟练。若你已拥有驯兽熟练，则你使用该技能进行任何属性检定时，你的熟练加值翻倍。</p>"
+    }
+  }
+}

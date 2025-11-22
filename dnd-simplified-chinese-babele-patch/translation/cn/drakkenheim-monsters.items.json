@@ -224,7 +224,7 @@
       "description": "<p><em>药水, 极珍稀</em></p><p>这瓶药水是一种深红色冒泡的酿造物, 尝起来有明显的铜味。当你饮用此药水时, 你在接下来的一分钟内获得以下效益:</p><ul><li><p>你在力量, 敏捷和魅力的攻击检定, 属性检定和豁免上获得优势。</p></li><li><p>如果伤害将你降至0生命值, 你必须进行一次体质豁免, DC为5 + 所受伤害的一半, 除非该伤害是光耀伤害或来自重击。若成功, 你将改为降至1生命值, 并且此药水的效果结束。</p></li><li><p>如果你受到光耀伤害或进入阳光, 此药水的效果提前结束。</p></li></ul><p><em><strong>制造。</strong></em> 制造一瓶<em>吸血鬼血药水</em>需要一个极珍稀工坊和以下极珍稀部件。</p><ul><li><p><strong>[灵质]</strong> 亡灵灵质</p></li><li><p><strong>[尘]</strong> 来自任何吸血鬼的亡灵尘</p></li><li><p><strong>[液]</strong> 灵质精华</p></li><li><p><strong>[液]</strong> 来自吸血鬼的怪物血</p></li></ul>",
       "activities": {
         "Drink Potion": {
-          "name": "喝药水"
+          "name": "饮用药水"
         }
       },
       "effects": {
@@ -235,7 +235,7 @@
       }
     },
     "Aqua Expurgo": {
-      "name": "净水涤荡",
+      "name": "抗污药剂",
       "description": "<p><em>药水, 珍稀</em></p><p>这种亮橙色液体储存于注射器中，并充溢着奥秘魔法。你可以使用一个{操作动作}将此注射剂直接注入自己或其他自愿生物的心脏。</p><p>在接收一剂净水后六{小时}内，你受到针对&reference[drakkenheimContamination]的保护。在此期间，每当你对抗会导致你获得一个或多个污染等级的效果的{豁免}失败时，你可以选择改为成功。你可以{使用此能力}三次，之后净水的效果消失。</p><p>如果净水的效果以此方式消失，你立即受到[[/damage 3d6 暗蚀]]{伤害}，并因剧烈呕吐腐败胆汁而陷入&reference[Incapacitated]状态1{分钟}。你的{生命值上限}减少一个{等于}所受到{伤害}的数值。此减少持续到你完成一次{长休}为止。如果此效果将你的{生命值上限}降低至0，你会死亡。该{暗蚀伤害}无法以任何方式减少或阻止。</p><p><em><strong>制造。</strong></em> 制造<em>净水</em>需要一个珍稀工坊和以下珍稀{部件}：</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[尘埃]</strong> 异怪尘埃</p></li><li><p><strong>[液体]</strong> 污染{腐液}</p></li><li><p><strong>[器官]</strong> 来自{植物}的花（传统上为一株邪异百合）</p></li></ul>",
       "activities": {
         "Administer Aqua Expurgo": {
@@ -244,7 +244,7 @@
       },
       "effects": {
         "Aqua Expurgo": {
-          "name": "净水涤荡",
+          "name": "抗污药剂",
           "description": "<p>你已服用了净化之水，并在接下来的六小时内受其影响。</p><p>你受到针对&reference[drakkenheimContamination]的保护。在此期间，每当你对抗一个会让你获得一个或多个污染等级的效果的豁免检定失败时，你可以选择改为成功。你可以使用此能力三次，之后净化之水的效果消失。</p><p>如果净化之水的效果以此方式消失，你会立即受到[[/damage 3d6 necrotic]]伤害，并陷入&reference[Incapacitated]状态1分钟，同时剧烈呕吐出腐败的胆汁。你的生命值上限减少的数值等于所受到的伤害值。此减少效果持续到你完成一次长休为止。如果此效果将你的生命值上限降低至0，你会死亡。该暗蚀伤害无法以任何方式减免或阻止。</p>"
         }
       }
@@ -615,7 +615,7 @@
       }
     },
     "Aqua Delerium": {
-      "name": "水幻迷境",
+      "name": "妄质汁",
       "description": "<p><em>药水, 珍稀</em></p><p>这瓶紫色药水泛着微弱的八色光。它在带塞的小瓶中旋动闪烁。</p><p>当你饮用此药水时，你恢复已消耗的法术位。投掷[[/r 1d6]]。你选择恢复的法术位，其环阶总和等于或小于投掷结果。所有法术位均不能高于5环。</p><p>饮用狂喜之水后一小时内，每当你施展1环或更高环阶法术时，投掷1d20。若结果为1，你将触发随机的@UUID[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{奥秘异象}。</p><p>若你在完成一次长休前消耗超过一剂狂喜之水，则从第二剂恢复的每个法术位环阶都会使你受到1d12暗蚀伤害，且你的生命值上限减少等同于所受伤害的数值，直至你完成一次长休。此伤害无法以任何方式减免或避免。</p><p>当无法用法术位施展法术的生物饮用狂喜之水时，它受到[[/damage average]]伤害并获得一级&amp;reference[drakkenheimContamination]。</p><p><em><strong>制造。</strong></em> 制作<em>狂喜之水</em>需要珍稀工坊及以下珍稀部件：</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[粉尘]</strong> 畸变粉尘</p></li><li><p><strong>[液体]</strong> 污染腐液</p></li><li><p><strong>[器官]</strong> 任意腺体</p></li></ul>",
       "activities": {
         "Drink Potion": {
@@ -628,7 +628,7 @@
       },
       "effects": {
         "Aqua Delerium": {
-          "name": "水之狂乱",
+          "name": "妄质汁",
           "description": "<p>接下来的1小时内，每当你施展一环或更高环阶的法术时，骰一次d20。若结果为1，你将触发一个@{UUID}[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{奥秘异常 Arcane Anomaly}。</p><p>若你在完成一次{长休 Long Rest}前消耗额外一剂阿夸谵妄，你每从第二剂中恢复一个法术位环阶，就会受到[[/damage 1d12 暗蚀]]伤害，且你的{生命值上限 hit point maximum}减少等同于所受伤害的数值，直至你完成一次{长休 Long Rest}。此伤害无法以任何方式减免或阻止。</p>"
         }
       }
