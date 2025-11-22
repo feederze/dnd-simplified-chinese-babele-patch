@@ -646,8 +646,8 @@
           "tokenName": "小队：食尸鬼食尸鬼"
         },
         "Yuan-ti Broodguards (Area 20)": {
-          "name": "蛇人雏兽守卫（区域 20） Yuan-ti Broodguards (Area 20)",
-          "tokenName": "蛇人雏兽守卫"
+          "name": "卫雏蛇人（区域 20） Yuan-ti Broodguards (Area 20)",
+          "tokenName": "卫雏蛇人"
         },
         "Yuan-ti Nests (Area 18)": {
           "name": "蛇人之巢（区域 18） Yuan-ti Nests (Area 18)",
@@ -8060,7 +8060,7 @@
           "items": {
             "Innate Spellcasting (Abomination Form Only)": {
               "name": "天生施法（仅憎恶形态） Innate Spellcasting (Abomination Form Only)",
-              "description": "<p>蛇人的天生施法属性为魅力（法术豁免DC 15）。它天生即可施展以下法术，且无需任何材料成分：</p> <p>随意：<em>[[/item .fekLhgeUpUKzf1OS]{化兽为友}]（仅限蛇类）</em></p> <p>3/日：<em>[[/item .gJsmnpLGmjauTira]{暗示术}]</em></p> <p>1/日：<em>[[/item .8EPLXk4TStPVhafa]{恐惧术}]</em></p>"
+              "description": "<p>蛇人的天生施法属性为魅力（法术豁免DC 15）。它天生即可施展以下法术，且无需任何材料成分：</p> <p>随意：<em>[[/item .fekLhgeUpUKzf1OS]]{化兽为友}（仅限蛇类）</em></p> <p>3/日：<em>[[/item .gJsmnpLGmjauTira]]{暗示术}</em></p> <p>1/日：<em>[[/item .8EPLXk4TStPVhafa]]{恐惧术}</em></p>"
             },
             "Multiattack (Abomination Form Only)": {
               "name": "多重攻击（仅憎恶形态） Multiattack (Abomination Form Only)",
@@ -8081,46 +8081,46 @@
               },
               "effects": {
                 "Grappled & Restrained": {
-                  "name": "Grappled & Restrained",
-                  "description": "<p>The target is &amp;Reference[Grappled apply=false]{grappled} (escape DC 14). Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}</p>"
+                  "name": "受擒并束缚",
+                  "description": "<p>你&Reference[Grappled apply=false]{受擒} (逃脱DC 14)。直至擒抱终止前，你受&Reference[Restrained apply=false]{束缚}。</p>"
                 }
               }
             },
             "Shapechanger": {
-              "name": "Shapechanger",
-              "description": "<p>The [[lookup @name lowercase]] can use its action to polymorph into a Large snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn’t transformed. It doesn’t change form if it dies.</p>"
+              "name": "变形生物 Shapechanger",
+              "description": "<p>[[lookup @name lowercase]]用一个动作变形为大型的蛇，或以同样的动作变回其真实形态。它的所有资料均不会发生改变，其随身着装和携带的装备也不会随变形发生变化。蛇人死亡时将恢复其真实形态。</p>"
             },
             "Magic Resistance": {
-              "name": "Magic Resistance",
-              "description": "<p>The [[lookup @name lowercase]] has advantage on saving throws against spells and other magical effects.</p>"
+              "name": "魔法抗性 Magic Resistance",
+              "description": "<p>[[lookup @name lowercase]]为抵抗法术和其它魔法效应而作的豁免检定具有优势。</p>"
             },
             "Animal Friendship": {
-              "name": "Animal Friendship",
-              "description": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>",
+              "name": "化兽为友 Animal Friendship",
+              "description": "<p>该法术帮你让一只野兽相信你并无恶意。在施法距离内指定一只你能看见的野兽，而它也必须能看见你且能听到你的声音。该野兽必须进行一次感知豁免，豁免失败则将在法术持续时间内被你魅惑。如果它的智力为 4 或更高则法术直接失败。如果你或你的同伴对目标造成伤害，则法术终止。</p><p><strong>升环施法：</strong>使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，就可以多选择一个野兽作为目标。</p>",
               "materials": {
                 "value": "一点食物"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Suggestion": {
-              "name": "Suggestion",
+              "name": "暗示术 Suggestion",
               "description": "<p>你以魔法影响施法距离内一个你能看见的生物，并对其施以某种行动暗示（不超过 25 个词）。由你指定的受术目标必须能听到并理解你的话语。暗示必须听起来可行，也不涉及明显会对目标及其盟友造成伤害的内容。比如说，你可以说“把邪教的宝库钥匙找来，然后给我。”或者：“别打了，让图书馆保持安静，然后出去别回来。”</p><p>目标必须成功通过一次感知豁免，否则在法术持续时间内陷入魅惑，若你或你的盟友对其造成伤害此法术将提前结束。被魅惑的生物会尽其所能地执行你所描述的行为。</p><p>你所暗示的行为可能会在法术持续时间内始终一直进行</p><p>而如果你所暗示的活动可以用更短的时间完成，则此法术会在目标完成了你的要求后随即终止。</p>",
               "materials": {
                 "value": "一条蛇舌，加上一小块蜂巢或一滴甜油"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Fear": {
-              "name": "Fear",
-              "description": "<p>You project a phantasmal image of a creature's worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become &amp;Reference[Frightened] for the duration.</p><p>While Frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature.</p>",
+              "name": "恐惧术 Fear",
+              "description": "<p>你制造一个目标最惧怕的幻象，并迫使 30 尺锥状区域内的所有生物进行一次感知豁免，豁免失败者将丢弃其所有持握物，并在法术持续时间内陷入&Reference[Frightened]。</p><p>被法术恐慌的生物必须在其回合内执行疾走动作，并以此寻找最安全的路线远离施法者，直至其无路可走为止。如果该生物结束其回合时位于一处使其视觉线中没有你的空间，则其可以再进行一次感知豁免，豁免成功则法术对该生物的效应终止。</p>",
               "materials": {
                 "value": "一片白羽毛或一颗母鸡心"
               },
@@ -8135,417 +8135,417 @@
               }
             },
             "Scimitar (Abomination Form Only)": {
-              "name": "Scimitar (Abomination Form Only)",
+              "name": "弯刀（仅憎恶形态） Scimitar (Abomination Form Only)",
               "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>",
               "activities": {
                 "attack": {
-                  "condition": "Abomination Form Only"
+                  "condition": "仅憎恶形态"
                 }
               }
             },
             "Longbow (Abomination Form Only)": {
-              "name": "Longbow (Abomination Form Only)",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>",
+              "name": "长弓（仅憎恶形态） Longbow (Abomination Form Only)",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>",
               "activities": {
                 "attack": {
-                  "condition": "Abomination Form Only"
+                  "condition": "仅憎恶形态"
                 }
               }
             }
           }
         },
         "Yuan-ti Broodguard": {
-          "name": "Yuan-ti Broodguard",
-          "tokenName": "Yuan-ti Broodguard",
+          "name": "卫雏蛇人 Yuan-ti Broodguard",
+          "tokenName": "卫雏蛇人",
           "items": {
             "Multiattack": {
-              "name": "Multiattack",
-              "description": "<p>The broodguard makes three attacks: one with its [[/item Bite]] and two with its [[/item Claws]].</p>"
+              "name": "多重攻击 Multiattack",
+              "description": "<p>卫雏蛇人进行三次攻击，一次[[/item Bite]]{啃咬}和两次[[/item Claws]]{爪击}。</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬 Bite",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Claws": {
-              "name": "Claws",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "爪击 Claws",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Mental Resistance": {
-              "name": "Mental Resistance",
-              "description": "<p>The broodguard has advantage on saving throws against being charmed, and magic can’t paralyze it.</p>"
+              "name": "精神抗性 Mental Resistance",
+              "description": "<p>[[lookup @name]]在对抗导致魅惑的法术豁免中有优势，并且魔法不能使它麻痹。</p>"
             },
             "Reckless": {
-              "name": "Reckless",
-              "description": "<p>At the start of its turn, the broodguard can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.</p>"
+              "name": "鲁莽 Reckless",
+              "description": "<p>在它的回合开始时，卫雏蛇人可以在本回合中的所有近战武器攻击中获得优势；但在下一回合开始之前，对它的攻击也会有优势。</p>"
             }
           },
           "effects": {
             "Chanting Skull Benefits": {
-              "name": "Chanting Skull Benefits",
-              "description": "<p>As long as one or more skulls are chanting, all yuan-ti in the room gain the following benefits:</p><ul><li><p>Resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks</p></li><li><p>Advantage on saving throws against spells and other magical effects</p></li></ul>"
+              "name": "吟唱颅骨增益",
+              "description": "<p>只要有至少一颗颅骨在吟唱，房间里的所有蛇人就都能得到以下好处：</p><ul><li><p>对来自非魔法攻击的钝击、穿刺及挥砍伤害拥有抗性。</p></li><li><p>为对抗法术及其他魔法效应而进行的豁免具优势。</p></li></ul>"
             }
           }
         },
         "Yuan-ti Malison (Type 1)": {
-          "name": "Yuan-ti Malison (Type 1)",
-          "tokenName": "Yuan-ti Malison",
+          "name": "恶咒蛇人（1 型） Yuan-ti Malison (Type 1)",
+          "tokenName": "恶咒蛇人",
           "items": {
             "Innate Spellcasting (Yuan-ti Form Only)": {
-              "name": "Innate Spellcasting (Yuan-ti Form Only)",
-              "description": "<p>The yuan-ti’s innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:</p><p>At will: <em>[[/item .wH3YQK3OW0q5vDAz]]{animal friendship}</em> (Snakes Only)</p><p>3/day: <em>[[/item .eSeOHIwTlHMlrJsA]]{suggestion}</em></p>",
+              "name": "天生施法（仅蛇人形态） Innate Spellcasting (Yuan-ti Form Only)",
+              "description": "<p>蛇人的天生施法属性为魅力（法术豁免DC 13）。它天生即可施展以下法术，且无需任何材料成分：</p><p>随意：<em>[[/item .wH3YQK3OW0q5vDAz]]{化兽为友}</em>（仅限蛇类）</p><p>3/日：<em>[[/item .eSeOHIwTlHMlrJsA]]{暗示术}</em></p>",
               "activities": {
                 "Animal Friendship": {
-                  "name": "Animal Friendship"
+                  "name": "化兽为友"
                 },
                 "Suggestion": {
-                  "name": "Suggestion"
+                  "name": "暗示术"
                 }
               }
             },
             "Multiattack": {
-              "name": "Multiattack",
-              "description": "<p>The yuan-ti makes two ranged attacks or two melee attacks, but can use its [[/item Bite]] only once.</p>"
+              "name": "多重攻击 Multiattack",
+              "description": "<p>蛇人发动两次远程攻击或三次近战攻击，但每次只能使用一次[[/item Bite]]{啃咬}。</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬 Bite",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Shapechanger": {
-              "name": "Shapechanger",
-              "description": "<p>The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn’t transformed. It doesn’t change form if it dies.</p>"
+              "name": "变形生物 Shapechanger",
+              "description": "<p>[[lookup @name lowercase]]用一个动作变形为中型的蛇，或以同样的动作变回其真实形态。它的所有资料均不会发生改变，其随身着装和携带的装备也不会随变形发生变化。蛇人死亡时将恢复其真实形态。</p>"
             },
             "Magic Resistance": {
-              "name": "Magic Resistance",
-              "description": "<p>The yuan-ti has advantage on saving throws against spells and other magical effects.</p>"
+              "name": "魔法抗性 Magic Resistance",
+              "description": "<p>蛇人对抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Malison Type": {
-              "name": "Malison Type",
-              "description": "<p>The yuan-ti malison (type 1) has a Human body with snake head.</p>"
+              "name": "恶咒类型 Malison Type",
+              "description": "<p>蛇人属于 1 型：蛇头人身</p>"
             },
             "Animal Friendship": {
-              "name": "Animal Friendship",
-              "description": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>",
+              "name": "化兽为友 Animal Friendship",
+              "description": "<p>该法术帮你让一只野兽相信你并无恶意。在施法距离内指定一只你能看见的野兽，而它也必须能看见你且能听到你的声音。该野兽必须进行一次感知豁免，豁免失败则将在法术持续时间内被你魅惑。如果它的智力为 4 或更高则法术直接失败。如果你或你的同伴对目标造成伤害，则法术终止。</p><p><strong>升环施法：</strong>使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，就可以多选择一个野兽作为目标。</p>",
               "materials": {
                 "value": "一点食物"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Suggestion": {
-              "name": "Suggestion",
+              "name": "暗示术 Suggestion",
               "description": "<p>你以魔法影响施法距离内一个你能看见的生物，并对其施以某种行动暗示（不超过 25 个词）。由你指定的受术目标必须能听到并理解你的话语。暗示必须听起来可行，也不涉及明显会对目标及其盟友造成伤害的内容。比如说，你可以说“把邪教的宝库钥匙找来，然后给我。”或者：“别打了，让图书馆保持安静，然后出去别回来。”</p><p>目标必须成功通过一次感知豁免，否则在法术持续时间内陷入魅惑，若你或你的盟友对其造成伤害此法术将提前结束。被魅惑的生物会尽其所能地执行你所描述的行为。</p><p>你所暗示的行为可能会在法术持续时间内始终一直进行</p><p>而如果你所暗示的活动可以用更短的时间完成，则此法术会在目标完成了你的要求后随即终止。</p>",
               "materials": {
                 "value": "一条蛇舌，加上一小块蜂巢或一滴甜油"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Scimitar (Yuan-ti Form Only)": {
-              "name": "Scimitar (Yuan-ti Form Only)",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>",
+              "name": "弯刀（仅蛇人形态） Scimitar (Yuan-ti Form Only)",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>",
               "activities": {
                 "attack": {
-                  "condition": "Yuan-ti Form Only"
+                  "condition": "仅蛇人形态"
                 }
               }
             },
             "Longbow (Yuan-ti Form Only)": {
-              "name": "Longbow (Yuan-ti Form Only)",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>",
+              "name": "长弓（仅蛇人形态） Longbow (Yuan-ti Form Only)",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>",
               "activities": {
                 "attack": {
-                  "condition": "Yuan-ti Form Only"
+                  "condition": "仅蛇人形态"
                 }
               }
             }
           }
         },
         "Yuan-ti Malison (Type 2)": {
-          "name": "Yuan-ti Malison (Type 2)",
-          "tokenName": "Yuan-ti Malison",
+          "name": "恶咒蛇人（2 型） Yuan-ti Malison (Type 2)",
+          "tokenName": "恶咒蛇人",
           "items": {
             "Shapechanger": {
-              "name": "Shapechanger",
-              "description": "<p>The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn’t transformed. It doesn’t change form if it dies.</p>"
+              "name": "变形生物 Shapechanger",
+              "description": "<p>[[lookup @name lowercase]]用一个动作变形为中型的蛇，或以同样的动作变回其真实形态。它的所有资料均不会发生改变，其随身着装和携带的装备也不会随变形发生变化。蛇人死亡时将恢复其真实形态。</p>"
             },
             "Innate Spellcasting (Yuan-ti Form Only)": {
-              "name": "Innate Spellcasting (Yuan-ti Form Only)",
-              "description": "<p>The yuan-ti’s innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:</p><p>At will: <em>[[/item .7td0M52eK3IOYcMV]]{animal friendship}</em> (Snakes Only)</p><p>3/day: <em>[[/item .kAbf1iP1X09hNTct]]{suggestion}</em></p>",
+              "name": "天生施法（仅蛇人形态） Innate Spellcasting (Yuan-ti Form Only)",
+              "description": "<p>蛇人的天生施法属性为魅力（法术豁免DC 13）。它天生即可施展以下法术，且无需任何材料成分：</p><p>随意：<em>[[/item .7td0M52eK3IOYcMV]]{化兽为友}</em>（仅限蛇类）</p><p>3/日：<em>[[/item .kAbf1iP1X09hNTct]]{暗示术}</em></p>",
               "activities": {
                 "Animal Friendship": {
-                  "name": "Animal Friendship"
+                  "name": "化兽为友"
                 },
                 "Suggestion": {
-                  "name": "Suggestion"
+                  "name": "暗示术"
                 }
               }
             },
             "Suggestion": {
-              "name": "Suggestion",
+              "name": "暗示术 Suggestion",
               "description": "<p>你以魔法影响施法距离内一个你能看见的生物，并对其施以某种行动暗示（不超过 25 个词）。由你指定的受术目标必须能听到并理解你的话语。暗示必须听起来可行，也不涉及明显会对目标及其盟友造成伤害的内容。比如说，你可以说“把邪教的宝库钥匙找来，然后给我。”或者：“别打了，让图书馆保持安静，然后出去别回来。”</p><p>目标必须成功通过一次感知豁免，否则在法术持续时间内陷入魅惑，若你或你的盟友对其造成伤害此法术将提前结束。被魅惑的生物会尽其所能地执行你所描述的行为。</p><p>你所暗示的行为可能会在法术持续时间内始终一直进行</p><p>而如果你所暗示的活动可以用更短的时间完成，则此法术会在目标完成了你的要求后随即终止。</p>",
               "materials": {
                 "value": "一条蛇舌，加上一小块蜂巢或一滴甜油"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Animal Friendship": {
-              "name": "Animal Friendship",
-              "description": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>",
+              "name": "化兽为友 Animal Friendship",
+              "description": "<p>该法术帮你让一只野兽相信你并无恶意。在施法距离内指定一只你能看见的野兽，而它也必须能看见你且能听到你的声音。该野兽必须进行一次感知豁免，豁免失败则将在法术持续时间内被你魅惑。如果它的智力为 4 或更高则法术直接失败。如果你或你的同伴对目标造成伤害，则法术终止。</p><p><strong>升环施法：</strong>使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，就可以多选择一个野兽作为目标。</p>",
               "materials": {
                 "value": "一点食物"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Magic Resistance": {
-              "name": "Magic Resistance",
-              "description": "<p>The yuan-ti has advantage on saving throws against spells and other magical effects.</p>"
+              "name": "魔法抗性 Magic Resistance",
+              "description": "<p>蛇人对抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Malison Type": {
-              "name": "Malison Type",
-              "description": "<p>The yuan-ti malison (type 2) has a Human head and body with snakes for arms</p>"
+              "name": "恶咒类型 Malison Type",
+              "description": "<p>蛇人属于 2 型：人头和人身，但长有蛇形臂膀。</p>"
             },
             "Multiattack (Yuan-ti Form Only)": {
-              "name": "Multiattack (Yuan-ti Form Only)",
-              "description": "<p>The yuan-ti makes two [[/item Bite]] attacks using its snake arms.</p>"
+              "name": "多重攻击（仅蛇人形态） Multiattack (Yuan-ti Form Only)",
+              "description": "<p>蛇人用其蛇形臂膀发动两次[[/item Bite]]{啃咬}攻击。</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬 Bite",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
         "Yuan-ti Malison (Type 3)": {
-          "name": "Yuan-ti Malison (Type 3)",
-          "tokenName": "Yuan-ti Malison",
+          "name": "恶咒蛇人（3 型） Yuan-ti Malison (Type 3)",
+          "tokenName": "恶咒蛇人",
           "items": {
             "Innate Spellcasting (Yuan-ti Form Only)": {
-              "name": "Innate Spellcasting (Yuan-ti Form Only)",
-              "description": "<p>The yuan-ti’s innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:</p><p>At will: <em>[[/item .wH3YQK3OW0q5vDAz]]{animal friendship}</em> (Snakes Only)</p><p>3/day: <em>[[/item .eSeOHIwTlHMlrJsA]]{suggestion}</em></p>",
+              "name": "天生施法（仅蛇人形态） Innate Spellcasting (Yuan-ti Form Only)",
+              "description": "<p>蛇人的天生施法属性为魅力（法术豁免DC 13）。它天生即可施展以下法术，且无需任何材料成分：</p><p>随意：<em>[[/item .wH3YQK3OW0q5vDAz]]{化兽为友}</em>（仅限蛇类）</p><p>3/日：<em>[[/item .eSeOHIwTlHMlrJsA]]{暗示术}</em></p>",
               "activities": {
                 "Animal Friendship": {
-                  "name": "Animal Friendship"
+                  "name": "化兽为友"
                 },
                 "Suggestion": {
-                  "name": "Suggestion"
+                  "name": "暗示术"
                 }
               }
             },
             "Multiattack (Yuan-ti Form Only)": {
-              "name": "Multiattack (Yuan-ti Form Only)",
-              "description": "<p>The yuan-ti makes two [[/item .chRdSsL3qBYtemps]]{Longbow} attacks or two [[/item .fybR0hBMWsKkK8aD]]{Scimitar} attacks, but can [[/item .yEKD2WznxbiLuTDf]] only once.</p>"
+              "name": "多重攻击（仅蛇人形态） Multiattack (Yuan-ti Form Only)",
+              "description": "<p>蛇人发动两次 [[/item .chRdSsL3qBYtemps]]{长弓}攻击或两次 [[/item .fybR0hBMWsKkK8aD]]{弯刀}攻击，但只能使用一次 [[/item .yEKD2WznxbiLuTDf]]{绞缠}攻击。</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬 Bite",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Shapechanger": {
-              "name": "Shapechanger",
-              "description": "<p>The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn’t transformed. It doesn’t change form if it dies.</p>"
+              "name": "变形生物 Shapechanger",
+              "description": "<p>[[lookup @name lowercase]]用一个动作变形为中型的蛇，或以同样的动作变回其真实形态。它的所有资料均不会发生改变，其随身着装和携带的装备也不会随变形发生变化。蛇人死亡时将恢复其真实形态。</p>"
             },
             "Magic Resistance": {
-              "name": "Magic Resistance",
-              "description": "<p>The yuan-ti has advantage on saving throws against spells and other magical effects.</p>"
+              "name": "魔法抗性 Magic Resistance",
+              "description": "<p>蛇人对抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Malison Type": {
-              "name": "Malison Type",
-              "description": "<p>The yuan-ti malison (type 3) has a Human head and upper body with a serpentine lower body instead of legs.</p>"
+              "name": "恶咒类型 Malison Type",
+              "description": "<p>蛇人属于 3 型：人头和人身，但长有蛇尾取代双脚。</p>"
             },
             "Animal Friendship": {
-              "name": "Animal Friendship",
-              "description": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>",
+              "name": "化兽为友 Animal Friendship",
+              "description": "<p>该法术帮你让一只野兽相信你并无恶意。在施法距离内指定一只你能看见的野兽，而它也必须能看见你且能听到你的声音。该野兽必须进行一次感知豁免，豁免失败则将在法术持续时间内被你魅惑。如果它的智力为 4 或更高则法术直接失败。如果你或你的同伴对目标造成伤害，则法术终止。</p><p><strong>升环施法：</strong>使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，就可以多选择一个野兽作为目标。</p>",
               "materials": {
                 "value": "一点食物"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Suggestion": {
-              "name": "Suggestion",
+              "name": "暗示术 Suggestion",
               "description": "<p>你以魔法影响施法距离内一个你能看见的生物，并对其施以某种行动暗示（不超过 25 个词）。由你指定的受术目标必须能听到并理解你的话语。暗示必须听起来可行，也不涉及明显会对目标及其盟友造成伤害的内容。比如说，你可以说“把邪教的宝库钥匙找来，然后给我。”或者：“别打了，让图书馆保持安静，然后出去别回来。”</p><p>目标必须成功通过一次感知豁免，否则在法术持续时间内陷入魅惑，若你或你的盟友对其造成伤害此法术将提前结束。被魅惑的生物会尽其所能地执行你所描述的行为。</p><p>你所暗示的行为可能会在法术持续时间内始终一直进行</p><p>而如果你所暗示的活动可以用更短的时间完成，则此法术会在目标完成了你的要求后随即终止。</p>",
               "materials": {
                 "value": "一条蛇舌，加上一小块蜂巢或一滴甜油"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Scimitar (Yuan-ti Form Only)": {
-              "name": "Scimitar (Yuan-ti Form Only)",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>",
+              "name": "弯刀（仅蛇人形态） Scimitar (Yuan-ti Form Only)",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>",
               "activities": {
                 "attack": {
-                  "condition": "Yuan-ti Form Only"
+                  "condition": "仅蛇人形态"
                 }
               }
             },
             "Longbow (Yuan-ti Form Only)": {
-              "name": "Longbow (Yuan-ti Form Only)",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>",
+              "name": "长弓（仅蛇人形态） Longbow (Yuan-ti Form Only)",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>",
               "activities": {
                 "attack": {
-                  "condition": "Yuan-ti Form Only"
+                  "condition": "仅蛇人形态"
                 }
               }
             },
             "Constrict": {
-              "name": "Constrict",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]], and the target is &amp;Reference[grappled apply=false]{grappled} (escape DC [[lookup @skills.ath.passive]]). Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}, and the yuan-ti can’t constrict another target.</p>",
+              "name": "绞缠 Constrict",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]，且目标被 &amp;Reference[Grappled apply=false]{擒抱}（逃脱 DC [[lookup @skills.ath.passive]]）。直至此擒抱终止前，目标被 &amp;Reference[restrained apply=false]{束缚}，且该 [[lookup @name lowercase]] 无法绞缠其他目标。</p>",
               "activities": {
                 "Escape Check": {
-                  "name": "Escape Check"
+                  "name": "逃脱检定"
                 }
               },
               "effects": {
                 "Grappled & Restrained": {
-                  "name": "Grappled & Restrained",
-                  "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled} (escape DC 13). Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained},</p>"
+                  "name": "受擒并束缚",
+                  "description": "<p>你&Reference[Grappled apply=false]{受擒} (逃脱DC 14)。直至擒抱终止前，你受&Reference[Restrained apply=false]{束缚}。</p>"
                 }
               }
             }
           }
         },
         "Yuan-ti Nightmare Speaker": {
-          "name": "Yuan-ti Nightmare Speaker",
-          "tokenName": "Yuan-ti Nightmare Speaker",
+          "name": "蛇人梦魇语者 Yuan-ti Nightmare Speaker",
+          "tokenName": "蛇人梦魇语者",
           "items": {
             "Shapechanger": {
-              "name": "Shapechanger",
-              "description": "<p>The [[lookup @name lowercase]] can use its action to polymorph into a Medium snake or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn’t transformed. If it dies, it stays in its current form.</p>"
+              "name": "变形生物 Shapechanger",
+              "description": "<p>[[lookup @name lowercase]]可以用它的动作把变形成中型的蛇，或者重新变成它的真实形态。其数据在每种形态上都是相同的。任何它所携带的物品都不会随之改变。如果它死了，它就会保持目前的状态。</p>"
             },
             "Death Fangs": {
-              "name": "Death Fangs",
-              "description": "<p>The first time the [[lookup @name lowercase]] with a melee attack on its turn, it can deal an extra [[/damage average]] damage to the target.</p>"
+              "name": "死亡毒牙 Death Fangs",
+              "description": "<p>在[[lookup @name lowercase]]的回合内第一次使用近战攻击命中时，[[lookup @name lowercase]]可以对目标造成额外[[/damage average]]伤害。</p>"
             },
             "Innate Spellcasting (Yuan-ti Form Only)": {
-              "name": "Innate Spellcasting (Yuan-ti Form Only)",
-              "description": "<p>The [[lookup @name lowercase]]’s innate spellcasting ability is Charisma (spell save DC 13). The [[lookup @name lowercase]] can innately cast the following spells, requiring no material components:</p><p>At will: <em>[[/item .hKsFzm8lwZzdafpS]]{animal friendship}</em> (Snakes Only)</p><p>3/day: <em>[[/item .cXPHUDfUVoswTJ3W]]{suggestion}</em></p>"
+              "name": "天生施法（仅蛇人形态） Innate Spellcasting (Yuan-ti Form Only)",
+              "description": "<p>[[lookup @name lowercase]] 的天生施法属性为魅力（法术豁免DC 13）。[[lookup @name lowercase]] 天生即可施展以下法术，且无需任何材料成分：</p><p>随意：<em>[[/item .hKsFzm8lwZzdafpS]]{化兽为友}</em>（仅限蛇类）</p><p>3/日：<em>[[/item .cXPHUDfUVoswTJ3W]]{暗示术}</em></p>"
             },
             "Suggestion": {
-              "name": "Suggestion",
+              "name": "暗示术 Suggestion",
               "description": "<p>你以魔法影响施法距离内一个你能看见的生物，并对其施以某种行动暗示（不超过 25 个词）。由你指定的受术目标必须能听到并理解你的话语。暗示必须听起来可行，也不涉及明显会对目标及其盟友造成伤害的内容。比如说，你可以说“把邪教的宝库钥匙找来，然后给我。”或者：“别打了，让图书馆保持安静，然后出去别回来。”</p><p>目标必须成功通过一次感知豁免，否则在法术持续时间内陷入魅惑，若你或你的盟友对其造成伤害此法术将提前结束。被魅惑的生物会尽其所能地执行你所描述的行为。</p><p>你所暗示的行为可能会在法术持续时间内始终一直进行</p><p>而如果你所暗示的活动可以用更短的时间完成，则此法术会在目标完成了你的要求后随即终止。</p>",
               "materials": {
                 "value": "一条蛇舌，加上一小块蜂巢或一滴甜油"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Magic Resistance": {
-              "name": "Magic Resistance",
-              "description": "<p>The [[lookup @name lowercase]] has advantage on saving throws against spells and other magical effects.</p>"
+              "name": "魔法抗性 Magic Resistance",
+              "description": "<p>[[lookup @name lowercase]]为抵抗法术和其它魔法效应而作的豁免检定具有优势。</p>"
             },
             "Spellcasting (Yuan-ti Form Only)": {
-              "name": "Spellcasting (Yuan-ti Form Only)",
-              "description": "<p>The [[lookup @name lowercase]] is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:</p><p>Cantrip (at will): <em>[[/item .Qs6fznNYnvARnDPF]]{chill touch}, [[/item .DIOlZj69ZeojYJrL]]{eldritch blast} (range 300 ft., +3 bonus to each damage roll), [[/item .A0HU5DEPs6fpLXj4]]{mage hand}, [[/item .unfRuSZaCZd8actb]]{message}, [[/item .eqXU3N7Q13cyDGuA]]{poison spray}, [[/item .Gp4DANsmUtFaJwCS]]{prestidigitation}</em></p><p>1st–3rd level (2 3rd-level slots): <em>arms of Hadar</em> (PHB 2014), <em>[[/item .FoFVbOkVSfh14W4g]]{darkness}, [[/item .5sddEQHygG3HHdhR]]{fear}</em>, <em>hex</em> (PHB 2014), [[/item .dw8ZVumsCp9n46Mg]]{hold person}, <em>hungar of Hadar</em> (PHB 2014), <em>witch bolt</em> (PHB 2014)</p>"
+              "name": "施法（仅蛇人形态） Spellcasting (Yuan-ti Form Only)",
+              "description": "<p>蛇人作为 6 级施法者，其施法关键属性为魅力（法术豁免 DC 13，法术攻击命中+5）。它在完成短休或长休时恢复所有已消耗的法术位。它知晓以下魔契师法术：</p><p>戏法(随意)：<em>[[/item .Qs6fznNYnvARnDPF]]{冻寒之触}, [[/item .DIOlZj69ZeojYJrL]]{魔能爆} (射程 300 尺，每个伤害骰+3额外伤害), [[/item .A0HU5DEPs6fpLXj4]]{法师之手}, [[/item .unfRuSZaCZd8actb]]{传讯术}, [[/item .eqXU3N7Q13cyDGuA]]{毒气喷溅}, [[/item .Gp4DANsmUtFaJwCS]]{魔法伎俩}</em></p><p>一至三环(2 个三环法术位)：<em>哈达之臂</em> (PHB 2014), <em>[[/item .FoFVbOkVSfh14W4g]]{黑暗术}, [[/item .5sddEQHygG3HHdhR]]{恐惧术}</em>, <em>脆弱诅咒</em> (PHB 2014), [[/item .dw8ZVumsCp9n46Mg]]{人类定身术}, <em>哈达之欲</em> (PHB 2014), <em>巫术箭</em> (PHB 2014)</p>"
             },
             "Multiattack": {
-              "name": "Multiattack",
-              "description": "<p>[[lookup @name]] makes one [[/item Constrict]] attack and one [[/item Scimitar]] attack.</p>"
+              "name": "多重攻击 Multiattack",
+              "description": "<p>[[lookup @name]]发动一次[[/item Constrict]]{绞缠}攻击和一次[[/item Scimitar]]{弯刀}攻击，或是发动两次[[/item Spectral Fangs]]{灵体毒牙}攻击。</p>"
             },
             "Constrict": {
-              "name": "Constrict",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]], and the target is &amp;Reference[grappled apply=false]{grappled} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}, and [[lookup @name lowercase]] can’t constrict another target.</p>",
+              "name": "绞缠 Constrict",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。如果目标是大型或更小体型的生物，则目标被&amp;Reference[grappled apply=false]{擒抱}（逃脱 DC 14）。直到擒抱结束前，目标被&amp;Reference[restrained apply=false]{束缚}，且[[lookup @name lowercase]]无法绞缠其他目标。</p>",
               "activities": {
                 "Escape Check": {
-                  "name": "Escape Check"
+                  "name": "逃脱检定"
                 }
               },
               "effects": {
                 "Grappled & Restrained": {
-                  "name": "Grappled & Restrained",
-                  "description": "<p> The target is &amp;Reference[Grappled apply=false] (escape DC 14) if it is a Large or smaller creature. Until this grapple ends, the target is &amp;Reference[Restrained apply=false].</p>"
+                  "name": "受擒并束缚",
+                  "description": "<p>如果你是大型或更小体型的生物，则你被&amp;Reference[grappled apply=false]{擒抱}（逃脱 DC 14）。直到擒抱结束前，你被&amp;Reference[restrained apply=false]{束缚}。</p>"
                 }
               }
             },
             "Scimitar": {
-              "name": "Scimitar",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "弯刀 Scimitar",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Invoke Nightmare": {
-              "name": "Invoke Nightmare",
-              "description": "<p>[[lookup @name]] taps into the nightmares of a creature it can see within 60 feet of it and creates an illusory, immobile manifestation of the creature’s deepest fears, visible only to that creature.</p><p>The target must make a [[/save format=long]]. On a failed save, the target takes [[/damage average]] damage and is &amp;Reference[Frightened apply=false] of the manifestation, believing it to be real.</p><p>[[lookup @name]] must concentrate to maintain the illusion (as if concentrating on a spell), which lasts for up to 1 minute and can’t be harmed.</p><p>The target can repeat the saving throw at the end of each of its turns, ending the illusion on a success, or taking [[/damage average activity=RNLU0yyiuqo0S1lr]] damage on a failure.</p>",
+              "name": "唤起噩梦 Invoke Nightmare",
+              "description": "<p>[[lookup @name]]唤醒其周围 60 尺内一个可见生物的噩梦，并创造出仅该生物可见的、基于其内心最深恐惧的静止幻象。</p><p>目标必须进行一次[[/save format=long]]。若豁免失败，目标受到[[/damage average]]伤害，并对该幻象产生&amp;Reference[Frightened apply=false]{恐慌}，认为它是真实的。</p><p>[[lookup @name]]必须专注于维持此幻象（如同专注于一个法术），幻象最多持续 1 分钟且无法被伤害。</p><p>目标可于其每回合结束时重复进行该豁免检定，成功则终止幻象，失败则受到[[/damage average activity=RNLU0yyiuqo0S1lr]]伤害。</p>",
               "activities": {
                 "Damage: End of Turn": {
-                  "name": "Damage: End of Turn"
+                  "name": "伤害：回合结束"
                 }
               },
               "effects": {
                 "Frightened": {
-                  "name": "Frightened",
-                  "description": "<p>The target is &amp;Reference[Frightened apply=false] of the manifestation, believing it to be real.</p>"
+                  "name": "恐慌",
+                  "description": "<p>你因幻象而陷入&Reference[Frightened apply=false]，相信它是真实的。</p>"
                 }
               }
             },
             "Animal Friendship": {
-              "name": "Animal Friendship",
-              "description": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>",
+              "name": "化兽为友 Animal Friendship",
+              "description": "<p>该法术帮你让一只野兽相信你并无恶意。在施法距离内指定一只你能看见的野兽，而它也必须能看见你且能听到你的声音。该野兽必须进行一次感知豁免，豁免失败则将在法术持续时间内被你魅惑。如果它的智力为 4 或更高则法术直接失败。如果你或你的同伴对目标造成伤害，则法术终止。</p><p><strong>升环施法：</strong>使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，就可以多选择一个野兽作为目标。</p>",
               "materials": {
                 "value": "一点食物"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Chill Touch": {
-              "name": "Chill Touch",
-              "description": "<p>You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 Necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.</p><p>If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.</p><p>This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>"
+              "name": "颤栗之触 Chill Touch",
+              "description": "<p>你在施法距离内某生物所在位置召唤出幽魂般的骨手，夹带着墓穴的刺骨冻寒攻击目标。并对该生物进行一次远程法术攻击，命中时，手掌抓住目标并令其受 1d8 点暗蚀伤害，且直至你下一回合开始前都无法恢复生命值。</p><p>如果你的命中目标为一个不死生物，则其在你下回合结束之前对你发动的攻击检定都具有劣势。</p><p>你到达 5 级时，该法术的伤害增加 1d8（变为 2d8）。11 级时再加 1d8（变为 3d8），17 级时再加 1d8（变为 4d8）。</p>"
             },
             "Eldritch Blast": {
-              "name": "Eldritch Blast",
-              "description": "<p>A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.</p><p>The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.</p>"
+              "name": "魔能爆 Eldritch Blast",
+              "description": "<p>你释放出一束爆裂能量射线，对施法距离内一名生物或一个物件发动一次远程法术攻击。命中时，目标将受1d10点力场伤害。</p><p>到达5级后此法术将创造出两条射线，11级后三条，17级后四条。你可以使这些射线攻击同一个目标或分别攻击不同的目标。你需要为每条射线分别进行攻击检定。</p>"
             },
             "Mage Hand": {
-              "name": "Mage Hand",
+              "name": "法师之手 Mage Hand",
               "description": "<p>一只漂浮的幽灵手出现在施法距离内你指定的一点。幽灵手持续存在至法术终止。如果幽灵手距你的距离超过 30 尺，或者当你再次施展了该法术时，则现存的幽灵手消失不见。</p><p>你可以在施展该法术时使用幽灵手实施一个行为：你可以操控一个物件，或者打开一扇未上锁的门或容器，或者将一件物品放入或取出一个打开的容器，或者将小瓶中的内容物倾倒出来。</p><p>在后续的回合中，以一个魔法动作，你可以控制幽灵手再次实施一个行为。作为那个动作的一部分，你可以令幽灵手移动至多 30 尺。</p><p>该幽灵手不能攻击，也不能激活魔法物品或承载超过 10 磅重的物质。</p>"
             },
             "Message": {
-              "name": "Message",
-              "description": "<p>You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.</p><p>You can cast this spell through solid Objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings.</p>",
+              "name": "传讯术 Message",
+              "description": "<p>你用手指指向施法距离内的一个生物并低声说出一段信息。该目标（且只有该目标）会听到这段信息并可以用只有你能听见的低语回复你。</p><p>你可以隔着固态物件施展该法术，但你必须熟悉法术目标并知晓其就在屏障后方。魔法的沉默，1 尺厚的石头，1 寸厚的普通金属，一片薄铅片，或者 3 尺厚的木料都可以阻挡该法术。该法术不需要直线传递信息，它可以自由地转过拐角或穿过孔洞。</p>",
               "materials": {
-                "value": "A short piece of copper wire"
+                "value": "一小段铜线"
               }
             },
             "Poison Spray": {
-              "name": "Poison Spray",
-              "description": "<p>You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.</p><p>This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).</p>"
+              "name": "毒气喷溅 Poison Spray",
+              "description": "<p>你伸手向施法距离内一个你能看见的生物喷出一阵毒气。目标必须进行一次体质豁免，豁免失败则受 1d12 毒素伤害。</p><p>你到达 5 级时，该法术的伤害增加 1d12（变为 2d12）。11 级时再加 1d12（变为 3d12），17 级时再加 1d12（变为 4d12）。</p>"
             },
             "Prestidigitation": {
-              "name": "Prestidigitation",
+              "name": "魔法伎俩 Prestidigitation",
               "description": "<p>该法术是一个初级施法者用来练习的魔法小伎俩。你在施法距离内创造下列魔法效果中的一种：</p>\n<ul>\n<li>你创造一个立即生效的，无害的感观效应，比如一束火花，一阵风，微弱音乐或古怪的臭味。</li>\n<li>你立即点燃或熄灭一支蜡烛，一支火把或一小型营火。</li>\n<li>你立即使一个不大于 1 立方尺的物件变得清洁或肮脏。</li>\n<li>你立即使一个不大于 1 立方尺的非活体物质变得冰冷、温暖或对其调味，其效应持续 1 小时。</li>\n<li>你在一个物件或一个表面上创造一块色斑，或者一个记号，又或者一个标志，其效应持续 1 小时。</li>\n<li>你在你手中创造出一个非魔法的小饰品或一个幻术的图像，其大小不能超过你的手掌大小，它会存在持续至下个你的回合结束为止。</li>\n</ul>\n<p>如果你多次施展该法术，则可以同时维持至多三个不同的非即时效应，并且可以用一个动作解散其中一种效应。</p>"
             },
             "Darkness": {
-              "name": "Darkness",
-              "description": "<p>Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.</p><p>If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.</p><p>If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.</p>",
+              "name": "黑暗术 Darkness",
+              "description": "<p>你在施法距离内指定一点，并在法术持续时间内使魔法的黑暗充斥该点半径 15 尺的球状区域。该黑暗会绕过拐角扩散，连拥有黑暗视觉的生物也无法看穿这这种黑暗，而非魔法的光照也无法在区域内提供照明。</p><p>如果你选择的是你所持有的物品上的一点，或是一个没有被穿戴或携带的物体，光芒就从该物体发出，并随之移动。用不透明的物体（例如碗或头盔）完全遮住该物体将阻挡光芒的照射。</p><p>若该法术区域与 2 环或更低法术创造的光亮区域重叠，则创造该光亮的法术将被解除。</p>",
               "materials": {
                 "value": "蝙蝠毛发，以及一滴沥青或一小块煤"
               }
             },
             "Fear": {
-              "name": "Fear",
-              "description": "<p>You project a phantasmal image of a creature's worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become &amp;Reference[Frightened] for the duration.</p><p>While Frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature.</p>",
+              "name": "恐惧术 Fear",
+              "description": "<p>你制造一个目标最惧怕的幻象，并迫使 30 尺锥状区域内的所有生物进行一次感知豁免，豁免失败者将丢弃其所有持握物，并在法术持续时间内陷入&Reference[Frightened]。</p><p>被法术恐慌的生物必须在其回合内执行疾走动作，并以此寻找最安全的路线远离施法者，直至其无路可走为止。如果该生物结束其回合时位于一处使其视觉线中没有你的空间，则其可以再进行一次感知豁免，豁免成功则法术对该生物的效应终止。</p>",
               "materials": {
                 "value": "一片白羽毛或一颗母鸡心"
               },
@@ -8557,268 +8557,268 @@
               }
             },
             "Hold Person": {
-              "name": "Hold Person",
-              "description": "<p>Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be &amp;Reference[paralyzed] for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them.</p>",
+              "name": "定身类人 Hold Person",
+              "description": "<p>指定施法距离内一个你能看见的类人生物。该目标必须进行一次感知豁免，豁免失败则其在法术持续时间内陷入&Reference[paralyzed]。目标在其每回合结束时可以再进行一次感知豁免，豁免成功则终止其身上该法术的效应。</p><p><strong>升环施法：</strong>使用三环或更高法术位施展该法术时，你使用的法术位每比二环高一环，你就可以额外指定一个类人生物。指定目标时，每个目标生物必须身处其他目标 30 尺范围内。</p>",
               "materials": {
-                "value": "A small, straight piece of iron"
+                "value": "一片直的小铁片"
               },
               "effects": {
                 "Hold Person": {
-                  "name": "Hold Person",
-                  "description": "<p>The target is Paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.</p>"
+                  "name": "定身类人",
+                  "description": "<p>你陷入麻痹期间。你在你的每一回合结束时可以再进行一次感知豁免，豁免成功则终止其自身上该法术的效应。</p>"
                 }
               }
             }
           }
         },
         "Yuan-ti Priest": {
-          "name": "Yuan-ti Priest",
-          "tokenName": "Yuan-ti Priest",
+          "name": "蛇人祭司 Yuan-ti Priest",
+          "tokenName": "蛇人祭司",
           "items": {
             "Innate Spellcasting (Yuan-ti Form Only)": {
-              "name": "Innate Spellcasting (Yuan-ti Form Only)",
-              "description": "<p>The yuan-ti’s innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:</p><p>At will: <em>[[/item .wH3YQK3OW0q5vDAz]]{animal friendship}</em> (Snakes Only)</p><p>3/day: <em>[[/item .eSeOHIwTlHMlrJsA]]{suggestion}</em></p>",
+              "name": "天生施法（仅蛇人形态） Innate Spellcasting (Yuan-ti Form Only)",
+              "description": "<p>蛇人的天生施法属性为魅力（法术豁免DC 13）。它天生即可施展以下法术，且无需任何材料成分：</p><p>随意：<em>[[/item .wH3YQK3OW0q5vDAz]]{化兽为友}</em>（仅限蛇类）</p><p>3/日：<em>[[/item .eSeOHIwTlHMlrJsA]]{暗示术}</em></p>",
               "activities": {
                 "Animal Friendship": {
-                  "name": "Animal Friendship"
+                  "name": "化兽为友"
                 },
                 "Suggestion": {
-                  "name": "Suggestion"
+                  "name": "暗示术"
                 },
                 "Eldritch Blase (2 Beams)": {
-                  "name": "Eldritch Blase (2 Beams)"
+                  "name": "魔能爆（2 束）"
                 }
               }
             },
             "Multiattack (Yuan-ti Form Only)": {
-              "name": "Multiattack (Yuan-ti Form Only)",
-              "description": "<p>The yuan-ti makes two [[/item .fybR0hBMWsKkK8aD]]{Scimitar} attacks, but can [[/item .yEKD2WznxbiLuTDf]] only once.</p>"
+              "name": "多重攻击（仅蛇人形态） Multiattack (Yuan-ti Form Only)",
+              "description": "<p>蛇人发动两次 [[/item .fybR0hBMWsKkK8aD]]{弯刀}攻击，但只能使用一次 [[/item .yEKD2WznxbiLuTDf]]{绞缠}攻击。</p>"
             },
             "Bite": {
-              "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "啃咬 Bite",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Shapechanger": {
-              "name": "Shapechanger",
-              "description": "<p>The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn’t transformed. It doesn’t change form if it dies.</p>"
+              "name": "变形生物 Shapechanger",
+              "description": "<p>[[lookup @name lowercase]]用一个动作变形为中型的蛇，或以同样的动作变回其真实形态。它的所有资料均不会发生改变，其随身着装和携带的装备也不会随变形发生变化。蛇人死亡时将恢复其真实形态。</p>"
             },
             "Magic Resistance": {
-              "name": "Magic Resistance",
-              "description": "<p>The yuan-ti has advantage on saving throws against spells and other magical effects.</p>"
+              "name": "魔法抗性 Magic Resistance",
+              "description": "<p>蛇人对抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Malison Type": {
-              "name": "Malison Type",
-              "description": "<p>The yuan-ti malison (type 3) has a Human head and upper body with a serpentine lower body instead of legs.</p>"
+              "name": "恶咒类型 Malison Type",
+              "description": "<p>蛇人属于 3 型：人头和人身，但长有蛇尾取代双脚。</p>"
             },
             "Animal Friendship": {
-              "name": "Animal Friendship",
-              "description": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>",
+              "name": "化兽为友 Animal Friendship",
+              "description": "<p>该法术帮你让一只野兽相信你并无恶意。在施法距离内指定一只你能看见的野兽，而它也必须能看见你且能听到你的声音。该野兽必须进行一次感知豁免，豁免失败则将在法术持续时间内被你魅惑。如果它的智力为 4 或更高则法术直接失败。如果你或你的同伴对目标造成伤害，则法术终止。</p><p><strong>升环施法：</strong>使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，就可以多选择一个野兽作为目标。</p>",
               "materials": {
                 "value": "一点食物"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Suggestion": {
-              "name": "Suggestion",
+              "name": "暗示术 Suggestion",
               "description": "<p>你以魔法影响施法距离内一个你能看见的生物，并对其施以某种行动暗示（不超过 25 个词）。由你指定的受术目标必须能听到并理解你的话语。暗示必须听起来可行，也不涉及明显会对目标及其盟友造成伤害的内容。比如说，你可以说“把邪教的宝库钥匙找来，然后给我。”或者：“别打了，让图书馆保持安静，然后出去别回来。”</p><p>目标必须成功通过一次感知豁免，否则在法术持续时间内陷入魅惑，若你或你的盟友对其造成伤害此法术将提前结束。被魅惑的生物会尽其所能地执行你所描述的行为。</p><p>你所暗示的行为可能会在法术持续时间内始终一直进行</p><p>而如果你所暗示的活动可以用更短的时间完成，则此法术会在目标完成了你的要求后随即终止。</p>",
               "materials": {
                 "value": "一条蛇舌，加上一小块蜂巢或一滴甜油"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Scimitar (Yuan-ti Form Only)": {
-              "name": "Scimitar (Yuan-ti Form Only)",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>",
+              "name": "弯刀（仅蛇人形态） Scimitar (Yuan-ti Form Only)",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>",
               "activities": {
                 "attack": {
-                  "condition": "Yuan-ti Form Only"
+                  "condition": "仅蛇人形态"
                 }
               }
             },
             "Constrict": {
-              "name": "Constrict",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]], and the target is &amp;Reference[grappled apply=false]{grappled} (escape DC [[lookup @skills.ath.passive]]). Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}, and the yuan-ti can’t constrict another target.</p>",
+              "name": "绞缠 Constrict",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]，且目标被 &amp;Reference[Grappled apply=false]{擒抱}（逃脱 DC [[lookup @skills.ath.passive]]）。直至此擒抱终止前，目标被 &amp;Reference[restrained apply=false]{束缚}，且该 [[lookup @name lowercase]] 无法绞缠其他目标。</p>",
               "activities": {
                 "Escape Check": {
-                  "name": "Escape Check"
+                  "name": "逃脱检定"
                 }
               },
               "effects": {
                 "Grappled & Restrained": {
-                  "name": "Grappled & Restrained",
-                  "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled} (escape DC 13). Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained},</p>"
+                  "name": "受擒并束缚",
+                  "description": "<p>你&Reference[Grappled apply=false]{受擒} (逃脱DC 14)。直至擒抱终止前，你受&Reference[Restrained apply=false]{束缚}。</p>"
                 }
               }
             },
             "Eldritch Blast": {
-              "name": "Eldritch Blast",
-              "description": "<p>A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.</p><p>The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.</p>",
+              "name": "魔能爆 Eldritch Blast",
+              "description": "<p>你释放出一束爆裂能量射线，对施法距离内一名生物或一个物件发动一次远程法术攻击。命中时，目标将受1d10点力场伤害。</p><p>到达5级后此法术将创造出两条射线，11级后三条，17级后四条。你可以使这些射线攻击同一个目标或分别攻击不同的目标。你需要为每条射线分别进行攻击检定。</p>",
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Minor Illusion": {
-              "name": "Minor Illusion",
+              "name": "次级幻象 Minor Illusion",
               "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束。你也可以用一个动作解除幻象，或者再次施展该法术来终止幻象。</p><p>如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p>如果你创造一个物件的影像（比如一把椅子、泥泞的脚印、一个小箱子等），则该物件大小不得大于一个边长5尺的立方体。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物件所穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p><p>生物用其动作调查该声响或影像时，必须进行一次对抗该法术豁免DC的智力（调查）检定，检定成功则判断出眼前即是幻象。幻象在看穿它的生物面前会显得模糊不清。</p>",
               "materials": {
-                "value": "A bit of fleece."
+                "value": "少量羊毛"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Poison Spray": {
-              "name": "Poison Spray",
-              "description": "<p>You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.</p><p>This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).</p>",
+              "name": "毒气喷溅 Poison Spray",
+              "description": "<p>你伸手向施法距离内一个你能看见的生物喷出一阵毒气。目标必须进行一次体质豁免，豁免失败则受 1d12 毒素伤害。</p><p>你到达 5 级时，该法术的伤害增加 1d12（变为 2d12）。11 级时再加 1d12（变为 3d12），17 级时再加 1d12（变为 4d12）。</p>",
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             }
           }
         },
         "Yuan-ti Pureblood": {
-          "name": "Yuan-ti Pureblood",
-          "tokenName": "Yuan-ti Pureblood",
+          "name": "纯血蛇人 Yuan-ti Pureblood",
+          "tokenName": "纯血蛇人",
           "items": {
             "Innate Spellcasting": {
-              "name": "Innate Spellcasting",
-              "description": "<p>The yuan-ti’s spellcasting ability is Charisma (spell save DC 12). The yuan-ti can innately cast the following spells, requiring no material components:</p><p>At will: <em>[[/item .hmObqoJ8nq1t58jU]]{animal friendship} </em>(snakes only)</p><p>3/day each: <em>[[/item .dew9nrCeLSbWBeqw]]{poison spray}, [[/item .y0ifqt34V98ohmdj]]{suggestion}</em></p>",
+              "name": "天生施法 Innate Spellcasting",
+              "description": "<p>蛇人的天生施法关键属性为魅力（法术豁免DC 12）。它天生即可施展以下法术，且无需任何材料成分：</p><p>随意：<em>[[/item .hmObqoJ8nq1t58jU]]{化兽为友}</em>（仅限蛇类）</p><p>每项3/日：<em>[[/item .dew9nrCeLSbWBeqw]]{毒液飞溅}, [[/item .y0ifqt34V98ohmdj]]{暗示术}</em></p>",
               "activities": {
                 "Animal Friendship": {
-                  "name": "Animal Friendship"
+                  "name": "化兽为友"
                 },
                 "Poison Spray": {
-                  "name": "Poison Spray"
+                  "name": "毒气喷溅"
                 },
                 "Suggestion": {
-                  "name": "Suggestion"
+                  "name": "暗示术"
                 }
               }
             },
             "Multiattack": {
-              "name": "Multiattack",
-              "description": "<p>The yuan-ti makes two [[/item .wsHnC3KMwEYVdmQf]] attacks.</p>"
+              "name": "多重攻击 Multiattack",
+              "description": "<p>蛇人发动两次[[/item .wsHnC3KMwEYVdmQf]]攻击。</p>"
             },
             "Magic Resistance": {
-              "name": "Magic Resistance",
-              "description": "<p>The yuan-ti has advantage on saving throws against spells and other magical effects.</p>"
+              "name": "魔法抗性 Magic Resistance",
+              "description": "<p>蛇人对抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Animal Friendship": {
-              "name": "Animal Friendship",
-              "description": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>",
+              "name": "化兽为友 Animal Friendship",
+              "description": "<p>该法术帮你让一只野兽相信你并无恶意。在施法距离内指定一只你能看见的野兽，而它也必须能看见你且能听到你的声音。该野兽必须进行一次感知豁免，豁免失败则将在法术持续时间内被你魅惑。如果它的智力为 4 或更高则法术直接失败。如果你或你的同伴对目标造成伤害，则法术终止。</p><p><strong>升环施法：</strong>使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，就可以多选择一个野兽作为目标。</p>",
               "materials": {
                 "value": "一点食物"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Poison Spray": {
-              "name": "Poison Spray",
-              "description": "<p>You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.</p><p>This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).</p>",
+              "name": "毒气喷溅 Poison Spray",
+              "description": "<p>你伸手向施法距离内一个你能看见的生物喷出一阵毒气。目标必须进行一次体质豁免，豁免失败则受 1d12 毒素伤害。</p><p>你到达 5 级时，该法术的伤害增加 1d12（变为 2d12）。11 级时再加 1d12（变为 3d12），17 级时再加 1d12（变为 4d12）。</p>",
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Suggestion": {
-              "name": "Suggestion",
+              "name": "暗示术 Suggestion",
               "description": "<p>你以魔法影响施法距离内一个你能看见的生物，并对其施以某种行动暗示（不超过 25 个词）。由你指定的受术目标必须能听到并理解你的话语。暗示必须听起来可行，也不涉及明显会对目标及其盟友造成伤害的内容。比如说，你可以说“把邪教的宝库钥匙找来，然后给我。”或者：“别打了，让图书馆保持安静，然后出去别回来。”</p><p>目标必须成功通过一次感知豁免，否则在法术持续时间内陷入魅惑，若你或你的盟友对其造成伤害此法术将提前结束。被魅惑的生物会尽其所能地执行你所描述的行为。</p><p>你所暗示的行为可能会在法术持续时间内始终一直进行</p><p>而如果你所暗示的活动可以用更短的时间完成，则此法术会在目标完成了你的要求后随即终止。</p>",
               "materials": {
                 "value": "一条蛇舌，加上一小块蜂巢或一滴甜油"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Scimitar": {
-              "name": "Scimitar",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "弯刀 Scimitar",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Shortbow": {
-              "name": "Shortbow",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "短弓 Shortbow",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
         "Zombie": {
-          "name": "Zombie",
-          "tokenName": "Zombie",
+          "name": "丧尸 Zombie",
+          "tokenName": "丧尸",
           "description": "<p><em>指示物插图由 </em><a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\"><em>Forgotten Adventures</em></a><em> 提供。</em></p>",
           "items": {
             "Slam": {
-              "name": "Slam",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "猛击 Slam",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Undead Fortitude": {
-              "name": "Undead Fortitude",
-              "description": "<p>If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.</p>"
+              "name": "不死坚韧 Undead Fortitude",
+              "description": "<p>当丧尸因非光耀非重击伤害生命值降至 0 时，其进行一次体质豁免（DC为 5 + 所受伤害）。豁免成功则改为将生命值降至 1。</p>"
             }
           }
         },
         "Zorbo": {
-          "name": "Zorbo",
-          "tokenName": "Zorbo",
-          "description": "<p>A zorbo (pronounced ZOR-boh) is a ferocious omnivore similar in size and appearance to a koala. Living in trees and caves, it has long claws, a dour disposition, and a fondness for humanoid flesh. A zorbo alters its natural armor to match its surroundings, and it can weaken and destroy armor, shields, and protective magic items with its sharp claws.</p>",
+          "name": "佐博怪 Zorbo",
+          "tokenName": "佐博怪",
+          "description": "<p>佐博怪（发音 ZOR-boh）是一种凶猛的杂食性动物，其大小和外形与树袋熊相似。它生活在树上和洞穴里，有长长的爪子，性情阴沉，而且喜好类人生物的肉。佐博怪会改变自己的天生护甲来适应周围的环境，它能用锋利的爪子削弱和摧毁盔甲、盾牌和防护性的魔法物品。</p>",
           "items": {
             "Destructive Claws": {
-              "name": "Destructive Claws",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]], and if the target is a creature wearing armor, carrying a shield, or in possession of a magic item that improves its AC, it must make a [[/save dex 11 format=long]]. </p><p>On a failed save, one such item worn or carried by the creature (the target’s choice) magically deteriorates, taking a permanent and cumulative −1 penalty to the AC it offers, and the zorbo gains a +1 bonus to AC until the start of its next turn. </p><p>Armor reduced to an AC of 10 or a shield or magic item that drops to a 0 AC increase is destroyed.</p>",
+              "name": "毁坏爪击 Destructive Claws",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]，且如果目标是一个身着护甲、携带盾牌、或拥有可提升 AC 的魔法物品的生物，则目标必须进行一次 [[/save dex 11 format=long]]。</p><p>豁免失败则其着装或携带的一个此类物品（由目标选择）被魔法侵蚀，所提供的 AC 获得永久累积的 -1 罚值，且佐博怪的 AC 获得 +1 的临时加值，直到它的下回合开始。</p><p>如果护甲 AC 被降低至 10、或者盾牌和魔法物品提供的 AC 被降低至 0，则该物品被摧毁。</p>",
               "effects": {
                 "Target AC Penalty -1": {
-                  "name": "Target AC Penalty -1",
-                  "description": "<p>Your armor takes a permanent and cumulative −1 penalty to the AC due to the Zorbo’s claw attack.</p>"
+                  "name": "目标AC -1 罚值",
+                  "description": "<p>你的护甲被佐博怪爪击攻击侵蚀，所提供的 AC 获得永久累积的 -1 罚值</p>"
                 },
                 "+1 AC Bonus": {
-                  "name": "+1 AC Bonus",
-                  "description": "<p>The zorbo gains a +1 bonus to AC until the start of its next turn.</p>"
+                  "name": "AC加值 +1",
+                  "description": "<p>佐博怪的 AC 获得 +1 的临时加值，直到它的下回合开始。</p>"
                 }
               }
             },
             "Magic Resistance": {
-              "name": "Magic Resistance",
-              "description": "<p>The zorbo has advantage on saving throws against spells and other magical effects.</p>"
+              "name": "魔法抗性 Magic Resistance",
+              "description": "<p>佐博怪对抗法术和其他魔法效应时进行的豁免检定具有优势。</p>"
             },
             "Natural Armor": {
-              "name": "Natural Armor",
-              "description": "<p>The zorbo magically absorbs the natural strength of its surroundings, adjusting its Armor Class based on the material it is standing or climbing on: AC 15 for wood or bone, AC 17 for earth or stone, or AC 19 for metal. If the zorbo isn’t in contact with any of these substances, its AC is 10.</p><section class=\"secret\" id=\"secret-kf6gjuXlm1XxPJJL\"><p><strong>Foundry Note</strong></p><p>An Active Effect option is available in the Effect tab to adjust the creature's AC.</p></section>",
+              "name": "天生护甲 Natural Armor",
+              "description": "<p>佐博怪魔法般地吸收周围环境的自然力量，根据所站立或攀爬的材料来调整其护甲等级：木头或骨头为 AC 15，土地或石头为 AC 17，金属为 AC 19。如果佐博怪没有与这些物质接触，则它的 AC 为 10。</p><section class=\"secret\" id=\"secret-kf6gjuXlm1XxPJJL\"><p><strong>Foundry 备注</strong></p><p>可在效果标签页中使用主动效果选项来调整该生物的 AC。</p></section>",
               "effects": {
                 "AC 15 Wood & Bone": {
-                  "name": "AC 15 Wood & Bone"
+                  "name": "AC 15 木头或骨头"
                 },
                 "AC 17 Earth & Stone": {
-                  "name": "AC 17 Earth & Stone"
+                  "name": "AC 17 土地或石头"
                 },
                 "AC 19 Metal": {
-                  "name": "AC 19 Metal"
+                  "name": "AC 19 金属"
                 }
               }
             }
           }
         },
         "Acererak": {
-          "name": "Acererak",
-          "tokenName": "Acererak",
-          "description": "<p>Acererak is an archlich who travels between worlds and is known to take sick pleasure in devouring the souls of adventurers, whom he lures into trap-ridden dungeons where they suffer horrible deaths. One such dungeon lies under the lost city of Omu. This dungeon is called the Tomb of the Nine Gods, for Acererak slew nine false gods and sealed them within it. More recently, he built a necromantic device called the Soulmonger, then hid it in the heart of the tomb.</p>",
+          "name": "阿瑟瑞克 Acererak",
+          "tokenName": "阿瑟瑞克",
+          "description": "<p>阿瑟瑞克是一位穿行于各个世界、以吞噬冒险者的灵魂为乐的大巫妖，他将这些冒险者引诱到遍布陷阱的地下城中，使他们遭受可怕的死亡。失落的奥姆城地下就是一座这样的地下城。这座地下城被称为九神之墓，因为阿瑟瑞克杀死了九名伪神，并将祂们封印于其中。最近，他制造了一个叫做易魂装置的不死生物装置，把它藏在了九神之墓的中心。</p>",
           "items": {
             "Spellcasting": {
               "name": "Spellcasting",
@@ -8897,7 +8897,7 @@
               "description": "<p>[[lookup @name]] has advantage on saving throws against any effect that turns undead.</p>"
             },
             "Mage Hand": {
-              "name": "Mage Hand",
+              "name": "法师之手 Mage Hand",
               "description": "<p>一只漂浮的幽灵手出现在施法距离内你指定的一点。幽灵手持续存在至法术终止。如果幽灵手距你的距离超过 30 尺，或者当你再次施展了该法术时，则现存的幽灵手消失不见。</p><p>你可以在施展该法术时使用幽灵手实施一个行为：你可以操控一个物件，或者打开一扇未上锁的门或容器，或者将一件物品放入或取出一个打开的容器，或者将小瓶中的内容物倾倒出来。</p><p>在后续的回合中，以一个魔法动作，你可以控制幽灵手再次实施一个行为。作为那个动作的一部分，你可以令幽灵手移动至多 30 尺。</p><p>该幽灵手不能攻击，也不能激活魔法物品或承载超过 10 磅重的物质。</p>"
             },
             "Ray of Frost": {
@@ -8975,7 +8975,7 @@
               "name": "Hold Monster",
               "description": "<p>Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or be &amp;Reference[Paralyzed] for the Duration. This spell has no effect on Undead. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th. The creatures must be within 30 feet of each other when you target them.</p>",
               "materials": {
-                "value": "A small, straight piece of iron"
+                "value": "一片直的小铁片"
               },
               "effects": {
                 "Hold Monster": {
@@ -9090,7 +9090,7 @@
           "description": "<p>A former member of the Harpers, Artus Cimber is the keeper of the @UUID[Compendium.dnd-tomb-annihilation.items.Item.toamgcRingofWint]{Ring of Winter}. He found the ring in the jungles of Chult, where he also met his wife, Alisanda. The ring halts its wearer’s natural aging and has allowed Artus to survive well beyond his natural lifespan. The ring also defies magical attempts to divine its location and that of its wearer. On his fingers above the knuckles, Artus has tattooed the names of his dearly departed animal companions — a pair of talking wombats named Byrt and Lugg.</p><p>Artus has spent most of his life trying to keep the Ring of Winter out of evil hands, but his return to Chult is focused on reuniting with his beloved Alisanda, who disappeared along with the city of Mezro during the Spellplague. No longer content to wait for Alisanda and Mezro to return on their own, Artus has been seeking the means to bring them back. He believes that Saja N’baza, an ancient guardian naga, can help him. As such, his search has been focused on locating the ruins of Orolunga, where the naga is said to dwell. Fate has handed Artus a saurial traveling companion named @UUID[Actor.1Gp38SRQcEPAsgSG]{Dragonbait}, whom he met in Port Nyanzaru. The two are always on the move. Consequently, their location in the adventure is randomly determined.</p><p><em><strong>Using Artus.</strong></em> Artus has never been to Omu, and he has no idea where the city is. However, he has a powerful artifact in his possession and a good heart. If the characters explain why they’ve come to Chult, Artus puts aside his personal quest and offers to help them find Omu and destroy the Soulmonger.</p><p>The first time a situation forces Artus to use the Ring of Winter, he warns the characters that evil forces are after the ring and that his presence in the party might put the characters in danger.</p>",
           "items": {
             "Multiattack": {
-              "name": "Multiattack",
+              "name": "多重攻击 Multiattack",
               "description": "<p>Artus makes three attacks with [[/item .rY3fB9mgQUxCcBdu]] or his [[/item .Rd26RkzPjNPL0jzu]]{longbow}.</p>"
             },
             "Longbow": {
@@ -9141,7 +9141,7 @@
               "description": "<p>You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as \"200 feet straight downward\" or \"upward to the northwest at a 45-degree angle, 300 feet.\"</p><p>You can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.</p><p>If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 force damage, and the spell fails to teleport you.</p>",
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -9150,7 +9150,7 @@
               "description": "<p>Creatures of your choice that you can see within range and that can hear you must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can't be charmed. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you. Each affected target must use as much of its movement as possible to move in that direction on its next turn. It can take any action before it moves. After moving in this way, it can make another Wisdom save to try to end the effect.</p><p>A target isn't compelled to move into an obviously deadly hazard, such as a fire or a pit, but it will provoke opportunity attacks to move in the designated direction.</p>",
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -9228,7 +9228,7 @@
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -9240,7 +9240,7 @@
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -9256,7 +9256,7 @@
                   "description": "<p>The target is Restrained as its flesh begins to harden. A creature Restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the Petrified condition for the Duration.</p>"
                 },
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -9268,7 +9268,7 @@
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -9280,7 +9280,7 @@
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -9292,7 +9292,7 @@
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
