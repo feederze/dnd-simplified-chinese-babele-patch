@@ -7214,13 +7214,13 @@
       }
     },
     "Elephant": {
-      "name": "Elephant",
-      "tokenName": "Elephant",
+      "name": "象",
+      "tokenName": "象",
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmGore0000000000]] attacks.</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmGore0000000000]] 攻击。</p>",
           "activities": {
             "Expand Use": {
               "name": "耗用"
@@ -7228,8 +7228,8 @@
           }
         },
         "Trample": {
-          "name": "Trample",
-          "description": "<p class=\"feature\"><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=QckCIpsC3BdEHycI]], [[lookup @target.affects.labels.statblock activity=QckCIpsC3BdEHycI]] within [[lookup @range.value activity=QckCIpsC3BdEHycI]] feet that has the Prone condition.</p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage.</p><p class=\"feature\"><em>Success:</em> Half damage.</p>",
+          "name": "践踏",
+          "description": "<p class=\"feature\"><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=QckCIpsC3BdEHycI]]，单一 [[lookup @range.value activity=QckCIpsC3BdEHycI]] 尺内处于 &Reference[Prone apply=false] 状态的生物。</p><p class=\"feature\"><em>失败：</em> [[/damage average]] 伤害。</p><p class=\"feature\"><em>成功：</em>半伤。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -7237,70 +7237,70 @@
           }
         },
         "Gore": {
-          "name": "Gore",
-          "description": "<p>[[/attack extended]]. [[/damage extended average]]. If the target is a [[lookup @target.affects.special activity=OeVR19Hp2kvxSNZv]] creature and the [[lookup @name lowercase]] moved 20+ feet straight toward it immediately before the hit, the target has the &amp;Reference[Prone apply=false] condition.</p>",
+          "name": "顶撞",
+          "description": "<p>[[/attack extended]]。[[/damage extended average]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了 20+ 尺且目标生物体型[[lookup @target.affects.special activity=OeVR19Hp2kvxSNZv]]，则目标陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Attack": {
-              "name": "Attack",
-              "affectsSpecial": "Huge or smaller"
+              "name": "攻击",
+              "affectsSpecial": "不超过巨型"
             }
           },
           "effects": {
             "Prone": {
               "name": "倒地",
-              "description": "<p>The target has the &amp;Reference[Prone apply=false] condition if the attacking creature used its moving attack feature.</p>"
+              "description": "<p>若象使用了移动攻击特性且你的生物体型不超过巨型，你陷入 &Reference[Prone apply=false] 状态。</p>"
             }
           }
         }
       }
     },
     "Elk": {
-      "name": "Elk",
-      "tokenName": "Elk",
+      "name": "麋鹿",
+      "tokenName": "麋鹿",
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Ram": {
-          "name": "Ram",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=z58sUDUmqxECJgT3]] creature and the [[lookup @name lowercase]] moved 20+ feet straight toward it immediately before the hit, the target takes an extra [[/damage 1d6 bludgeoning average]] damage and has the &amp;Reference[Prone apply=false] condition.</p>",
+          "name": "顶撞",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。若[[lookup @name lowercase]]在此次攻击前立即向着该目标直线移动了 20+ 尺且目标生物体型不超过大型，则目标额外受到[[/damage 1d6 bludgeoning average]]伤害并陷入 &Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "attack": {
-              "affectsSpecial": "Large or smaller"
+              "affectsSpecial": "不超过大型的"
             },
             "Moving Attack": {
-              "name": "Moving Attack",
-              "affectsSpecial": "Large or smaller"
+              "name": "移动攻击",
+              "affectsSpecial": "不超过大型的"
             }
           },
           "effects": {
             "Prone": {
               "name": "倒地",
-              "description": "<p>The target the &amp;Reference[Prone apply=false] condition.</p>"
+              "description": "<p>你陷入 &amp;Reference[Prone apply=false] 状态。</p>"
             }
           }
         }
       }
     },
     "Erinyes": {
-      "name": "Erinyes",
-      "tokenName": "Erinyes",
-      "description": "<h1>Erinyes</h1><p>@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.YXZP2A00UrCViGCe caption=false cite=false classes=\"no-embed mm free-rules-embed\"]</p><p><em>Token artwork by <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>",
+      "name": "罪魔",
+      "tokenName": "罪魔",
+      "description": "<h1>罪魔</h1><p>@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.YXZP2A00UrCViGCe caption=false cite=false classes=\"no-embed mm free-rules-embed\"]</p><p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Diabolical Restoration": {
-          "name": "Diabolical Restoration",
-          "description": "<p>If the [[lookup @name lowercase]] dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.</p>",
-          "requirements": "Dies outside the Nine Hells"
+          "name": "魔鬼复苏",
+          "description": "<p>若 [[lookup @name lowercase]] 于九层地狱之外死去，其身躯会化为硫磺烟雾消失，并立即在九层地狱某处获得一具新的身体，以满生命值复活。</p>",
+          "requirements": "于九层地狱之外死去"
         },
         "Magic Resistance": {
           "name": "魔法抗性",
           "description": "<p>[[lookup @name lowercase]] 为抵抗法术和其它魔法效应而作的豁免检定具有优势。</p>"
         },
         "Magic Rope": {
-          "name": "Magic Rope",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] has a magic rope. While bearing it, the [[lookup @name lowercase]] can use the [[/item .mmEntanglingRope]] action. The rope has AC 20, HP 90, and Immunity to Poison and Psychic damage. The rope turns to dust if reduced to 0 Hit Points, if it is 5+ feet away from the [[lookup @name lowercase]] for 1 hour or more, or if the [[lookup @name lowercase]] dies. If the rope is damaged or destroyed, the [[lookup @name lowercase]] can fully restore it when finishing a Short or Long Rest.</p>"
+          "name": "魔法绳索",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 持有一根魔法绳索。只要携带魔绳，[[lookup @name lowercase]] 就能够使用其纠缠绳动作。魔绳具有AC 20，HP 90，免疫毒素和心灵伤害。若魔绳生命值降至 0、[[lookup @name lowercase]] 死亡或魔绳离开 [[lookup @name lowercase]] 身边 5+ 尺超过 1 小时，魔绳化为尘埃。若魔绳受到伤害或被摧毁，[[lookup @name lowercase]] 可以在完成一次短休或长休时将其完全恢复。</p>"
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes three [[/item .mmWitheringSword]] attacks and can use [[/item .mmEntanglingRope]].</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动三次 [[/item .mmWitheringSword]] 攻击并使用 [[/item .mmEntanglingRope]]。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -7308,36 +7308,36 @@
           }
         },
         "Parry": {
-          "name": "Parry",
-          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]] to its AC against that attack, possibly causing it to miss.</p>",
+          "name": "格挡",
+          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
           "activities": {
             "Use": {
               "name": "使用",
-              "roll": "Bonus AC",
-              "condition": "hit by a melee attack roll while holding a weapon"
+              "roll": "AC加值",
+              "condition": "在持握武器期间因近战攻击检定被命中"
             }
           }
         },
         "Withering Sword": {
-          "name": "Withering Sword",
+          "name": "凋零之刃",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Entangling Rope": {
-          "name": "Entangling Rope",
-          "description": "<p class=\"feature\"><em>Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=n8nEah4vbrEPphNF]], one creature the [[lookup @name lowercase]] can see within [[lookup @range.value activity=n8nEah4vbrEPphNF]] feet. </p><p class=\"feature\"><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Restrained apply=false] condition until the rope is destroyed, the [[lookup @name lowercase]] uses a Bonus Action to release the target, or the [[lookup @name lowercase]] uses Entangling Rope again.</p>",
-          "requirements": "Requires Magic Rope",
+          "name": "纠缠绳",
+          "description": "<p class=\"feature\"><em>力量豁免检定：</em>DC [[lookup @save.dc.value activity=n8nEah4vbrEPphNF]]，单一 [[lookup @range.value activity=n8nEah4vbrEPphNF]] 尺内 [[lookup @name lowcase]] 可见的生物。</p><p class=\"feature\"><em>失败：</em>[[/damage average]] 伤害，且目标陷入 &Reference[Restrained apply=false] 状态，持续直至魔绳被摧毁、[[lookup @name lowcase]] 使用一个附赠动作释放该生物，或是 [[lookup @name lowcase]] 再次使用纠缠绳动作。</p>",
+          "requirements": "需求魔法绳索",
           "effects": {
             "Restrained": {
-              "name": "Restrained",
-              "description": "<p>The target has the &amp;Reference[Restrained apply=false] condition until the rope is destroyed.</p>"
+              "name": "束缚",
+              "description": "<p>你陷入 &Reference[Restrained apply=false] 状态，直至魔绳被摧毁。</p>"
             }
           }
         }
       }
     },
     "Ettercap": {
-      "name": "Ettercap",
-      "tokenName": "Ettercap",
+      "name": "伊特怪",
+      "tokenName": "伊特怪",
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Spider Climb": {
@@ -7345,12 +7345,12 @@
           "description": "<p>[[lookup @name lowercase]] 可以在难以攀爬的表面上攀爬，包括沿着天花板移动，且不需要为此进行属性检定。</p>"
         },
         "Bite": {
-          "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target has the &amp;Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]'s next turn.</p>",
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]，且目标陷入 &Reference[Poisoned apply=false] 状态直至 [[lookup @name lowcase]] 的下一回合开始。</p>",
           "effects": {
             "Poisoned": {
               "name": "中毒",
-              "description": "<p>The target has the &amp;Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]'s next turn.</p>"
+              "description": "<p>你陷入 &Reference[Poisoned apply=false] 状态直至伊特怪的下一回合开始。</p>"
             }
           }
         },
@@ -7359,8 +7359,8 @@
           "description": "<p class=\"feature\">[[lookup @name lowercase]] 在蛛网上移动时无视蛛网造成的移动限制，且与蛛网接触时，[[lookup @name lowercase]]可以知道其他与该蛛网接触生物的位置。</p>"
         },
         "Web Strand": {
-          "name": "Web Strand",
-          "description": "<p class=\"feature\"><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.value activity=Ln5NXBaHGKlwdoiP]], one Large or smaller [[lookup @target.affects.type activity=Ln5NXBaHGKlwdoiP]] the [[lookup @name lowercase]] can see within [[lookup @range.value activity=Ln5NXBaHGKlwdoiP]] feet.</p><p class=\"feature\"><em>Failure:</em> The target has the &amp;Reference[Restrained apply=false] condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Bludgeoning, Poison, and Psychic damage).</p>",
+          "name": "绞网",
+          "description": "<p class=\"feature\"><em>敏捷豁免检定：</em>DC [[lookup @save.dc.value activity=Ln5NXBaHGKlwdoiP]]，[[lookup @range.value activity=Ln5NXBaHGKlwdoiP]] 尺内 [[lookup @name lowercase]] 可见的不超过大型的生物。</p><p class=\"feature\"><em>失败：</em>目标陷入 &Reference[Restrained apply=false] 状态直至蛛网被摧毁（AC 10；HP 5；对火焰伤害具有易伤；免疫钝击、毒素、心灵伤害）。</p>",
           "activities": {
             "Save": {
               "name": "豁免"
@@ -7368,14 +7368,14 @@
           },
           "effects": {
             "Restrained": {
-              "name": "Restrained",
-              "description": "<p>The target has the &amp;Reference[Restrained apply=false] condition until the web is destroyed.</p>"
+              "name": "束缚",
+              "description": "<p>你陷入 &Reference[Restrained apply=false] 状态直至蛛网被摧毁。</p>"
             }
           }
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p><span style=\"font-family:'Roboto Condensed', sans-serif\">The </span>[[lookup @name lowercase]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> makes one </span>[[/item .mmBite0000000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> attack and one </span>[[/item .mmClaw0000000000]]<span style=\"font-family:'Roboto Condensed', sans-serif\"> attack.</span></p>",
+          "description": "<p>[[lookup @name lowercase]] 发动一次 [[/item .mmBite0000000000]] 攻击和一次 [[/item .mmClaw0000000000]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -7383,12 +7383,12 @@
           }
         },
         "Claw": {
-          "name": "Claw",
+          "name": "爪击",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Reel": {
-          "name": "Reel",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] pulls [[lookup @target.affects.labels.statblock activity=jWkEQYHBd7aht1kG]] within [[lookup @range.value activity=jWkEQYHBd7aht1kG]] feet of itself that is Restrained by its Web Strand up to 25 feet straight toward itself.</p>",
+          "name": "收网",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 将 [[lookup @range.value activity=jWkEQYHBd7aht1kG]] 尺内因其绞网动作陷入束缚的一名生物向直线拉近至多 25 尺。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -7398,13 +7398,13 @@
       }
     },
     "Ettin": {
-      "name": "Ettin",
-      "tokenName": "Ettin",
-      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbwepBattleaxe0]{Battleaxe}, @UUID[Compendium.dnd5e.equipment24.Item.phbwepMorningsta]{Morningstar}</p></div><p><em>Token artwork by <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>",
+      "name": "双头巨人",
+      "tokenName": "双头巨人",
+      "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbwepBattleaxe0]{战斧}、@UUID[Compendium.dnd5e.equipment24.Item.phbwepMorningsta]{钉头锤}</p></div><p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Battleaxe": {
           "name": "战斧",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]，若目标生物体型不超过大型，则其陷入 &Reference[Prone apply=false] 状态。</p>",
           "effects": {
             "Prone": {
               "name": "倒地",
@@ -7414,17 +7414,17 @@
         },
         "Morningstar": {
           "name": "钉头锤",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target has Disadvantage on the next attack roll it makes before the end of its next turn.</p>",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]，且目标的下一回合结束前，其进行的下次攻击检定具有劣势。</p>",
           "effects": {
             "Next Attack: Disadv.": {
-              "name": "Next Attack: Disadv.",
-              "description": "<p>The target has Disadvantage on the next attack roll it makes before the end of its next turn.</p>"
+              "name": "下次攻击：劣势。",
+              "description": "<p>在你的下一回合结束前，你进行的下次攻击检定具有劣势。</p>"
             }
           }
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] makes one [[/item .2zUJENAN0VZgqxYm]] attack and one [[/item .5LN8JEIko2tgE2WO]] attack.</p>",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 发动一次 [[/item .2zUJENAN0VZgqxYm]] 攻击和一次 [[/item .5LN8JEIko2tgE2WO]] 攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -7434,20 +7434,20 @@
       }
     },
     "Fire Elemental": {
-      "name": "Fire Elemental",
-      "tokenName": "Fire Elemental",
-      "description": "<h1>Fire Elemental</h1><p>@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.M6gKJjmLDllg2rjI caption=false cite=false classes=\"no-embed mm free-rules-embed\"]</p><p><em>Token artwork by <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>",
+      "name": "火元素",
+      "tokenName": "火元素",
+      "description": "<h1>火元素</h1><p>@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.M6gKJjmLDllg2rjI caption=false cite=false classes=\"no-embed mm free-rules-embed\"]</p><p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Fire Aura": {
-          "name": "Fire Aura",
-          "description": "<p>At the end of each of the [[lookup @name lowercase]]'s turns, each [[lookup @target.affects.type activity=15VgJKVXwYBOFSqJ]] of the [[lookup @name lowercase]]'s choice in a [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]]-foot Emanation originating from the [[lookup @name lowercase]] takes [[/damage average]] damage. <span style=\"font-family:'Roboto Condensed', sans-serif\">Creatures and flammable objects in the Emanation start burning.</span></p>"
+          "name": "火焰灵光",
+          "description": "<p>[[lookup @name lowercase]] 回合结束时位于源自 [[lookup @name lowercase]] 的[[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]] 尺光环区域内的所有生物受到 [[/damage average]] 伤害。光环内的生物和易燃物件开始燃烧。</p>"
         },
         "Fire Form": {
-          "name": "Fire Form",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can move through a space as narrow as 1 inch without expending extra movement to do so, and it can enter a creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes [[/damage average]] damage.</p>"
+          "name": "火焰形态",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 可以移动穿过最窄 1 寸宽的空间而无需消耗额外的移动力，且其可以进入并停留在一名生物所处的空间。当 [[lookup @name lowercase]] 回合中首次进入某生物所处的空间时，该生物受到 [[/damage average]]伤害。</p>"
         },
         "Illumination": {
-          "name": "Illumination",
+          "name": "照明",
           "description": "<p>The [[lookup @name lowercase]] sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet.</p>"
         },
         "Water Susceptibility": {
@@ -7509,7 +7509,7 @@
           "effects": {
             "Disadv.: Attacks": {
               "name": "Disadv.: Attacks",
-              "description": "<p>The target has Disadvantage on the next attack roll it makes before the end of its next turn.</p>"
+              "description": "<p>在你的下一回合结束前，你进行的下次攻击检定具有劣势。</p>"
             }
           }
         }
@@ -7592,7 +7592,7 @@
           "requirements": "Flies out of an enemy's reach"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
@@ -7611,7 +7611,7 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]]'s Long Jump is up to 20 feet and its High Jump is up to 10 feet with or without a running start.</p>"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
@@ -7682,7 +7682,7 @@
           }
         },
         "Claw": {
-          "name": "Claw",
+          "name": "爪击",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
@@ -7757,11 +7757,11 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Claw": {
-          "name": "Claw",
+          "name": "爪击",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a non-Undead creature, it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=nDM4WpckiZjvBzfg]].</p><p><em>Failure:</em> The target has the &amp;Reference[Paralyzed apply=false] condition until the end of its next turn.</p>",
           "effects": {
             "Paralyzed": {
@@ -7871,11 +7871,11 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Claw": {
-          "name": "Claw",
+          "name": "爪击",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.type activity=u64Kjp19EAOJoLeo]] [[lookup @target.affects.special activity=u64Kjp19EAOJoLeo]], it is subjected to the following effect.</p><p><em>Constitution Saving Throw:</em> DC [[lookup @save.dc.value activity=u64Kjp19EAOJoLeo]].</p><p><em>Failure:</em> The target has the &amp;Reference[Paralyzed apply=false] condition until the end of its next turn.</p>",
           "activities": {
             "save": {
@@ -7931,7 +7931,7 @@
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
@@ -7942,7 +7942,7 @@
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         }
       }
@@ -8011,7 +8011,7 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target has the &amp;Reference[Poisoned apply=false]  condition until the start of the [[lookup @name lowercase]]'s next turn.</p>",
           "effects": {
             "Poisoned": {
@@ -8037,7 +8037,7 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         },
         "Constrict": {
@@ -8108,7 +8108,7 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].If the target is a [[lookup @target.affects.special activity=xWlMeXFjELfSUWX9]] creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). While Grappled, the target has the &amp;Reference[Restrained apply=false] condition and can't be targeted by the [[lookup @name lowercase]]'s Tail.</p>",
           "activities": {
             "attack": {
@@ -8185,11 +8185,11 @@
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         },
         "Illumination": {
-          "name": "Illumination",
+          "name": "照明",
           "description": "<p>The [[lookup @name lowercase]] sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.</p>"
         }
       }
@@ -8208,7 +8208,7 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]]'s Long Jump is up to 20 feet and its High Jump is up to 10 feet with or without a running start.</p>"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]).</p>",
           "activities": {
             "Escape Check": {
@@ -8280,7 +8280,7 @@
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         },
         "Rampage": {
@@ -8304,7 +8304,7 @@
           "description": "<p>The [[lookup @name lowercase]] can climb difficult surfaces, including along ceilings, without needing to make an ability check.</p>"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         }
       }
@@ -8418,7 +8418,7 @@
           "requirements": "Ally within 5 feet of attack target"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         }
       }
@@ -8438,7 +8438,7 @@
           }
         },
         "Claw": {
-          "name": "Claw",
+          "name": "爪击",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].  If the target is a Large or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two claws.</p>",
           "activities": {
             "Escape Check": {
@@ -8512,7 +8512,7 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p><em>Melee Attack Roll:</em> [[/attack]] ([[lookup @activation.condition activity=xWlMeXFjELfSUWX9]]), reach [[lookup @item.range.reach item=xWlMeXFjELfSUWX9]] ft. [[/damage average extended]]</p>",
           "activities": {
             "attack": {
@@ -8536,7 +8536,7 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]] ignores movement restrictions caused by webs, and the [[lookup @name lowercase]] knows the location of any other creature in contact with the same web.</p>"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         },
         "Web": {
@@ -8549,7 +8549,7 @@
           },
           "effects": {
             "Restrained": {
-              "name": "Restrained",
+              "name": "束缚",
               "description": "<p>The target has the &amp;Reference[Restrained apply] condition until the web is destroyed.</p>"
             }
           }
@@ -8570,7 +8570,7 @@
           "description": "<p class=\"feature\">The [[lookup @name lowercase]]'s Long Jump is up to 20 feet and its High Jump is up to 10 feet with or without a running start.</p>"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]).</p>",
           "effects": {
             "Grappled": {
@@ -8612,7 +8612,7 @@
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         }
       }
@@ -8678,7 +8678,7 @@
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         }
       }
@@ -8693,7 +8693,7 @@
           "description": "<p>The [[lookup @name lowercase]] can climb difficult surfaces, including along ceilings, without needing to make an ability check.</p>"
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         }
       }
@@ -8723,7 +8723,7 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Prone apply=false] condition. The target dies if it is reduced to 0 Hit Points by this attack. Its body is then absorbed into the [[lookup @name]], leaving only equipment behind.</p>",
           "effects": {
             "Prone": {
@@ -8921,13 +8921,13 @@
           }
         },
         "Parry": {
-          "name": "Parry",
-          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Response:</em> The [[lookup @name lowercase]] adds [[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]] to its AC against that attack, possibly causing it to miss.</p>",
+          "name": "格挡",
+          "description": "<p><em>触发：</em> [[lookup @name lowercase]]在持握武器期间因近战攻击检定被命中。</p><p><em>响应：</em> [[lookup @name lowercase]] 其对抗那次攻击时的AC +[[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]]（可能令那次攻击失手）。</p>",
           "activities": {
             "Use": {
               "name": "Use",
-              "roll": "Bonus AC",
-              "condition": "hit by a melee attack roll while holding a weapon"
+              "roll": "AC加值",
+              "condition": "在持握武器期间因近战攻击检定被命中"
             }
           }
         }
@@ -9181,7 +9181,7 @@
               "description": "<p>The target has the &amp;Reference[Petrified apply=false] condition instead of the Restrained condition.</p>"
             },
             "Restrained": {
-              "name": "Restrained",
+              "name": "束缚",
               "description": "<p>The target has the &amp;Reference[Restrained apply=false] condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success.</p>"
             }
           }
@@ -9389,7 +9389,7 @@
           }
         },
         "Claw": {
-          "name": "Claw",
+          "name": "爪击",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         },
         "Spellcasting": {
@@ -9622,7 +9622,7 @@
           }
         },
         "Bite": {
-          "name": "Bite",
+          "name": "啃咬",
           "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
         },
         "Poisonous Spittle": {
