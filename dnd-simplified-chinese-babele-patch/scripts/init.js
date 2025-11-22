@@ -19,18 +19,15 @@ Hooks.on('init', () => {
         },
     });
 
-    game.settings.register(MODULE_ID, 'makeTitleWithEnglish', {
-        name: '在标题中拼接英文原文',
+    game.settings.register(MODULE_ID, 'namesetting', {
+        name: '名称双语转换器开关',
         hint: '',
         scope: 'world',
         config: true,
         default: true,
         type: Boolean,
-        onChange: async value => {
-            await autoRegisterBabel();
-            window.location.reload();
-        },
     });
+
     if (game.settings.get(MODULE_ID, 'autoRegisterBabel')) {
         autoRegisterBabel();
     }
