@@ -1,61 +1,61 @@
 {
-  "label": "Character Options",
+  "label": "角色选项",
   "folders": {
-    "Bladesinger (Wizard)": "Bladesinger (Wizard)",
-    "General Feats": "General Feats",
-    "Origin Feats": "Origin Feats",
-    "Epic Boon Feats": "Epic Boon Feats",
-    "Knowledge Domain (Cleric)": "Knowledge Domain (Cleric)",
-    "Scion of the Three (Rogue)": "Scion of the Three (Rogue)",
-    "Backgrounds": "Backgrounds",
-    "College of the Moon (Bard)": "College of the Moon (Bard)",
-    "Subclasses": "Subclasses",
+    "Bladesinger (Wizard)": "剑咏者（法师）",
+    "General Feats": "通用专长",
+    "Origin Feats": "起源专长",
+    "Epic Boon Feats": "传奇恩惠专长",
+    "Knowledge Domain (Cleric)": "知识领域（牧师）",
+    "Scion of the Three (Rogue)": "三神门徒（游荡者）",
+    "Backgrounds": "背景",
+    "College of the Moon (Bard)": "皓月学院（吟游诗人）",
+    "Subclasses": "子职",
     "Oath of the Noble Genies (Paladin)": "Oath of the Noble Genies (Paladin)",
-    "Winter Walker (Ranger)": "Winter Walker (Ranger)",
-    "Feats": "Feats",
-    "Bastion Facilities": "Bastion Facilities",
-    "Spells": "Spells",
-    "Banneret (Fighter)": "Banneret (Fighter)",
-    "Spellfire Sorcery (Sorcerer)": "Spellfire Sorcery (Sorcerer)"
+    "Winter Walker (Ranger)": "凛冬行者（游侠）",
+    "Feats": "专长",
+    "Bastion Facilities": "据点设施",
+    "Spells": "法术",
+    "Banneret (Fighter)": "旗将（战士）",
+    "Spellfire Sorcery (Sorcerer)": "咒火术法（术士）"
   },
   "entries": {
     "Alustriel’s Mooncloak": {
-      "name": "Alustriel’s Mooncloak",
-      "description": "<p>For the duration, moonlight fills a 20-foot Emanation originating from you with Dim Light. While in that area, you and your allies have Half Cover and Resistance to Cold, Lightning, and Radiant damage.</p><p>While the spell lasts, you can use one of the following options, ending the spell immediately:</p><p><strong>Liberation. </strong>When you fail a saving throw to avoid or end the Frightened, Grappled, or Restrained condition, you can take a Reaction to succeed on the save instead.</p><p><strong>Respite. </strong>As a Magic action, you or an ally within the area regains Hit Points equal to 4d10 plus your spellcasting ability modifier.</p>",
+      "name": "艾拉斯卓的月辉之篷",
+      "description": "<p>月光从天而降，在持续时间内以微光光照笼罩源自你的 20 尺光环区域。你和你的盟友在位于该区域期间获得半身掩护及对寒冷、闪电及光耀伤害的抗性。</p><p>在法术持续时间内，你可以使用以下选项之一（但这将令此法术立即结束）：</p><p><strong>解放。</strong>当你失败于一次用于避免或结束恐慌、受擒及束缚的豁免时，你可以用一个反应来将本次豁免改为成功。</p><p><strong>回春。</strong>以一个魔法动作，你或区域内的一名盟友恢复等于 4d10 + 你的施法属性调整值点生命值。</p>",
       "materials": {
-        "value": "a moonstone worth 50+ GP"
+        "value": "一块价值 50+GP 的月石"
       },
       "activities": {
         "Liberation": {
-          "name": "Liberation",
-          "condition": "you fail a saving throw to avoid or end the Frightened, Grappled, or Restrained condition"
+          "name": "解放",
+          "condition": "当你失败于一次用于避免或结束恐慌、受擒及束缚的豁免时"
         },
         "Respite": {
-          "name": "Respite",
+          "name": "回春",
           "affects": {
-            "special": "within the area"
+            "special": "区域内"
           }
         },
         "Cast": {
-          "name": "Cast"
+          "name": "施展"
         }
       },
       "effects": {
         "Moonlight": {
-          "name": "Moonlight",
-          "description": "<p>While in that area, you and your allies have Half Cover and Resistance to Cold, Lightning, and Radiant damage.</p>"
+          "name": "月光",
+          "description": "<p>你和你的盟友在位于该区域期间获得半身掩护及对寒冷、闪电及光耀伤害的抗性。</p>"
         }
       }
     },
     "Backlash": {
-      "name": "Backlash",
-      "description": "<p>You ward yourself against destructive energy, reducing the damage taken by 4d6 plus your spellcasting ability modifier.</p><p>If the triggering damage was from a creature within range, you can force the creature to make a Constitution saving throw. The creature takes 4d6 Force damage on a failed save or half as much damage on a successful one.</p><p><em><strong>Using a Higher-Level Spell Slot.</strong></em> The damage reduction and Force damage from this spell both increase by 1d6 for every spell slot level above 4.</p>",
+      "name": "反冲术",
+      "description": "<p>你将破坏性的能量抵御并弹开，令该次你受到的伤害降低 4d6 + 你的施法属性调整值点。</p><p>若触发该次反应的伤害来自一名位于施法距离内的生物，则你可以迫使该生物进行一次体质豁免。豁免失败则其受到 4d6 力场伤害，豁免成功则仅受半伤。</p><p><em><strong>升环施法。</strong></em> 你使用的法术位每比四环高一环，法术能减免的伤害量和造成的力场伤害就都增加 1d6 。</p>",
       "activation": {
         "condition": "in response to taking damage"
       },
       "activities": {
         "Cast": {
-          "name": "Cast",
+          "name": "施展",
           "roll": "Damage Reduction"
         },
         "Creature Backlash": {
@@ -65,11 +65,11 @@
       }
     },
     "Banneret": {
-      "name": "Banneret",
-      "description": "<blockquote><p>Rally Fellow Heroes with Inspiring Leadership</p></blockquote><p>Bannerets are paragons of valor and leadership who protect the innocent and rally fellow adventurers to the causes of justice and freedom. Many are knights serving in Cormyr, the Silver Marches, Damara, Chessenta, or other lands across Faerûn. They wander the realms as knights errant, taking the fight against evil beyond their kingdom’s borders.</p><p>A Banneret relies on judgment, bravery, and fidelity to the code of chivalry to guide them in defeating evildoers. A lone Banneret is a skilled warrior, but when leading a band of allies one of these warriors can transform even a poorly equipped militia into a ferocious war band.</p>",
+      "name": "旗将",
+      "description": "<blockquote><p>用振奋人心的领导力集结同道英雄</p></blockquote><p>旗将是那些保护无辜者，并将冒险者团结在正义和自由事业中、象征英勇无畏和领导气概、为了正义和自由的事业而奋斗的人中典范。许多旗将以骑士的身份，在科米尔、银色联邦、达马拉、阙森塔或费伦大地上的其他地方服役。他们以流浪骑士的身份行于国度各地，在王国边境之外与邪恶作斗争。</p><p>旗将依靠判断力，勇气和对骑士精神的坚守来引导他们打败恶人。一个孤身行动的旗将是一个技艺高超的战士，但当他们带领一群盟友时，只要有一位旗将在此，即使是装备简陋的民兵小队也能变成一支凶猛的战团。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -78,12 +78,12 @@
       "description": "<p>Level 5 Bastion Facility</p><p><strong>Prerequisite:</strong> Membership in the Purple Dragon Knights</p><p><strong>Space:</strong> Vast</p><p><strong>Hirelings:</strong> 1</p><p><strong>Order:</strong> Empower</p><p>This den for an amethyst dragon is an enclosed open chamber with a pool, and one of its entrances is underwater. The facility’s hireling maintains the den and helps any visiting amethyst dragons feel comfortable.</p><p><em><strong>Empower: Psionic Defenses.</strong></em> When you issue the Empower order to this facility, latent draconic power fills the facility, allowing you to train in psionic combat. This training takes 8 hours per day for 7 days, after which you gain Resistance to Psychic damage. This benefit lasts for 7 days.</p>"
     },
     "Cult of the Dragon Archive": {
-      "name": "Cult of the Dragon Archive",
-      "description": "<p>Level 13 Bastion Facility</p><p><strong>Prerequisite:</strong> Membership in the Cult of the Dragon</p><p><strong>Space:</strong> Roomy</p><p><strong>Hirelings:</strong> 1</p><p><strong>Order:</strong> Research</p><p>A Cult of the Dragon Archive contains extensive records on specific topics, including dragons.</p><p><em><strong>Research: Helpful Lore.</strong></em> When you issue the Research order to this facility, you commission the facility’s hireling to search the archive for lore. The work takes 7 days. The hireling gains knowledge as if they had cast the<em> Legend Lore</em> spell, then shares this knowledge with you the next time you speak with them.</p><p><em><strong>Reference Books.</strong></em> Your Cult of the Dragon Archive contains a collection of draconic lore. You have Advantage on Intelligence (Nature or Religion) checks you make in your Bastion when you take the Study action to recall lore about Dragons, Tiamat, or the Cult of the Dragon.</p><p><em><strong>Enlarging the Facility.</strong></em> You can enlarge your Cult of the Dragon Archive to a Vast facility by spending 2,000 GP. If you do so, you gain two reference books chosen from those listed in the @UUID[Compendium.dnd-dungeon-masters-guide.content.JournalEntry.dmgBastions00000.JournalEntryPage.grKY1o6q5Qfyzr1a#archive]{Archive entry} in chapter 8 of the <em>Dungeon Master’s Guide</em>.</p>"
+      "name": "龙巫教档案馆",
+      "description": "<p>13 级据点设施</p><p><strong>先决条件：</strong> 龙巫教成员</p><p><strong>空间：</strong>宽敞</p><p><strong></strong>雇员：1 </p><p><strong>指令：</strong>调查</p><p>龙巫教档案馆中收录了涵盖许多特定主题的详实资料，包括关于龙类的内容。</p><p><em><strong>调查：有益学识。</strong></em>当你对此设施下达调查指令时，你委托设施雇员针对传说档案进行研究。这项工作需要 7 天时间。雇员会如同施展了<em>通晓传奇</em>法术一般获得这些知识，并且会在下一次交谈时与你分享。</p><p><em><strong>参考书。</strong></em> 你的龙巫教档案馆收录了大量的龙类传说。当你在据点内时，你在因回忆有关龙类的传说而执行研究动作时所进行的智力（自然或宗教）检定中具有优势。</p><p><em><strong>扩大设施。</strong></em> 你可以花费 2000GP，将龙巫教档案馆扩大为庞大设施。这样做后，你会获得两本在<em>《城主指南》</em>第八章@UUID[Compendium.dnd-dungeon-masters-guide.content.JournalEntry.dmgBastions00000.JournalEntryPage.grKY1o6q5Qfyzr1a#archive]中列出的两本参考书。</p>"
     },
     "Emerald Enclave Grove": {
-      "name": "Emerald Enclave Grove",
-      "description": "<p>Level 9 Bastion Facility</p><p><strong>Prerequisite:</strong> Membership in the Emerald Enclave</p><p><strong>Space:</strong> Vast</p><p><strong>Hirelings:</strong> 2</p><p><strong>Order:</strong> Recruit</p><p>Veteran agents of the Emerald Enclave create safe havens with trees, grass, and flowing water, where magical creatures that embody the power of nature live in peace and safety. The Emerald Enclave Grove can house one Huge creature or two Large creatures; four Small or Medium creatures or eight Tiny creatures can occupy the same space as one Large creature there.</p><p><em><strong>Recruit: Creature of Nature.</strong></em> When you issue the Recruit order to this facility, you invite a creature from the Emerald Enclave Grove Creatures table to your Emerald Enclave Grove. Roll any [[/r 1d2]]{die}. If the number rolled is odd, the creature doesn’t accept your invitation and you gain no benefit from having issued the order. If the number rolled is even, a creature accepts your invitation and moves into your Emerald Enclave Grove after 7 days. Your hirelings care for the creature and perform upkeep in the facility.</p><p>Creatures in your Emerald Enclave Grove count as Bastion Defenders. Deduct any you lose from your Bastion Defenders roster. You can choose not to count one or more of these creatures as Bastion Defenders, in which case they can’t be called on to defend the Bastion. Instead, they act in accordance with their nature and use their stat blocks in the <em>Monster Manual</em>.</p><table><caption>Emerald Enclave Grove Creatures</caption><thead><tr><th scope=\"col\"><p>Creature</p></th><th scope=\"col\"><p>Size</p></th></tr></thead><tbody><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedShrub0]{Awakened Shrub}</p></td><td><p>Small</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedTree00]{Awakened Tree}</p></td><td><p>Huge</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmBlinkDog000000]{Blink Dog}</p></td><td><p>Medium</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmCentaurTrooper]{Centaur Trooper}</p></td><td><p>Large</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmDryad000000000]{Dryad}</p></td><td><p>Medium</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmMyconidAdult00]{Myconid Adult}</p></td><td><p>Medium</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmMyconidSprout0]{Myconid Sprout}</p></td><td><p>Small</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmPixie000000000]{Pixie}</p></td><td><p>Tiny</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSatyr000000000]{Satyr}</p></td><td><p>Medium</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSprite00000000]{Sprite}</p></td><td><p>Tiny</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmTreant00000000]{Treant}</p></td><td><p>Large</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmUnicorn0000000]{Unicorn}</p></td><td><p>Large</p></td></tr></tbody></table>"
+      "name": "翠绿闲庭林居",
+      "description": "<p>9级据点设施</p><p><strong>先决：</strong> 翠绿闲庭成员</p><p><strong>空间：</strong> 庞大</p><p><strong>雇员：</strong> 2 </p><p><strong>指令：</strong>招募</p><p>翠绿闲庭的资深成员能够塑造出一片由树木、青草与流水构成的安宁圣所，让那些身上体现着自然之力的魔法生物在此安居。这个翠绿闲庭林居可容纳一只巨型生物，或两只大型生物；每四只中型或小型生物在这里占据的空间等同于一只大型生物。</p><p><em><strong>招募：自然生灵。</strong></em>当你对此设施下达招募指令时，你可从翠绿闲庭林居生物表中邀请一只生物入驻你的翠绿闲庭林居。投掷 [[/r 1d2]]{die} 。若结果为奇数，该生物拒绝了你的邀请，你本次指令无效；若结果为偶数，该生物接受邀请并将在7日后来到你的翠绿闲庭林居。你的雇员将负责照料该生物并维护此设施。</p><p>在你翠绿闲庭林居中的生物视为你的据点卫兵。如果它们遭受任何损失，便将损失的生物从你的据点卫兵名单中划去。你可以选择不将一只或更多生物视为据点卫兵，此时这些生物不会参与据点的防御，而是按照自己的天性活动，使用<em>《怪物图鉴》</em>中的数据。</p><table><caption>翠绿闲庭林居生物</caption><thead><tr><th scope=\"col\"><p>Creature</p></th><th scope=\"col\"><p>Size</p></th></tr></thead><tbody><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedShrub0]{Awakened Shrub}</p></td><td><p>小型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedTree00]{Awakened Tree}</p></td><td><p>巨型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmBlinkDog000000]{Blink Dog}</p></td><td><p>中型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmCentaurTrooper]{Centaur Trooper}</p></td><td><p>大型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmDryad000000000]{Dryad}</p></td><td><p>中型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmMyconidAdult00]{Myconid Adult}</p></td><td><p>中型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmMyconidSprout0]{Myconid Sprout}</p></td><td><p>小型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmPixie000000000]{Pixie}</p></td><td><p>微型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSatyr000000000]{Satyr}</p></td><td><p>中型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSprite00000000]{Sprite}</p></td><td><p>微型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmTreant00000000]{Treant}</p></td><td><p>大型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmUnicorn0000000]{Unicorn}</p></td><td><p>大型</p></td></tr></tbody></table>"
     },
     "Harper Hideout": {
       "name": "Harper Hideout",

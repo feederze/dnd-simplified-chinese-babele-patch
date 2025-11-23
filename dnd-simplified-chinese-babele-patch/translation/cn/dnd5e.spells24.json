@@ -351,30 +351,30 @@
       "description": "<p>你从异界存在处获得一个预示，关乎你计划在未来 30 分钟内采取的一系列行动的结果。DM 从预示表中选择一个预示。</p><table><thead><tr><td>预示</td><td>对应结果将是…</td></tr></thead><tbody><tr><td>吉</td><td>好的</td></tr><tr><td>凶</td><td>坏的</td></tr><tr><td>吉凶并存</td><td>既好又坏</td></tr><tr><td>无</td><td>既不好也不坏</td></tr></tbody></table><p>该法术不会考虑可能改变结果的情况，例如其他法术。</p><p>如果你在完成一次长休前多次施展此法术，则第一次施法后每次施法都有累计 25% 的几率得不到答案。</p>"
     },
     "Aura of Life": {
-      "name": "Aura of Life",
-      "description": "<p>An aura radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Resistance to Necrotic damage, and your Hit Point maximums can't be reduced. If an ally with 0 Hit Points starts its turn in the aura, that ally regains 1 Hit Point.</p>",
+      "name": "生命灵光",
+      "description": "<p>一道灵光自你身上发出并形成 30 尺半径的光环。在灵光范围内时，你和你的盟友获得对暗蚀伤害的&Reference[resistance]{抗性}，生命值上限也无法被降低。另外，生命值为 0 的盟友在灵光范围内开始其回合时，恢复 1 点生命值。</p>",
       "activities": {
         "Create Aura": {
-          "name": "Create Aura"
+          "name": "创造灵光"
         }
       },
       "effects": {
         "Aura of Life": {
-          "name": "Aura of Life",
-          "description": "<p>While in the aura, you and your allies have Resistance to Necrotic damage, and your Hit Point maximums can’t be reduced. If an ally with 0 Hit Points starts its turn in the aura, that ally regains [[/healing 1 type=healing]]{1 Hit Point}.</p>"
+          "name": "生命灵光",
+          "description": "<p>在灵光范围内时，你和你的盟友获得对暗蚀伤害的抗性，生命值上限也无法被降低。另外，生命值为0的盟友在灵光范围内开始其回合时，恢复[[/healing 1 type=healing]]{1 点生命值}。</p>"
         }
       }
     },
     "Awaken": {
-      "name": "Awaken",
-      "description": "<p>You spend the casting time tracing magical pathways within a precious gemstone, and then touch the target. The target must be either a Beast or Plant creature with an Intelligence of 3 or less or a natural plant that isn't a creature. The target gains an Intelligence of 10 and the ability to speak one language you know. If the target is a natural plant, it becomes a Plant creature and gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human's. The DM chooses statistics appropriate for the awakened Plant, such as the statistics for the <strong>@UUID[Compendium.dnd5e.monsters.Actor.gaSTr7DFZJLmgI2J]{Awakened Shrub}</strong> or <strong>@UUID[Compendium.dnd5e.monsters.Actor.UR2gWLFHmFwG7ReH]{Awakened Tree}</strong> in the <em>Monster Manual</em>.</p><p>The awakened target has the &amp;Reference[Charmed] condition for 30 days or until you or your allies deal damage to it. When that condition ends, the awakened creature chooses its attitude toward you.</p>"
+      "name": "启蒙术",
+      "description": "<p>你利用施法的时间引导一块昂贵宝石中的魔法回路，然后触碰目标。该目标必须是一个野兽或植物，且必须是一个智力小于等于 3 的生物或是一个并非生物的自然植物。</p><p>目标的智力会变为 10，且学会说一门你所掌握的语言。如果目标是一株自然植物，则它变为一个植物生物，并且获得使用枝、根、藤、蔓或类似部位移动的能力，和类似于人类的感官。DM 为启蒙植物决定属性数据，例子可参考《怪物图鉴》中的<strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedShrub0]{启蒙灌木}</strong>或 <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedTree00]{启蒙大树}</strong>。</p><p>被启蒙的目标在 30 日内处于&Reference[Charmed]{魅惑}状态，或是直到你或你的盟友做出任何伤害它的举动。魅惑终止后，启蒙生物自行决定对你的态度。</p>"
     },
     "Bane": {
-      "name": "Bane",
-      "description": "<p>Up to three creatures of your choice that you can see within range must each make a Charisma saving throw. Whenever a target that fails this save makes an attack roll or a saving throw before the spell ends, the target must subtract 1d4 from the attack roll or save.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 1.</p>",
+      "name": "灾祸术",
+      "description": "<p>你选择施法距离内至多三个你可见的生物，迫使其分别进行一次魅力豁免。在法术终止前，豁免失败于此次魅力豁免的目标进行的每次攻击检定与豁免检定都必须承受 1d4 的减值。</p><p><strong>升环施法：</strong>你使用的法术位每比一环高一环，就能多选择一个生物作为目标。</p>",
       "effects": {
         "Bane": {
-          "name": "Bane",
+          "name": "灾祸",
           "description": "<p>Whenever a target makes an attack roll or a saving throw before the spell ends, the target must subtract 1d4 from the attack roll or save.</p>"
         }
       }
@@ -2871,7 +2871,7 @@
     },
     "Shield": {
       "name": "Shield",
-      "description": "<p>An imperceptible barrier of magical force protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{Magic Missile}</em>.</p>",
+      "description": "<p>一道看不见的力场制护盾浮现在你身旁，保护着你。在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受<em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi]</em>的伤害。</p>",
       "effects": {
         "Imperceptible Barrier": {
           "name": "Imperceptible Barrier",
