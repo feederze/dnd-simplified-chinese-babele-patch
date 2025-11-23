@@ -7448,20 +7448,20 @@
         },
         "Illumination": {
           "name": "照明",
-          "description": "<p>The [[lookup @name lowercase]] sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet.</p>"
+          "description": "<p>[[lookup @name lowercase]] 散发出半径 30 尺的明亮光照以及额外 30 尺的微光光照。</p>"
         },
         "Water Susceptibility": {
-          "name": "Water Susceptibility",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] takes 3 (1d6) Cold damage damage for every 5 feet the [[lookup @name lowercase]] moves in water or for every gallon of water splashed on it.</p><section class=\"secret\" id=\"secret-8tKSKGttxgiryprr\"><p><strong>Foundry Note</strong></p><p>Scaling is configured to roll the correct number of dice based on the distance traveled through water. 1 is default for 5 feet, 2 is for 10 feet, and so forth.</p></section>",
+          "name": "水体易感",
+          "description": "<p class=\"feature\">每在水中移动 5 尺，或者每被泼一加仑水， [[lookup @name lowercase]] 就受到[[/damage 1d6 type=cold average]]伤害。</p><section class=\"secret\" id=\"secret-8tKSKGttxgiryprr\">    <p><strong>Foundry Note</strong></p>    <p>比例值设定为根据在水中行进的距离来投掷相应数量的骰子。默认值为 5 尺 1 次，10 尺 2 次，以此类推。</p></section>",
           "activities": {
             "Cold Damage": {
-              "name": "Cold Damage"
+              "name": "寒冷伤害"
             }
           }
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmBurn0000000000]] attacks.</p>",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item .mmBurn0000000000]] 攻击。</p>",
           "activities": {
             "Use": {
               "name": "使用"
@@ -7469,11 +7469,11 @@
           }
         },
         "Burn": {
-          "name": "Burn",
-          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a creature or a flammable object, it starts &amp;Reference[burning].</p>",
+          "name": "燃烧",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。 若目标为生物或和易燃物件，则其开始&Reference[burning]。</p>",
           "effects": {
             "Burning": {
-              "name": "Burning",
+              "name": "燃烧",
               "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixCRule.JournalEntryPage.mPBGM1vguT5IPzxT caption=false]</p>"
             }
           }
@@ -7481,13 +7481,13 @@
       }
     },
     "Fire Giant": {
-      "name": "Fire Giant",
-      "tokenName": "Fire Giant",
+      "name": "火巨人",
+      "tokenName": "火巨人",
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] makes two attacks, using [[/item .mmFlameSword0000]] or [[/item .mmHammerThrow000]]in any combination.</p>",
+          "description": "<p>[[lookup @name lowercase]] 使用 [[/item .mmFlameSword0000]] 或 [[/item .mmHammerThrow000]] 发动共计两次攻击。</p>",
           "activities": {
             "Expend Use": {
               "name": "耗用"
@@ -7495,20 +7495,20 @@
           }
         },
         "Flame Sword": {
-          "name": "Flame Sword",
+          "name": "火焰之剑",
           "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Hammer Throw": {
-          "name": "Hammer Throw",
-          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], and the target is pushed up to 15 feet straight away from the [[lookup @name lowercase]] and has Disadvantage on the next attack roll it makes before the end of its next turn.</p>",
+          "name": "投掷炎锤",
+          "description": "<p class=\"feature\">[[/attack extended]]。[[/damage average extended]]，目标被 [[lookup @name lowcase]] 直线推离至多 15 尺。目标下一回合结束前进行的下次攻击检定具有劣势。</p>",
           "activities": {
             "attack": {
-              "chatFlavor": "On Hit: Target pushed 15 feet away."
+              "chatFlavor": "命中：目标被直线推离至多 15 尺。"
             }
           },
           "effects": {
             "Disadv.: Attacks": {
-              "name": "Disadv.: Attacks",
+              "name": "劣势：攻击",
               "description": "<p>在你的下一回合结束前，你进行的下次攻击检定具有劣势。</p>"
             }
           }
@@ -7516,50 +7516,50 @@
       }
     },
     "Flesh Golem": {
-      "name": "Flesh Golem",
-      "tokenName": "Flesh Golem",
+      "name": "血肉魔像",
+      "tokenName": "血肉魔像",
       "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Aversion to Fire": {
-          "name": "Aversion to Fire",
-          "description": "<p>If the [[lookup @name lowercase]] takes Fire damage, it has Disadvantage on attack rolls and ability checks until the end of its next turn.</p>",
-          "requirements": "Takes Fire damage",
+          "name": "厌火",
+          "description": "<p>若 [[lookup @name]] 受到火焰伤害，则进行的攻击检定和属性检定将具有劣势，直至其下一回合结束。</p>",
+          "requirements": "受到火焰伤害",
           "effects": {
             "Averse": {
-              "name": "Averse",
-              "description": "<p>It has Disadvantage on attack rolls and ability checks until the end of its next turn.</p>"
+              "name": "畏惧",
+              "description": "<p>你进行的攻击检定和属性检定将具有劣势，直至下一回合结束。</p>"
             }
           }
         },
         "Berserk": {
-          "name": "Berserk",
-          "description": "<p>Whenever the [[lookup @name lowercase]] starts its turn &amp;Reference[Bloodied], roll [[/r 1d6]]. On a 6, the [[lookup @name lowercase]] goes berserk. On each of its turns while berserk, the [[lookup @name lowercase]] attacks the nearest creature it can see. If no creature is near enough to move to and attack, the [[lookup @name lowercase]] attacks an object. Once the [[lookup @name lowercase]] goes berserk, it remains so until it is destroyed or it is no longer Bloodied.</p><p>The [[lookup @name lowercase]]'s creator, if within [[lookup @range.value activity=tnkOsrSwEElO2kZM]] feet of the berserk [[lookup @name lowercase]], can try to calm it by taking an action to make a [[/check ability=cha skill=per dc=@abilities.str.dc]] DC 15 Charisma (Persuasion) check; the golem must be able to hear its creator. If this check succeeds, the golem ceases being berserk until the start of its next turn, at which point it resumes rolling for the Berserk trait again if it is still Bloodied.</p>",
+          "name": "失心狂怒",
+          "description": "<p>若 [[lookup @name lowercase]] 在回合开始时&Reference[Bloodied]，掷 [[/r 1d6]]。骰值为 6 时，[[lookup @name lowercase]] 开始失心狂怒。[[lookup @name lowercase]] ，其在其回合内攻击距其最近的其可见的生物。若没有生物位于其能够移动并攻击到的范围内，则 [[lookup @name lowercase]] 攻击物件。一旦 [[lookup @name lowercase]] 开始失心狂怒，狂怒持续至其被摧毁或其不再浴血。</p><p>若 [[lookup @name lowercase]] 的创造者位于[[lookup @name lowercase]] [[lookup @range.value activity=tnkOsrSwEElO2kZM]] 尺内，则创造者能够以动作进行一次 [[/check ability=cha skill=per dc=@abilities.str.dc]]检定以试图让 [[lookup @name lowercase]] 冷静下来。此时 [[lookup @name lowercase]] 必须能听见其创造者。检定成功则 [[lookup @name lowercase]] 不再狂怒直至其下个回合开始，若此时 [[lookup @name lowercase]] 仍浴血，则为狂怒特质重新投掷d6。</p>",
           "activities": {
             "Berserk Check": {
-              "name": "Berserk Check",
-              "roll": "Berserk on 6",
-              "condition": "starts its turn &Reference[Bloodied]"
+              "name": "狂怒检定",
+              "roll": "狂怒于 6",
+              "condition": "其回合开始时 &Reference[Bloodied]"
             },
             "Calm Check": {
-              "name": "Calm Check",
-              "condition": "Action taken by creature's creator",
-              "affectsSpecial": "this creature"
+              "name": "清醒检定",
+              "condition": "创造者以动作",
+              "affectsSpecial": "该生物"
             }
           },
           "effects": {
             "Berserk": {
-              "name": "Berserk",
-              "description": "<p>On each of its turns while berserk, the creature attacks the nearest creature it can see. If no creature is near enough to move to and attack, the creature attacks an object. Once the creature goes berserk, it remains so until it is destroyed or it is no longer &amp;Reference[Bloodied apply=false].</p>"
+              "name": "失心狂怒",
+              "description": "<p>你开始失心狂怒。你狂怒期间，其在其回合内攻击距其最近的其可见的生物。若没有生物位于其能够移动并攻击到的范围内，则你攻击物件。一旦你开始失心狂怒，狂怒持续至其被摧毁或其不再&Reference[Bloodied apply=false]。</p>"
             }
           }
         },
         "Immutable Form": {
-          "name": "Immutable Form",
-          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can't shape-shift.</p>"
+          "name": "不变形态",
+          "description": "<p class=\"feature\">[[lookup @name lowercase]] 无法变形。</p>"
         },
         "Lightning Absorption": {
-          "name": "Lightning Absorption",
-          "description": "<p class=\"feature\">Whenever the [[lookup @name lowercase]] is subjected to Lightning damage, it regains a number of Hit Points equal to the Lightning damage dealt.</p>",
+          "name": "闪电吸收",
+          "description": "<p>每当 [[lookup @name lowercase]] 将受闪电伤害时，其恢复等于闪电伤害数值的生命值。</p>",
           "requirements": "Subjected to Lightning damage"
         },
         "Magic Resistance": {
