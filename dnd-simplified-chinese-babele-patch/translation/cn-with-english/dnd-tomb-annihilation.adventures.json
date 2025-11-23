@@ -739,7 +739,7 @@
           "items": {
             "Dive Attack": {
               "name": "俯冲攻击 Dive Attack",
-              "description": "<p>如果 [[lookup @name]]在飞行中向一个目标直线俯冲至少30尺，再以一次近战攻击命中对方，则该攻击对目标造成额外 [[/damage average]]伤害。</p>"
+              "description": "<p>如果 [[lookup @name]]在飞行中向一个目标直线俯冲至少 30 尺，再以一次近战攻击命中对方，则该攻击对目标造成额外 [[/damage average]]伤害。</p>"
             },
             "Talon": {
               "name": "禽爪 Talon",
@@ -1178,7 +1178,7 @@
               "effects": {
                 "Hold Monster": {
                   "name": "定身怪物",
-                  "description": "<p>目标在法术期间麻痹。其在你的每一回合结束时可以再进行一次感知豁免，豁免成功则终止其自身上该法术的效应。</p>"
+                  "description": "<p>你陷入麻痹期间。你在你的每一回合结束时可以再进行一次感知豁免，豁免成功则终止其自身上该法术的效应。</p>"
                 }
               }
             },
@@ -8980,7 +8980,7 @@
               "effects": {
                 "Hold Monster": {
                   "name": "定身怪物",
-                  "description": "<p>你在法术期间麻痹。你在施法者的每一回合结束时可以再进行一次感知豁免，豁免成功则终止自身上该法术的效应。</p>"
+                  "description": "<p>你陷入麻痹期间。你在你的每一回合结束时可以再进行一次感知豁免，豁免成功则终止其自身上该法术的效应。</p>"
                 }
               }
             },
@@ -9223,7 +9223,7 @@
               },
               "activities": {
                 "Summon": {
-                  "name": "Summon"
+                  "name": "召唤"
                 }
               },
               "effects": {
@@ -9233,7 +9233,7 @@
               }
             },
             "Cone of Cold": {
-              "name": "Cone of Cold",
+              "name": "寒冰锥 Cone of Cold",
               "description": "<p>一片冷空气从你手上迸发而出。在 60 尺锥状区域内的每个生物必须进行一次体质豁免。豁免失败者将受到 8d8 点寒冷伤害，豁免成功则伤害减半。</p><p>被该法术杀死的生物将成为一尊冰冻塑像并持续至被解冻。</p><p><strong>升环施法：</strong>使用六环或更高法术位施展该法术时，你使用的法术位每比五环高一环，法术伤害就增加 1d8。</p>",
               "materials": {
                 "value": "一个小水晶或玻璃锥"
@@ -9245,15 +9245,15 @@
               }
             },
             "Flesh to Stone": {
-              "name": "Flesh to Stone",
-              "description": "<p>You attempt to turn one creature that you can see within range into stone. If the target's body is made of flesh, the creature must make a Constitution saving throw. On a failed save, it is &amp;Reference[Restrained] as its flesh begins to harden. On a successful save, the creature isn't affected.</p><p>A creature Restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the &amp;Reference[Petrified] condition for the Duration. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.</p><p>If the creature is physically broken while Petrified, it suffers from similar deformities if it reverts to its original state.</p><p>If you maintain your Concentration on this spell for the entire possible Duration, the creature is turned to stone until the effect is removed.</p>",
+              "name": "石化术 Flesh to Stone",
+              "description": "<p>你尝试将施法距离内一个你能看见的生物变为石头。如果该目标的身体由血肉组成，则其必须进行一次体质豁免。豁免失败时，它将被&amp;Reference[Restrained]{束缚}，因为其肉体开始硬化。豁免成功时，该生物不受影响。</p> <p>受此法束缚的生物必须在其每回合结束时再进行一次体质豁免。若其累计三次成功通过此法术的豁免，则法术终止。若其累计三次豁免失败，则它将变为石头并在持续时间内受到&amp;Reference[Petrified]{石化} 状态影响。成功与失败的次数无需连续；分别记录两者直至目标累计三次成功或三次失败为止。</p> <p>如果该生物在被石化期间身体遭到物理破坏，则当其恢复原状时会遭受类似的残缺。</p> <p>如果你为此法术维持了完整的可能持续时间，则该生物将一直保持石化状态，直至该效应被移除。</p>",
               "materials": {
-                "value": "A pinch of lime, water, and earth"
+                "value": "一小撮石灰、水和土壤"
               },
               "effects": {
                 "Flesh to Stone": {
-                  "name": "Flesh to Stone",
-                  "description": "<p>The target is Restrained as its flesh begins to harden. A creature Restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the Petrified condition for the Duration.</p>"
+                  "name": "石化",
+                  "description": "<p>被&amp;Reference[Restrained]{束缚}，因为其肉体开始硬化。你必须在你的每回合结束时再进行一次体质豁免。若你累计三次成功通过此法术的豁免，则法术终止。若你累计三次豁免失败，则你将变为石头并在持续时间内受到&amp;Reference[Petrified]{石化} 状态影响。</p>"
                 },
                 "Spell Changes": {
                   "name": "法术改动"
@@ -9261,10 +9261,10 @@
               }
             },
             "Ice Storm": {
-              "name": "Ice Storm",
+              "name": "冰风暴 Ice Storm",
               "description": "<p>以施法距离内一点为中心的一处半径 20 尺，高 40 尺的柱状区域内，岩石般坚硬的冰雹重重地砸向地面。每个处在范围内的生物都必须进行一次敏捷豁免，豁免失败者将受到 2d8 的钝击伤害和 4d6 点寒冷伤害，豁免成功则伤害减半。</p><p>冰雹使风暴影响的区域变为困难地形，直至你的下一回合结束。</p><p><strong>升环施法：</strong> 使用五环或更高法术位施展该法术时，你使用的法术位每比四环高一环，钝击伤害就增加 1d8。</p>",
               "materials": {
-                "value": "A pinch of dust and a few drops of water"
+                "value": "一撮尘土和几滴水"
               },
               "effects": {
                 "Spell Changes": {
@@ -9273,10 +9273,10 @@
               }
             },
             "Freezing Sphere": {
-              "name": "Freezing Sphere",
-              "description": "<p>A frigid globe of cold energy streaks from your fingertips to a point of your choice within range, where it explodes in a 60-foot-radius sphere. Each creature within the area must make a Constitution saving throw. On a failed save, a creature takes 10d6 cold damage. On a successful save, it takes half as much damage.</p><p>If the globe strikes a body of water or a liquid that is principally water (not including water-based creatures), it freezes the liquid to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice. A trapped creature can use an action to make a Strength check against your spell save DC to break free.</p><p>You can refrain from firing the globe after completing the spell, if you wish. A small globe about the size of a sling stone, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling's normal range). It shatters on impact, with the same effect as the normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn't already shattered, it explodes.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 7th level or higher, the damage increases by 1d6 for each slot level above 6th.</p>",
+              "name": "冰冻法球 Freezing Sphere",
+              "description": "<p>一个冷冻能量形成的冰球从你的指尖射向施法距离内一处指定点，并在该处迸发为一个半径 60 尺的球状区域。区域内的每个生物必须进行一次体质豁免。豁免失败者将受到 10d6 点寒冷伤害，豁免成功则伤害减半。</p><p>如果冰球击中某处水体或主要成分为水的液体（不包括水栖生物），它会将该液体冻结为 6 英寸厚、30 英尺见方的冰面。此冰面持续 1 分钟。在冻结水面上游泳的生物将被困在冰中。受困生物可以用一个动作进行一次力量检定，对抗你的法术豁免 DC，以挣脱束缚。</p><p>如果你希望，可以在完成法术后暂不发射冰球。此时一个约投石索弹丸大小、触感冰凉的小球会出现在你手中。任何时候，你或你给予此球的生物可以投掷该球（至多 40 尺远）或用投石索发射（至投石索正常射程）。它在撞击时破碎，产生与正常施放该法术相同的效果。你也可以将球放下而不使其破碎。1 分钟后，如果球尚未破碎，它会自动爆炸。</p><p><strong>升环施法效应</strong>。当你使用 7 环或更高法术位施放该法术时，你使用的法术位每比 6 环高一环，法术的伤害就增加 1d6。</p>",
               "materials": {
-                "value": "A small crystal sphere"
+                "value": "一个小水晶球"
               },
               "effects": {
                 "Spell Changes": {
@@ -9285,8 +9285,8 @@
               }
             },
             "Spike Growth": {
-              "name": "Spike Growth",
-              "description": "<p>The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the Duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels.</p><p>The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is cast must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it.</p>",
+              "name": "荆棘丛生 Spike Growth",
+              "description": "<p>以施法距离内一点为中心周围 20 尺的地面扭曲变形，大片坚硬的棘刺破土而出。该区域在法术持续时间内视为困难地形。而生物进入该区域或在其中移动时，其每移动 5 尺就要受到 2d4 点穿刺伤害。</p><p>法术导致的地面变形经过刻意的掩饰，使其看起来并无异样。如果生物在你施展该法术时不能看见该区域，则它必须进行一次感知（察觉）检定，检定成功则能发现该区域隐藏的危险。</p>",
               "materials": {
                 "value": "七根棘刺或七根嫩枝，每根都要削尖"
               },
@@ -9297,109 +9297,109 @@
               }
             },
             "Sleet Storm": {
-              "name": "Sleet Storm",
-              "description": "<p>Until the spell ends, freezing rain and sleet fall in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range. The area is heavily obscured, and exposed flames in the area are doused.</p><p>The ground in the area is covered with slick ice, making it difficult terrain. When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. On a failed save, it falls Prone.</p><p>If a creature is concentrating in the spell's area, the creature must make a successful Constitution saving throw against your spell save DC or lose concentration.</p>",
+              "name": "雪雨暴 Sleet Storm",
+              "description": "<p>你指定施法距离内一点，并使以该点为中心，半径 40 尺、高 20 尺的区域内降下冷冻刺骨的冻雨和冰雹直至法术终止。该区域将造成重度遮蔽，且该区域内的一切开放的明火都将被浇熄。</p><p>该区域的地面上覆着一层光滑的冰，使地面变成困难地形。生物在一个回合内第一次进入该区域或在区域内开始其回合时，必须进行一次敏捷豁免，豁免失败则失足倒地。</p><p>在该法术区域内开始其回合的生物若正在进行专注，则该生物必须进行一次对抗你法术豁免 DC 的体质豁免，豁免失败则其专注被打断。</p>",
               "materials": {
-                "value": "A pinch of dust and a few drops of water."
+                "value": "一撮尘土和几滴水"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
             "Wall of Ice": {
-              "name": "Wall of Ice",
-              "description": "<p>You create a wall of ice on a solid surface within range. You can form it into a hemispherical dome or a sphere with a radius of up to 10 feet, or you can shape a flat surface made up of ten 10-foot-square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 foot thick and lasts for the Duration.</p><p>If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw. On a failed save, the creature takes 10d6 cold damage, or half as much damage on a successful save.</p><p>The wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10-foot section, and it is vulnerable to fire damage. Reducing a 10-foot section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one.</p><p>At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the damage the wall deals when it appears increases by 2d6, and the damage from passing through the sheet of frigid air increases by 1d6, for each slot level above 6th.</p>",
+              "name": "冰墙术 Wall of Ice",
+              "description": "<p>你在施法距离内一块坚实的表面上创造出一面冰墙。你可以将其塑造成一个半球形穹顶或一个半径最多 10 尺的球体，也可以塑造一个由十块 10 尺见方的嵌板组成的平坦表面。每块嵌板必须与另一块嵌板相邻。无论何种形态，冰墙均为 1 尺厚，并持续至法术持续时间结束。</p> <p>如果冰墙出现时穿过了某个生物所在的空间，该生物会被推到冰墙的一侧，并且必须进行一次敏捷豁免。豁免失败时，该生物受到 10d6 点寒冷伤害，豁免成功则伤害减半。</p> <p>冰墙是一个可以被破坏的物件。它每 10 尺段具有 AC 12 和 30 点生命值，且具有火焰伤害易伤。将一段 10 尺长的冰墙生命值降至 0 会摧毁它，并在原位置留下一片寒冷空气。生物在一个回合内第一次穿过这片寒冷空气时，必须进行一次体质豁免。该生物豁免失败时受到 5d6 点寒冷伤害，豁免成功则伤害减半。</p> <p><strong>升环施法效应</strong>。当你使用 7 环或更高法术位施放该法术时，你使用的法术位每比 6 环高一环，冰墙出现时造成的伤害就增加 2d6，且穿过寒冷空气时受到的伤害增加 1d6。</p>",
               "materials": {
-                "value": "A small piece of quartz"
+                "value": "一小块石英"
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             }
           }
         },
         "Asharra": {
-          "name": "Asharra",
-          "tokenName": "Asharra",
-          "description": "<p>An incredibly old aarakocra named Asharra. The others refer to her as Teacher, and they revere her as a living saint. Asharra is intelligent, ambitious, and somewhat manipulative, but never cruel or insensitive.</p>",
+          "name": "阿莎尔 Asharra",
+          "tokenName": "阿莎尔",
+          "description": "<p>一位名叫阿莎尔的极其高寿的鸟羽人。其他鸟羽人把她当成导师，尊称她为活圣人。阿莎尔才智过人、胸怀野望、有些操纵人心，但从不残忍或麻木不仁。</p>",
           "items": {
             "Dive Attack": {
-              "name": "Dive Attack",
-              "description": "<p>If [[lookup @name]] is flying and dives at least 30 feet straight toward a target and then hits it with a melee weapon attack, the attack deals an extra [[/damage average]] damage to the target.</p>"
+              "name": "俯冲攻击 Dive Attack",
+              "description": "<p>如果 [[lookup @name]]在飞行中向一个目标直线俯冲至少 30 尺，再以一次近战攻击命中对方，则该攻击对目标造成额外 [[/damage average]]伤害。</p>"
             },
             "Talon": {
-              "name": "Talon",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "禽爪 Talon",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Javelin": {
-              "name": "Javelin",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "name": "标枪 Javelin",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Spellcasting": {
-              "name": "Spellcasting",
-              "description": "<p>Asharra is a 5th-level spellcaster who uses Wisdom as her spellcasting ability (spell save DC 13]; +5 to hit with spell attacks). She has the following druid spells prepared:</p><p>Cantrip (at will): <em>[[/item .CQvfzbiOGwKnnuvw]]{druidcraft}, [[/item .4l9GXcmhX4shEE2K]]{mending}, [[/item .C8jNIwOrqeu6kHPa]]{produce flame}</em></p><p>1st level (4 slots): <em>[[/item .ikzWasoEkE4zKYty]]{detect magic}, [[/item .S37Oe9cTKXzdlDq2]]{faerie fire}, [[/item .tnxol4i2SJO8rX6g]]{thunderwave}</em></p><p>2nd level (3 slots): <em>[[/item .D6Ut2PmTBgYQGUsQ]]{gust of wind}, [[/item .Ic6ChyxViJ8tFmGz]]{hold person}, [[/item .bB3zzpEuULOJU6dE]]{lesser restoration}</em></p><p>3rd level (2 slots): <em>[[/item .qW3Ia9tMbTPHIns4]]{call lightning}, [[/item .Y1t8pF9eq0eiin4e]]{wind wall}</em></p>"
+              "name": "施法 Spellcasting",
+              "description": "<p>阿莎尔是一名 5 级施法者，其施法关键属性为感知（法术豁免 DC 13，法术攻击命中 +5）。她准备了以下德鲁伊法术：</p> <p>戏法（随意）：<em>[[/item .CQvfzbiOGwKnnuvw]{德鲁伊伎俩}]， [[/item .4l9GXcmhX4shEE2K]{修复术}]， [[/item .C8jNIwOrqeu6kHPa]{燃火术}]</em></p> <p>1 环（4 法术位）：<em>[[/item .ikzWasoEkE4zKYty]{侦测魔法}]， [[/item .S37Oe9cTKXzdlDq2]{妖火}]， [[/item .tnxol4i2SJO8rX6g]{雷鸣波}]</em></p> <p>2 环（3 法术位）：<em>[[/item .D6Ut2PmTBgYQGUsQ]{造风术}]， [[/item .Ic6ChyxViJ8tFmGz]{人类定身术}]， [[/item .bB3zzpEuULOJU6dE]{次级复原术}]</em></p> <p>3 环（2 法术位）：<em>[[/item .qW3Ia9tMbTPHIns4]{召雷术}]， [[/item .Y1t8pF9eq0eiin4e]{风墙术}]</em></p>"
             },
             "Druidcraft": {
-              "name": "Druidcraft",
-              "description": "<p>Whispering to the spirits of Nature, you create one of the following Effects within range:</p>\n<ul>\n<li>You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, Falling snowflakes for snow, and so on. This effect persists for 1 round.</li>\n<li>You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.</li>\n<li>You create an Instantaneous, harmless sensory effect, such as Falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.</li>\n<li>You instantly light or snuff out a Candle, a torch, or a small campfire.</li>\n</ul>"
+              "name": "德鲁伊伎俩 Druidcraft",
+              "description": "<p>你向自然之魂低语，并创造以下效应之一：</p>\n<ul>\n<li>你创造一个微小而无害的感官效应，并以之预报你所在地接下来 24 小时的天气状况。该效应可表现为一个代表晴空的金球，一朵代表雨天的云彩，代表雪日而飘飞的雪花等等。该效应将持续 1 轮。</li>\n<li>你可以立即让一朵鲜花绽放，一颗种子破壳，一片叶蕾发芽。</li>\n<li>你创造一个微小而无害的即时感官效应，如落叶，微风，小动物的动静或者臭鼬的微弱气味。该效应只能在 5 尺的立方空间内起效。</li>\n<li>你可以立即点亮或熄灭一根蜡烛、一把火把或一处小篝火。</li>\n</ul>"
             },
             "Mending": {
-              "name": "Mending",
-              "description": "<p>This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.</p><p>This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.</p>",
+              "name": "修复术 Mending",
+              "description": "<p>该法术修复你所触碰一个物件上的一处破损或裂缝，例如修复一条断裂的链条，或者一把碎成两半的钥匙、一件撕裂的斗篷、一个漏了的酒袋等。只要破损或断裂处在任意方向上都不超过 1 尺，你就可以不留痕迹地修复它。</p><p>该法术可以物理性地修复一件魔法物品，但无法恢复其上的魔法。</p>",
               "materials": {
                 "value": "两块天然磁石"
               }
             },
             "Produce Flame": {
-              "name": "Produce Flame",
-              "description": "<p>A flickering flame appears in your hand. The flame remains there for the Duration and harms neither you nor your Equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.</p><p>You can also Attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell Attack. On a hit, the target takes 1d8 fire damage.</p><p>This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>"
+              "name": "燃火术 Produce Flame",
+              "description": "<p>一朵摇曳的火焰出现在你手中。火焰在法术持续时间存在，并且不会伤害你和你的装备。火焰为其周边半径 10 尺范围内提供明亮光照，以及该范围外 10 尺的微光光照。法术将在再次施展该法术，或者以一个动作解除法术时终止。</p><p>此外，你还可以使用火焰发动攻击，并以此终止该法术。施展该法术时，你可以将火焰投向距你 30 尺内的一个生物，并对其发动一次远程法术攻击，命中时目标将受到 1d8 点火焰伤害。你也可以在施展法术后的随后回合里以一个动作实现该行为。</p><p>你到达 5 级时，该法术的伤害增加 1d8（变为 2d8）。11 级时再加 1d8（变为 3d8），17 级时再加 1d8（变为 4d8）。</p>"
             },
             "Detect Magic": {
-              "name": "Detect Magic",
+              "name": "侦测魔法 Detect Magic",
               "description": "<p>你在法术持续时间内能感测到 30 尺内存在的魔法。感测到魔法的存在后，你可以使用动作，来看到任何你能看见的具有魔法的生物或物件周围环绕着微弱的灵光，并分辨出其所属的魔法学派（若有）。该法术可以穿透大部分障碍，但仍会被 1 尺厚石质，或 1 寸厚金属质，或一层薄铅质，或 3 尺厚木质或泥质材料阻隔。</p>"
             },
             "Faerie Fire": {
-              "name": "Faerie Fire",
-              "description": "<p>Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.</p><p>Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.</p>"
+              "name": "妖火 Faerie Fire",
+              "description": "<p>指定施法距离内一处 20 尺立方区域，其内每个物件都将被蓝色、绿色、或紫色的光所包围（颜色由你指定）。区域内敏捷豁免失败的生物也会被光包围。受术物件和生物在法术持续时间内发出 10 尺半径的微光。受术生物或物件无法受益于隐形，且任何能看见他们的攻击者对其发动的攻击检定具有优势。</p>"
             },
             "Thunderwave": {
-              "name": "Thunderwave",
-              "description": "<p>A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.</p><p>In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</p>"
+              "name": "雷鸣波 Thunderwave",
+              "description": "<p>一道雷鸣波从你的身体向外扫去。在以你为源点 15 尺立方区域内的每个生物必须进行一次体质豁免。豁免失败者将受到 2d8 点雷鸣伤害，并被推离 10 尺。豁免成功则伤害减半，且不会被推离。</p><p>此外，所有完全位于该区域内且没被固定住的物件都将被自动推离 10 尺。而该法术还会发出方圆 300 尺内都能听见的雷霆巨响。</p><p><strong>升环施法：</strong>使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，法术的伤害就增加 1d8。</p>"
             },
             "Gust of Wind": {
-              "name": "Gust of Wind",
-              "description": "<p>A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the spell's duration. Each creature that starts its turn in the line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the line.</p><p>Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.</p><p>The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.</p><p>As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you.</p>",
+              "name": "造风术 Gust of Wind",
+              "description": "<p>一道 60 尺长、10 尺宽的强风线以你为起点向你指定的方向喷涌而出，并持续至法术终止。任何在线状区域内开始其回合的生物必须进行一次力量豁免，豁免失败则被沿着风向推离你 15 尺远。</p><p>任何在线状区域内的生物若试图向你移动，每移动 1 尺必须消耗 2 尺移动力。</p><p>强风能驱散毒气或蒸汽，并熄灭区域内的蜡烛、火把及其他类似无防护的火焰。对有防护的火焰（如提灯），则使其剧烈摇曳且有 50% 几率熄灭。</p><p>在法术终止前的每回合，你可以用一个附赠动作改变风道的方向。</p>",
               "materials": {
-                "value": "A legume seed."
+                "value": "一颗豆类种子"
               }
             },
             "Hold Person": {
-              "name": "Hold Person",
-              "description": "<p>Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be &amp;Reference[paralyzed] for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them.</p>",
+              "name": "定身类人 Hold Person",
+              "description": "<p>指定施法距离内一个你能看见的类人生物。该目标必须进行一次感知豁免，豁免失败则其在法术持续时间内陷入&Reference[paralyzed]。目标在其每回合结束时可以再进行一次感知豁免，豁免成功则终止其身上该法术的效应。</p><p><strong>升环施法：</strong>使用三环或更高法术位施展该法术时，你使用的法术位每比二环高一环，你就可以额外指定一个类人生物。指定目标时，每个目标生物必须身处其他目标 30 尺范围内。</p>",
               "materials": {
-                "value": "A small, straight piece of iron"
+                "value": "一片直的小铁片"
               },
               "effects": {
                 "Hold Person": {
-                  "name": "Hold Person",
-                  "description": "<p>你在法术期间麻痹。你在施法者的每一回合结束时可以再进行一次感知豁免，豁免成功则终止自身上该法术的效应。</p>"
+                  "name": "定身类人",
+                  "description": "<p>你陷入麻痹期间。你在你的每一回合结束时可以再进行一次感知豁免，豁免成功则终止其自身上该法术的效应。</p>"
                 }
               }
             },
             "Lesser Restoration": {
-              "name": "Lesser Restoration",
+              "name": "次级复原术 Lesser Restoration",
               "description": "<p>你触碰一个生物，并终止正影响它的一种状态：&Reference[blinded]、&Reference[deafened]、&Reference[paralyzed] 或 &Reference[poisoned]。</p>"
             },
             "Call Lightning": {
-              "name": "Call Lightning",
-              "description": "<p>A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud).</p><p>When you cast the spell, choose a point you can see within range. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.</p><p>If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd.</p>"
+              "name": "召雷术 Call Lightning",
+              "description": "<p>你指定施法距离内，自己上方一处能看见的点，并在该处生成一片高 10 尺、半径 60 尺的柱状雷云区域。如果你无法看到空中雷云可能形成的位置，则法术失败（例如，当你身处一间不够高大的房间内时）。</p><p>施法时，指定该雷云下一处你能看见的点。再令一束闪电从云端射向该点。在该点 5 尺内的生物必须进行一次敏捷豁免。豁免失败者将受到 3d10 点闪电伤害，豁免成功则伤害减半。直至法术终止前，你都可以在自己回合内使用动作再次发射闪电，并在攻击前指定同一点或另选一点。</p><p>若施法时你身处室外暴风雨环境，则此法术令你得以控制空中的暴雨云而非创一朵新雷云。且法术伤害增加 1d10。</p><p><strong>升环施法：</strong> 使用四环或更高法术位施展该法术时，你使用的法术位每比三环高一环，法术的伤害就增加 1d10。</p>"
             },
             "Wind Wall": {
-              "name": "Wind Wall",
+              "name": "风墙术 Wind Wall",
               "description": "<p>A wall of strong wind rises from the ground at a point you choose within range. You can make the wall up to 50 feet long, 15 feet high, and 1 foot thick. You can shape the wall in any way you choose so long as it makes one continuous path along the ground. The wall lasts for the Duration.</p>\n        <p>When the wall appears, each creature within its area must make a Strength saving throw. A creature takes 3d8 bludgeoning damage on a failed save, or half as much damage on a successful one.</p>\n        <p>The strong wind keeps fog, smoke, and other gases at bay. Small or smaller flying creatures or objects can't pass through the wall. Loose, lightweight materials brought into the wall fly upward. Arrows, bolts, and other ordinary projectiles launched at targets behind the wall are deflected upward and automatically miss. (Boulders hurled by Giants or siege engines, and similar projectiles, are unaffected.) Creatures in gaseous form can't pass through it.</p>",
               "materials": {
                 "value": "A tiny fan and a feather of exotic origin"
@@ -9442,7 +9442,7 @@
             },
             "Claws": {
               "name": "Claws",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Multiattack": {
               "name": "Multiattack",
@@ -9484,7 +9484,7 @@
               "description": "<p>While on the Ethereal Plane, the hag magically touches a sleeping humanoid on the Material Plane. A @UUID[Compendium.dnd5e.spells.Item.xmDBqZhRVrtLP8h2]{protection from evil and good} spell cast on the target prevents this contact, as does a @UUID[Compendium.dnd5e.spells.Item.y8A4HfTwd93ypdEz]{magic circle}.</p><p>As long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 ([[/r 1d10]]). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's <em>soul bag</em>. The reduction to the target's hit point maximum lasts until removed by the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{greater restoration} spell or similar magic.</p>"
             },
             "Detect Magic": {
-              "name": "Detect Magic",
+              "name": "侦测魔法 Detect Magic",
               "description": "<p>你在法术持续时间内能感测到 30 尺内存在的魔法。感测到魔法的存在后，你可以使用动作，来看到任何你能看见的具有魔法的生物或物件周围环绕着微弱的灵光，并分辨出其所属的魔法学派（若有）。该法术可以穿透大部分障碍，但仍会被 1 尺厚石质，或 1 寸厚金属质，或一层薄铅质，或 3 尺厚木质或泥质材料阻隔。</p>"
             },
             "Magic Missile": {
@@ -9519,7 +9519,7 @@
             },
             "Bite": {
               "name": "Bite",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Eye Rays": {
               "name": "Eye Rays",
@@ -9628,7 +9628,7 @@
           "items": {
             "Club": {
               "name": "Club",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
@@ -9651,11 +9651,11 @@
             },
             "Heavy Crossbow": {
               "name": "Heavy Crossbow",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Mace": {
               "name": "Mace",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Ring of Animal Influence": {
               "name": "Ring of Animal Influence",
@@ -9669,7 +9669,7 @@
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -9694,7 +9694,7 @@
               "description": "<p>你在法术持续时间内获得理解野兽并与其沟通的能力。许多野兽智力不高，因此它们的认知水平相当有限，但它们至少能向你提供关于周围地域和怪物的情报，包括任何它们现在以及在前一日内察觉到的东西。你也许可以说服野兽帮你一些小忙，是否成功则由 DM 来判断。</p>",
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             }
@@ -9725,7 +9725,7 @@
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Spellcasting": {
-              "name": "Spellcasting",
+              "name": "施法 Spellcasting",
               "description": "<p>The [[lookup @name lowercase]] is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:</p><p>Cantrip (at will): [[/item .Bnn9Nzajixvow9xi]]{light}, [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy}</p><p>1st level (4 slots): [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .7buEm5KhI5lP8m1z]]{guiding bolt}, [[/item .gvdA9nPuWLck4tBl]]{sanctuary}</p><p>2nd level (3 slots): [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .JbxsYXxSOTZbf9I0]]{spiritual weapon}</p><p>3rd level (2 slots): [[/item .15Fa6q1nH27XfbR8]]{dispel magic}, [[/item .uCud2s4TjMfjiXUb]]{spirit guardians}</p>"
             },
             "Divine Eminence": {
@@ -9756,7 +9756,7 @@
               }
             },
             "Lesser Restoration": {
-              "name": "Lesser Restoration",
+              "name": "次级复原术 Lesser Restoration",
               "description": "<p>你触碰一个生物，并终止正影响它的一种状态：&Reference[blinded]、&Reference[deafened]、&Reference[paralyzed] 或 &Reference[poisoned]。</p>"
             },
             "Spiritual Weapon": {
@@ -9912,7 +9912,7 @@
           "items": {
             "Club": {
               "name": "Club",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
@@ -9927,11 +9927,11 @@
             },
             "Greataxe": {
               "name": "Greataxe",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Rock": {
               "name": "Rock",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
@@ -9940,12 +9940,12 @@
           "tokenName": "Dyrax",
           "items": {
             "Spellcasting": {
-              "name": "Spellcasting",
+              "name": "施法 Spellcasting",
               "description": "<p>[[lookup @name]] is a 9th-level spellcaster. Their spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). [[lookup @name]] has the following wizard spells prepared:</p><p>Cantrip (at will): [[/item .EOmsUcFQJTfG2oio]]{fire bolt}, [[/item .Bnn9Nzajixvow9xi]]{light}, [[/item .Utk1OQRwYkMkFRD3]]{mage hand}, [[/item .udsLtG0BugXHR2JQ]]{prestidigitation}</p><p>1st level (4 slots): [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .CKZTpZlxj7hjjo2H]]{mage armor}, [[/item .41JIhpDyM9Anm7cs]]{magic missile}, [[/item .z1mx84ONwkXKUZd7]]{shield}</p><p>2nd level (3 slots): [[/item .wqfAVANuQonNBgnL]]{misty step}, [[/item .zMAWdyc8UVb37BK4]]{suggestion}</p><p>3rd level (3 slots): [[/item .Ek45cBpVXvJdv1Qy]]{counterspell}, [[/item .ztgcdrWPshKRpFd0]]{fireball}, [[/item .yfbK8gZqESlaoY5t]]{fly}</p><p>4th level (3 slots): [[/item .tEpDmYZNGc9f5OhJ]]{greater invisibility}, [[/item .WN2LWEljYU6QqnRH]]{ice storm}</p><p>5th level (1 slots): [[/item .RpKjTlYASrfqUPVA]]{cone of cold}</p>"
             },
             "Dagger": {
               "name": "Dagger",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Fire Bolt": {
               "name": "Fire Bolt",
@@ -9967,7 +9967,7 @@
               "description": "<p>该法术是一个初级施法者用来练习的魔法小伎俩。你在施法距离内创造下列魔法效果中的一种：</p>\n<ul>\n<li>你创造一个立即生效的，无害的感观效应，比如一束火花，一阵风，微弱音乐或古怪的臭味。</li>\n<li>你立即点燃或熄灭一支蜡烛，一支火把或一小型营火。</li>\n<li>你立即使一个不大于 1 立方尺的物件变得清洁或肮脏。</li>\n<li>你立即使一个不大于 1 立方尺的非活体物质变得冰冷、温暖或对其调味，其效应持续 1 小时。</li>\n<li>你在一个物件或一个表面上创造一块色斑，或者一个记号，又或者一个标志，其效应持续 1 小时。</li>\n<li>你在你手中创造出一个非魔法的小饰品或一个幻术的图像，其大小不能超过你的手掌大小，它会存在持续至下个你的回合结束为止。</li>\n</ul>\n<p>如果你多次施展该法术，则可以同时维持至多三个不同的非即时效应，并且可以用一个动作解散其中一种效应。</p>"
             },
             "Detect Magic": {
-              "name": "Detect Magic",
+              "name": "侦测魔法 Detect Magic",
               "description": "<p>你在法术持续时间内能感测到 30 尺内存在的魔法。感测到魔法的存在后，你可以使用动作，来看到任何你能看见的具有魔法的生物或物件周围环绕着微弱的灵光，并分辨出其所属的魔法学派（若有）。该法术可以穿透大部分障碍，但仍会被 1 尺厚石质，或 1 寸厚金属质，或一层薄铅质，或 3 尺厚木质或泥质材料阻隔。</p>"
             },
             "Mage Armor": {
@@ -10035,14 +10035,14 @@
               "description": "<p>你或一个你触碰的生物变为隐形，直至法术终止。任何保持在目标身上的着装物和携带物也可以维持隐形状态。 </p>"
             },
             "Ice Storm": {
-              "name": "Ice Storm",
+              "name": "冰风暴 Ice Storm",
               "description": "<p>以施法距离内一点为中心的一处半径 20 尺，高 40 尺的柱状区域内，岩石般坚硬的冰雹重重地砸向地面。每个处在范围内的生物都必须进行一次敏捷豁免，豁免失败者将受到 2d8 的钝击伤害和 4d6 点寒冷伤害，豁免成功则伤害减半。</p><p>冰雹使风暴影响的区域变为困难地形，直至你的下一回合结束。</p><p><strong>升环施法：</strong> 使用五环或更高法术位施展该法术时，你使用的法术位每比四环高一环，钝击伤害就增加 1d8。</p>",
               "materials": {
-                "value": "A pinch of dust and a few drops of water"
+                "value": "一撮尘土和几滴水"
               }
             },
             "Cone of Cold": {
-              "name": "Cone of Cold",
+              "name": "寒冰锥 Cone of Cold",
               "description": "<p>一片冷空气从你手上迸发而出。在 60 尺锥状区域内的每个生物必须进行一次体质豁免。豁免失败者将受到 8d8 点寒冷伤害，豁免成功则伤害减半。</p><p>被该法术杀死的生物将成为一尊冰冻塑像并持续至被解冻。</p><p><strong>升环施法：</strong>使用六环或更高法术位施展该法术时，你使用的法术位每比五环高一环，法术伤害就增加 1d8。</p>",
               "materials": {
                 "value": "一个小水晶或玻璃锥"
@@ -10084,7 +10084,7 @@
             },
             "Maul (Humanoid or Hybrid Form Only)": {
               "name": "巨锤（仅类人或半人形态） Maul (Humanoid or Hybrid Form Only)",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>",
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>",
               "activities": {
                 "attack": {
                   "condition": "Humanoid or Hybrid Form Only"
@@ -10108,12 +10108,12 @@
           "description": "<p>Eshek (NG male Chultan human <strong>acolyte</strong> of Savras) stumbles up to the characters in the street and whispers, “Speak to the wise guardian of Orolunga, east of Mbala. She can direct you to that which you seek.” Then he collapses, unconscious. When he awakens moments later, Eshek has no memory of the last 12 hours aside from a driving need to find people matching the characters’ descriptions. He’s as puzzled by what just happened as the characters probably are, but he’ll help them however he can. At the very least, he knows where Mbala is from speaking to porters who’ve been to Camp Vengeance.</p>",
           "items": {
             "Spellcasting": {
-              "name": "Spellcasting",
+              "name": "施法 Spellcasting",
               "description": "<p>[[lookup @name]] is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). [[lookup @name]] has following cleric spells prepared:</p><p>Cantrip (at will): <em>[[/item .Bnn9Nzajixvow9xi]]{light}, [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy}</em></p><p>1st level (3 slots): <em>[[/item .8dzaICjGy6mTUaUr]]{bless}, [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .gvdA9nPuWLck4tBl]]{sanctuary}</em></p>"
             },
             "Club": {
               "name": "Club",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Light": {
               "name": "Light",
@@ -10161,7 +10161,7 @@
           "description": "<p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
           "items": {
             "Spellcasting": {
-              "name": "Spellcasting",
+              "name": "施法 Spellcasting",
               "description": "<p>The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks).</p><p>It has the following druid spells prepared:</p><p>Cantrips (at will): [[/item .SbSvZKkJASyk8jKo]]{druidcraft}, [[/item .eCPQuQkIabFKTl9u]]{produce flame}, [[/item .VzgFzcmocr1X1cp4]]{shillelagh}</p><p>1st level (4 slots): [[/item .gMrWeG8fMDPRFiVe]]{entangle}, [[/item .B0pnIcc52O6G8hi8]]{longstrider}, [[/item .aL1F8fvYLtNzUbKu]]{speak with animals}, [[/item .WTbOQBsarsL1LuXJ]]{thunderwave}</p><p>2nd level (3 slots): [[/item .X8w9EzYLGc4vQ1H2]]{animal messenger}, [[/item .JPwIEfgUPVebr5AH]]{barkskin}</p>"
             },
             "Quarterstaff": {
@@ -10182,12 +10182,12 @@
               }
             },
             "Druidcraft": {
-              "name": "Druidcraft",
-              "description": "<p>Whispering to the spirits of Nature, you create one of the following Effects within range:</p>\n<ul>\n<li>You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, Falling snowflakes for snow, and so on. This effect persists for 1 round.</li>\n<li>You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.</li>\n<li>You create an Instantaneous, harmless sensory effect, such as Falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.</li>\n<li>You instantly light or snuff out a Candle, a torch, or a small campfire.</li>\n</ul>"
+              "name": "德鲁伊伎俩 Druidcraft",
+              "description": "<p>你向自然之魂低语，并创造以下效应之一：</p>\n<ul>\n<li>你创造一个微小而无害的感官效应，并以之预报你所在地接下来 24 小时的天气状况。该效应可表现为一个代表晴空的金球，一朵代表雨天的云彩，代表雪日而飘飞的雪花等等。该效应将持续 1 轮。</li>\n<li>你可以立即让一朵鲜花绽放，一颗种子破壳，一片叶蕾发芽。</li>\n<li>你创造一个微小而无害的即时感官效应，如落叶，微风，小动物的动静或者臭鼬的微弱气味。该效应只能在 5 尺的立方空间内起效。</li>\n<li>你可以立即点亮或熄灭一根蜡烛、一把火把或一处小篝火。</li>\n</ul>"
             },
             "Produce Flame": {
-              "name": "Produce Flame",
-              "description": "<p>A flickering flame appears in your hand. The flame remains there for the Duration and harms neither you nor your Equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.</p><p>You can also Attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell Attack. On a hit, the target takes 1d8 fire damage.</p><p>This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>"
+              "name": "燃火术 Produce Flame",
+              "description": "<p>一朵摇曳的火焰出现在你手中。火焰在法术持续时间存在，并且不会伤害你和你的装备。火焰为其周边半径 10 尺范围内提供明亮光照，以及该范围外 10 尺的微光光照。法术将在再次施展该法术，或者以一个动作解除法术时终止。</p><p>此外，你还可以使用火焰发动攻击，并以此终止该法术。施展该法术时，你可以将火焰投向距你 30 尺内的一个生物，并对其发动一次远程法术攻击，命中时目标将受到 1d8 点火焰伤害。你也可以在施展法术后的随后回合里以一个动作实现该行为。</p><p>你到达 5 级时，该法术的伤害增加 1d8（变为 2d8）。11 级时再加 1d8（变为 3d8），17 级时再加 1d8（变为 4d8）。</p>"
             },
             "Entangle": {
               "name": "Entangle",
@@ -10205,8 +10205,8 @@
               "description": "<p>你在法术持续时间内获得理解野兽并与其沟通的能力。许多野兽智力不高，因此它们的认知水平相当有限，但它们至少能向你提供关于周围地域和怪物的情报，包括任何它们现在以及在前一日内察觉到的东西。你也许可以说服野兽帮你一些小忙，是否成功则由 DM 来判断。</p>"
             },
             "Thunderwave": {
-              "name": "Thunderwave",
-              "description": "<p>A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.</p><p>In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</p>"
+              "name": "雷鸣波 Thunderwave",
+              "description": "<p>一道雷鸣波从你的身体向外扫去。在以你为源点 15 尺立方区域内的每个生物必须进行一次体质豁免。豁免失败者将受到 2d8 点雷鸣伤害，并被推离 10 尺。豁免成功则伤害减半，且不会被推离。</p><p>此外，所有完全位于该区域内且没被固定住的物件都将被自动推离 10 尺。而该法术还会发出方圆 300 尺内都能听见的雷霆巨响。</p><p><strong>升环施法：</strong>使用二环或更高法术位施展该法术时，你使用的法术位每比一环高一环，法术的伤害就增加 1d8。</p>"
             },
             "Animal Messenger": {
               "name": "Animal Messenger",
@@ -10271,11 +10271,11 @@
             },
             "Shortsword": {
               "name": "Shortsword",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Heavy Crossbow": {
               "name": "Heavy Crossbow",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             }
           }
         },
@@ -10304,7 +10304,7 @@
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -10337,7 +10337,7 @@
             },
             "Scimitar": {
               "name": "Scimitar",
-              "description": "<p>[[/attack extended]]. [[/damage extended average]].</p>"
+              "description": "<p>[[/attack extended]]。[[/damage extended average]]。</p>"
             },
             "Invoke Nightmare": {
               "name": "Invoke Nightmare",
@@ -10362,7 +10362,7 @@
               },
               "effects": {
                 "Spell Changes": {
-                  "name": "Spell Changes"
+                  "name": "法术改动"
                 }
               }
             },
@@ -14901,7 +14901,7 @@
               "effects": {
                 "Hold Monster": {
                   "name": "Hold Monster",
-                  "description": "<p>The target is Paralyzed for the Duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.</p>"
+                  "description": "<p>你陷入麻痹期间。你在你的每一回合结束时可以再进行一次感知豁免，豁免成功则终止其自身上该法术的效应。</p>"
                 }
               }
             },
