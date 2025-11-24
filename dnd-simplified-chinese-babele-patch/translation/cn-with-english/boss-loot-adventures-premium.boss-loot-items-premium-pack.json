@@ -1,6 +1,7 @@
 {
   "label": "Boss Loot 魔法物品，高级包",
   "folders": {
+    "Armor": "Armor",
     "Rod": "权杖",
     "Misc": "混杂",
     "Ring": "戒指",
@@ -259,6 +260,28 @@
         }
       }
     },
+    "Blood Shroud Breastplate (Very Rare) v1": {
+      "name": "Blood Shroud Breastplate (Very Rare) v1",
+      "description": "<p><em>Armor (medium armor), very rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"We are all born of blood. It is the principal element of life, yet within it, we find the essence of death.\"</em></p></div><hr /><p>This magical armor appears to be finely crafted from dark, blood-red metal.</p><p>You have a +2 bonus to AC while wearing this armor.</p><hr /><p><strong>Blood Transmutation.</strong> As an action, you morph the armor into a mist of flowing blood. Each creature within a 5ft. radius of you must make a DC 15 Constitution saving throw. On a failed save, a creature takes 4d6 necrotic damage, or half as much damage on a successful one. Until the end of your next turn, your speed is halved and you have immunity to bludgeoning, piercing, and slashing damage.</p><p>You can use this ability twice per long rest.</p><section class=\"secret\" id=\"secret-c6jYSAFihMKzILMV\"><p><strong>Curse</strong>. Attuning to this armor curses you until you are targeted by a <strong>Greater Restoration</strong> spell or similar magic, removing the armor fails to end the curse. While cursed, you are vulnerable to radiant damage and you must roleplay the character as constantly annoyed and uncomfortable in natural light. Your behavior should reflect irritation, making interactions in brightly lit areas more challenging and influencing your decision making process during gameplay.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/072-adv-assets-blood-shroud/art-transparent-background-blood-shroud-600x600.webp\" alt=\"Blood Shroud\" />",
+      "activities": {
+        "Blood Burst": {
+          "name": "Blood Burst",
+          "affects": {
+            "special": "self"
+          }
+        }
+      },
+      "effects": {
+        "Curse of the Blood Shroud": {
+          "name": "Curse of the Blood Shroud",
+          "description": "<p>Attuning to the armor curses you until you are targeted by a <strong>Greater Restoration</strong> spell or similar magic, removing the armor fails to end the curse. While cursed, you are vulnerable to radiant damage and you must roleplay the character as constantly annoyed and uncomfortable in natural light. Your behavior should reflect irritation, making interactions in brightly lit areas more challenging and influencing your decision making process during gameplay.</p>"
+        },
+        "Blood Transmutation": {
+          "name": "Blood Transmutation",
+          "description": "<p>You gain immunity to piercing, slashing, and bludgeoning damage until the end of your next turn.</p><p>Movement speed is halved.</p>"
+        }
+      }
+    },
     "Arcane Shot": {
       "name": "Arcane Shot",
       "description": "<p>以一个动作，你召唤出一把以太奥术弓。对范围内的一名生物发动一次远程法术攻击。若命中，目标受到 1d8 力场伤害。如果目标体型不超过中型，则其被箭矢的力量推离 10 尺。射出后弓箭随即消散。</p><p><strong>升环施法：</strong>使用一环或更高法术位施展该法术时，你使用的法术位每比一环高一环，法术的伤害就增加 1d8。</p>"
@@ -270,6 +293,24 @@
         "Silent Weaver": {
           "name": "寂静织者",
           "description": "<p>你的AC获得 +2 加值。</p><p>你的隐匿检定获得 +6 加值。</p>"
+        }
+      }
+    },
+    "Bleedstone Fangs Talisman (Uncommon) v1": {
+      "name": "Bleedstone Fangs Talisman (Uncommon) v1",
+      "description": "<p><em>Wondrous item, uncommon (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"Some people are just born with tragedy in their blood.\"</em></p></div><hr /><p>These fangs, as dark as the midnight sky, are said to be made from the teeth of an ancient vampire lord.</p><hr /><p><strong>Blood Sacrifice</strong>. While attuned to and wearing the Bleedstone Fangs, you can use a bonus action once per long rest to sacrifice hit points equal to 1 + half your character level (rounded down) to empower your strike. For the next minute, the next melee attack you make automatically hits and is treated as a critical hit.</p><section class=\"secret\" id=\"secret-Q9gu0IrOptrpwyKm\"><p><strong>Curse of Sanguine Manifestation. </strong>When you are injured, the fangs begin to bleed.</p><p><strong>Cursed Reflection.</strong> Your reflection is permanently distorted, showing you as a pale, vampiric visage in mirrors and other reflective surfaces.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/072-adv-assets-blood-shroud/art-transparent-background-bleedstone-fang-talisman-600x600.webp\" alt=\"Bleedstone Fangs\" />",
+      "activities": {
+        "Blood Sacrifice": {
+          "name": "Blood Sacrifice"
+        }
+      },
+      "effects": {
+        "Blood Sacrifice": {
+          "name": "Blood Sacrifice",
+          "description": "<p>For the next minute, the next melee attack you make automatically hits and is treated as a critical hit.</p>",
+          "changes": {
+            "name": "{} (Critical Hit)"
+          }
         }
       }
     },
@@ -347,12 +388,56 @@
         }
       }
     },
+    "Bleedstone Fangs Talisman (Very Rare) v1": {
+      "name": "Bleedstone Fangs Talisman (Very Rare) v1",
+      "description": "<p><em>Wondrous item, very rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"Some people are just born with tragedy in their blood.\"</em></p></div><hr /><p>These fangs, as dark as the midnight sky, are said to be made from the teeth of an ancient vampire lord.</p><p>You gain +2 to Constitution while wearing this item.</p><hr /><p><strong>Blood Sacrifice</strong>. While attuned to and wearing the Bleedstone Fangs, you can use a bonus action once per long rest to sacrifice hit points equal to 1 + half your character level (rounded down) to empower your strike. For the next minute, the next melee attack you make automatically hits and is treated as a critical hit.</p><p><strong>Mortality's Edge</strong>. When you make a death saving throw, you do so with advantage.</p><p><strong>Bloodbound Resistance.</strong> You have resistance to necrotic damage.</p><section class=\"secret\" id=\"secret-Q9gu0IrOptrpwyKm\"><p><strong>Curse of Sanguine Manifestation. </strong>When you are injured, the fangs begin to bleed.</p><p><strong>Cursed Reflection.</strong> Your reflection is permanently distorted, showing you as a pale, vampiric visage in mirrors and other reflective surfaces.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/072-adv-assets-blood-shroud/art-transparent-background-bleedstone-fang-talisman-600x600.webp\" alt=\"Bleedstone Fangs\" />",
+      "activities": {
+        "Blood Sacrifice": {
+          "name": "Blood Sacrifice"
+        }
+      },
+      "effects": {
+        "Vampiric Fortitude": {
+          "name": "Vampiric Fortitude",
+          "description": "<ul><li><p>+2 CON</p></li><li><p>Advantage on Death Save</p></li><li><p>Damage Resistance to Necrotic</p></li></ul>"
+        },
+        "Blood Sacrifice": {
+          "name": "Blood Sacrifice",
+          "description": "<p>For the next minute, the next melee attack you make automatically hits and is treated as a critical hit.</p>",
+          "changes": {
+            "name": "{} (Critical Hit)"
+          }
+        }
+      }
+    },
     "Void Vortex (Rare) v1": {
       "name": "虚空漩涡（珍稀）v1 Void Vortex (Rare) v1",
       "description": "<div id=\"blfx-embedded-hide-description\"><p><em>武器（长弓），珍稀（需同调）</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"你或隐匿于内，或藏身其后，或置身其外，或高居其上，隐形无踪，超然物外，冷漠无情，然而万物皆由虚无而生。\"</em></p></div><hr /></div><p>你使用此魔法武器进行攻击检定和伤害掷骰时具有 +1 加值。</p><hr /><p><strong>无限箭矢</strong>。使用这张弓无需弹药。箭矢具有魔法，可造成力场伤害。</p><p><strong>漩涡箭（主动能力）</strong>。作为一个动作，你必须说出激活语“<strong>宇宙的虚空将吞噬你！</strong>”来召唤出一支漩涡箭。选择武器正常射程内的一个点作为箭矢的落点。箭矢会使重力崩溃，形成一个漩涡，漩涡在形成后不久就会爆炸，在 20 尺半径内造成[[/r 4d8]]力场伤害。区域内的每名生物都必须进行一次敏捷豁免检定，DC等于你的施法属性。若失败，全伤；若成功，仅半伤。</p><p>一旦使用，长弓将进入混沌振动状态，在新的一天前将无法再次使用。</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/064-trail-of-webs/art-transparent-background-void-vortex-600x600.webp\" />",
       "activities": {
         "Vortex Arrow": {
           "name": "旋涡箭"
+        }
+      }
+    },
+    "Blood Shroud Breastplate (Rare) v1": {
+      "name": "Blood Shroud Breastplate (Rare) v1",
+      "description": "<p><em>Armor (medium armor), rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"We are all born of blood. It is the principal element of life, yet within it, we find the essence of death.\"</em></p></div><hr /><p>This magical armor appears to be finely crafted from dark, blood-red metal.</p><p>You have a +1 bonus to AC while wearing this armor.</p><hr /><p><strong>Blood Transmutation.</strong> As an action, you morph the armor into a mist of flowing blood. Each creature within a 5ft. radius of you must make a DC 13 Constitution saving throw. On a failed save, a creature takes 2d6 necrotic damage, or half as much damage on a successful one. Until the end of your next turn, your speed is halved and you have immunity to bludgeoning, piercing, and slashing damage.</p><p>You can use this ability twice per long rest.</p><section class=\"secret\" id=\"secret-c6jYSAFihMKzILMV\"><p><strong>Curse</strong>. Attuning to this armor curses you until you are targeted by a <strong>Greater Restoration</strong> spell or similar magic, removing the armor fails to end the curse. While cursed, you are vulnerable to radiant damage and you must roleplay the character as constantly annoyed and uncomfortable in natural light. Your behavior should reflect irritation, making interactions in brightly lit areas more challenging and influencing your decision making process during gameplay.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/072-adv-assets-blood-shroud/art-transparent-background-blood-shroud-600x600.webp\" alt=\"Blood Shroud\" />",
+      "activities": {
+        "Blood Burst": {
+          "name": "Blood Burst",
+          "affects": {
+            "special": "self"
+          }
+        }
+      },
+      "effects": {
+        "Curse of the Blood Shroud": {
+          "name": "Curse of the Blood Shroud",
+          "description": "<p>Attuning to the armor curses you until you are targeted by a <strong>Greater Restoration</strong> spell or similar magic, removing the armor fails to end the curse. While cursed, you are vulnerable to radiant damage and you must roleplay the character as constantly annoyed and uncomfortable in natural light. Your behavior should reflect irritation, making interactions in brightly lit areas more challenging and influencing your decision making process during gameplay.</p>"
+        },
+        "Blood Transmutation": {
+          "name": "Blood Transmutation",
+          "description": "<p>You gain immunity to piercing, slashing, and bludgeoning damage until the end of your next turn.</p><p>Movement speed is halved.</p>"
         }
       }
     },
@@ -576,6 +661,28 @@
         "Prone": {
           "name": "倒地",
           "description": "<p>倒地状态来自长鞭绊摔。</p>"
+        }
+      }
+    },
+    "Bleedstone Fangs Talisman (Rare) v1": {
+      "name": "Bleedstone Fangs Talisman (Rare) v1",
+      "description": "<p><em>Wondrous item, rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"Some people are just born with tragedy in their blood.\"</em></p></div><hr /><p>These fangs, as dark as the midnight sky, are said to be made from the teeth of an ancient vampire lord.</p><p>You gain +1 to Constitution while wearing this item.</p><hr /><p><strong>Blood Sacrifice</strong>. While attuned to and wearing the Bleedstone Fangs, you can use a bonus action once per long rest to sacrifice hit points equal to 1 + half your character level (rounded down) to empower your strike. For the next minute, the next melee attack you make automatically hits and is treated as a critical hit.</p><p><strong>Mortality's Edge</strong>. When you make a death saving throw, you do so with advantage.</p><section class=\"secret\" id=\"secret-Q9gu0IrOptrpwyKm\"><p><strong>Curse of Sanguine Manifestation. </strong>When you are injured, the fangs begin to bleed.</p><p><strong>Cursed Reflection.</strong> Your reflection is permanently distorted, showing you as a pale, vampiric visage in mirrors and other reflective surfaces.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/072-adv-assets-blood-shroud/art-transparent-background-bleedstone-fang-talisman-600x600.webp\" alt=\"Bleedstone Fangs\" />",
+      "activities": {
+        "Blood Sacrifice": {
+          "name": "Blood Sacrifice"
+        }
+      },
+      "effects": {
+        "Blood Sacrifice": {
+          "name": "Blood Sacrifice",
+          "description": "<p>For the next minute, the next melee attack you make automatically hits and is treated as a critical hit.</p>",
+          "changes": {
+            "name": "{} (Critical Hit)"
+          }
+        },
+        "Vampiric Fortitude": {
+          "name": "Vampiric Fortitude",
+          "description": "<ul><li><p>+1 CON</p></li><li><p>Advantage on Death Save</p></li></ul>"
         }
       }
     },
