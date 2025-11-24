@@ -12933,7 +12933,7 @@
           "effects": {
             "Poisoned": {
               "name": "中毒",
-              "description": "<p>你陷 入&amp;Reference[Poisoned apply=false] 状态。 每当你完成长休时，若体质豁免失败，你的的生命值上限减少 [[/damage 1d10 average]] 并且其生命值上限无法恢复直至中毒状态结束。</p>"
+              "description": "<p>你陷入&amp;Reference[Poisoned apply=false] 状态。 每当你完成长休时，若体质豁免失败，你的的生命值上限减少 [[/damage 1d10 average]] 并且其生命值上限无法恢复直至中毒状态结束。</p>"
             }
           }
         },
@@ -12954,7 +12954,7 @@
         },
         "Tentacle Slam": {
           "name": "触须猛击",
-          "description": "<p><em>体质豁免检定： </em>DC [[lookup @save.dc.value activity=VC2iSwNPNaZ7M2bT]]，受擒于[[lookup @name lowercase]] 的所有生物。</p><p><em>失败：</em>[[/damage average]]伤害，且目标陷入 &Reference[Stunned apply=false] 状态直至[[lookup @name lowercase]]的下一回合开始。</p><p><em>成功：</em> 仅半伤。</p>",
+          "description": "<p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=VC2iSwNPNaZ7M2bT]]，受擒于[[lookup @name lowercase]]的所有生物。</p><p><em>失败：</em>[[/damage average]]伤害，且目标陷入 &Reference[Stunned apply=false] 状态直至[[lookup @name lowercase]]的下一回合开始。</p><p><em>成功：</em>仅半伤。</p>",
           "activities": {
             "Save": {
               "name": "豁免",
@@ -17722,7 +17722,7 @@
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>",
           "activities": {
             "attack": {
-              "condition": "仅人类与半人形态"
+              "condition": "仅类人与混合形态"
             }
           }
         },
@@ -17736,11 +17736,11 @@
           }
         },
         "Bite (Bear or Hybrid Form Only)": {
-          "name": "啃咬（仅熊或半人形态）",
+          "name": "啃咬（仅熊或混合形态）",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标是类人生物，则其承受以下效应。</p><p><em>体质豁免检定：</em>DC [[lookup @save.dc.value activity=q7leyHRdAkccDyqG]]。</p><p><em>失败：</em>目标被诅咒。若被诅咒目标的生命值降至 0，作为代替，该生物具有 10 生命值，且变成受DM控制的一只 <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmWerebear000000]</strong>。</p><p><em>成功：</em>目标在 24 小时内免疫此[[lookup @name lowcase]] 的诅咒。</p>",
           "activities": {
             "attack": {
-              "condition": "仅熊与半人形态"
+              "condition": "仅熊与混合形态"
             },
             "Become Werebear": {
               "name": "变为熊人"
@@ -17754,11 +17754,11 @@
           }
         },
         "Rend (Bear or Hybrid Form Only)": {
-          "name": "撕裂（仅熊与半人形态）",
+          "name": "撕裂（仅熊与混合形态）",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>",
           "activities": {
             "attack": {
-              "condition": "仅熊与半人形态"
+              "condition": "仅熊与混合形态"
             }
           }
         },
@@ -17784,7 +17784,7 @@
       "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbwepJavelin000]{标枪（6）}</p></div><p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Javelin (Humanoid or Hybrid Form Only)": {
-          "name": "标枪（仅人类与半人形态）",
+          "name": "标枪（仅类人与混合形态）",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
@@ -17797,7 +17797,7 @@
           }
         },
         "Gore  (Boar or Hybrid Form Only)": {
-          "name": "顶撞（仅野猪与半人形态）",
+          "name": "顶撞（仅野猪与混合形态）",
           "description": "<p>[[/attack extended]]。 [[/damage extended average]]。若目标是类人生物，则其承受以下效应。</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=lS5miercc4WPdVfN]]。</p><p><em>失败：</em> 目标被诅咒。若被诅咒目标的生命值降至 0，作为代替，该生物具有 10 生命值，且变成受DM控制的一只 <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmWereboar000000]</strong> 。</p><p><em>成功：</em> 目标在 24 小时内免疫此 [[lookup @name lowercase]] 的诅咒。</p>",
           "activities": {
             "Attack": {
@@ -17815,16 +17815,16 @@
           }
         },
         "Tusk (Boar or Hybrid Form Only)": {
-          "name": "獠牙（仅野猪与半人形态）",
+          "name": "獠牙（仅野猪与混合形态）",
           "description": "<p class=\"feature\">[[/attack extended]]。 [[/damage average extended]]。 若 [[lookup @name lowercase]] 在此次攻击前立即向着目标直线移动了 20+ 尺且目标生物体型不超过中型，则目标额外受到 7 (2d6)穿刺伤害并陷入 &amp;Reference[Prone apply=false] 状态。</p>",
           "activities": {
             "Attack": {
               "name": "攻击",
-              "chatFlavor": "仅野猪与半人形态"
+              "chatFlavor": "仅野猪与混合形态"
             },
             "Moving Attack": {
               "name": "移动攻击",
-              "condition": "仅野猪与半人形态"
+              "condition": "仅野猪与混合形态"
             }
           },
           "effects": {
@@ -17856,7 +17856,7 @@
       "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbwepHandCrossb]{手弩}</p></div><p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Hand Crossbow (Humanoid or Hybrid Form Only)": {
-          "name": "手弩（仅类人或半人形态）",
+          "name": "手弩（仅类人或混合形态）",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
@@ -17869,7 +17869,7 @@
           }
         },
         "Bite (Rat or Hybrid Form Only)": {
-          "name": "啃咬（仅鼠或半人形态）",
+          "name": "啃咬（仅鼠或混合形态）",
           "description": "<p>[[/attack extended]]。 [[/damage average extended]]。 若目标是类人生物，则其承受以下效应。</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=HAz6jK7w7zFU77Wk]]。</p><p><em>失败：</em> 目标被诅咒。若被诅咒目标的生命值降至 0，作为代替，该生物具有 10 生命值，且变成受DM控制的一只 <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmWererat0000000]</strong> 。</p><p><em>成功：</em> 目标在 24 小时内免疫此 [[lookup @name lowercase]] 的诅咒。</p>",
           "activities": {
             "Become Wererat": {
@@ -17904,7 +17904,7 @@
       "description": "<div class=\"gear\"><p><strong>装备：</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbwepLongbow000]{长弓}</p></div><p><em>指示物插图由<a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>提供。</em></p>",
       "items": {
         "Longbow (Humanoid or Hybrid Form Only)": {
-          "name": "长弓 (仅类人或半人形态)",
+          "name": "长弓 (仅类人或混合形态)",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
         },
         "Multiattack": {
@@ -17917,7 +17917,7 @@
           }
         },
         "Bite (Tiger or Hybrid Form Only)": {
-          "name": "啃咬（仅老虎或半人形态）",
+          "name": "啃咬（仅老虎或混合形态）",
           "description": "<p>[[/attack extended]]。[[/damage average extended]]。若目标是类人生物，则其受到下述效应。</p><p><em>体质豁免检定：</em> DC [[lookup @save.dc.value activity=jgkWL5fxyqrDPr4D]]。</p><p><em>失败：</em>目标被诅咒。若被诅咒目标的生命值降至 0，作为代替，该生物具有 10 生命值，且变成受DM控制的一只 <strong>@UUID[Compendium.dnd5e.Actor24.mmWeretiger00000]</strong>。</p><p><em>成功：</em> 目标在 24 小时内免疫此 [[lookup @name lowercase]] 的诅咒。</p>",
           "activities": {
             "Become Weretiger": {
@@ -17945,7 +17945,7 @@
           }
         },
         "Prowl (Tiger or Hybrid Form Only)": {
-          "name": "潜步（仅虎或半人形态）",
+          "name": "潜步（仅虎或混合形态）",
           "description": "<p class=\"feature\">[[lookup @name lowercase]] 移动至多等于其速度一半的距离且不会引发&Reference[OpportunityAttacks]。[[lookup @name lowcase]] 可以在此次移动结束时执行 &Reference[Hide apply=false] 动作。</p>",
           "activities": {
             "Expend Use": {
