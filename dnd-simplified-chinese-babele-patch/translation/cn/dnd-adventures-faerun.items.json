@@ -40,12 +40,12 @@
       }
     },
     "Brazier of Commanding Fire Elementals": {
-      "name": "Brazier of Commanding Fire Elementals",
+      "name": "命令火元素火盆",
       "description": "<div><p><em>Wondrous Item, Rare</em></p></div><p>While you are within 5 feet of this brazier, you can take a Magic action to summon a <strong>@UUID[Compendium.dnd-adventures-faerun.actors.Actor.aifFireElemental]{Fire Elemental}</strong>. The elemental appears in an unoccupied space as close to the brazier as possible, understands your languages, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action. The brazier can’t be used this way again until the next dawn.</p>",
       "activities": {
         "summon": {
           "affects": {
-            "special": "unoccupied space as close to the brazier as possible"
+            "special": "尽可能靠近破损火盆的未占据空间"
           }
         }
       }
@@ -75,13 +75,13 @@
       }
     },
     "Clockwork Amulet": {
-      "name": "Clockwork Amulet",
-      "description": "<div><p><em>Wondrous Item, Common</em></p></div><blockquote><p>This copper amulet contains tiny interlocking gears and is powered by magic from Mechanus, a plane of clockwork predictability. Faint ticking and whirring noises emanate from within.</p></blockquote><p>When you make an attack roll while wearing the amulet, you can forgo rolling the d20 to get a 10 on the die. Once used, this property can’t be used again until the next dawn.</p>",
+      "name": "发条护符",
+      "description": "<div>    <p><em>奇物，普通</em></p></div><blockquote>    <p>这枚铜制的护符内有数个互相咬合的微小齿轮，其以机械境——一个秩序至极，万物皆可被机械预测的位面——的魔法所驱动。模糊的滴答声与呼呼的噪音从中传出。</p></blockquote><p>佩戴该护符期间，当你进行一次攻击检定时，你可以放弃掷骰并在 d20 的骰值上取 10。该词条一经使用，直至次日黎明前都无法再次使用。</p>",
       "activities": {
         "Forgo Roll": {
-          "name": "Forgo Roll",
-          "roll": "d20 Result",
-          "condition": "you make an attack roll while wearing the amulet"
+          "name": "放弃掷骰",
+          "roll": "d20 结果",
+          "condition": "当你进行一次攻击检定时"
         }
       }
     },
@@ -90,31 +90,31 @@
       "description": "<p>Several rune stones marked with letters in the Orc language.</p>"
     },
     "Crown of Horns": {
-      "name": "Crown of Horns",
+      "name": "角之王冠",
       "description": "<p>The <em>Crown of Horns</em> contains the essence and intelligence of Myrkul, one of the Dead Three. This ghastly crown is a pale silver circlet with four curved bones set around its rim. On the crown's brow is set a black diamond whose depths swirl with weird, malignant energy.</p><p>Myrkul created the <em>Crown of Horns</em> at the height of his power. When Myrkul was slain by Mystra, he imbued the crown with his dying essence. Myrkul has since returned to become one of the Dead Three, and the <em>Crown of Horns</em> continues to further his gruesome will by seeking out mortal agents and gradually transforming them into powerful Undead scions. Should a wearer prove unworthy of this honor, the crown teleports away to find a new mortal to corrupt for its master.</p><p><em><strong>Cursed.</strong></em> The crown is cursed. Attuning to the crown extends the curse to you. Only a <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{Wish}</em> spell or the will of Myrkul can remove this curse. As long as you remain cursed, the following properties apply to you:</p><p><strong>Bound. </strong>You are unwilling to part with the crown, wearing it at all times, and you can’t voluntarily end your Attunement to the crown.</p><p><strong>Cruel. </strong>Your alignment becomes Neutral Evil.</p><p><strong>Doomed. </strong>You slowly transform into a monstrous servant of Myrkul over the course of 365 days. During that time, the transformation is purely cosmetic; these cosmetic changes slowly fade if you end Attunement to the crown before completing the transformation. When the transformation is complete, you become a <strong>@UUID[Compendium.dnd-adventures-faerun.actors.Actor.aifLich000000000]{Lich} </strong>under the DM’s control. Each time you use this Artifact’s Cone of Undeath or Myrkul’s Hand benefit, there is a [[/r 1d10]] percent cumulative chance that you instantly complete this transformation.</p><p><em><strong>Cone of Undeath.</strong></em> You can take a Magic action to unleash a wave of unholy light in a 60-foot Cone. Each creature in the Cone makes a [[/save 18 constitution]], taking 4d8 Necrotic damage on a failed save or half as much damage on a successful one. A Humanoid killed by Cone of Undeath rises at the start of your next turn as a <strong>@UUID[Compendium.dnd-adventures-faerun.actors.Actor.aifSpecter000000]</strong> that follows your verbal orders.</p><p><em><strong>Damage Immunity.</strong></em> You have Immunity to Necrotic damage.</p><p><em><strong>Fear Aura. </strong></em>While wearing the crown, you emit an aura of terrifying energy in a 60-foot Emanation. A creature that enters this area for the first time on a turn or starts its turn there must succeed on a [[/save 16 wisdom]] or have the &amp;Reference[Frightened apply=false] condition. A Frightened target must use its movement on its turns to get as far away as possible from you, moving by the safest route.</p><p>If you damage a Frightened target or if a Frightened target ends its turn more than 120 feet away from you, the target can repeat the Wisdom save, ending the condition on itself on a success. A creature that succeeds on the save against this effect is immune to it for 1 minute, after which it can be affected again.</p><p>The aura is inactive while you have the &amp;Reference[Incapacitated apply=false] condition. You can activate or deactivate the aura as a Bonus Action.</p><p><em><strong>Myrkul’s Hand.</strong></em> While wearing the crown, you can cast the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordK]{Power Word Kill}</em> spell (save DC 18) from it. A Humanoid killed by this spell rises at the start of your next turn as a <strong>@UUID[Compendium.dnd-adventures-faerun.actors.Actor.aifWraith0000000]{Wraith} </strong>that follows your verbal orders. Once you use the crown to cast this spell, you can’t cast it again from the crown until the next dawn.</p><p><em><strong>Teleportation.</strong></em> While wearing the crown, you can cast the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTeleport00]{Teleport}</em> spell. The crown can also cast this spell of its own free will. Once the spell has been cast using the crown, it can’t be cast again until 7 days have passed.</p><p><em><strong>Random Properties.</strong></em> The Artifact has the following random properties (see @UUID[Compendium.dnd-dungeon-masters-guide.content.JournalEntry.dmgMagicItems000.JournalEntryPage.iA3mHmvlXvWKlyBo]{chapter 7} of the <em>Dungeon Master’s Guide</em>):</p><ul><li>1 minor beneficial property</li><li>1 minor detrimental property</li><li>1 major detrimental property</li></ul><p><em><strong>Sentience.</strong></em> The <em>Crown of Horns</em> is a sentient Neutral Evil Artifact with an Intelligence of 10, a Wisdom of 16, and a Charisma of 19. It has hearing and Darkvision out to 120 feet.</p><p>The crown communicates telepathically with its wearer and knows Common.</p><p><em><strong>Personality.</strong></em> The crown contains the essence of Myrkul and exists to spread that god’s will, which is to slay the living, raise the dead, and sow fear across the Material Plane. The crown urges its wearer to spread dread and destruction wherever possible.</p><p><em><strong>Destroying the Crown.</strong></em> The crown is destroyed if it is worn by Myrkul’s successor, Kelemvor, while he sits on the throne of Myrkul’s former realm, the Bone Castle.</p><section class=\"secret\" id=\"secret-ubvbpLzqTlwk6ipL\"><p><strong>Foundry Note</strong></p><p>The <strong>Specter</strong> and <strong>Wraith</strong> activities can be used to place a creature where the Humanoid died.</p><p>The <strong>Teleport</strong> activity has a limited number of uses but does not automatically recover them after 7 days.</p></section>",
       "activities": {
         "Cone of Undeath": {
           "name": "Cone of Undeath"
         },
         "Specter": {
-          "name": "Specter",
+          "name": "恶灵",
           "condition": "When a Humanoid is killed by the Cone of Undeath"
         },
         "Fear Aura": {
-          "name": "Fear Aura"
+          "name": "恐惧灵光"
         },
         "Wraith": {
-          "name": "Wraith",
+          "name": "邪灵",
           "condition": "When a Humanoid is killed by your Power Word Kill"
         }
       },
       "effects": {
         "Crown of Horns": {
-          "name": "Crown of Horns",
+          "name": "角之王冠",
           "description": "<p><em><strong>Cursed.</strong></em> The crown is cursed. Attuning to the crown extends the curse to you. Only a <em>Wish</em> spell or the will of Myrkul can remove this curse. As long as you remain cursed, the following properties apply to you:</p><p><strong>Bound. </strong>You are unwilling to part with the crown, wearing it at all times, and you can’t voluntarily end your Attunement to the crown.</p><p><strong>Cruel. </strong>Your alignment becomes Neutral Evil.</p><p><em><strong>Damage Immunity.</strong></em> You have Immunity to Necrotic damage.</p>"
         },
         "Frightened": {
-          "name": "Frightened"
+          "name": "恐慌"
         }
       }
     },
@@ -127,13 +127,13 @@
       "description": "<p>A creature subjected to Deathdance must succeed on a [[/save 13 constitution]] saving throw or have the &amp;Reference[Poisoned apply=false] condition for 1 minute. Humanoids automatically succeed on this save. The creature also has the &amp;Reference[Incapacitated apply=false] condition while Poisoned in this way, as it thrashes uncontrollably.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>A creature who has failed their save is &amp;Reference[Poisoned apply=false]for 1 minute. The creature also has the &amp;Reference[Incapacitated apply=false] condition while Poisoned in this way, as it thrashes uncontrollably.</p>"
         }
       }
     },
     "Diamond": {
-      "name": "Diamond"
+      "name": "钻石"
     },
     "Domestic Wonder": {
       "name": "Domestic Wonder",
@@ -154,8 +154,8 @@
       }
     },
     "Enduring Spellbook": {
-      "name": "Enduring Spellbook",
-      "description": "<div><p><em>Wondrous Item, Common</em></p></div><p>This spellbook, along with anything written on its pages, can’t be damaged by fire or water. In addition, the spellbook doesn’t deteriorate with age.</p>"
+      "name": "耐久法术书",
+      "description": "<div><p><em>奇物，普通</em></p></div><p>这本法术书及其书页上所写的任何内容都不会因火烧或浸水而受损。此外，这本法术书不会随时间老化。</p>"
     },
     "Flying Wonder": {
       "name": "Flying Wonder",
@@ -200,16 +200,16 @@
       "description": "<p><em>Wondrous Item, Rare (Silver or Brass), Very Rare (Bronze), or Legendary (Iron)</em></p><p>You can take a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear in unoccupied spaces within 60 feet of you. Each spirit uses the <strong>Berserker</strong> stat block and returns to Ysgard after 1 hour or when it drops to 0 Hit Points. The spirits look like living, breathing warriors, and they have Immunity to the Charmed and Frightened conditions. Once you use the horn, it can't be used again until 7 days have passed.</p><p>Four types of <em>Horn of Valhalla</em> are known to exist, each made of a different metal. The horn's type determines how many spirits it summons, as well as the requirement for its use. The GM chooses the horn's type or determines it randomly by rolling on the following table.</p><p>If you blow the horn without meeting its requirement, the summoned spirits attack you. If you meet the requirement, they are Friendly to you and your allies and follow your commands.</p><p>@Embed[Compendium.dnd5e.tables24.RollTable.dmgHornOfValhall rollable]</p>",
       "activities": {
         "Summon Warriors": {
-          "name": "Summon Warriors",
+          "name": "召唤武者",
           "affects": {
-            "special": "unoccupied space"
+            "special": "未占据空间"
           }
         }
       },
       "effects": {
         "Horn of Valhalla: Condition Immunity": {
-          "name": "Horn of Valhalla: Condition Immunity",
-          "description": "<p>The spirits look like living, breathing warriors, and they have Immunity to the &amp;Reference[Charmed apply=false] and &amp;Reference[Frightened apply=false] conditions.</p>"
+          "name": "瓦尔哈拉号角：状态免疫",
+          "description": "<p>英灵们看起来就像是活着的，能够呼吸的战士，且它们免疫 &Reference[Charmed apply=false] 和 &Reference[Frightened apply=false] 状态。</p>"
         }
       }
     },
@@ -242,18 +242,18 @@
       "name": "Longsword +1"
     },
     "Mariner's Armor": {
-      "name": "Mariner's Armor",
+      "name": "水手护甲",
       "description": "<p><em>Armor (Any Light, Medium, or Heavy), Uncommon</em></p><p>While wearing this armor, you have a Swim Speed equal to your Speed. In addition, if you start your turn underwater with 0 Hit Points, you immediately regain 1d4 Hit Points. The armor can’t heal anyone again until the next dawn.</p><p>The armor is decorated with fish and shell motifs.</p>",
       "activities": {
         "Underwater Recovery": {
-          "name": "Underwater Recovery",
-          "condition": "you start your turn underwater with 0 Hit Points"
+          "name": "水下恢复",
+          "condition": "当你在水下以 0 生命值开始你的回合时"
         }
       },
       "effects": {
         "Movement: Swim Speed": {
-          "name": "Movement: Swim Speed",
-          "description": "<p>While wearing this armor, you have a Swim Speed equal to your Speed.</p>"
+          "name": "移动：游泳速度",
+          "description": "<p>着装这套护甲期间，你获得等同于你速度的游泳速度。</p>"
         }
       }
     },
@@ -289,10 +289,10 @@
       "description": "<p>A wizard named Damara created this orb while devising a way to become a dragon. Aided by a mysterious magician (actually an aspect of Tiamat in disguise), Damara eventually created an Artifact that would enable him to achieve his dream. Yet the potential power of his creation terrified Damara so much that he dared not use the orb. Instead, the wizard entombed himself with the Artifact to seal it away.</p><p>The <em>Orb of Damara</em> is about 6 inches in diameter and is made of a glassy, iridescent material that's like obsidian but incredibly hard. If held to one’s own lips with the intention of consuming it, the orb shrinks to the size of a grape.</p><p><em><strong>Properties of the Orb. </strong></em>While attuned to the orb, you gain the following benefits:</p><p><strong>Dragon’s Breath.</strong> You can take a Magic action to exhale a 15-foot Cone. When you do, choose Acid, Cold, Fire, Lightning, or Poison. Each creature in the Cone makes a [[/save 18 dexterity]], taking 6d6 damage of the chosen type on a failed save or half as much damage on a successful one.</p><p><strong>Fear Aura.</strong> You exude a terrifying aura in a 20-foot Emanation while you don’t have the &amp;Reference[Incapacitated apply=false] condition. You can take a Magic action to disable or enable this aura. Any enemy that starts its turn in the aura must succeed on a [[/save 18 wisdom]] saving throw or have the &amp;Reference[Frightened apply=false] condition until the start of its next turn. A creature that succeeds on this save is immune to the aura’s effects for 24 hours.</p><p><strong>Flight.</strong> You have a Fly Speed of 60 feet and can hover.</p><p><em><strong>Random Properties.</strong></em> The Artifact has the following random properties (see @UUID[Compendium.dnd-dungeon-masters-guide.content.JournalEntry.dmgMagicItems000.JournalEntryPage.iA3mHmvlXvWKlyBo#artifact-properties]{chapter 7} of the <em>Dungeon Master’s Guide</em>):</p><ul><li>2 minor beneficial properties</li><li>2 minor detrimental properties</li></ul><p><em><strong>Spellcasting.</strong></em> The orb has 6 charges and regains 1d4 + 2 expended charges daily at dawn. While attuned to the orb, you can cast one of the spells on the following table from it (+10 spell attack modifier, spell save DC 18). The table indicates how many charges you must expend to cast the spell.</p><table><thead><tr><th scope=\"col\"><p>Spell</p></th><th scope=\"col\"><p>Charge Cost</p></th></tr></thead><tbody><tr><td><p><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{Disguise Self}</em></p></td><td><p>0</p></td></tr><tr><td><p><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplFireShield]{Fire Shield}</em></p></td><td><p>2</p></td></tr><tr><td><p><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplHoldPerson]{Hold Person}</em></p></td><td><p>1</p></td></tr><tr><td><p><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSeeInvisib]{See Invisibility}</em></p></td><td><p>1</p></td></tr><tr><td><p><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{Summon Dragon} </em>(level 9 version)</p></td><td><p>4</p></td></tr></tbody></table><p><em><strong>Dragon Transformation.</strong></em> If you swallow the orb, you transform into an adult chromatic dragon under the DM’s control. The type of chromatic dragon depends on your alignment and personality and is left to the DM to decide. The transformation is permanent, but if the dragon is slain, its body reverts to its original form and the orb reappears outside its body.</p><p><em><strong>Destroying the Orb.</strong></em> If an <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmAncientGoldDra]{Ancient Gold Dragon} </strong>willingly swallows the orb, the orb and the dragon are both destroyed.</p><section class=\"secret\" id=\"secret-g1Dc1IFxH1lkgqN3\"><p><strong>Foundry Note</strong></p><p>The <strong>Dragon's Breath</strong> activity allows you to choose between damage types when you roll the damage. It will remember your last choice automatically.</p></section>",
       "activities": {
         "Fear Aura": {
-          "name": "Fear Aura"
+          "name": "恐惧灵光"
         },
         "Dragon's Breath": {
-          "name": "Dragon's Breath"
+          "name": "龙息术"
         }
       },
       "effects": {
@@ -301,7 +301,7 @@
           "description": "<p><strong>Flight.</strong> You have a Fly Speed of 60 feet and can hover.</p>"
         },
         "Frightened": {
-          "name": "Frightened"
+          "name": "恐慌"
         }
       }
     },
@@ -309,17 +309,17 @@
       "name": "Pearl"
     },
     "Perfume of Bewitching": {
-      "name": "Perfume of Bewitching",
-      "description": "<p><em>Wondrous Item, Common</em></p><p>This tiny vial contains magic perfume, enough for one use. You can take a Magic action to apply the perfume to yourself, and its effect lasts 1 hour. For the duration, you have Advantage on all Charisma (Deception and Persuasion) checks made to influence a creature within 5 feet of yourself.</p><section class=\"secret\" id=\"secret-csXfXvBZjs3cCGRi\"><p><strong>Foundry Note</strong></p><p>The <strong>Bewitching Scent</strong> Active Effect provides Advantage on the listed skill checks and should be disabled if the conditions are not met.</p></section>",
+      "name": "迷醉香水",
+      "description": "<p><em>奇物，普通</em></p><p>这个小瓶内装有足够单次使用的魔法香水。你可以使用一个魔法动作将香水喷洒或涂抹在自己身上，其效应会持续 1 小时。在持续时间内，你对试图影响一个位于你周边5尺范围内的生物而进行的所有魅力（欺瞒和游说）检定都具有优势。</p><section class=\"secret\" id=\"secret-csXfXvBZjs3cCGRi\">    <p><strong>Foundry Note</strong></p>    <p>主动效应<strong>迷人香气</strong>可用于跟进，但不会自动触发效果。</p></section>",
       "activities": {
         "Apply Perfume": {
-          "name": "Apply Perfume"
+          "name": "施用香水"
         }
       },
       "effects": {
         "Bewitching Scent": {
-          "name": "Bewitching Scent",
-          "description": "<p>For the duration, you have Advantage on all Charisma (Deception and Persuasion) checks made to influence a creature within 5 feet of yourself.</p>"
+          "name": "迷醉香气",
+          "description": "<p>持续时间内，你为影响对你态度冷漠的类人生物所作的魅力（欺瞒和游说）检定都具有优势，但这个生物必须位于你的 5 尺内</p>"
         }
       }
     },
@@ -331,12 +331,12 @@
       "description": "<p><em>Potion, Uncommon</em></p><p>When you drink this potion, you have Resistance to one type of damage for 1 hour. The GM chooses the type or determines it randomly by rolling on the following table.</p><p>@Embed[Compendium.dnd5e.tables24.RollTable.dmgPotionOfResis caption=false rollable]</p><section class=\"secret\" id=\"secret-yI26znYuybVCz6iX\"><p><strong>Foundry Note</strong></p><p>This item includes Active Effects for each type of resistance. Use the AE for the type of damage chosen by your DM.</p></section>",
       "activities": {
         "Drink Potion": {
-          "name": "Drink Potion"
+          "name": "饮用药水"
         }
       },
       "effects": {
         "Fire Resistance": {
-          "name": "Fire Resistance"
+          "name": "火焰抗性"
         }
       }
     },
@@ -345,7 +345,7 @@
       "description": "<p>A creature subjected to Prespra must succeed on a [[/save 11 constitution]] saving throw or take [[/damage 1d6 average type=poison]] damage and have the &amp;Reference[Poisoned apply=false] condition. The creature also has the &amp;Reference[Blinded apply=false]] condition while Poisoned in this way. The creature repeats the save at the start of each of its turns, taking [[/damage 1d6 average type=poison]] damage on a failed save. On a successful save, the effect ends for the creature.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>A creature subjected to Prespra has the &amp;Reference[Poisoned apply=false] condition. The creature also has the &amp;Reference[Blinded apply=false]] condition while Poisoned in this way. The creature repeats the save at the start of each of its turns, taking [[/damage 1d6 average type=poison]] damage on a failed save. On a successful save, the effect ends for the creature.</p>"
         }
       }
@@ -378,7 +378,7 @@
     },
     "Shield +1": {
       "name": "Shield +1",
-      "description": "<p>You gain the Armor Class benefit of a Shield only if you have training with it.</p>"
+      "description": "<p>你必须拥有盾牌的受训才能从一面盾牌中获得其护甲等级的增益。</p>"
     },
     "Ship in a Bottle": {
       "name": "Ship in a Bottle",
@@ -389,7 +389,7 @@
       "description": "<p><em>Nuisance Hazard (Levels 1–4)</em></p><p>Sinkholes occur when sand fills the top half of a large cavity in rock or other hard earth. When a creature steps onto the sand, the ground collapses down into the bottom half of the cavity, injuring those caught in the sinkhole and leaving them stranded below the surface.</p><p>As a &amp;Reference[Search] action, a creature can detect a sinkhole with a successful [[/skill 15 perception]] check. Once a sinkhole is spotted, it can usually be avoided by moving around it.</p><p>A creature that walks onto a sinkhole must succeed on a [[/check 10 dex]] check or fall 10 feet to the bottom of the sinkhole. A creature without a Climb Speed can climb out of the sinkhole with a successful [[/skill 15 athletics]] check.</p><p><em><strong>At Higher Levels.</strong></em> You can scale the hazard for higher levels by increasing the sinkhole’s depth, as shown in the following table.</p><table><thead><tr><th scope=\"col\"><p>Levels</p></th><th scope=\"col\"><p>Sinkhole Depth</p></th></tr></thead><tbody><tr><td><p>5–10</p></td><td><p>30 feet</p></td></tr><tr><td><p>11–16</p></td><td><p>60 feet</p></td></tr><tr><td><p>17–20</p></td><td><p>120 feet</p></td></tr></tbody></table>",
       "activities": {
         "Search": {
-          "name": "Search"
+          "name": "搜索"
         },
         "Avoid Falling": {
           "name": "Avoid Falling"
@@ -464,7 +464,7 @@
       "description": "<p>This heavy tome is bound in dragonhide and reinforced with thick bands of cold iron. The original copies were made by wyrmspeakers of the Cult of the Dragon and bear that cult’s symbol on their cover. The <em>Tome of the Dragon</em> contains the secret ritual to transform a dragon or a dead dragon’s body into a dracolich.</p><p>To decipher and use the <em>Tome of the Dragon</em>, you must be either a spellcaster with at least two level 5 spell slots or a Dragon. A single assistant (or more, at the DM’s discretion) can help you conduct the ritual, so long as that assistant also meets the requirements to use the tome.</p><p>To create a dracolich using a <em>Tome of the Dragon</em>, you must have continuous access to the body of an adult or ancient dragon (either living or dead), as well as 80,000 GP worth of supplies (which includes a gem that will serve as the anchor for the dracolich’s spirit). While you have the necessary materials, you must conduct a ritual that lasts 180 days divided by the number of creatures conducting the ritual. During the ritual, you and any assistants must work without interruption, resting no more than 8 hours per day. If you are a Dragon, the cost of supplies and the ritual’s duration are halved.</p><p>When the ritual is complete, the tome explodes with violet light, dealing 12d6 Necrotic damage to you and each assistant. If this damage reduces a creature to 0 Hit Points, the creature is killed and immediately reanimates as a <strong>@UUID[Compendium.dnd-adventures-faerun.actors.Actor.aifZombie0000000]</strong> under the DM's control.</p><p>At the end of the ritual, the target transforms into a <strong>@UUID[Compendium.dnd-adventures-faerun.actors.Actor.aifDracolich0000]{Dracolich}</strong>. If the ritual’s target was a living dragon, that dragon dies instantly, and its spirit is transferred to the gem supplied for the ritual. If the target was a dead dragon’s body, the body reanimates, and the gem is inhabited by an evil dragon spirit from the Outer Planes. The dracolich is under no obligation toward its creators and acts according to its nature.</p>",
       "activities": {
         "Use": {
-          "name": "Use",
+          "name": "使用",
           "condition": "Requires 80,000 GP worth of supplies including a gem"
         }
       }
@@ -478,7 +478,7 @@
       "description": "<p>This small piece of jewelry has 3 charges and regains all expended charges daily at dawn. While you are holding it, you can take a Magic action to expend 1 charge, which causes the jewelry to transform into a sail-powered personal vehicle. The vehicle is roughly the size and shape of a household door with a 10-foot-tall sail extending from one side. After 1 hour or until you use the item’s command word (no action required), the transformation ends and the <em>Windskiff</em> reverts to its jewelry form.</p><p>In vehicle form, a <em>Windskiff </em>is a Medium object with the following statistics: AC 12, HP 30, and Speed 40 ft. The <em>Windskiff</em> hovers a few inches above whatever surface it’s on and can glide; it moves 5 feet horizontally for every 1 foot it descends in the air. A <em>Windskiff </em>and its riders take no damage from falling.</p>",
       "activities": {
         "Activate": {
-          "name": "Activate"
+          "name": "激活"
         }
       }
     },
@@ -487,7 +487,7 @@
       "description": "<p>A creature subjected to Yellow Death makes a [[/save 13 constitution]] saving throw. On a failed save, the creature takes [[/damage 4d6 average type=poison]] damage and has the &amp;Reference[Poisoned apply=false] condition for 1 minute. On a successful save, the creature takes half as much damage only.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned"
+          "name": "中毒"
         }
       }
     },
@@ -501,13 +501,13 @@
       },
       "effects": {
         "Frightened": {
-          "name": "Frightened"
+          "name": "恐慌"
         },
         "Stunned": {
-          "name": "Stunned"
+          "name": "震慑"
         },
         "Charmed": {
-          "name": "Charmed"
+          "name": "魅惑"
         }
       }
     },
