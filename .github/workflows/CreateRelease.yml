@@ -1,0 +1,65 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+  schedule:
+    - cron: "0 19 * * *"  # 每天北京时间 03:00 运行一次
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 获取版本
+        id: version
+        run: |
+          version=$(jq -r '.version' dnd-simplified-chinese-babele-patch/module.json)
+          echo "version=$version" >> $GITHUB_OUTPUT
+
+      - name: 压缩
+        run: |
+          if [ ! -f "dnd-simplified-chinese-babele-patch.zip" ]; then
+            zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
+          fi
+
+      - name: 创建release
+        run: |
+          TAG_NAME="latest"
+          # 如果 latest 已存在，移动到当前 HEAD
+          if git rev-parse "$TAG_NAME" >/dev/null 2>&1; then
+            echo "Tag $TAG_NAME exists, moving it to current HEAD."
+            git tag -f "$TAG_NAME"
+          else
+            echo "Tag $TAG_NAME does not exist, creating it."
+            git tag "$TAG_NAME"
+          fi
+          git push origin "$TAG_NAME" --force
+
+      - name: 更新Latest Tag
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest release ${{ steps.version.outputs.version }}
+          body: |
+            自动构建的翻译更新。
+            版本：${{ steps.version.outputs.version }}
+            直链：https://github.com/${{ github.repository }}/releases/download/latest/dnd-simplified-chinese-babele-patch.zip
+          draft: false
+          prerelease: false
+          files: |
+            dnd-simplified-chinese-babele-patch.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
