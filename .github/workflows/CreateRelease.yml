@@ -22,13 +22,13 @@ jobs:
           version=$(jq -r '.version' dnd-simplified-chinese-babele-patch/module.json)
           echo "version=$version" >> $GITHUB_OUTPUT
 
-      - name: Build archive if not exists
+      - name: 压缩
         run: |
           if [ ! -f "dnd-simplified-chinese-babele-patch.zip" ]; then
             zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
           fi
 
-      - name: Move/Create latest tag
+      - name: 创建release
         run: |
           TAG_NAME="latest"
           # 如果 latest 已存在，移动到当前 HEAD
