@@ -10,9 +10,9 @@ function logDebug(...args) {
 export async function registerAddons(babele) {
     logDebug("registerCustomConverters: ");
     babele.registerConverters({
-        // "effects": effectsConverter,
+        "effects": effectsConverter,
         "advancement": advancementConverter,
-    //     "activities": activitiesConverter
+        "activities": activitiesConverter,
         "dynamicname": nameConverter
     });
     await registerCustomMappings(babele);
