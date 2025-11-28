@@ -1,62 +1,62 @@
 {
-  "label": "Character Options",
+  "label": "角色选项",
   "folders": {
-    "Bladesinger (Wizard)": "Bladesinger (Wizard)",
-    "General Feats": "General Feats",
-    "Origin Feats": "Origin Feats",
-    "Epic Boon Feats": "Epic Boon Feats",
-    "Knowledge Domain (Cleric)": "Knowledge Domain (Cleric)",
-    "Scion of the Three (Rogue)": "Scion of the Three (Rogue)",
-    "Backgrounds": "Backgrounds",
-    "College of the Moon (Bard)": "College of the Moon (Bard)",
-    "Subclasses": "Subclasses",
-    "Oath of the Noble Genies (Paladin)": "Oath of the Noble Genies (Paladin)",
-    "Winter Walker (Ranger)": "Winter Walker (Ranger)",
-    "Feats": "Feats",
-    "Bastion Facilities": "Bastion Facilities",
-    "Spells": "Spells",
-    "Banneret (Fighter)": "Banneret (Fighter)",
-    "Spellfire Sorcery (Sorcerer)": "Spellfire Sorcery (Sorcerer)"
+    "Bladesinger (Wizard)": "剑咏者（法师）",
+    "General Feats": "通用专长",
+    "Origin Feats": "起源专长",
+    "Epic Boon Feats": "传奇恩惠专长",
+    "Knowledge Domain (Cleric)": "知识领域（牧师）",
+    "Scion of the Three (Rogue)": "三神门徒（游荡者）",
+    "Backgrounds": "背景",
+    "College of the Moon (Bard)": "皓月学院（吟游诗人）",
+    "Subclasses": "子职",
+    "Oath of the Noble Genies (Paladin)": "巨灵贵族之誓（圣武士）",
+    "Winter Walker (Ranger)": "凛冬行者（游侠）",
+    "Feats": "专长",
+    "Bastion Facilities": "据点设施",
+    "Spells": "法术",
+    "Banneret (Fighter)": "旗将（战士）",
+    "Spellfire Sorcery (Sorcerer)": "咒火术法（术士）"
   },
   "entries": {
     "Alustriel’s Mooncloak": {
-      "name": "Alustriel’s Mooncloak",
-      "description": "<p>For the duration, moonlight fills a 20-foot Emanation originating from you with Dim Light. While in that area, you and your allies have Half Cover and Resistance to Cold, Lightning, and Radiant damage.</p><p>While the spell lasts, you can use one of the following options, ending the spell immediately:</p><p><strong>Liberation. </strong>When you fail a saving throw to avoid or end the Frightened, Grappled, or Restrained condition, you can take a Reaction to succeed on the save instead.</p><p><strong>Respite. </strong>As a Magic action, you or an ally within the area regains Hit Points equal to 4d10 plus your spellcasting ability modifier.</p>",
+      "name": "艾拉斯卓的月辉之篷",
+      "description": "<p>月光从天而降，在持续时间内以微光光照笼罩源自你的 20 尺光环区域。你和你的盟友在位于该区域期间获得半身掩护及对寒冷、闪电及光耀伤害的抗性。</p><p>在法术持续时间内，你可以使用以下选项之一（但这将令此法术立即结束）：</p><p><strong>解放。</strong>当你失败于一次用于避免或结束恐慌、受擒及束缚的豁免时，你可以用一个反应来将本次豁免改为成功。</p><p><strong>回春。</strong>以一个魔法动作，你或区域内的一名盟友恢复等于 4d10 + 你的施法属性调整值点生命值。</p>",
       "materials": {
-        "value": "a moonstone worth 50+ GP"
+        "value": "一块价值 50+GP 的月石"
       },
       "activities": {
         "Liberation": {
-          "name": "Liberation",
-          "condition": "you fail a saving throw to avoid or end the Frightened, Grappled, or Restrained condition"
+          "name": "解放",
+          "condition": "当你失败于一次用于避免或结束恐慌、受擒及束缚的豁免时"
         },
         "Respite": {
-          "name": "Respite",
+          "name": "回春",
           "affects": {
-            "special": "within the area"
+            "special": "区域内"
           }
         },
         "Cast": {
-          "name": "Cast"
+          "name": "施展"
         }
       },
       "effects": {
         "Moonlight": {
-          "name": "Moonlight",
-          "description": "<p>While in that area, you and your allies have Half Cover and Resistance to Cold, Lightning, and Radiant damage.</p>"
+          "name": "月光",
+          "description": "<p>你和你的盟友在位于该区域期间获得半身掩护及对寒冷、闪电及光耀伤害的抗性。</p>"
         }
       }
     },
     "Backlash": {
-      "name": "Backlash",
-      "description": "<p>You ward yourself against destructive energy, reducing the damage taken by 4d6 plus your spellcasting ability modifier.</p><p>If the triggering damage was from a creature within range, you can force the creature to make a Constitution saving throw. The creature takes 4d6 Force damage on a failed save or half as much damage on a successful one.</p><p><em><strong>Using a Higher-Level Spell Slot.</strong></em> The damage reduction and Force damage from this spell both increase by 1d6 for every spell slot level above 4.</p>",
+      "name": "反冲术",
+      "description": "<p>你将破坏性的能量抵御并弹开，令该次你受到的伤害降低 4d6 + 你的施法属性调整值点。</p><p>若触发该次反应的伤害来自一名位于施法距离内的生物，则你可以迫使该生物进行一次体质豁免。豁免失败则其受到 4d6 力场伤害，豁免成功则仅受半伤。</p><p><em><strong>升环施法。</strong></em> 你使用的法术位每比四环高一环，法术能减免的伤害量和造成的力场伤害就都增加 1d6 。</p>",
       "activation": {
         "condition": "in response to taking damage"
       },
       "activities": {
         "Cast": {
-          "name": "Cast",
-          "roll": "Damage Reduction"
+          "name": "施展",
+          "roll": "伤害减免"
         },
         "Creature Backlash": {
           "name": "Creature Backlash",
@@ -65,11 +65,11 @@
       }
     },
     "Banneret": {
-      "name": "Banneret",
-      "description": "<blockquote><p>Rally Fellow Heroes with Inspiring Leadership</p></blockquote><p>Bannerets are paragons of valor and leadership who protect the innocent and rally fellow adventurers to the causes of justice and freedom. Many are knights serving in Cormyr, the Silver Marches, Damara, Chessenta, or other lands across Faerûn. They wander the realms as knights errant, taking the fight against evil beyond their kingdom’s borders.</p><p>A Banneret relies on judgment, bravery, and fidelity to the code of chivalry to guide them in defeating evildoers. A lone Banneret is a skilled warrior, but when leading a band of allies one of these warriors can transform even a poorly equipped militia into a ferocious war band.</p>",
+      "name": "旗将",
+      "description": "<blockquote><p>用振奋人心的领导力集结同道英雄</p></blockquote><p>旗将是那些保护无辜者，并将冒险者团结在正义和自由事业中、象征英勇无畏和领导气概、为了正义和自由的事业而奋斗的人中典范。许多旗将以骑士的身份，在科米尔、银色联邦、达马拉、阙森塔或费伦大地上的其他地方服役。他们以流浪骑士的身份行于国度各地，在王国边境之外与邪恶作斗争。</p><p>旗将依靠判断力，勇气和对骑士精神的坚守来引导他们打败恶人。一个孤身行动的旗将是一个技艺高超的战士，但当他们带领一群盟友时，只要有一位旗将在此，即使是装备简陋的民兵小队也能变成一支凶猛的战团。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
@@ -78,12 +78,12 @@
       "description": "<p>Level 5 Bastion Facility</p><p><strong>Prerequisite:</strong> Membership in the Purple Dragon Knights</p><p><strong>Space:</strong> Vast</p><p><strong>Hirelings:</strong> 1</p><p><strong>Order:</strong> Empower</p><p>This den for an amethyst dragon is an enclosed open chamber with a pool, and one of its entrances is underwater. The facility’s hireling maintains the den and helps any visiting amethyst dragons feel comfortable.</p><p><em><strong>Empower: Psionic Defenses.</strong></em> When you issue the Empower order to this facility, latent draconic power fills the facility, allowing you to train in psionic combat. This training takes 8 hours per day for 7 days, after which you gain Resistance to Psychic damage. This benefit lasts for 7 days.</p>"
     },
     "Cult of the Dragon Archive": {
-      "name": "Cult of the Dragon Archive",
-      "description": "<p>Level 13 Bastion Facility</p><p><strong>Prerequisite:</strong> Membership in the Cult of the Dragon</p><p><strong>Space:</strong> Roomy</p><p><strong>Hirelings:</strong> 1</p><p><strong>Order:</strong> Research</p><p>A Cult of the Dragon Archive contains extensive records on specific topics, including dragons.</p><p><em><strong>Research: Helpful Lore.</strong></em> When you issue the Research order to this facility, you commission the facility’s hireling to search the archive for lore. The work takes 7 days. The hireling gains knowledge as if they had cast the<em> Legend Lore</em> spell, then shares this knowledge with you the next time you speak with them.</p><p><em><strong>Reference Books.</strong></em> Your Cult of the Dragon Archive contains a collection of draconic lore. You have Advantage on Intelligence (Nature or Religion) checks you make in your Bastion when you take the Study action to recall lore about Dragons, Tiamat, or the Cult of the Dragon.</p><p><em><strong>Enlarging the Facility.</strong></em> You can enlarge your Cult of the Dragon Archive to a Vast facility by spending 2,000 GP. If you do so, you gain two reference books chosen from those listed in the @UUID[Compendium.dnd-dungeon-masters-guide.content.JournalEntry.dmgBastions00000.JournalEntryPage.grKY1o6q5Qfyzr1a#archive]{Archive entry} in chapter 8 of the <em>Dungeon Master’s Guide</em>.</p>"
+      "name": "龙巫教档案馆",
+      "description": "<p>13 级据点设施</p><p><strong>先决条件：</strong> 龙巫教成员</p><p><strong>空间：</strong>宽敞</p><p><strong></strong>雇员：1 </p><p><strong>指令：</strong>调查</p><p>龙巫教档案馆中收录了涵盖许多特定主题的详实资料，包括关于龙类的内容。</p><p><em><strong>调查：有益学识。</strong></em>当你对此设施下达调查指令时，你委托设施雇员针对传说档案进行研究。这项工作需要 7 天时间。雇员会如同施展了<em>通晓传奇</em>法术一般获得这些知识，并且会在下一次交谈时与你分享。</p><p><em><strong>参考书。</strong></em> 你的龙巫教档案馆收录了大量的龙类传说。当你在据点内时，你在因回忆有关龙类的传说而执行研究动作时所进行的智力（自然或宗教）检定中具有优势。</p><p><em><strong>扩大设施。</strong></em> 你可以花费 2000GP，将龙巫教档案馆扩大为庞大设施。这样做后，你会获得两本在<em>《城主指南》</em>第八章@UUID[Compendium.dnd-dungeon-masters-guide.content.JournalEntry.dmgBastions00000.JournalEntryPage.grKY1o6q5Qfyzr1a#archive]中列出的两本参考书。</p>"
     },
     "Emerald Enclave Grove": {
-      "name": "Emerald Enclave Grove",
-      "description": "<p>Level 9 Bastion Facility</p><p><strong>Prerequisite:</strong> Membership in the Emerald Enclave</p><p><strong>Space:</strong> Vast</p><p><strong>Hirelings:</strong> 2</p><p><strong>Order:</strong> Recruit</p><p>Veteran agents of the Emerald Enclave create safe havens with trees, grass, and flowing water, where magical creatures that embody the power of nature live in peace and safety. The Emerald Enclave Grove can house one Huge creature or two Large creatures; four Small or Medium creatures or eight Tiny creatures can occupy the same space as one Large creature there.</p><p><em><strong>Recruit: Creature of Nature.</strong></em> When you issue the Recruit order to this facility, you invite a creature from the Emerald Enclave Grove Creatures table to your Emerald Enclave Grove. Roll any [[/r 1d2]]{die}. If the number rolled is odd, the creature doesn’t accept your invitation and you gain no benefit from having issued the order. If the number rolled is even, a creature accepts your invitation and moves into your Emerald Enclave Grove after 7 days. Your hirelings care for the creature and perform upkeep in the facility.</p><p>Creatures in your Emerald Enclave Grove count as Bastion Defenders. Deduct any you lose from your Bastion Defenders roster. You can choose not to count one or more of these creatures as Bastion Defenders, in which case they can’t be called on to defend the Bastion. Instead, they act in accordance with their nature and use their stat blocks in the <em>Monster Manual</em>.</p><table><caption>Emerald Enclave Grove Creatures</caption><thead><tr><th scope=\"col\"><p>Creature</p></th><th scope=\"col\"><p>Size</p></th></tr></thead><tbody><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedShrub0]{Awakened Shrub}</p></td><td><p>Small</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedTree00]{Awakened Tree}</p></td><td><p>Huge</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmBlinkDog000000]{Blink Dog}</p></td><td><p>Medium</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmCentaurTrooper]{Centaur Trooper}</p></td><td><p>Large</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmDryad000000000]{Dryad}</p></td><td><p>Medium</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmMyconidAdult00]{Myconid Adult}</p></td><td><p>Medium</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmMyconidSprout0]{Myconid Sprout}</p></td><td><p>Small</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmPixie000000000]{Pixie}</p></td><td><p>Tiny</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSatyr000000000]{Satyr}</p></td><td><p>Medium</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSprite00000000]{Sprite}</p></td><td><p>Tiny</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmTreant00000000]{Treant}</p></td><td><p>Large</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmUnicorn0000000]{Unicorn}</p></td><td><p>Large</p></td></tr></tbody></table>"
+      "name": "翠绿闲庭林居",
+      "description": "<p>9级据点设施</p><p><strong>先决：</strong> 翠绿闲庭成员</p><p><strong>空间：</strong> 庞大</p><p><strong>雇员：</strong> 2 </p><p><strong>指令：</strong>招募</p><p>翠绿闲庭的资深成员能够塑造出一片由树木、青草与流水构成的安宁圣所，让那些身上体现着自然之力的魔法生物在此安居。这个翠绿闲庭林居可容纳一只巨型生物，或两只大型生物；每四只中型或小型生物在这里占据的空间等同于一只大型生物。</p><p><em><strong>招募：自然生灵。</strong></em>当你对此设施下达招募指令时，你可从翠绿闲庭林居生物表中邀请一只生物入驻你的翠绿闲庭林居。投掷 [[/r 1d2]]{die} 。若结果为奇数，该生物拒绝了你的邀请，你本次指令无效；若结果为偶数，该生物接受邀请并将在7日后来到你的翠绿闲庭林居。你的雇员将负责照料该生物并维护此设施。</p><p>在你翠绿闲庭林居中的生物视为你的据点卫兵。如果它们遭受任何损失，便将损失的生物从你的据点卫兵名单中划去。你可以选择不将一只或更多生物视为据点卫兵，此时这些生物不会参与据点的防御，而是按照自己的天性活动，使用<em>《怪物图鉴》</em>中的数据。</p><table><caption>翠绿闲庭林居生物</caption><thead><tr><th scope=\"col\"><p>Creature</p></th><th scope=\"col\"><p>Size</p></th></tr></thead><tbody><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedShrub0]{Awakened Shrub}</p></td><td><p>小型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedTree00]{Awakened Tree}</p></td><td><p>巨型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmBlinkDog000000]{Blink Dog}</p></td><td><p>中型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmCentaurTrooper]{Centaur Trooper}</p></td><td><p>大型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmDryad000000000]{Dryad}</p></td><td><p>中型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmMyconidAdult00]{Myconid Adult}</p></td><td><p>中型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmMyconidSprout0]{Myconid Sprout}</p></td><td><p>小型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmPixie000000000]{Pixie}</p></td><td><p>微型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSatyr000000000]{Satyr}</p></td><td><p>中型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSprite00000000]{Sprite}</p></td><td><p>微型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmTreant00000000]{Treant}</p></td><td><p>大型</p></td></tr><tr><td><p>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmUnicorn0000000]{Unicorn}</p></td><td><p>大型</p></td></tr></tbody></table>"
     },
     "Harper Hideout": {
       "name": "Harper Hideout",
@@ -144,7 +144,7 @@
       }
     },
     "Blade of Disaster": {
-      "name": "Blade of Disaster",
+      "name": "灾厄之刃",
       "description": "<p>You create a 3-foot-long blade-shaped planar rift that lasts for the duration. The rift appears within range in a space of your choice, and you can immediately make up to two melee spell attacks, each one against a creature or object within 5 feet of the rift. On a hit, the target takes 10d6 Force damage. This attack scores a Critical Hit if the number on the d20 is 18 or higher.</p><p>As a Bonus Action on your later turns, you can move the rift up to 60 feet and repeat the two attacks against a creature or an object within 5 feet of it. You can direct the attacks at the same target or at different ones.</p><p>The blade can harmlessly pass through any barrier, including ones created by spells like <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofForc]{Wall of Force}</em>.</p>",
       "activities": {
         "Cast": {
@@ -153,76 +153,76 @@
       }
     },
     "Bladesinger": {
-      "name": "Bladesinger",
-      "description": "<blockquote><p>Wield Weapon and Wizardry in Elegant Tandem</p></blockquote><p>Bladesingers master a tradition of wizardry that incorporates swordplay and dance. In combat, a Bladesinger uses intricate, elegant maneuvers that fend off harm and allow the Bladesinger to channel magic into devastating attacks and a cunning defense. Many who have observed a Bladesinger at work remember the display as one of the more beautiful experiences in their lif­e—a glorious dance accompanied by a singing blade.</p><p>Bladesinging is associated with the ancient elven societies that first mastered the art and coined the term. Even today, most Bladesingers still hail from old elven realms, such as Myth Drannor, or from non-elven societies that share land and history with elves, such as the Silver Marches. Wherever they hail from, Bladesingers take their talents all across the Realms to help common people and perform heroic deeds. Most communities greet the arrival of a Bladesinger as a good omen.</p>",
+      "name": "剑咏者",
+      "description": "<blockquote><p>御剑唤法，灵动优雅</p></blockquote><p>剑咏者们掌握着一种将剑术与舞蹈相结合的奥法传承。在战斗中，剑咏者会运用一系列错综复杂而又不失优雅的招式来抵御伤害，并将魔法导入毁灭性的攻击和精妙的防御中。许多曾目睹过剑咏者展露技艺之人，都将那番景象视为其一生中最为美妙的经历之一——那是一场华丽之舞，伴随着高歌之剑刃。</p><p>剑咏与古代的精灵社会有着紧密联系，是他们最先掌握了这项技艺并为其取名。即便时至今日，大多数的剑咏者仍然出身于古老的精灵国度，如迷斯卓诺Myth Drannor，或是来自于那些与精灵们共享地域、交融历史的非精灵社会，如银月联邦Silver Marches。无论出身于何处，剑咏者们皆是为了帮助普通民众以及成就英雄伟业，而把他们的天赋带到了国度各处。大多数社群都将剑咏者的到来视为一个好兆头。</p>",
       "advancement": {
         "Subclass Features": {
-          "title": "Subclass Features"
+          "title": "子职特性"
         }
       }
     },
     "Bladesong": {
-      "name": "Bladesong",
-      "description": "<p>As a Bonus Action, you invoke an elven magic called the Bladesong, provided you aren’t wearing armor or using a Shield.</p><p>The Bladesong lasts for 1 minute and ends early if you have the Incapacitated condition, if you don armor or a Shield, or if you use two hands to make an attack with a weapon. You can dismiss the Bladesong at any time (no action required).</p><p>While the Bladesong is active, you gain the following benefits. You can invoke the Bladesong a number of times equal to your Intelligence modifier ([[lookup @abilities.int.mod]]{0}, minimum of once), and you regain all expended uses when you finish a Long Rest. You regain one expended use when you use Arcane Recovery.</p><p><em><strong>Agility.</strong></em> You gain a bonus to your AC equal to your Intelligence modifier (minimum of +1), and your Speed increases by 10 feet. In addition, you have Advantage on Dexterity (Acrobatics) checks.</p><p><em><strong>Bladework.</strong></em> Whenever you attack with a weapon with which you have proficiency, you can use your Intelligence modifier for the attack and damage rolls instead of using Strength or Dexterity.</p><p><em><strong>Focus.</strong></em> When you make a Constitution saving throw to maintain Concentration, you can add your Intelligence modifier to the total.</p><section id=\"secret-PYLkGuyEr8KoysnM\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>The included Active Effect does not modify the ability used for attack and damage rolls. This change should be made in the <strong>Attack</strong> activity of the weapon in use.</p></section>",
+      "name": "剑歌",
+      "description": "<p>作为一个附赠动作，你唤起一种被称为剑歌Bladesong的精灵魔法，前提是你没有着装护甲或使用盾牌。</p><p>该剑歌持续1分钟，并会在你陷入失能状态，着装护甲或盾牌，或者双手并用一把武器发动攻击时提前结束。你可以随时解除剑歌（无需动作）。</p><p>剑歌激活期间，你获得以下增益。你能够唤起剑歌的次数等于你的智力调整值 ([[lookup @abilities.int.mod]]{0}, 至少1次), 完成一次长休后，你重获所有已消耗的使用次数。当你使用奥术回想时，你会恢复一次已消耗的使用次数。</p><p><em><strong>灵动。</strong></em> 你的AC获得等同于你智力调整值的加值（最低+1），且你的速度增加10尺。此外，你进行敏捷（特技）检定时具有优势。</p><p><em><strong>剑法。</strong></em> 当你使用你具有熟练的武器进行攻击时，你可以使用你的智力调整值替代力量或敏捷来进行攻击与伤害掷骰。</p><p><em><strong>专注。</strong></em> 当你为维持专注而进行体质豁免时，你可以将你的智力调整值加到掷骰总值当中。</p><section id=\"secret-PYLkGuyEr8KoysnM\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>所包含的效应不会修改用于攻击与伤害掷骰的调整值。此项修改应在所使用武器的 <strong>攻击</strong> 行动组合中完成。</p></section>",
       "activities": {
         "Invoke Bladesong": {
-          "name": "Invoke Bladesong"
+          "name": "发动剑歌"
         },
         "Regain Use (Arcane Recovery)": {
-          "name": "Regain Use (Arcane Recovery)",
-          "condition": "when you use Arcane Recovery"
+          "name": "恢复使用次数（奥术回想）",
+          "condition": "使用奥术回想时"
         }
       },
       "effects": {
         "Bladesong": {
-          "name": "Bladesong",
+          "name": "剑歌",
           "description": "<p>@Embed[Compendium.dnd-heroes-faerun.options.Item.hofBldBladesong0 inline]</p>"
         }
       }
     },
     "Extra Attack": {
-      "name": "Extra Attack",
-      "description": "<p>You can attack twice, instead of once, whenever you take the Attack action on your turn. Moreover, you can cast one of your Wizard cantrips that has a casting time of an action in place of one of those attacks.</p>"
+      "name": "额外攻击",
+      "description": "<p>你在你的回合内执行攻击动作时，可以进行两次攻击而非一次。此外，你可以将额外攻击中的一次，替换为施展你的一道施法时间为动作的法师戏法。</p>"
     },
     "Song of Defense": {
-      "name": "Song of Defense",
-      "description": "<p>When you take damage while your Bladesong is active, you can take a Reaction to expend one spell slot and reduce the damage taken by an amount equal to five times the spell slot’s level.</p>",
+      "name": "守御之歌",
+      "description": "<p>在你的剑歌激活期间，当你受到伤害时，你可以执行反应以消耗一枚法术位并将该伤害降低等同于该法术位环阶5倍的数值。</p>",
       "activities": {
         "utility": {
-          "roll": "Damage Reduction",
-          "condition": "When you take damage while your Bladesong is active"
+          "roll": "伤害减免",
+          "condition": "在你的剑歌激活期间，当你受到伤害时"
         }
       }
     },
     "Song of Victory": {
-      "name": "Song of Victory",
-      "description": "<p>After you cast a spell that has a casting time of an action, you can make one attack with a weapon as a Bonus Action.</p>"
+      "name": "胜利之歌",
+      "description": "<p>在你施展了一道施法时间为动作的法术之后，你可以执行附赠动作用武器进行一次攻击。</p>"
     },
     "Training in War and Song": {
-      "name": "Training in War and Song",
-      "description": "<p>You gain proficiency with all Melee Martial weapons that don’t have the Two-Handed or Heavy property. You can use a Melee weapon with which you have proficiency as a Spellcasting Focus for your Wizard spells.</p><p>You also gain proficiency in one of the following skills of your choice: Acrobatics, Athletics, Performance, or Persuasion.</p>"
+      "name": "战歌训练",
+      "description": "<p>你获得所有不具有双手及重型词条的近战军用武器熟练。你可以使用你具有熟练的近战武器作为你法师法术的施法法器。</p><p>此外，你获得下列你所选择的一项技能的熟练：特技、运动、表演或游说。</p>"
     },
     "Boon of Bloodshed": {
-      "name": "Boon of Bloodshed",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><em><strong>Killer’s Fortune.</strong></em> When an enemy you can see is reduced to 0 Hit Points, you gain Advantage on the next attack roll you make before the end of your next turn.</p><p><em><strong>Power from Pain. </strong></em>Once per turn, when you make an attack roll while Bloodied, you can deal extra damage to the target equal to your Proficiency Bonus. The extra damage’s type is the same as the attack’s type.</p><section class=\"secret\" id=\"secret-WvuADIcjQEUm317J\"><p><strong>Foundry Note</strong></p><p>This feature includes a \"Killer's Fortune\" <strong>Active Effect (AE)</strong> that can be used as a reminder but does not automate the attack Advantage. Additionally, the \"Power from Pain\" <strong>AE</strong> grants an attack roll damage bonus only when bloodied and should be disabled after its first use per turn.</p></section>",
+      "name": "血海漂橹之恩惠",
+      "description": "<p>你获得以下增益：</p><p><em><strong>属性值提升。</strong></em> 你选择的一项属性提升1，至多提升至30。</p><p><em><strong>杀手机运。</strong></em> 当一名你可见的敌人生命值降至0时，你的下次攻击检定获得优势，持续至你的下个回合结束。</p><p><em><strong>痛心切骨。 </strong></em>每回合一次，当你在浴血期间进行攻击检定时，你可以额外对目标造成等于熟练加值的伤害。额外伤害的伤害类型与该攻击的伤害类型一致。</p><section class=\"secret\" id=\"secret-WvuADIcjQEUm317J\"><p><strong>Foundry Note</strong></p><p>此特性包含一个“杀手机运”<strong>激活效应</strong>，该状态仅作为效果提示，不会自动化应用优势。此外，“痛心切骨”<strong>激活效应</strong>仅会在角色处于浴血状态时提供攻击检定伤害加值，且应在每回合首次使用后禁用效应。</p></section>",
       "activities": {
         "Killer’s Fortune": {
-          "name": "Killer’s Fortune",
-          "condition": "an enemy you can see is reduced to 0 Hit Points"
+          "name": "杀手机运",
+          "condition": "当一名你可见的敌人生命值降至0时"
         },
         "Power from Pain": {
-          "name": "Power from Pain",
-          "condition": "you make an attack roll while Bloodied"
+          "name": "痛心切骨",
+          "condition": "当你在浴血期间进行攻击检定时"
         }
       },
       "effects": {
         "Killer's Fortune (Attack Advantage)": {
-          "name": "Killer's Fortune (Attack Advantage)",
-          "description": "<p>You gain Advantage on the next attack roll you make before the end of your next turn.</p>"
+          "name": "杀手机运（攻击优势）",
+          "description": "<p>在你的下个回合结束前，你进行的下一次攻击具有优势。</p>"
         },
         "Power from Pain (Bloodied Damage)": {
-          "name": "Power from Pain (Bloodied Damage)",
-          "description": "<p>Once per turn, when you make an attack roll while Bloodied, you can deal extra damage to the target equal to your Proficiency Bonus.</p>"
+          "name": "痛心切骨（浴血伤害）",
+          "description": "<p>每回合一次，当你在浴血期间进行攻击检定时，你可以额外对目标造成等于熟练加值的伤害。</p>"
         }
       },
       "advancement": {
