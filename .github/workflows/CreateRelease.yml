@@ -3,6 +3,13 @@ name: Create Release
 on:
   workflow_dispatch:
 
+  push:
+    branches:
+      - main
+
+  schedule:
+    - cron: "0 19 * * *"  # 每天北京时间 03:00 运行一次
+
 jobs:
   create-release:
     runs-on: ubuntu-latest
