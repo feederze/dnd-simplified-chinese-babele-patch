@@ -12,7 +12,8 @@ export async function registerAddons(babele) {
     babele.registerConverters({
         "effects": effectsConverter,
         "advancement": advancementConverter,
-        "activities": activitiesConverter
+        "activities": activitiesConverter,
+        "dynamicname": nameConverter
     });
     await registerCustomMappings(babele)
     logDebug("registerCustomConverters: Done");
@@ -102,4 +103,18 @@ function activitiesConverter(originalValues, translations, data, translatedCompe
             )];
         })
     );
+}
+
+function nameConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
+    let isActive = game.settings.get(MODULE_ID, 'namesetting')
+    if (!translations) 
+    {
+        return data;
+    }
+    const original = originalValues ?? data?.name;
+    if (isActive) {
+        return `${translations} ${original}`;
+    } else {
+        return translations;
+    }
 }
