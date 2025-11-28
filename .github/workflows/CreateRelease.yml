@@ -1,0 +1,61 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_prefix:
+        description: 'Tag 前缀（可选，默认 v）'
+        required: false
+        default: 'v'
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read version from module.json
+        id: version
+        run: |
+          version=$(jq -r '.version' dnd-simplified-chinese-babele-patch/module.json)
+          echo "version=$version" >> $GITHUB_OUTPUT
+
+      # 如果仓库里已经有 zip（你的 downloadTranslation.yml 会生成并提交），这一步可以省略
+      - name: Build archive if not exists
+        run: |
+          if [ ! -f "dnd-simplified-chinese-babele-patch.zip" ]; then
+            zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
+          fi
+
+      - name: Create Git Tag
+        run: |
+          TAG_NAME="${{ github.event.inputs.tag_prefix }}${{ steps.version.outputs.version }}"
+          # 如果 tag 已存在就跳过创建
+          if git rev-parse "$TAG_NAME" >/dev/null 2>&1; then
+            echo "Tag $TAG_NAME already exists, skip creating tag."
+          else
+            git tag "$TAG_NAME"
+            git push origin "$TAG_NAME"
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag_prefix }}${{ steps.version.outputs.version }}
+          name: release ${{ steps.version.outputs.version }}
+          body: |
+            自动构建的翻译更新。
+            版本：${{ steps.version.outputs.version }}
+          draft: false
+          prerelease: false
+          files: |
+            dnd-simplified-chinese-babele-patch.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
