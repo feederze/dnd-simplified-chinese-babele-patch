@@ -1,0 +1,1656 @@
+{
+  "label": "异端演员",
+  "folders": {
+    "Example Rivals": "范例对手",
+    "Faction Boss": "派系首领",
+    "Monsters": "怪物",
+    "Supplemental": "补充"
+  },
+  "entries": {
+    "Arthur Kogg": {
+      "name": "Arthur Kogg",
+      "tokenName": "Arthur Kogg",
+      "description": "<p><span data-bkit-root data-bkit-asset=\"modules/hos-monkeydm/assets/actors/arthur_kogg_forsaken.webp\">Arthur Kogg</span>, 一名前城市卫兵转投叛乱, 领导着红宝石区内的遗弃者行动。历经背叛与失去而变得冷酷的他, 不再相信正义事业——只相信求生和复仇。</p>",
+      "items": {
+        "Studded Leather Armor": {
+          "name": "镶钉皮甲",
+          "description": "<p>镶钉皮甲由坚韧而柔韧的皮革制成，并通过密集的铆钉或尖刺进行加固。</p>"
+        },
+        "Assassinate": {
+          "name": "暗杀",
+          "description": "<p>在开始战斗的首个回合，刺客对任何未开始其回合的生物发动攻击时，其攻击检定具有优势。刺客击中被突袭生物的所有攻击均被视为重击。</p>"
+        },
+        "Evasion": {
+          "name": "反射闪避",
+          "description": "<p>某个<strong>敏捷</strong>豁免通过后伤害减半的效应指定刺客为目标时，其豁免成功则不受任何伤害，而豁免失败时则只受一半伤害。</p>"
+        },
+        "Sneak Attack": {
+          "name": "Sneak Attack",
+          "description": "<p>刺客对目标造成伤害时，如果其攻击检定具有优势，或者如果其攻击检定没有劣势且它在该目标身边 5 尺范围内有一个未处于失能状态的盟友。满足以上条件时，刺客造成额外 14（4d6）点伤害。</p>",
+          "activities": {
+            "damage": {
+              "condition": "每回合一次"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>刺客发动两次[[/item .Kbg12IJ0YW79vP06]]{短剑}攻击。</p>"
+        },
+        "Shortsword": {
+          "name": "短剑",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。目标必须进行一次[[/save]]豁免，豁免失败时受到[[/damage activity=dnd5eactivity100]]伤害，豁免成功则伤害减半。</p>"
+        },
+        "Light Crossbow": {
+          "name": "轻弩",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。目标必须进行一次[[/save]]豁免，豁免失败则承受[[/damage activity=qt3tGFCRiYgaiWQ3]]伤害，成功则伤害减半。</p>"
+        },
+        "Combat Reflexes": {
+          "name": "战斗反射",
+          "description": "<p>亚瑟每轮可以采取两次反应，但第二次反应只能用于发动借机攻击。</p>"
+        },
+        "Enhanced Body": {
+          "name": "强化躯体",
+          "description": "<p>亚瑟拥有{暗蚀伤害抗性 resistance to necrotic damage}，以及对非魔法{钝击 Bludgeoning}、{穿刺 Piercing}和{挥砍 Slashing}{伤害 damage}的{抗性 resistance}。他对{魅惑 Charmed}和{恐慌 Frightened}状态{免疫 immune}。</p>"
+        },
+        "Shadow Step": {
+          "name": "暗影步",
+          "description": "<p>亚瑟传送至多30尺，到达一个他能看见且处于微光光照或黑暗环境中的未占据空间。传送后，他在自己回合结束前进行的下一次近战攻击检定中具有优势。</p>",
+          "activities": {
+            "utility": {
+              "chatFlavor": "亚瑟在本回合的下一次近战攻击中获得优势。",
+              "affects": {
+                "special": "微光光照或黑暗术darkness中的未占据空间"
+              }
+            }
+          }
+        },
+        "Evasive Counter": {
+          "name": "规避反制",
+          "description": "<p>当一个生物用近战攻击未命中亚瑟时，他可以移动至多一半的速度且不触发借机攻击。如果他在微光光照或黑暗术darkness中结束此移动，他可以执行&Reference[Hide]动作作为该反应的一部分。</p>",
+          "activities": {
+            "Use (and Hide)": {
+              "name": "使用（和躲藏）",
+              "condition": "生物对亚瑟的近战攻击未命中。",
+              "chatFlavor": "如果在微光光照或黑暗中结束移动，则可以躲藏。"
+            }
+          }
+        }
+      }
+    },
+    "Lurking Strangler": {
+      "name": "潜伏扼杀者",
+      "tokenName": "潜伏的陌生人",
+      "description": "<p>潜伏扼杀者是一种巨大的{水陆两栖Amphibious}灾厄，它隐没身形漂荡在运河中，其分节身躯与河水淤泥淤塞的暗流融为一体。它用盘绕的卷须将自己锚定在沉没的残骸上，延伸出带刺的丝状触手随水流摆动，静待任何扰动水面的生物落入陷阱。当猎物过于靠近时，它会以手术般的精准度发起攻击，用卷须缠绕住肢体后将受害者拖入水下。</p><p>扼杀者并不{消耗Consume}其杀死的猎物。它会用河草捆绑尸体，或用石块将其固定在淤泥中，让尸身悬停在水线之下。这究竟是本能行为还是某种储藏食物的形式尚不得而知，但找回这些尸体的猎人报告称未发现任何进食痕迹。</p><p>当河流受到扰动时，这种{生物Creature}最具攻击性，会猛烈袭击船只、掀翻未固定的码头、攻击任何在岸边徘徊的物体。若受伤，它会退入深水区，待伤口愈合后再度出击。</p>",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "<p>[[lookup @name lowercase]]可以在空气和水中呼吸。</p>"
+        },
+        "Grasping Tendrils": {
+          "name": "擒握藤蔓",
+          "description": "<p>扼杀者有四条触须。每条触须一次可以擒抱一个生物（逃脱[[/check]]）。一条触须拥有{护甲等级 AC 14}，{15 生命值}，并且免疫{毒素 poison}和{心灵 psychic}伤害。如果一条触须被摧毁，扼杀者就失去了用该触须擒抱的能力。它在一次{长休 Long Rest}结束时重新长出所有被切断的触须。</p>",
+          "activities": {
+            "Destroy Tendril": {
+              "name": "摧毁触须"
+            },
+            "Escape Check": {
+              "name": "逃脱检定"
+            }
+          }
+        },
+        "Siege Monster": {
+          "name": "攻城怪物",
+          "description": "<p>[[lookup @name lowercase]]对物件和建筑物造成双倍伤害。</p>"
+        },
+        "Underwater Camouflage": {
+          "name": "水下伪装",
+          "description": "<p>该[[lookup @name lowercase]]在水下进行敏捷（隐匿）检定时具有<strong>优势</strong>。</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>该扼杀者发动一次卷须攻击和一次喙啄攻击。</p>"
+        },
+        "Tendril": {
+          "name": "卷须",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标陷入受擒（[[/item .hosGraspingTendr activity=cmQSpk2KZKqX5650]]{逃脱DC 16}）。擒抱状态结束前，目标受到&amp;Reference[restrained apply=false]，且扼杀者无法用该触须擒抱其他生物。</p>",
+          "effects": {
+            "Grappled & Restrained": {
+              "name": "受擒并束缚"
+            }
+          }
+        },
+        "Beak": {
+          "name": "喙啄",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。如果目标被勒颈者擒抱，它将额外受到7（2d6）点强酸伤害。</p>",
+          "activities": {
+            "Attack Grappled": {
+              "name": "攻击受擒",
+              "condition": "攻击被扼杀者擒抱的生物"
+            }
+          }
+        },
+        "Acidic Bile": {
+          "name": "强酸胆汁室",
+          "description": "<p>扼杀者向30尺锥状区域喷吐黑色腐蚀性胆汁。该区域内的每个生物必须进行一次DC 16的敏捷豁免，豁免失败则受到27（6d8）点强酸伤害，成功则伤害减半。受影响区域的地面在扼杀者的下个回合开始前变为困难地形。</p>"
+        },
+        "Acid Ink Cloud": {
+          "name": "强酸墨汁云雾",
+          "description": "<p>在水下时，扼杀者会释放一团半径20尺的强酸墨汁云。该云团会绕过拐角扩散，并使该区域被重度遮蔽，持续1分钟。强流会在3轮后驱散该云团。在其回合开始时处于云团内的生物将受到10（3d6）点强酸伤害。</p>",
+          "activities": {
+            "damage": {
+              "condition": "身处水下"
+            }
+          }
+        },
+        "Reel": {
+          "name": "拖拽",
+          "description": "<p>该扼杀者将每个它已擒抱的生物朝自身拉近10尺。</p>",
+          "activities": {
+            "utility": {
+              "affects": {
+                "special": "每个受擒生物"
+              }
+            }
+          }
+        },
+        "Thrashing Escape": {
+          "name": "猛烈逃脱",
+          "description": "<p>当一个生物从扼杀者的擒抱中逃脱时，它会用同一根触须猛击。该生物必须进行一次DC 16的敏捷豁免，否则被击倒&Reference[prone]。</p>",
+          "activities": {
+            "save": {
+              "condition": "当一个生物从其受擒中逃脱时"
+            }
+          }
+        }
+      }
+    },
+    "Plant Horror": {
+      "name": "植物惊骇",
+      "tokenName": "植物惊惧",
+      "items": {
+        "Corrupted Form": {
+          "name": "腐化形态",
+          "description": "<p>每次该恐怖生物以近战攻击命中时，它造成额外3 (1d6)点暗蚀伤害(已包含在攻击中)。</p>"
+        },
+        "Regeneration": {
+          "name": "再生",
+          "description": "<p>该恐怖生物在其回合开始时恢复10点生命值。如果它受到火焰或暗蚀伤害，此特性在其下个回合开始时不会生效。只有当该恐怖生物在其回合开始时生命值为0点且无法使用再生术regenerate时，它才会死亡。</p>",
+          "activities": {
+            "heal": {
+              "condition": "自其上一回合以来未受到火焰或暗蚀伤害"
+            }
+          }
+        },
+        "Lightning Absorption": {
+          "name": "闪电吸收",
+          "description": "<p>每当该恐怖造物受到闪电伤害时，它不会受到伤害，而是恢复等于该闪电伤害数值的生命值。</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>该恐怖生物发动两次[[/item .hosnpcSlam000000]]攻击。</p>"
+        },
+        "Slam": {
+          "name": "粗枝猛击",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
+        },
+        "Corrupting Tendrils (Recharge 5–6)": {
+          "name": "腐化触须 (充能 5–6)",
+          "description": "<p>该恐怖存在将其触须伸向15尺内的单一生物。目标必须进行一次DC15的力量豁免，否则陷入受擒状态（逃脱[[/check skill=ath/acr dc=@abilities.str.dc]]）。受擒期间，目标在其每回合开始时受到[[/damage average]]伤害。</p>",
+          "activities": {
+            "save": {
+              "chatFlavor": "目标每回合受到的伤害"
+            }
+          },
+          "effects": {
+            "Corrupted Grapple": {
+              "name": "腐化受擒",
+              "description": "<p>当目标受擒时，在其每回合开始时受到[[/damage 1d10 bludgeoning & 1d6 necrotic average]]伤害。</p><p>逃脱[[/check skill=ath/acr 15]]。</p>"
+            }
+          }
+        },
+        "Thorned Lash": {
+          "name": "荆棘之鞭",
+          "description": "<p>当距离该恐怖生物 5 尺内的生物攻击它但未命中时，该恐怖生物会用其触须对该生物发动一次猛击攻击。该攻击造成点穿刺伤害而非钝击伤害。</p>",
+          "activities": {
+            "attack": {
+              "condition": "射程范围内的一名生物发动攻击并失手。"
+            }
+          }
+        }
+      }
+    },
+    "Augmented Manikin v2": {
+      "name": "强化人偶 v2",
+      "tokenName": "强化人偶 v2",
+      "items": {
+        "Reckless": {
+          "name": "鲁莽",
+          "description": "<p>在其回合开始时，[[lookup @name lowercase]]可以在该回合中使所有近战武器攻击检定具有优势，但针对它的攻击检定也具有优势，直到其下一回合开始。</p>",
+          "effects": {
+            "Reckless": {
+              "name": "鲁莽",
+              "description": "<p>所有对你发动的攻击检定具有优势，直至你的下一回合开始。</p>"
+            }
+          }
+        },
+        "Necrotic Slam": {
+          "name": "暗蚀猛击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
+        },
+        "Core Burst (Optional)": {
+          "name": "核心爆发（可选）",
+          "description": "<p>当[[lookup @name lowercase]]死亡时，一株@{UUID[Actor.bqHJiZyWjKVE12rx]{紫蕈 violet fungus}}从其核心迸发而出</p>",
+          "activities": {
+            "Spawn Fungus": {
+              "name": "真菌滋生",
+              "condition": "死亡时"
+            }
+          }
+        },
+        "Corrosive Expulsion": {
+          "name": "腐蚀性喷发",
+          "description": "<p>人偶喷出一道炼金污泥，形成15尺锥形区域。区域内的每个生物必须进行一次DC 13的敏捷豁免。豁免失败时，该生物受到7（2d6）点强酸伤害，且其速度直至其下个回合结束前减半。豁免成功时，该生物仅受到一半伤害，且不受速度减半影响。这种粘稠恶臭的液体使受影响区域直至人偶下个回合开始前变为困难地形。</p>",
+          "effects": {
+            "Slowed": {
+              "name": "缓速",
+              "description": "<p>目标的速度减半，直到其下一回合结束。</p>"
+            }
+          }
+        }
+      }
+    },
+    "Grasping Tendril": {
+      "name": "擒拿触须",
+      "tokenName": "擒拿藤蔓",
+      "description": "<p><em>参见：@UUID[Compendium.hos-monkeydm.actors.Actor.T6PYQTEBoye38AQ1]{腐臭巨兽}</em></p>",
+      "items": {
+        "Attempt to Destroy": {
+          "name": "尝试摧毁",
+          "description": "<p>一个生物也可以用一个动作进行一次[[/check]]检定，成功则摧毁该卷须。</p>",
+          "activities": {
+            "check": {
+              "condition": "其他生物执行的动作"
+            }
+          }
+        }
+      }
+    },
+    "Malach, Avatar of Steel": {
+      "name": "马拉奇，钢铁化身",
+      "tokenName": "钢铁化身",
+      "description": "<h4>玛拉奇 — 血肉天使</h4><p>曾是一个人体模型，如同无数其他模型一样由后裔之手锻造而成，玛拉奇因其对血肉种族的憎恶而发现自身被扭曲变形。它披上了一套由它所杀戮之人的皮肤精心制成的恐怖外衣，其机械形态便隐藏在这骇人的斗篷之下。它的形态是一个亵渎神明的天使，其翅膀并非由羽毛构成，而是由众多手和头组成，每一个都在伸探和抓握，是试图逃离这血肉牢笼的绝望灵魂。这个畸形生物的面容，在某个早已被遗忘的冲突中被撕裂，如今展露出其原本精致的黄金面容。</p><p>欲知更多信息，请参阅：@UUID[Compendium.sgeh-monkeydm.sgeh-notes.JournalEntry.bxwCDTgQTcxuWp83.JournalEntryPage.8TLCwgqFJBUpSMB3#malach-the-angel-of-flesh]{玛拉奇，血肉天使 Malach, Angel of Flesh}。</p><h4>玛拉奇 — 钢铁化身（梦魇位面遭遇）</h4><p>@UUID[Actor.KmcS9sBiaLFL11hl]{玛拉奇，钢铁化身 Malach, Avatar of Steel}，在遭遇开始时使用[[/item .Item.hosTwistthePath0]]{扭曲道途 Twist the Path}巢穴动作来改变战场，移动或扭曲手指状的立柱以阻挡视线并限制移动。他首先以施法者和支援角色为目标，使用[[/item .Item.hosnpcPsychicWar]]{心灵扭曲 Psychic Warp}来移位并保持战场控制。</p><p>他通过群体控制、强制移动以及使用巢穴动作来改变环境以使其对自己有利，从而持续施加压力。除非能创造战术优势，否则他会避免停留在近战范围内。</p><p>@Embed[.Item.Lcx2CpIOwJUwIpr5 inline]</p>",
+      "items": {
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "<p>如果该[[lookup @details.type.config.label lowercase]]豁免失败时，可以将其改为豁免成功。</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "耗用",
+              "condition": "豁免失败时"
+            }
+          }
+        },
+        "Deadly Miasma": {
+          "name": "死亡瘴气",
+          "description": "<p>马拉赫散发出一道10尺的心灵蒸汽灵光。非构装生物在其回合开始时处于灵光内，必须进行一次DC15的体质豁免，失败则受到13（3d8）心灵伤害并陷入&Reference[poisoned apply=false]状态直到其下一回合结束。豁免成功时，该生物受到一半伤害且不会中毒。</p>",
+          "activities": {
+            "save": {
+              "condition": "目标在其回合开始时处于射程范围内。",
+              "affects": {
+                "special": "非构装生物"
+              }
+            }
+          },
+          "effects": {
+            "Poisoned": {
+              "name": "中毒",
+              "description": "<p>目标陷入&amp;Reference[poisoned apply=false]状态直到其下一回合结束。</p>"
+            }
+          }
+        },
+        "Magic Resistance": {
+          "name": "魔法抗性",
+          "description": "<p>该[[lookup @name lowercase]]在对抗法术和其他魔法效应的豁免检定上具有<strong>优势</strong>。</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>马拉赫发动两次[[/item .hosnpcCenser0000]]攻击。</p>"
+        },
+        "Censer": {
+          "name": "香炉挥击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
+        },
+        "Create Miasma": {
+          "name": "创造瘴气",
+          "description": "<p>马拉赫在60尺内指定一点，并以其为中心创造一片15尺半径的球状遮蔽毒雾。该区域对除马拉赫外的所有生物视为重度遮蔽。任何进入该区域或在其中开始其回合的生物必须进行一次DC15的体质豁免，若失败则受到14（4d6）毒素伤害并陷入&Reference[blinded apply=false]状态直至其下一回合开始。该毒雾持续至马拉赫的下一回合结束。</p>",
+          "effects": {
+            "Blinded": {
+              "name": "目盲",
+              "description": "<p>目标陷入&amp;Reference[blinded apply=false]状态，直到其下个回合开始。</p>"
+            }
+          }
+        },
+        "Bane of Flesh": {
+          "name": "血肉灾祸术",
+          "description": "<p>玛拉基以15尺内的单一生物为目标。该目标必须进行一次DC15的体质豁免。豁免失败时，该生物受到22（5d8）毒素伤害和22（5d8）闪电伤害，并且被&amp;Reference[restrained apply=false]直到其下一回合结束。豁免成功时，该生物受到一半伤害且不会被束缚。</p>",
+          "effects": {
+            "Restrained": {
+              "name": "束缚",
+              "description": "<p>目标陷入&amp;Reference[restrained apply=false]状态，直到其下个回合结束。</p>"
+            }
+          }
+        },
+        "Censer Strike": {
+          "name": "香炉打击",
+          "description": "<p>玛拉赫发动一次[[/item .hosnpcCenser0000]]攻击。</p>"
+        },
+        "Psychic Warp": {
+          "name": "心灵扭曲",
+          "description": "<p>马拉赫传送至多30尺，至一处他可见的未占据空间。</p>"
+        },
+        "Twist the Mind (Costs 2 Actions)": {
+          "name": "扭曲心智（消耗2动作）",
+          "description": "<p>马拉赫指定一个他可见的60尺内的单一生物。目标必须进行一次DC15的感知豁免，若失败则在其下一回合结束前，其下一次攻击检定、豁免或属性检定（由马拉赫选择）具有劣势。</p>",
+          "activities": {
+            "save": {
+              "affects": {
+                "special": "可见的生物"
+              }
+            }
+          },
+          "effects": {
+            "Twisted Mind": {
+              "name": "扭曲心智",
+              "description": "<p>目标在其下一回合结束前，其下一次攻击检定、豁免或属性检定（马拉奇的选择）具有劣势。</p>"
+            }
+          }
+        },
+        "Grasping Hands": {
+          "name": "擒拿手",
+          "description": "<p>无数只手从虚空中伸出，擒向玛拉赫所选60尺内的两个生物。每个生物必须进行一次[[/save str 15 format=long]]，否则将陷入&amp;Reference[grappled]状态（逃脱[[/check ath acr dc=@abilities.str.dc]]），直到他使用另一个巢穴动作。以此方式受擒时，生物在其每回合开始时受到[[/damage 1d6 psychic]]伤害。</p>",
+          "effects": {
+            "Grappled": {
+              "name": "受擒",
+              "description": "<p>该生物陷入&Reference[grappled apply=false]（逃脱[[/check ath acr dc=@abilities.str.dc]]）直到他使用另一个巢穴动作。</p><p>以此方式受擒时，生物在其每回合开始时受到[[/damage 1d6 心灵]]伤害。</p>"
+            }
+          }
+        },
+        "Twist the Path": {
+          "name": "扭曲道途",
+          "description": "<p>玛拉赫撕裂现实的结构，并以其自身60尺内至多三个生物为目标。每个生物必须进行一次[[/save format=long]]豁免，否则将被立即传送到玛拉赫选择的、其自身60尺内一处未占据空间。</p>"
+        },
+        "Lair Actions": {
+          "name": "巢穴动作",
+          "description": "<p>在梦魇位面时，马拉赫能运用其强大的心灵力量操纵超现实环境。在先攻值20（出现等值时视为后手）时，马拉赫执行以下一项巢穴动作。他不能连续两轮使用相同的效果。</p><p>[[/item .hosGraspingHands]]{攫取之手 Grasping Hands}</p><p>@Embed[Actor.KmcS9sBiaLFL11hl.Item.hosGraspingHands inline]{攫取之手 Grasping Hands}</p><p>[[/item .hosTwistthePath0]]{扭曲道途 Twist the Path}</p><p>@Embed[Actor.KmcS9sBiaLFL11hl.Item.hosTwistthePath0 inline]{扭曲道途 Twist the Path}</p><p>[[/item .hosShattertheMas]]{粉碎面具 Shatter the Mask (Phase 2 Only)}</p><p>@Embed[Compendium.hos-monkeydm.items.Item.b5Xw5pAoy8eVlsJ7 inline]{粉碎面具 Shatter the Mask}</p>"
+        },
+        "Phase 2": {
+          "name": "第2阶段",
+          "description": "<p>当马拉的生命值降至其最大值的一半时，他[[/item .Lcx2CpIOwJUwIpr5]]{开始阶段2}并获得额外效益：</p><ul><li>他可以使用粉碎面具巢穴动作。</li><li>他获得对力场和光耀伤害的抗性。</li><li>他的速度增加30尺。</li></ul>",
+          "activities": {
+            "Toggle Phase": {
+              "name": "切换阶段",
+              "condition": "当生命值降至上限的一半时"
+            }
+          },
+          "effects": {
+            "Phase 2": {
+              "name": "第2阶段"
+            }
+          }
+        }
+      }
+    },
+    "Elias Krieg": {
+      "name": "Elias Krieg",
+      "tokenName": "伊莱亚斯",
+      "description": "<aside class=\"notable\"><p><span data-bkit-root data-bkit-asset=\"modules/hos-monkeydm/assets/actors/elias_krieg.webp\">伊莱亚斯·克里格</span>曾是一位受人尊敬的猎巫人，这是通过光耀教会仪式灌注获得力量、并被终生束缚于对抗天灾的猎人。多年来，伊莱亚斯作为不知疲倦的守卫者，在鲁亚尔纳最危险的夜晚巡逻街道。然而，在一次尤其不祥的诡秘月相下的狩猎中，伊莱亚斯身负重伤被迫撤退。他身心所受的创伤从未完全愈合，致使他陷入半疯癫状态，被渗入清醒时刻的黑暗幻象所纠缠。</p><p>如今，伊莱亚斯已成为鲁亚尔纳街头不可预测的存在，猎巫人同僚勉强允许他保有自由。在他破碎的认知中，对抗天灾者与散播天灾者之间的界限已然模糊。他以怀疑的目光看待角色们，坚信他们的行为或存在本身与城内天灾的蔓延存在关联。受偏执驱使，伊莱亚斯在阴影中尾随他们，每个夜晚都令他的理智进一步崩塌。他深信若非这些人在亲自散播天灾，便是某种黑暗势力操纵的无意识棋子。</p></aside><p><em><strong>目标。</strong></em> 伊莱亚斯企图揭露或清除所有他认定在鲁亚尔纳散播天灾的个体。他意图向光耀教会证明：这座城市最阴险的威胁并非天灾本身，而是那些窝藏灾厄之人。</p><p><em><strong>资产。</strong></em> 伊莱亚斯掌握着城市隐秘路径和安全屋的广博知识，拥有一套能增强力量与敏捷但极不稳定的畸变能力，以及猎巫人时期留下的武器工具储备——包括数瓶能暂时赋予非人韧性的污染之血。虽不再享有光耀教会的全面祝福，他仍在教团内部保留着少数同情者，偶尔为其提供情报。</p><p><em><strong>计划。</strong></em> 伊莱亚斯是个条理分明却反复无常的敌人，在谨慎观察与激烈攻击间交替行动。他运用猎巫人技艺追踪角色，沿途留下所斩杀天灾的痕迹以构陷他们。随着疑心加剧，他的行动将从暗中干扰升级为正面冲突，常在巷弄中伏击角色或趁其不备时如影随形。若计划受挫，伊莱亚斯准备启动自我增强仪式，献祭最后的人性残片以获取怪物般的力量进行最终对决。角色或可尝试与之理论，但植根于灵魂的恐惧与猜疑使他既是危险对手，亦是悲剧人物。</p><table><caption>伊莱亚斯的计划</caption><tbody><tr><td><p><strong>事件</strong></p></td><td><p>伊莱亚斯在角色途经的建筑上刻划与天灾袭击相关的抓痕，散布他们引致黑暗降临此地的谣言。</p></td></tr><tr><td><p><strong>动作</strong></p></td><td><p>他穿行城市巷道尾随角色，趁其不备在居所或服饰上留下天灾污染的血迹。</p></td></tr><tr><td><p><strong>动作</strong></p></td><td><p>伊莱亚斯聚集小股疑心重重的市民，暗中散播角色身负“诅咒”应当避而远之的言论。</p></td></tr><tr><td><p><strong>事件</strong></p></td><td><p>血月期间，伊莱亚斯在本地街区煽动恐慌，宣称天灾活动激增与角色现身时间吻合。居民因此变得恐惧且充满敌意。</p></td></tr><tr><td><p><strong>动作</strong></p></td><td><p>若角色试图对抗或驱逐他，伊莱亚斯将发动绝望突袭，运用猎巫人工具与药剂强化自身，将遭遇战转化为野蛮狂暴的猛攻。</p></td></tr></tbody></table>",
+      "items": {
+        "Encircling Strikes": {
+          "name": "绕后攻击",
+          "description": "<p>每回合一次，当猎鸥在自身回合开始时所在的位置从一个生物的后侧发动攻击时，或者从一个面对自身盟友的生物的后侧发动攻击时，每次命中额外造成 3（1D6）伤害。</p><section class=\"secret\" id=\"secret-swwjnaZACXC0w7Jd\" class=\"secret\"><p><em>FVTT Note：绕后打击的伤害在刀刃和火枪攻击作为次要攻击行动实现。</em></p></section>"
+        },
+        "Evasion": {
+          "name": "反射闪避",
+          "description": "猎鸥受敏捷豁免成功伤害减半的效应影响时，若其豁免成功则不受伤害，豁免失败时只受一半伤害。"
+        },
+        "Flexible Combatant": {
+          "name": "灵巧武艺",
+          "description": "当猎鸥拔出或装填一把武器时，它可以用另一只手拔出或装填另一把武器。它无需空闲手就可以给具有装填， 再装填，或者弹膛特性的武器换弹。此外，当猎人一手握持单手近战武器一手握持单手远程武器时，它使用远程武器攻击5尺内敌对生物不具有劣势。"
+        },
+        "Hemorrhaging Wound": {
+          "name": "出血重伤",
+          "description": "猎鸥在第一轮战斗中无法使用此特性。当猎鸥用斩击命中一个生物时，它会撕开一个险恶的伤口。每当目标的回合结束时，该生物损失 17（5D6）生命值。每次目标受到该伤害时，其在下一回合结束时受到的伤害骰数减一，当骰数减少到 0 时，出血停止。一个流血的生物可以在回合结束时，在受到该回合流血造成的伤害后，进行一次体质豁免检定，成功则结束流血效果。DC 等于 15+剩余伤害骰数量的一半（向下取整）。如果猎鸥用一次斩击命中一个流血生物，目标不会获得一个新的伤口。但受到的流血伤害重置为 5D6。",
+          "activities": {
+            "save": {
+              "condition": "伤口生物回合结束"
+            },
+            "Wound Target": {
+              "name": "伤口目标",
+              "condition": "当猎鸥用斩击命中一个生物时"
+            }
+          },
+          "effects": {
+            "Hemorrhaging Wound": {
+              "name": "出血重伤"
+            }
+          }
+        },
+        "Magic Weapons": {
+          "name": "魔法武器",
+          "description": "猎鸥的武器攻击视为魔法攻击。"
+        },
+        "Piercing Gaze": {
+          "name": "灵视",
+          "description": "猎鸥获得黑暗视觉 120 尺和看破隐形效果 1 小时（不消耗动作）。",
+          "activities": {
+            "Activate": {
+              "name": "激活"
+            }
+          },
+          "effects": {
+            "Darkvision (120 ft)": {
+              "name": "黑暗视觉（120 尺）"
+            }
+          }
+        },
+        "Sharp Senses": {
+          "name": "敏锐感官",
+          "description": "<p>每当猎鸥使用滑步，武器招架，或者追猎处决时，他在下一次攻击检定中获得优势。</p>"
+        },
+        "Special Equipment": {
+          "name": "特殊装备",
+          "description": "<p>猎鸥携带了一把@UUID[Compendium.sgeh-monkeydm.sgeh-items.Item.7NpVk8G68bFEVNHJ]{幻梦处刑者}。或者它可以携带一柄@UUID[Compendium.sgeh-monkeydm.sgeh-items.Item.VFxlhOK4tCmIxvqB]{孤儿的摇篮}，一件@UUID[Compendium.sgeh-monkeydm.sgeh-items.Item.gxWg5o6cJRHf5WPQ]{狡蛇鞭刃}，或一把@UUID[Compendium.sgeh-monkeydm.sgeh-items.Item.eCzDLROscYXnXD3k]{肉勾镰铳}。它的斩击和相关数据被用以替代它的武器的一次攻击取代。</p>"
+        },
+        "Chasing Finisher": {
+          "name": "追猎处决",
+          "description": "猎鸥移动 40 尺并发动一次[[/item .vv6faah0iYVBKeKI]]攻击。命中时，目标额外受到 [[/damage average]]伤害。",
+          "activities": {
+            "damage": {
+              "affects": {
+                "special": "未占据"
+              }
+            }
+          }
+        },
+        "Dodge Step": {
+          "name": "滑步",
+          "description": "<p>当猎鸥被一个它能看到的生物攻击时，如果它剩余的速度不为 0，猎鸥能够移动至多 10 尺而不会引发借机攻击。与此同时，猎鸥进行一次敏捷豁免检定，DC等于其攻击检定的结果。成功则完全闪避该攻击且攻击未命中。失败则该攻击命中时对你造成的伤害降低一半。</p>",
+          "activities": {
+            "Attempt Dodge": {
+              "name": "尝试回避",
+              "condition": "当猎鸥被一个它能看到的生物攻击时"
+            }
+          }
+        },
+        "Weapon Parry": {
+          "name": "武器招架",
+          "description": "猎鸥射出一枚子弹来打断周围60尺范围内它能看到的一次攻击。为此，猎鸥必须携带一柄火器。该效果降低本次攻击 13（1D10 + 8）伤害。如果本次攻击伤害被降低至 0，攻击者被震慑至其下一回合开始，因为子弹命中了他的神经中枢。",
+          "activities": {
+            "Deflect": {
+              "name": "偏转",
+              "roll": "伤害抵抗",
+              "condition": "由一名可见生物发起的一次攻击"
+            }
+          },
+          "effects": {
+            "Stunned": {
+              "name": "震慑",
+              "description": "<p>你陷入&Reference[Blinded apply=false]状态直至你的下一回合结束。</p>"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "猎鸥发动三次斩击攻击。如果它携带了一柄火器，他也可以发动一次火器攻击。"
+        },
+        "Blade": {
+          "name": "斩击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>",
+          "activities": {
+            "Encircling Strike": {
+              "name": "包围打击"
+            }
+          }
+        },
+        "Firearm": {
+          "name": "火器",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>",
+          "activities": {
+            "Encircling Strike": {
+              "name": "包围打击"
+            }
+          }
+        }
+      }
+    },
+    "Verdant Reaper": {
+      "name": "翠绿收割者",
+      "tokenName": "翠绿收割者",
+      "items": {
+        "Toxic Aura": {
+          "name": "毒性灵光",
+          "description": "<p>任何在翠绿收割者10尺范围内开始其回合的生物必须进行一次[[/save format=long]]，否则受到[[/damage average]]伤害并陷入&amp;Reference[poisoned apply=false]状态直至其下个回合开始。</p>",
+          "activities": {
+            "save": {
+              "condition": "一个生物在其射程内开始其回合。"
+            }
+          },
+          "effects": {
+            "Poisoned": {
+              "name": "中毒",
+              "description": "<p>该生物陷入&amp;Reference[poisoned apply=false]状态，直至其下一回合开始。</p>"
+            }
+          }
+        },
+        "Regeneration": {
+          "name": "再生",
+          "description": "<p>若该翠绿收割者至少有1点生命值，则在其回合开始时恢复[[/item 医疗术heal]]{10 生命值}。</p>",
+          "activities": {
+            "heal": {
+              "condition": "拥有至少1点生命值"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>该翠绿收割者发动四次[[/item .hosnpcTendril000]]{卷须 Tendril}攻击并使用[[/item .hosnpcReel000000]]{拖拽 Reel}。</p>"
+        },
+        "Tendril": {
+          "name": "卷须",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。目标受擒（逃脱[[/check ath acr dc=@abilities.str.dc]]）。该效果最多可同时作用于四个生物。</p>",
+          "effects": {
+            "Grappled": {
+              "name": "受擒",
+              "description": "<p>逃脱[[/check ath acr 15 format=long]]。</p>"
+            }
+          }
+        },
+        "Thorn Burst": {
+          "name": "荆棘迸裂",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标必须进行一次[[/save format=long]]，否则将陷入&amp;Reference[poisoned apply=false]状态1分钟。以此方式中毒期间，目标的速度降低5尺。</p>",
+          "activities": {
+            "save": {
+              "condition": "命中时"
+            }
+          },
+          "effects": {
+            "Poisoned": {
+              "name": "中毒",
+              "description": "<p>目标陷入&amp;Reference[poisoned apply=false]状态，持续1分钟。以此方式中毒期间，目标的速度减少5尺。</p>"
+            }
+          }
+        },
+        "Reel": {
+          "name": "拖拽",
+          "description": "<p>该翠绿收割者将每个被它擒抱的生物径直向它拉近最多25尺。</p>",
+          "activities": {
+            "utility": {
+              "affects": {
+                "special": "每个受擒生物"
+              }
+            }
+          }
+        },
+        "Acidic Eruption": {
+          "name": "酸性喷发",
+          "description": "<p>翠绿收割者喷发出一股酸性汁液，形成一个15尺锥形区域。该区域在翠绿收割者的下个回合结束前变为困难地形。该区域内的每个生物必须进行一次[[/save format=long]]，豁免失败则受到[[/damage average]]伤害，豁免成功则伤害减半。</p>"
+        }
+      }
+    },
+    "Lucien Valemare": {
+      "name": "Lucien Valemare",
+      "tokenName": "Lucien",
+      "description": "<div class=\"notable\"><p>瓦勒梅尔家族曾是卢亚尔纳小贵族阶层的一员，属于强大的后裔派系。然而，一场丑闻导致他们失势，被上流社会驱逐。失去财富与地位后，这个家族被迫陷入贫困，沦落到在城市底层靠残羹剩饭维生。疾病很快夺走了大部分家族成员的性命，只留下年轻的<span data-bkit-root data-bkit-asset=\"modules/hos-monkeydm/assets/art/lucien_valemare.webp\">卢西恩</span>幸存。绝望之下，他流落街头，磨练窃贼和扒手的技艺，直到赢得名声，最终在黑市中谋得打手的职位。</p><p>如今已成年的卢西恩，决心在他唯一熟知的世界里夺取权力。通过武力、威吓和自己的狡诈，他相信能重振家族荣誉——不是在上流社会，而是通过掌控城市的地下世界。卢西恩将任何扰乱市场稳定的人，尤其是爱管闲事的冒险者，视为对自己计划的威胁。</p></div><p><em><strong>目标。</strong></em> 卢西恩力求在黑市中崭露头角，最终希望掌控其交易，包括违禁品流通、禁忌神器以及卢亚尔纳权贵们不惜重金掩盖的信息。</p><p><em><strong>资产。</strong></em> 卢西恩拥有一支规模不大但绝对忠诚的打手团队，对城市犯罪网络了如指掌，深刻理解卢亚尔纳的权力玩家，并与地下世界保持联系，这些联系人向他提供走私品和秘密。</p><p><em><strong>计划。</strong></em> 卢西恩有条不紊地扩张在黑市中的影响。他在关键区域安插眼线监视竞争者，通过勒索和威吓收集本地商人的把柄，并暗中策划骚乱以转移市政官员对市场交易的注意力。如果角色们干涉黑市——无论是破坏交易还是引起对其活动的关注——卢西恩都会视此为个人侮辱。他开始针对他们的盟友，或散布谣言在市场圈子里败坏他们的信誉。若无法维持对行动的控制，卢西恩准备诉诸暴力，利用黑市的地下关系网反击诋毁者。</p><table><caption>卢西恩的计划</caption><tbody><tr><td><p><strong>事件</strong></p></td><td><p>地下世界打手开始勒索本地摊贩，激起城中商人的不满，并确保拒绝保护者遭遇货物\"错置\"。</p></td></tr><tr><td><p><strong>动作</strong></p></td><td><p>黑市中流传着卢西恩掌握某些后裔家族珍贵情报的谣言，这增加了他在权力追求者中的影响。</p></td></tr><tr><td><p><strong>动作</strong></p></td><td><p>卢西恩安插伪证将角色们与近期黑市突袭事件关联，企图破坏他们的声誉并扫清障碍。</p></td></tr><tr><td><p><strong>事件</strong></p></td><td><p>涉及稀有违禁品的大型交易消息传开。卢西恩确保交易顺利进行，以此巩固自己在市场层级中的可靠地位。</p></td></tr><tr><td><p><strong>动作</strong></p></td><td><p>若角色再次干涉，卢西恩将策划直接攻击，派遣打手尾随并威胁队伍，迫使他们重新考虑插手市场事务。</p></td></tr></tbody></table>",
+      "items": {
+        "Cunning Action": {
+          "name": "灵巧动作",
+          "description": "<p>间谍在其自己回合内可以用一个附赠动作执行疾走，撤离，或躲藏动作。</p>"
+        },
+        "Sneak Attack": {
+          "name": "Sneak Attack",
+          "description": "<p>间谍对目标造成伤害时，如果其攻击检定具有优势，或者如果其攻击检定没有劣势且它在该目标身边 5 尺范围内有一个未处于失能状态的盟友。满足以上条件时，间谍造成额外 7（2d6）点伤害。</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>间谍发动两次近战攻击。</p>"
+        },
+        "Shortsword": {
+          "name": "短剑",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
+        },
+        "Hand Crossbow": {
+          "name": "手弩",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
+        }
+      }
+    },
+    "Barbed Horror": {
+      "name": "带刺惊骇",
+      "tokenName": "倒刺惊惧怪",
+      "description": "<p>该生物的触手上布满了锋利且分泌毒素的倒刺。它的皮肤呈现出深红色与紫色的交织图案，而倒刺发出的险恶刮擦声在水中回荡，显得不祥。</p><ul><li><em><strong>新动作：</strong></em> @UUID[.Item.hosVenomousBarbs]{剧毒倒刺（充能 5-6）}</li></ul>",
+      "items": {
+        "Hold Breath": {
+          "name": "屏息",
+          "description": "<p>章鱼离开水后可以屏住呼吸1小时。</p>"
+        },
+        "Underwater Camouflage": {
+          "name": "水下伪装",
+          "description": "<p>该章鱼在水下进行{敏捷（隐匿）检定 Dexterity (Stealth) checks}时具有<strong>优势</strong>。</p>"
+        },
+        "Water Breathing": {
+          "name": "水下呼吸",
+          "description": "<p>章鱼只能在水中呼吸。</p>"
+        },
+        "Ink Cloud": {
+          "name": "墨水云",
+          "description": "<p>如果章鱼处于水下underwater，一个20尺半径的墨汁云雾会以它为中心向四周扩散。该区域处于重度遮蔽状态，持续1分钟，但强劲的水流可以驱散墨汁。释放墨汁后，章鱼可以使用附赠动作执行疾走动作。在短休或长休后恢复。</p>"
+        },
+        "Tentacles": {
+          "name": "触须",
+          "description": "<p>[[/attack 攻击]]。[[/damage 伤害]]。</p><p>如果目标是一个生物，它将陷入&amp;Reference[grappled]状态（逃脱DC 16）。此受擒状态持续期间，目标同时处于&amp;Reference[restrained]状态，且章鱼无法对其它目标使用触须。</p>"
+        },
+        "Venomous Barbs": {
+          "name": "毒液倒刺",
+          "description": "<p>倒刺恐魔发射出一股剃刀般锋利的倒刺流，形成一条30尺长、5尺宽的线状区域。该区域内的每个生物必须进行一次[[/save format=long]]豁免。若豁免失败，该生物受到[[/damage]]伤害，并因毒液而陷入&amp;Reference[麻痹]状态直至其下一回合结束。若豁免成功，则其受到一半伤害。</p>",
+          "effects": {
+            "Paralyzed": {
+              "name": "麻痹",
+              "description": "<p>该生物因毒液而陷入&amp;Reference[paralyzed apply=false]状态，直至其下个回合结束。</p>"
+            }
+          }
+        }
+      }
+    },
+    "Bioluminescent Behemoth": {
+      "name": "生物光巨兽",
+      "tokenName": "生物光巨兽",
+      "description": "<p>体型占据主导地位，其触手伸展至30尺长，装饰着令人难忘的生物光光芒。它那过大的、发光的眼睛穿透黑暗，在海浪下营造出一种令人不安的存在感。</p><ul><li><em><strong>新动作：</strong></em> @UUID[.Item.hosLuminousStrik]{光辉打击 Luminous Strike (充能 Recharge 5-6)}</li></ul>",
+      "items": {
+        "Hold Breath": {
+          "name": "屏息",
+          "description": "<p>章鱼离开水时，可以屏息1小时。</p>"
+        },
+        "Underwater Camouflage": {
+          "name": "水下伪装",
+          "description": "<p>该章鱼在水下underwater进行敏捷（隐匿）检定时具有<strong>优势</strong>。</p>"
+        },
+        "Water Breathing": {
+          "name": "水下呼吸",
+          "description": "<p>章鱼只能在水中呼吸。</p>"
+        },
+        "Ink Cloud": {
+          "name": "墨水云",
+          "description": "<p>如果章鱼处于水下underwater，则其周围会扩散出一片半径20尺的墨汁云雾。该区域将处于重度遮蔽状态，持续1分钟，但强劲的水流可以驱散墨汁。释放墨汁后，章鱼可以以一个附赠动作执行疾走动作。在短休或长休后恢复。</p>"
+        },
+        "Tentacles": {
+          "name": "触须",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p><p>如果目标是一个生物，它将陷入&amp;Reference[grappled]状态（逃脱DC 16）。此受擒状态结束前，目标处于&amp;Reference[restrained]状态，且章鱼无法对其它目标使用触须。</p>"
+        },
+        "Luminous Strike": {
+          "name": "光辉打击",
+          "description": "<p>该巨兽发动一次[[/item .yOZK7sWcCRFmuAxz]]{触须 Tentacle}攻击。若命中，触须会迸发一道致盲的闪光且目标必须进行一次DC15的体质豁免，豁免失败则陷入目盲状态直至其下个回合结束。</p>",
+          "activities": {
+            "On Hit Save": {
+              "name": "命中时豁免",
+              "affects": {
+                "special": "被触须攻击命中的目标"
+              }
+            }
+          },
+          "effects": {
+            "Blinded": {
+              "name": "目盲",
+              "description": "<p>目标陷入&amp;Reference[blinded apply=false]状态，直到其下个回合结束。</p>"
+            }
+          }
+        }
+      }
+    },
+    "Captain Thalvyr Mossheart": {
+      "name": "萨尔维尔·莫斯哈特船长",
+      "tokenName": "莫斯哈特船长",
+      "items": {
+        "Rooted Command": {
+          "name": "根植命令术",
+          "description": "<p>萨尔维尔所选15尺内的盟友生物，在进行对抗被移动或应击倒地的豁免检定时具有优势。</p>"
+        },
+        "Sporewake": {
+          "name": "孢子苏醒",
+          "description": "<p>当萨尔维尔的生命值降至其生命值上限的一半以下时，他会释放出一阵孢子爆发。在他周围10尺范围内由他选择的每个生物必须进行一次DC14的体质豁免，豁免失败则陷入目盲状态，持续至其下个回合结束。</p>",
+          "activities": {
+            "save": {
+              "condition": "当生命值降至其最大值的一半以下时",
+              "affects": {
+                "special": "其选择的每个生物"
+              }
+            }
+          },
+          "effects": {
+            "Blinded": {
+              "name": "目盲",
+              "description": "<p>目标陷入&amp;Reference[blinded apply=false]状态，直到其下个回合结束。</p>"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>萨尔维尔发动两次[[/item .hosnpcThornGlaiv]]攻击。他可以将其中一次攻击替换为[[/item .hosnpcPullhook00]]攻击。</p>"
+        },
+        "Pullhook": {
+          "name": "拉钩",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。目标必须进行一次DC14的力量豁免，豁免失败则被拉向Thalvyr 10尺并应击倒地。</p>",
+          "activities": {
+            "save": {
+              "condition": "使用拉钩命中时",
+              "chatFlavor": "豁免失败则被拉动10尺并&Reference[prone]。"
+            }
+          }
+        },
+        "Thorn Glaive": {
+          "name": "棘刺长柄刀",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。如果目标在其下一回合结束前移动超过 10 尺，它就会因嵌入的棘刺而受到 [[/damage 1d10 穿刺 平均]] 伤害。</p>",
+          "effects": {
+            "Lodged Thorns": {
+              "name": "棘刺缠身",
+              "description": "<p>如果目标在其下一回合结束前移动超过10尺，它将因嵌入的棘刺而受到[[/damage 1d10 piercing average]]伤害。</p>"
+            }
+          }
+        },
+        "Groundlock": {
+          "name": "地缚锁",
+          "description": "<p>树根在萨尔维尔能看见的30尺内一点为中心，10尺半径范围内爆发。该区域成为{困难地形 difficult terrain}，直到萨尔维尔的下个回合结束。区域内的每个生物必须进行一次DC14的{力量豁免 Strength saving throw}，否则将被&amp;Reference[restrained apply=false]直到其下个回合结束。</p>",
+          "effects": {
+            "Restrained": {
+              "name": "束缚",
+              "description": "<p>目标被&amp;Reference[restrained apply=false]直到其下个回合结束。</p>"
+            }
+          }
+        },
+        "Commanding Bellow": {
+          "name": "命令咆哮",
+          "description": "<p>萨尔维尔向他30尺内可见的一名盟友发出一声振奋人心的命令。该生物可以立即移动至多其{速度 Speed}一半的距离，且不触发借机攻击。</p>"
+        },
+        "Sporeguard": {
+          "name": "孢子卫士",
+          "description": "<p>当萨尔维尔能看见的一个生物命中他10尺内的一个盟友生物时，他会向攻击者喷射一阵孢子。攻击者必须进行一次DC14的体质豁免，豁免失败则其在下个回合结束前的下一次攻击检定具有劣势。</p>",
+          "activities": {
+            "save": {
+              "condition": "可见生物命中射程内的一名友方生物。"
+            }
+          },
+          "effects": {
+            "Spore Disadvantage": {
+              "name": "孢子劣势",
+              "description": "<p>目标在其下个回合结束前进行的下一次攻击检定具有劣势。</p>"
+            }
+          }
+        }
+      }
+    },
+    "Augmented Manikin": {
+      "name": "强化人偶",
+      "tokenName": "强化人偶",
+      "description": "<p>在诺斯瑞斯君主与马拉赫达成交易后，他所有的法杖和守卫都被替换为效忠血肉天使的人偶。它们保护着庄园以及马拉赫对精灵君主的利益。其中部分人偶是马拉赫军队的第一代产物，这些造物在经历了用神秘邪异物质进行的残酷强化过程后幸存下来。虽然它们保持着普通人偶的外表，但其内部已被注入黑暗能量，使它们的能力远超最初的设计。</p>",
+      "items": {
+        "Antimagic Susceptibility": {
+          "name": "反魔法易感",
+          "description": "<p>该人体模型在 <em>反魔法力场</em> 区域内处于失能状态。若成为 <em>解除魔法</em> 的目标，该人体模型必须进行一次[[/save con format=long]]对抗施法者的法术豁免DC，否则将陷入昏迷状态1分钟。</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>该木偶人发动两次[[/item .vUqKQJ1GGWbKg6cX]]{近战 melee}攻击。</p>"
+        },
+        "Slam": {
+          "name": "粗枝猛击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
+        }
+      }
+    },
+    "Corpse Bloom": {
+      "name": "尸身花开节",
+      "tokenName": "尸花花开节",
+      "items": {
+        "Madness Spores": {
+          "name": "疯狂孢子",
+          "description": "<p>一个生物若在其回合开始时处于尸花10尺范围内，必须进行一次[[/save wis 14 format=long]]，否则将获得@UUID[Compendium.hos-monkeydm.rules.JournalEntry.llqovT3sE4aTomVW.JournalEntryPage.MadnessEffects1w]{短暂性疯狂 short-term madness}，持续1小时。</p><p>受到@UUID[JournalEntry.G1WnzuneZFo0Jr6x.JournalEntryPage.PDhCkJzDPgnBIJZJ#sorrowfruit]{悲伤果 Sorrowfruit}影响的生物在进行此豁免检定时具有<strong>优势</strong>。</p>",
+          "activities": {
+            "save": {
+              "condition": "一个生物在其回合开始时处于范围内。"
+            }
+          }
+        },
+        "Reactive Defense": {
+          "name": "反应防御",
+          "description": "<p>每当花开节或其根须受到任何伤害时，它会以反应防御进行回应。掷一次[[/r 1d4]]（或从下表中选择一项反应）以确定其回应方式。</p><p>@Embed[Compendium.hos-monkeydm.tables.RollTable.hosCorpseBloomRe rollable inline resultLabel=\"防御\"]</p>"
+        },
+        "1: Spore Burst": {
+          "name": "1: 孢子爆发",
+          "description": "<p>孢子在以花开节为中心的15尺半径范围内向外爆发。该区域内的每个生物必须进行一次[[/save format=long]]豁免，否则将陷入&Reference[poisoned apply=false]状态1小时。</p>",
+          "effects": {
+            "Poisoned": {
+              "name": "中毒",
+              "description": "<p>该生物陷入&Reference[poisoned apply=false]状态，持续1小时。</p>"
+            }
+          }
+        },
+        "2: Acidic Sap": {
+          "name": "2: 酸性树液",
+          "description": "<p>该{花开节 Bloom}释放出一阵猛烈的滑腻强酸汁液，影响其周围15尺{半径 radius}内的区域，使该区域成为&amp;Reference[difficult terrain]{困难地形 difficult terrain}，持续1{分钟 minute}。爆发时区域内的每个{生物 Creature}必须进行一次[[/save format=long]]。{豁免失败 On a failed save}，该{生物 Creature}受到[[/damage]]{伤害 damage}并被燃烧的残留物覆盖，在其每个{回合 turn}开始时受到[[/damage 1d6 acid]]{伤害 damage}。被残留物覆盖的{生物 Creature}可以使用其{动作 Action}清洗或刮掉强酸来提前结束该持续{伤害 damage}。若豁免成功，该{生物 Creature}仅受到一半{伤害 damage}且不会被残留物覆盖。</p>",
+          "effects": {
+            "Acidic Residue": {
+              "name": "酸性残留",
+              "description": "<p>该生物被燃烧的残留物覆盖，在其每回合开始时受到[[/damage 1d6 acid]]伤害。被残留物覆盖的生物可以用其动作清洗或刮除强酸，以提前结束该持续伤害。</p>"
+            }
+          }
+        },
+        "3: Animate Corpse": {
+          "name": "3：活化尸体",
+          "description": "<p>该花开节释放出一系列孢子，暂时活化它所寄生的[[/r 1d4]]具尸体。投掷一个[[/r 1d2]]：若骰出1，尸体变为@UUID[Actor.N2wGCLgkXKZyFZrD]{丧尸}；若骰出2，尸体变为@UUID[Actor.ihpVBF3HRYt6KWdE]{骷髅}。</p>",
+          "activities": {
+            "3: Animate Corpses": {
+              "name": "3：活化尸体",
+              "chatFlavor": "尸体骰：[[1d2]] (1 = 丧尸, 2 = 骷髅)"
+            }
+          }
+        },
+        "4: Snaking Root": {
+          "name": "4：蛇行根",
+          "description": "<p>一条蜿蜒的根须从花开节的基部爆出，射向30尺内的一个生物。该生物必须进行一次[[/save format=long]]。豁免失败，则卷须强行钻入生物喉咙并缠绕其肢体。受此影响期间，该生物陷入&amp;Reference[incapacitated apply=false]状态，并成为花开节的傀儡，持续1分钟。</p><p>在该生物的每个回合，尸花控制其移动，并迫使其对花开节选择的目标发动一次近战武器攻击。该生物无法执行其他动作、反应或附加动作。尸花能控制的生物数量等于其剩余的锚定根须数。在每个自己的回合结束时，受影响生物可以进行一次[[/save str 15 format=long]]，成功则终止自身所受效应。若该生物受到任何伤害，此效应也会提前终止。</p>",
+          "effects": {
+            "Enthralled": {
+              "name": "着迷",
+              "description": "<p>受影响期间，该生物陷入&amp;Reference[incapacitated apply=false]状态，并成为花开节的傀儡，持续1分钟。在该生物的每个回合，尸花控制其移动并迫使其对花开节选择的目标发动一次近战武器攻击。该生物无法执行其他动作、反应或加值动作。尸花能控制的生物数量等于其剩余的锚根数。在每个自己的回合结束时，受影响生物可以进行一次[[/save str 15 format=long]]，成功则自身终止该效应。若该生物受到任何伤害，效应也会提前终止。</p>"
+            }
+          }
+        },
+        "Crystallized Bloom Core": {
+          "name": "结晶花开节核心"
+        }
+      }
+    },
+    "Captain Annabelle Laroche": {
+      "name": "安娜贝尔·拉罗什船长",
+      "tokenName": "拉罗什船长",
+      "description": "<p>作为光辉教会精英狂热者秘密教派灰袍圣殿骑士的<span data-bkit-root data-bkit-asset=\"modules/hos-monkeydm/assets/actors/capt_annabella_laroche.webp\">船长 Annabella Laroche</span>，她是一位严厉而坚定的雕像般女子，冰蓝色的眼眸不流露丝毫情感。每只眼睛内部都纹有符文。她的护甲是一件艺术品，设计精巧而实用，她携带着一柄刻有天界语铭文“净化异端”的托梦术dream行刑者。</p><p><strong>人格特质。</strong> “纪律是一切伟业的支柱；失去它，我们与野兽无异。”</p><p><strong>牵绊。</strong> “法律是我的罗盘，我绝不偏离。”</p><p><strong>缺陷。</strong> “仁慈是弱者的标志；正义非黑即白。”</p>",
+      "items": {
+        "Encircling Strikes": {
+          "name": "绕后攻击",
+          "description": "<p>每回合一次，当游骑兵从生物起始回合位置的对面发动攻击，或从盟友对面的位置攻击生物时，它在命中时造成额外3（1d6）点伤害。</p><div><section class=\"secret\" id=\"secret-swwjnaZACXC0w7Jd\"><p><em>FVTT 备注：环击打击在刀锋和火器武器中作为次要攻击行动实现。</em></p></section></div>"
+        },
+        "Evasion": {
+          "name": "反射闪避",
+          "description": "<p>如果游侠受到可以由成功通过{敏捷豁免 Dexterity saving throw}来使伤害减半的效应影响，该游侠在成功通过豁免时改为不受任何伤害，失败则受到一半伤害。</p>"
+        },
+        "Flexible Combatant": {
+          "name": "灵巧武艺",
+          "description": "<p>当猎兵拔出或入鞘一把武器时，它可以用另一只手拔出或入鞘另一把武器。它可以在没有空手的情况下为具有装填、重装或枪管词条的武器装填。此外，如果猎兵一只手携带一把单手近战武器，另一只手携带一把单手射程武器，它在距离敌对生物5尺内使用射程武器进行攻击检定时不会因此承受劣势。</p>"
+        },
+        "Hemorrhaging Wound": {
+          "name": "出血重伤",
+          "description": "<p>猎兵无法在战斗的第一轮使用此特性。当猎兵用刀锋攻击命中一个生物时，它会撕开一道恶毒的伤口。在每个目标自己的回合结束时，它失去17（5d6）点生命值。每当目标因此效果受到伤害时，它在下一回合结束时受到的伤害骰数减少一个，当骰数减少到0时流血停止。一个流血生物可以在每个自己的回合结束时，在受到伤害后，进行一次体质豁免，豁免成功则结束该效果。DC等于15 + 剩余伤害骰数的一半（向下取整）。如果猎兵用刀锋攻击命中一个流血的目标，目标不会获得新的伤口，但其伤口的伤害重置为5d6。</p>",
+          "activities": {
+            "save": {
+              "condition": "伤口生物回合结束"
+            },
+            "Wound Target": {
+              "name": "伤口目标",
+              "condition": "当猎鸥用斩击命中一个生物时"
+            }
+          },
+          "effects": {
+            "Hemorrhaging Wound": {
+              "name": "出血重伤"
+            }
+          }
+        },
+        "Magic Weapons": {
+          "name": "魔法武器",
+          "description": "<p>游侠的武器攻击是魔法攻击。</p>"
+        },
+        "Piercing Gaze": {
+          "name": "灵视",
+          "description": "猎鸥获得黑暗视觉 120 尺和看破隐形效果 1 小时（不消耗动作）。",
+          "activities": {
+            "Activate": {
+              "name": "激活"
+            }
+          },
+          "effects": {
+            "Darkvision (120 ft)": {
+              "name": "黑暗视觉（120 尺）"
+            }
+          }
+        },
+        "Sharp Senses": {
+          "name": "敏锐感官",
+          "description": "<p>每当猎鸥使用滑步，武器招架，或者追猎处决时，他在下一次攻击检定中获得优势。</p>"
+        },
+        "Chasing Finisher": {
+          "name": "追猎处决",
+          "description": "<p>该猎兵移动40尺并发动一次[[/item .fLu1jCV8OnAweGm4 activity=8AqdhGI99r7KN1ue]]{刀锋}攻击。若命中，目标受到额外[[/damage average]]点伤害。</p>",
+          "activities": {
+            "damage": {
+              "affects": {
+                "special": "未占据"
+              }
+            }
+          }
+        },
+        "Dodge Step": {
+          "name": "滑步",
+          "description": "<p>当猎鸥被一个它能看到的生物攻击时，如果它剩余的速度不为 0，猎鸥能够移动至多 10 尺而不会引发借机攻击。与此同时，猎鸥进行一次敏捷豁免检定，DC等于其攻击检定的结果。成功则完全闪避该攻击且攻击未命中。失败则该攻击命中时对你造成的伤害降低一半。</p>",
+          "activities": {
+            "Attempt Dodge": {
+              "name": "尝试回避",
+              "condition": "当猎鸥被一个它能看到的生物攻击时"
+            }
+          }
+        },
+        "Weapon Parry": {
+          "name": "武器招架",
+          "description": "猎鸥射出一枚子弹来打断周围60尺范围内它能看到的一次攻击。为此，猎鸥必须携带一柄火器。该效果降低本次攻击 13（1D10 + 8）伤害。如果本次攻击伤害被降低至 0，攻击者被震慑至其下一回合开始，因为子弹命中了他的神经中枢。",
+          "activities": {
+            "Deflect": {
+              "name": "偏转",
+              "roll": "伤害抵抗",
+              "condition": "由一名可见生物发起的一次攻击"
+            }
+          },
+          "effects": {
+            "Stunned": {
+              "name": "震慑",
+              "description": "<p>你陷入&Reference[Blinded apply=false]状态直至你的下一回合结束。</p>"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>拉罗什发动两次[[/item .fLu1jCV8OnAweGm4]]{托梦术dream Executioner}攻击和一次[[/item .8Ftg0vGJFpyJ1o3G]]{火器 Firearm}攻击。</p>"
+        },
+        "Firearm": {
+          "name": "火器",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>",
+          "activities": {
+            "Encircling Strike": {
+              "name": "包围打击"
+            }
+          }
+        },
+        "Dream Executioner": {
+          "name": "幻梦处刑者",
+          "description": "<p>拉罗什挥舞着一把 @UUID[Compendium.sgeh-monkeydm.sgeh-items.Item.7NpVk8G68bFEVNHJ]{托梦行刑者 dream executioner}，其中容纳着3个灵魂。该武器在两种形态下均使攻击和伤害掷骰获得+1加值（已计入数据栏）。</p>"
+        },
+        "fLu1jCV8OnAweGm4": {
+          "name": "幻梦处刑者",
+          "description": "<div><div class=\"fvtt advice\"><figure class=\"icon\"><img class=\"round\" src=\"icons/weapons/maces/mace-spiked-skull.webp\" /></figure><article><h4><strong>巨锤形态</strong></h4><p><em>近战武器攻击</em>: +8 命中, 触及5尺, 单一目标。 <em>命中</em>: 15 (2d8 + 5) 钝击伤害。如果目标是一个生物, 拉罗什可以消耗一个收割的灵魂来触发一道鬼火爆炸。</p><p>她选择的15尺范围内的每个生物必须进行一次DC 16 敏捷豁免。豁免失败, 该生物受到18 (4d8) 伤害, 伤害在光耀和暗蚀伤害之间平均分配。豁免成功, 该生物受到一半伤害。亡灵生物自动豁免失败。</p></article></div><div class=\"fvtt advice\"><figure class=\"icon\"><img class=\"round\" src=\"icons/weapons/sickles/scythe-bone-green.webp\" /></figure><article><h4><strong>镰刀形态</strong></h4><p><em>近战武器攻击:</em> +8 命中, 触及10尺, 单一目标。 命中: 12 (2d6 + 5) 挥砍伤害。如果目标是一个生物, 拉罗什可以以原始目标5尺范围内且在触及范围内的另一个生物为目标。</p><p>如果原始攻击检定会命中第二个生物, 该生物受到等于第一次命中造成伤害一半的挥砍伤害。使用此特性后, 拉罗什的速度直到她的回合结束前减半。</p></article></div></div>",
+          "activities": {
+            "Soul Explosion": {
+              "name": "灵魂爆破",
+              "condition": "你用这把巨槌命中一个生物",
+              "chatFlavor": "亡灵自动失败"
+            },
+            "Encircling Strike": {
+              "name": "包围打击"
+            }
+          }
+        },
+        "Radiant Bulwark": {
+          "name": "光耀壁垒",
+          "description": "<p>拉罗什对光耀、暗蚀和非魔法钝击、穿刺和挥砍伤害具有抗性。她免疫魅惑、恐慌和倒地状态。</p>"
+        },
+        "Weapon Transformation": {
+          "name": "武器变形",
+          "description": "<p>拉罗什[[/item .fLu1jCV8OnAweGm4 activity=Vejy0cxvlxqRDrR2]]{切换} 托梦术行刑者在其巨镰形态和巨锤形态之间转换，或反之亦然。</p>"
+        }
+      }
+    },
+    "Blightback": {
+      "name": "枯萎背兽",
+      "tokenName": "枯萎背",
+      "description": "<p>枯萎背兽作为卡梅拉温室精英前线防御者，通过刻意接触炼金嫁接物和超适应菌株转化而成。每一个都是行走的坦克——缝合着根脉肌肉组织，肿胀的液囊被培育用于吸收、偏转和在压力下爆炸。它们半透明的皮肤在移动时隆起波动，显露出不断变化的增生组织和致密的内甲板。尽管有着怪诞的变异，枯萎背兽仍保持着纪律性和警惕性，将温室场地视为圣地，并将卡梅拉视为唯一认可的权威。</p>",
+      "items": {
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>该枯萎背兽发动两次[[/item .hosnpcSlam000000]]攻击。</p>"
+        },
+        "Slam": {
+          "name": "粗枝猛击",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。目标必须进行一次DC 13的力量豁免，失败则陷入&Reference[prone]状态。</p>",
+          "activities": {
+            "Save vs Prone": {
+              "name": "对抗倒地豁免",
+              "chatFlavor": "豁免失败：被击倒&Reference[prone]"
+            }
+          }
+        },
+        "Rupture Burst": {
+          "name": "破裂爆发",
+          "description": "<p>枯萎背兽爆裂数个液囊，在10尺半径内猛烈喷发。该区域内的每个生物必须进行一次DC 13的敏捷豁免，豁免失败则受到14（4d6）点强酸伤害，豁免成功则仅受半数伤害。豁免失败的生物会被推开5尺，且必须进行一次DC 13的力量豁免，否则倒地。</p>",
+          "activities": {
+            "save": {
+              "chatFlavor": "敏捷豁免，随后是力量对抗推动与&Reference[prone]"
+            }
+          }
+        },
+        "Bulb Armor": {
+          "name": "球茎护甲",
+          "description": "<p>当枯萎背兽的生命值低于一半时，以近战攻击命中它的生物必须进行一次DC 13的体质豁免，若失败则因酸性液体溅满脸部而陷入目盲状态，直至其下个回合开始。</p>",
+          "activities": {
+            "save": {
+              "condition": "使用近战攻击命中"
+            }
+          },
+          "effects": {
+            "Blinded": {
+              "name": "目盲",
+              "description": "<p>目标陷入{@condition 目盲|XPHB}状态，直到其下个回合开始，因为酸性液体在其脸上迸发。</p>"
+            }
+          }
+        },
+        "Rooted Frame": {
+          "name": "根植框架",
+          "description": "<p>当站在自然或植物覆盖的地形上时，枯萎背在对抗被推撞、应击倒地或非自愿移动的豁免检定中具有优势。</p>"
+        }
+      }
+    },
+    "Pustule-Covered Predator": {
+      "name": "脓疱覆盖的掠食者",
+      "tokenName": "脓疱覆盖的掠食者",
+      "description": "<p>这只章鱼覆盖着有毒、渗液的脓疱，构成了一幅骇人的景象。其脓疱破裂时会向水中释放出毒云，进一步污染湖泊。</p><ul><li><em><strong>新特质：</strong></em> @UUID[.Item.hosToxicEruption]{毒性喷发 Toxic Eruption}</li></ul>",
+      "items": {
+        "Hold Breath": {
+          "name": "屏息",
+          "description": "<p>章鱼离开水后可以屏息1小时。</p>"
+        },
+        "Underwater Camouflage": {
+          "name": "水下伪装",
+          "description": "<p>该章鱼在水下进行{敏捷（隐匿）检定}时具有<strong>优势</strong>。</p>"
+        },
+        "Water Breathing": {
+          "name": "水下呼吸",
+          "description": "<p>章鱼只能在水中呼吸。</p>"
+        },
+        "Ink Cloud": {
+          "name": "墨水云",
+          "description": "<p>如果章鱼位于水下，则其周围会扩散出一片20尺半径的墨汁云雾。该区域将处于{重度遮蔽 heavily obscured}状态，持续1{分钟 minute}，但强劲的水流可以驱散这些墨汁。释放墨汁后，章鱼可以执行{疾走 Dash}动作作为其{附赠动作 Bonus Action}。在{短休或长休 short or long rest}后恢复此能力。</p>"
+        },
+        "Tentacles": {
+          "name": "触须",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>如果目标是一个生物，它陷入&amp;Reference[grappled]状态（逃脱DC 16）。此受擒状态结束前，目标处于&amp;Reference[restrained]状态，且章鱼无法对其触手以外的目标发动攻击。</p>"
+        },
+        "Toxic Eruption": {
+          "name": "剧毒喷发",
+          "description": "<p>当被一次攻击命中时，捕食者身上的脓疱爆裂，释放出一团以自身为中心、5尺半径的毒气云。云内的生物必须进行一次[[/save format=long]]豁免，否则陷入{中毒 Poisoned}状态1分钟。</p>",
+          "activities": {
+            "save": {
+              "condition": "当被攻击命中时"
+            }
+          },
+          "effects": {
+            "Toxic Eruption": {
+              "name": "毒爆喷发",
+              "description": "<p>目标陷入&amp;Reference[poisoned apply=false]状态，持续1分钟。</p>"
+            }
+          }
+        }
+      }
+    },
+    "Boneclad Horror": {
+      "name": "骸骨披身恐魔",
+      "tokenName": "白骨披身恐怖",
+      "items": {
+        "Bone Armor": {
+          "name": "骨制护甲 Armor",
+          "description": "<p>一个生物若触及白骨覆体恐怖，或在5尺范围内以近战攻击命中它，将受到[[/damage average]]伤害。</p>",
+          "activities": {
+            "damage": {
+              "condition": "一个生物在距离恐怖5尺范围内触碰到它"
+            }
+          }
+        },
+        "Undead Fortitude": {
+          "name": "不死坚韧",
+          "description": "<section class=\"secret\">\n<p>如果伤害将[[lookup @name lowercase]]降至<strong>0点生命值</strong>，它必须进行一次<strong>体质</strong>豁免，DC为5+所受伤害，除非该伤害是光耀伤害或来自重击。豁免成功时，[[lookup @name lowercase]]改为降至<strong>1点生命值</strong>。</p>\n</section>\n<p>如果伤害将[[lookup @name lowercase]]降至<strong>0点生命值</strong>，它必须进行一次<strong>体质</strong>豁免。</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>骸骨覆体的恐怖之物发动两次攻击：一次用其[[/item .hosnpcBite000000]]，一次用其[[/item .hosnpcClaw000000]]。</p>"
+        },
+        "Bite": {
+          "name": "啃咬",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
+        },
+        "Claw": {
+          "name": "爪击",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
+        },
+        "Bone Shield": {
+          "name": "骨盾",
+          "description": "<p>该骨甲恐怖生物对其可见攻击者的一次本将命中它的近战攻击，其AC增加2。</p>",
+          "activities": {
+            "utility": {
+              "condition": "一次来自可见攻击者的近战攻击将命中。",
+              "chatFlavor": "针对本次攻击的AC获得+2加值"
+            }
+          }
+        }
+      }
+    },
+    "Putrescent Behemoth": {
+      "name": "腐臭巨兽",
+      "tokenName": "腐臭巨兽",
+      "items": {
+        "Amorphous": {
+          "name": "无定形",
+          "description": "<p>该[[lookup @name lowercase]]能够穿过最窄1寸宽的狭窄空间而不用挤身通过，尽管其怪诞的形态在通过时会拉伸和扭曲。如果该巨兽通过其{吞噬 Engulf}动作吸收了额外的质量，或在过去一小时内使用了其{尸体缝合者 Corpse Stitcher}反应，则无法使用此特性。</p>"
+        },
+        "Corrosive Form": {
+          "name": "腐蚀形态",
+          "description": "<p>一个生物若在距巨兽5尺内触碰到它或用近战攻击命中它，则受到7（2d6）强酸伤害。命中巨兽的非魔法武器会腐蚀，在伤害骰上承受永久的-1减值。若该减值降至-5，则该武器被摧毁。</p><section class=\"secret\" id=\"secret-V8ctXm2Y13uZF7qq\"><p><strong>Foundry 注</strong></p><p>此特性还提供一个<strong>受损</strong>附魔系效果，将修改目标武器。由于伤害减值可多次施加，需将此附魔从该物件的效果标签页拖拽至目标物件的表单上。</p></section>",
+          "activities": {
+            "damage": {
+              "condition": "以近战攻击触及或命中巨兽"
+            }
+          },
+          "effects": {
+            "Damaged: -1 Damage": {
+              "name": "受损：-1 伤害",
+              "description": "<p>命中巨兽的非魔法武器将被腐蚀，其伤害掷骰承受永久的 -1 减值。若该减值累计至 -5，则武器被摧毁。</p>"
+            }
+          }
+        },
+        "Grasping Tendrils": {
+          "name": "擒握藤蔓",
+          "description": "<p>该巨兽最多可同时拥有六条触须。每条触须均可被攻击（护甲等级：20；生命值：10；免疫毒素和心灵伤害）。摧毁一条触须不会对巨兽造成伤害，它可以在其下一回合中伸出替代触须。生物也可以使用一个动作进行一次DC15的力量检定，成功则摧毁该触须。</p>",
+          "activities": {
+            "Place Tendril": {
+              "name": "放置触须"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>该巨兽发动一次[[/item .hosnpcPutridTend]]攻击和一次[[/item .hosnpcCorrosiveS]]攻击。</p>"
+        },
+        "Putrid Tendrils": {
+          "name": "腐尸藤蔓",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。目标陷入{受擒 Grappled}状态（逃脱[[/check skill=ath/acr dc=@abilities.str.dc]]）。此{受擒 Grapple}状态结束前，目标处于{束缚 Restrained}状态，且巨兽无法用该触须攻击其他目标。</p>",
+          "effects": {
+            "Grappled & Restrained": {
+              "name": "受擒并束缚",
+              "description": "<p>目标陷入{受擒 Grappled}状态（逃脱[[/check skill=ath/acr dc=15]]）。此{受擒 Grapple}状态结束前，目标处于{束缚 Restrained}状态，且巨兽无法用这根触须{攻击 Attack}其他{目标 target}。</p>"
+            }
+          }
+        },
+        "Corrosive Strike": {
+          "name": "腐蚀打击",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。如果目标穿着非魔法护甲或持用盾牌，该装备将被腐蚀，其AC承受永久的-1减值。护甲AC降至10或盾牌加值降至+0时将被摧毁。</p><section class=\"secret\" id=\"secret-RXoQxrP57Vy2o3uH\"><p><strong>Foundry 注</strong></p><p>此特性还提供<strong>受损</strong>附魔系效果，可修改目标护甲。由于AC减值可多次叠加，需将此附魔效果从本物品的效果标签页拖拽至目标物品的属性表上。</p></section>",
+          "effects": {
+            "Corroded: -1 AC": {
+              "name": "腐蚀：-1 AC",
+              "description": "<p>如果目标穿着非魔法护甲或持有盾牌，该装备会腐蚀，其AC受到永久的-1减值。护甲AC降至10或盾牌加值降至+0时，该装备被摧毁。</p>"
+            }
+          }
+        },
+        "Engulf": {
+          "name": "吞没",
+          "description": "<p>该巨兽吞噬一个它已擒抱的生物。被吞噬的目标陷入目盲、束缚状态，且无法呼吸。在巨兽的每个回合开始时，被吞噬的生物受到14（4d6）点强酸伤害。若巨兽移动，被吞噬的生物随之移动。被吞噬的生物可以使用一个动作进行一次[[/check skill=ath/acr dc=@abilities.str.dc]]检定来逃脱。检定成功时，该生物逃脱并进入距离巨兽最近的未占据空间。</p>",
+          "activities": {
+            "Damage (Engulfed)": {
+              "name": "伤害（被吞噬）",
+              "condition": "已吞噬一个生物"
+            },
+            "utility": {
+              "affects": {
+                "special": "受擒"
+              }
+            }
+          },
+          "effects": {
+            "Blinded, Restrained, and Suffocating": {
+              "name": "目盲, 束缚, 和窒息",
+              "description": "<p>被吞没时，生物具有&amp;Reference[Blinded apply=false]和&amp;Reference[Restrained apply=false]状态，并且无法呼吸。</p><p>被吞没的生物可以使用一个动作进行一次[[/check skill=ath/acr dc=15 format=long]]检定来逃脱。若成功，该生物逃脱并进入距巨兽最近的未占据空间。</p>"
+            }
+          }
+        },
+        "Corrosive Backlash (Recharge 5–6)": {
+          "name": "腐蚀反冲 (充能 5–6)",
+          "description": "<p>当这头巨兽被一次近战攻击命中时，它会释放出一股酸性胆汁波。巨兽10尺范围内的全部生物必须进行一次DC15的敏捷豁免，豁免失败则受到13（3d8）点强酸伤害并被推开10尺。</p>",
+          "activities": {
+            "save": {
+              "condition": "被一次近战攻击命中"
+            }
+          }
+        },
+        "Corpse Stitcher": {
+          "name": "缝尸者",
+          "description": "<p>如果巨兽5尺范围内的一个生物被巨兽的生命值降至0，它会将尸体吸收进自身体内，恢复等于该生物最大生命值一半的生命值。</p>",
+          "activities": {
+            "heal": {
+              "condition": "射程内的生物生命值降至0点。"
+            }
+          }
+        },
+        "Toxic Cloud": {
+          "name": "毒云",
+          "description": "<p>该巨兽在其周围10尺半径范围内释放出一片毒云。该区域内的每个生物必须进行一次DC14的体质豁免，豁免失败则中毒1分钟。以该方式&Reference[poisoned apply=false]时，生物在其每个回合开始时受到5（1d10）点强酸伤害。该生物可以在其每个自己的回合结束时重复该豁免，豁免成功则终止其身上的该效应。</p>",
+          "effects": {
+            "Toxins": {
+              "name": "毒素",
+              "description": "<p>以此方式陷入&Reference[poisoned apply=false]时，该生物在每个自己的回合开始时受到[[/damage 1d10 acid average]]点强酸伤害。该生物可以在每个自己的回合结束时重复进行[[/save con 14]]{豁免检定}，成功则终止其身上的该效应。</p>"
+            }
+          }
+        },
+        "Lashing Tendrils": {
+          "name": "抽打卷须",
+          "description": "<p>该巨兽用它的触须猛击，将所有它擒抱的生物拉近 5 尺，并对每个仍受擒的生物造成 5（1d10）点强酸伤害。</p>"
+        }
+      }
+    },
+    "Aeron": {
+      "name": "艾欧伦",
+      "tokenName": "艾欧伦",
+      "items": {
+        "Carmella's Music Box": {
+          "name": "Carmella的音乐盒",
+          "description": "<p>如果在艾罗恩100尺范围内播放卡梅拉的音乐盒，它会受到[[/damage 10 psychic]]点心灵伤害，并且陷入&amp;Reference[incapacitated]状态直至其下一回合结束，因为它会在痛苦中剧烈挣扎。</p>"
+        },
+        "Hollow Eyes": {
+          "name": "空洞之眼",
+          "description": "<p>当一个能看见艾隆眼睛的生物在艾隆30尺内开始其回合，若艾隆未处于失能状态且能看见该生物，艾隆可强制其进行一次DC 16的感知豁免。若该生物具有恐慌状态，则豁免失败时该生物会获得短暂性疯狂但不会陷入震慑状态，并且会获得魅惑状态直至其下一回合结束，除非其免疫魅惑状态。以此法被魅惑期间，该生物受艾隆操控，遵循其直接的心灵指令（无需动作）。</p><p>否则，豁免失败时该生物受到11（2d10）心灵伤害。</p><p>除非被突袭，生物可在其回合开始时移开视线以回避此次豁免。若如此做，该生物对艾隆的攻击检定具有劣势直至其下一回合开始。若在此期间该生物注视艾隆，则必须立即进行该豁免。</p>",
+          "activities": {
+            "save": {
+              "condition": "生物能看见其眼睛并在射程范围内"
+            }
+          },
+          "effects": {
+            "Hollow Charm": {
+              "name": "空洞魅惑",
+              "description": "<p>目标获得&amp;Reference[Charmed apply=false]状态直到其下一回合结束，除非它免疫魅惑状态。以此法被魅惑时，它被艾隆操纵，遵循其直接的心灵感应命令（不需要动作）。</p>"
+            }
+          }
+        },
+        "Prima Nocta": {
+          "name": "初夜权",
+          "description": "<p>在其首个回合中，埃隆对任何尚未行动的生物具有攻击检定优势。埃隆对受突袭生物的任何命中均造成额外5（1d10）点心灵伤害。</p>",
+          "activities": {
+            "Surprised Target Damage": {
+              "name": "受惊目标伤害",
+              "affects": {
+                "special": "被突袭生物"
+              }
+            }
+          }
+        },
+        "Spider Climb": {
+          "name": "蛛行",
+          "description": "<p>埃隆可以攀爬困难表面，包括倒挂在天花板上，而无需进行属性检定。</p>"
+        },
+        "Soulshackle Resistance": {
+          "name": "缚魂抗性",
+          "description": "<p>如果艾罗恩豁免失败时，可以将其改为豁免成功。直到其下个回合开始前，它对心灵和光耀伤害具有易伤。</p>",
+          "activities": {
+            "utility": {
+              "condition": "豁免失败时"
+            }
+          },
+          "effects": {
+            "Soulshackled": {
+              "name": "灵魂桎梏",
+              "description": "<p>直到其下个回合开始前，它对心灵和光耀伤害具有易伤。</p>"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>阿依伦使用其[[/item .hosnpcCleaver000]]或[[/item .hosnpcHook000000]]发动两次攻击, 并使用其[[/item .hosnpcEmbrace000]]发动一次攻击。它可以用一次[[/item .hosnpcMarchofthe]]来替代其拥抱攻击。</p>"
+        },
+        "Cleaver": {
+          "name": "锯肉刀",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]且目标被削弱直到其下一回合结束。当以此方式被削弱时，它从所有攻击和伤害检定中减去2(1d4)。</p>",
+          "effects": {
+            "Weakened": {
+              "name": "弱化",
+              "description": "<p>当它以此方式被削弱时，它所有的攻击和伤害掷骰均减去 2 (1d4)，直到其下一回合结束。</p>"
+            }
+          }
+        },
+        "Embrace": {
+          "name": "拥抱",
+          "description": "<p>近战武器攻击：+7命中，触及5尺，单一目标。命中：10（2d6 + 3）钝击伤害且目标陷入&amp;Reference[grappled apply=false]状态（逃脱[[/check skill=ath/acr dc=@abilities.str.dc]]）。此受擒状态结束前，目标处于&amp;Reference[restrained apply=false]状态，且埃隆无法对另一目标使用其环抱。</p>",
+          "effects": {
+            "Grappled & Restrained": {
+              "name": "受擒并束缚",
+              "description": "<p>逃脱 [[/check skill=ath/acr dc=16]]</p>"
+            }
+          }
+        },
+        "Hook": {
+          "name": "钩爪",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]且目标被向艾隆的方向拉动至多15尺。</p>",
+          "activities": {
+            "attack": {
+              "chatFlavor": "命中时，目标被拉近15尺。"
+            }
+          }
+        },
+        "Contaminate": {
+          "name": "污染",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]且该生物被注入毒素，陷入&amp;Reference[poisoned apply=false]状态直至其下个回合结束。</p>",
+          "activities": {
+            "attack": {
+              "affects": {
+                "special": "受擒生物"
+              }
+            }
+          },
+          "effects": {
+            "Poisoned": {
+              "name": "中毒",
+              "description": "<p>目标陷入&amp;Reference[poisoned apply=false]状态直到其下一回合结束。</p>"
+            }
+          }
+        },
+        "March of the Machine (Recharge 6)": {
+          "name": "万机行进 (充能 6)",
+          "description": "<p>艾罗恩准备好她的刀刃并以直线冲刺至多90尺。她道途上的每个生物必须进行一次DC 16的敏捷豁免。豁免失败时，一个生物受到18（4d8）挥砍伤害并被沿着艾罗恩的道途推至其终点。豁免成功时，一个生物仅受到一半伤害且不被移动。</p>"
+        },
+        "Rattle": {
+          "name": "响环",
+          "description": "<p>艾隆的身体剧烈颤抖，释放出有毒孢子。艾隆周围15尺内的每个生物必须进行一次DC 16体质豁免，豁免失败者将中毒且速度减半直至其下一回合结束。</p>",
+          "effects": {
+            "Rattled (Poisoned & Slowed)": {
+              "name": "惊惧（中毒与缓慢）",
+              "description": "<p>目标陷入&amp;Reference[poisoned apply=false]状态并且速度减半，直到其下一个回合结束。</p>"
+            }
+          }
+        },
+        "Skitter": {
+          "name": "窜行",
+          "description": "<p>埃罗恩移动至其全部移动速度，且不触发借机攻击。若它在移动结束时处于某生物5尺范围内，该生物必须进行一次DC 16的感知豁免，失败则获得@UUID[Compendium.hos-monkeydm.rules.JournalEntry.llqovT3sE4aTomVW.JournalEntryPage.ShortTermMadness]{短暂性疯狂 short-term madness}。</p>",
+          "activities": {
+            "save": {
+              "affects": {
+                "special": "影响目标空间5尺内的生物。"
+              }
+            }
+          }
+        },
+        "Disembodied Walk": {
+          "name": "无体行走",
+          "description": "<p>埃罗恩移动至多30尺，且不会引发借机攻击。</p>"
+        },
+        "Veil Slash (Costs 2 Actions)": {
+          "name": "面纱挥砍 (消耗2动作)",
+          "description": "<p>阿埃隆用带刃的肢体猛击。其前方10尺锥状区域内的每个生物必须进行一次DC 16的敏捷豁免，豁免失败将受到5（1d10）点挥砍伤害，并在其下一回合开始前失去所有伤害抗性。</p>"
+        },
+        "Certainty of Steel (Costs 3 Actions)": {
+          "name": "钢铁之确（消耗3动作）",
+          "description": "<p>埃罗恩用它空洞的眼睛凝视着60尺内它能看见的一个生物。该生物必须进行DC 16的魅力豁免，否则将陷入{麻痹 Paralyzed}状态，直到埃罗恩的下一个回合结束。</p>",
+          "effects": {
+            "Paralyzed": {
+              "name": "麻痹",
+              "description": "<p>目标陷入{@condition 麻痹}状态直到阿埃农的下个回合结束。</p>"
+            }
+          }
+        },
+        "Grasping Roots": {
+          "name": "纠缠根须",
+          "description": "<p>扭曲的根须在埃隆视野内60尺处一点为中心，20尺半径的区域内爆发。该区域内每个埃隆选择的生物必须进行一次[[/save format=long]]豁免，否则将被&amp;Reference[restrained apply=false]束缚直至其下一回合结束。</p>",
+          "effects": {
+            "Restrained": {
+              "name": "束缚",
+              "description": "<p>该生物将被&amp;Reference[restrained apply=false]直至其下个回合结束。</p>"
+            }
+          }
+        },
+        "Spore Fog": {
+          "name": "孢子云雾",
+          "description": "<p>一片浓厚的孢子云从天花板爆发，形成一个以艾隆可见的120尺内某点为中心、30尺半径、60尺高的柱状区域。该区域变为&amp;Reference[重度遮蔽]，持续至其下一回合结束。一个生物若在一回合内首次进入该区域或在其内开始其回合，必须进行一次[[/save  format=long]]豁免，否则将陷入&amp;Reference[目盲 apply=false]状态，持续至其下一回合结束。</p>",
+          "effects": {
+            "Blinded": {
+              "name": "目盲",
+              "description": "<p>该生物陷入&amp;Reference[blinded apply=false]状态，直至其下个回合结束。</p>"
+            }
+          }
+        },
+        "Bloom Surge": {
+          "name": "花开节之潮",
+          "description": "<p>一个花开节迸发出能量，将其泼洒在艾欧隆身上。艾欧隆恢复[[/healing]]{10 生命值 hit points}或重新充能机械进军（由DM选择）。</p>",
+          "activities": {
+            "Recharge": {
+              "name": "充能"
+            }
+          }
+        },
+        "Lair Actions": {
+          "name": "巢穴动作",
+          "description": "<p>在卡梅拉的温室内部时，艾隆可以操控其环境防御。在先攻值20（出现等值时视为后手）时，他执行下列巢穴动作之一。他不能连续两轮使用相同效果。</p><p>[[/item .hosGraspingRoots]]{抓握根须 Grasping Roots}</p><p>@Embed[.hosGraspingRoots inline]</p><p>[[/item .hosSporeFog00000]]{孢子迷雾 Spore Fog}</p><p>@Embed[.hosSporeFog00000 inline]</p><p>[[/item .hosBloomSurge000]]{花开节涌动 Bloom Surge}</p><p>@Embed[.hosBloomSurge000 inline]</p>"
+        }
+      }
+    },
+    "Heavy Artillerist": {
+      "name": "重型魔炮师",
+      "tokenName": "重型魔炮师",
+      "description": "<p><em>代币艺术作品由 <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">遗忘冒险</a> 提供。</em></p>",
+      "items": {
+        "Studded Leather Armor": {
+          "name": "镶钉皮甲",
+          "description": "<p>镶钉皮甲由坚韧而柔韧的皮革制成，通过密集排列的铆钉或尖刺进行加固。</p>"
+        },
+        "Shield": {
+          "name": "护盾术",
+          "description": "<p>盾牌通常由木材或金属制成，可以单手进行持用。持用一面盾牌可以令你的护甲等级 +2。不过同一时间里你只能从一面盾牌中受益。</p>"
+        },
+        "Brave": {
+          "name": "勇气",
+          "description": "<p>[[lookup @name lowercase]]为抵抗恐慌而作的豁免检定具有优势。</p>"
+        },
+        "Brute": {
+          "name": "残暴",
+          "description": "<p>[[lookup @name lowercase]]的近战武器攻击命中目标时，其伤害加上额外一粒伤害骰（已包含在攻击条目中）。</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>该[[lookup @name lowercase]]发动三次近战攻击或两次远程攻击。</p><p>近战：[[/item .eL15erXXE9EuXWSB]], [[/item .GrUneCbXCYngdpjf]]</p><p>射程：[[/item .eL15erXXE9EuXWSB]]</p>"
+        },
+        "Spear": {
+          "name": "矛",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
+        },
+        "Shield Bash": {
+          "name": "盾击",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]。</p><p>如果目标是一个中型或更小体型生物，则目标生物必须成功通过一次[[/save]]豁免，否则将应击&amp;Reference[prone]。</p>",
+          "activities": {
+            "save": {
+              "condition": "命中时"
+            }
+          },
+          "effects": {
+            "Prone": {
+              "name": "倒地"
+            }
+          }
+        },
+        "Parry": {
+          "name": "格挡",
+          "description": "<p>角斗士在被一次近战攻击命中时，其<strong>AC</strong>加上 3。此时该角斗士必须能看见攻击者，且有在持用一把近战武器。</p>",
+          "activities": {
+            "utility": {
+              "condition": "在被一次近战攻击命中时"
+            }
+          }
+        },
+        "Self-Destruct": {
+          "name": "自毁",
+          "description": "<p>当炮术士的生命值降至0时，其弹药将被点燃，并在一个20尺宽、40尺高的柱状区域内爆炸。区域内的每个生物都必须进行一次[[/save dex 15 format=long]]，豁免失败时将受到[[/damage 6d6 fire]]伤害和[[/damage 6d6 bludgeoning]]伤害，豁免成功则只受一半伤害。爆炸会摧毁区域内未被穿戴或携带的非魔法物品，并使爆炸区域的地面变为&amp;Reference[difficult terrain]。</p>",
+          "activities": {
+            "Explode": {
+              "name": "爆炸",
+              "condition": "当生命值降至0时"
+            }
+          }
+        },
+        "Heavy Cannon": {
+          "name": "重型火炮",
+          "description": "<p>该炮手使用其肩部骑乘的重型火炮，发射一道15尺长、5尺宽的线状范围。区域内的每个生物必须进行一次[[/save format=long]]，豁免失败时受到[[/damage]]伤害，成功时仅受到一半伤害。这次爆炸会摧毁区域内未被穿戴或携带的非魔法物品，并自动摧毁厚度小于6英寸的木制或石制障碍物。</p>"
+        }
+      }
+    },
+    "Verdan the Clockmaker": {
+      "name": "制钟匠维尔丹",
+      "tokenName": "钟表匠维尔丹",
+      "description": "<p>一位专精于精密发条与炼金发明技艺的艾米诺后裔科学家。他在后裔中以技艺精湛的工匠闻名，拥有敏锐的实验头脑。</p>",
+      "items": {
+        "Adaptive Exosuit": {
+          "name": "自适应外骨骼",
+          "description": "<p>维丹免疫被魅惑或恐慌，且魔法无法使他陷入睡眠术sleep。困难地形不会消耗他额外的移动力，对他发动的借机攻击具有劣势。</p>"
+        },
+        "Mithral Bones": {
+          "name": "秘银骨架",
+          "description": "<p>维丹人没有骨骼。</p>"
+        },
+        "Silvered Weapons": {
+          "name": "镀银武器",
+          "description": "<p>维丹的武器攻击是镀银的。</p>"
+        },
+        "Mage Breaker": {
+          "name": "破法者",
+          "description": "<p>当维丹对一个正专注于法术的生物造成伤害时，目标为维持其专注而进行的豁免检定的DC增加7（最低为17）。此外，维丹对5尺内生物所施展的法术进行的豁免检定具有优势。</p>"
+        },
+        "Immutable Form": {
+          "name": "不变形态",
+          "description": "<p>维丹免疫任何会改变其形态的法术或效应。</p>"
+        },
+        "Innate Spellcasting": {
+          "name": "天生施法Innate Spellcasting",
+          "description": "<p>维丹的天生施法关键属性为感知（法术豁免DC14）。他天生可施展以下法术，且无需材料部件：</p><p>随意：@UUID[Compendium.dnd5e.spells.Item.Mzh95utKDPIrjiH8]{侦测善恶 detect evil and good}、@UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{侦测魔法 detect magic}、@UUID[Compendium.dnd5e.spells.Item.A3q2gTNqG6fvNGrv]{易容术 disguise self}、@UUID[Compendium.dnd5e.spells.Item.3OZnNhunvRtPOQmH]{鉴定术 identify}</p>"
+        },
+        "Detect Evil and Good": {
+          "name": "侦测善恶",
+          "description": "<p>你在法术持续时间内能感觉到身边 30 尺内出现的任一异怪、天族、元素、妖精、邪魔或亡灵生物的存在，并掌握其具体位置。另外，你也可以知晓 30 尺内的物件或地点是否被祝福或亵渎。</p><p>该法术可以穿透大多障碍，但仍会被 1 尺厚石质或 1 寸厚金属质，或一层薄铅质，或 3 尺厚木质或泥质材料阻隔。</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "法术改动"
+            }
+          }
+        },
+        "Detect Magic": {
+          "name": "侦测魔法",
+          "description": "<p>你在法术持续时间内能感测到 30 尺内存在的魔法。感测到魔法的存在后，你可以使用动作，来看到任何你能看见的具有魔法的生物或物件周围环绕着微弱的灵光，并分辨出其所属的魔法学派（若有）。该法术可以穿透大部分障碍，但仍会被 1 尺厚石质，或 1 寸厚金属质，或一层薄铅质，或 3 尺厚木质或泥质材料阻隔。</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "法术改动"
+            }
+          }
+        },
+        "Disguise Self": {
+          "name": "易容术",
+          "description": "<p>你改变自身以及随身的衣物、护甲、武器等所有物。该效应在法术终止或你使用动作主动解除时结束。肉眼看来你的身高可以有 1 尺的增减，体态可胖可瘦可匀称。但是你不能改变身体的形状，所以你变形的样子必须有四肢或类似的生理结构。此外，幻术的影响范围由你决定。</p><p>此法术产生的变化无法应对物理检查。比如，你用此法术添了一顶帽子，那么现实物件会从帽子穿过去，且任何触碰帽子的人将摸不到任何东西或者摸到的是你的头和头发。如果你用该法术让自己变得消瘦，而某个人用手摸到你时，他的手看起来就像摸着空气。</p><p>如果一个生物想要分辨你是否易容，则必须使用一个动作揭露你的伪装，并进行一次智力（调查）检定以对抗你的法术豁免DC。</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "法术改动"
+            }
+          }
+        },
+        "Identify": {
+          "name": "鉴定术",
+          "description": "<p>你指定一个物件，并在施法过程中一直与其保持接触。如果该物件是魔法物品或其他附有魔力的物件，则你将知晓其属性和使用方式，以及了解是否需要与之同调。若它是充能物品则你将得知它现存的可用次数。你还可以发现是否有法术正影响该物件，以及可能存在的法术效应具体来自哪项法术。如果目标由法术所创，则你将知晓具体来自哪项法术。</p><p>如果你施法过程中一直接触的是一生物，则你将知晓其是否受法术影响，及产生影响的法术效应具体来自哪项法术。</p>",
+          "materials": {
+            "value": "一颗价值至少 100GP 的珍珠和一根猫头鹰羽毛"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "法术改动"
+            }
+          }
+        },
+        "Teleport Anchor": {
+          "name": "传送锚点",
+          "description": "<p>当维丹使用他的{传送术teleport Teleport}时，他可以选择在他先前的位置留下一个不稳定的锚点。在他的下一个回合结束时，该锚点会在10尺半径内爆炸，迫使区域内的生物进行一次DC15的{敏捷豁免 Dexterity saving throw}，失败则受到14（4d6）点{力场伤害 force damage}，成功则只受一半。</p>",
+          "activities": {
+            "Place Anchor": {
+              "name": "放置锚点",
+              "condition": "当使用{传送术 Teleport}时"
+            },
+            "Detonate Anchor": {
+              "name": "引爆锚点",
+              "condition": "放置后的下一回合结束时",
+              "range": {
+                "special": "在锚点位置"
+              }
+            }
+          }
+        },
+        "Blade": {
+          "name": "斩击",
+          "description": "<p>[[/attack extended]]。 [[/damage extended]]。</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>维丹发动四次[[/item .hosBlade00000000]]{刀锋 blade}攻击。</p>"
+        },
+        "Mithral Wind Strike": {
+          "name": "秘银风斩",
+          "description": "<p>维丹选择他30尺内至多三个他能看见的生物，并对每个目标进行一次近战法术攻击（命中+6）。命中时，目标受到19（3d12）挥砍伤害和13（3d8）光耀伤害。然后他可以传送至其中一个目标5尺内他能看见的一个未占据空间。如果维丹30尺内的一个生物在法术上失去专注，维丹恢复此动作的使用。</p>",
+          "activities": {
+            "attack": {
+              "affects": {
+                "special": "可见生物"
+              }
+            }
+          }
+        },
+        "Breaking Palm": {
+          "name": "破坏掌",
+          "description": "<p>维丹触碰5尺内的一个生物，移除目标拥有的任何临时生命值。</p>"
+        },
+        "Dash": {
+          "name": "疾走",
+          "description": "<p>维丹采取 &Reference[Dash] 动作。</p>"
+        },
+        "Anti-Magic Strike": {
+          "name": "反魔法打击",
+          "description": "<p>当一个生物在维丹周边5尺范围内施展法术时，维丹可以对其发动一次[[/item .hosBlade00000000]]{近战武器 攻击}。</p>",
+          "activities": {
+            "utility": {
+              "condition": "射程内的目标施放一个法术。"
+            }
+          }
+        },
+        "Parry": {
+          "name": "格挡",
+          "description": "<p>维丹对其AC增加3点以对抗一次将命中它的近战攻击。要这么做，维丹必须能看到攻击者并且正持用一把近战武器。</p>",
+          "activities": {
+            "utility": {
+              "condition": "在持用近战武器时被一次近战攻击命中",
+              "chatFlavor": "+3 AC"
+            }
+          }
+        },
+        "Teleport": {
+          "name": "传送",
+          "description": "<p>当维丹成为攻击的目标时，他可以传送至多30尺到一处他可见的未占据空间。如果他传送了至少20尺，他在其下一回合结束前进行的下一次攻击具有优势。</p>",
+          "activities": {
+            "utility": {
+              "condition": "成为攻击的目标",
+              "affects": {
+                "special": "未占据"
+              },
+              "range": {
+                "special": "20+尺获得传送打击"
+              }
+            }
+          },
+          "effects": {
+            "Teleport Strike": {
+              "name": "传送打击",
+              "description": "<p>他在其下一回合结束前进行的下一次攻击获得<strong>优势</strong>。</p>"
+            }
+          }
+        }
+      }
+    }
+  }
+}
