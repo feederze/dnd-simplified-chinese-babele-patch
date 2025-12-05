@@ -29,6 +29,16 @@ Hooks.on('init', () => {
         requiresReload: true
     });
 
+    game.settings.register(MODULE_ID, 'ActorItemsetting', {
+        name: '角色物品名称双语转换器开关',
+        hint: '',
+        scope: 'world',
+        config: true,
+        default: false,
+        type: Boolean,
+        requiresReload: true
+    });
+
     if (game.settings.get(MODULE_ID, 'autoRegisterBabel')) {
         autoRegisterBabel();
     }
