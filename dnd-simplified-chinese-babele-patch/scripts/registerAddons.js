@@ -13,7 +13,8 @@ export async function registerAddons(babele) {
         "effects": effectsConverter,
         "advancement": advancementConverter,
         "activities": activitiesConverter,
-        "dynamicname": nameConverter
+        "dynamicname": nameConverter,
+        "itemsConverter": itemsConverter
     });
     await registerCustomMappings(babele);
     logDebug("registerCustomConverters: Done");
@@ -117,4 +118,45 @@ function nameConverter(originalValues, translations, data, translatedCompendium,
     } else {
         return translations;
     }
+}
+function itemsConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
+    const babele = game.babele;
+    if (!translations) return data;
+    if (!babele) return data;
+
+    // 打印快照，防止引用问题！！！！！！！
+    const valuesToTranslate = JSON.parse(JSON.stringify(originalValues));
+    let outputs = babele.converters["fromPack"](valuesToTranslate, translations);
+
+    let isActive = game.settings.get(MODULE_ID, 'ActorItemsetting')
+    if (!isActive) {
+        return outputs;
+    }
+    return makeBilingualNames(outputs, originalValues);
+}
+
+function makeBilingualNames(outputs, originalValues) {
+    if (!Array.isArray(outputs) || !Array.isArray(originalValues)) return outputs;
+
+    // 建一个 _id → 原始英文名 的索引
+    const originalNameById = {};
+    for (const o of originalValues) {
+        if (o && o._id) {
+            originalNameById[o._id] = o.name;
+        }
+    }
+
+    // 遍历 outputs，改成“中文 英文”形式
+    return outputs.map(out => {
+        if (!out || !out._id) return out;
+
+        const originalName = originalNameById[out._id];
+        // 没找到对应原文名就不改
+        if (!originalName) return out;
+
+        const translatedName = out.name ?? originalName;
+        return foundry.utils.mergeObject(out, {
+            name: `${translatedName} ${originalName}`
+        });
+    });
 }
