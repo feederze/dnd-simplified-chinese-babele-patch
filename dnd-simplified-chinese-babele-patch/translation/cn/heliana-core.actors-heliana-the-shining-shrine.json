@@ -1,0 +1,633 @@
+{
+  "label": "Bestiary",
+  "folders": {
+    "Familiar": "Familiar"
+  },
+  "entries": {
+    "Sunsprite (Level 7 Lair Summon)": {
+      "name": "Sunsprite (Level 7 Lair Summon)",
+      "tokenName": "Sunsprite (Level 7 Lair Summon)",
+      "description": "<div class=\"heliana-shining\">\n<h2 class=\"Heliana-Book-1-Styles_Titles_Title-2\"><span class=\"None\">Sunsprite</span></h2>\n<p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-1\"><span class=\"None\">Tumbling and frolicking in one of the innumerable sunbeams of the Fey Lands’ unending sunset, sunsprites are playful, inquisitive, and capricious creatures. Much like giving a cat a belly rub, playing with a sunsprite is fraught with danger. Though the sunsprite (or cat) may appear to be enjoying themselves, their mood can be changed in an instant, leaving you with naught but a patch of sunburn (or some cat claw scratches).</span></p>\n<p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2 _idGenParaOverride-1\"><span class=\"Bold-Italic--8\">Sunfriends.</span><span class=\"None\"> Give their mutual love of sunlight, it is no surprise that suneater owlbears and sunsprites are found in close proximity to one another. However, when threatened, a suneater owlbear will make use of the bright light shed by these sprites, which position themselves tactically on the sunbear’s behalf.</span></p>\n</div>",
+      "items": {
+        "Leather Armor (tiny)": {
+          "name": "Leather Armor (tiny)",
+          "description": "<p>该护甲的护胸和护肩由通过油煮硬化的皮子制成。护甲的其余部分则由更软更灵活的材料制作。</p>"
+        },
+        "Sunbow": {
+          "name": "Sunbow",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Dagger": {
+          "name": "匕首",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Invisibility": {
+          "name": "隐形术",
+          "description": "<section class=\"secret\">\n<p>The sunsprite magically turns invisible until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the sprite wears or carries is invisible with it.</p>\n</section>\n<p>The sunsprite magically turns invisible. Any equipment the sunsprite wears or carries is invisible with it.</p>"
+        },
+        "Evasion": {
+          "name": "反射闪避",
+          "description": "<p>When the sunsprite is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.</p>"
+        },
+        "Bright": {
+          "name": "Bright",
+          "description": "<p>When the sunsprite isn't invisibile, it sheds bright light in a <strong>5-foot radius</strong>, and dim light for an additional <strong>5 feet.</strong></p>"
+        },
+        "Death Burst": {
+          "name": "自爆",
+          "description": "<p>When the sunsprite dies, it explodes in a burst of light. Each creature within <strong>5 feet</strong> of the sunsprite must make a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span>, taking&nbsp;<strong>[[/damage average]]</strong> damage on a failed save, or half as much damage on a successful one.</p>",
+          "activities": {
+            "save": {
+              "condition": "When the sunsprite dies"
+            }
+          }
+        }
+      }
+    },
+    "Lair Actions (Level 2)": {
+      "name": "Lair Actions (Level 2)",
+      "tokenName": "Lair Actions (Level 2)",
+      "items": {
+        "Rage": {
+          "name": "狂暴",
+          "description": "<p>The owlbear’s territorial rage affects all other creatures within the lair. Each creature must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or immediately use its reaction to make one weapon attack against a random creature within reach/range.</p>",
+          "activities": {
+            "Rage": {
+              "name": "狂暴"
+            }
+          }
+        },
+        "Disorienting Lights": {
+          "name": "Disorienting Lights",
+          "description": "<div><p>Flares and sparkles erupt in a deluge, confusing and disorienting creatures in a <strong>20-foot cube</strong> in the owlbear’s lair. Each creature in the area other than the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or be affected by a disorienting madness per the <em>@UUID[Compendium.dnd5e.spells.9hQXdMSmerkTsHDe]{Confusion}</em> spell until the end of its next turn.</p></div>",
+          "activities": {
+            "Disorienting Lights": {
+              "name": "Disorienting Lights"
+            }
+          }
+        },
+        "Summon Sunsprites": {
+          "name": "Summon Sunsprites",
+          "description": "<p>A <strong>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.xyPOPRMVOk2ZXSIC]{Sunsprite}</strong> appears next to each creature of the owlbear’s choice that it can see and disappears on initiative count 20 of the following round. The sunsprites act on initiative count 10 of this round. They have an attack modifier equal to <strong>+3</strong>, the saving throw of their Death Burst is <span class=\"loot-tavern Checks-and-Saves\">11</span>, and both its attacks and Death Burst deal 3 (<strong>1d6</strong>) radiant damage, instead of their normal statistics.</p>",
+          "activities": {
+            "Summon Sunsprites": {
+              "name": "Summon Sunsprites"
+            }
+          }
+        }
+      }
+    },
+    "Faerie-o'-Fire": {
+      "name": "Faerie-o'-Fire",
+      "tokenName": "Faerie-o'-Fire",
+      "description": "<div class=\"heliana-shining\"><h2 class=\"Heliana-Book-1-Styles_Titles_Title-2\"><span class=\"None\">Faerie-o’-fire</span></h2><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-1\"><span class=\"None\">When a will-o’-wisp basks in the eternal sunset of the Fey Lands, a change overcomes the malevolent spirit that lies at its heart. In place of a wisps’ despair, a faerie develops a guileful and mischievous cunning.</span></p><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2\"><span class=\"None\">These faeries often pair themselves with more powerful creatures, such as a fey queen with a penchant for collecting waifs and strays, or a territorial suneater owlbear. They act as a lure to this creatures bite, coaxing unwary wanderers to follow their cheerful nimbus. If all goes according to the faerie’s plan, both faerie and owlbear will gain meal from this symbiotic mutualism.</span></p><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2 _idGenParaOverride-1\"><span class=\"Bold-Italic--8\"><em><strong>Etymology.</strong></em></span><span class=\"None\"> What came first, faerie fire or the faerie-o’-fire? Though the great and prolific wizard Plagiaritrix claimed to have invented the </span><span class=\"Italic\">faerie fire</span><span class=\"None\"> spell, this origin story is now shrouded in doubt. The faerie-o’-fire’s solar flare attack was discovered to have surprisingly similar characteristics to the spell, leading scholars to believe that Plagiaritrix might simply have ‘borrowed’ it while on one of their many trips to the Fey Lands.</span></p></div>",
+      "items": {
+        "Consume Life": {
+          "name": "摄食生命",
+          "description": "<section class=\"secret\" id=\"secret-y12k33fQYuSoS8l4\"><p>As a bonus action, the faerie-o'-fire can target one creature it can see within <strong>5 ft.</strong> of it that has <strong>0 hit points</strong> and is still alive.</p><p>The target must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> against this magic or die. If the target dies, the faerie-o'-fire regains 10 (<strong>3d6</strong>) hit points.</p></section><p>The faerie-o'-fire can target one creature it can see within <strong>5 ft.</strong> The target must succeed on a Constitution saving throw.</p>"
+        },
+        "Ephemeral": {
+          "name": "转瞬即逝",
+          "description": "<p>The farie-o'-fire can't wear or carry anything.</p>"
+        },
+        "Incorporeal Movement": {
+          "name": "虚体移动",
+          "description": "<section class=\"secret\">\n<p>The faerie-o'-fire can move through other creatures and objects as if they were difficult terrain.</p>\n<p>It takes <strong>5 (1d10) <em>force damage</em></strong> if it ends its turn inside an object.</p>\n</section>\n<p>The faerie-o'-fire can move through other creatures and objects as if they were difficult terrain.</p>"
+        },
+        "Bright": {
+          "name": "Bright",
+          "description": "<p>When the faerie-o'-fire isn't invisibile, it sheds bright light in a <strong>5-foot radius</strong>, and dim light for an additional <strong>5 feet.</strong></p>"
+        },
+        "Solar Flare": {
+          "name": "Solar Flare",
+          "description": "<section class=\"secret\" id=\"secret-ccYIn8zssXewbJDx\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]]</strong>. Until the end of the creature's next turn, the creature sheds bright light in a&nbsp;<strong>5-foot radius</strong> and dim light for an additional 5 feet, attack rolls against the creature have&nbsp;<strong>advantage</strong>, and the creature can't benefit from being invisible.</p></section><p>The Faerie-o'-Fire attacks with its Solar Flare.</p>"
+        },
+        "Invisibility": {
+          "name": "隐形术",
+          "description": "<section class=\"secret\">\n<p>The faerie-o'-fire and its light magically become invisible until it attacks or uses its Consume Life, or until its concentration ends (as if concentrating on a spell).</p>\n<p>&nbsp;</p>\n</section>\n<p>The faerie-o'-fire and its light magically become invisible.</p>"
+        }
+      }
+    },
+    "Sunsnacker": {
+      "name": "Sunsnacker",
+      "tokenName": "Sunsnacker",
+      "description": "<p><em><strong>Foundry Note: Assign the sunsnacker's Challenge Rating (CR) to your Tamer level for the correct proficiency bonus.</strong></em></p><p></p><h1>Sunsnacker</h1><blockquote><p>I have a real affinity with the sunsnacker; I get hangry when I miss lunch too. Or elevenses. Or second breakfast. These gains don’t gain themself, y’know.</p><p>— Heliana, Serial Cereal Snacker</p></blockquote><p></p><p><strong>Type:</strong> Fey</p><p><strong>Creature Component:</strong> Suneater Owlbear</p><p><strong>Bonus Tamer Improvement:</strong> @UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.MjYcwVMItHNLCae2]{Growth I} and +2 Hit Dice</p><p>A ferocious beast when roused, this cutie also likes belly rubs, sunbathing, and sweet treats. Be sure not to leave your dust of deliciousness unattended, or you’ll have an extremely easytobeguile owlbear. Such is the sunsnacker’s wont.</p><p>If any of the sunsnacker's traits or actions require saving throws, it is always against the sunsnacker's save DC, as calculated below.</p><p><em>Save DC = 8 + the tamer’s proficiency bonus + the sunsnacker's Constitution modifier</em></p><h2>Sunsnacker Improvements</h2><table border=\"1\"><thead><tr><th>Tamer Level</th><th colspan=\"3\">Choices</th></tr></thead><tbody style=\"align:center\"><tr><th>1</th><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.MjYcwVMItHNLCae2]{Growth I}</td><td></td><td></td></tr><tr><th>3</th><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.vGpuRa2ekvXBw5VU]{Flame Retardant}</td><td></td><td></td></tr><tr><th>5</th><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.4OMEtrqkHtTOkdhu]{Multiattack}</td><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.SFwmVQQG1uKrrawr]{Solar Beam I}</td><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.aeSUHAAz4mxoPQVl]{Growth II}</td></tr><tr><th>9</th><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.D1cED0t5vGeSTuKZ]{Sun Step}</td><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.l5RCkTJD8LnHvJjM]{Suneater}</td><td></td></tr><tr><th>13</th><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.TnXmj1qa7qbVchv7]{Eye Tyrant}</td><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.s2OMhHL7YzPOPwBc]{Solar Beam II}</td><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.oUxofVdPEnjf2Fs2]{Growth III}</td></tr><tr><th>17</th><td>@UUID[Compendium.heliana-core.items-heliana-the-shining-shrine.Item.CX6u73Z9nkGWPSmQ]{Growth IV}</td><td></td><td></td></tr></tbody></table>",
+      "items": {
+        "Hungry": {
+          "name": "Hungry",
+          "description": "<p>Whenever the sunsnacker first detects the presence of sweet food that isn’t being worn or carried, it must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or get distracted. While distracted, it spends its movement and actions trying to get close to the food and eat it. A distracted sunsnacker repeats the on a success and becoming <strong>immune</strong> to the allure of that source of food for the next <strong>24 hours</strong>.</p>"
+        },
+        "Keen Smell": {
+          "name": "Keen Smell",
+          "description": "<p>The sunsnacker has <strong>advantage</strong> on Wisdom (Perception) checks that rely on smell.</p>"
+        },
+        "Beak": {
+          "name": "喙啄",
+          "description": "<p><strong>[[/attack format=extended]].</strong> <strong>[[/damage 1d6+2 piercing format=extended]]</strong></p>"
+        },
+        "Light": {
+          "name": "光亮术",
+          "description": "<p>The sunsnacker creates a glowing orb that hovers in the air within <strong>5 feet</strong> of it for the next <strong>minute</strong>, moving with it. The orb sheds bright light in a <strong>10-foot radius</strong> and dim light for an additional <strong>10 feet</strong>.</p>"
+        }
+      }
+    },
+    "Lair Actions (Level 7)": {
+      "name": "Lair Actions (Level 7)",
+      "tokenName": "Lair Actions (Level 7)",
+      "items": {
+        "Rage": {
+          "name": "狂暴",
+          "description": "<p>The owlbear’s territorial rage affects all other creatures within the lair. Each creature must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or immediately use its reaction to make one weapon attack against a random creature within reach/range.</p>",
+          "activities": {
+            "Rage": {
+              "name": "狂暴"
+            }
+          }
+        },
+        "Disorienting Lights": {
+          "name": "Disorienting Lights",
+          "description": "<div><p>Flares and sparkles erupt in a deluge, confusing and disorienting creatures in a <strong>20-foot cube</strong> in the owlbear’s lair. Each creature in the area other than the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or be affected by a disorienting madness per the <em>@UUID[Compendium.dnd5e.spells.9hQXdMSmerkTsHDe]{Confusion}</em> spell until the end of its next turn.</p></div>",
+          "activities": {
+            "Disorienting Lights": {
+              "name": "Disorienting Lights"
+            }
+          }
+        },
+        "Summon Sunsprites": {
+          "name": "Summon Sunsprites",
+          "description": "<p>A <strong>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.3e81ZOtpFATEcdPy]{Sunsprite} </strong>appears next to each creature of the owlbear’s choice that it can see and disappears on initiative count 20 of the following round. The sunsprites act on initiative count 10 of this round. They have an attack modifier equal to <strong>+6</strong>, the saving throw of their Death Burst is <span class=\"loot-tavern Checks-and-Saves\">14</span>, and both its attacks and Death Burst deal <strong>10</strong> (<strong>3d6</strong>) radiant damage, instead of their normal statistics.</p>",
+          "activities": {
+            "Summon Sunsprites": {
+              "name": "Summon Sunsprites"
+            }
+          }
+        }
+      }
+    },
+    "Sunsprite": {
+      "name": "Sunsprite",
+      "tokenName": "Sunsprite",
+      "description": "<div class=\"heliana-shining\"><h2 class=\"Heliana-Book-1-Styles_Titles_Title-2\"><span class=\"None\">Sunsprite</span></h2><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-1\"><span class=\"None\">Tumbling and frolicking in one of the innumerable sunbeams of the Fey Lands’ unending sunset, sunsprites are playful, inquisitive, and capricious creatures. Much like giving a cat a belly rub, playing with a sunsprite is fraught with danger. Though the sunsprite (or cat) may appear to be enjoying themselves, their mood can be changed in an instant, leaving you with naught but a patch of sunburn (or some cat claw scratches).</span></p><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2 _idGenParaOverride-1\"><span class=\"Bold-Italic--8\"><em><strong>Sunfriends.</strong></em></span><span class=\"None\"> Give their mutual love of sunlight, it is no surprise that suneater owlbears and sunsprites are found in close proximity to one another. However, when threatened, a suneater owlbear will make use of the bright light shed by these sprites, which position themselves tactically on the sunbear’s behalf.</span></p></div>",
+      "items": {
+        "Leather Armor (tiny)": {
+          "name": "Leather Armor (tiny)",
+          "description": "<p>该护甲的护胸和护肩由通过油煮硬化的皮子制成。护甲的其余部分则由更软更灵活的材料制作。</p>"
+        },
+        "Sunbow": {
+          "name": "Sunbow",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Dagger": {
+          "name": "Dagger",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Invisibility": {
+          "name": "Invisibility",
+          "description": "<section class=\"secret\" id=\"secret-JeIocMeagsi1mbga\"><p>The sunsprite magically turns invisible until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the sprite wears or carries is invisible with it.</p></section><p>The sunsprite magically turns invisible. Any equipment the sunsprite wears or carries is invisible with it.</p>"
+        },
+        "Evasion": {
+          "name": "反射回避",
+          "description": "<p>When the sunsprite is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.</p>"
+        },
+        "Bright": {
+          "name": "Bright",
+          "description": "<p>When the sunsprite isn't invisibile, it sheds bright light in a <strong>5-foot radius</strong>, and dim light for an additional <strong>5 feet.</strong></p>"
+        },
+        "Death Burst": {
+          "name": "自爆",
+          "description": "<p>When the sunsprite dies, it explodes in a burst of light. Each creature within <strong>5 feet</strong> of the sunsprite must make a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span>, taking&nbsp;<strong>[[/damage average]]</strong> damage on a failed save, or half as much damage on a successful one.</p>",
+          "activities": {
+            "save": {
+              "condition": "When the sunsprite dies"
+            }
+          }
+        }
+      }
+    },
+    "Lair Actions (Level 12)": {
+      "name": "Lair Actions (Level 12)",
+      "tokenName": "Lair Actions (Level 12)",
+      "items": {
+        "Rage": {
+          "name": "狂暴",
+          "description": "<p>The owlbear’s territorial rage affects all other creatures within the lair. Each creature must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or immediately use its reaction to make one weapon attack against a random creature within reach/range.</p>",
+          "activities": {
+            "Rage": {
+              "name": "狂暴"
+            }
+          }
+        },
+        "Disorienting Lights": {
+          "name": "Disorienting Lights",
+          "description": "<div><p>Flares and sparkles erupt in a deluge, confusing and disorienting creatures in a <strong>20-foot cube</strong> in the owlbear’s lair. Each creature in the area other than the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or be affected by a disorienting madness per the <em>@UUID[Compendium.dnd5e.spells.9hQXdMSmerkTsHDe]{Confusion}</em> spell until the end of its next turn.</p></div>",
+          "activities": {
+            "Disorienting Lights": {
+              "name": "Disorienting Lights"
+            }
+          }
+        },
+        "Summon Sunsprites": {
+          "name": "Summon Sunsprites",
+          "description": "<p>A <strong>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.wFiFLpjquKnzTZBJ]{Sunsprite} </strong>appears next to each creature of the owlbear’s choice that it can see and disappears on initiative count 20 of the following round. The sunsprites act on initiative count 10 of this round. They have an attack modifier equal to <strong>+8</strong>, the saving throw of their Death Burst is <span class=\"loot-tavern Checks-and-Saves\">16</span>, and both its attacks and Death Burst deal <strong>17</strong> (<strong>5d6</strong>) radiant damage, instead of their normal statistics.</p>",
+          "activities": {
+            "Summon Sunsprites": {
+              "name": "Summon Sunsprites"
+            }
+          }
+        }
+      }
+    },
+    "Ancient Suneater Owlbear": {
+      "name": "Ancient Suneater Owlbear",
+      "tokenName": "Ancient Suneater Owlbear",
+      "description": "<div class=\"heliana-shining\"><h2 class=\"Heliana-Book-1-Styles_Titles_Title-2\"><span class=\"None\">Suneater Owlbears</span></h2><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-1\"><span class=\"None\">It is widely believed that the owlbear is the product of a biomancer’s attempt at a chimeric fusion. An owlbear, a creature that combines the aggression of a bear with the irascibility of an owl, is already anything but docile. The influence of the Fey Lands has done nothing to bridle these extreme emotions. In fact, the suneater owlbear is more territorial, more grouchy, and more ravenous then its Material Plane counterparts.</span></p><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2\"><span class=\"Bold-Italic-8\"><em><strong>Catch the Sun.</strong></em></span><span class=\"None\"> The suneater owlbear can feed on sunlight. It dislocates its huge maw to reveal the photosynthetic pigments specially-adapted to catching the hues of light shed by the Fey Lands’ eternal sunset. One should avoid exposed outcroppings of rock in the Fey Lands; these vantage points are often a suneater owlbear’s dinner table, and suneaters are extremely territorial.</span></p><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2\"><span class=\"None\">By comparison, the bright daylight of the Material Plane is a feast, albeit an ephemeral one. The suneater owlbear is used to a constant food supply and the diurnal cycle to which so many Material Plane beasts are adapted leaves a suneater feeling particularly hangry and irritable.</span></p><p><em><strong>Indolent and Iridescent.</strong></em> The term Batesian mimicry comes from the dungeoneer Bates Buttonchop who would disguise himself as a black pudding in order to loot monster-filled crypts. The dungeon natives would avoid Bates’s disguise, having been stung by puddings before, leaving him free to purloin all manner of precious treasures. Suneater owlbears, who’re vulnerable in their darkened caves, use this Batesian mimicry to appear like observers, dangerous eye-tyrants from The Low. This combination of above-ground ferocity and below-ground intimidation has proved quite the survival strategy.</p></div>",
+      "items": {
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The owlbear makes two attacks: one with its beak and one with its claws.</p>"
+        },
+        "Beak": {
+          "name": "喙啄",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Claw": {
+          "name": "爪击",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Radiant Absorption": {
+          "name": "Radiant Absorption",
+          "description": "<p>Whenever the owlbear is subjected to radiant damage, it takes no damage and regains a number of hit points equal to the radiant damage dealt.</p>"
+        },
+        "Mythic Actions": {
+          "name": "Mythic Actions",
+          "description": "<p>If the owlbear's mythic trait is active, it can use the options below as legendary actions for 1 hour after using Supernova.</p><hr><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.t3XbC7U7Dxf29qDd.Item.ahAW470VRx6hFUzv]{Reflash}</p><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.t3XbC7U7Dxf29qDd.Item.HB17Zmcp1rxEcO5G]{Refract (Costs 2 Actions)}</p>"
+        },
+        "H6i4kfGD9bM7Fuqs": {
+          "name": "爪击",
+          "description": "<p>The owlbear attacks with its claws.</p>",
+          "activities": {
+            "Claw (Legendary Action)": {
+              "name": "Claw (Legendary Action)"
+            }
+          }
+        },
+        "Solar Beam (Recharge 5-6)": {
+          "name": "Solar Beam (Recharge 5-6)",
+          "description": "<p>The owlbear exhales a beam of irradiating energy in a <strong>5-foot-wide</strong>, <strong>60-foot-long line</strong>. Each creature in the area must make a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span>, taking <strong>[[/damage average]] </strong>damage on a failed save or half as much on a successful one.</p>"
+        },
+        "Legendary Resistance (3/Day)": {
+          "name": "Legendary Resistance (3/Day)",
+          "description": "<p>If the owlbear fails a saving throw, it can choose to succeed instead.</p>"
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<p>The owlbear can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The owlbear regains spent legendary actions at the start of its turn.</p><hr><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.t3XbC7U7Dxf29qDd.Item.H6i4kfGD9bM7Fuqs]{Claw}</p><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.t3XbC7U7Dxf29qDd.Item.8zxM6YBZGLobpHR6]{Sunstep}</p><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.t3XbC7U7Dxf29qDd.Item.nIpT57Hx25XjZCZs]{Blinding Flash (Costs 2 Actions)}</p>"
+        },
+        "Photometabolise": {
+          "name": "Photometabolise",
+          "description": "<p>If the owlbear is in direct sunlight, it regains&nbsp;<strong>15 hit points</strong> at the start of its turn.</p>",
+          "activities": {
+            "Photometabolise": {
+              "name": "Photometabolise",
+              "condition": "If in direct sunlight"
+            }
+          }
+        },
+        "Observer Mimic": {
+          "name": "Observer Mimic",
+          "description": "<p>If the owlbear is in dim light or darkness, it appears to be an observer, a type of powerful, floating eye tyrant.</p>"
+        },
+        "Sunstep": {
+          "name": "Sunstep",
+          "description": "<p>The owlbear teleports from one area of bright light to an unoccupied space of bright light within&nbsp;<strong>60 feet</strong> of it that it can see.</p>"
+        },
+        "Blinding Flash (Costs 2 Actions)": {
+          "name": "Blinding Flash (Costs 2 Actions)",
+          "description": "<p>The owlbear's featherfronds release a blinding burst of light. Each creature within <strong>30 feet</strong> of the owlbear that can see the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or be <strong>&amp;reference[blinded]</strong> until the end of the creature's next turn.</p>",
+          "activities": {
+            "Blinding Flash": {
+              "name": "目盲闪光"
+            }
+          },
+          "effects": {
+            "Blinded": {
+              "name": "目盲",
+              "description": "<p>The owlbear's featherfronds release a blinding burst of light. Each creature within <strong>30 feet</strong> of the owlbear that can see the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save con 13 format=long]]</span> or be <strong>&amp;reference[blinded]</strong> until the end of the creature's next turn.</p>"
+            }
+          }
+        },
+        "Reflash": {
+          "name": "Reflash",
+          "description": "<p>If the owlbear's mythic trait is active, it can use the option below as a legendary action for 1 hour after using Supernova.</p><p><strong>Reflash.</strong>&nbsp;The owlbear uses its Blinding Flash legendary action.</p>",
+          "activities": {
+            "Reflash": {
+              "name": "Reflash"
+            }
+          },
+          "effects": {
+            "Reflash (Blinded)": {
+              "name": "Reflash (Blinded)",
+              "description": "<p>The owlbear's featherfronds release a blinding burst of light. Each creature within <strong>30 feet</strong> of the owlbear that can see the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save con 13 format=long]]</span> or be <strong>&amp;reference[blinded]</strong> until the end of the creature's next turn.</p>"
+            }
+          }
+        },
+        "Refract (Costs 2 Actions)": {
+          "name": "Refract (Costs 2 Actions)",
+          "description": "<p>If the owlbear's mythic trait is active, it can use the option below as a legendary action for 1 hour after using Supernova.</p><p><strong>Refract (Costs 2 Actions).</strong>&nbsp;The owlbear recharges and uses its Solar Beam.&nbsp;</p>"
+        },
+        "Supernova (Recharges after a Short or Long Rest)": {
+          "name": "Supernova (Recharges after a Short or Long Rest)",
+          "description": "<p>If the owlbear is reduced to 0 hit points, it doesn't die or fall unconscious. Instead, it immediately uses its Blinding Flash legendary action (without expending any actions), recharges its Solar Beam, and regains <strong>[[lookup @attributes.hp.max]]</strong> hit points. In addition, a small sun coalesces 10 feet above the owlbear and follows it for the next hour, shedding bright sunlight in a <strong>30-foot-radius</strong> and dispelling magical darkness created by spells of 3rd level or lower in the area.<strong> </strong>Additionally, the owlbear can use the options in the “Mythic Actions” section for <strong>1 hour</strong>. Award a party an additional 11,500 XP (21,500 XP total) for defeating the owlbear after its Supernova activates.</p>"
+        }
+      }
+    },
+    "Sunsprite (Level 12 Lair Summon)": {
+      "name": "Sunsprite (Level 12 Lair Summon)",
+      "tokenName": "Sunsprite (Level 12 Lair Summon)",
+      "description": "<div class=\"heliana-shining\">\n<h2 class=\"Heliana-Book-1-Styles_Titles_Title-2\"><span class=\"None\">Sunsprite</span></h2>\n<p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-1\"><span class=\"None\">Tumbling and frolicking in one of the innumerable sunbeams of the Fey Lands’ unending sunset, sunsprites are playful, inquisitive, and capricious creatures. Much like giving a cat a belly rub, playing with a sunsprite is fraught with danger. Though the sunsprite (or cat) may appear to be enjoying themselves, their mood can be changed in an instant, leaving you with naught but a patch of sunburn (or some cat claw scratches).</span></p>\n<p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2 _idGenParaOverride-1\"><span class=\"Bold-Italic--8\">Sunfriends.</span><span class=\"None\"> Give their mutual love of sunlight, it is no surprise that suneater owlbears and sunsprites are found in close proximity to one another. However, when threatened, a suneater owlbear will make use of the bright light shed by these sprites, which position themselves tactically on the sunbear’s behalf.</span></p>\n</div>",
+      "items": {
+        "Leather Armor (tiny)": {
+          "name": "Leather Armor (tiny)",
+          "description": "<p>该护甲的护胸和护肩由通过油煮硬化的皮子制成。护甲的其余部分则由更软更灵活的材料制作。</p>"
+        },
+        "Sunbow": {
+          "name": "Sunbow",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Dagger": {
+          "name": "匕首",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Invisibility": {
+          "name": "隐形术",
+          "description": "<section class=\"secret\">\n<p>The sunsprite magically turns invisible until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the sprite wears or carries is invisible with it.</p>\n</section>\n<p>The sunsprite magically turns invisible. Any equipment the sunsprite wears or carries is invisible with it.</p>"
+        },
+        "Evasion": {
+          "name": "反射闪避",
+          "description": "<p>When the sunsprite is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.</p>"
+        },
+        "Bright": {
+          "name": "Bright",
+          "description": "<p>When the sunsprite isn't invisibile, it sheds bright light in a <strong>5-foot radius</strong>, and dim light for an additional <strong>5 feet.</strong></p>"
+        },
+        "Death Burst": {
+          "name": "自爆",
+          "description": "<p>When the sunsprite dies, it explodes in a burst of light. Each creature within <strong>5 feet</strong> of the sunsprite must make a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span>, taking&nbsp;<strong>[[/damage average]]</strong> damage on a failed save, or half as much damage on a successful one.</p>",
+          "activities": {
+            "save": {
+              "condition": "When the sunsprite dies"
+            }
+          }
+        }
+      }
+    },
+    "Sunsprite (Level 2 Lair Summon)": {
+      "name": "Sunsprite (Level 2 Lair Summon)",
+      "tokenName": "Sunsprite (Level 2 Lair Summon)",
+      "description": "<div class=\"heliana-shining\">\n<h2 class=\"Heliana-Book-1-Styles_Titles_Title-2\"><span class=\"None\">Sunsprite</span></h2>\n<p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-1\"><span class=\"None\">Tumbling and frolicking in one of the innumerable sunbeams of the Fey Lands’ unending sunset, sunsprites are playful, inquisitive, and capricious creatures. Much like giving a cat a belly rub, playing with a sunsprite is fraught with danger. Though the sunsprite (or cat) may appear to be enjoying themselves, their mood can be changed in an instant, leaving you with naught but a patch of sunburn (or some cat claw scratches).</span></p>\n<p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2 _idGenParaOverride-1\"><span class=\"Bold-Italic--8\">Sunfriends.</span><span class=\"None\"> Give their mutual love of sunlight, it is no surprise that suneater owlbears and sunsprites are found in close proximity to one another. However, when threatened, a suneater owlbear will make use of the bright light shed by these sprites, which position themselves tactically on the sunbear’s behalf.</span></p>\n</div>",
+      "items": {
+        "Leather Armor (tiny)": {
+          "name": "Leather Armor (tiny)",
+          "description": "<p>该护甲的护胸和护肩由通过油煮硬化的皮子制成。护甲的其余部分则由更软更灵活的材料制作。</p>"
+        },
+        "Sunbow": {
+          "name": "Sunbow",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Dagger": {
+          "name": "匕首",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Invisibility": {
+          "name": "隐形术",
+          "description": "<section class=\"secret\">\n<p>The sunsprite magically turns invisible until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the sprite wears or carries is invisible with it.</p>\n</section>\n<p>The sunsprite magically turns invisible. Any equipment the sunsprite wears or carries is invisible with it.</p>"
+        },
+        "Evasion": {
+          "name": "反射闪避",
+          "description": "<p>When the sunsprite is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.</p>"
+        },
+        "Bright": {
+          "name": "Bright",
+          "description": "<p>When the sunsprite isn't invisibile, it sheds bright light in a <strong>5-foot radius</strong>, and dim light for an additional <strong>5 feet.</strong></p>"
+        },
+        "Death Burst": {
+          "name": "自爆",
+          "description": "<p>When the sunsprite dies, it explodes in a burst of light. Each creature within <strong>5 feet</strong> of the sunsprite must make a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span>, taking&nbsp;<strong>[[/damage average]]</strong> damage on a failed save, or half as much damage on a successful one.</p>",
+          "activities": {
+            "save": {
+              "condition": "When the sunsprite dies"
+            }
+          }
+        }
+      }
+    },
+    "Young Suneater Owlbear": {
+      "name": "Young Suneater Owlbear",
+      "tokenName": "Young Suneater Owlbear",
+      "description": "<div class=\"heliana-shining\"><h2 class=\"Heliana-Book-1-Styles_Titles_Title-2\"><span class=\"None\">Suneater Owlbears</span></h2><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-1\"><span class=\"None\">It is widely believed that the owlbear is the product of a biomancer’s attempt at a chimeric fusion. An owlbear, a creature that combines the aggression of a bear with the irascibility of an owl, is already anything but docile. The influence of the Fey Lands has done nothing to bridle these extreme emotions. In fact, the suneater owlbear is more territorial, more grouchy, and more ravenous then its Material Plane counterparts.</span></p><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2\"><span class=\"Bold-Italic-8\"><em><strong>Catch the Sun.</strong></em></span><span class=\"None\"> The suneater owlbear can feed on sunlight. It dislocates its huge maw to reveal the photosynthetic pigments specially-adapted to catching the hues of light shed by the Fey Lands’ eternal sunset. One should avoid exposed outcroppings of rock in the Fey Lands; these vantage points are often a suneater owlbear’s dinner table, and suneaters are extremely territorial.</span></p><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2\"><span class=\"None\">By comparison, the bright daylight of the Material Plane is a feast, albeit an ephemeral one. The suneater owlbear is used to a constant food supply and the diurnal cycle to which so many Material Plane beasts are adapted leaves a suneater feeling particularly hangry and irritable.</span></p><p><em><strong>Indolent and Iridescent.</strong></em> The term Batesian mimicry comes from the dungeoneer Bates Buttonchop who would disguise himself as a black pudding in order to loot monster-filled crypts. The dungeon natives would avoid Bates’s disguise, having been stung by puddings before, leaving him free to purloin all manner of precious treasures. Suneater owlbears, who’re vulnerable in their darkened caves, use this Batesian mimicry to appear like observers, dangerous eye-tyrants from The Low. This combination of above-ground ferocity and below-ground intimidation has proved quite the survival strategy.</p></div>",
+      "items": {
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The owlbear makes two attacks: one with its beak and one with its claws.</p>"
+        },
+        "Beak": {
+          "name": "喙啄",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Claw": {
+          "name": "爪击",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Solar Beam (Recharge 5-6)": {
+          "name": "Solar Beam (Recharge 5-6)",
+          "description": "<p>The owlbear exhales a beam of irradiating energy in a <strong>5-foot-wide</strong>, <strong>60-foot-long line</strong>. Each creature in the area must make a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span>, taking <strong>[[/damage average]] </strong>damage on a failed save or half as much on a successful one.</p>"
+        },
+        "Legendary Resistance (3/Day)": {
+          "name": "Legendary Resistance (3/Day)",
+          "description": "<p>If the owlbear fails a saving throw, it can choose to succeed instead.</p>"
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<p>The owlbear can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The owlbear regains spent legendary actions at the start of its turn.</p><hr><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.z4A4V8q36Gml7jMN.Item.vqZZZD5YzH6MrWBd]{Claw}</p><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.z4A4V8q36Gml7jMN.Item.1Iq4qYuVHRYF40PV]{Sunstep}</p><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.z4A4V8q36Gml7jMN.Item.NYk4a303vv5dDA4M]{Blinding Flash (Costs 2 Actions)}</p>"
+        },
+        "Observer Mimic": {
+          "name": "Observer Mimic",
+          "description": "<p>If the owlbear is in dim light or darkness, it appears to be an observer, a type of powerful, floating eye tyrant.</p>"
+        },
+        "Photometabolise": {
+          "name": "Photometabolise",
+          "description": "<p>If the owlbear is in direct sunlight, it regains&nbsp;<strong>5 hit points</strong> at the start of its turn.</p>",
+          "activities": {
+            "Photometabolise": {
+              "name": "Photometabolise",
+              "condition": "If in direct sunlight"
+            }
+          }
+        },
+        "Radiant Absorption": {
+          "name": "Radiant Absorption",
+          "description": "<p>Whenever the owlbear is subjected to radiant damage, it takes no damage and regains a number of hit points equal to the radiant damage dealt.</p>"
+        },
+        "Supernova (Recharges after a Short or Long Rest)": {
+          "name": "Supernova (Recharges after a Short or Long Rest)",
+          "description": "<p>If the owlbear is reduced to 0 hit points, it doesn't die or fall unconscious. Instead, it immediately uses its Blinding Flash legendary action (without expending any actions), recharges its Solar Beam, and regains <strong>[[lookup @attributes.hp.max]]</strong> hit points. In addition, a small sun coalesces 10 feet above the owlbear and follows it for the next hour, shedding bright sunlight in a <strong>30-foot-radius. </strong>Additionally, the owlbear can use the options in the “Mythic Actions” section for <strong>1 hour</strong>. Award a party an additional 700 XP (1,400 XP total) for defeating the owlbear after its Supernova activates.</p>"
+        },
+        "vqZZZD5YzH6MrWBd": {
+          "name": "爪击",
+          "description": "<section class=\"secret\">\n<p>The owlbear makes a claw attack.</p>\n</section>\n<p>The owlbear attacks with its claws.</p>",
+          "activities": {
+            "Claw (Legendary Action)": {
+              "name": "Claw (Legendary Action)"
+            }
+          }
+        },
+        "Sunstep": {
+          "name": "Sunstep",
+          "description": "<p>The owlbear teleports from one area of bright light to an unoccupied space of bright light within&nbsp;<strong>60 feet</strong> of it that it can see.</p>"
+        },
+        "Blinding Flash (Costs 2 Actions)": {
+          "name": "Blinding Flash (Costs 2 Actions)",
+          "description": "<p>The owlbear's featherfronds release a blinding burst of light. Each creature within <strong>30 feet</strong> of the owlbear that can see the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or be <strong>&amp;reference[blinded]</strong> until the end of the creature's next turn.</p>",
+          "activities": {
+            "Blinding Flash": {
+              "name": "目盲闪光"
+            }
+          },
+          "effects": {
+            "Blinded": {
+              "name": "目盲",
+              "description": "<p>The owlbear's featherfronds release a blinding burst of light. Each creature within <strong>30 feet</strong> of the owlbear that can see the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save con 13 format=long]]</span> or be <strong>&amp;reference[blinded]</strong> until the end of the creature's next turn.</p>"
+            }
+          }
+        },
+        "Mythic Actions": {
+          "name": "Mythic Actions",
+          "description": "<p>If the owlbear's mythic trait is active, it can use the options below as legendary actions for 1 hour after using Supernova.</p><hr><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.z4A4V8q36Gml7jMN.Item.nklzqCt9l1jjARCk]{Reflash}</p><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.z4A4V8q36Gml7jMN.Item.JqnT9RchvGaf20Ru]{Refract (Costs 2 Actions)}</p>"
+        },
+        "Reflash": {
+          "name": "Reflash",
+          "description": "<p>If the owlbear's mythic trait is active, it can use the option below as a legendary action for 1 hour after using Supernova.</p><p><strong>Reflash.</strong>&nbsp;The owlbear uses its Blinding Flash legendary action.</p>",
+          "activities": {
+            "Reflash": {
+              "name": "Reflash"
+            }
+          },
+          "effects": {
+            "Reflash (Blinded)": {
+              "name": "Reflash (Blinded)",
+              "description": "<p>The owlbear's featherfronds release a blinding burst of light. Each creature within <strong>30 feet</strong> of the owlbear that can see the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save con 13 format=long]]</span> or be <strong>&amp;reference[blinded]</strong> until the end of the creature's next turn.</p>"
+            }
+          }
+        },
+        "Refract (Costs 2 Actions)": {
+          "name": "Refract (Costs 2 Actions)",
+          "description": "<p>If the owlbear's mythic trait is active, it can use the option below as a legendary action for 1 hour after using Supernova.</p><p><strong>Refract (Costs 2 Actions).</strong>&nbsp;The owlbear recharges and uses its Solar Beam.&nbsp;</p>"
+        }
+      }
+    },
+    "Adult Suneater Owlbear": {
+      "name": "Adult Suneater Owlbear",
+      "tokenName": "Adult Suneater Owlbear",
+      "description": "<div class=\"heliana-shining\"><h2 class=\"Heliana-Book-1-Styles_Titles_Title-2\"><span class=\"None\">Suneater Owlbears</span></h2><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-1\"><span class=\"None\">It is widely believed that the owlbear is the product of a biomancer’s attempt at a chimeric fusion. An owlbear, a creature that combines the aggression of a bear with the irascibility of an owl, is already anything but docile. The influence of the Fey Lands has done nothing to bridle these extreme emotions. In fact, the suneater owlbear is more territorial, more grouchy, and more ravenous then its Material Plane counterparts.</span></p><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2\"><span class=\"Bold-Italic-8\"><em><strong>Catch the Sun.</strong></em></span><span class=\"None\"> The suneater owlbear can feed on sunlight. It dislocates its huge maw to reveal the photosynthetic pigments specially-adapted to catching the hues of light shed by the Fey Lands’ eternal sunset. One should avoid exposed outcroppings of rock in the Fey Lands; these vantage points are often a suneater owlbear’s dinner table, and suneaters are extremely territorial.</span></p><p class=\"Heliana-Book-1-Styles_Paragraph-Texts_Para-2\"><span class=\"None\">By comparison, the bright daylight of the Material Plane is a feast, albeit an ephemeral one. The suneater owlbear is used to a constant food supply and the diurnal cycle to which so many Material Plane beasts are adapted leaves a suneater feeling particularly hangry and irritable.</span></p><p><em><strong>Indolent and Iridescent.</strong></em> The term Batesian mimicry comes from the dungeoneer Bates Buttonchop who would disguise himself as a black pudding in order to loot monster-filled crypts. The dungeon natives would avoid Bates’s disguise, having been stung by puddings before, leaving him free to purloin all manner of precious treasures. Suneater owlbears, who’re vulnerable in their darkened caves, use this Batesian mimicry to appear like observers, dangerous eye-tyrants from The Low. This combination of above-ground ferocity and below-ground intimidation has proved quite the survival strategy.</p></div>",
+      "items": {
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The owlbear makes two attacks: one with its beak and one with its claws.</p>"
+        },
+        "Beak": {
+          "name": "喙啄",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Claw": {
+          "name": "爪击",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<p>The owlbear can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The owlbear regains spent legendary actions at the start of its turn.</p><hr><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.zgOGXXfQ0s1oGolk.Item.4pFHycn25GvMdHSf]{Claw}</p><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.zgOGXXfQ0s1oGolk.Item.FuvGLycqMZ1mpv3q]{Sunstep}</p><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.zgOGXXfQ0s1oGolk.Item.KGEq1S6mpMzRHgMH]{Blinding Flash (Costs 2 Actions)}</p>"
+        },
+        "Radiant Absorption": {
+          "name": "Radiant Absorption",
+          "description": "<p>Whenever the owlbear is subjected to radiant damage, it takes no damage and regains a number of hit points equal to the radiant damage dealt.</p>"
+        },
+        "Mythic Actions": {
+          "name": "Mythic Actions",
+          "description": "<p>If the owlbear's mythic trait is active, it can use the options below as legendary actions for 1 hour after using Supernova.</p><hr><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.zgOGXXfQ0s1oGolk.Item.QHuiB1DtajulMW66]{Reflash}</p><p>@UUID[Compendium.heliana-core.actors-heliana-the-shining-shrine.Actor.zgOGXXfQ0s1oGolk.Item.rrwutWdBQ4TVBemc]{Refract (Costs 2 Actions)}</p>"
+        },
+        "Photometabolise": {
+          "name": "Photometabolise",
+          "description": "<p>If the owlbear is in direct sunlight, it regains&nbsp;<strong>10 hit points</strong> at the start of its turn.</p>",
+          "activities": {
+            "Photometabolise": {
+              "name": "Photometabolise",
+              "condition": "If in direct sunlight"
+            }
+          }
+        },
+        "Observer Mimic": {
+          "name": "Observer Mimic",
+          "description": "<p>If the owlbear is in dim light or darkness, it appears to be an observer, a type of powerful, floating eye tyrant.</p>"
+        },
+        "Legendary Resistance (3/Day)": {
+          "name": "Legendary Resistance (3/Day)",
+          "description": "<p>If the owlbear fails a saving throw, it can choose to succeed instead.</p>"
+        },
+        "Solar Beam (Recharge 5-6)": {
+          "name": "Solar Beam (Recharge 5-6)",
+          "description": "<p>The owlbear exhales a beam of irradiating energy in a <strong>5-foot-wide</strong>, <strong>60-foot-long line</strong>. Each creature in the area must make a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span>, taking <strong>[[/damage average]] </strong>damage on a failed save or half as much on a successful one.</p>"
+        },
+        "4pFHycn25GvMdHSf": {
+          "name": "爪击",
+          "description": "<section class=\"secret\">\n<p>The owlbear makes a claw attack.</p>\n</section>\n<p>The owlbear attacks with its claws.</p>",
+          "activities": {
+            "Claw (Legendary Action)": {
+              "name": "Claw (Legendary Action)"
+            }
+          }
+        },
+        "Sunstep": {
+          "name": "Sunstep",
+          "description": "<p>The owlbear teleports from one area of bright light to an unoccupied space of bright light within&nbsp;<strong>60 feet</strong> of it that it can see.</p>"
+        },
+        "Blinding Flash (Costs 2 Actions)": {
+          "name": "Blinding Flash (Costs 2 Actions)",
+          "description": "<p>The owlbear's featherfronds release a blinding burst of light. Each creature within <strong>30 feet</strong> of the owlbear that can see the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\"><strong>[[/save format=long]]</strong></span> or be <strong>&amp;reference[blinded]</strong> until the end of the creature's next turn.</p>",
+          "activities": {
+            "Blinding Flash": {
+              "name": "目盲闪光"
+            }
+          },
+          "effects": {
+            "Blinded": {
+              "name": "目盲",
+              "description": "<p>The owlbear's featherfronds release a blinding burst of light. Each creature within <strong>30 feet</strong> of the owlbear that can see the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save con 13 format=long]]</span> or be <strong>&amp;reference[blinded]</strong> until the end of the creature's next turn.</p>"
+            }
+          }
+        },
+        "Reflash": {
+          "name": "Reflash",
+          "description": "<p>If the owlbear's mythic trait is active, it can use the option below as a legendary action for 1 hour after using Supernova.</p><p><strong>Reflash.</strong>&nbsp;The owlbear uses its Blinding Flash legendary action.</p>",
+          "activities": {
+            "Reflash": {
+              "name": "Reflash"
+            }
+          },
+          "effects": {
+            "Reflash (Blinded)": {
+              "name": "Reflash (Blinded)",
+              "description": "<p>The owlbear's featherfronds release a blinding burst of light. Each creature within <strong>30 feet</strong> of the owlbear that can see the owlbear must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save con 13 format=long]]</span> or be <strong>&amp;reference[blinded]</strong> until the end of the creature's next turn.</p>"
+            }
+          }
+        },
+        "Refract (Costs 2 Actions)": {
+          "name": "Refract (Costs 2 Actions)",
+          "description": "<p>If the owlbear's mythic trait is active, it can use the option below as a legendary action for 1 hour after using Supernova.</p><p><strong>Refract (Costs 2 Actions).</strong>&nbsp;The owlbear recharges and uses its Solar Beam.&nbsp;</p>"
+        },
+        "Supernova (Recharges after a Short or Long Rest)": {
+          "name": "Supernova (Recharges after a Short or Long Rest)",
+          "description": "<p>If the owlbear is reduced to 0 hit points, it doesn't die or fall unconscious. Instead, it immediately uses its Blinding Flash legendary action (without expending any actions), recharges its Solar Beam, and regains <strong>[[lookup @attributes.hp.max]]</strong> hit points. In addition, a small sun coalesces 10 feet above the owlbear and follows it for the next hour, shedding bright sunlight in a <strong>30-foot-radius</strong> and dispelling magical darkness created by spells of 2nd level or lower in the area.<strong> </strong>Additionally, the owlbear can use the options in the “Mythic Actions” section for <strong>1 hour</strong>. Award a party an additional 5,000 XP (8,900 XP total) for defeating the owlbear after its Supernova activates.</p>"
+        }
+      }
+    }
+  }
+}

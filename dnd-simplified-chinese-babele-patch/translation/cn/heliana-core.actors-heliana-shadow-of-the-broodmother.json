@@ -1,0 +1,783 @@
+{
+  "label": "Bestiary",
+  "folders": {
+    "Familiar": "Familiar"
+  },
+  "entries": {
+    "Lesser Brood Chrysalis": {
+      "name": "Lesser Brood Chrysalis",
+      "tokenName": "Lesser Brood Chrysalis",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The chrysalis can breathe air and water."
+        },
+        "Sticky Mucus": {
+          "name": "Sticky Mucus",
+          "description": "<p>When a creature hits the chrysalis with a melee attack, it must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span> or become disarmed as its weapon stays stuck to the creature. </p><p>A creature can use an action to make a<strong> </strong><span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check]]</span><strong> check</strong>, freeing a stuck weapon within its reach on a success. If the attack requires that the attacker touch the aboleth (GM’s discretion), then the attacker becomes grappled (<span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">escape DC 15</span>) on a failed save. While it is grappled, it can’t use that limb. If the attack is a bite, then the creature can’t speak while it is grappled in this way.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The chrysalis makes three @UUID[Actor.1FjO7ZvC4egfJl3e.Item.izIuqMBBDaySACd6]{Sticky Ectoplasm} attacks. Each attack must be against a different target.</p>"
+        },
+        "Regenerative State": {
+          "name": "Regenerative State",
+          "description": "The chrysalis’ hit points reset to its maximum at the start of its turn.",
+          "activities": {
+            "Regenerate": {
+              "name": "再生术"
+            }
+          }
+        },
+        "Transitional State": {
+          "name": "Transitional State",
+          "description": "<p>The chrysalis turns into an <strong>@UUID[Compendium.heliana-core.actors-heliana-shadow-of-the-broodmother.Actor.jOfdC3PGacNgFXWB]{lesser aboleth broodmother}</strong> at the start of its fourth turn after becoming a chrysalis, ending any grapples it is a part of.</p>"
+        },
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the chrysalis fails a saving throw, it can choose to succeed instead."
+        },
+        "Sticky Ectoplasm": {
+          "name": "Sticky Ectoplasm",
+          "description": "<p><em>Ranged Weapon Attack</em>: [[/attack]] to hit, range [[lookup @item.range.value]]/[[lookup @item.range.long]] ft., one target. Hit: <strong>[[/damage average]]</strong> damage and the target’s speed is reduced by <strong>15 feet</strong> until the target uses an action to remove the ectoplasm. A creature whose speed is reduced to 0 feet by this effect is <strong>&amp;reference[restrained]</strong> (<span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\"><strong>escape DC 15</strong></span>).</p>"
+        }
+      }
+    },
+    "Swallybog Sharpfin": {
+      "name": "Swallybog Sharpfin",
+      "tokenName": "Swallybog Sharpfin",
+      "items": {
+        "Shield": {
+          "name": "Shield",
+          "description": "<p>盾牌通常由木材或金属制成，可以单手进行持用。持用一面盾牌可以令你的护甲等级 +2。不过同一时间里你只能从一面盾牌中受益。</p>"
+        },
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The swallybog can breathe air and water."
+        },
+        "Gullible": {
+          "name": "Gullible",
+          "description": "<p>The swallybog has <strong>&amp;reference[disadvantage]{disadvantage}</strong> on <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check insight]] </span>checks.</p>"
+        },
+        "Net Master": {
+          "name": "Net Master",
+          "description": "<p>Being within <strong>5 feet</strong> of a hostile creature doesn’t impose <strong>&amp;reference[disadvantage]{disadvantage}</strong> on the swallybog’s ranged attack rolls. Making an attack with a net doesn’t limit the number of non-net attacks the swallybog can make (included in actions).</p>"
+        },
+        "Standing Leap": {
+          "name": "立定起跳",
+          "description": "<p>The swallybog’s long jump is up to <strong>20 feet</strong> and its high jump is up to <strong>10 feet</strong>, with or without a running start.</p>"
+        },
+        "Swamp Camouflage": {
+          "name": "Swamp Camouflage",
+          "description": "<p>The swallybog has <strong>&amp;reference[advantage]{advantage}</strong> on <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check stealth]]</span> checks made to hide in swampy terrain.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The swallybog makes three attacks: one with its @UUID[Actor.1b5wSD6dxsi9sKfd.Item.Y9gGTf4HbmRrtfLw]{Net} and two with its @UUID[Actor.1b5wSD6dxsi9sKfd.Item.AHbGgv5aIUzqvkCb]{Trident}.</p>"
+        },
+        "Trident": {
+          "name": "三叉戟",
+          "description": "<p><em>Melee or Ranged Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.reach]] ft. or range [[lookup @item.range.value]]/[[lookup @item.range.long]] ft., one target. Hit: <strong>[[/damage average]]</strong> damage, or <strong>[[/damage activity=s0YKGN4lQr1FBpMh average]]</strong> damage if used with two hands to make a melee attack.</p>",
+          "activities": {
+            "Attack (Ranged)": {
+              "name": "Attack (Ranged)"
+            },
+            "Attack (One-Handed Melee)": {
+              "name": "Attack (One-Handed Melee)"
+            },
+            "Attack (Two-Handed Melee)": {
+              "name": "Attack (Two-Handed Melee)"
+            }
+          }
+        },
+        "Net": {
+          "name": "Net",
+          "description": "<p><em>Ranged Weapon Attack</em>: [[/attack]] to hit, range [[lookup @item.range.value]]/[[lookup @item.range.long]] ft., one target. <em>Hit</em>: the target is <strong>&amp;reference[restrained]{restrained}</strong> if it is Large or smaller. A creature can use its action to make a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check ]]</span><strong> check</strong>, freeing itself or another creature within its reach on a success. Dealing <strong>[[/damage 5 slashing]]</strong> damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net.</p><p><br></p>",
+          "activities": {
+            "Strength Check": {
+              "name": "Strength Check"
+            }
+          }
+        }
+      }
+    },
+    "Swallybog Gillwrangler": {
+      "name": "Swallybog Gillwrangler",
+      "tokenName": "Swallybog Gillwrangler",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The swallybog can breathe air and water."
+        },
+        "Gullible": {
+          "name": "Gullible",
+          "description": "<p>The swallybog has <strong>&amp;reference[disadvantage]{disadvantage}</strong> on <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check insight]] </span>checks.</p>"
+        },
+        "Standing Leap": {
+          "name": "立定起跳",
+          "description": "<p>The swallybog’s long jump is up to <strong>20 feet</strong> and its high jump is up to <strong>10 feet</strong>, with or without a running start.</p>"
+        },
+        "Swamp Camouflage": {
+          "name": "Swamp Camouflage",
+          "description": "<p>The swallybog has <strong>&amp;reference[advantage]{advantage}</strong> on <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check stealth]]</span> checks made to hide in swampy terrain.</p>"
+        },
+        "Spellcasting": {
+          "name": "施法",
+          "description": "<p>The swallybog is a 10th level spellcaster and can cast the following spells, requiring no spell components and using Wisdom as the spellcasting ability (<span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">spell save DC 15</span>, <strong>[[/r +7]] to hit</strong> with spell attacks):</p><p><strong>At will</strong>: <em>@UUID[Compendium.dnd5e.spells.SbSvZKkJASyk8jKo]{druidcraft}</em>, <em>@UUID[Compendium.dnd5e.spells.VzgFzcmocr1X1cp4]{shillelagh}</em>, <em><strong>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.wjoobOLBtiUgSXDU]{water whip*}</strong></em>, <em>@UUID[Compendium.dnd5e.spells.ZrTc23tToJ0JpH2h]{jump }</em></p><p><strong>3/day each</strong>: <em><strong>@UUID[Compendium.dnd5e.spells.uUWb1wZgtMou0TVP]{cure wounds}</strong></em><strong>, </strong><em><strong>@UUID[Compendium.dnd5e.spells.bV3yun6MIuFj71Er]{moonbeam}</strong></em><sup><em><strong>c</strong></em></sup><strong>, </strong><em><strong>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.WZuuMBObBjHHoG2O]{riptide*}</strong></em><sup><em><strong>c</strong></em></sup><strong>, </strong><em><strong>@UUID[Compendium.dnd5e.spells.WTbOQBsarsL1LuXJ]{thunderwave}</strong></em></p><p><strong>2/day each</strong>: <em><strong>@UUID[Compendium.dnd5e.spells.7fFHlBk3UNX8gPKL]{control water}</strong></em><sup><em><strong>c</strong></em></sup><strong>, </strong><em><strong>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.2G1l3X5uwcOyRF67]{depth charge*}</strong></em><strong>, </strong><em><strong>@UUID[Compendium.dnd5e.spells.15Fa6q1nH27XfbR8]{dispel magic}</strong></em></p><p><strong>1/day each</strong>: <em><strong>@UUID[Compendium.dnd5e.spells.OVikYmSdHliAG2YD]{insect plague}</strong></em><sup><em><strong>c</strong></em></sup><strong>, </strong><em><strong>@UUID[Compendium.dnd5e.spells.Pyzmm8R7rVsNAPsd]{mass cure wounds}</strong></em><strong>, </strong><em><strong>@UUID[Compendium.dnd5e.spells.04nMsTWkIFvkbXlY]{polymorph}</strong></em></p><p><em>*See Appendix B; <strong>bold</strong> indicates combat spell; c indicates concentration</em></p>"
+        },
+        "Quarterstaff": {
+          "name": "Quarterstaff",
+          "description": "<p><em>Melee Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.value]] ft. , one target. Hit: <strong>[[/damage average]]</strong> damage, or <strong>[[/damage activity=9Ol6kQQNTXUeW47s average]]</strong> if used with two hands.</p>",
+          "activities": {
+            "Attack (One-Handed)": {
+              "name": "Attack (One-Handed)"
+            },
+            "Attack (Two-Handed)": {
+              "name": "Attack (Two-Handed)"
+            }
+          }
+        },
+        "Druidcraft": {
+          "name": "德鲁伊伎俩",
+          "description": "<section id=\"secret-42UgPHT1SRYl6APO\" class=\"secret\"><p>Whispering to the spirits of Nature, you create one of the following Effects within range:</p><ul><li>You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, Falling snowflakes for snow, and so on. This effect persists for 1 round.</li><li>You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.</li><li>You create an Instantaneous, harmless sensory effect, such as Falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.</li><li>You instantly light or snuff out a Candle, a torch, or a small campfire.</li></ul></section><p>The swallybog uses druidcraft. </p>"
+        },
+        "Shillelagh": {
+          "name": "橡棍术",
+          "description": "<section id=\"secret-WXd17Tdt43v7nY45\" class=\"secret\"><p>The wood of a club or quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.</p></section><p>The swallybog uses shillelagh. </p>",
+          "materials": {
+            "value": "一些槲寄生，一片三叶草叶子，以及一根短棒或长棍"
+          }
+        },
+        "Jump": {
+          "name": "跳跃术",
+          "description": "<section id=\"secret-w1CCg7SXVeviwNLH\" class=\"secret\"><p>You touch a creature. The creature's jump distance is tripled until the spell ends.</p></section><p>The swallybog uses jump.</p>",
+          "materials": {
+            "value": "A grasshopper's hind leg"
+          }
+        },
+        "Water Whip": {
+          "name": "Water Whip",
+          "description": "<section id=\"secret-tsnybab1I2woPFaH\" class=\"secret\"><p>Choose a source of water that you can see within range that has a volume of at least 4 pints. Make a <strong>melee spell attack</strong> against a creature within <strong>30 feet</strong> of the source of water. On a hit, the target takes <strong>1d6</strong> slashing damage and, if the creature is Large or smaller, you can force it to make a <strong>Strength saving throw</strong>, pulling it up to <strong>10 feet</strong> towards the source of water on a failure.</p><p>The spell’s damage increases by <strong>1d6</strong> and the distance it can pull a target increases by <strong>5 feet</strong> when you reach 5th level (<strong>2d6</strong> and <strong>15 feet</strong>), 11th level (<strong>3d6</strong> and <strong>20 feet</strong>), and 17th level (<strong>4d6</strong> and <strong>25 feet</strong>).</p></section><p>The swallybog uses water whip, make a <strong>Strength saving throw</strong>!</p>"
+        },
+        "Cure Wounds": {
+          "name": "疗伤术",
+          "description": "<section id=\"secret-p3AUyGv30ALtGLo5\" class=\"secret\"><p>A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.</p></section><p>The swallybog uses cure wounds.</p>"
+        },
+        "Moonbeam": {
+          "name": "月华之光",
+          "description": "<section id=\"secret-qwjZ0aXGmiIGruIO\" class=\"secret\"><p>A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high Cylinder centered on a point within range. Until the spell ends, dim light fills the cylinder.</p><p>When a creature enters the spell's area for the first time on a turn or starts its turn there, it is engulfed in ghostly flames that cause searing pain, and it must make a Constitution saving throw. It takes 2d10 radiant damage on a failed save, or half as much damage on a successful one.</p><p>A Shapechanger makes its saving throw with disadvantage. If it fails, it also instantly reverts to its original form and can't assume a different form until it leaves the spell's light.</p><p>On each of your turns after you cast this spell, you can use an action to move the beam up to 60 feet in any direction.</p><p><strong>At Higher Levels</strong>. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d10 for each slot level above 2nd.</p></section><p>The swallybog uses moonbeam, make a <strong>Strength saving throw</strong>!</p>",
+          "materials": {
+            "value": "Several seeds of any moonseed plant and a piece of opalescent feldspar"
+          }
+        },
+        "Riptide": {
+          "name": "Riptide",
+          "description": "<section id=\"secret-htYFjljiS2V3NQFt\" class=\"secret\"><p>Choose one creature you can see within range that is in at least 2 feet of water and choose a direction. Turbulent currents wrap around the creature. For the duration, the target must make a <strong>Strength saving throw</strong> at the start of each of its turns. On a failure, it is dragged <strong>30 feet</strong> in the direction you chose, and its swimming speed is reduced to 0 feet until the start of its next turn. On a success, the creature can move normally until the start of its next turn.</p><p>As a <strong>bonus action</strong> on your turn, you can change the direction of the underwater currents. The spell ends early if the creature is ever out of the spell’s range, or is no longer in water at least 2 feet deep.</p></section><p>The swallybog uses riptide, make a <strong>Strength saving throw</strong>!</p>"
+        },
+        "Thunderwave": {
+          "name": "雷鸣波",
+          "description": "<section id=\"secret-lLXDcWJKLZEZKAMS\" class=\"secret\"><p>A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.</p><p>In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</p></section><p>The swallybog uses thunderwave, make a <strong>Constitution saving throw</strong>!</p>"
+        },
+        "Control Water": {
+          "name": "操控水体",
+          "description": "<section id=\"secret-lvaSrEiOLDdR62sI\" class=\"secret\"><p>Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one.</p><p><strong>Flood.</strong> You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land, instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing.</p><p>The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts.</p><p><strong>Part Water.</strong> You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored.</p><p><strong>Redirect Flow.</strong> You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain conditions. The water continues to move in the direction you chose until the spell ends or you choose a different effect.</p><p><strong>Whirlpool.</strong> This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.</p><p>When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes 2d8 bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.</p><p>The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage; this damage occurs each round it remains in the vortex.</p></section><p>The swallybog uses control water.</p>",
+          "materials": {
+            "value": "一滴水和一撮土"
+          }
+        },
+        "Depth Charge": {
+          "name": "Depth Charge",
+          "description": "<section id=\"secret-iW51axadTHV0vDgw\" class=\"secret\"><p>With a boom that can be heard 300 feet away (or 1000 feet in a liquid), a pulse of thunder ripples out from a point you choose within range. Each creature in a <strong>20-foot-radius sphere</strong> centred on that point must make a <strong>Constitution saving throw</strong>. A target takes <strong>7d6</strong> thunder damage on a failed save, or half as much damage on a successful one. This damage increases to <strong>9d6</strong> if the affected creature is submerged in a liquid.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the damage increases by <strong>1d6</strong> for each slot level above 3rd.</p></section><p>The swallybog uses depth charge, make a <strong>Constitution saving throw</strong>!</p>",
+          "materials": {
+            "value": "some metamorphic rock"
+          }
+        },
+        "Dispel Magic": {
+          "name": "解除魔法",
+          "description": "<section id=\"secret-x4JLfTSp9eK6UUKB\" class=\"secret\"><p>Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a successful check, the spell ends.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used.</p></section><p>The swallybog uses dispel magic.</p>"
+        },
+        "Insect Plague": {
+          "name": "疫病虫群",
+          "description": "<section id=\"secret-WOLBcnxvqBtvsX53\" class=\"secret\"><p>Swarming, biting locusts fill a 20-foot-radius Sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the Duration, and its area is lightly obscured. The sphere's area is difficult terrain.</p><p>When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th.</p></section><p>The swallybog uses insect plague, make a <strong>Constitution saving throw</strong>!</p>",
+          "materials": {
+            "value": "少许糖，一些脱壳的谷粒和一抹油脂"
+          }
+        },
+        "Mass Cure Wounds": {
+          "name": "群体疗伤术",
+          "description": "<section id=\"secret-yWPPU82UFa80zmxN\" class=\"secret\"><p>A wave of Healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains Hit Points equal to 3d8 + your Spellcasting ability modifier. This spell has no effect on Undead or constructs.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 6th level or higher, the Healing increases by 1d8 for each slot level above 5th.</p></section><p>The swallybog uses mass cure wounds.</p>"
+        },
+        "Polymorph": {
+          "name": "变形术",
+          "description": "<section id=\"secret-TYuXe1D44LTK4mF3\" class=\"secret\"><p>This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. The spell has no effect on a Shapechanger or a creature with 0 Hit Points.</p><p>The transformation lasts for the Duration, or until the target drops to 0 Hit Points or dies. The new form can be any beast whose Challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental Ability Scores, are replaced by the Statistics of the chosen beast. It retains its Alignment and personality.</p><p>The target assumes the Hit Points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked Unconscious.</p><p>The creature is limited in the Actions it can perform by the Nature of its new form, and it can't speak, cast Spells, or take any other action that requires hands or speech.</p><p>The target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its Equipment.</p></section><p>The swallybog uses polymorph.</p>",
+          "materials": {
+            "value": "一枚毛毛虫茧"
+          }
+        }
+      }
+    },
+    "Aboleth Broodmother (No Mythic)": {
+      "name": "Aboleth Broodmother (No Mythic)",
+      "tokenName": "Aboleth Broodmother (No Mythic)",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The aboleth can breathe air and water."
+        },
+        "Probing Telepathy": {
+          "name": "探查感应",
+          "description": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature’s greatest desires if the aboleth can see the creature."
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "The aboleth makes three Tentacle attacks and uses Birth, if available."
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<p>The aboleth can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time, and only at the end of another creature’s turn. The aboleth regains spent legendary actions at the start of its turn.</p><p><strong>[[/item h8V4IBZ3W7klWnKn]]{Tentacle}. </strong>The aboleth makes one Tentacle attack.</p><p><strong>[[/item AgxC3SZVU8YCvdO1]]{Suction Drain (costs 2 actions)}. </strong>The aboleth attempts to grapple one creature within 10 feet of it with a special tentacle. A creature charmed by the aboleth automatically fails this check. If the aboleth succeeds on the check, the creature takes 21 (6d6) necrotic damage and the aboleth regains a number of hit points equal to half the damage dealt. The target’s hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p>"
+        },
+        "Tentacle": {
+          "name": "触须",
+          "description": "<section id=\"secret-BIa9GJEveKeZYleF\" class=\"secret\"><p><em>Melee Weapon Attack</em>: +10 to hit, reach 10 ft. , one target. <em>Hit</em>: 14 (2d8 + 5) bludgeoning damage plus 4 (1d8) acid damage and the target must make a saving throw against the aboleth’s Infectious Mucus trait.</p></section><p>The broodmother attacks with its tentacle.</p>"
+        },
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the aboleth fails a saving throw, it can choose to succeed instead."
+        },
+        "Birth": {
+          "name": "Birth",
+          "description": "<p>The aboleth produces a <strong>@UUID[Compendium.heliana-core.actors-heliana-shadow-of-the-broodmother.Actor.kNR6WI6DiaRuK6hA]{broodling} </strong>in an unoccupied space within 5 feet of it.</p>"
+        },
+        "Jet": {
+          "name": "Jet",
+          "description": "The aboleth spurts out a pall of ink, heavily obscuring a 20-foot-radius sphere of water centred on the aboleth until the start of its next turn. It then moves up to its swimming speed."
+        },
+        "Entrance": {
+          "name": "入口",
+          "description": "<section class=\"secret\" id=\"secret-z4jCKHh6wDHvOoHo\"><p>The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a <strong>DC 17 Wisdom saving throw</strong> or be magically <strong>&amp;reference[charmed]</strong> by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth’s control and can’t take reactions, and the aboleth and the target can communicate telepathically with each other over any distance. Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth.</p></section><p>The broodmother uses entrance, make a <strong>Wisdom saving throw</strong>!</p>"
+        },
+        "h8V4IBZ3W7klWnKn": {
+          "name": "触须",
+          "description": "<p>The aboleth makes one Tentacle attack.</p>"
+        },
+        "Suction Drain": {
+          "name": "Suction Drain",
+          "description": "<p>The aboleth attempts to grapple one creature within 10 feet of it with a special tentacle. A creature charmed by the aboleth automatically fails this check. If the aboleth succeeds on the check, the creature takes 21 (6d6) necrotic damage and the aboleth regains a number of hit points equal to half the damage dealt. The target’s hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p>"
+        },
+        "Infectious Mucus": {
+          "name": "Infectious Mucus",
+          "description": "<section class=\"secret\" id=\"secret-5hqOce92Koq1O0T9\"><p>The aboleth is surrounded by infectious mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 feet of it must make a <strong>DC 18 Constitution saving throw</strong>. On a failure, the creature is <strong>diseased</strong>. For the first hour of the disease, the creature takes 4 ([[/damage 1d8 necrotic]]) damage if it ends its turn out of water (it must be at least neck-deep to avoid this damage). After the first hour and until the disease is cured, a creature is unable to gain the benefits of a short or long rest if it does not spend the rest at least neck-deep in water. A creature that fails the saving throw by 5 or more becomes a host of [[/r 1d4]] broodling eggs that hatches in [[/r 3d6]] days.</p></section><p>The broodmother exudes mucus, make a <strong>Constitution saving throw</strong>!</p>"
+        }
+      }
+    },
+    "High Threat Broodling": {
+      "name": "High Threat Broodling",
+      "tokenName": "High Threat Broodling",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The broodling can breathe air and water."
+        },
+        "Hive Mind": {
+          "name": "蜂群意识",
+          "description": "<p>Broodlings’ minds connect to other broodlings within 5 feet of them, forming a chain of thought. The broodling gains a +3 bonus to Intelligence checks and saving throws, and to its <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">Entrance save DC</span> for each other broodling in such a chain.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The broodling makes two attacks: one with its @UUID[Actor.5rR4NCpzfqSlMlXK.Item.yRc6VTfcQYB4lmzH]{Bite} and one with its @UUID[Actor.5rR4NCpzfqSlMlXK.Item.aJefIDBw6iLKzIKk]{Sting}.</p>"
+        },
+        "Bite": {
+          "name": "啃咬",
+          "description": "<p><em>Melee Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.value]] ft. , one target. Hit: <strong>[[/damage average]]</strong> damage.</p>"
+        },
+        "Sting": {
+          "name": "钉刺",
+          "description": "<p><em>Melee Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.value]] ft. , one target. Hit: <strong>[[/damage average]]</strong> damage and the creature must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span> or have <strong>&amp;reference[disadvantage]{disadvantage}</strong> on <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\"><strong>Wisdom saving throws</strong></span> until the end of the broodling’s next turn.</p>"
+        },
+        "Entrance": {
+          "name": "入口",
+          "description": "<p>The broodling targets one creature it can see within <strong>10 feet</strong> of it. The target must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span> or be magically <strong>&amp;reference[charmed]{charmed}</strong> by the broodling until the broodling dies or until it is on a different plane of existence from the target. The charmed target is under the broodling’s control and can’t take reactions.</p><p>Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least <strong>30 feet</strong> away from the broodling.</p>"
+        }
+      }
+    },
+    "Aboling": {
+      "name": "Aboling",
+      "tokenName": "Aboling",
+      "description": "<p><em><strong>Foundry Note: Assign the Aboling's Challenge Rating (CR) to your Tamer level for the correct proficiency bonus.</strong></em></p><p></p><h1>Aboling</h1><blockquote><p>A little bit of ze aboleth’s knowledge lives on in ze aboling’s biomantic code. Zis mind reader ist sehr persuasive, und has ein neat little trick to help it run avay. Just don’t skare it, unless you vant to dye your cloves black.</p><p>— Humperdink, Launderer</p></blockquote><p></p><p><strong>Type:</strong> Aberration</p><p><strong>Creature Component:</strong> Aboleth or broodmother aboleth</p><p><strong>Bonus Tamer Improvement:</strong> @UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.VlAduJk9ZCVKq9s8]{Genetic Memory} and +2 Hit Dice</p><p>Encoded within aboleth ichor are the memories of its donor, secreted amongst the fluid’s genetic code. In its base state, an aboling makes a functional amphibious companion, with a minor ability to sense the motives of other creatures. Upon bonding and training with a tamer, an aboling can fulfil its potential as a mind reader and repository of knowledge, sharing insights and information its progenitor acquired over its long life.</p><p>If any of the aboling’s traits or actions require saving throws, it is always against the aboling’s save DC, as calculated below.</p><p><em>Save DC = 8 + the tamer’s proficiency bonus + the aboling’s Constitution modifier</em></p><h2>Aboling Improvements</h2><table border=\"1\"><thead><tr><th>Tamer Level</th><th colspan=\"3\">Choices</th></tr></thead><tbody style=\"align:center\"><tr><th>1</th><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.VlAduJk9ZCVKq9s8]{Genetic Memory}</td><td></td><td></td></tr><tr><th>3</th><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.pceDHt85E9FanSYW]{Slime}</td><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.FSfsAjrYibNcPM2b]{Entrance}</td><td></td></tr><tr><th>5</th><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.uLyAjMoHfKhx1fva]{Inkjet}</td><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.y7iOW6EbhI8v1rwF]{Rubbery Hide I}</td><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.pW8lRYrCTxW5NbYX]{Multiattack}</td></tr><tr><th>9</th><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.X4lq0EY7cGDRWtAF]{Infectious Mucous}</td><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.zoZowGAiZcofoW5F]{Fortified Mind}</td><td></td></tr><tr><th>13</th><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.LGzpkA0pLGd80Kcl]{Rubbery Hide II}</td><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.8LP4A5F9yqrOfruE]{Enthral}</td><td></td></tr><tr><th>17</th><td>@UUID[Compendium.heliana-core.items-heliana-shadow-of-the-broodmother.Item.0pQt9K0zJm2IiM9A]{Probing Mind}</td><td></td><td></td></tr></tbody></table>",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "<p>The aboling can breathe air and water.</p>"
+        },
+        "Tentacle": {
+          "name": "触须",
+          "description": "<p><em>Melee Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.value]] ft. , one target. Hit: <strong>[[/damage average]]</strong> damage.</p>"
+        },
+        "Detect Thoughts": {
+          "name": "侦测思想",
+          "description": "<p>The aboling learns the surface thoughts of one creature it can see within <strong>30 feet</strong> of it for the next <strong>minute</strong>. It can attempt to probe deeper into the same creature’s mind, using an action to force the target to make a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span>. If it fails, the aboling gains insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates). If it succeeds, the effect ends. Either way, the target knows that the aboling was probing deep into its mind.</p>"
+        }
+      }
+    },
+    "Greater Brood Chrysalis": {
+      "name": "Greater Brood Chrysalis",
+      "tokenName": "Greater Brood Chrysalis",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The chrysalis can breathe air and water."
+        },
+        "Sticky Mucus": {
+          "name": "Sticky Mucus",
+          "description": "<p>When a creature hits the chrysalis with a melee attack, it must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span> or become disarmed as its weapon stays stuck to the creature.</p><p>A creature can use an action to make a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check format=long]]</span>, freeing a stuck weapon within its reach on a success. If the attack requires that the attacker touch the aboleth (GM’s discretion), then the attacker becomes grappled (<span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\"><strong>escape DC 20</strong></span>) on a failed save. While it is grappled, it can’t use that limb. If the attack is a bite, then the creature can’t speak while it is grappled in this way.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The chrysalis makes four @UUID[Actor.AsJElqDIrrLN1LMI.Item.Cy0bMBKhupjPquTA]{Sticky Ectoplasm} attacks. Each attack must be against a different target.</p>"
+        },
+        "Regenerative State": {
+          "name": "Regenerative State",
+          "description": "The chrysalis’ hit points reset to its maximum at the start of its turn.",
+          "activities": {
+            "Regenerate": {
+              "name": "再生术"
+            }
+          }
+        },
+        "Transitional State": {
+          "name": "Transitional State",
+          "description": "<p>The chrysalis turns into an <strong>@UUID[Compendium.heliana-core.actors-heliana-shadow-of-the-broodmother.Actor.TeIx7tez5mzJSX2A]{aboleth broodmother} </strong>at the start of its fourth turn after becoming a chrysalis, ending any grapples it is a part of.</p>"
+        },
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the chrysalis fails a saving throw, it can choose to succeed instead."
+        },
+        "Sticky Ectoplasm": {
+          "name": "Sticky Ectoplasm",
+          "description": "<p><em>Ranged Weapon Attack</em>: [[/attack]] to hit, range [[lookup @item.range.value]]/[[lookup @item.range.long]] ft., one target. Hit: <strong>[[/damage average]]</strong> damage and the target’s speed is reduced by <strong>15 feet</strong> until the target uses an action to remove the ectoplasm. A creature whose speed is reduced to 0 feet by this effect is <strong>&amp;reference[restrained]</strong> (<span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\"><strong>escape DC 20</strong></span>).</p>"
+        }
+      }
+    },
+    "Lair Actions (Level 11)": {
+      "name": "Lair Actions (Level 11)",
+      "tokenName": "Lair Actions (Level 11)",
+      "items": {
+        "Lair Actions": {
+          "name": "Lair Actions",
+          "description": "<section class=\"secret\" id=\"secret-xMxEpQETd2wOnQUB\"><p>On initiative count 20 (losing initiative ties), the aboleth takes one of the following lair actions; the aboleth can’t take the same lair action two rounds in a row.</p></section><p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair.</p>"
+        },
+        "Tempestuous Turbulence": {
+          "name": "Tempestuous Turbulence",
+          "description": "<section id=\"secret-Plcz0eUfyhvTEOa5\" class=\"secret\"><p>The water within the lair writhes and swirls, causing 6-foot-tall waves to crash over all the low-lying islands. Each creature in the water, or on the ground less than 5 feet above the water’s surface, must make a <strong>DC 15 Strength saving throw</strong> or be pulled up to <strong>20 feet</strong> into the water.</p></section><p>The broodmother uses a lair action, make a <strong>Strength saving throw</strong>!</p>"
+        },
+        "Plague Tide": {
+          "name": "Plague Tide",
+          "description": "<section id=\"secret-vsra0HPCGZu6LHx1\" class=\"secret\"><p>The water begins to bubble, filling the lair with noxious, aerosolised droplets. A creature is affected even if it doesn’t need to breathe. Each creature must succeed on a <strong>DC 15 Constitution saving throw</strong> or become <strong>poisoned</strong>. If running this hunt at 11th or 17th level, the creature is poisoned as if it had failed a saving throw against the <em>@UUID[Compendium.dnd5e.spells.CjIq8Ed7bu3vVwT1]{contagion}</em> spell (no concentration required). A creature can repeat the saving throw at the end of each of its turns, ending the effect for it on a success.</p></section><p>The broodmother uses a lair action, make a <strong>Constitution saving throw</strong>!</p>"
+        },
+        "Aqua Phantasm": {
+          "name": "Aqua Phantasm",
+          "description": "<section id=\"secret-SZKdu3BGGLj08Yt9\" class=\"secret\"><p>Water in the aboleth broodmother’s lair magically becomes a conduit for the unspeakable horrors the broodmother has witnessed in its vast memory. Each creature of the broodmother or broodlings’ choice within the lair’s waters must succeed on a <strong>DC 15 Wisdom saving throw</strong> or take psychic damage and become <strong>frightened</strong> of the huddled mass of creatures (wave 1), the chrysalis (wave 2), or the broodmother (wave 3) until the end of its next turn.</p></section><p>The broodmother uses a lair action, make a <strong>Wisdom saving throw</strong>!</p>"
+        }
+      }
+    },
+    "Aboleth Broodmother (Mythic)": {
+      "name": "Aboleth Broodmother (Mythic)",
+      "tokenName": "Aboleth Broodmother",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The aboleth can breathe air and water."
+        },
+        "Mother Of The Swarm": {
+          "name": "Mother Of The Swarm",
+          "description": "<p>If the aboleth would be reduced to 0 hit points, its current hit point total instead resets to <strong>210</strong>, it regains any expended uses of Legendary Resistance, it births <strong>2</strong> <strong>@UUID[Compendium.heliana-core.actors-heliana-shadow-of-the-broodmother.Actor.kNR6WI6DiaRuK6hA]{broodlings}</strong>, and it gains <strong>210 temporary hit points</strong> as a flurry of swamp fauna swarms over it to protect it. Additionally, the aboleth gains a <strong>+5 bonus</strong> to its attack and damage rolls and can now use the options in the “Mythic Actions” section for <strong>1 hour</strong>. Award a party an additional [[/award 41000xp]] (56,000 XP total) for defeating the aboleth after its Mother of the Swarm activates.</p>",
+          "activities": {
+            "Birth Broodlings": {
+              "name": "Birth Broodlings"
+            }
+          },
+          "effects": {
+            "Mother Of The Swarm": {
+              "name": "Mother Of The Swarm"
+            }
+          }
+        },
+        "Probing Telepathy": {
+          "name": "探查感应",
+          "description": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature’s greatest desires if the aboleth can see the creature."
+        },
+        "Mythic Actions": {
+          "name": "Mythic Actions",
+          "description": "<p>If the aboleth’s Mother of the Swarm trait has activated in the last hour, it can use the options below as legendary actions.</p><p><strong>@UUID[Actor.TeIx7tez5mzJSX2A.Item.SedxGa2dcMByGUmt]{Gestate}</strong></p><p>@Embed[Actor.TeIx7tez5mzJSX2A.Item.SedxGa2dcMByGUmt inline]{Gestate}</p><hr><p><strong>@UUID[Actor.TeIx7tez5mzJSX2A.Item.MQHzN0YnWOMAeZGP]{Rapid Suction Drain}</strong></p><p>@Embed[Actor.TeIx7tez5mzJSX2A.Item.MQHzN0YnWOMAeZGP inline]{Rapid Suction Drain}</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The aboleth makes three @UUID[Actor.TeIx7tez5mzJSX2A.Item.lRjnfL9tAXN9tRGL]{Tentacle} attacks and uses @UUID[Actor.TeIx7tez5mzJSX2A.Item.5GnNwH4trTqRhlsZ]{Birth}, if available.</p>"
+        },
+        "Gestate": {
+          "name": "Gestate",
+          "description": "<p>The aboleth recharges and uses @UUID[Actor.TeIx7tez5mzJSX2A.Item.5GnNwH4trTqRhlsZ]{Birth}. It must use a different legendary action before it can use this one again.</p>"
+        },
+        "Rapid Suction Drain": {
+          "name": "Rapid Suction Drain",
+          "description": "<p>The aboleth uses its @UUID[Actor.TeIx7tez5mzJSX2A.Item.AgxC3SZVU8YCvdO1]{Suction Drain} legendary action option. It must use a different legendary action before it uses this one again.</p>"
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<p>The aboleth can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time, and only at the end of another creature’s turn. The aboleth regains spent legendary actions at the start of its turn.</p><p><strong>@UUID[Actor.TeIx7tez5mzJSX2A.Item.d38YsbEuqmbC8GKB]{Jet}</strong></p><p>@Embed[Actor.TeIx7tez5mzJSX2A.Item.d38YsbEuqmbC8GKB inline]{Jet}</p><hr><p><strong>@UUID[Actor.TeIx7tez5mzJSX2A.Item.h8V4IBZ3W7klWnKn]{Tentacle}</strong></p><p>@Embed[Actor.TeIx7tez5mzJSX2A.Item.h8V4IBZ3W7klWnKn inline]{Tentacle}</p><hr><p><strong>@UUID[Actor.TeIx7tez5mzJSX2A.Item.AgxC3SZaVU8YCvdO1]{Suction Drain}</strong></p><p>@Embed[Actor.TeIx7tez5mzJSX2A.Item.AgxC3SZVU8YCvdO1 inline]{Suction Drain}</p>"
+        },
+        "Tentacle": {
+          "name": "触须",
+          "description": "<p><em>Melee Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.value]] ft. , one target. Hit: <strong>[[/damage average]]</strong> damage and the target must make a saving throw against the aboleth’s @UUID[Actor.TeIx7tez5mzJSX2A.Item.3GHzs4u2Omi9RueB]{ Infectious Mucus} trait.</p>"
+        },
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the aboleth fails a saving throw, it can choose to succeed instead."
+        },
+        "Birth": {
+          "name": "Birth",
+          "description": "<p>The aboleth produces a <strong>@UUID[Compendium.heliana-core.actors-heliana-shadow-of-the-broodmother.Actor.kNR6WI6DiaRuK6hA]{broodling} </strong>in an unoccupied space within 5 feet of it.</p>",
+          "activities": {
+            "Produce Broodling": {
+              "name": "Produce Broodling"
+            }
+          }
+        },
+        "Jet": {
+          "name": "Jet",
+          "description": "<p>The aboleth spurts out a pall of ink, heavily obscuring a <strong>20-foot-radius sphere</strong> of water centred on the aboleth until the start of its next turn. It then moves up to its swimming speed.</p>"
+        },
+        "Entrance": {
+          "name": "入口",
+          "description": "<p>The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]] </span>or be magically <strong>&amp;reference[charmed]{charmed}</strong> by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth’s control and can’t take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.</p><p>Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth.</p>"
+        },
+        "h8V4IBZ3W7klWnKn": {
+          "name": "触须",
+          "description": "<p>The aboleth makes one @UUID[Actor.TeIx7tez5mzJSX2A.Item.lRjnfL9tAXN9tRGL]{Tentacle} attack.</p>"
+        },
+        "Suction Drain": {
+          "name": "Suction Drain",
+          "description": "<p>The aboleth attempts to grapple one creature within <strong>10 feet</strong> of it with a special tentacle. A creature charmed by the aboleth automatically fails this check.</p><p>If the aboleth succeeds on the check, the creature takes <strong>[[/damage average]] </strong>damage and the aboleth regains a number of hit points equal to half the damage dealt.</p><p>The target’s hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p>"
+        },
+        "Infectious Mucus": {
+          "name": "Infectious Mucus",
+          "description": "<p>The aboleth is surrounded by infectious mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 feet of it must make a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span>. On a failure, the creature is <strong>diseased</strong>. </p><p>For the first hour of the disease, the creature takes <strong>[[/damage average]]</strong> damage if it ends its turn out of water (it must be at least neck-deep to avoid this damage). After the first hour and until the disease is cured, a creature is unable to gain the benefits of a short or long rest if it does not spend the rest at least neck-deep in water. </p><p>A creature that fails the saving throw by 5 or more becomes a host of <strong>[[/r 1d4]]</strong> broodling eggs that hatches in <strong>[[/r 3d6]]</strong> days.</p><p></p>"
+        }
+      }
+    },
+    "Lair Actions (Level 5)": {
+      "name": "Lair Actions (Level 5)",
+      "tokenName": "Lair Actions (Level 5)",
+      "items": {
+        "Lair Actions": {
+          "name": "Lair Actions",
+          "description": "<section class=\"secret\" id=\"secret-xMxEpQETd2wOnQUB\"><p>On initiative count 20 (losing initiative ties), the aboleth takes one of the following lair actions; the aboleth can’t take the same lair action two rounds in a row.</p></section><p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair.</p>"
+        },
+        "Tempestuous Turbulence": {
+          "name": "Tempestuous Turbulence",
+          "description": "<section id=\"secret-Plcz0eUfyhvTEOa5\" class=\"secret\"><p>The water within the lair writhes and swirls, causing 6-foot-tall waves to crash over all the low-lying islands. Each creature in the water, or on the ground less than 5 feet above the water’s surface, must make a <strong>DC 13 Strength saving throw</strong> or be pulled up to <strong>20 feet</strong> into the water.</p></section><p>The broodmother uses a lair action, make a <strong>Strength saving throw</strong>!</p>"
+        },
+        "Plague Tide": {
+          "name": "Plague Tide",
+          "description": "<section id=\"secret-vsra0HPCGZu6LHx1\" class=\"secret\"><p>The water begins to bubble, filling the lair with noxious, aerosolised droplets. A creature is affected even if it doesn’t need to breathe. Each creature must succeed on a <strong>DC 13 Constitution saving throw</strong> or become <strong>poisoned</strong>. If running this hunt at 11th or 17th level, the creature is poisoned as if it had failed a saving throw against the <em>@UUID[Compendium.dnd5e.spells.CjIq8Ed7bu3vVwT1]{contagion}</em> spell (no concentration required). A creature can repeat the saving throw at the end of each of its turns, ending the effect for it on a success.</p></section><p>The broodmother uses a lair action, make a <strong>Constitution saving throw</strong>!</p>"
+        },
+        "Aqua Phantasm": {
+          "name": "Aqua Phantasm",
+          "description": "<section id=\"secret-SZKdu3BGGLj08Yt9\" class=\"secret\"><p>Water in the aboleth broodmother’s lair magically becomes a conduit for the unspeakable horrors the broodmother has witnessed in its vast memory. Each creature of the broodmother or broodlings’ choice within the lair’s waters must succeed on a <strong>DC 13 Wisdom saving throw</strong> or take psychic damage and become <strong>frightened</strong> of the huddled mass of creatures (wave 1), the chrysalis (wave 2), or the broodmother (wave 3) until the end of its next turn.</p></section><p>The broodmother uses a lair action, make a <strong>Wisdom saving throw</strong>!</p>"
+        }
+      }
+    },
+    "Constrictor Snake": {
+      "name": "蟒蛇",
+      "tokenName": "蟒蛇",
+      "description": "<p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>\n      </p>",
+      "items": {
+        "Bite": {
+          "name": "啃咬",
+          "description": "<section class=\"secret\">\n<p><em>Melee Weapon Attack:</em><strong>+4 to hit,</strong>, <strong>5 ft.,</strong> one creature. Hit: <strong>5 (1d6 + 2) <em>piercing damage</em></strong>.</p></section>\n<p>The Constrictor Snake attacks with its Bite.</p>"
+        },
+        "Constrict": {
+          "name": "绞缠",
+          "description": "<section class=\"secret\">\n<p><em>Melee Weapon Attack:</em><strong>+4 to hit,</strong>, <strong>5 ft.,</strong> one creature. Hit: <strong>6 (1d8 + 2) <em>bludgeoning damage</em></strong>. The target is grappled (escape DC 14). Until this grapple ends, the creature is restrained, and the snake can't constrict another target.</p></section>\n<p>The Constrictor Snake attacks with its Constrict. The target is grappled. Until this grapple ends, the creature is restrained, and the snake can't constrict another target.</p>"
+        }
+      }
+    },
+    "Giant Crocodile": {
+      "name": "巨鳄鱼",
+      "tokenName": "巨鳄鱼",
+      "description": "<p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>\n      </p>",
+      "items": {
+        "Hold Breath": {
+          "name": "屏息",
+          "description": "<p>鳄鱼可以憋气<strong> 15 分钟</strong>。</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>鳄鱼发动两次攻击：啃咬和一次尾击。 </p>"
+        },
+        "Bite": {
+          "name": "啃咬",
+          "description": "<section class=\"secret\">\n<p><em>近战武器攻击：</em><strong>命中 +8，</strong>， <strong>触及 5 尺，</strong>单一目标。命中：<strong>21 （3d10 + 5） <em>点穿刺伤害</em></strong>。</p>\n<p>目标被擒抱（逃脱 DC 12）。直至擒抱解除，目标陷入被束缚状态，且该鳄鱼不能啃咬另一目标。</p>\n</section>\n<p>巨型鳄鱼用其啃咬攻击。如果成功，目标被擒抱。直至擒抱解除，目标陷入被束缚状态，且该鳄鱼不能啃咬另一目标。</p>"
+        },
+        "Tail": {
+          "name": "尾击",
+          "description": "<section class=\"secret\">\n<p><em>近战武器攻击：</em><strong>命中 +8，</strong>， <strong>触及 10 尺，</strong> 单一未被该鳄鱼擒抱的目标。命中：<strong>14 （2d8 + 5） <em>点钝击伤害</em></strong>。</p>\n<p>如果目标是生物，则其必须成功通过一次 <strong>DC 16 力量</strong> 豁免，否则将应击倒地。</p>\n</section>\n<p>巨型鳄鱼用它的尾巴攻击。如果目标是生物，则其必须进行一次 <strong>力量</strong> 豁免。</p>"
+        }
+      }
+    },
+    "Lesser Aboleth Broodmother": {
+      "name": "Lesser Aboleth Broodmother",
+      "tokenName": "Lesser Aboleth Broodmother",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The aboleth can breathe air and water."
+        },
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the aboleth fails a saving throw, it can choose to succeed instead."
+        },
+        "Infectious Mucus": {
+          "name": "Infectious Mucus",
+          "description": "<p>The aboleth is surrounded by infectious mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 feet of it must make a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span>. On a failure, the creature is <strong>diseased</strong>.</p><p>For the first hour of the disease, the creature takes <strong>[[/damage average]]</strong> damage if it ends its turn out of water (it must be at least neck-deep to avoid this damage). After the first hour and until the disease is cured, a creature is unable to gain the benefits of a short or long rest if it does not spend the rest at least neck-deep in water. </p><p>A creature that fails the saving throw by 5 or more becomes a host of a broodling egg that hatches in <strong>[[/r 3d6]]</strong> days.</p><p></p>"
+        },
+        "Probing Telepathy": {
+          "name": "探查感应",
+          "description": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature’s greatest desires if the aboleth can see the creature."
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The aboleth makes two @UUID[Actor.jOfdC3PGacNgFXWB.Item.bP41MYCRribIAXA8]{Tentacle} attacks and uses @UUID[Actor.jOfdC3PGacNgFXWB.Item.gaA8Lh76F2PNtQgG]{Birth}, if available.</p>"
+        },
+        "Tentacle": {
+          "name": "触须",
+          "description": "<p><em>Melee Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.value]] ft. , one target. Hit: <strong>[[/damage average]]</strong> damage and the target must make a saving throw against the aboleth’s @UUID[Actor.jOfdC3PGacNgFXWB.Item.RhpjDHOeNWMFFXlD]{Infectious Mucus} trait.</p>"
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<p>The aboleth can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time, and only at the end of another creature’s turn. The aboleth regains spent legendary actions at the start of its turn.</p><p><strong>@UUID[Actor.jOfdC3PGacNgFXWB.Item.ZbssPsbxex501Tw2]{Jet}</strong></p><p>@Embed[Actor.jOfdC3PGacNgFXWB.Item.ZbssPsbxex501Tw2 inline]{Jet}</p><hr><p><strong>@UUID[Actor.jOfdC3PGacNgFXWB.Item.1nyEToII9ahR1kAC]{Tentacle}</strong></p><p>@Embed[Actor.jOfdC3PGacNgFXWB.Item.1nyEToII9ahR1kAC inline]{Tentacle}</p><hr><p><strong>@UUID[Actor.jOfdC3PGacNgFXWB.Item.edA4IM1Xzs3lP60g]{Suction Drain (2 Actions)}</strong></p><p>@Embed[Actor.jOfdC3PGacNgFXWB.Item.edA4IM1Xzs3lP60g inline]{Suction Drain}</p>"
+        },
+        "Birth": {
+          "name": "Birth",
+          "description": "<p>The aboleth produces a <strong>@UUID[Compendium.heliana-core.actors-heliana-shadow-of-the-broodmother.Actor.kNR6WI6DiaRuK6hA]{broodling}</strong> in an unoccupied space within 5 feet of it.</p>",
+          "activities": {
+            "Produce Broodling": {
+              "name": "Produce Broodling"
+            }
+          }
+        },
+        "Jet": {
+          "name": "Jet",
+          "description": "<p>The aboleth spurts out a pall of ink, heavily obscuring a <strong>20-foot-radius sphere</strong> of water centred on the aboleth until the start of its next turn. It then moves up to its swimming speed.</p>"
+        },
+        "Entrance": {
+          "name": "入口",
+          "description": "<p>The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]] </span>or be magically <strong>&amp;reference[charmed]{charmed}</strong> by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth’s control and can’t take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.</p><p>Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth.</p><p></p>"
+        },
+        "1nyEToII9ahR1kAC": {
+          "name": "触须",
+          "description": "<p>The aboleth makes one @UUID[Actor.jOfdC3PGacNgFXWB.Item.bP41MYCRribIAXA8]{Tentacle} attack.</p>"
+        },
+        "Suction Drain": {
+          "name": "Suction Drain",
+          "description": "<p>The aboleth attempts to grapple one creature within <strong>10 feet</strong> of it with a special tentacle. A creature charmed by the aboleth automatically fails this check.</p><p>If the aboleth succeeds on the check, the creature takes <strong>[[/damage average]] </strong>damage and the aboleth regains a number of hit points equal to half the damage dealt.</p><p>The target’s hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p>"
+        }
+      }
+    },
+    "Lair Actions (Level 17)": {
+      "name": "Lair Actions (Level 17)",
+      "tokenName": "Lair Actions (Level 17)",
+      "items": {
+        "Lair Actions": {
+          "name": "Lair Actions",
+          "description": "<section class=\"secret\" id=\"secret-xMxEpQETd2wOnQUB\"><p>On initiative count 20 (losing initiative ties), the aboleth takes one of the following lair actions; the aboleth can’t take the same lair action two rounds in a row.</p></section><p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair.</p>"
+        },
+        "Tempestuous Turbulence": {
+          "name": "Tempestuous Turbulence",
+          "description": "<section id=\"secret-Plcz0eUfyhvTEOa5\" class=\"secret\"><p>The water within the lair writhes and swirls, causing 6-foot-tall waves to crash over all the low-lying islands. Each creature in the water, or on the ground less than 5 feet above the water’s surface, must make a <strong>DC 17 Strength saving throw</strong> or be pulled up to <strong>20 feet</strong> into the water.</p></section><p>The broodmother uses a lair action, make a <strong>Strength saving throw</strong>!</p>"
+        },
+        "Plague Tide": {
+          "name": "Plague Tide",
+          "description": "<section id=\"secret-vsra0HPCGZu6LHx1\" class=\"secret\"><p>The water begins to bubble, filling the lair with noxious, aerosolised droplets. A creature is affected even if it doesn’t need to breathe. Each creature must succeed on a <strong>DC 17 Constitution saving throw</strong> or become <strong>poisoned</strong>. If running this hunt at 11th or 17th level, the creature is poisoned as if it had failed a saving throw against the <em>@UUID[Compendium.dnd5e.spells.CjIq8Ed7bu3vVwT1]{contagion}</em> spell (no concentration required). A creature can repeat the saving throw at the end of each of its turns, ending the effect for it on a success.</p></section><p>The broodmother uses a lair action, make a <strong>Constitution saving throw</strong>!</p>"
+        },
+        "Aqua Phantasm": {
+          "name": "Aqua Phantasm",
+          "description": "<section id=\"secret-SZKdu3BGGLj08Yt9\" class=\"secret\"><p>Water in the aboleth broodmother’s lair magically becomes a conduit for the unspeakable horrors the broodmother has witnessed in its vast memory. Each creature of the broodmother or broodlings’ choice within the lair’s waters must succeed on a <strong>DC 17 Wisdom saving throw</strong> or take psychic damage and become <strong>frightened</strong> of the huddled mass of creatures (wave 1), the chrysalis (wave 2), or the broodmother (wave 3) until the end of its next turn.</p></section><p>The broodmother uses a lair action, make a <strong>Wisdom saving throw</strong>!</p>"
+        }
+      }
+    },
+    "Broodling": {
+      "name": "Broodling",
+      "tokenName": "Broodling",
+      "items": {
+        "Amphibious": {
+          "name": "Amphibious",
+          "description": "The broodling can breathe air and water."
+        },
+        "Hive Mind": {
+          "name": "Hive Mind",
+          "description": "<p>Broodlings’ minds connect to other broodlings within 5 feet of them, forming a chain of thought. The broodling gains a <strong>+3</strong> bonus to Intelligence checks and saving throws, and to its <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">Entrance save DC</span> for each other broodling in such a chain.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The broodling makes two attacks: one with its @UUID[Actor.kNR6WI6DiaRuK6hA.Item.yRc6VTfcQYB4lmzH]{Bite} and one with its @UUID[Actor.kNR6WI6DiaRuK6hA.Item.aJefIDBw6iLKzIKk]{Sting}.</p>"
+        },
+        "Bite": {
+          "name": "Bite",
+          "description": "<p><em>Melee Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.value]] ft. , one target. Hit: <strong>[[/damage average]]</strong> damage.</p>"
+        },
+        "Sting": {
+          "name": "钉刺",
+          "description": "<p><em>Melee Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.value]] ft. , one target. Hit: <strong>[[/damage average]]</strong> damage and the creature must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span> or have <strong>&amp;reference[disadvantage]{disadvantage}</strong> on <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\"><strong>Wisdom saving throws</strong></span> until the end of the broodling’s next turn.</p>"
+        },
+        "Entrance": {
+          "name": "Entrance",
+          "description": "<p>The broodling targets one creature it can see within <strong>10 feet</strong> of it. The target must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span> or be magically <strong>&amp;reference[charmed]{charmed}</strong> by the broodling until the broodling dies or until it is on a different plane of existence from the target. The charmed target is under the broodling’s control and can’t take reactions.</p><p>Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least <strong>30 feet</strong> away from the broodling.</p>",
+          "effects": {
+            "Charmed (Entrance)": {
+              "name": "Charmed (Entrance)"
+            }
+          }
+        }
+      }
+    },
+    "Aboleth Broodmother": {
+      "name": "Aboleth Broodmother",
+      "tokenName": "Aboleth Broodmother (No Mythic)",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The aboleth can breathe air and water."
+        },
+        "Probing Telepathy": {
+          "name": "探查感应",
+          "description": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature’s greatest desires if the aboleth can see the creature."
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The aboleth makes three @UUID[Actor.lJxpCR2qqg4mVg1t.Item.lRjnfL9tAXN9tRGL]{Tentacle} attacks and uses @UUID[Actor.lJxpCR2qqg4mVg1t.Item.5GnNwH4trTqRhlsZ]{Birth}, if available.</p>"
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<p>The aboleth can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time, and only at the end of another creature’s turn. The aboleth regains spent legendary actions at the start of its turn.</p><p></p><p><strong>@UUID[Actor.lJxpCR2qqg4mVg1t.Item.d38YsbEuqmbC8GKB]{Jet}</strong></p><p>@Embed[Actor.lJxpCR2qqg4mVg1t.Item.d38YsbEuqmbC8GKB inline]{Jet}</p><hr><p><strong>@UUID[Actor.lJxpCR2qqg4mVg1t.Item.h8V4IBZ3W7klWnKn]{Tentacle}</strong></p><p>@Embed[Actor.lJxpCR2qqg4mVg1t.Item.h8V4IBZ3W7klWnKn inline]{Tentacle}</p><hr><p><strong>@UUID[Actor.lJxpCR2qqg4mVg1t.Item.AgxC3SZVU8YCvdO1]{Suction Drain (2 Actions)}</strong></p><p>@Embed[Actor.lJxpCR2qqg4mVg1t.Item.AgxC3SZVU8YCvdO1 inline]{Suction Drain}</p>"
+        },
+        "Tentacle": {
+          "name": "触须",
+          "description": "<p><em>Melee Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.value]] ft. , one target. Hit: <strong>[[/damage average]]</strong> damage and the target must make a saving throw against the aboleth’s @UUID[Actor.lJxpCR2qqg4mVg1t.Item.wvEahPQokUCOBwVQ]{Infectious Mucus} trait.</p>"
+        },
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the aboleth fails a saving throw, it can choose to succeed instead."
+        },
+        "Birth": {
+          "name": "Birth",
+          "description": "<p>The aboleth produces a <strong>@UUID[Compendium.heliana-core.actors-heliana-shadow-of-the-broodmother.Actor.kNR6WI6DiaRuK6hA]{broodling} </strong>in an unoccupied space within 5 feet of it.</p>"
+        },
+        "Jet": {
+          "name": "Jet",
+          "description": "<p>The aboleth spurts out a pall of ink, heavily obscuring a <strong>20-foot-radius sphere</strong> of water centred on the aboleth until the start of its next turn. It then moves up to its swimming speed.</p>"
+        },
+        "Entrance": {
+          "name": "入口",
+          "description": "<p>The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]] </span>or be magically <strong>&amp;reference[charmed]{charmed}</strong> by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth’s control and can’t take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.</p><p>Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth.</p>"
+        },
+        "h8V4IBZ3W7klWnKn": {
+          "name": "触须",
+          "description": "<p>The aboleth makes one @UUID[Actor.lJxpCR2qqg4mVg1t.Item.lRjnfL9tAXN9tRGL]{Tentacle} attack.</p>"
+        },
+        "Suction Drain": {
+          "name": "Suction Drain",
+          "description": "<p>The aboleth attempts to grapple one creature within <strong>10 feet</strong> of it with a special tentacle. A creature charmed by the aboleth automatically fails this check.</p><p>If the aboleth succeeds on the check, the creature takes <strong>[[/damage average]] </strong>damage and the aboleth regains a number of hit points equal to half the damage dealt.</p><p>The target’s hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p>"
+        },
+        "Infectious Mucus": {
+          "name": "Infectious Mucus",
+          "description": "<p>The aboleth is surrounded by infectious mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 feet of it must make a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span>. On a failure, the creature is <strong>diseased</strong>. </p><p>For the first hour of the disease, the creature takes <strong>[[/damage average]]</strong> damage if it ends its turn out of water (it must be at least neck-deep to avoid this damage). After the first hour and until the disease is cured, a creature is unable to gain the benefits of a short or long rest if it does not spend the rest at least neck-deep in water. </p><p>A creature that fails the saving throw by 5 or more becomes a host of <strong>[[/r 1d4]]</strong> broodling eggs that hatches in <strong>[[/r 3d6]]</strong> days.</p><p></p>"
+        }
+      }
+    },
+    "Swallybog": {
+      "name": "Swallybog",
+      "tokenName": "Swallybog",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The swallybog can breathe air and water."
+        },
+        "Gullible": {
+          "name": "Gullible",
+          "description": "<p>The swallybog has <strong>&amp;reference[disadvantage]{disadvantage}</strong> on <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check insight]] </span>checks.</p>"
+        },
+        "Standing Leap": {
+          "name": "立定起跳",
+          "description": "<p>The swallybog’s long jump is up to <strong>20 feet</strong> and its high jump is up to <strong>10 feet</strong>, with or without a running start.</p>"
+        },
+        "Swamp Camouflage": {
+          "name": "Swamp Camouflage",
+          "description": "<p>The swallybog has <strong>&amp;reference[advantage]{advantage}</strong> on <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check stealth]]</span> checks made to hide in swampy terrain.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The swallybog makes two attacks, either with its @UUID[Actor.lsxw9H0na0e4HOxi.Item.KMO74VIAEbxZphQY]{Blowgun} or its @UUID[Actor.lsxw9H0na0e4HOxi.Item.UszyLpYVA6AkId1e]{Trident}.</p>"
+        },
+        "Blowgun": {
+          "name": "Blowgun",
+          "description": "<p><em>Ranged Weapon Attack</em>: [[/attack]] to hit, range [[lookup @item.range.value]]/[[lookup @item.range.long]] ft., one target. Hit: <strong>[[/damage average]]</strong> damage</p>"
+        },
+        "Trident": {
+          "name": "三叉戟",
+          "description": "<p><em>Melee or Ranged Weapon Attack</em>: [[/attack]] to hit, reach [[lookup @item.range.reach]] ft. or range [[lookup @item.range.value]]/[[lookup @item.range.long]] ft., one target. Hit: <strong>[[/damage average]]</strong> damage, or <strong>[[/damage activity=s0YKGN4lQr1FBpMh average]]</strong> damage if used with two hands to make a melee attack.</p>",
+          "activities": {
+            "Attack (Ranged)": {
+              "name": "Attack (Ranged)"
+            },
+            "Attack (One-Handed Melee)": {
+              "name": "Attack (One-Handed Melee)"
+            },
+            "Attack (Two-Handed Melee)": {
+              "name": "Attack (Two-Handed Melee)"
+            }
+          }
+        }
+      }
+    },
+    "Brood Chrysalis": {
+      "name": "Brood Chrysalis",
+      "tokenName": "Brood Chrysalis",
+      "items": {
+        "Amphibious": {
+          "name": "水陆两栖",
+          "description": "The chrysalis can breathe air and water."
+        },
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the chrysalis fails a saving throw, it can choose to succeed instead."
+        },
+        "Regenerative State": {
+          "name": "Regenerative State",
+          "description": "The chrysalis’ hit points reset to its maximum at the start of its turn.",
+          "activities": {
+            "Regenerate": {
+              "name": "再生术"
+            }
+          }
+        },
+        "Sticky Mucus": {
+          "name": "Sticky Mucus",
+          "description": "<p>When a creature hits the chrysalis with a melee attack, it must succeed on a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/save format=long]]</span> or become disarmed as its weapon stays stuck to the creature.</p><p>A creature can use an action to make a <span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\">[[/check format=long]]</span>, freeing a stuck weapon within its reach on a success. If the attack requires that the attacker touch the aboleth (GM’s discretion), then the attacker becomes grappled (<span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\"><strong>escape DC 17</strong></span>) on a failed save. While it is grappled, it can’t use that limb. If the attack is a bite, then the creature can’t speak while it is grappled in this way.</p>"
+        },
+        "Transitional State": {
+          "name": "Transitional State",
+          "description": "<p>The chrysalis turns into an <strong>@UUID[Compendium.heliana-core.actors-heliana-shadow-of-the-broodmother.Actor.TeIx7tez5mzJSX2A]{aboleth broodmother} </strong>at the start of its fourth turn after becoming a chrysalis, ending any grapples it is a part of.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>The chrysalis makes three @UUID[Actor.sNrhBjHpmZtixcQ3.Item.SHT2C5SNSwNFimnP]{Sticky Ectoplasm} attacks. Each attack must be against a different target.</p>"
+        },
+        "Sticky Ectoplasm": {
+          "name": "Sticky Ectoplasm",
+          "description": "<p><em>Ranged Weapon Attack</em>: [[/attack]] to hit, range [[lookup @item.range.value]]/[[lookup @item.range.long]] ft., one target. Hit: <strong>[[/damage average]]</strong> damage and the target’s speed is reduced by <strong>15 feet</strong> until the target uses an action to remove the ectoplasm. A creature whose speed is reduced to 0 feet by this effect is <strong>&amp;reference[restrained]</strong> (<span class=\"heliana-shadow-of-the-broodmother Checks-and-Saves\"><strong>escape DC 17</strong></span>).</p>"
+        }
+      }
+    }
+  }
+}

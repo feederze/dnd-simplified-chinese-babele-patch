@@ -1,0 +1,444 @@
+{
+  "label": "Bestiary",
+  "folders": {
+    "Familiar": "Familiar"
+  },
+  "entries": {
+    "Tar-rasque": {
+      "name": "Tar-rasque",
+      "tokenName": "Tar-rasque",
+      "items": {
+        "Magic Resistance": {
+          "name": "魔法抗性",
+          "description": "The tar-rasque has advantage on saving throws against spells and other magical effects."
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "The tar-rasque makes five attacks: one with its Necrotar Tongue, two with its Claws, one with its Horns, and one with its Tail. It can use its Necrotaruption instead of its Necrotar Tongue."
+        },
+        "Concealed Arcane Power Source": {
+          "name": "Concealed Arcane Power Source",
+          "description": "<p>After the tar-rasque’s Primordial Awakening trait activates, the crystal in the tar-rasque’s head can be targeted separately from the tar-rasque (AC 19, 180 hit points, <strong>vulnerability</strong> to thunder damage, and <strong>immunity</strong> to all other damage types except bludgeoning, force, piercing, and slashing). It can only be targeted by a creature grappled by the tar-rasque’s Necrotar Tongue, or by creatures that Ready an action for when the tar-rasque makes a Necrotar Tongue attack. </p><p>If the crystal is destroyed, the tar-rasque’s current hit points are reduced to 0.</p><p></p>"
+        },
+        "Refractive Exterior": {
+          "name": "Refractive Exterior",
+          "description": "<p>Any time the tar-rasque is targeted by a <em>@UUID[Compendium.dnd5e.spells.41JIhpDyM9Anm7cs]{magic missile}</em> spell, a line spell, or a spell that requires a ranged attack roll, some of the energy is refracted into a random elemental type and a bolt of energy fires back at the caster as a ranged spell attack using the caster’s spell attack modifier, and dealing 13 (<strong>3d8</strong>) damage on a hit. Roll a <strong>d4</strong> to determine the damage type: 1-acid, 2-cold, 3-fire, 4-lightning.</p>"
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<section class=\"secret\" id=\"secret-hd3ibBsAPzh0DmiJ\"><p>The tar-rasque can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature’s turn. The tar-rasque regains spent legendary actions at the start of its turn.</p></section><p>The tar-rasque can take 3 legendary actions.</p>"
+        },
+        "Mythic Actions": {
+          "name": "Mythic Actions",
+          "description": "<p>If the tar-rasque’s Primordial Awakening trait has activated in the last hour, it can use <strong>[[/item dEYsI1iLCRxlmlpC]]{reflux}</strong> as a legendary action.</p>"
+        },
+        "Primordial Awakening": {
+          "name": "Primordial Awakening",
+          "description": "<p>If the tar-rasque would be reduced to 0 hit points, its current hit point total instead resets to <strong>[[lookup @attributes.hp.max]]</strong> hit points and it recharges its Necrotaruption. Additionally, the tar-rasque can use the options in the “Mythic Actions” section for <strong>1 hour</strong>. Award a party an additional 90,000 XP (180,000 XP total) for defeating the tar-rasque after its Primordial Awakening activates.</p>",
+          "activities": {
+            "heal": {
+              "condition": "The tar-rasque would be reduced to 0 hit points."
+            }
+          }
+        },
+        "Flammable": {
+          "name": "Flammable",
+          "description": "<p>If the tar-rasque takes fire damage, it ignites. It and any creature it is grappling takes <strong>[[/damage average]]</strong> damage at the start of each of its turns and its melee attacks and Necrotaruption deal an additional <strong>[[/damage average]]</strong> damage. If the tar-rasque is subject to heavy rain or takes <strong>20</strong> or more cold damage in a single instance, the flames are extinguished and the effects end.</p>"
+        },
+        "Necrotaruption (Recharge 5-6)": {
+          "name": "Necrotaruption (Recharge 5-6)",
+          "description": "<p>The tar-rasque exhales a torrent of thick tar-phlegm in a <strong>40-foot cone</strong>. Each creature in that area must make a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span>. On a failed save, a creature takes <strong>[[/damage average activity=dnd5eactivity000]]</strong> damage and is <strong>&amp;Reference[restrained]</strong> until the end of the tar-rasque’s next turn. On a successful save, the creature takes half as much damage and isn’t restrained. In addition, until the end of the tar-rasque’s next turn, the area is difficult terrain for other creatures and a creature that starts its turn in the area or enters it for the first time on its turn takes <strong>[[/damage average activity=dnd5eactivity001]]</strong> damage.</p>"
+        },
+        "Move": {
+          "name": "Move",
+          "description": "The tar-rasque moves up to half its speed."
+        },
+        "Attack": {
+          "name": "攻击",
+          "description": "<p>The tar-rasque makes one melee weapon attack.</p>"
+        },
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the tar-rasque fails a saving throw, it can choose to succeed instead."
+        },
+        "Tail": {
+          "name": "尾击",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong> If the target is a creature, it must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span> or be knocked <strong>&amp;reference[prone]</strong>.</p>"
+        },
+        "Claws": {
+          "name": "爪击",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Necrotar Tongue": {
+          "name": "Necrotar Tongue",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong> If the target is a creature, it must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span> or be <strong>&amp;reference[grappled]</strong> (<span class=\"loot-tavern Checks-and-Saves\">escape DC [[lookup @abilities.str.dc]]</span>) and pulled into the tar-rasque’s maw. Until this grapple ends, the target is <strong>restrained</strong>, takes [[/damage average]] damage at the start of each of its turns, and the tar-rasque can’t use its tongue on another target.</p>"
+        },
+        "Horns": {
+          "name": "Horns",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Reflux (Costs 2 Actions)": {
+          "name": "Reflux (Costs 2 Actions)",
+          "description": "<p>The tar-rasque recharges and uses its Necrotaruption.</p>"
+        },
+        "Tremor": {
+          "name": "Tremor",
+          "description": "<p>The tar-rasque pounds the ground; each creature standing on the ground within <strong>30 feet</strong> of it must succeed on a <strong>[[/save format=long]]</strong> or be knocked <strong>&amp;reference[prone]</strong>.</p>"
+        }
+      }
+    },
+    "Possessed Mining Suit": {
+      "name": "Possessed Mining Suit",
+      "tokenName": "Possessed Mining Suit",
+      "description": "<p>These viscous, shapeless elementals are natives of the muddy borderlands between the Planes of Water and Earth. Their minds comprise the echoing memories of the thousands of organisms whose decomposition has created their shapeless bodies.</p><p><em><strong>Arcane Activation.</strong></em> When an arcane power source is tuned to the correct frequency, a tar elemental’s primordial spark can be drawn into the Material Plane, reforming around a suitable substrate, such as tar or other lipids, like the fat deposits from a long-dead giant space hamster. Such a summoning is often against the elemental’s will, leading to violent and aggressive outbursts.</p><p><em><strong>Possession &amp; Reanimation.</strong></em> Should a tar elemental find itself in contact with such an arcane power source, its powers of decomposition are augmented; it is no longer subject to decay and its touch can enervate living tissue. An augmented tar elemental is also capable of puppeteering a creature, dead or alive, manipulating its body through an external, oily musculature.</p>",
+      "items": {
+        "Flammable": {
+          "name": "Flammable",
+          "description": "<p>If the mining suit takes fire damage, it ignites. It takes <strong>[[/damage average]]</strong> damage at the start of each of its turns and its melee attacks deal an additional <strong>[[/damage average]]</strong> damage. If the mining suit is subject to heavy rain or takes <strong>10</strong> or more cold damage in a single instance, the flames are extinguished and the effects end.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "The mining suit makes three attacks: one with its Claw, one with its Demolition Drill, and one with its Pseudopod."
+        },
+        "Claw": {
+          "name": "爪击",
+          "description": "<section class=\"secret\" id=\"secret-egvb0DT6EtDa5MIw\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong> If the target is a Large or smaller creature, it is <strong>&amp;Reference[grappled]</strong> (<span class=\"loot-tavern Checks-and-Saves\">escape DC 16</span>). Until this grapple ends, the mining suit has <strong>advantage</strong> on attack rolls using its Claw against the target and the mining suit can’t use its Claw on another target.</p></section><p>The mining suit attacks with its claws.</p>"
+        },
+        "Demolition Drill": {
+          "name": "Demolition Drill",
+          "description": "<section class=\"secret\" id=\"secret-t0ytubHLFgH5lzjc\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p></section><p>The mining suit attacks with its demolition drill.</p>"
+        },
+        "Pseudopod": {
+          "name": "伪足",
+          "description": "<section class=\"secret\" id=\"secret-QuonpLzTBEc5Nw9r\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p></section><p>The mining suit attacks with its pseudopod.</p>"
+        },
+        "Arcane Power Source": {
+          "name": "Arcane Power Source",
+          "description": "<p>An arcane power source—a crystal on the mining suit’s rear—can be targeted separately from the mining suit (AC 19, 64 hit points, <strong>vulnerability</strong> to thunder damage, and <strong>immunity</strong> to all damage except bludgeoning, force, piercing, and slashing). If the mining suit fails a saving throw against an area of effect, the crystal also fails the saving throw.</p><p>If the power source is destroyed, the tar elemental possessing the mining suit moves into the nearest unoccupied space without provoking opportunity attacks and the mining suit becomes an inanimate object.</p><p></p>"
+        }
+      }
+    },
+    "Tar Elemental": {
+      "name": "Tar Elemental",
+      "tokenName": "Tar Elemental",
+      "description": "<p>These viscous, shapeless elementals are natives of the muddy borderlands between the Planes of Water and Earth. Their minds comprise the echoing memories of the thousands of organisms whose decomposition has created their shapeless bodies.</p><p><em><strong>Arcane Activation.</strong></em> When an arcane power source is tuned to the correct frequency, a tar elemental’s primordial spark can be drawn into the Material Plane, reforming around a suitable substrate, such as tar or other lipids, like the fat deposits from a long-dead giant space hamster. Such a summoning is often against the elemental’s will, leading to violent and aggressive outbursts.</p><p><em><strong>Possession &amp; Reanimation.</strong></em> Should a tar elemental find itself in contact with such an arcane power source, its powers of decomposition are augmented; it is no longer subject to decay and its touch can enervate living tissue. An augmented tar elemental is also capable of puppeteering a creature, dead or alive, manipulating its body through an external, oily musculature.</p>",
+      "items": {
+        "Water Form": {
+          "name": "流水形态",
+          "description": "The elemental can enter a hostile creature’s space and stop there. It can move through a space as narrow as 1 inch wide without squeezing."
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "The elemental makes two Slam attacks."
+        },
+        "Oil Form": {
+          "name": "Oil Form",
+          "description": "<p>When the elemental moves through water, it uses its swimming speed to skim along the water’s surface; it can’t submerge below the surface of water without a powerful detergent.</p>"
+        },
+        "Flammable": {
+          "name": "Flammable",
+          "description": "<p>If the elemental takes fire damage, it ignites. It takes <strong>[[/damage average]]</strong> damage at the start of each of its turns and its weapon attacks deal an additional <strong>[[/damage average]]</strong> damage. If the elemental is subject to heavy rain or takes <strong>5</strong> or more cold damage in a single instance, the flames are extinguished and the effects end.</p>"
+        },
+        "Slam": {
+          "name": "粗枝猛击",
+          "description": "<section class=\"secret\" id=\"secret-S0LyzzCglVCTEret\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]]</strong> and the target’s speed is reduced by <strong>10 feet</strong> until it or another creature within reach of the target uses its action to clean the target. This speed reduction can stack; if the target’s walking speed is reduced to 0 feet by this effect, it is <strong>&amp;reference[restrained]</strong>.</p></section><p>The tar elemental attacks with its slam.</p><p></p>"
+        },
+        "Arcane Activation": {
+          "name": "Arcane Activation",
+          "description": "<p>The elemental attempts to possess one Medium or smaller corporeal creature in close proximity to an arcane power source, such as a magitech firearm. The creature must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span> or be under the elemental’s control until the elemental releases it as a bonus action, or the arcane power source is destroyed or is more than <strong>5 feet</strong> from the possessed creature. While the elemental controls a creature in this way, the possessed creature gains the features in the Arcane Possession sidebar.</p>"
+        }
+      }
+    },
+    "Tarannosaurus Rex": {
+      "name": "Tarannosaurus Rex",
+      "tokenName": "Tarannosaurus Rex",
+      "description": "<p>These viscous, shapeless elementals are natives of the muddy borderlands between the Planes of Water and Earth. Their minds comprise the echoing memories of the thousands of organisms whose decomposition has created their shapeless bodies.</p><p><em><strong>Arcane Activation.</strong></em> When an arcane power source is tuned to the correct frequency, a tar elemental’s primordial spark can be drawn into the Material Plane, reforming around a suitable substrate, such as tar or other lipids, like the fat deposits from a long-dead giant space hamster. Such a summoning is often against the elemental’s will, leading to violent and aggressive outbursts.</p><p><em><strong>Possession &amp; Reanimation.</strong></em> Should a tar elemental find itself in contact with such an arcane power source, its powers of decomposition are augmented; it is no longer subject to decay and its touch can enervate living tissue. An augmented tar elemental is also capable of puppeteering a creature, dead or alive, manipulating its body through an external, oily musculature.</p>",
+      "items": {
+        "Arcane Power Source": {
+          "name": "Arcane Power Source",
+          "description": "<p>The crystal in the tarannosaurus’ ribcagecan be targeted separately from the tarannosaurus (AC 19, 64 hit points, <strong>vulnerability</strong> to thunder damage, and <strong>immunity</strong> to all other damage types except bludgeoning, force, piercing, and slashing). If the tarannosaurus fails a saving throw against an area of effect, the crystal also fails the saving throw.</p><p>If the crystal is destroyed the tar elemental possessing the tarannosaurus moves into the nearest unoccupied space without provoking opportunity attacks and the tarannosaurus crumbles into a pile of inanimate bones.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "The tarannosaurus makes two attacks: one with its Bite and one with its Tail. It can’t make both attacks against the same target. It can use Taruption in place of the Bite attack."
+        },
+        "Bite": {
+          "name": "啃咬",
+          "description": "<section class=\"secret\" id=\"secret-tMMrBblgzBWJtktt\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong> If the target is a Medium or smaller creature, it is <strong>grappled</strong> (<span class=\"loot-tavern Checks-and-Saves\">escape DC 20</span>). Until this grapple ends, the target is <strong>&amp;Reference[restrained]</strong> and the tarannosaurus can’t bite another target.</p></section><p>The tarannosaurus rex attacks with its bite.</p>"
+        },
+        "Tail": {
+          "name": "尾击",
+          "description": "<section class=\"secret\" id=\"secret-hIcKjdoXzSg5zkC9\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p></section><p>The tarannosaurus rex attacks with its tail.</p>"
+        },
+        "Taruption (Recharge 5-6)": {
+          "name": "Taruption (Recharge 5-6)",
+          "description": "<p>The tarannosaurus launches a torrent of tar in a <strong>30-foot cone</strong>. Each creature in the cone that isn’t taror water-based must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span> or become <strong>&amp;Reference[restrained]</strong> for <strong>1 minute</strong>. A creature can use its action to make a <span class=\"loot-tavern Checks-and-Saves\">DC 17 Strength</span> check, ending the effect on itself on a success. This area is difficult terrain for <strong>1 minute</strong>, or until it is cleaned.</p>",
+          "effects": {
+            "Taruption (Restrained)": {
+              "name": "Taruption (Restrained)",
+              "description": "<p>This creature is <strong>&amp;Reference[restrained]</strong> for <strong>1 minute</strong>. It can use its action to make a <span class=\"loot-tavern Checks-and-Saves\">DC 17 Strength</span> check, ending the effect on itself on a success.</p>"
+            }
+          }
+        },
+        "Flammable": {
+          "name": "Flammable",
+          "description": "<p>If the mining suit takes fire damage, it ignites. It takes <strong>[[/damage average]]</strong> damage at the start of each of its turns and its melee attacks deal an additional <strong>[[/damage average]]</strong> damage. If the mining suit is subject to heavy rain or takes <strong>10</strong> or more cold damage in a single instance, the flames are extinguished and the effects end.</p>"
+        }
+      }
+    },
+    "Tarchaeologist": {
+      "name": "Tarchaeologist",
+      "tokenName": "Tarchaeologist",
+      "description": "<p>Excavating ancient remains is no easy task; brushing off all of that fine dirt with the softest pegasus-tail paintbrushes can lead to some serious carpal tunnel syndrome. Co-opting magitech technology—which has been so crudely used for firearms—into archaeological apparatus has saved many a tarchaeologist from debilitating wrist pain. Unfortunately, having such devices on one’s person leaves said person open to possession by creatures who thrive on these gadgets’ arcane power sources. For this reason, the ASSES (Archaeological Society’s Systematic Excavative Study) requires all members to undergo arcane de-possession training; destroying the arcane power source deprives the controlling creature of its powers and has reduced archaeologist mortality by over thirteen percent!</p>",
+      "items": {
+        "Arcane Power Source": {
+          "name": "Arcane Power Source",
+          "description": "<p>The crystal in the tarchaeologist’s magitech pistol can be targeted separately from the tarchaeologist (AC 19, 20 hit points, <strong>vulnerability</strong> to thunder damage, and <strong>immunity</strong> to all other damage types except bludgeoning, force, piercing, and slashing). If the tarchaeologist fails a saving throw against an area of effect, the crystal also fails the saving throw.</p><p>If the crystal is destroyed, or if the tarchaeologist is disarmed of its pistol (it has a <strong>+7</strong> modifier on ability checks and saving throws to avoid being disarmed), the mini tar elemental possessing the tarchaeologist moves into the nearest unoccupied space without provoking opportunity attacks and the tarchaeologist falls unconscious and stable.</p><p></p>"
+        },
+        "Flammable": {
+          "name": "Flammable",
+          "description": "<p>If the mining suit takes fire damage, it ignites. It takes <strong>[[/damage average]]</strong> damage at the start of each of its turns and its melee attacks deal an additional <strong>[[/damage average]]</strong> damage. If the mining suit is subject to heavy rain or takes <strong>5</strong> or more cold damage in a single instance, the flames are extinguished and the effects end.</p>"
+        },
+        "Necromantic Reinvigoration (1/ever)": {
+          "name": "Necromantic Reinvigoration (1/ever)",
+          "description": "<p>If the tarchaeologist is reduced to 0 hit points, its current hit point total instead resets to <strong>[[lookup @attributes.hp.max]]</strong> hit points, its creature type changes to undead, and it gains <strong>immunity</strong> to poison damage and the poisoned condition.</p>",
+          "activities": {
+            "heal": {
+              "condition": "When the tarchaeologoist reaches 0 hit points."
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "The tarchaeologist makes three attacks: one with its Pseudopod, one with its Wrench, and one with its Magitech Pistol."
+        },
+        "Pseudopod": {
+          "name": "伪足",
+          "description": "<section class=\"secret\" id=\"secret-CvGWHa0ainFkprRW\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p></section><p>The tarchaeologist attacks with its psuedopod.</p>"
+        },
+        "Wrench": {
+          "name": "Wrench",
+          "description": "<section class=\"secret\" id=\"secret-BE5oAeig6hSiIYnx\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p></section><p>The tarchaeologist attacks with its wrench.</p>"
+        },
+        "Magitech Pistol": {
+          "name": "Magitech Pistol",
+          "description": "<section class=\"secret\" id=\"secret-3Cz0vuHatUuEvX32\"><p><strong>[[/attack format=extended]]</strong>, loud (500 ft. ), reload (2). <strong>[[/damage format=extended]].</strong></p></section><p>The tarchaeologist attacks with its magitech pistol.</p>"
+        }
+      }
+    },
+    "Tarling": {
+      "name": "Tarling",
+      "tokenName": "Tarling",
+      "description": "<p><em><strong>Foundry Note: Assign the tarling's Challenge Rating (CR) to your Tamer level for the correct proficiency bonus.</strong></em></p><p></p><h1>Tarling</h1><blockquote><p>Ze trick mit kreating a strong tarling iz to get ze arkane power source right inside ze skull vhere it’z sehr hard to target. Und, of kourse, prepare for ze oil stains und keep it away from open flames.</p><p>— Humperdink, {title}</p></blockquote><p></p><p><strong>Type:</strong> Elemental</p><p><strong>Creature Component:</strong> Tar-rasque</p><p><strong>Bonus Tamer Improvement:</strong> @UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.kPreWnxuLX95t7Ve]{Growth I} and +2 Hit Dice</p><p>Tarlings can draw upon the arcane power source around which they’re crafted in order to enhance the decompositive powers innate to tar elementals. They can even manipulate the corpses of the deceased, puppeteering them as flesh suits that can absorb incoming blows. Biomancers posit that such companions can even assume the immense size of tarrasques for a short time.</p><p>If any of the tarling's traits or actions require saving throws, it is always against the tarling's save DC, as calculated below.</p><p><em>Save DC = 8 + the tamer’s proficiency bonus + the tarling's Constitution modifier</em></p><h2>Tarling Improvements</h2><table border=\"1\"><thead><tr><th>Tamer Level</th><th colspan=\"3\">Choices</th></tr></thead><tbody style=\"align:center\"><tr><th>1</th><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.kPreWnxuLX95t7Ve]{Growth I}</td><td></td><td></td></tr><tr><th>3</th><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.8vGhWY36Du2Cv868]{Growth II}</td><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.E3WLSJmNxjT95rKT]{Arcane Activation}</td><td></td></tr><tr><th>5</th><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.Bc4yRnkTG70x3DY8]{Refractive Exterior}</td><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.SK87Dqyx8yNusiPw]{Necrotar Tongue I}</td><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.bKzZUPjacmWD2wW0]{Multiattack}</td></tr><tr><th>9</th><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.BgsgFFOqzIUvrrQ9]{Growth III}</td><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.ZMpMlysyxz4jY7Ti]{Arcane Animation}</td><td></td></tr><tr><th>13</th><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.qAkZGANLNCD7MJP3]{Growth IV}</td><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.KFnEVCaQuieZ3Uki]{Necrotar Tongue II}</td><td></td></tr><tr><th>17</th><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.XHEnJzjUJYWZcsQU]{Siege Monster}</td><td>@UUID[Compendium.heliana-core.items-heliana-tarchaeology.Item.uYi01rXqBUepZ5Eq]{Titanspawn}</td><td></td></tr></tbody></table>",
+      "items": {
+        "Flammable": {
+          "name": "Flammable",
+          "description": "<p>If the tarling takes fire damage, it ignites. It and any creature it is grappling take <strong>2 (1d4)</strong> fire damage at the start of each of its turns and its weapon attacks deal an additional <strong>2 (1d4)</strong> fire damage on a hit. If the tarling is subject to heavy rainfall or it takes 5 or more cold damage in a single instance, the flames are extinguished.</p>"
+        },
+        "Oil Form": {
+          "name": "Oil Form",
+          "description": "When the tarling tries to move through water, it instead uses its swimming speed to skim along the water’s surface; it can’t submerge below the surface of water without a powerful detergent."
+        },
+        "Bite": {
+          "name": "啃咬",
+          "description": "<p>Melee Weapon Attack: <strong>+4</strong> to hit, reach 5 ft. , one target. Hit: 4 (<strong>1d4 + 2</strong>) piercing damage.</p>"
+        }
+      },
+      "effects": {
+        "Arcane Activation": {
+          "name": "Arcane Activation",
+          "description": "<p>As a bonus action, the tarling can activate its arcane power source for <strong>1 minute</strong>. For the duration, the tarling has <strong>resistance</strong> to necrotic damage and deals an additional <strong>[[/damage 1d6 necrotic average]]</strong> damage when it hits a target with a melee attack.</p>"
+        }
+      }
+    },
+    "Tar-rasque Hatchling": {
+      "name": "Tar-rasque Hatchling",
+      "tokenName": "Tar-rasque Hatchling",
+      "items": {
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the tar-rasque fails a saving throw, it can choose to succeed instead."
+        },
+        "Magic Resistance": {
+          "name": "魔法抗性",
+          "description": "The tar-rasque has advantage on saving throws against spells and other magical effects."
+        },
+        "Primordial Awakening": {
+          "name": "Primordial Awakening",
+          "description": "<p>If the tar-rasque would be reduced to 0 hit points, its current hit point total instead resets to <strong>[[lookup @attributes.hp.max]]</strong> hit points, it recharges its Necrotaruption, and it regains <strong>1</strong> expended use of Legendary Resistance. Additionally, the tar-rasque can use the options in the “Mythic Actions” section for <strong>1 hour</strong>. Award a party an additional 11,500 XP (23,000 XP total) for defeating the tar-rasque after its Primordial Awakening activates.</p>",
+          "activities": {
+            "heal": {
+              "condition": "The tar-rasque would be reduced to 0 hit points."
+            }
+          }
+        },
+        "Refractive Exterior": {
+          "name": "Refractive Exterior",
+          "description": "<p>Any time the tar-rasque is targeted by a <em>@UUID[Compendium.dnd5e.spells.41JIhpDyM9Anm7cs]{magic missile}</em> spell, a line spell, or a spell that requires a ranged attack roll, some of the energy is refracted into a random elemental type and a bolt of energy fires back at the caster as a ranged spell attack using the caster’s spell attack modifier, and dealing 4 (<strong>1d8</strong>) damage on a hit. Roll a <strong>d4</strong> to determine the damage type: 1-acid, 2-cold, 3-fire, 4-lightning.</p>"
+        },
+        "Mythic Actions": {
+          "name": "Mythic Actions",
+          "description": "<p>If the tar-rasque’s Primordial Awakening trait has activated in the last hour, it can use <strong>[[/item HjXpinA1nNrU8psH]]{reflux}</strong> as a legendary action.</p>"
+        },
+        "Reflux (Costs 2 Actions)": {
+          "name": "Reflux (Costs 2 Actions)",
+          "description": "<p>The tar-rasque recharges and uses its Necrotaruption.</p>"
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "The tar-rasque makes three attacks: one with its Necrotar Tongue, one with its Claws, and one with its Tail. It can use its Necrotaruption instead of its Necrotar Tongue."
+        },
+        "Necrotar Tongue": {
+          "name": "Necrotar Tongue",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong> If the target is a creature, it must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span> or be <strong>&amp;reference[grappled]</strong> (<span class=\"loot-tavern Checks-and-Saves\">escape DC [[lookup @abilities.str.dc]]</span>) and pulled into the tar-rasque’s maw. Until this grapple ends, the target is <strong>restrained</strong>, takes [[/damage average]] damage at the start of each of its turns, and the tar-rasque can’t use its tongue on another target.</p>"
+        },
+        "Claws": {
+          "name": "爪击",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Attack": {
+          "name": "攻击",
+          "description": "<p>The tar-rasque makes one melee weapon attack.</p>"
+        },
+        "Tail": {
+          "name": "尾击",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong> If the target is a creature, it must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span> or be knocked <strong>&amp;reference[prone]</strong>.</p>"
+        },
+        "Move": {
+          "name": "Move",
+          "description": "The tar-rasque moves up to half its speed."
+        },
+        "Necrotaruption (Recharge 5-6)": {
+          "name": "Necrotaruption (Recharge 5-6)",
+          "description": "<p>The tar-rasque exhales a torrent of thick tar-phlegm in a <strong>40-foot cone</strong>. Each creature in that area must make a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span>. On a failed save, a creature takes <strong>[[/damage average activity=dnd5eactivity000]]</strong> damage and is <strong>&amp;Reference[restrained]</strong> until the end of the tar-rasque’s next turn. On a successful save, the creature takes half as much damage and isn’t restrained. In addition, until the end of the tar-rasque’s next turn, the area is difficult terrain for other creatures and a creature that starts its turn in the area or enters it for the first time on its turn takes <strong>[[/damage average activity=dnd5eactivity001]]</strong> damage.</p>"
+        },
+        "Tremor": {
+          "name": "Tremor",
+          "description": "<p>The tar-rasque pounds the ground; each creature standing on the ground within <strong>30 feet</strong> of it must succeed on a <strong>[[/save format=long]]</strong> or be knocked <strong>&amp;reference[prone]</strong>.</p>"
+        },
+        "Flammable": {
+          "name": "Flammable",
+          "description": "<p>If the tar-rasque takes fire damage, it ignites. It and any creature it is grappling takes <strong>[[/damage average]]</strong> damage at the start of each of its turns and its melee attacks and Necrotaruption deal an additional <strong>[[/damage average]]</strong> damage. If the tar-rasque is subject to heavy rain or takes <strong>15</strong> or more cold damage in a single instance, the flames are extinguished and the effects end.</p>"
+        },
+        "Concealed Arcane Power Source": {
+          "name": "Concealed Arcane Power Source",
+          "description": "<p>After the tar-rasque’s Primordial Awakening trait activates, the crystal in the tar-rasque’s head can be targeted separately from the tar-rasque (AC 19, 80 hit points, <strong>vulnerability</strong> to thunder damage, and <strong>immunity</strong> to all other damage types except bludgeoning, force, piercing, and slashing). It can only be targeted by a creature grappled by the tar-rasque’s Necrotar Tongue, or by creatures that Ready an action for when the tar-rasque makes a Necrotar Tongue attack.</p><p>If the crystal is destroyed, the tar-rasque’s current hit points are reduced to 0.</p><p></p>"
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<section class=\"secret\" id=\"secret-hd3ibBsAPzh0DmiJ\"><p>The tar-rasque can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature’s turn. The tar-rasque regains spent legendary actions at the start of its turn.</p></section><p>The tar-rasque can take 3 legendary actions.</p>"
+        }
+      }
+    },
+    "Tar-rasque Brittlebone": {
+      "name": "Tar-rasque Brittlebone",
+      "tokenName": "Tar-rasque Brittlebone",
+      "items": {
+        "Magic Resistance": {
+          "name": "魔法抗性",
+          "description": "The tar-rasque has advantage on saving throws against spells and other magical effects."
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "The tar-rasque makes three attacks: one with its Necrotar Tongue, one with its Claws, and one with its Tail. It can use its Necrotaruption instead of its Necrotar Tongue."
+        },
+        "Concealed Arcane Power Source": {
+          "name": "Concealed Arcane Power Source",
+          "description": "<p>After the tar-rasque’s Primordial Awakening trait activates, the crystal in the tar-rasque’s head can be targeted separately from the tar-rasque (AC 19, 120 hit points, <strong>vulnerability</strong> to thunder damage, and <strong>immunity</strong> to all other damage types except bludgeoning, force, piercing, and slashing). It can only be targeted by a creature grappled by the tar-rasque’s Necrotar Tongue, or by creatures that Ready an action for when the tar-rasque makes a Necrotar Tongue attack. </p><p>If the crystal is destroyed, the tar-rasque’s current hit points are reduced to 0.</p><p></p>"
+        },
+        "Flammable": {
+          "name": "Flammable",
+          "description": "<p>If the tar-rasque takes fire damage, it ignites. It and any creature it is grappling takes <strong>[[/damage average]]</strong> damage at the start of each of its turns and its melee attacks and Necrotaruption deal an additional <strong>[[/damage average]]</strong> damage. If the tar-rasque is subject to heavy rain or takes <strong>15</strong> or more cold damage in a single instance, the flames are extinguished and the effects end.</p>"
+        },
+        "Legendary Actions": {
+          "name": "Legendary Actions",
+          "description": "<section class=\"secret\" id=\"secret-hd3ibBsAPzh0DmiJ\"><p>The tar-rasque can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature’s turn. The tar-rasque regains spent legendary actions at the start of its turn.</p></section><p>The tar-rasque can take 3 legendary actions.</p>"
+        },
+        "Mythic Actions": {
+          "name": "Mythic Actions",
+          "description": "<p>If the tar-rasque’s Primordial Awakening trait has activated in the last hour, it can use <strong>[[/item hBCwdxGV4DF6x65Z]]{reflux}</strong> as a legendary action.</p>"
+        },
+        "Refractive Exterior": {
+          "name": "Refractive Exterior",
+          "description": "<p>Any time the tar-rasque is targeted by a <em>@UUID[Compendium.dnd5e.spells.41JIhpDyM9Anm7cs]{magic missile}</em> spell, a line spell, or a spell that requires a ranged attack roll, some of the energy is refracted into a random elemental type and a bolt of energy fires back at the caster as a ranged spell attack using the caster’s spell attack modifier, and dealing 9 (<strong>2d8</strong>) damage on a hit. Roll a <strong>d4</strong> to determine the damage type: 1-acid, 2-cold, 3-fire, 4-lightning.</p>"
+        },
+        "Primordial Awakening": {
+          "name": "Primordial Awakening",
+          "description": "<p>If the tar-rasque would be reduced to 0 hit points, its current hit point total instead resets to <strong>[[lookup @attributes.hp.max]]</strong> hit points, it recharges its Necrotaruption, and it regains <strong>2</strong> expended use of Legendary Resistance. Additionally, the tar-rasque can use the options in the “Mythic Actions” section for <strong>1 hour</strong>. Award a party an additional <span style=\"font-family:Signika, sans-serif\">25,000 XP (50,000 XP total) for defeating the tar-rasque after its Primordial Awakening activates.</span></p>",
+          "activities": {
+            "heal": {
+              "condition": "The tar-rasque would be reduced to 0 hit points."
+            }
+          }
+        },
+        "Necrotaruption (Recharge 5-6)": {
+          "name": "Necrotaruption (Recharge 5-6)",
+          "description": "<p>The tar-rasque exhales a torrent of thick tar-phlegm in a <strong>40-foot cone</strong>. Each creature in that area must make a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span>. On a failed save, a creature takes <strong>[[/damage average activity=dnd5eactivity000]]</strong> damage and is <strong>&amp;Reference[restrained]</strong> until the end of the tar-rasque’s next turn. On a successful save, the creature takes half as much damage and isn’t restrained. In addition, until the end of the tar-rasque’s next turn, the area is difficult terrain for other creatures and a creature that starts its turn in the area or enters it for the first time on its turn takes <strong>[[/damage average activity=dnd5eactivity001]]</strong> damage.</p>"
+        },
+        "Move": {
+          "name": "Move",
+          "description": "The tar-rasque moves up to half its speed."
+        },
+        "Attack": {
+          "name": "攻击",
+          "description": "<p>The tar-rasque makes one melee weapon attack.</p>"
+        },
+        "Legendary Resistance": {
+          "name": "传奇抗性",
+          "description": "If the tar-rasque fails a saving throw, it can choose to succeed instead."
+        },
+        "Tail": {
+          "name": "尾击",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong> If the target is a creature, it must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span> or be knocked <strong>&amp;reference[prone]</strong>.</p>"
+        },
+        "Claws": {
+          "name": "爪击",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong></p>"
+        },
+        "Necrotar Tongue": {
+          "name": "Necrotar Tongue",
+          "description": "<p><strong>[[/attack format=extended]]. [[/damage format=extended]].</strong> If the target is a creature, it must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span> or be <strong>&amp;reference[grappled]</strong> (<span class=\"loot-tavern Checks-and-Saves\">escape DC [[lookup @abilities.str.dc]]</span>) and pulled into the tar-rasque’s maw. Until this grapple ends, the target is <strong>restrained</strong>, takes [[/damage average]] damage at the start of each of its turns, and the tar-rasque can’t use its tongue on another target.</p>"
+        },
+        "Reflux (Costs 2 Actions)": {
+          "name": "Reflux (Costs 2 Actions)",
+          "description": "<p>The tar-rasque recharges and uses its Necrotaruption.</p>"
+        },
+        "Tremor": {
+          "name": "Tremor",
+          "description": "<p>The tar-rasque pounds the ground; each creature standing on the ground within <strong>30 feet</strong> of it must succeed on a <strong>[[/save format=long]]</strong> or be knocked <strong>&amp;reference[prone]</strong>.</p>"
+        }
+      }
+    },
+    "Mini Tar Elemental": {
+      "name": "Mini Tar Elemental",
+      "tokenName": "Mini Tar Elemental",
+      "description": "<p>These viscous, shapeless elementals are natives of the muddy borderlands between the Planes of Water and Earth. Their minds comprise the echoing memories of the thousands of organisms whose decomposition has created their shapeless bodies.</p><p><em><strong>Arcane Activation.</strong></em> When an arcane power source is tuned to the correct frequency, a tar elemental’s primordial spark can be drawn into the Material Plane, reforming around a suitable substrate, such as tar or other lipids, like the fat deposits from a long-dead giant space hamster. Such a summoning is often against the elemental’s will, leading to violent and aggressive outbursts.</p><p><em><strong>Possession &amp; Reanimation.</strong></em> Should a tar elemental find itself in contact with such an arcane power source, its powers of decomposition are augmented; it is no longer subject to decay and its touch can enervate living tissue. An augmented tar elemental is also capable of puppeteering a creature, dead or alive, manipulating its body through an external, oily musculature.</p>",
+      "items": {
+        "Oil Form": {
+          "name": "Oil Form",
+          "description": "<p>When the elemental moves through water, it uses its swimming speed to skim along the water’s surface; it can’t submerge below the surface of water without a powerful detergent.</p>"
+        },
+        "Water Form": {
+          "name": "流水形态",
+          "description": "The elemental can enter a hostile creature’s space and stop there. It can move through a space as narrow as 1 inch wide without squeezing."
+        },
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "The elemental makes two Slam attacks."
+        },
+        "Slam": {
+          "name": "粗枝猛击",
+          "description": "<section class=\"secret\" id=\"secret-S0LyzzCglVCTEret\"><p><strong>[[/attack format=extended]]. [[/damage format=extended]]</strong> and the target’s speed is reduced by <strong>10 feet</strong> until it or another creature within reach of the target uses its action to clean the target. This speed reduction can stack; if the target’s walking speed is reduced to 0 feet by this effect, it is <strong>&amp;reference[restrained]</strong>.</p></section><p>The tar elemental attacks with its slam.</p><p></p>"
+        },
+        "Arcane Activation": {
+          "name": "Arcane Activation",
+          "description": "<p>The elemental attempts to possess one Medium or smaller corporeal creature in close proximity to an arcane power source, such as a magitech firearm. The creature must succeed on a <span class=\"loot-tavern Checks-and-Saves\">[[/save format=long]]</span> or be under the elemental’s control until the elemental releases it as a bonus action, or the arcane power source is destroyed or is more than <strong>5 feet</strong> from the possessed creature. While the elemental controls a creature in this way, the possessed creature gains the features in the Arcane Possession sidebar.</p>"
+        },
+        "Flammable": {
+          "name": "Flammable",
+          "description": "<p>If the elemental takes fire damage, it ignites. It takes <strong>[[/damage average]]</strong> damage at the start of each of its turns and its weapon attacks deal an additional <strong>[[/damage average]]</strong> damage. If the elemental is subject to heavy rain or takes <strong>5</strong> or more cold damage in a single instance, the flames are extinguished and the effects end.</p>"
+        }
+      }
+    }
+  }
+}
