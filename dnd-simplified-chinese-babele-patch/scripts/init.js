@@ -1,6 +1,6 @@
 import { registerAddons } from './registerAddons.js';
-
 export const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
+
 
 Hooks.on('init', () => {
     game.settings.register(MODULE_ID, 'autoRegisterBabel', {
@@ -10,13 +10,7 @@ Hooks.on('init', () => {
         config: true,
         default: true,
         type: Boolean,
-        onChange: async value => {
-            if (value) {
-                await autoRegisterBabel();
-            }
-
-            window.location.reload();
-        },
+        requiresReload: true
     });
 
     game.settings.register(MODULE_ID, 'namesetting', {
@@ -39,9 +33,20 @@ Hooks.on('init', () => {
         requiresReload: true
     });
 
+    game.settings.register(MODULE_ID, 'TranslateBlackList', {
+        name: '屏蔽列表',
+        hint: '',
+        scope: 'world',
+        config: true,
+        default: [],
+        type: Array,
+        requiresReload: true
+    });
+
     if (game.settings.get(MODULE_ID, 'autoRegisterBabel')) {
         autoRegisterBabel();
     }
+    console.log(`${MODULE_ID} | 初始化完成`);
 });
 
 async function autoRegisterBabel() {
@@ -60,13 +65,27 @@ async function autoRegisterBabel() {
 }
 
 
-Hooks.on('babele.ready', () => {
-    console.log("Reindexing All Compendiums!")
-    game.packs.forEach(element => {
-        element.clear();
-        element.getIndex();
-    });
+// Hooks.on('babele.ready', () => {
+//     console.log("Reindexing All Compendiums!")
+//     game.packs.forEach(element => {
+//         element.clear();
+//         element.getIndex();
+//     });
+// });
+
+Hooks.on('babele.dataLoaded', () => {
+    if(game.babele.initialized)
+    {
+        const packs = game.babele.packs;
+        if (packs?.has('dnd5e.actors24')) {
+            packs.delete('dnd5e.actors24');
+            console.log('已从 babele.packs 删除: dnd5e.actors24');
+        }
+        console.log("测试", packs);
+    }
 });
+
+
 
 
 
