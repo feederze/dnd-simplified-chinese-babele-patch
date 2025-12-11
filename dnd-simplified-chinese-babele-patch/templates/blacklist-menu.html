@@ -1,0 +1,45 @@
+<section class="blacklist-menu">
+  <style>
+    .blacklist-menu .groups { max-height: 440px; overflow: auto; }
+    .blacklist-menu .group { margin-bottom: 12px; }
+    .blacklist-menu .group-header { display: flex; align-items: center; gap: 8px; }
+    .blacklist-menu .group-toggle {
+      width: 20px; height: 20px; line-height: 18px;
+      padding: 0; margin: 0;
+      text-align: center; border: 1px solid var(--color-border,#aaa);
+      border-radius: 3px; background: var(--color-bg-secondary,#eee);
+      cursor: pointer;
+    }
+    .blacklist-menu .group-header h3 { margin: 6px 0; flex: 1; }
+    .blacklist-menu .items { padding-left: 8px; }
+    .blacklist-menu .items[data-collapsed="true"] { display: none; }
+    .blacklist-menu label.item-row { display: flex; align-items: center; gap: 6px; margin: 4px 0; }
+    .blacklist-menu .save { margin-top: 10px; }
+  </style>
+  <p>勾选需要屏蔽的 Compendium 集合（按命名空间分组）。</p>
+  <div class="groups">
+    {{#each groups}}
+      <div class="group">
+        <div class="group-header">
+          <button type="button" class="group-toggle" title="收缩/展开">▸</button>
+          <h3>{{this.namespace}}</h3>
+          <label style="display:flex; align-items:center; gap:6px; margin:0;">
+            <input type="checkbox" class="group-check" {{#if this.groupChecked}}checked{{/if}} />
+            <span>整组屏蔽</span>
+          </label>
+        </div>
+        <div class="items" data-collapsed="{{this.collapsed}}">
+          {{#each this.items}}
+            <label class="item-row">
+              <input type="checkbox" name="blacklist" value="{{this.key}}" {{#if this.checked}}checked{{/if}} />
+              <span>{{this.pack}}</span>
+            </label>
+          {{/each}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <footer style="margin-top: 10px;">
+    <button type="button" class="save">保存</button>
+  </footer>
+</section>

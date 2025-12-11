@@ -1,4 +1,4 @@
-import { MODULE_ID } from "./init.js";
+export const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
 const DEBUG = true;
 
 
