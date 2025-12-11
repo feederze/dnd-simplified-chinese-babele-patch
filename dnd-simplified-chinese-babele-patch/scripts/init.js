@@ -1,6 +1,7 @@
 import { registerAddons } from './registerAddons.js';
-
+import { TranslateBlacklistMenu } from './BlacklistMenu.js';
 export const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
+
 
 Hooks.on('init', () => {
     game.settings.register(MODULE_ID, 'autoRegisterBabel', {
@@ -10,13 +11,7 @@ Hooks.on('init', () => {
         config: true,
         default: true,
         type: Boolean,
-        onChange: async value => {
-            if (value) {
-                await autoRegisterBabel();
-            }
-
-            window.location.reload();
-        },
+        requiresReload: true
     });
 
     game.settings.register(MODULE_ID, 'namesetting', {
@@ -39,9 +34,29 @@ Hooks.on('init', () => {
         requiresReload: true
     });
 
+    game.settings.register(MODULE_ID, 'PackStatus', {
+        name: '汉化状态',
+        hint: '',
+        scope: 'world',
+        config: false,
+        default: {},
+        type: Object,
+    });
+
+    // 注册子菜单入口（仅 GM 可见）
+    game.settings.registerMenu(MODULE_ID, 'translateBlacklistMenu', {
+        name: 'Babele 屏蔽列表子菜单',
+        label: '打开屏蔽列表设置',
+        hint: '选择需要从翻译中屏蔽的 Compendium 集合。',
+        icon: 'fa-solid fa-ban',
+        type: TranslateBlacklistMenu,
+        restricted: true,
+    });
+
     if (game.settings.get(MODULE_ID, 'autoRegisterBabel')) {
         autoRegisterBabel();
     }
+    console.log(`${MODULE_ID} | 初始化完成`);
 });
 
 async function autoRegisterBabel() {
@@ -60,13 +75,39 @@ async function autoRegisterBabel() {
 }
 
 
-Hooks.on('babele.ready', () => {
-    console.log("Reindexing All Compendiums!")
-    game.packs.forEach(element => {
-        element.clear();
-        element.getIndex();
-    });
+
+Hooks.on('babele.dataLoaded', () => {
+    if (!game.babele?.initialized) return;
+    const packs = game.babele.packs;
+    if (!packs) return;
+
+    const saved = game.settings.get(MODULE_ID, 'PackStatus') || {};
+    const packStatus = {};
+
+    // 合并：当前 packs 的键，若已有保存则用保存值，否则默认 true
+    for (const key of packs.keys()) {
+        if (Object.prototype.hasOwnProperty.call(saved, key)) {
+            packStatus[key] = saved[key];
+        } else {
+            packStatus[key] = true;
+        }
+    }
+
+    // 如果新键变多了，顺手覆盖保存一次（保持与当前 packs 同步）
+    if (Object.keys(saved).length !== Object.keys(packStatus).length) {
+        game.settings.set(MODULE_ID, 'PackStatus', packStatus);
+    }
+
+    // 应用禁用：删除为 false 的 pack
+    for (const [key, enabled] of Object.entries(packStatus)) {
+        if (!enabled && packs.has(key)) {
+        packs.delete(key);
+        }
+    }
+    game.settings.set(MODULE_ID, 'PackStatus', packStatus);
 });
+
+
 
 
 
