@@ -93,10 +93,8 @@ Hooks.on('babele.dataLoaded', () => {
         }
     }
 
-    // 如果新键变多了，顺手覆盖保存一次（保持与当前 packs 同步）
-    if (Object.keys(saved).length !== Object.keys(packStatus).length) {
-        game.settings.set(MODULE_ID, 'PackStatus', packStatus);
-    }
+    // 准备一个保存函数，确保只在 Game ready 后写入 world 设置
+    const savePackStatus = () => game.settings.set(MODULE_ID, 'PackStatus', packStatus);
 
     // 应用禁用：删除为 false 的 pack
     for (const [key, enabled] of Object.entries(packStatus)) {
@@ -104,8 +102,16 @@ Hooks.on('babele.dataLoaded', () => {
         packs.delete(key);
         }
     }
-    game.settings.set(MODULE_ID, 'PackStatus', packStatus);
+    
+    if(!game.user.isGM) return;
+    // 在 ready 阶段统一保存 PackStatus，避免在 init 阶段写 world 设置导致错误
+    if (game.ready) {
+        savePackStatus();
+    } else {
+        Hooks.once('game.ready', savePackStatus);
+    } 
 });
+
 
 
 
