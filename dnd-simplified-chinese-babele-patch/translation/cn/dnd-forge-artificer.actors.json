@@ -1,0 +1,3010 @@
+{
+  "label": "角色",
+  "folders": {
+    "Bastions": "据点",
+    "Battle Smith": "战地匠师",
+    "Artillerist": "魔炮师",
+    "Airships": "飞艇",
+    "Summons": "召唤物",
+    "NPCs": "非玩家角色"
+  },
+  "entries": {
+    "Boromar Smuggler": {
+      "name": "Boromar Smuggler",
+      "tokenName": "Boromar Smuggler",
+      "description": "<p>Smugglers employed by the Boromar Clan (mostly halflings) are notoriously hard to catch. These speedy criminals traffic everything from narcotics to illegal arcane weaponry across Sharn.</p>",
+      "items": {
+        "Hustle": {
+          "name": "Hustle",
+          "description": "<p>The smuggler can move through the space of any creature that is of a larger size, but it can’t stop there.</p>"
+        },
+        "Shortsword": {
+          "name": "Shortsword",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Pistol": {
+          "name": "Pistol",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Leather Armor": {
+          "name": "Leather Armor"
+        }
+      }
+    },
+    "Boromar Underboss": {
+      "name": "Boromar Underboss",
+      "tokenName": "Boromar Underboss",
+      "description": "<p>Underbosses supervise larger clan operations, such as gambling halls and warehouses of smuggled goods awaiting transport. Accustomed to the criminal lifestyle, these hardy individuals (mostly halflings) dismiss and dispose of threats with calculated ease.</p>",
+      "items": {
+        "Hustle": {
+          "name": "Hustle",
+          "description": "<p>The underboss can move through the space of any creature that is of a larger size, but it can’t stop there.</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The underboss makes three attacks, using [[/item Poisoned Blade]] or [[/item Arcane Firearm]] in any combination.</p>"
+        },
+        "Poisoned Blade": {
+          "name": "Poisoned Blade",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], , and the target has the &amp;Reference[poisoned apply=false] condition until the start of the underboss’s next turn.</p><p>If the target is already Poisoned, it instead takes an extra [[/damage 2d6 poison average]] damage.</p>",
+          "activities": {
+            "Attack: If Already Poisoned": {
+              "name": "Attack: If Already Poisoned"
+            }
+          }
+        },
+        "Studded Leather Armor": {
+          "name": "Studded Leather Armor"
+        },
+        "Arcane Firearm": {
+          "name": "Arcane Firearm",
+          "description": "<p><em>Ranged Attack Roll:</em> [[/attack]], range 30/90 ft. Hit: [[/damage average]] damage.</p>"
+        },
+        "Uncanny Dodge": {
+          "name": "Uncanny Dodge",
+          "description": "<p class=\"feature\"><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=NzfYZzkrG4qJ13to]]. <em>Response:</em> The [[lookup @name lowercase]] halves the damage (round down) it takes from that attack.</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "Expend Use",
+              "condition": "hit by an attack roll"
+            }
+          }
+        }
+      }
+    },
+    "Cannith Artificer": {
+      "name": "Cannith Artificer",
+      "tokenName": "Cannith Artificer",
+      "description": "<p>Dragonmarked artificers of House Cannith (typically human) often wield compact devices similar to eldritch cannons that can produce a variety of devastating effects. Both these cannons and the artificers’ force-empowered maces function only in their creator’s hands.</p>",
+      "items": {
+        "Chain Mail": {
+          "name": "Chain Mail"
+        },
+        "Artillery Strike": {
+          "name": "Artillery Strike",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The artificer casts one of the following spells, using its Tinker’s Tools as an Arcane Focus and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>At Will</strong>: [[/item .cnBfV3qxvNQsyJsM]]{Burning Hands} (level 3 version), [[/item .XD8Gy2vRWeYTzh31]]{Mending}, [[/item .nw9acHOzE7yX8PNU]]{Thunderwave} (level 3 version)</p><p><strong>1/Day Each</strong>: [[/item .FUqWZjulAC5m5ABv]]{Cure Wounds}, [[/item .WQT2BWnq07J5fWSs]]{Invisibility}</p>"
+        },
+        "Burning Hands": {
+          "name": "Burning Hands",
+          "description": "<p>A thin sheet of flames shoots forth from you. Each creature in a 15-foot Cone makes a Dexterity saving throw, taking 3d6 Fire damage on a failed save or half as much damage on a successful one.</p><p>Flammable objects in the Cone that aren't being worn or carried start burning.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 1.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Mending": {
+          "name": "Mending",
+          "description": "<p>This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.</p><p>This spell can physically repair a magic item, but it can't restore magic to such an object.</p>",
+          "materials": {
+            "value": "two lodestones"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Thunderwave": {
+          "name": "Thunderwave",
+          "description": "<p>You unleash a wave of thunderous energy. Each creature in a 15-foot Cube originating from you makes a Constitution saving throw. On a failed save, a creature takes 2d8 Thunder damage and is pushed 10 feet away from you. On a successful save, a creature takes half as much damage only.</p><p>In addition, unsecured objects that are entirely within the Cube are pushed 10 feet away from you, and a thunderous boom is audible within 300 feet.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 1.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Cure Wounds": {
+          "name": "Cure Wounds",
+          "description": "<p>A creature you touch regains a number of Hit Points equal to 2d8 plus your spellcasting ability modifier.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The healing increases by 2d8 for each spell slot level above 1.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Invisibility": {
+          "name": "Invisibility",
+          "description": "<p>A creature you touch has the &amp;Reference[invisible apply=false] condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 2.</p>",
+          "materials": {
+            "value": "an eyelash in gum arabic"
+          },
+          "effects": {
+            "Invisible": {
+              "name": "Invisible",
+              "description": "<p>The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The artificer makes two attacks, using [[/item Battering Mace]] or [[/item Artillery Strike]] in any combination.</p>"
+        },
+        "Battering Mace": {
+          "name": "Battering Mace",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and if the target is a Large or smaller creature, it has the &amp;Reference[Prone apply=false] condition.</p>",
+          "effects": {
+            "Battering Mace: Prone": {
+              "name": "Battering Mace: Prone"
+            }
+          }
+        },
+        "Tinker's Tools": {
+          "name": "Tinker's Tools",
+          "description": "<p class=\"phb-meta\"><strong>Ability:</strong> Dexterity</p><p class=\"phb-meta\"><strong>Utilize:</strong> Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20)</p><p class=\"phb-meta\"><strong>Craft:</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbwepMusket0000]{Musket}, @UUID[Compendium.dnd5e.equipment24.Item.phbwepPistol0000]{Pistol}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBell0000000]{Bell}, @UUID[Compendium.dnd5e.items.Item.UkWdyJYQTfVX2cJW]{Bullseye Lantern}, @UUID[Compendium.dnd5e.equipment24.Item.phbagFlask000000]{Flask}, @UUID[Compendium.dnd5e.items.Item.wjHtGnd05SPdURqE]{Hooded Lantern}, @UUID[Compendium.dnd5e.equipment24.Item.phbagHuntingTrap]{Hunting Trap}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLock0000000]{Lock}, @UUID[Compendium.dnd5e.equipment24.Item.phbagManacles000]{Manacles}, @UUID[Compendium.dnd5e.equipment24.Item.phbagMirror00000]{Mirror}, @UUID[Compendium.dnd5e.equipment24.Item.phbagShovel00000]{Shovel}, @UUID[Compendium.dnd5e.equipment24.Item.phbagSignalWhist]{Signal Whistle}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{Tinderbox}</p>",
+          "activities": {
+            "Assemble a Tiny Item": {
+              "name": "Assemble a Tiny Item"
+            }
+          }
+        }
+      }
+    },
+    "Daask Bruiser": {
+      "name": "Daask Bruiser",
+      "tokenName": "Daask Bruiser",
+      "description": "<p>Intimidating and powerful, bruisers lead Daask operations when more violent and decisive shows of force are needed. These enforcers relish the brutality of their work.</p>",
+      "items": {
+        "Blood Frenzy": {
+          "name": "Blood Frenzy",
+          "description": "<p>The bruiser has Advantage on attack rolls against any creature that doesn’t have all its Hit Points.</p>"
+        },
+        "Smackback": {
+          "name": "Smackback",
+          "description": "<p><em>Trigger</em>: The bruiser takes damage from a creature within 5 feet. <em>Response</em>: The bruiser makes one [[/item Pummel]] attack, targeting the triggering creature.</p>",
+          "activities": {
+            "utility": {
+              "condition": "The bruiser takes damage from a creature within 5 feet"
+            }
+          }
+        },
+        "Glare": {
+          "name": "Glare",
+          "description": "<p><em>Wisdom Saving Throw: </em>DC [[lookup @save.dc.value activity=onxFr8Slt41qWXfP]], one creature the bruiser can see within [[lookup @range.value activity=onxFr8Slt41qWXfP]] feet.</p><p><em>Failure:</em> The target has the &amp;Reference[Frightened apply=false] condition until the start of the bruiser’s next turn.</p>",
+          "effects": {
+            "Frightened": {
+              "name": "Frightened",
+              "description": "<p>The target has the &amp;Reference[Frightened apply=false] condition until the start of the bruiser’s next turn.</p>"
+            }
+          }
+        },
+        "Pummel": {
+          "name": "Pummel",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The bruiser makes three [[/item Pummel]] attacks and uses [[/item Glare]].</p>"
+        }
+      }
+    },
+    "Daask Raider": {
+      "name": "Daask Raider",
+      "tokenName": "Daask Raider",
+      "description": "<p>Raiders use guerrilla tactics to ambush warehouses and beat down opponents. These skilled fistfighters work in tandem to claim goods and territory for Daask. </p>",
+      "items": {
+        "Pack Tactics": {
+          "name": "Pack Tactics",
+          "description": "<p>The raider has Advantage on an attack roll against a creature if at least one of the raider’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+        },
+        "Pummel": {
+          "name": "Pummel",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Smackback": {
+          "name": "Smackback",
+          "description": "<p><em>Trigger</em>: The raider takes damage from a creature within 5 feet. <em>Response</em>: The raider makes one [[/item Pummel]] attack, targeting the triggering creature.</p>",
+          "activities": {
+            "utility": {
+              "condition": "The raider takes damage from a creature within 5 feet."
+            }
+          }
+        }
+      }
+    },
+    "Dreaming Dark Infiltrator": {
+      "name": "Dreaming Dark Infiltrator",
+      "tokenName": "Dreaming Dark Infiltrator",
+      "description": "<p>Dreaming Dark infiltrators are spies sent to gather intelligence. They plant psychic seeds in their minds of their foes that enhance the infiltrators’ combat prowess against those enemies.</p>",
+      "items": {
+        "Chain Shirt": {
+          "name": "Chain Shirt"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The infiltrator makes three [[/item Mind Blade]] attacks.</p>"
+        },
+        "Mind Blade": {
+          "name": "Mind Blade",
+          "description": "<p>Melee or Ranged Attack Roll: [[/attack]], reach 5 ft. or range 30 ft. Hit: [[/damage average]] damage.</p>"
+        },
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The infiltrator casts one of the following spells, requiring no Material components and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>3/Day:</strong> [[/item .VUu7ZatCma4LIstF]]{Detect Thoughts}</p><p><strong>1/Day:</strong> [[/item .efaSynapticStati]]{Synaptic Static}</p>"
+        },
+        "Synaptic Static": {
+          "name": "Synaptic Static",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Mind Curse": {
+          "name": "Mind Curse",
+          "description": "<p><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=P5QryAQht22Yp2wj]], one creature hit by the infiltrator’s Mind Blade attack this turn.</p><p><em>Failure:</em> The target takes [[/damage average]] damage and is cursed.</p><p>While cursed in this way, it has Disadvantage on attack rolls against the infiltrator, and the infiltrator always knows its location while it and the infiltrator are on the same plane of existence.</p><p>A cursed creature repeats the save whenever it finishes a Short or Long Rest, ending the effect on itself on a success.</p><p><em>Success</em>: Half damage only.</p>",
+          "activities": {
+            "save": {
+              "affects": {
+                "special": "hit by the infiltrator’s Mind Blade attack this turn.\\"
+              }
+            }
+          },
+          "effects": {
+            "Cursed": {
+              "name": "Cursed",
+              "description": "<p>The cursed target has Disadvantage on attack rolls against the infiltrator, and the infiltrator always knows its location while it and the infiltrator are on the same plane of existence.</p><p>A cursed creature repeats the save whenever it finishes a Short or Long Rest, ending the effect on itself on a success.</p>"
+            }
+          }
+        },
+        "Detect Thoughts": {
+          "name": "Detect Thoughts",
+          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don't read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target's mind right now. If the target doesn't know any languages and isn't telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target's mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target's reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target's mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "materials": {
+            "value": "1 Copper Piece"
+          },
+          "activities": {
+            "Probe Deeper": {
+              "name": "Probe Deeper"
+            },
+            "Sense Thoughts": {
+              "name": "Sense Thoughts"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "efaSynapticStati": {
+          "name": "Synaptic Static",
+          "description": "<p>You cause psychic energy to erupt at a point within range. Each creature in a 20-foot-radius Sphere centered on that point makes an Intelligence saving throw, taking 8d6 Psychic damage on a failed save or half as much damage on a successful one.</p><p>On a failed save, a target also has muddled thoughts for 1 minute. During that time, it subtracts [[/r 1d6]] from all its attack rolls and ability checks, as well as any Constitution saving throws to maintain Concentration. The target makes an [[/save ability=int dc=@attributes.spell.dc format=long]] at the end of each of its turns, ending the effect on itself on a success.</p>",
+          "effects": {
+            "Muddled Thoughts": {
+              "name": "Muddled Thoughts",
+              "description": "<p>The target subtracts 1d6 from all its attack rolls and ability checks, as well as any Constitution saving throws to maintain Concentration. The target makes an [[/save ability=int format=long]] at the end of each of its turns, ending the effect on itself on a success.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Dreaming Dark Mindkiller": {
+      "name": "Dreaming Dark Mindkiller",
+      "tokenName": "Dreaming Dark Mindkiller",
+      "description": "<p>Mindkillers are the assassins of the Dreaming Dark, sent to terrify their foes before striking to kill. Mindkillers force foes to attack their own allies, causing physical and emotional devastation to grow the power of the Dreaming Dark.</p>",
+      "items": {
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The mindkiller makes two [[/item Nightmare Whisper]] attacks.</p>"
+        },
+        "Nightmare Whisper": {
+          "name": "Nightmare Whisper",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target has the &amp;Reference[Frightened apply=false] condition until the start of the mindkiller’s next turn. If the target is already Frightened, it instead takes an extra [[/damage 3d6 psychic average]] damage.</p>",
+          "activities": {
+            "Attack: If Already Frightened": {
+              "name": "Attack: If Already Frightened"
+            }
+          },
+          "effects": {
+            "Frightened": {
+              "name": "Frightened",
+              "description": "<p>The target has the &amp;Reference[Frightened apply=false] condition until the start of the mindkiller’s next turn.</p>"
+            }
+          }
+        },
+        "Primal Fear": {
+          "name": "Primal Fear",
+          "description": "<p><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=jStzD14Wkerw0JJQ]], each creature in a [[lookup @target.template.size activity=jStzD14Wkerw0JJQ]]-foot-radius Sphere centered on a point the mindkiller can see within [[lookup @range.value activity=jStzD14Wkerw0JJQ]] feet.</p><p><em>Failure:</em> [[/damage average]] damage, and the target has the &amp;Reference[Frightened apply=false] condition until the start of the mindkiller’s next turn.</p><p>While Frightened in this way, the target can do only one of the following on each of its turns: move, take an action, or take a Bonus Action.</p><p><em>Success:</em> Half damage only.</p>",
+          "effects": {
+            "Frightened": {
+              "name": "Frightened",
+              "description": "<p>The target has the &amp;Reference[Frightened apply=false] condition until the start of the mindkiller’s next turn.</p><p>While Frightened in this way, the target can do only one of the following on each of its turns: move, take an action, or take a Bonus Action.</p>"
+            }
+          }
+        },
+        "Slayer’s Puppet": {
+          "name": "Slayer’s Puppet",
+          "description": "<p>The mindkiller casts [[/item .SXJMVNuMMnNlRBRQ]]{Dominate Person}, requiring no spell components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]).</p>"
+        },
+        "Dominate Person": {
+          "name": "Dominate Person",
+          "description": "<p>One Humanoid you can see within range must succeed on a Wisdom saving throw or have the &amp;Reference[Charmed apply=false] condition for the duration. The target has Advantage on the save if you or your allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success.</p><p>You have a telepathic link with the Charmed target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"Attack that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself.</p><p>You can command the target to take a Reaction but must take your own Reaction to do so.</p><p><strong>Using a Higher-Level Spell Slot.</strong> Your Concentration can last longer with a spell slot of level 6 (up to 10 minutes), 7 (up to 1 hour), or 8+ (up to 8 hours).</p>",
+          "effects": {
+            "Dominated": {
+              "name": "Dominated",
+              "description": "<p>Whenever the &amp;Reference[charmed apply=false] target takes damage, it repeats the [[/save ability=wis]] save, ending the spell on itself on a success.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Eldritch Cannon": {
+      "name": "Eldritch Cannon",
+      "tokenName": "Eldritch Cannon",
+      "items": {
+        "Mend Cannon": {
+          "name": "Mend Cannon",
+          "description": "<p>Casting <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMending000]{Mending}</em> on the cannon restores [[/healing]] (Hit Points) to this cannon.</p>"
+        },
+        "Flame Thrower": {
+          "name": "Flame Thrower",
+          "description": "<p>The cannon blasts fire in a 15-foot Cone. Each creature in that area makes a Dexterity saving throw against your spell save DC, taking [[/damage]] damage on a failed save or half as much damage on a successful one. Flammable objects in the Cone that aren't being worn or carried start burning.</p>"
+        },
+        "Force Ballista": {
+          "name": "Force Ballista",
+          "description": "<p>Make a ranged spell attack originating from the cannon at one creature or object within 120 feet of it. On a hit, the target takes [[/damage]] damage, and if the target is a creature, it is pushed up to 5 feet away from the cannon.</p>"
+        },
+        "Protector": {
+          "name": "Protector",
+          "description": "<p>The cannon emits a burst of positive energy that grants itself and each creature of your choice within 10 feet of the cannon a number of Temporary Hit Points equal to 1d8 plus your Intelligence modifier (minimum of +1).</p>",
+          "activities": {
+            "Protector": {
+              "name": "Protector",
+              "affects": {
+                "special": "of your choice"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Emerald Claw Commander": {
+      "name": "Emerald Claw Commander",
+      "tokenName": "Emerald Claw Commander",
+      "description": "<p>Emerald Claw commanders lead large groups of soldiers, inspiring the fanatical devotion of Humanoids and Undead alike.</p>",
+      "items": {
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The commander makes two attacks, using [[/item Flail]] or [[/item Javelin]] in any combination.</p>"
+        },
+        "Javelin": {
+          "name": "Javelin",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]—plus [[/damage 2d6 necrotic average]] damage if the commander is Bloodied.</p>",
+          "activities": {
+            "Bloodied Attack": {
+              "name": "Bloodied Attack"
+            }
+          }
+        },
+        "Plate Armor": {
+          "name": "Plate Armor",
+          "description": "<p>Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.</p>"
+        },
+        "Shield": {
+          "name": "Shield",
+          "description": "<p>A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time.</p>"
+        },
+        "Aura of Authority": {
+          "name": "Aura of Authority",
+          "description": "<p>While in a [[lookup @target.template.size activity=pxqN659aktxgUrcj]]-foot Emanation originating from the commander, the commander and its allies have Advantage on attack rolls and saving throws, provided the commander doesn’t have the Incapacitated condition.</p>"
+        },
+        "Flail": {
+          "name": "Flail",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]—plus [[/damage 2d6 necrotic average]] damage if the commander is Bloodied—and the target has Disadvantage on its next attack roll before the start of the commander’s next turn.</p><section class=\"secret\" id=\"secret-2PHBR931qWmrFBQV\"><p><strong>Foundry Note</strong></p><p>This feature includes an <strong>Active Effect (AE)</strong> that can be used as a reminder but does not automate the above benefits.</p></section>",
+          "activities": {
+            "Bloodied Attack": {
+              "name": "Bloodied Attack"
+            }
+          },
+          "effects": {
+            "Attack Disadvantage": {
+              "name": "Attack Disadvantage",
+              "description": "<p>The target has Disadvantage on its next attack roll before the start of the commander’s next turn.</p>"
+            }
+          }
+        }
+      }
+    },
+    "Emerald Claw Knight": {
+      "name": "Emerald Claw Knight",
+      "tokenName": "Emerald Claw Knight",
+      "description": "<p>Knights of the Emerald Claw command squads of Humanoid or Undead soldiers. As they draw nearer to death, the chill of the grave suffuses their weapon attacks.</p>",
+      "items": {
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The knight makes two attacks, using [[/item Flail]] or [[/item Javelin]] in any combination.</p>"
+        },
+        "Flail": {
+          "name": "Flail",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]—plus [[/damage 1d8 necrotic average]] damage if the knight is &amp;Reference[Bloodied]—and the target has Disadvantage on its next attack roll before the start of the knight’s next turn.</p><section class=\"secret\" id=\"secret-3PeJQf0yRrDMLgtx\"><p><strong>Foundry Note</strong></p><p>This feature includes an <strong>Active Effect (AE)</strong> that can be used as a reminder but does not automate the above benefits.</p></section>",
+          "activities": {
+            "Attack": {
+              "name": "Attack"
+            },
+            "Bloodied Attack": {
+              "name": "Bloodied Attack"
+            }
+          },
+          "effects": {
+            "Attack Disadvantage": {
+              "name": "Attack Disadvantage",
+              "description": "<p>The target has Disadvantage on its next attack roll before the start of the commander’s next turn.</p>"
+            }
+          }
+        },
+        "Javelin": {
+          "name": "Javelin",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]—plus [[/damage 1d8 necrotic average]] damage if the knight is &amp;Reference[Bloodied].</p>",
+          "activities": {
+            "Bloodied Attack": {
+              "name": "Bloodied Attack"
+            },
+            "LJHTEEZJV4rl8zmg": {
+              "name": "Bloodied Attack"
+            }
+          }
+        },
+        "Chain Mail": {
+          "name": "Chain Mail",
+          "description": "<p>Made of interlocking metal rings, chain mail includes a layer of quilted fabric worn underneath the mail to prevent chafing and to cushion the impact of blows. The suit includes gauntlets.</p>"
+        },
+        "Shield": {
+          "name": "Shield",
+          "description": "<p>A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time.</p>"
+        }
+      }
+    },
+    "Explosive Cannon": {
+      "name": "Explosive Cannon",
+      "tokenName": "Eldritch Cannon",
+      "items": {
+        "Mend Cannon": {
+          "name": "Mend Cannon",
+          "description": "<p>Casting <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMending000]{Mending}</em> on the cannon restores [[/healing]] (Hit Points) to this cannon.</p>"
+        },
+        "Flame Thrower": {
+          "name": "Flame Thrower",
+          "description": "<p>The cannon blasts fire in a 15-foot Cone. Each creature in that area makes a Dexterity saving throw against your spell save DC, taking [[/damage]] damage on a failed save or half as much damage on a successful one. Flammable objects in the Cone that aren't being worn or carried start burning.</p>"
+        },
+        "Force Ballista": {
+          "name": "Force Ballista",
+          "description": "<p>Make a ranged spell attack originating from the cannon at one creature or object within 120 feet of it. On a hit, the target takes [[/damage]] damage, and if the target is a creature, it is pushed up to 5 feet away from the cannon.</p>"
+        },
+        "Protector": {
+          "name": "Protector",
+          "description": "<p>The cannon emits a burst of positive energy that grants itself and each creature of your choice within 10 feet of the cannon a number of Temporary Hit Points equal to 1d8 plus your Intelligence modifier (minimum of +1).</p>",
+          "activities": {
+            "Protector": {
+              "name": "Protector",
+              "affects": {
+                "special": "of your choice"
+              }
+            }
+          }
+        },
+        "Detonate": {
+          "name": "Detonate",
+          "description": "<p>When your cannon takes damage, you can take a Reaction to command the cannon to detonate if you are within 60 feet of it. Doing so destroys the cannon and forces each creature within 20 feet of it to make a Dexterity saving throw against your spell save DC, taking 3d10 Force damage on a failed save or half as much damage on a successful one.</p>"
+        }
+      }
+    },
+    "Ghallanda Troubleshooter": {
+      "name": "Ghallanda Troubleshooter",
+      "tokenName": "Ghallanda Troubleshooter",
+      "description": "<p>The inns of House Ghallanda are meant to be places of safe refuge and quiet rest, so the house employs troubleshooters (mostly halflings) to protect the safety and serenity of its guests.</p>",
+      "items": {
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The troubleshooter casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>1/Day Each: </strong>[[/item .qxPnz8f2orpyeL5t]]{Sleep}, [[/item .vy0odJdBJMnIfnCd]]{Unseen Servant}</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The troubleshooter makes two [[/item Poisoned Dagger]] attacks.</p>"
+        },
+        "Poisoned Dagger": {
+          "name": "Poisoned Dagger",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target has the &amp;Reference[Poisoned apply=false] condition until the start of the troubleshooter’s next turn.</p>",
+          "effects": {
+            "Poisoned": {
+              "name": "Poisoned",
+              "description": "<p>The target has the &amp;Reference[Poisoned apply=false] condition until the start of the troubleshooter’s next turn.</p>"
+            }
+          }
+        },
+        "Leather Armor": {
+          "name": "Leather Armor",
+          "description": "<p>The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. The rest of the armor is made of softer and more flexible materials.</p>"
+        },
+        "Hustle": {
+          "name": "Hustle",
+          "description": "<p>The troubleshooter can move through the space of any creature that is of a larger size, but it can’t\nstop there.</p>"
+        },
+        "Sleep": {
+          "name": "Sleep",
+          "description": "<p>This spell sends creatures into a magical slumber. Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).</p><p>Starting with the creature that has the lowest current hit points, each creature affected by this spell falls &amp;Reference[unconscious] until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.</p><p>Undead and creatures immune to being charmed aren't affected by this spell.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st.</p>",
+          "materials": {
+            "value": "A pinch of fine sand, rose petals, or a cricket."
+          },
+          "effects": {
+            "Sleep": {
+              "name": "Sleep",
+              "description": "<p>The creature affected by this spell falls Unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Unseen Servant": {
+          "name": "Unseen Servant",
+          "description": "<p>This spell creates an &amp;Reference[Invisible], mindless, shapeless, Medium force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can't attack. If it drops to 0 hit points, the spell ends.</p><p>Once on each of your turns as a Bonus Action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.</p><p>If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.</p>",
+          "materials": {
+            "value": "A bit of string and of wood"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "qxPnz8f2orpyeL5t": {
+          "name": "Sleep",
+          "description": "<p>Each creature of your choice in a 5-foot-radius Sphere centered on a point within range must succeed on a Wisdom saving throw or have the &amp;Reference[incapacitated apply=false] condition until the end of its next turn, at which point it must repeat the save. If the target fails the second save, the target has the &amp;Reference[unconscious] condition for the duration. The spell ends on a target if it takes damage or someone within 5 feet of it takes an action to shake it out of the spell's effect.</p><p>Creatures that don't sleep, such as elves, or that have Immunity to the Exhaustion condition automatically succeed on saves against this spell.</p>",
+          "materials": {
+            "value": "a pinch of sand or rose petals"
+          },
+          "effects": {
+            "Sleeping": {
+              "name": "Sleeping",
+              "description": "<p>The target has the &amp;Reference[incapacitated apply=false] condition until the end of its next turn, at which point it must repeat the save. If the target fails the second save, the target has the &amp;Reference[unconscious] condition for the duration. The spell ends on a target if it takes damage or someone within 5 feet of it takes an action to shake it out of the spell’s effect.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "vy0odJdBJMnIfnCd": {
+          "name": "Unseen Servant",
+          "description": "<p>This spell creates an Invisible, mindless, shapeless, Medium force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 Hit Point, and a Strength of 2, and it can't attack. If it drops to 0 Hit Points, the spell ends.</p><p>Once on each of your turns as a Bonus Action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring drinks. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.</p><p>If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.</p>",
+          "materials": {
+            "value": "a bit of string and of wood"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Nimble Escape": {
+          "name": "Nimble Escape",
+          "description": "<p class=\"feature\">The troubleshooter takes the &amp;Reference[Disengage] or &amp;Reference[Hide] action.</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "Expend Use"
+            }
+          },
+          "effects": {
+            "Apply Hide Action to Target": {
+              "name": "Apply Hide Action to Target"
+            }
+          }
+        }
+      }
+    },
+    "Giant Crab": {
+      "name": "Giant Crab",
+      "tokenName": "Giant Crab",
+      "items": {
+        "Amphibious": {
+          "name": "Amphibious",
+          "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+        },
+        "Claw": {
+          "name": "Claw",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=W1T7dZnG8GMMwyEP]] creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two claws.</p>",
+          "activities": {
+            "attack": {
+              "affects": {
+                "special": "Medium or smaller"
+              }
+            },
+            "Escape Check": {
+              "name": "Escape Check"
+            }
+          },
+          "effects": {
+            "Grappled": {
+              "name": "Grappled",
+              "description": "<p>If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]).</p>"
+            }
+          }
+        }
+      }
+    },
+    "Harpy": {
+      "name": "Harpy",
+      "tokenName": "Harpy",
+      "description": "<h1>Harpy</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.g8rZSNVG7tURaQgk caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Claw": {
+          "name": "Claw",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Luring Song": {
+          "name": "Luring Song",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] sings a magical melody, which lasts until the [[lookup @name lowercase]]’s Concentration ends on it.</p><p class=\"feature\"><em>Wisdom Saving Throw:</em> DC [[lookup @save.dc.value activity=dxxqZP7Vo01te3QB]], each [[lookup @target.affects.special activity=dxxqZP7Vo01te3QB]] in a [[lookup @target.template.size activity=dxxqZP7Vo01te3QB]]-foot Emanation originating from the [[lookup @name lowercase]] when the song starts.</p><p class=\"feature\"><em>Failure:</em> The target has the &amp;Reference[Charmed apply=false] condition until the song ends and repeats the save at the end of each of its turns. While Charmed, the target has the &amp;Reference[Incapacitated apply=false] condition and ignores the Luring Song of other harpies.</p><p class=\"feature\">If the target is more than 5 feet from the [[lookup @name lowercase]], the target moves on its turn toward the [[lookup @name lowercase]] by the most direct route, trying to get within 5 feet of the [[lookup @name lowercase]]. It doesn’t avoid &amp;Reference[OpportunityAttacks]; however, before moving into damaging terrain (such as lava or a pit) and whenever it takes damage from a source other than the [[lookup @name lowercase]], the target repeats the save.</p><p class=\"feature\"><em>Success:</em> The target is immune to this [[lookup @name lowercase]]’s Luring Song for 24 hours.</p>",
+          "activities": {
+            "Save": {
+              "name": "Save",
+              "affects": {
+                "special": "Humanoid and Giant"
+              }
+            }
+          },
+          "effects": {
+            "Charmed & Incapacitated": {
+              "name": "Charmed & Incapacitated",
+              "description": "<p>The target has the &amp;Reference[Charmed apply=false] condition until the song ends and repeats the save at the end of each of its turns.</p><p>While Charmed, the target has the &amp;Reference[Incapacitated apply=false] condition.</p>"
+            }
+          }
+        }
+      }
+    },
+    "Hell Hound": {
+      "name": "Hell Hound",
+      "tokenName": "Hell Hound",
+      "description": "<h1>Hell Hound</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.sTelJLU6cHPQ8gzx caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Pack Tactics": {
+          "name": "Pack Tactics",
+          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmBite0000000000]] attacks.</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "Expend Use"
+            }
+          }
+        },
+        "Bite": {
+          "name": "Bite",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Fire Breath": {
+          "name": "Fire Breath",
+          "description": "<p><em>Dexterity Saving Throw: </em>DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], each [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]] in a [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]]-foot Cone.</p><p><em>Failure: </em>[[/damage average]] damage.</p><p><em>Success:</em> Half damage.</p>"
+        }
+      }
+    },
+    "Homunculus Servant": {
+      "name": "Homunculus Servant",
+      "tokenName": "Homunculus Servant",
+      "items": {
+        "Force Strike": {
+          "name": "Force Strike",
+          "description": "<p><em>Melee or Ranged Attack Roll</em>: Bonus equals your spell attack modifier, reach 5 ft. or range 30 ft. <em>Hit</em>: 1d6 plus the spell’s level Force damage.</p>"
+        },
+        "Channel Magic": {
+          "name": "Channel Magic",
+          "description": "<p><em>Trigger</em>: You cast a spell that has a range of touch while the homunculus is within [[lookup @range.value activity=9fNTfkxjjUHm8bfy]] feet of you. <em>Response</em>: The homunculus delivers the spell through its touch.</p>",
+          "activities": {
+            "utility": {
+              "condition": "You cast a spell that has a range of touch while the homunculus is within 120 feet of you."
+            }
+          }
+        },
+        "Magic Bond": {
+          "name": "Magic Bond",
+          "description": "<p>Add the spell’s level to any ability check or saving throw the homunculus makes.</p>"
+        },
+        "Evasion": {
+          "name": "Evasion",
+          "description": "<p class=\"feature\">If the [[lookup @name lowercase]] is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the [[lookup @name lowercase]] instead takes no damage if it succeeds on the save and only half damage if it fails. It can’t use this trait if it has the Incapacitated condition.</p>"
+        }
+      }
+    },
+    "Improved Steel Defender": {
+      "name": "Improved Steel Defender",
+      "tokenName": "Steel Defender",
+      "items": {
+        "Force-Empowered Rend": {
+          "name": "Force-Empowered Rend",
+          "description": "<p><em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit</em>: 1d8 + 2 plus your Intelligence modifier Force damage.</p>"
+        },
+        "Repair": {
+          "name": "Repair",
+          "description": "<p>The defender, or one Construct or object it can see within 5 feet of itself, regains a number of Hit Points equal to 2d8 plus your Intelligence modifier.</p>"
+        },
+        "Deflect Attack": {
+          "name": "Deflect Attack",
+          "description": "<p><em>Trigger</em>: A creature the defender can see within 5 feet of itself makes an attack roll against a creature other than the defender.</p><p><em>Response</em>: The triggering creature makes the attack roll with Disadvantage.</p><p><strong>Improved Defelection.</strong> Whenever your Steel Defender uses its Deflect Attack, the attacker takes Force damage equal to 1d4 plus your Intelligence modifier.</p>",
+          "activities": {
+            "damage": {
+              "affects": {
+                "special": "Can see"
+              }
+            }
+          }
+        },
+        "Steel Bond": {
+          "name": "Steel Bond",
+          "description": "<p>Add your Proficiency Bonus to any ability check or saving throw the defender makes.</p>"
+        }
+      }
+    },
+    "Jorasco Medic": {
+      "name": "Jorasco Medic",
+      "tokenName": "Jorasco Medic",
+      "description": "<p>Dragonmarked heirs of House Jorasco served alongside every nation’s armies in the Last War, providing medical care and magical healing to the injured. Though the warring nations treated Jorasco medics as sacrosanct, these medics also learned to channel their healing power into dazzling light to help them reach the wounded and escape from the thick of combat when necessary.</p>",
+      "items": {
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The medic makes two [[/item Radiant Burst]] attacks.</p>"
+        },
+        "Radiant Burst": {
+          "name": "Radiant Burst",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the creature has the &amp;Reference[Blinded apply=false] condition until the start of the medic’s next turn.</p>",
+          "effects": {
+            "Blinded": {
+              "name": "Blinded",
+              "description": "<p>The creature has the &amp;Reference[Blinded apply=false] condition until the start of the medic’s next turn.</p>"
+            }
+          }
+        },
+        "Mark of Healing": {
+          "name": "Mark of Healing",
+          "description": "<p>The medic casts [[/item .rfkPvLaL9OCFKgxa]]{Cure Wounds} or [[/item .jFU4SE5b8MhqaRqb]]{Lesser Restoration}, using Wisdom as the spellcasting ability.</p>"
+        },
+        "Lucky": {
+          "name": "Lucky",
+          "description": "<p>When the medic rolls a 1 on the d20 of a D20 Test, it can reroll the die, and it must use the new roll.</p><section class=\"secret\" id=\"secret-IukxgVf4mMZh48Qr\"><p><strong>Foundry Note</strong></p><p>An <strong>Active Effect (AE)</strong> is enabled on this feature that will reroll any 1 of a d20 test.</p></section>",
+          "effects": {
+            "Lucky": {
+              "name": "Lucky"
+            }
+          }
+        },
+        "Breastplate": {
+          "name": "Breastplate",
+          "description": "<p>This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer's vital organs while leaving the wearer relatively unencumbered.</p>"
+        },
+        "Cure Wounds": {
+          "name": "Cure Wounds",
+          "description": "<p>A creature you touch regains a number of Hit Points equal to 2d8 plus your spellcasting ability modifier.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The healing increases by 2d8 for each spell slot level above 1.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Lesser Restoration": {
+          "name": "Lesser Restoration",
+          "description": "<p>You touch a creature and end one condition on it: &amp;Reference[blinded], &amp;Reference[deafened], &amp;Reference[paralyzed], or &amp;Reference[poisoned].</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Kundarak Warden": {
+      "name": "Kundarak Warden",
+      "tokenName": "Kundarak Warden",
+      "description": "<p>Some dragonmarked heirs (mostly dwarves) of House Kundarak serve as personal guardians for the house’s vaults and storehouses, and even its infamous prison, Dreadhold. Some also serve as agents of the mysterious Ghorad’din, a secretive group of assassins and spies little known beyond the members of the house. Kundarak wardens are adept at bypassing security measures as well as reinforcing them.</p>",
+      "items": {
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The warden casts one of the following spells, requiring no Material components and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>At Will: </strong>[[/item .UDa7WehTm2DF2TbH]]{Alarm}, [[/item .cTq3jido58RQZDVn]]{Mage Armor} (included in AC)</p><p><strong>1/Day: </strong>[[/item .NSshbfvPXXeYlep3]]{Dispel Magic}</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The warden makes two [[/item Arcane Whip]] attacks. It can replace one attack with a use of [[/item Shackling Glyph]] if available.</p>"
+        },
+        "Arcane Whip": {
+          "name": "Arcane Whip",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and if the target is a Medium or smaller creature, it has the &amp;Reference[Prone apply=false] condition. </p><p>If the target already has the Prone condition, the attack deals an extra [[/damage 2d6 force average]] damage.</p>",
+          "activities": {
+            "Attack: If Already Prone": {
+              "name": "Attack: If Already Prone"
+            }
+          },
+          "effects": {
+            "Prone": {
+              "name": "Prone",
+              "description": "<p>A Medium or smaller creature is &amp;Reference[Prone apply=false] as a result of an attack.</p>"
+            }
+          }
+        },
+        "Shackling Glyph": {
+          "name": "Shackling Glyph",
+          "description": "<p><em>Strength Saving Throw:</em> DC [[lookup @attributes.spell.dc]], one creature the warden can see within [[lookup @range.value activity=AKdmrcN2he98aia7]] feet.</p><p><em>Failure:</em> The creature has the &amp;Reference[Grappled apply=false] condition (escape DC 14). While Grappled, the creature has the &amp;Reference[Restrained apply=false] condition.</p>",
+          "activities": {
+            "Escape Check": {
+              "name": "Escape Check"
+            }
+          },
+          "effects": {
+            "Grappled & Restrained": {
+              "name": "Grappled & Restrained"
+            }
+          }
+        },
+        "Protective Magic": {
+          "name": "Protective Magic",
+          "description": "<p>The warden casts [[/item .JIGhDMyr2mnf8OMW]]{Counterspell} or [[/item .MWDCLYm2xEVNc14M]]{Shield} in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.</p>",
+          "activities": {
+            "5497nQlLbmso17bG": {
+              "condition": "when you are hit by an attack roll or targeted by the Magic Missile spell"
+            },
+            "HWGCOoCcLpnW3FbA": {
+              "condition": "when you see a creature within range casting a spell with Verbal, Somatic, or Material components"
+            }
+          }
+        },
+        "Magic Resistance": {
+          "name": "Magic Resistance",
+          "description": "<p>The warden has Advantage on saving throws against spells and other magical effects.</p>"
+        },
+        "Alarm": {
+          "name": "Alarm",
+          "description": "<p>You set an alarm against intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot Cube. Until the spell ends, an alarm alerts you whenever a creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is audible or mental:</p><p><strong>Audible Alarm.</strong> The alarm produces the sound of a handbell for 10 seconds within 60 feet of the warded area.</p><p><strong>Mental Alarm.</strong> You are alerted by a mental ping if you are within 1 mile of the warded area. This ping awakens you if you're asleep.</p>",
+          "materials": {
+            "value": "a bell and silver wire"
+          },
+          "activities": {
+            "Cast over Area": {
+              "name": "Cast over Area"
+            },
+            "Cast on Window or Door": {
+              "name": "Cast on Window or Door"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Mage Armor": {
+          "name": "Mage Armor",
+          "description": "<p>You touch a willing creature who isn't wearing armor. Until the spell ends, the target's base AC becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor.</p>",
+          "materials": {
+            "value": "a piece of cured leather"
+          },
+          "effects": {
+            "Mage Armor": {
+              "name": "Mage Armor",
+              "description": "<p>The target's base AC becomes 13 + its Dexterity modifier.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Dispel Magic": {
+          "name": "Dispel Magic",
+          "description": "<p>Choose one creature, object, or magical effect within range. Any ongoing spell of level 3 or lower on the target ends. For each ongoing spell of level 4 or higher on the target, make an ability check using your spellcasting ability (DC 10 plus that spell's level). On a successful check, the spell ends.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You automatically end a spell on the target if the spell's level is equal to or less than the level of the spell slot you use.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Shield": {
+          "name": "Shield",
+          "description": "<p>An imperceptible barrier of magical force protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{Magic Missile}</em>.</p>",
+          "activation": {
+            "condition": "when you are hit by an attack roll or targeted by the Magic Missile spell"
+          },
+          "effects": {
+            "Imperceptible Barrier": {
+              "name": "Imperceptible Barrier",
+              "description": "<p>Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from <em>Magic Missile</em>.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Counterspell": {
+          "name": "Counterspell",
+          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.</p>",
+          "activation": {
+            "condition": "when you see a creature within range casting a spell with Verbal, Somatic, or Material components"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Kuo-toa": {
+      "name": "Kuo-toa",
+      "tokenName": "Kuo-toa",
+      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepSpear00000]{Spear}</p></div><h1>Kuo-toa</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.5cWxPFYWZSjJw6ih caption=false cite=false classes=\"no-embed mm\"]</p><h2>Kuo-toa</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.XEDbrbc4fOsasH55 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Spear": {
+          "name": "Spear",
+          "description": "<p><em>Melee or Ranged Attack Roll:</em> +3, reach 5 ft. or range 20/60 ft. <em>Hit:</em> 5 (1d8 + 1) Piercing damage.</p>"
+        },
+        "Amphibious": {
+          "name": "Amphibious",
+          "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+        },
+        "Sunlight Sensitivity": {
+          "name": "Sunlight Sensitivity",
+          "description": "<p>While in sunlight, the [[lookup @name lowercase]] has Disadvantage on ability checks and attack rolls.</p>"
+        },
+        "Sticky Shield": {
+          "name": "Sticky Shield",
+          "description": "<p class=\"feature\"><em>Trigger:</em> A creature misses the [[lookup @name lowercase]] with a melee attack roll using a weapon. <em>Response—Strength Saving Throw:</em> DC [[lookup @save.dc.value activity=A8a55LxaAvNmIUnj]], the triggering creature.</p><p><em>Failure:</em> The attack’s weapon sticks to the [[lookup @name lowercase]]’s shield. If the target doesn’t let go of the weapon, the target has the &amp;Reference[Grappled apply=false] condition while the weapon is stuck (escape DC [[lookup @skills.ath.passive]]). While stuck, the weapon can’t be used. The target can take an action to make a [[/check ath dc=@skills.ath.passive format=long]], freeing the weapon on a success.</p>",
+          "activities": {
+            "Save": {
+              "name": "Save",
+              "condition": "A creature misses the kuo-toa with a melee attack roll using a weapon.",
+              "affects": {
+                "special": "the triggering creature"
+              }
+            },
+            "Free Weapon Check": {
+              "name": "Free Weapon Check",
+              "affects": {
+                "special": "the triggering creature"
+              }
+            },
+            "Escape Check": {
+              "name": "Escape Check"
+            }
+          },
+          "effects": {
+            "Grappled": {
+              "name": "Grappled",
+              "description": "<p>If the target doesn’t let go of the weapon, the target has the &amp;Reference[Grappled apply=false] condition while the weapon is stuck (escape DC [[/check ability=str skill=ath format=long]], see source item for DC)</p>"
+            }
+          }
+        },
+        "Sticky Net": {
+          "name": "Sticky Net",
+          "description": "<p><em>Dexterity Saving Throw:</em> DC [[lookup @save.dc.formula activity=MxEs7KnCVGemObHx]], one [[lookup @target.affects.special activity=MxEs7KnCVGemObHx]] [[lookup @target.affects.type activity=MxEs7KnCVGemObHx]] the kuo-toa can see within [[lookup @range.value activity=MxEs7KnCVGemObHx]] feet.</p><p><em>Failure:</em> The target has the &amp;Reference[Restrained apply=false] condition until the net is destroyed (AC 10; HP 5; Immunity to Bludgeoning, Poison, and Psychic damage). A creature can take an action to make a [[/skill ath 10]] check to free itself or another creature in a net within 5 feet, destroying the net on a success.</p>",
+          "activities": {
+            "save": {
+              "affects": {
+                "special": "Large or smaller"
+              }
+            },
+            "Escape Check": {
+              "name": "Escape Check"
+            }
+          },
+          "effects": {
+            "Restrained": {
+              "name": "Restrained",
+              "description": "<p>The target has the &amp;Reference[Restrained apply=false] condition until the net is destroyed (AC 10; HP 5; Immunity to Bludgeoning, Poison, and Psychic damage). A creature can make a DC 10 Strength (Athletics) check to free itself or another creature in a net within 5 feet, destroying the net on a success.</p>"
+            }
+          }
+        }
+      }
+    },
+    "Kuo-toa Archpriest": {
+      "name": "Kuo-toa Archpriest",
+      "tokenName": "Kuo-toa Archpriest",
+      "description": "<h1>Kuo-toa</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.5cWxPFYWZSjJw6ih caption=false cite=false classes=\"no-embed mm\"]</p><h2>Kuo-toa Archpriest</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.jVLHLrDcjEGUhZmp caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Amphibious": {
+          "name": "Amphibious",
+          "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+        },
+        "Sunlight Sensitivity": {
+          "name": "Sunlight Sensitivity",
+          "description": "<p>While in sunlight, the [[lookup @name lowercase]] has Disadvantage on ability checks and attack rolls.</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The [[lookup @name lowercase]] makes three [[/item Strange Scepter]] attacks.</p>",
+          "activities": {
+            "Use": {
+              "name": "Use"
+            }
+          }
+        },
+        "Strange Scepter": {
+          "name": "Strange Scepter",
+          "description": "<p class=\"feature\"><em>Melee or Ranged Attack Roll:</em> [[/attack]], reach [[lookup @item.range.reach]] ft. or range [[lookup @item.range.value]] ft. [[/damage average extended]].</p>"
+        },
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{Detect Magic}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>1/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDestructiv]{Destructive Wave}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDivination]{Divination}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldMonste]{Hold Monster}</em> (level 6 version), <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScrying000]{Scrying}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]{Tongues}</em></p>"
+        },
+        "Detect Magic": {
+          "name": "Detect Magic",
+          "description": "<p>For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell’s school of magic.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p>",
+          "activities": {
+            "Cast": {
+              "name": "Cast"
+            }
+          },
+          "effects": {
+            "Detect Magic": {
+              "name": "Detect Magic"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Thaumaturgy": {
+          "name": "Thaumaturgy",
+          "description": "<p>You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.</p><p><strong>Altered Eyes.</strong> You alter the appearance of your eyes for 1 minute.</p><p><strong>Booming Voice.</strong> Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p><p><strong>Fire Play.</strong> You cause flames to flicker, brighten, dim, or change color for 1 minute.</p><p><strong>Invisible Hand.</strong> You instantaneously cause an unlocked door or window to fly open or slam shut.</p><p><strong>Phantom Sound.</strong> You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.</p><p><strong>Tremors.</strong> You cause harmless tremors in the ground for 1 minute.</p>",
+          "activities": {
+            "Cast": {
+              "name": "Cast"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Destructive Wave": {
+          "name": "Destructive Wave",
+          "description": "<p>Destructive energy ripples outward from you in a 30-foot Emanation. Each creature you choose in the Emanation makes a Constitution saving throw. On a failed save, a target takes 5d6 Thunder damage and 5d6 Radiant or Necrotic damage (your choice) and has the Prone condition. On a successful save, a target takes half as much damage only.</p>",
+          "effects": {
+            "Prone": {
+              "name": "Prone"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Divination": {
+          "name": "Divination",
+          "description": "<p>This spell puts you in contact with a god or a god’s servants. You ask one question about a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply, which might be a short phrase or cryptic rhyme. The spell doesn’t account for circumstances that might change the answer, such as the casting of other spells.</p><p>If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.</p>",
+          "materials": {
+            "value": "incense worth 25+ GP, which the spell consumes"
+          },
+          "activities": {
+            "Cast": {
+              "name": "Cast"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Hold Monster": {
+          "name": "Hold Monster",
+          "description": "<p>Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or have the Paralyzed condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 5.</p>",
+          "materials": {
+            "value": "a straight piece of iron"
+          },
+          "effects": {
+            "Paralyzed": {
+              "name": "Paralyzed",
+              "description": "<p>At the end of each of its turns, the target repeats the [[/save ability=wis]] save, ending the spell on itself on a success.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Scrying": {
+          "name": "Scrying",
+          "description": "<p>You can see and hear a creature you choose that is on the same plane of existence as you. The target makes a Wisdom saving throw, which is modified (see the tables below) by how well you know the target and the sort of physical connection you have to it. The target doesn’t know what it is making the save against, only that it feels uneasy.</p><table><thead><tr><td>Your Knowledge of the Target Is …</td><td>Save Modifier</td></tr></thead><tbody><tr><td>Secondhand (heard of the target)</td><td>+5</td></tr><tr><td>Firsthand (met the target)</td><td>+0</td></tr><tr><td>Extensive (know the target well)</td><td>−5</td></tr></tbody></table><table><thead><tr><td>You Have the Target’s …</td><td>Save Modifier</td></tr></thead><tbody><tr><td>Picture or other likeness</td><td>−2</td></tr><tr><td>Garment or other possession</td><td>−4</td></tr><tr><td>Body part, lock of hair, or bit of nail</td><td>−10</td></tr></tbody></table><p>On a successful save, the target isn’t affected, and you can’t use this spell on it again for 24 hours.</p><p>On a failed save, the spell creates an Invisible, intangible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10 feet of it for the duration. If something can see the sensor, it appears as a luminous orb about the size of your fist.</p><p>Instead of targeting a creature, you can target a location you have seen. When you do so, the sensor appears at that location and doesn’t move.</p>",
+          "materials": {
+            "value": "a focus worth 1,000+ GP, such as a crystal ball, mirror, or water-filled font"
+          },
+          "target": {
+            "affects": {
+              "special": "creature on same plane of existence or a location you have seen"
+            }
+          },
+          "activities": {
+            "Secondhand and Picture": {
+              "name": "Secondhand and Picture"
+            },
+            "Secondhand and Garment": {
+              "name": "Secondhand and Garment"
+            },
+            "Secondhand and Body Part": {
+              "name": "Secondhand and Body Part"
+            },
+            "Firsthand and Picture": {
+              "name": "Firsthand and Picture"
+            },
+            "Firsthand and Garment": {
+              "name": "Firsthand and Garment"
+            },
+            "Firsthand and Body Part": {
+              "name": "Firsthand and Body Part"
+            },
+            "Extensive and Picture": {
+              "name": "Extensive and Picture"
+            },
+            "Extensive and Garment": {
+              "name": "Extensive and Garment"
+            },
+            "Extensive and Body Part": {
+              "name": "Extensive and Body Part"
+            },
+            "Create Sensor": {
+              "name": "Create Sensor",
+              "affects": {
+                "special": "at target location or within 10 feet of target creature"
+              }
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Tongues": {
+          "name": "Tongues",
+          "description": "<p>This spell grants the creature you touch the ability to understand any spoken or signed language that it hears or sees. Moreover, when the target communicates by speaking or signing, any creature that knows at least one language can understand it if that creature can hear the speech or see the signing.</p>",
+          "materials": {
+            "value": "a miniature ziggurat"
+          },
+          "effects": {
+            "Universal Communication": {
+              "name": "Universal Communication"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Shield of Faith": {
+          "name": "Shield of Faith",
+          "description": "<p>The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShieldofFa]{Shield of Faith}</em>, using the same spellcasting ability as Spellcasting.</p>"
+        },
+        "T5upgFch5zEBoWTj": {
+          "name": "Shield of Faith",
+          "description": "<p>A shimmering field surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.</p>",
+          "materials": {
+            "value": "a prayer scroll"
+          },
+          "effects": {
+            "Shimmering Field": {
+              "name": "Shimmering Field",
+              "description": "<p>The target gains a +2 bonus to AC for the duration.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Kuo-toa Monitor": {
+      "name": "Kuo-toa Monitor",
+      "tokenName": "Kuo-toa Monitor",
+      "description": "<h1>Kuo-toa</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.5cWxPFYWZSjJw6ih caption=false cite=false classes=\"no-embed mm\"]</p><h2>Kuo-toa Monitor</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.N6Prinvb9ppnSZub caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Amphibious": {
+          "name": "Amphibious",
+          "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+        },
+        "Sunlight Sensitivity": {
+          "name": "Sunlight Sensitivity",
+          "description": "<p>While in sunlight, the [[lookup @name lowercase]] has Disadvantage on ability checks and attack rolls.</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The [[lookup @name lowercase]] makes two [[/item Bone Whip]] attacks.</p>",
+          "activities": {
+            "Use": {
+              "name": "Use"
+            }
+          }
+        },
+        "Bone Whip": {
+          "name": "Bone Whip",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target can’t make &amp;Reference[OpportunityAttacks] until the start of the [[lookup @name lowercase]]’s next turn.</p>",
+          "effects": {
+            "Whipped: No Opportunity Attacks": {
+              "name": "Whipped: No Opportunity Attacks",
+              "description": "<p>The target can’t make Opportunity Attacks until the start of the user’s next turn.</p>"
+            }
+          }
+        }
+      }
+    },
+    "Kuo-toa Whip": {
+      "name": "Kuo-toa Whip",
+      "tokenName": "Kuo-toa Whip",
+      "description": "<h1>Kuo-toa</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.5cWxPFYWZSjJw6ih caption=false cite=false classes=\"no-embed mm\"]</p><h2>Kuo-toa Whip</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.VEYcunqNbjyhHOwB caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Amphibious": {
+          "name": "Amphibious",
+          "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+        },
+        "Sunlight Sensitivity": {
+          "name": "Sunlight Sensitivity",
+          "description": "<p>While in sunlight, the [[lookup @name lowercase]] has Disadvantage on ability checks and attack rolls.</p>"
+        },
+        "Pincer Staff": {
+          "name": "Pincer Staff",
+          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Until the grapple ends, the [[lookup @name lowercase]] can’t make Pincer Staff attacks.</p>",
+          "activities": {
+            "Escape Check": {
+              "name": "Escape Check"
+            }
+          },
+          "effects": {
+            "Grappled": {
+              "name": "Grappled",
+              "description": "<p>If the target is a Medium or smaller creature, it has the &amp;Reference[Grappled apply=false] condition (escape DC [[/check ability=str skill=ath format=long]], see source item for DC).</p>"
+            }
+          }
+        },
+        "Conjure Slimy Glob": {
+          "name": "Conjure Slimy Glob",
+          "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Shield of Faith": {
+          "name": "Shield of Faith",
+          "description": "<p>The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplShieldofFa]{Shield of Faith}</em>, using the same spellcasting ability as Spellcasting.</p>"
+        },
+        "CqajRrRLSFDDOQPA": {
+          "name": "Shield of Faith",
+          "description": "<p>A shimmering field surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.</p>",
+          "materials": {
+            "value": "a prayer scroll"
+          },
+          "effects": {
+            "Shimmering Field": {
+              "name": "Shimmering Field",
+              "description": "<p>The target gains a +2 bonus to AC for the duration.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Lyrandar Scion": {
+      "name": "Lyrandar Scion",
+      "tokenName": "Lyrandar Scion",
+      "description": "<p>The Khoravar dragonmarked scions of House Lyrandar include swashbuckling sky captains, seafaring adventurers, and sinister cultists of the Hurricane Harvest. The power of their dragonmarks manifests as easy control of wind, thunder, and lightning, which they wield as readily in combat as in navigating the sea and sky.</p><p>Members of the Hurricane Harvest believe that the Mark of Storm is not a gift of the Sovereign Host, as others in their house teach, but the sign of the Devourer. They maintain that the greatest ancestors of their house live on as krakens in the deep and guide the cult through visions to use their power for destruction and domination. They sometimes partner with kuo-toa, sahuagin, and other monsters of the deep.</p>",
+      "items": {
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The scion casts one of the following spells, using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>At Will</strong>: [[/item .OwVGuITv8TXK8ten]], [[/item .MBjAgryxkHJ4lL2B]], [[/item .wsF4CKDc6u92qlzV]]</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The scion makes two [[/item Thunderbolt]] attacks and uses [[/item Spellcasting]].</p>"
+        },
+        "Thunderbolt": {
+          "name": "Thunderbolt",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p><p><em>Critical Hit:</em> The creature also has the &amp;Reference[Deafened apply=false] condition for 1 minute.</p>",
+          "effects": {
+            "Deafened": {
+              "name": "Deafened"
+            }
+          }
+        },
+        "Jump": {
+          "name": "Jump",
+          "description": "<p>The scion casts [[/item .KcXB2hCdh3VPjZre]], requiring no spell components and using the same spellcasting ability as Spellcasting.</p>"
+        },
+        "Feather Fall": {
+          "name": "Feather Fall",
+          "description": "<p>The scion casts [[/item .HHMxLkIveTBXjqO7]] in response to that spell’s trigger, using the same spellcasting ability as Spellcasting.</p>"
+        },
+        "Wand": {
+          "name": "Wand",
+          "description": "<p>An @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{Arcane Focus} is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.</p>"
+        },
+        "Elementalism": {
+          "name": "Elementalism",
+          "description": "<p>You exert control over the elements, creating one of the following effects within range.</p><p><strong>Beckon Air.</strong> You create a breeze strong enough to ripple cloth, stir dust, rustle leaves, and close open doors and shutters, all in a 5-foot Cube. Doors and shutters being held open by someone or something aren't affected.</p><p><strong>Beckon Earth.</strong> You create a thin shroud of dust or sand that covers surfaces in a 5-foot-square area, or you cause a single word to appear in your handwriting in a patch of dirt or sand.</p><p><strong>Beckon Fire.</strong> You create a thin cloud of harmless embers and colored, scented smoke in a 5-foot Cube. You choose the color and scent, and the embers can light candles, torches, or lamps in that area. The smoke's scent lingers for 1 minute.</p><p><strong>Beckon Water.</strong> You create a spray of cool mist that lightly dampens creatures and objects in a 5-foot Cube. Alternatively, you create 1 cup of clean water either in an open container or on a surface, and the water evaporates in 1 minute.</p><p><strong>Sculpt Element.</strong> You cause dirt, sand, fire, smoke, mist, or water that can fit in a 1-foot Cube to assume a crude shape (such as that of a creature) for 1 hour.</p>",
+          "activities": {
+            "Beckon Element": {
+              "name": "Beckon Element",
+              "chatFlavor": "Fire and water beckoning lasts for 1 minute"
+            },
+            "Sculpt Element": {
+              "name": "Sculpt Element"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Gust of Wind": {
+          "name": "Gust of Wind",
+          "description": "<p>A Line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the duration. Each creature in the Line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the Line. A creature that ends its turn in the Line must make the same save.</p><p>Any creature in the Line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.</p><p>The gust disperses gas or vapor, and it extinguishes candles and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.</p><p>As a Bonus Action on your later turns, you can change the direction in which the Line blasts from you.</p>",
+          "materials": {
+            "value": "a legume seed"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Thunderwave": {
+          "name": "Thunderwave",
+          "description": "<p>You unleash a wave of thunderous energy. Each creature in a 15-foot Cube originating from you makes a Constitution saving throw. On a failed save, a creature takes 2d8 Thunder damage and is pushed 10 feet away from you. On a successful save, a creature takes half as much damage only.</p><p>In addition, unsecured objects that are entirely within the Cube are pushed 10 feet away from you, and a thunderous boom is audible within 300 feet.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 1.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "HHMxLkIveTBXjqO7": {
+          "name": "Feather Fall",
+          "description": "<p>Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If a creature lands before the spell ends, the creature takes no damage from the fall, and the spell ends for that creature.</p>",
+          "activation": {
+            "condition": "when you or a creature you can see within 60 feet of you falls"
+          },
+          "materials": {
+            "value": "a small feather or piece of down"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "KcXB2hCdh3VPjZre": {
+          "name": "Jump",
+          "description": "<p>You touch a willing creature. Once on each of its turns until the spell ends, that creature can jump up to 30 feet by spending 10 feet of movement.</p><p><strong>Using a Higher-Level Spell Slot.</strong>You can target one additional creature for each spell slot level above 1.</p>",
+          "materials": {
+            "value": "a grasshopper’s hind leg"
+          },
+          "effects": {
+            "Jump": {
+              "name": "Jump",
+              "description": "<p>Once on each of its turns until the spell ends, that creature can jump up to 30 feet by spending 10 feet of movement.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Lyrandar Air Cruiser": {
+      "name": "Lyrandar Air Cruiser",
+      "tokenName": "Lyrandar Air Cruiser",
+      "description": "<p>@embed[Compendium.dnd-forge-artificer.book.JournalEntry.efaAirships00000.JournalEntryPage.N57JaFKMxsAFAnv7 classes=\"efa\" caption=false cite=false]</p>",
+      "items": {
+        "Shield Station": {
+          "name": "Shield Station",
+          "description": "<p><em>Large Object</em></p><p><strong>Armor Class:</strong> [[lookup @item.armor.value]] <strong>Hit Points:</strong> [[lookup @item.hp.max]]</p><p><em><strong>Calibrate (Requires Elemental Core).</strong></em> This action prepares the ship’s wind wards to become shields, enabling the Activate Shields action.</p><p><em><strong>Activate Shields (Requires Elemental Core and Calibrate).</strong></em> The ship and its crew stations gain a +5 bonus to AC, and all creatures on the ship’s deck have &amp;Reference[Half Cover]. These effects last for 1 minute, until this station is destroyed, or until the crew member that took this action loses Concentration or leaves this station.</p><p>This station is located on the airship’s aft controls and augments the ship’s wind wards. It can accommodate up to two Medium creatures.</p><p>The crew member operating this station can take the Calibrate action and then take the Activate Shields action. The ship can benefit from only one bonus to AC from a Shield Station at a time.</p><p><em><strong>Mark of Warding.</strong></em> If a creature with the Mark of Warding occupies this crew station, that creature can take the Activate Shields action as a Bonus Action.</p><section class=\"secret\" id=\"secret-XBfyw6z5IpSaGf1v\"><p><strong>Foundry Note</strong></p><p>An <strong>Active Effect (AE)</strong> is available to enable in the <strong>Effects tab</strong> to add the +5 bonus to the sheet.</p></section>",
+          "activities": {
+            "Calibrate": {
+              "name": "Calibrate",
+              "chatFlavor": "Requires Elemental Core"
+            },
+            "Activate Shields": {
+              "name": "Activate Shields",
+              "chatFlavor": "Requires Elemental Core and Calibrate",
+              "affects": {
+                "special": "the airship and all creatures on the ship's deck"
+              }
+            }
+          },
+          "effects": {
+            "Activate Shields": {
+              "name": "Activate Shields"
+            },
+            "Half-Cover": {
+              "name": "Half-Cover",
+              "description": "<p>All creatures on the ship’s deck have &amp;Reference[Half Cover].</p>"
+            }
+          }
+        },
+        "Helm": {
+          "name": "Helm",
+          "description": "<p><em>Small Object</em></p><p><strong>Armor Class:</strong> [[lookup @item.armor.value]] <strong>Hit Points:</strong> [[lookup @item.hp.max]]</p><p><em><strong>Drive (Requires Mark of Storm).</strong></em> The ship moves up to its Fly Speed in any direction.</p><p><em><strong>Shift Engine (Requires Mark of Storm).</strong></em> The ship’s elemental core is suppressed or reengaged.</p><p>The helm of an airship consists of a specialized wheel, levers, and other controls. One creature can operate this station at a time.</p><p>The pilot (the crew member operating an airship’s Helm) must have the Mark of Storm to interface with the controls. While operating the Helm, a crew member can take the station’s Drive and Shift Engine actions.</p><p><em><strong>Tilt and Roll.</strong></em> When taking the Helm’s Drive action, a crew member can spend an amount of movement equal to half the ship’s Fly Speed to invert the ship on its axis, either turning it upside down or righting it. All creatures and objects on the ship that aren’t anchored fall when the ship moves in this way. A creature that succeeds on a [[/save format=long]] can grab a fixed object within reach to avoid falling.</p><section class=\"notable\"><h4>Piloting without a Dragonmark</h4><p>Helming an airship that typically requires a dragonmarked pilot is difficult—but not impossible. At your DM’s discretion, you can use the following rules for piloting a ship without a dragonmark.</p><p>On its turn, a creature without the @UUID[Compendium.dnd-forge-artificer.options.Item.efaMarkStorm0000]{Mark of Storm} occupying the Helm can attempt to take the Drive or Shift Engine action and make a [[/check]] check to command the engine’s elemental spirit. On a successful check, the action happens. On a failed check, nothing happens, and the creature’s action is wasted.</p><p>Magic can make an airship’s elemental spirit more receptive to commands. Casting <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmMonst]{Charm Monster}</em> targeting the elemental spirit gives you Advantage on checks made to command the spirit for the spell’s duration. If you instead cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDominateMo]{Dominate Monster} </em>targeting the elemental spirit, any checks you make to command the spirit for the spell’s duration automatically succeed. The elemental spirit automatically fails its saving throw against these spells, and you do not need to see the spirit to target it if you’re occupying the Helm.</p></section>",
+          "activities": {
+            "Drive": {
+              "name": "Drive",
+              "condition": "Requires Mark of Storm"
+            },
+            "Shift Engine": {
+              "name": "Shift Engine",
+              "condition": "Requires Mark of Storm"
+            },
+            "Attempt Command": {
+              "name": "Attempt Command",
+              "condition": "As part of the Action used to take the Drive or Shift action."
+            },
+            "Tilt and Roll": {
+              "name": "Tilt and Roll",
+              "condition": "Taking the Drive action and spending half of the ship's Fly Speed",
+              "affects": {
+                "special": "not anchored"
+              },
+              "range": {
+                "special": "within the ship"
+              }
+            }
+          },
+          "effects": {
+            "Elemental Core Engaged": {
+              "name": "Elemental Core Engaged"
+            }
+          }
+        },
+        "Lightning Turret": {
+          "name": "Lightning Turret",
+          "description": "<p><em>Medium Object</em></p><p><strong>Armor Class:</strong> [[lookup @item.armor.value]] <strong>Hit Points:</strong> [[lookup @item.hp.max]]</p><p><em><strong>Lightning Blast (Requires Elemental Core).</strong></em> [[/attack extended]]. [[/damage average extended]].</p><p>This turret swivels to shoot lightning blasts and can accommodate up to one Medium creature.</p><p>A creature inside the turret has Three-Quarters Cover against attacks and other effects that originate outside it. While inside, a creature can take the Lightning Blast action to aim and fire the turret.</p>",
+          "activities": {
+            "Lightning Blast": {
+              "name": "Lightning Blast",
+              "chatFlavor": "Requires Elemental Core"
+            }
+          }
+        }
+      }
+    },
+    "Lyrandar Skyskiff": {
+      "name": "Lyrandar Skyskiff",
+      "tokenName": "Lyrander Skyskiff",
+      "description": "<p>@embed[Compendium.dnd-forge-artificer.book.JournalEntry.efaAirships00000.JournalEntryPage.ClpDTcusDMEqcJou classes=\"efa\" caption=false cite=false]</p>",
+      "items": {
+        "Tow Cable": {
+          "name": "Tow Cable",
+          "description": "<p><em>Small Object</em></p><p><strong>Armor Class:</strong> [[lookup @item.armor.value]] <strong>Hit Points:</strong> [[lookup @item.hp.max]]</p><p><em><strong>Harpoon.</strong></em> [[/attack extended]]. [[/damage average extended]], and the target is harpooned. While harpooned, the target and the ship can’t move more than 100 feet away from each other, and if the target is a Medium or smaller creature, it has the &amp;Reference[Grappled] condition. The crew member operating this station can release a harpooned target (no action required).</p><p><em><strong>Reel (Requires Elemental Core).</strong></em> A target Grappled by this station’s Harpoon is pulled up to 50 feet in a straight line toward the ship.</p><p>This station consists of a compact grappling hook, reinforced rope, and launcher. One creature can operate this station at a time. The crew member operating this station can take the Harpoon and Reel actions.</p>",
+          "activities": {
+            "Harpoon": {
+              "name": "Harpoon"
+            },
+            "Reel": {
+              "name": "Reel",
+              "chatFlavor": "Requires Elemental Core",
+              "affects": {
+                "special": "harpooned target"
+              }
+            },
+            "Release Target": {
+              "name": "Release Target",
+              "affects": {
+                "special": "harpooned target"
+              }
+            }
+          },
+          "effects": {
+            "Harpooned": {
+              "name": "Harpooned"
+            },
+            "Grappled": {
+              "name": "Grappled",
+              "description": "<p>If the target is a Medium or smaller creature, it is &amp;Reference[Grappled apply=false].</p>"
+            }
+          }
+        },
+        "Helm": {
+          "name": "Helm",
+          "description": "<p><em>Small Object</em></p><p><strong>Armor Class:</strong> [[lookup @item.armor.value]] <strong>Hit Points:</strong> [[lookup @item.hp.max]]</p><p><em><strong>Drive (Requires Mark of Storm).</strong></em> The ship moves up to its Fly Speed in any direction.</p><p><em><strong>Shift Engine (Requires Mark of Storm).</strong></em> The ship’s elemental core is suppressed or reengaged.</p><p>The helm of an airship consists of a specialized wheel, levers, and other controls. One creature can operate this station at a time.</p><p>The pilot (the crew member operating an airship’s Helm) must have the Mark of Storm to interface with the controls. While operating the Helm, a crew member can take the station’s Drive and Shift Engine actions.</p><p><em><strong>Tilt and Roll.</strong></em> When taking the Helm’s Drive action, a crew member can spend an amount of movement equal to half the ship’s Fly Speed to invert the ship on its axis, either turning it upside down or righting it. All creatures and objects on the ship that aren’t anchored fall when the ship moves in this way. A creature that succeeds on a [[/save format=long]] can grab a fixed object within reach to avoid falling.</p><section class=\"notable\"><h4>Piloting without a Dragonmark</h4><p>Helming an airship that typically requires a dragonmarked pilot is difficult—but not impossible. At your DM’s discretion, you can use the following rules for piloting a ship without a dragonmark.</p><p>On its turn, a creature without the @UUID[Compendium.dnd-forge-artificer.options.Item.efaMarkStorm0000]{Mark of Storm} occupying the Helm can attempt to take the Drive or Shift Engine action and make a [[/check]] check to command the engine’s elemental spirit. On a successful check, the action happens. On a failed check, nothing happens, and the creature’s action is wasted.</p><p>Magic can make an airship’s elemental spirit more receptive to commands. Casting <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmMonst]{Charm Monster}</em> targeting the elemental spirit gives you Advantage on checks made to command the spirit for the spell’s duration. If you instead cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDominateMo]{Dominate Monster} </em>targeting the elemental spirit, any checks you make to command the spirit for the spell’s duration automatically succeed. The elemental spirit automatically fails its saving throw against these spells, and you do not need to see the spirit to target it if you’re occupying the Helm.</p></section>",
+          "activities": {
+            "Drive": {
+              "name": "Drive",
+              "condition": "Requires Mark of Storm"
+            },
+            "Shift Engine": {
+              "name": "Shift Engine",
+              "condition": "Requires Mark of Storm"
+            },
+            "Attempt Command": {
+              "name": "Attempt Command",
+              "condition": "As part of the Action used to take the Drive or Shift action."
+            },
+            "Tilt and Roll": {
+              "name": "Tilt and Roll",
+              "condition": "Taking the Drive action and spending half of the ship's Fly Speed",
+              "affects": {
+                "special": "not anchored"
+              },
+              "range": {
+                "special": "within the ship"
+              }
+            }
+          },
+          "effects": {
+            "Elemental Core Engaged": {
+              "name": "Elemental Core Engaged"
+            }
+          }
+        }
+      }
+    },
+    "Medani Inquisitive": {
+      "name": "Medani Inquisitive",
+      "tokenName": "Medani Inquisitive",
+      "description": "<p>The most prized inquisitives of House Medani, a house of mostly Khoravar, employ their dragonmarks and their keen intellects to anticipate threats from any quarter. Some are part of a secretive order called the Basilisk’s Gaze, dedicated to hunting down fugitive war criminals who committed atrocities during the Last War.</p>",
+      "items": {
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The inquisitive casts one of the following spells, requiring no Material components and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>At Will: </strong>[[/item .iQYHFES4dazIxbN7]]{Guidance}</p><p><strong>1/Day Each: </strong>[[/item .fDZk2BfvCd55Va7V]]{Detect Thoughts}, [[/item .phwjZ3VTAMIPckDb]]{See Invisibility}</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The inquisitive makes three [[/item Crooked Staff]] attacks. It can replace one attack with a use of [[/item Inquisitive Eye]].</p>"
+        },
+        "Crooked Staff": {
+          "name": "Crooked Staff",
+          "description": "<p><em>Melee Attack Roll:</em> [[/attack]], reach 5 ft. Hit: [[/damage average]] damage. If the target is a Medium or smaller creature, it has the &amp;Reference[Prone apply=false] condition. If the target already has the Prone condition, the attack deals an extra [[/damage 2d6 radiant average]] damage.</p>",
+          "activities": {
+            "Attack: If Already Prone": {
+              "name": "Attack: If Already Prone"
+            }
+          },
+          "effects": {
+            "Prone": {
+              "name": "Prone"
+            }
+          }
+        },
+        "Inquisitive Eye": {
+          "name": "Inquisitive Eye",
+          "description": "<p><em>Wisdom Saving Throw:</em> DC [[lookup @attributes.spell.dc]], one creature the inquisitive can see within [[lookup @range.value activity=82uorFWecfUXV0dP]] feet.</p><p><em>Failure</em>: [[/damage average]] damage, and the target is marked.</p><p>The inquisitive has Advantage on attack rolls against a target it has marked. While marked, the target can’t become hidden from the inquisitive, and if it has the Invisible condition, it gains no benefit from that condition against the inquisitive.</p><p>The mark disappears after 1 minute or when the inquisitive uses this action again.</p><p><em>Success</em>: Half damage only.</p>",
+          "effects": {
+            "Marked": {
+              "name": "Marked",
+              "description": "<p>You are marked after failing your save.  For 1 minute, the inquisitive has Advantage on attack rolls against you it has marked. </p><p>While marked, the target can’t become hidden from the inquisitive, and if it has the Invisible condition, it gains no benefit from that condition against the inquisitive.</p>"
+            }
+          }
+        },
+        "Spontaneous Barrier": {
+          "name": "Spontaneous Barrier",
+          "description": "<p><em>Trigger</em>: The inquisitive or an ally it can see is hit with an attack roll.</p><p><em>Response:</em> The inquisitive adds 2 to its or the ally's AC against that attack, possibly causing it to miss.</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "Expend Use",
+              "condition": "The inquisitive or an ally it can see is hit with an attack roll."
+            }
+          }
+        },
+        "Guidance": {
+          "name": "Guidance",
+          "description": "<p>You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Detect Thoughts": {
+          "name": "Detect Thoughts",
+          "description": "<p>For the duration, you can read the thoughts of certain creatures. When you cast the spell and as your action on each turn until the spell ends, you can focus your mind on any one creature that you can see within 30 feet of you. If the creature you choose has an Intelligence of 3 or lower or doesn't speak any language, the creature is unaffected.</p><p>You initially learn the surface thoughts of the creature—what is most on its mind in that moment. As an action, you can either shift your attention to another creature's thoughts or attempt to probe deeper into the same creature's mind. If you probe deeper, the target must make a Wisdom saving throw. If it fails, you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates). If it succeeds, the spell ends. Either way, the target knows that you are probing into its mind, and unless you shift your attention to another creature's thoughts, the creature can use its action on its turn to make an Intelligence check contested by your Intelligence check; if it succeeds, the spell ends.</p><p>Questions verbally directed at the target creature naturally shape the course of its thoughts, so this spell is particularly effective as part of an interrogation.</p><p>You can also use this spell to detect the presence of thinking creatures you can't see. When you cast the spell or as your action during the duration, you can search for thoughts within 30 feet of you. The spell can penetrate barriers, but 2 feet of rock, 2 inches of any metal other than lead, or a thin sheet of lead blocks you. You can't detect a creature with an Intelligence of 3 or lower or one that doesn't speak any language.</p><p>Once you detect the presence of a creature in this way, you can read its thoughts for the rest of the duration as described above, even if you can't see it, but it must still be within range.</p>",
+          "materials": {
+            "value": "A copper piece"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "See Invisibility": {
+          "name": "See Invisibility",
+          "description": "<p>For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.</p>",
+          "materials": {
+            "value": "A pinch of talc and a small sprinkling of silver powder"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Breastplate": {
+          "name": "Breastplate"
+        },
+        "iQYHFES4dazIxbN7": {
+          "name": "Guidance",
+          "description": "<p>You touch a willing creature and choose a skill. Until the spell ends, the creature adds 1d4 to any ability check using the chosen skill.</p>",
+          "effects": {
+            "Acrobatic Guidance": {
+              "name": "Acrobatic Guidance"
+            },
+            "Animal Handling Guidance": {
+              "name": "Animal Handling Guidance"
+            },
+            "Arcana Guidance": {
+              "name": "Arcana Guidance"
+            },
+            "Athletic Guidance": {
+              "name": "Athletic Guidance"
+            },
+            "Deception Guidance": {
+              "name": "Deception Guidance"
+            },
+            "History Guidance": {
+              "name": "History Guidance"
+            },
+            "Insight Guidance": {
+              "name": "Insight Guidance"
+            },
+            "Investigation Guidance": {
+              "name": "Investigation Guidance"
+            },
+            "Intimidation Guidance": {
+              "name": "Intimidation Guidance"
+            },
+            "Medicine Guidance": {
+              "name": "Medicine Guidance"
+            },
+            "Nature Guidance": {
+              "name": "Nature Guidance"
+            },
+            "Persuasion Guidance": {
+              "name": "Persuasion Guidance"
+            },
+            "Perception Guidance": {
+              "name": "Perception Guidance"
+            },
+            "Performance Guidance": {
+              "name": "Performance Guidance"
+            },
+            "Religion Guidance": {
+              "name": "Religion Guidance"
+            },
+            "Sleight of Hand Guidance": {
+              "name": "Sleight of Hand Guidance"
+            },
+            "Stealth Guidance": {
+              "name": "Stealth Guidance"
+            },
+            "Survival Guidance": {
+              "name": "Survival Guidance"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "fDZk2BfvCd55Va7V": {
+          "name": "Detect Thoughts",
+          "description": "<p>You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.</p><p><strong>Sense Thoughts.</strong> You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don't read the thoughts, but you know that a thinking creature is present.</p><p>The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.</p><p><strong>Read Thoughts.</strong> Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target's mind right now. If the target doesn't know any languages and isn't telepathic, you learn nothing.</p><p>As a Magic action on your next turn, you can try to probe deeper into the target's mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target's reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target's mind, the target can take an action on its turn to make an [[/check ability=int skill=arc dc=@attributes.spell.dc]] check against your spell save DC, ending the spell on a success.</p>",
+          "materials": {
+            "value": "1 Copper Piece"
+          },
+          "activities": {
+            "Probe Deeper": {
+              "name": "Probe Deeper"
+            },
+            "Sense Thoughts": {
+              "name": "Sense Thoughts"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "phwjZ3VTAMIPckDb": {
+          "name": "See Invisibility",
+          "description": "<p>For the duration, you see creatures and objects that have the &amp;Reference[invisible apply=false] condition as if they were visible, and you can see into the Ethereal Plane. Creatures and objects there appear ghostly.</p>",
+          "materials": {
+            "value": "a pinch of talc"
+          },
+          "effects": {
+            "See Invisibility": {
+              "name": "See Invisibility"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Ogre": {
+      "name": "Ogre",
+      "tokenName": "Ogre",
+      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepGreatclub0]{Greatclub}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepJavelin000]{Javelins (3)}</p></div><h1>Ogres</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.1Hp2MOUaAODie8ex caption=false cite=false classes=\"no-embed mm\"]</p><h2>Ogre</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.kqE5GUlHs8pLCwvw caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Greatclub": {
+          "name": "Greatclub",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Javelin": {
+          "name": "Javelin",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        }
+      }
+    },
+    "Orien Enforcer": {
+      "name": "Orien Enforcer",
+      "tokenName": "Orien Enforcer",
+      "description": "<p>Whether riding on an Orien cart, guarding the lightning rail on a cross-continental journey, or using Orien Teleportation Circles to transport precious parcels in an instant, dragonmarked enforcers of House Orien (mostly humans) protect their house’s interests and maintain its reputation for dependability.</p>",
+      "items": {
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The enforcer makes three [[/item Dagger]] attacks. It can replace one attack with a use of Lightning Cage if available.</p>"
+        },
+        "Dagger": {
+          "name": "Dagger",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Lightning Cage": {
+          "name": "Lightning Cage",
+          "description": "<p><em>Constitution Saving Throw:</em> DC [[lookup @attributes.spell.dc]], each creature in a [[lookup @target.template.size activity=CdatXIm9fdWxAYUo]]-foot-radius Sphere centered on a point the enforcer can see within [[lookup @range.value activity=CdatXIm9fdWxAYUo]] feet.</p><p><em>Failure</em>: [[/damage average]] damage, and the creature can’t take Reactions until the end of the enforcer’s next turn.</p><p><em>Success</em>: Half damage only.</p>"
+        },
+        "Misty Step": {
+          "name": "Misty Step",
+          "description": "<p>The enforcer casts [[/item .oQwqxae5WSFdBA66]]{Misty Step}, using Intelligence as the spellcasting ability.</p>"
+        },
+        "Temporal Disruption": {
+          "name": "Temporal Disruption",
+          "description": "<p><em>Trigger</em>: The enforcer takes damage from a melee attack.</p><p><em>Response</em>: The enforcer teleports up to [[lookup @range.value activity=iN5gdnhpulzT9MMd]] feet to an unoccupied space it can see.</p><p>Each creature within [[lookup @target.template.size activity=iN5gdnhpulzT9MMd]] feet of the space the enforcer left must succeed on a [[/save format=long]], or its Speed is halved until the start of the enforcer’s next turn.</p>",
+          "activities": {
+            "save": {
+              "condition": "The enforcer takes damage from a melee attack."
+            }
+          }
+        },
+        "Studded Leather Armor": {
+          "name": "Studded Leather Armor"
+        },
+        "tG3Xu89GEgAXEsZp": {
+          "name": "Misty Step",
+          "description": "<p>Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space you can see.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "oQwqxae5WSFdBA66": {
+          "name": "Misty Step",
+          "description": "<p>Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space you can see.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Sahuagin Priest": {
+      "name": "Sahuagin Priest",
+      "tokenName": "Sahuagin Priest",
+      "description": "<h1>Sahuagin</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.6GoEsoHTiVUdeAKu caption=false cite=false classes=\"no-embed mm\"]</p><h2>Sahuagin Priest</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.iAneRFTJ1QnBA0JK caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Blood Frenzy": {
+          "name": "Blood Frenzy",
+          "description": "<p>The [[lookup @name lowercase]] has Advantage on attack rolls against any creature that doesn’t have all its Hit Points.</p>"
+        },
+        "Limited Amphibiousness": {
+          "name": "Limited Amphibiousness",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can breathe air and water, but it must be submerged at least once every 4 hours to avoid suffocating outside water.</p>"
+        },
+        "Shark Telepathy": {
+          "name": "Shark Telepathy",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can magically control sharks within 120 feet of itself, using a special telepathy.</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmSpectralJaws00]] attacks.</p>",
+          "activities": {
+            "Expand Use": {
+              "name": "Expand Use"
+            }
+          }
+        },
+        "Spectral Jaws": {
+          "name": "Spectral Jaws",
+          "description": "<p class=\"feature\"><em>Melee or Ranged Attack Roll:</em> [[/attack]], reach [[lookup @item.range.reach]] ft. or range [[lookup @item.range.value]] ft. <em>Hit:</em> [[/damage average]] damage.</p>"
+        },
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p class=\"feature-trait\"><strong>At Will:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{Thaumaturgy}</em></p><p class=\"feature-trait\"><strong>2/Day Each:</strong> <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldPerson]{Hold Person}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplTongues000]{Tongues}</em></p>"
+        },
+        "Fiendish Aid": {
+          "name": "Fiendish Aid",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] casts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBless00000]{Bless}</em> or <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHealingWor]{Healing Word}</em>, using the same spellcasting ability as Spellcasting.</p>"
+        },
+        "Bless": {
+          "name": "Bless",
+          "description": "<p>You bless up to three creatures within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 1.</p>",
+          "materials": {
+            "value": "a Holy Symbol worth 5+ GP"
+          },
+          "effects": {
+            "Blessed": {
+              "name": "Blessed",
+              "description": "<p>Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Healing Word": {
+          "name": "Healing Word",
+          "description": "<p>A creature of your choice that you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The healing increases by 2d4 for each spell slot level above 1.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Thaumaturgy": {
+          "name": "Thaumaturgy",
+          "description": "<p>You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.</p><p><strong>Altered Eyes.</strong> You alter the appearance of your eyes for 1 minute.</p><p><strong>Booming Voice.</strong> Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p><p><strong>Fire Play.</strong> You cause flames to flicker, brighten, dim, or change color for 1 minute.</p><p><strong>Invisible Hand.</strong> You instantaneously cause an unlocked door or window to fly open or slam shut.</p><p><strong>Phantom Sound.</strong> You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.</p><p><strong>Tremors.</strong> You cause harmless tremors in the ground for 1 minute.</p>",
+          "activities": {
+            "Cast": {
+              "name": "Cast"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Hold Person": {
+          "name": "Hold Person",
+          "description": "<p>Choose a Humanoid that you can see within range. The target must succeed on a Wisdom saving throw or have the &amp;Reference[paralyzed apply=false] condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional Humanoid for each spell slot level above 2.</p>",
+          "materials": {
+            "value": "a straight piece of iron"
+          },
+          "effects": {
+            "Paralyzed": {
+              "name": "Paralyzed",
+              "description": "<p>At the end of each of its turns, the target repeats the [[/save ability=wis]] save, ending the spell on itself on a success.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Tongues": {
+          "name": "Tongues",
+          "description": "<p>This spell grants the creature you touch the ability to understand any spoken or signed language that it hears or sees. Moreover, when the target communicates by speaking or signing, any creature that knows at least one language can understand it if that creature can hear the speech or see the signing.</p>",
+          "materials": {
+            "value": "a miniature ziggurat"
+          },
+          "effects": {
+            "Universal Communication": {
+              "name": "Universal Communication"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Sahuagin Warrior": {
+      "name": "Sahuagin Warrior",
+      "tokenName": "Sahuagin Warrior",
+      "description": "<h1>Sahuagin</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.6GoEsoHTiVUdeAKu caption=false cite=false classes=\"no-embed mm\"]</p><h2>Sahuagin Warrior</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.e7E1JhVR2AaUl70T caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Blood Frenzy": {
+          "name": "Blood Frenzy",
+          "description": "<p>The [[lookup @name lowercase]] has Advantage on attack rolls against any creature that doesn’t have all its Hit Points.</p>"
+        },
+        "Limited Amphibiousness": {
+          "name": "Limited Amphibiousness",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can breathe air and water, but it must be submerged at least once every 4 hours to avoid suffocating outside water.</p>"
+        },
+        "Shark Telepathy": {
+          "name": "Shark Telepathy",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] can magically control sharks within 120 feet of itself, using a special telepathy.</p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .mmClaw0000000000]] attacks.</p>",
+          "activities": {
+            "Expand Use": {
+              "name": "Expand Use"
+            }
+          }
+        },
+        "Claw": {
+          "name": "Claw",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Aquatic Charge": {
+          "name": "Aquatic Charge",
+          "description": "<p>The [[lookup @name lowercase]] swims up to its Swim Speed straight toward an enemy it can see.</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "Expend Use",
+              "affects": {
+                "special": "target is visible"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Sentinel Marshal": {
+      "name": "Sentinel Marshal",
+      "tokenName": "Sentinel Marshal",
+      "description": "<p>The Sentinel Marshals of House Deneith, who are typically human, hold the honor of the house in their hands. The Treaty of Thronehold upheld their authority to pursue criminals across international borders, giving them the unique privilege and responsibility of upholding the law across Khorvaire.</p><p>Only the most trusted heirs of the house are honored with a position in the Sentinel Marshals, either after serving in the house’s other guilds for several years (as bodyguards in the Defenders Guild and mercenary officers in the Blademarks Guild) or by special dispensation of House Deneith.</p><p>Sentinel Marshals are never authorized to break local or international laws, but neither are they accountable to the legal authorities of any nation. A rogue marshal can be punished only by the leadership of House Deneith, but some nations (such as Darguun and Droaam) ignore these conventions.</p>",
+      "items": {
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The marshal makes three attacks, using [[/item Longsword]] or [[/item Pistol]] in any combination.</p>"
+        },
+        "Longsword": {
+          "name": "Longsword",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target has Disadvantage on the next attack roll it makes before the start of the marshal’s next turn.</p><section class=\"secret\" id=\"secret-9ea2pouXhW3YRKQy\"><p><strong>Foundry Note</strong></p><p>This feature includes an <strong>Active Effect (AE)</strong> that can be used as a reminder but does not automate the above benefits.</p></section>",
+          "effects": {
+            "Disadvantage": {
+              "name": "Disadvantage",
+              "description": "<p>The target has Disadvantage on the next attack roll it makes before the start of the attacking creature's next turn.</p>"
+            }
+          }
+        },
+        "Pistol": {
+          "name": "Pistol",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Shield": {
+          "name": "Shield",
+          "description": "<p>The marshal casts  [[/item .Z7bhT6efF36mvysU]]{Shield} in response to the spell’s trigger, using Wisdom as the spellcasting ability.</p>"
+        },
+        "Studded Leather Armor": {
+          "name": "Studded Leather Armor"
+        },
+        "Z7bhT6efF36mvysU": {
+          "name": "Shield",
+          "description": "<p>An imperceptible barrier of magical force protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{Magic Missile}</em>.</p>",
+          "activation": {
+            "condition": "when you are hit by an attack roll or targeted by the Magic Missile spell"
+          },
+          "effects": {
+            "Imperceptible Barrier": {
+              "name": "Imperceptible Barrier",
+              "description": "<p>Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from <em>Magic Missile</em>.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Shadow-Marked Agent": {
+      "name": "Shadow-Marked Agent",
+      "tokenName": "Shadow-Marked Agent",
+      "description": "<p>Agents of House Phiarlan and House Thuranni, who are primarily elves, combine stealth and espionage with mastery of the performing arts—and dragonmarked heirs augment those skills with shadow magic. This stat block can serve for an agent of either house.</p><p>Even though House Phiarlan agents don’t typically work as entertainers or artists in addition to their espionage activities, they receive extensive training in those arts alongside other members of their house. House Thuranni agents, in contrast, are always both artists and spies.</p>",
+      "items": {
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The agent casts one of the following spells, requiring no Material components and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (DC [[lookup @attributes.spell.dc]]):</p><p><strong>At Will: </strong>[[/item .VvNOL2MCanXX6Yp2]]{Disguise Self}, [[/item .VanYq4OAECOuc0Sc]]{Minor Illusion}</p><p><strong>1/Day: </strong>[[/item .GSEFNMzQzTP2YBlw]]{Pass Without Trace}</p>",
+          "activities": {
+            "Disguise Self": {
+              "name": "Disguise Self"
+            },
+            "Minor Illusion": {
+              "name": "Minor Illusion"
+            },
+            "Pass Without Trace": {
+              "name": "Pass Without Trace"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The agent makes two [[/item Shadow Knife]] attacks.</p>"
+        },
+        "Shadow Knife": {
+          "name": "Shadow Knife",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target’s Speed is reduced by 10 feet until the end of its next turn.</p>",
+          "effects": {
+            "Speed -10 ft/": {
+              "name": "Speed -10 ft/",
+              "description": "<p>The target’s Speed is reduced by 10 feet until the end of its next turn.</p>"
+            }
+          }
+        },
+        "Shadow Cloak": {
+          "name": "Shadow Cloak",
+          "description": "<p>The agent has the &amp;Reference[Invisible apply=false] condition until the start of its next turn. This invisibility ends early immediately after the agent makes an attack roll.</p>",
+          "activities": {
+            "Recover Use": {
+              "name": "Recover Use"
+            }
+          },
+          "effects": {
+            "Invisible": {
+              "name": "Invisible"
+            }
+          }
+        },
+        "Studded Leather Armor": {
+          "name": "Studded Leather Armor"
+        },
+        "Disguise Self": {
+          "name": "Disguise Self",
+          "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.</p><p>To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC.</p>",
+          "effects": {
+            "Disguised": {
+              "name": "Disguised",
+              "description": "<p><span style=\"font-family:Signika, sans-serif\">To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an [[/check ability=int skill=inv]] check against your spell save DC.</span></p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Minor Illusion": {
+          "name": "Minor Illusion",
+          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "materials": {
+            "value": "a bit of fleece"
+          },
+          "activities": {
+            "Create Illusion": {
+              "name": "Create Illusion",
+              "profiles": {
+                "Image": {
+                  "name": "Image"
+                },
+                "Sound": {
+                  "name": "Sound"
+                }
+              }
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Pass without Trace": {
+          "name": "Pass without Trace",
+          "description": "<p>You radiate a concealing aura in a 30-foot Emanation for the duration. While in the aura, you and each creature you choose have a +10 bonus to [[/check ability=dex skill=ste]] checks and leave no tracks.</p>",
+          "materials": {
+            "value": "ashes from burned mistletoe"
+          },
+          "effects": {
+            "Concealed": {
+              "name": "Concealed",
+              "description": "<p>While in the aura, you and each creature you choose have a +10 bonus to [[/check ability=dex skill=ste]] checks and leave no tracks.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Sivis Scribe": {
+      "name": "Sivis Scribe",
+      "tokenName": "Sivis Scribe",
+      "description": "<p>The dragonmarked heirs of House Sivis are typically accomplished gnome scholars of magic. In addition to the might that comes with their marks, they favor magical sigils and words of power.</p>",
+      "items": {
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The scribe casts one of the following spells, requiring no Material components and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (DC [[lookup @attributes.spell.dc]]):</p><p><strong>At Will:</strong> [[/item .LbVfCJdpugPfZYWK]]{Comprehend Languages}, [[/item .g84O2qLewIJylz6K]]{Mage Armor} (included in AC),, [[/item .euhAuFV7hXJ5acYP]]{Message}</p><p><strong>1/Day:</strong> [[/item .ka2kP4OW26kRQN3S]]{Sending}</p><p></p>"
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The scribe makes two [[/item Bursting Sigil]] attacks.</p>"
+        },
+        "Bursting Sigil": {
+          "name": "Bursting Sigil",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Word of Stasis": {
+          "name": "Word of Stasis",
+          "description": "<p><em>Constitution Saving Throw:</em> DC [[lookup @attributes.spell.dc]], each creature in a [[lookup @target.template.size activity=ZbumyLKn42fPAx9W]]-foot-radius Sphere centered on a point the scribe can see within [[lookup @range.value activity=ZbumyLKn42fPAx9W]] feet.</p><p><em>Failure</em>: The target has the &amp;Reference[Incapacitated apply=false] condition until the start of the scribe’s next turn. While the target is Incapacitated, its Speed is 0 and can’t increase.</p>",
+          "effects": {
+            "Incapacitated | Speed 0 ft.": {
+              "name": "Incapacitated | Speed 0 ft.",
+              "description": "<p>The target has the &amp;Reference[Incapacitated apply=false] condition until the start of the scribe’s next turn. While the target is Incapacitated, its Speed is 0 and can’t increase.</p>"
+            }
+          }
+        },
+        "Words of Reason": {
+          "name": "Words of Reason",
+          "description": "<p>Allies in a [[lookup @target.template.size activity=LIR5B4Ra3b7uN5Sw]]-foot Emanation originating from the scribe have Advantage on saving throws to avoid or end the &amp;Reference[Charmed apply=false] or &amp;Reference[Frightened apply=false] condition. This trait doesn’t function if the scribe has the &amp;Reference[Incapacitated apply=false] condition.</p>"
+        },
+        "Comprehend Languages": {
+          "name": "Comprehend Languages",
+          "description": "<p>For the duration, you understand the literal meaning of any language that you hear or see signed. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text. This spell doesn't decode symbols or secret messages.</p>",
+          "materials": {
+            "value": "a pinch of soot and salt"
+          },
+          "effects": {
+            "Comprehension": {
+              "name": "Comprehension"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Message": {
+          "name": "Message",
+          "description": "<p>You point toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.</p><p>You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence; 1 foot of stone, metal, or wood; or a thin sheet of lead blocks the spell.</p>",
+          "materials": {
+            "value": "a copper wire"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Sending": {
+          "name": "Sending",
+          "description": "<p>You send a short message of 25 words or fewer to a creature you have met or a creature described to you by someone who has met it. The target hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables targets to understand the meaning of your message.</p><p>You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive. You know if the delivery fails.</p><p>Upon receiving your message, a creature can block your ability to reach it again with this spell for 8 hours. If you try to send another message during that time, you learn that you are blocked, and the spell fails.</p>",
+          "materials": {
+            "value": "a copper wire"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Mage Armor": {
+          "name": "Mage Armor",
+          "description": "<p>You touch a willing creature who isn't wearing armor. Until the spell ends, the target's base AC becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor.</p>",
+          "materials": {
+            "value": "a piece of cured leather"
+          },
+          "effects": {
+            "Mage Armor": {
+              "name": "Mage Armor",
+              "description": "<p>The target's base AC becomes 13 + its Dexterity modifier.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Skeleton": {
+      "name": "Skeleton",
+      "tokenName": "Skeleton",
+      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepShortbow00]{Shortbow}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepShortsword]{Shortsword}</p></div><h1>Skeletons</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.w1RMyPzpjolhQMVX caption=false cite=false classes=\"no-embed mm\"]</p><h2>Skeleton</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.pm1ZyudVsOl0ve5C caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Shortsword": {
+          "name": "Shortsword",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Shortbow": {
+          "name": "Shortbow",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        }
+      }
+    },
+    "Spy": {
+      "name": "Spy",
+      "tokenName": "Spy",
+      "description": "<div class=\"gear\"><p><strong>Gear:</strong> @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepHandCrossb]{Hand Crossbow}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepShortsword]{Shortsword}, @UUID[Compendium.dnd-players-handbook.equipment.Item.phbtulThievesToo]{Thieves' Tools}</p></div><h1>Spies</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.VCqqHnYYkh2Hn5w6 caption=false cite=false classes=\"no-embed mm\"]</p><h2>Spy</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.O5k5Yo9UowcBfqiB caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Shortsword": {
+          "name": "Shortsword",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Hand Crossbow": {
+          "name": "Hand Crossbow",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Cunning Action": {
+          "name": "Cunning Action",
+          "description": "<p class=\"feature\">The [[lookup @name lowercase]] takes the &amp;Reference[Dash apply=false], the &amp;Reference[Disengage apply=false], or &amp;Reference[Hide apply=false] action.</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "Expend Use"
+            }
+          }
+        }
+      }
+    },
+    "Steel Defender": {
+      "name": "Steel Defender",
+      "tokenName": "Steel Defender",
+      "items": {
+        "Force-Empowered Rend": {
+          "name": "Force-Empowered Rend",
+          "description": "<p><em>Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit</em>: 1d8 + 2 plus your Intelligence modifier Force damage.</p>"
+        },
+        "Repair": {
+          "name": "Repair",
+          "description": "<p>The defender, or one Construct or object it can see within 5 feet of itself, regains a number of Hit Points equal to 2d8 plus your Intelligence modifier.</p>"
+        },
+        "Deflect Attack": {
+          "name": "Deflect Attack",
+          "description": "<p><em>Trigger</em>: A creature the defender can see within 5 feet of itself makes an attack roll against a creature other than the defender. </p><p><em>Response</em>: The triggering creature makes the attack roll with Disadvantage.</p>",
+          "activities": {
+            "utility": {
+              "condition": "A creature the defender can see within 5 feet of itself makes an attack roll against a creature other than the defender."
+            }
+          }
+        },
+        "Steel Bond": {
+          "name": "Steel Bond",
+          "description": "<p>Add your Proficiency Bonus to any ability check or saving throw the defender makes.</p>"
+        }
+      }
+    },
+    "Strider Airship": {
+      "name": "Strider Airship",
+      "tokenName": "Strider Airship",
+      "description": "<p>@embed[Compendium.dnd-forge-artificer.book.JournalEntry.efaAirships00000.JournalEntryPage.ZpzP7Mt7U39Wdh4V classes=\"efa\" caption=false cite=false]</p>",
+      "items": {
+        "Arcane Launcher": {
+          "name": "Arcane Launcher",
+          "description": "<p><em>Medium Object</em></p><p><strong>Armor Class:</strong> 17 <strong>Hit Points:</strong> 30</p><p><em><strong>Energy Blast (Requires Elemental Core).</strong></em> [[/attack extended]]. [[/damage average extended]].</p><p>This miniature cannon shoots bursts of magical force. A creature operating the Arcane Launcher can take the Energy Blast action to aim and fire the cannon.</p>",
+          "activities": {
+            "Energy Blast": {
+              "name": "Energy Blast",
+              "chatFlavor": "Requires Elemental Core"
+            }
+          }
+        },
+        "Helm": {
+          "name": "Helm",
+          "description": "<p><em>Small Object</em></p><p><strong>Armor Class:</strong> [[lookup @item.armor.value]] <strong>Hit Points:</strong> [[lookup @item.hp.max]]</p><p><em><strong>Drive (Requires Mark of Storm).</strong></em> The ship moves up to its Fly Speed in any direction.</p><p><em><strong>Shift Engine (Requires Mark of Storm).</strong></em> The ship’s elemental core is suppressed or reengaged.</p><p>The helm of an airship consists of a specialized wheel, levers, and other controls. One creature can operate this station at a time.</p><p>The pilot (the crew member operating an airship’s Helm) must have the Mark of Storm to interface with the controls. While operating the Helm, a crew member can take the station’s Drive and Shift Engine actions.</p><p><em><strong>Tilt and Roll.</strong></em> When taking the Helm’s Drive action, a crew member can spend an amount of movement equal to half the ship’s Fly Speed to invert the ship on its axis, either turning it upside down or righting it. All creatures and objects on the ship that aren’t anchored fall when the ship moves in this way. A creature that succeeds on a [[/save format=long]] can grab a fixed object within reach to avoid falling.</p><section class=\"notable\"><h4>Piloting without a Dragonmark</h4><p>Helming an airship that typically requires a dragonmarked pilot is difficult—but not impossible. At your DM’s discretion, you can use the following rules for piloting a ship without a dragonmark.</p><p>On its turn, a creature without the @UUID[Compendium.dnd-forge-artificer.options.Item.efaMarkStorm0000]{Mark of Storm} occupying the Helm can attempt to take the Drive or Shift Engine action and make a [[/check]] check to command the engine’s elemental spirit. On a successful check, the action happens. On a failed check, nothing happens, and the creature’s action is wasted.</p><p>Magic can make an airship’s elemental spirit more receptive to commands. Casting <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmMonst]{Charm Monster}</em> targeting the elemental spirit gives you Advantage on checks made to command the spirit for the spell’s duration. If you instead cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDominateMo]{Dominate Monster} </em>targeting the elemental spirit, any checks you make to command the spirit for the spell’s duration automatically succeed. The elemental spirit automatically fails its saving throw against these spells, and you do not need to see the spirit to target it if you’re occupying the Helm.</p></section>",
+          "activities": {
+            "Drive": {
+              "name": "Drive",
+              "condition": "Requires Mark of Storm"
+            },
+            "Shift Engine": {
+              "name": "Shift Engine",
+              "condition": "Requires Mark of Storm"
+            },
+            "Attempt Command": {
+              "name": "Attempt Command",
+              "condition": "As part of the Action used to take the Drive or Shift action."
+            },
+            "Tilt and Roll": {
+              "name": "Tilt and Roll",
+              "condition": "Taking the Drive action and spending half of the ship's Fly Speed",
+              "affects": {
+                "special": "not anchored"
+              },
+              "range": {
+                "special": "within the ship"
+              }
+            }
+          },
+          "effects": {
+            "Elemental Core Engaged": {
+              "name": "Elemental Core Engaged"
+            }
+          }
+        }
+      }
+    },
+    "Tarkanan Marauder": {
+      "name": "Tarkanan Marauder",
+      "tokenName": "Tarkanan Marauder",
+      "description": "<p>This powerful assassin relies on teleportation to catch targets unaware and deal out rapid death.</p>",
+      "items": {
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The marauder casts one of the following spells, requiring no Material components and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>At Will:</strong> [[/item .3iLBGh1QsFO2cKft]]{Message}</p><p><strong>1/Day:</strong> [[/item .HItmEfBAEQK0EKBC]]{Disintegrate}</p>",
+          "activities": {
+            "Message": {
+              "name": "Message"
+            },
+            "Disintegrate": {
+              "name": "Disintegrate"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The marauder makes three [[/item Aberrant Strike]] attacks.</p>"
+        },
+        "Aberrant Strike": {
+          "name": "Aberrant Strike",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], plus [[/damage average activity=u6ZdgEsZ8pNqL2hz]] damage if the marauder had Advantage on the attack roll.</p>",
+          "activities": {
+            "Extra Damage at Advantage": {
+              "name": "Extra Damage at Advantage"
+            }
+          }
+        },
+        "Tear Through Space": {
+          "name": "Tear Through Space",
+          "description": "<p>The marauder teleports to a space it can see within [[lookup @range.value activity=1FS7w4J4fc1wNXoZ]] feet, appearing in a dazzling flash.</p><p><em>Constitution Saving Throw</em>: DC [[lookup @save.dc.value activity=1FS7w4J4fc1wNXoZ]], each creature in a [[lookup @target.template.size activity=1FS7w4J4fc1wNXoZ]]-foot Emanation originating from the marauder when it appears.</p><p><em>Failure</em>: The target has the &amp;Reference[Blinded apply=false] condition until the end of the marauder’s next turn.</p>",
+          "effects": {
+            "Blinded": {
+              "name": "Blinded",
+              "description": "<p>he target has the &amp;Reference[Blinded apply=false] condition until the end of the marauder’s next turn.</p>"
+            }
+          }
+        },
+        "Breastplate": {
+          "name": "Breastplate"
+        },
+        "Message": {
+          "name": "Message",
+          "description": "<p>You point toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.</p><p>You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence; 1 foot of stone, metal, or wood; or a thin sheet of lead blocks the spell.</p>",
+          "materials": {
+            "value": "a copper wire"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Disintegrate": {
+          "name": "Disintegrate",
+          "description": "<p>You launch a green ray at a target you can see within range. The target can be a creature, a nonmagical object, or a creation of magical force, such as the wall created by <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{Wall of Force}.</em></p><p>A creature targeted by this spell makes a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 Force damage. If this damage reduces it to 0 Hit Points, it and everything nonmagical it is wearing and carrying are disintegrated into gray dust. The target can be revived only by a <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplTrueResurr]{True Resurrection}</em> or a <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{Wish}</em> spell.</p><p>This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If such a target is Huge or larger, this spell disintegrates a 10-foot-Cube portion of it.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 3d6 for each spell slot level above 6.</p>",
+          "materials": {
+            "value": "a lodestone and dust"
+          },
+          "target": {
+            "affects": {
+              "special": "a creature, a nonmagical object, or a creation of magical force,"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Evasion": {
+          "name": "Evasion",
+          "description": "<p class=\"feature\">If the marauder is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the marauder instead takes no damage if it succeeds on the save and only half damage if it fails. It can’t use this trait if it has the Incapacitated condition.</p>"
+        }
+      }
+    },
+    "Tarkanan Ruffian": {
+      "name": "Tarkanan Ruffian",
+      "tokenName": "Tarkanan Ruffian",
+      "description": "<p>This rank-and-file gang member, recruited off the streets of Sharn, uses sinister lightning powers to supplement ordinary weaponry.</p>",
+      "items": {
+        "Studded Leather Armor": {
+          "name": "Studded Leather Armor"
+        },
+        "Aberrant Surge": {
+          "name": "Aberrant Surge",
+          "description": "<p>When the ruffian casts <em>Witch Bolt</em>, roll [[/r 1d8]].</p><p>On an <strong>even number</strong>, the ruffian gains a number of Temporary Hit Points equal to the number rolled.</p><p>On an <strong>odd number</strong>, one creature of the ruffian’s choice within 30 feet of it takes Force damage equal to the number rolled; if no other creatures are in range, it takes the damage.</p>",
+          "activities": {
+            "Roll 1d8": {
+              "name": "Roll 1d8",
+              "roll": "Roll 1d8"
+            }
+          }
+        },
+        "Thaumaturgy": {
+          "name": "Thaumaturgy",
+          "description": "<p>You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.</p><p><strong>Altered Eyes.</strong> You alter the appearance of your eyes for 1 minute.</p><p><strong>Booming Voice.</strong> Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p><p><strong>Fire Play.</strong> You cause flames to flicker, brighten, dim, or change color for 1 minute.</p><p><strong>Invisible Hand.</strong> You instantaneously cause an unlocked door or window to fly open or slam shut.</p><p><strong>Phantom Sound.</strong> You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.</p><p><strong>Tremors.</strong> You cause harmless tremors in the ground for 1 minute.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Witch Bolt": {
+          "name": "Witch Bolt",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Spear": {
+          "name": "Spear",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The ruffian casts one of the following spells, requiring no Material components and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +[[lookup @attributes.spell.attack]] to hit with spell attacks):</p><p><strong>At Will:</strong> [[/item .RQaxp7iGtCCybT8U]]{Thaumaturgy}</p><p><strong>1/Day:</strong> [[/item .Fm3khihTk3Ttz8cP]]{Witch Bolt}</p>",
+          "activities": {
+            "Thaumaturgy": {
+              "name": "Thaumaturgy"
+            }
+          }
+        },
+        "efaThaumaturgy00": {
+          "name": "Thaumaturgy",
+          "description": "<p>You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.</p><p><strong>Altered Eyes.</strong> You alter the appearance of your eyes for 1 minute.</p><p><strong>Booming Voice.</strong> Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p><p><strong>Fire Play.</strong> You cause flames to flicker, brighten, dim, or change color for 1 minute.</p><p><strong>Invisible Hand.</strong> You instantaneously cause an unlocked door or window to fly open or slam shut.</p><p><strong>Phantom Sound.</strong> You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.</p><p><strong>Tremors.</strong> You cause harmless tremors in the ground for 1 minute.</p>",
+          "effects": {
+            "Booming Voice": {
+              "name": "Booming Voice",
+              "description": "<p>Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Fm3khihTk3Ttz8cP": {
+          "name": "Witch Bolt",
+          "description": "<p>A beam of crackling energy lances toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against it. On a hit, the target takes 2d12 Lightning damage.</p><p>On each of your subsequent turns, you can take a Bonus Action to deal 1d12 Lightning damage to the target automatically, even if the first attack missed.</p><p>The spell ends if the target is ever outside the spell’s range or if it has &amp;Reference[totalcover] from you.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The initial damage increases by 1d12 for each spell slot level above 1.</p>",
+          "materials": {
+            "value": "a twig struck by lightning"
+          },
+          "activities": {
+            "Bonus Action Damage": {
+              "name": "Bonus Action Damage"
+            }
+          },
+          "effects": {
+            "Sustained Lightning": {
+              "name": "Sustained Lightning",
+              "description": "<p>On each of your subsequent turns, you can take a Bonus Action to deal [[/damage 1d12 type=lightning]] damage to the target automatically, even if the first attack missed.</p><p>The spell ends if the target is ever outside the spell’s range or if it has &amp;Reference[totalcover] from you.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        }
+      }
+    },
+    "Tharashk Hunter": {
+      "name": "Tharashk Hunter",
+      "tokenName": "Tharashk Hunter",
+      "description": "<p>House Tharashk’s heirs include inquisitives, dragonshard prospectors, and bounty hunters. They are more at home in the trackless wilds than in crowded city streets, but they are quite capable of tracking and pursuing their prey in any environment.</p><p>Tharashk hunters, typically humans or orcs, often work alongside Druids of the Gatekeepers, and occasionally with Aberrant Cultists of the Dragon Below.</p>",
+      "items": {
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The hunter makes three attacks, using [[/item Shortsword]] or [[/item Longbow]] in any combination.</p>"
+        },
+        "Mark of Tharashk": {
+          "name": "Mark of Tharashk",
+          "description": "<p>The hunter magically marks one creature it can see within [[lookup @range.value activity=K0ZvrztoPahl41yA]] feet.</p><p>The mark lasts for [[lookup @duration.value activity=K0ZvrztoPahl41yA]] [[lookup @duration.units activity=K0ZvrztoPahl41yA]], until the target dies, or until the hunter uses this Bonus Action again.</p><p>While the target is marked in this way, the hunter has Advantage on attack rolls against the target, and the target gains no benefit from the Invisible condition against the hunter.</p>",
+          "effects": {
+            "Marked": {
+              "name": "Marked",
+              "description": "<p>The hunter magically marks its target for 1 hour.</p>"
+            }
+          }
+        },
+        "Studded Leather Armor": {
+          "name": "Studded Leather Armor"
+        },
+        "Shortsword": {
+          "name": "Shortsword",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target has Disadvantage on attack rolls and ability checks until the end of its next turn.</p><section id=\"secret-vKLLOQAyaZdqP3GN\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>This feature includes an <strong>Active Effect (AE)</strong> that can be used as a reminder but does not automate the above nerf.</p></section>",
+          "effects": {
+            "D20 Tests: Disadvantage": {
+              "name": "D20 Tests: Disadvantage",
+              "description": "<p>The target has Disadvantage on <strong>attack rolls</strong> and <strong>ability checks</strong> until the end of its next turn.</p>"
+            }
+          }
+        },
+        "Longbow": {
+          "name": "Longbow",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target’s Speed is reduced by 10 feet until the end of its next turn.</p><section id=\"secret-6u903XRA0g04utLW\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>An <strong>Active Effect (AE)</strong> is available to apply the speed reduction to their character sheet from the chat card.</p></section>",
+          "effects": {
+            "Speed -10 ft.": {
+              "name": "Speed -10 ft.",
+              "description": "<p>The target’s Speed is reduced by 10 feet until the end of its next turn.</p>"
+            }
+          }
+        },
+        "Uncanny Dodge": {
+          "name": "Uncanny Dodge",
+          "description": "<p class=\"feature\"><em>Trigger:</em> The [[lookup @name lowercase]] is [[lookup @activation.condition activity=NzfYZzkrG4qJ13to]]. <em>Response:</em> The [[lookup @name lowercase]] halves the damage (round down) it takes from that attack.</p>",
+          "activities": {
+            "Expend Use": {
+              "name": "Expend Use",
+              "condition": "hit by an attack roll"
+            }
+          }
+        }
+      }
+    },
+    "Umbragen Shadow Walker": {
+      "name": "Umbragen Shadow Walker",
+      "tokenName": "Umbragen Shadow Walker",
+      "description": "<p>Umbragen drow are the descendants of drow who fled the giants and found refuge underground. For countless generations, they have lived in the lightless caverns of Khyber. There, they tapped into a mysterious magical shadow they called the Umbra. Though some have emerged to haunt the surface in the wake of the giant empire’s fall, they retain a spiritual and physical connection to the darkness below. Umbragen shadow walkers weave shadow magic to confound foes.</p>",
+      "items": {
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The shadow walker makes three [[/item Gloom Burst]] attacks and uses [[/item Shadow Cowl]].</p>"
+        },
+        "Gloom Burst": {
+          "name": "Gloom Burst",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Shadow Cowl": {
+          "name": "Shadow Cowl",
+          "description": "<p><em>Wisdom Saving Throw:</em> DC [[lookup @attributes.spell.dc]], one creature the shadow walker can see within [[lookup @range.value activity=r2I5Mfx9bpdyAtVm]] feet.</p><p><em>Failure</em>: [[/damage average]] damage, and the target has the &amp;Reference[Blinded apply=false] condition until the start of the shadow walker’s next turn.</p>",
+          "effects": {
+            "Shadow Cowl: Blinded": {
+              "name": "Shadow Cowl: Blinded"
+            }
+          }
+        },
+        "Draining Teleport": {
+          "name": "Draining Teleport",
+          "description": "<p>While in Dim Light or Darkness, the shadow walker teleports up to [[lookup @range.value activity=5A4V9dTUxeBg6AaU]] feet to a space it can see that is also in Dim Light or Darkness.</p><p><em>Constitution Saving Throw</em>: DC [[lookup @save.dc.value activity=5A4V9dTUxeBg6AaU]], each creature in a [[lookup @target.template.size activity=5A4V9dTUxeBg6AaU]]-foot Emanation originating from the shadow walker at its destination space.</p><p><em>Failure</em>: [[/damage average]] damage.</p>"
+        },
+        "Fey Ancestry": {
+          "name": "Fey Ancestry",
+          "description": "<p>Magic can’t put the shadow walker to sleep.</p>"
+        },
+        "Dancing Lights": {
+          "name": "Dancing Lights",
+          "description": "<p>You create up to four torch-size lights within range, making them appear as torches, lanterns, or glowing orbs that hover for the duration. Alternatively, you combine the four lights into one glowing Medium form that is vaguely humanlike. Whichever form you choose, each light sheds Dim Light in a 10-foot radius.</p><p>As a Bonus Action, you can move the lights up to 60 feet to a space within range. A light must be within 20 feet of another light created by this spell, and a light vanishes if it exceeds the spell's range.</p>",
+          "materials": {
+            "value": "a bit of phosphorus"
+          },
+          "activities": {
+            "Create Lights": {
+              "name": "Create Lights"
+            },
+            "Move Lights": {
+              "name": "Move Lights"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Darkness": {
+          "name": "Darkness",
+          "description": "<p>For the duration, magical &amp;Reference[darkness] spreads from a point within range and fills a 15-foot-radius Sphere. Darkvision can't see through it, and nonmagical light can't illuminate it.</p><p>Alternatively, you cast the spell on an object that isn't being worn or carried, causing the Darkness to fill a 15-foot Emanation originating from that object. Covering that object with something opaque, such as a bowl or helm, blocks the Darkness.</p><p>If any of this spell's area overlaps with an area of Bright Light or Dim Light created by a spell of level 2 or lower, that other spell is dispelled.</p>",
+          "materials": {
+            "value": "bat fur and a piece of coal"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Minor Illusion": {
+          "name": "Minor Illusion",
+          "description": "<p>You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again.</p><p>If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful [[/check ability=int skill=inv dc=@attributes.spell.dc]] check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p><p><strong>Sound.</strong> If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p><strong>Image.</strong> If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it.</p>",
+          "materials": {
+            "value": "a bit of fleece"
+          },
+          "activities": {
+            "Create Illusion": {
+              "name": "Create Illusion",
+              "profiles": {
+                "Image": {
+                  "name": "Image"
+                },
+                "Sound": {
+                  "name": "Sound"
+                }
+              }
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Sunlight Sensitivity": {
+          "name": "Sunlight Sensitivity",
+          "description": "<p>While in sunlight, the [[lookup @name lowercase]] has Disadvantage on ability checks and attack rolls.</p>"
+        },
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The shadow walker casts one of the following spells, requiring no Material components and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>At Will:</strong> [[/item .P4cVv6aeidwX261D]]{Dancing Lights}, [[/item .Z0U51oq5hr9gI50c]]{Darkness}, [[/item .GagmoqgxoZFUbxEi]]{Minor Illusion}</p>",
+          "activities": {
+            "Dancing Lights": {
+              "name": "Dancing Lights"
+            },
+            "Darkness": {
+              "name": "Darkness"
+            },
+            "Minor Illusion": {
+              "name": "Minor Illusion"
+            }
+          }
+        }
+      }
+    },
+    "Vadalis Heir": {
+      "name": "Vadalis Heir",
+      "tokenName": "Vadalis Heir",
+      "description": "<p>Combining druidic magic with skill at handling natural and monstrous animals, the dragonmarked heirs of House Vadalis, most of whom are human, are more fearsome than their innocuous-seeming house suggests—especially when accompanied by a @UUID[Compendium.dnd-monster-manual.actors.Actor.mmGiantBoar00000]{Giant Boar}, @UUID[Compendium.dnd-monster-manual.actors.Actor.mmPolarBear00000]{Polar Bear}, or @UUID[Compendium.dnd-monster-manual.actors.Actor.mmRhinoceros0000]{Rhinoceros}.</p>",
+      "items": {
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The heir casts one of the following spells, using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>At Will:</strong> [[/item .IZW19ClgoF4rfop8]]{Druidcraft}, [[/item .guQXyx6Ax75ve5G7]]{Light}, [[/item .GpDHkqZxxCxG6AOt]]{Speak With Animals}</p><p><strong>3/Day Each:</strong> [[/item .XPuOCJ08a5z3beFk]]{Animal Friendship}, [[/item .r16J1B7ra1BUope8]]{Animal Messenger}</p><p><strong>1/Day:</strong> [[/item .B14IZr3XLrwJeoD0]]{Ice Storm}</p>",
+          "activities": {
+            "Druidcraft": {
+              "name": "Druidcraft"
+            },
+            "Light": {
+              "name": "Light"
+            },
+            "Speak With Animals": {
+              "name": "Speak With Animals"
+            },
+            "Animal Friendship": {
+              "name": "Animal Friendship"
+            },
+            "Animal Messenger": {
+              "name": "Animal Messenger"
+            },
+            "Ice Storm": {
+              "name": "Ice Storm"
+            }
+          }
+        },
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The heir makes four attacks, using [[/item Scimitar]] or [[/item Lunar Wisp]] in any combination.</p>"
+        },
+        "Lunar Wisp": {
+          "name": "Lunar Wisp",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]., and the target emits Dim Light in a 10-foot radius and can’t benefit from the Invisible condition until the end of the heir’s next turn.</p>",
+          "effects": {
+            "Lunar Wisp: Invisible": {
+              "name": "Lunar Wisp: Invisible"
+            }
+          }
+        },
+        "Spur Beast": {
+          "name": "Spur Beast",
+          "description": "<p>The heir targets a Beast it can see within 30 feet. The target can take a Reaction to move up to half its Speed and make one melee attack.</p>"
+        },
+        "Leather Armor": {
+          "name": "Leather Armor"
+        },
+        "Druidcraft": {
+          "name": "Druidcraft",
+          "description": "<p>Whispering to the spirits of nature, you create one of the following effects within range.</p><p><strong>Weather Sensor.</strong> You create a Tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round.</p><p><strong>Bloom.</strong> You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.</p><p><strong>Sensory Effect.</strong> You create a harmless sensory effect, such as falling leaves, spectral dancing fairies, a gentle breeze, the sound of an animal, or the faint odor of skunk. The effect must fit in a 5-foot Cube.</p><p><strong>Fire Play.</strong> You light or snuff out a candle, a torch, or a campfire.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Light": {
+          "name": "Light",
+          "description": "<p>You touch one Large or smaller object that isn't being worn or carried by someone else. Until the spell ends, the object sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The light can be colored as you like.</p><p>Covering the object with something opaque blocks the light. The spell ends if you cast it again.</p>",
+          "materials": {
+            "value": "a firefly or phosphorescent moss"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Speak with Animals": {
+          "name": "Speak with Animals",
+          "description": "<p>For the duration, you can comprehend and verbally communicate with Beasts, and you can use any of the Influence action's skill options with them.</p><p>Most Beasts have little to say about topics that don't pertain to survival or companionship, but at minimum, a Beast can give you information about nearby locations and monsters, including whatever it has perceived within the past day.</p>",
+          "effects": {
+            "Bestial Communication": {
+              "name": "Bestial Communication"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Animal Friendship": {
+          "name": "Animal Friendship",
+          "description": "<p>Target a Beast that you can see within range. The target must succeed on a Wisdom saving throw or have the &amp;Reference[charmed apply=false] condition for the duration. If you or one of your allies deals damage to the target, the spells ends.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional Beast for each spell slot level above 1.</p>",
+          "materials": {
+            "value": "a morsel of food"
+          },
+          "effects": {
+            "Charmed": {
+              "name": "Charmed",
+              "description": "<p><span style=\"font-family:Signika, sans-serif\">The target has the &amp;Reference[charmed apply=false] condition for the duration. If you or one of your allies deals damage to the target, the spells ends.</span></p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Animal Messenger": {
+          "name": "Animal Messenger",
+          "description": "<p>A Tiny Beast of your choice that you can see within range must succeed on a Charisma saving throw, or it attempts to deliver a message for you (if the target's Challenge Rating isn't 0, it automatically succeeds). You specify a location you have visited and a recipient who matches a general description, such as \"a person dressed in the uniform of the town guard\" or \"a red-haired dwarf wearing a pointed hat.\" You also communicate a message of up to twenty-five words. The Beast travels for the duration toward the specified location, covering about 25 miles per 24 hours or 50 miles if the Beast can fly.</p><p>When the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn't reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The spell's duration increases by 48 hours for each spell slot level above 2.</p>",
+          "materials": {
+            "value": "a morsel of food"
+          },
+          "effects": {
+            "Carrying Message": {
+              "name": "Carrying Message",
+              "description": "<p>The Beast travels for the duration toward the specified location, covering about 25 miles per 24 hours or 50 miles if the Beast can fly.</p><p>When the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn’t reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Ice Storm": {
+          "name": "Ice Storm",
+          "description": "<p>Hail falls in a 20-foot-radius, 40-foot-high Cylinder centered on a point within range. Each creature in the Cylinder makes a Dexterity saving throw. A creature takes 2d10 Bludgeoning damage and 4d6 Cold damage on a failed save or half as much damage on a successful one.</p><p>Hailstones turn ground in the Cylinder into &amp;Reference[DifficultTerrain] until the end of your next turn.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The Bludgeoning damage increases by 1d10 for each spell slot level above 4.</p>",
+          "materials": {
+            "value": "a mitten"
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Pack Tactics": {
+          "name": "Pack Tactics",
+          "description": "<p>The [[lookup @name lowercase]] has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]'s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.</p>"
+        },
+        "Scimitar": {
+          "name": "Scimitar",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        }
+      }
+    },
+    "Vulkoori Stingblade": {
+      "name": "Vulkoori Stingblade",
+      "tokenName": "Vulkoori Stingblade",
+      "description": "<p>Vulkoori drow warriors coat their weapons with the same deadly scorpion venom they use to tattoo their skin. Thanks to their extensive use of poison, they are resistant to the scorpion venom’s full effects.</p>",
+      "items": {
+        "Stingblade": {
+          "name": "Stingblade",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Boomerang": {
+          "name": "Boomerang",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        },
+        "Studded Leather Armor": {
+          "name": "Studded Leather Armor"
+        },
+        "Fey Ancestry": {
+          "name": "Fey Ancestry",
+          "description": "<p>Magic can’t put the stingblade to sleep.</p>"
+        }
+      }
+    },
+    "Vulkoori Venom Priest": {
+      "name": "Vulkoori Venom Priest",
+      "tokenName": "Vulkoori Venom Priest",
+      "description": "<p>Vulkoori Venom Priest. Vulkoori venom priests delight in inflicting suffering through poison. Their weaponry and magic are carefully crafted to evoke the presence of the scorpion-god and strike terror into their enemies’ hearts</p>",
+      "items": {
+        "Spellcasting": {
+          "name": "Spellcasting",
+          "description": "<p>The priest casts one of the following spells, using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +[[lookup @attributes.spell.attack]] to hit with spell attacks):</p><p><strong>At Will:</strong> [[/item .mOJqfekl8moj6sAx]]{Dancing Lights}, [[/item .8j25APk7DXxewJQM]]{Ray Of Sickness}, [[/item .VnlOyUquUB6pYUzO]]{Thaumaturgy}</p><p><strong>1/Day Each:</strong> [[/item .4jbHK77rSxKGA2ea]]{Cure Wounds}, [[/item .mDsaNf33SK3Jtp2I]]{Hold Person}, [[/item .kYgJf2TMrqNjIcrI]]{Protection From Poison}</p>",
+          "activities": {
+            "Dancing Lights": {
+              "name": "Dancing Lights"
+            },
+            "Ray Of Sickness": {
+              "name": "Ray Of Sickness"
+            },
+            "Thaumaturgy": {
+              "name": "Thaumaturgy"
+            },
+            "Cure Wounds": {
+              "name": "Cure Wounds"
+            },
+            "Hold Person": {
+              "name": "Hold Person"
+            },
+            "Protection From Poison": {
+              "name": "Protection From Poison"
+            }
+          }
+        },
+        "Venom Staff": {
+          "name": "Venom Staff",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target has the &amp;Reference[Poisoned apply=false] condition until the end of the priest’s next turn.</p>",
+          "effects": {
+            "Poisoned": {
+              "name": "Poisoned",
+              "description": "<p>The target has the &amp;Reference[Poisoned apply=false] condition until the end of the priest’s next turn.</p>"
+            }
+          }
+        },
+        "Intensify Poison": {
+          "name": "Intensify Poison",
+          "description": "<p>Each creature with the Poisoned condition within a [[lookup @target.template.size activity=1cCjIGs9om9jnG1K]]-foot Emanation originating from the priest takes [[/damage average]] damage.</p>",
+          "activities": {
+            "damage": {
+              "affects": {
+                "special": "with the Poisoned condition"
+              }
+            }
+          }
+        },
+        "Studded Leather Armor": {
+          "name": "Studded Leather Armor"
+        },
+        "Fey Ancestry": {
+          "name": "Fey Ancestry",
+          "description": "<p>Magic can’t put the priest to sleep.</p>"
+        },
+        "Dancing Lights": {
+          "name": "Dancing Lights",
+          "description": "<p>You create up to four torch-size lights within range, making them appear as torches, lanterns, or glowing orbs that hover for the duration. Alternatively, you combine the four lights into one glowing Medium form that is vaguely humanlike. Whichever form you choose, each light sheds Dim Light in a 10-foot radius.</p><p>As a Bonus Action, you can move the lights up to 60 feet to a space within range. A light must be within 20 feet of another light created by this spell, and a light vanishes if it exceeds the spell's range.</p>",
+          "materials": {
+            "value": "a bit of phosphorus"
+          },
+          "activities": {
+            "Create Lights": {
+              "name": "Create Lights"
+            },
+            "Move Lights": {
+              "name": "Move Lights"
+            }
+          },
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Ray of Sickness": {
+          "name": "Ray of Sickness",
+          "description": "<p>You shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 Poison damage and has the &amp;Reference[poisoned] condition until the end of your next turn.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 1.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Thaumaturgy": {
+          "name": "Thaumaturgy",
+          "description": "<p>You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.</p><p><strong>Altered Eyes.</strong> You alter the appearance of your eyes for 1 minute.</p><p><strong>Booming Voice.</strong> Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p><p><strong>Fire Play.</strong> You cause flames to flicker, brighten, dim, or change color for 1 minute.</p><p><strong>Invisible Hand.</strong> You instantaneously cause an unlocked door or window to fly open or slam shut.</p><p><strong>Phantom Sound.</strong> You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.</p><p><strong>Tremors.</strong> You cause harmless tremors in the ground for 1 minute.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Cure Wounds": {
+          "name": "Cure Wounds",
+          "description": "<p>A creature you touch regains a number of Hit Points equal to 2d8 plus your spellcasting ability modifier.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The healing increases by 2d8 for each spell slot level above 1.</p>",
+          "effects": {
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Hold Person": {
+          "name": "Hold Person",
+          "description": "<p>Choose a Humanoid that you can see within range. The target must succeed on a Wisdom saving throw or have the &amp;Reference[paralyzed apply=false] condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional Humanoid for each spell slot level above 2.</p>",
+          "materials": {
+            "value": "a straight piece of iron"
+          },
+          "effects": {
+            "Paralyzed": {
+              "name": "Paralyzed",
+              "description": "<p>At the end of each of its turns, the target repeats the [[/save ability=wis]] save, ending the spell on itself on a success.</p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Protection from Poison": {
+          "name": "Protection from Poison",
+          "description": "<p>You touch a creature and end the &amp;Reference[poisoned] condition on it. For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.</p>",
+          "effects": {
+            "Poison Protection": {
+              "name": "Poison Protection",
+              "description": "<p><span style=\"font-family:Signika, sans-serif\">For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.</span></p>"
+            },
+            "Spell Changes": {
+              "name": "Spell Changes"
+            }
+          }
+        },
+        "Holy Symbol": {
+          "name": "Holy Symbol",
+          "description": "<p>A Holy Symbol takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.</p><p>The table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.</p><table><caption>Holy Symbols</caption><thead><tr><td>Symbol</td><td>Weight</td><td>Cost</td></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyAmuletworn]{Amulet} (worn or held)</td><td>1 lb.</td><td>5 GP</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyEmblemborn]{Emblem} (borne on fabric or a Shield)</td><td>—</td><td>5 GP</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyReliquaryh]{Reliquary} (held)</td><td>2 lb.</td><td>5 GP</td></tr></tbody></table>"
+        }
+      }
+    },
+    "Warforged Titan": {
+      "name": "Warforged Titan",
+      "tokenName": "Warforged Titan",
+      "description": "<p>Warforged titans are hulking constructs built to wreak paths of destruction through enemy armies. Some of the most feared combatants of the Last War, warforged titans are barely sentient, with just enough intelligence to follow commands.</p><p><em><strong>Legacy of Giants</strong></em>. In the Age of Giants, giant artificers built mindless war golems to aid them in their war against the quori. Millennia later, some of these golems were unearthed by adventurers searching for the secrets of that age, then turned over to artificers working for the dragonmarked houses during the Last War. House Cannith studied these designs, and in the course of uncovering the secrets of the golems and the giant artificers who made them, House Cannith created the first warforged titans.</p>",
+      "items": {
+        "Multiattack": {
+          "name": "Multiattack",
+          "description": "<p>The [[lookup @name lowercase]] makes one [[/item Axehand]] attack and one [[/item Hammerfist]] attack.</p>"
+        },
+        "Platforms": {
+          "name": "Platforms",
+          "description": "<p>The [[lookup @name lowercase]] has two platforms built into its chassis. One Medium or smaller creature can ride on each platform without squeezing. To make a melee attack against a target within 5 feet of the warforged, they must use spears or weapons with reach and the target must be Large or larger.</p>"
+        },
+        "Siege Monster": {
+          "name": "Siege Monster",
+          "description": "<p>The [[lookup @name lowercase]] deals double damage to objects and structures.</p>"
+        },
+        "Axehand": {
+          "name": "Axehand",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]], plus [[/damage 2d10 slashing average]] damage if the target is &amp;Reference[Prone apply=false].</p>",
+          "activities": {
+            "Attack: Prone Target": {
+              "name": "Attack: Prone Target"
+            }
+          },
+          "effects": {
+            "Prone": {
+              "name": "Prone"
+            }
+          }
+        },
+        "Hammerfist": {
+          "name": "Hammerfist",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it must succeed on a [[/save format=long]] or be knocked &amp;Reference[Prone apply=false].</p>",
+          "effects": {
+            "Prone": {
+              "name": "Prone"
+            }
+          }
+        },
+        "Sweeping Axe": {
+          "name": "Sweeping Axe",
+          "description": "<p>The [[lookup @name lowercase]] makes a sweep with its axehand, and each creature within [[lookup @target.template.size activity=aFgu5DuYlYYtF705]] feet of it must make a [[/save format=long]]. A creature takes [[/damage average]] damage on a failed save, or half as much damage on a successful one.</p>"
+        }
+      }
+    },
+    "Zombie": {
+      "name": "Zombie",
+      "tokenName": "Zombie",
+      "description": "<h1>Zombies</h1><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.2xCqDBEM46bLXD4q caption=false cite=false classes=\"no-embed mm\"]</p><h2>Zombie</h2><p>@Embed[Compendium.dnd-monster-manual.content.JournalEntry.mmAppendixMonste.JournalEntryPage.WuSY8kEg0E7DusN5 caption=false cite=false classes=\"no-embed mm\"]</p>",
+      "items": {
+        "Undead Fortitude": {
+          "name": "Undead Fortitude",
+          "description": "<p class=\"feature\">If damage reduces the [[lookup @name lowercase]] to 0 Hit Points, it makes a Constitution saving throw (DC 5 plus the damage taken) unless the damage is Radiant or from a Critical Hit. On a successful save, the [[lookup @name lowercase]] drops to 1 Hit Point instead.</p>"
+        },
+        "Slam": {
+          "name": "Slam",
+          "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+        }
+      }
+    }
+  }
+}
