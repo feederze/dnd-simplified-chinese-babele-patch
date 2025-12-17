@@ -2965,21 +2965,21 @@
       "description": "<p>A creature that drinks water from the [[lookup @name lowercase]]'s pitcher regains [[/heal average]], reduces its exhaustion level by 1, and must succeed on a [[/save format=long]] or fall &amp;Reference[unconscious apply=false]{unconscious} for 10 minutes.</p><p>An unconscious creature wakes up if it takes damage or if another creature takes an action to shake it awake.</p><p>Drinking the water provides a creature enough nourishment to sustain it for one day.</p>",
       "effects": {
         "Unconscious": {
-          "name": "Unconscious",
+          "name": "昏迷",
           "description": "<p>The target is &amp;Reference[unconscious apply=false]{unconscious} for 10 minutes.</p>"
         }
       }
     },
     "Thorn": {
       "name": "Thorn",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Grasping Whirlpool": {
       "name": "Grasping Whirlpool",
       "description": "<p>The [[lookup @name]] magically creates a swirling vortex of water centered on a point he can see within [[lookup @range.value activity=dnd5eactivity000]] feet. The vortex appears in the shape of a cylinder that is [[lookup @target.template.height activity=dnd5eactivity000]] feet tall with a [[lookup @target.template.size activity=dnd5eactivity000]]-foot radius.</p><p>Each creature in the area must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[restrained apply=false]{restrained}</p><p>On a success, a creature takes half the damage, isn’t restrained, and can choose to be pushed out of the whirlpool’s space.</p><p>A creature that chooses not to be pushed suffers the consequences of a failed saving throw.</p><p>While restrained, a creature is unable to breathe unless it can breathe water, and it must succeed on a [[/save format=long activity=3VHvaYH0exqHgOvI]] at the end of each of its turns or take [[/damage average activity=3VHvaYH0exqHgOvI]] damage.</p><p>A creature, including the restrained creature, can take an action to free the restrained creature by succeeding on a [[/check format=long]].</p><p>A creature with a swimming speed has <strong>advantage</strong> on the saving throw and on the Strength check to escape.</p>",
       "activities": {
         "Save: End of Turn": {
-          "name": "Save: End of Turn",
+          "name": "豁免：回合结束",
           "condition": "While restrained in the whirlpool",
           "affects": {
             "special": "Creature inside the whirlpool"
@@ -2994,7 +2994,7 @@
       },
       "effects": {
         "Restrained": {
-          "name": "Restrained",
+          "name": "束缚",
           "description": "<p>The target is is &amp;Reference[restrained apply=false]{restrained}.</p>"
         }
       }
@@ -3004,22 +3004,22 @@
       "description": "<p>The [[lookup @name lowercase]] generates a blast of hot wind and sand in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in the area must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[blinded apply=false]{blinded} for 1 minute.</p><p>On a success, a creature takes half the damage and isn’t blinded.</p><p>A blinded creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p><p>The area is heavily obscured by airborne sand until the start of the [[lookup @name lowercase]]'s next turn.</p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} for 1 minute. A blinded creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
     },
     "Hurl Flame": {
       "name": "Hurl Flame",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Etherealness": {
-      "name": "Etherealness",
+      "name": "以太化",
       "description": "<p>The [[lookup @name lowercase]] enters the Ethereal Plane from the Material Plane, or vice versa. It is visible on the Material Plane while it is in the Border Ethereal, and vice versa, yet it can’t affect or be affected by anything on the other plane.</p>"
     },
     "Khopesh of Oblivion": {
       "name": "Khopesh of Oblivion",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Enclose": {
       "name": "Enclose",
@@ -3040,11 +3040,11 @@
       },
       "effects": {
         "Blinded & Restrained": {
-          "name": "Blinded & Restrained",
+          "name": "目盲并束缚",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} and &amp;Reference[restrained apply=false]{restrained}, it has &amp;Reference[total cover] from attacks and other effects outside the attacking creature.</p>"
         },
         "Prone": {
-          "name": "Prone"
+          "name": "倒地"
         }
       }
     },
@@ -3086,7 +3086,7 @@
       "description": "<p>The [[lookup @name lowercase]] intones a disturbing invocation of the sun god at one creature it can see within [[lookup @range.value activity=dnd5eactivity000]] feet of it.</p><p>The target must succeed on a [[/save format=long]] or be &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -3103,12 +3103,12 @@
       },
       "effects": {
         "Leadership": {
-          "name": "Leadership"
+          "name": "领导力"
         }
       }
     },
     "Watery Camouflage": {
-      "name": "Watery Camouflage",
+      "name": "水流伪装",
       "description": "<p>In dim light or darkness, a [[lookup @name lowercase]] that’s underwater is invisible.</p>"
     },
     "Reality-Altering Words": {
@@ -3116,7 +3116,7 @@
       "description": "<p>The [[lookup @name lowercase]] speaks a phrase that temporarily reshapes reality around it, warping the terrain, displacing creatures, and disrupting magic.</p><p>Each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of the [[lookup @name lowercase]] must succeed on a [[/save format=long]] or be pulled or pushed up to 25 feet toward or away from the [[lookup @name lowercase]] (the [[lookup @name lowercase]]'s choice) and knocked &amp;Reference[prone apply=false]{prone}</p><p>Instead of pushing or pulling a creature that failed the saving throw, the [[lookup @name lowercase]] can end one magical effect of its choice of 4th level or lower on that creature.</p><p>The area then becomes &amp;Reference[difficult terrain] until the start of the [[lookup @name lowercase]]'s next turn. Moving through this difficult terrain doesn’t cost the [[lookup @name lowercase]] extra movement.</p>",
       "effects": {
         "Prone": {
-          "name": "Prone"
+          "name": "倒地"
         }
       }
     },
@@ -3167,7 +3167,7 @@
       },
       "effects": {
         "Stunned": {
-          "name": "Stunned",
+          "name": "震慑",
           "description": "<p>The target is &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p>"
         },
         "Diadv. CHA Checks": {
@@ -3193,13 +3193,13 @@
       "description": "<p>The [[lookup @name lowercase]] releases hallucinogenic spores in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in the area must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[incapacitated apply=false]{incapacitated} until the end of its next turn.</p><p>On a success, a creature takes half the damage and isn’t incapacitated.</p>",
       "effects": {
         "Incapacitated": {
-          "name": "Incapacitated",
+          "name": "失能",
           "description": "<p>The target is &amp;Reference[incapacitated apply=false]{incapacitated} until the end of its next turn.</p>"
         }
       }
     },
     "Tendrils": {
-      "name": "Tendrils",
+      "name": "卷须",
       "description": "<p>[[/attack extended]]. [[/damage average extended]].</p><p></p>"
     },
     "Burn from the Inside": {
@@ -3214,7 +3214,7 @@
       }
     },
     "Moonlight Step": {
-      "name": "Moonlight Step",
+      "name": "月光飞步",
       "description": "<p>The [[lookup @name]] teleports, along with any equipment he is wearing or carrying, up to [[lookup @range.value activity=dnd5eactivity000]] feet to an unoccupied space he can see.</p><p>The origin and destination spaces must contain moonlight.</p>"
     },
     "Dissolving Gaze": {
@@ -3227,14 +3227,14 @@
       },
       "effects": {
         "Paralyzed": {
-          "name": "Paralyzed",
+          "name": "麻痹",
           "description": "<p>The target is &amp;Reference[paralyzed apply=false]{paralyzed} until the start of its next turn.</p>"
         }
       }
     },
     "Tusk": {
       "name": "Tusk",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Transparent": {
       "name": "Transparent",
@@ -3296,13 +3296,13 @@
           "description": "<p>The sap demon's speed is increased by 10 feet until the end of its next turn.</p>"
         },
         "Speed -10": {
-          "name": "Speed -10",
+          "name": "速度降低 10 尺",
           "description": "<p>The sap demon's speed is decreased by 10 feet until the end of its next turn.</p>"
         }
       }
     },
     "Blood Bolt": {
-      "name": "Blood Bolt",
+      "name": "血蚀箭",
       "description": "<p>[[/attack extended]]. [[/damage average extended]].</p><p>If the target is a creature with blood, it must succeed on a [[/save format=long]] or be &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p>",
       "activities": {
         "save": {
@@ -3314,7 +3314,7 @@
       },
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p>"
         }
       }
@@ -3324,11 +3324,11 @@
       "description": "<p>The [[lookup @name lowercase]] can see through areas obscured by snow or fog without penalty.</p>"
     },
     "Detect": {
-      "name": "Detect",
+      "name": "侦查",
       "description": "<p>The [[lookup @name lowercase]] makes a [[/check prc format=long]].</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
@@ -3343,15 +3343,15 @@
       }
     },
     "Shadow Bolt": {
-      "name": "Shadow Bolt",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "name": "暗影箭",
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Spray of Moonlight": {
       "name": "Spray of Moonlight",
       "description": "<p>The [[lookup @name]] sends moonlight flooding out from her.</p><p>Each creature within 15 feet of her must make a [[/save format=long]], taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.</p><p>If the [[lookup @name]] is standing in an area of moonlight when she uses this action, each creature in the area has <strong>disadvantage</strong> on the saving throw.</p><p>A creature that fails the saving throw by 5 or more is &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p><p></p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>"
         }
       }
@@ -3366,14 +3366,14 @@
     },
     "Cacophony Burst": {
       "name": "Cacophony Burst",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Thunderstrike": {
       "name": "Thunderstrike",
       "description": "<p>The [[lookup @name lowercase]] calls a sizzling bolt of lightning out of the sky, or from the air if underground or indoors, to strike a point the [[lookup @name lowercase]] can see within 150 feet of it.</p><p>Each creature within 20 feet of that point must make a [[/save format=long]].</p><p>On a failure, the creature takes 36 ([[/r 8d8]]) lightning damage and is &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p><p>On a success, the creature takes half the damage and isn’t stunned.</p>",
       "effects": {
         "Stunned": {
-          "name": "Stunned",
+          "name": "震慑",
           "description": "<p>The target is &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p>"
         }
       }
@@ -3392,7 +3392,7 @@
     },
     "Ice Bolt": {
       "name": "Ice Bolt",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Soul Drain": {
       "name": "Soul Drain",
@@ -3429,7 +3429,7 @@
     },
     "Ethereal Bite": {
       "name": "Ethereal Bite",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Stuff of Dreams": {
       "name": "Stuff of Dreams",
@@ -3440,7 +3440,7 @@
       "description": "<p>The [[lookup @name lowercase]] engulfs a Medium or smaller creature grappled by it.</p><p>The engulfed target is &amp;Reference[blinded apply=false]{blinded} and &amp;Reference[restrained apply=false]{restrained}, it has &amp;Reference[total cover] against attacks and other effects outside the [[lookup @name lowercase]], and it must succeed on a [[/save format=long]] at the start of each of the [[lookup @name lowercase]]'s turns or sing a lament of the mistakes and misdeeds it has performed in its lifetime.</p><p>While singing, the engulfed creature can still act, but it can’t otherwise speak, including casting spells with verbal components.</p><p>If the [[lookup @name lowercase]] moves, the engulfed creature moves with it. The [[lookup @name lowercase]] can have only one creature engulfed at a time.</p>",
       "activities": {
         "Engulf": {
-          "name": "Engulf",
+          "name": "吞没",
           "affects": {
             "special": "Grappled by the ravenala"
           }
@@ -3448,7 +3448,7 @@
       },
       "effects": {
         "Engulfed": {
-          "name": "Engulfed",
+          "name": "吞没",
           "description": "<p>The engulfed target is &amp;Reference[blinded apply=false]{blinded} and &amp;Reference[restrained apply=false]{restrained}, it has &amp;Reference[total cover] against attacks and other effects outside the ravenala.</p>"
         }
       }
@@ -3467,17 +3467,17 @@
       },
       "effects": {
         "Restrained": {
-          "name": "Restrained",
+          "name": "束缚",
           "description": "<p>The target is &amp;Reference[restrained apply=false]{restrained}.</p>"
         }
       }
     },
     "Falchion": {
       "name": "Falchion",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Keen Sight and Smell": {
-      "name": "Keen Sight and Smell",
+      "name": "敏锐视听觉",
       "description": "<p>The [[lookup @name lowercase]] has <strong>advantage</strong> on Wisdom (Perception) checks that rely on sight or smell.</p>"
     },
     "Necrotic Slam": {
@@ -3489,7 +3489,7 @@
       "description": "<p>Whenever the [[lookup @name lowercase]] moves into a creature’s space or starts its turn in another creature’s space, the creature must succeed on a [[/save format=long]] or fall &amp;Reference[prone apply=false]{prone}</p><p>A prone creature must succeed on a [[/check format=long]] to stand up in a space occupied by the swarm.</p>",
       "effects": {
         "Prone": {
-          "name": "Prone"
+          "name": "倒地"
         }
       }
     },
@@ -3521,7 +3521,7 @@
       },
       "effects": {
         "Charmed": {
-          "name": "Charmed",
+          "name": "魅惑",
           "description": "<p>The target is &amp;Reference[charmed apply=false]{charmed} until the start of its next turn.</p>"
         }
       }
@@ -3541,7 +3541,7 @@
       "description": "<p>A creature that starts its turn in the [[lookup @name lowercase]]'s space has its speed halved and must succeed on a [[/save format=long]] or become &amp;Reference[blinded aplly=false]{blinded}.</p><p>Both effects end when the creature ends its turn outside the [[lookup @name lowercase]]'s space.</p><p>On a successful saving throw, the creature is immune to the blinding effect of Weight of Wings for the next 24 hours.</p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded aplly=false]{blinded}.</p>"
         }
       }
@@ -3551,7 +3551,7 @@
       "description": "<p>The [[lookup @name lowercase]] terrifies a creature within [[lookup @range.value activity=dnd5eactivity000]] feet of it with a look.</p><p>The target must succeed on a [[/save format=long]] or take [[/damage average]] damage and be &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p><p>The [[lookup @name lowercase]] regains hp equal to the psychic damage dealt.</p>",
       "effects": {
         "Stunned": {
-          "name": "Stunned",
+          "name": "震慑",
           "description": "<p>The target is &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p>"
         }
       }
@@ -3573,7 +3573,7 @@
       "description": "<p>The [[lookup @name lowercase]] blasts wintry weather on a point she can see within [[lookup @range.value activity=dnd5eactivity000]] feet of her.</p><p>Each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of that point must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[restrained apply=false]{restrained} by ice until the end of its next turn.</p><p>On a success, a creature takes half the damage and isn’t restrained.</p><p>The area then becomes icy, difficult terrain for 1 minute.</p>",
       "effects": {
         "Restrained": {
-          "name": "Restrained",
+          "name": "束缚",
           "description": "<p>The target is &amp;Reference[restrained apply=false]{restrained} by ice until the end of its next turn.</p>"
         }
       }
@@ -3617,7 +3617,7 @@
       },
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} until the end of its next turn.</p>"
         }
       }
@@ -3636,7 +3636,7 @@
       "description": "<p>If the [[lookup @name lowercase]] remains in nonmagical sunlight for 1 minute, it becomes &amp;Reference[petrified apply=false]{petrified} at the end of that minute.</p>",
       "effects": {
         "Petrified": {
-          "name": "Petrified",
+          "name": "石化",
           "description": "<p>The shellycoat is &amp;Reference[petrified apply=false]{petrified}.</p>"
         }
       }
@@ -3655,7 +3655,7 @@
       "description": "<p>The [[lookup @name lowercase]] sends one creature it can see within [[lookup @range.value activity=dnd5eactivity000]] feet of it outside of the flow of time, shunting the creature to a tiny demiplane.</p><p>The target must succeed on a [[/save format=long]] or be &amp;Reference[stunned apply=false]{stunned} and magically shunted outside of time for 1 minute.</p><p>The creature disappears for the duration, returning to the space it previously occupied, or the nearest unoccupied space, when the effect ends.</p><p>At the end of each of its turns, the target can repeat the saving throw, ending the effect on itself on a success.</p>",
       "effects": {
         "Stunned": {
-          "name": "Stunned",
+          "name": "震慑",
           "description": "<p>You are &amp;Reference[stunned apply=false]{stunned} and magically shunted outside of time for 1 minute.</p><p>At the end of each of your turns, you can repeat the saving throw, ending the effect on itself on a success.</p>"
         }
       }
@@ -3665,7 +3665,7 @@
       "description": "<p>The [[lookup @name lowercase]] speaks sweet words to a creature she can see within [[lookup @range.value activity=dnd5eactivity000]] feet of her and that can hear her.</p><p>The creature must succeed on a [[/save format=long]] or be &amp;Reference[charmed apply=false]{charmed} for 1 minute.</p><p>While charmed in this way, the creature has disadvantage on Wisdom and Charisma saving throws against spells cast by the [[lookup @name lowercase]].</p>",
       "effects": {
         "Charmed": {
-          "name": "Charmed",
+          "name": "魅惑",
           "description": "<p>The target is &amp;Reference[charmed apply=false]{charmed} for 1 minute.</p><p>While charmed in this way, the creature has disadvantage on Wisdom and Charisma saving throws against spells cast by the enchantress.</p>"
         }
       }
@@ -3695,14 +3695,14 @@
       "description": "<p>The [[lookup @name lowercase]] sends a seductive glance at a creature she can see within 30 feet of her.</p><p>The target must succeed on a [[/save format=long]] or be &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p><p>On a successful save, a creature is immune to this [[lookup @name lowercase]]'s Stunning Glance for the next 24 hours.</p>",
       "effects": {
         "Stunned": {
-          "name": "Stunned",
+          "name": "震慑",
           "description": "<p>The target is &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p>"
         }
       }
     },
     "Frost Bolt": {
       "name": "Frost Bolt",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Frightful Charge": {
       "name": "Frightful Charge",
@@ -3722,7 +3722,7 @@
       },
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p>"
         }
       }
@@ -3740,7 +3740,7 @@
       "description": "<p>The [[lookup @name lowercase]] has <strong>advantage</strong> on initiative rolls while in its temple or within 30 feet of a priest of its deity.</p><section class=\"secret\" id=\"secret-2lil5rZBA7Kelzws\"><p><strong>Foundry Note</strong></p><p>There is an <strong>Active Effect (AE)</strong> that you can enable advantage to Initiative in the <strong>Effects tab</strong> of this sheet</p></section>",
       "effects": {
         "Initiative Advantage": {
-          "name": "Initiative Advantage"
+          "name": "先攻优势"
         }
       }
     },
@@ -3749,13 +3749,13 @@
       "description": "<p>The [[lookup @name lowercase]] releases a terrifying, flame-coated roar in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in that area must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[frightened apply=false]{frightened} until the end of its next turn.</p><p>On a success, a creature takes half the damage and isn’t frightened.</p>",
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} until the end of its next turn.</p>"
         }
       }
     },
     "Bone Shard": {
-      "name": "Bone Shard",
+      "name": "骸骨碎片",
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or be knocked &amp;Reference[prone apply=false]{prone} and &amp;Reference[restrained apply=false]{restrained} as it is pinned to the ground by the shard.</p><p>A creature, including the restrained target, can take its action to free the target by succeeding on a [[/check format=long]].</p>",
       "activities": {
         "save": {
@@ -3767,13 +3767,13 @@
       },
       "effects": {
         "Prone & Restrained": {
-          "name": "Prone & Restrained",
+          "name": "倒地和束缚",
           "description": "<p>The target is knocked &amp;Reference[prone apply=false]{prone} and &amp;Reference[restrained apply=false]{restrained} as it is pinned to the ground by the shard.</p>"
         }
       }
     },
     "Spellcasting": {
-      "name": "Spellcasting",
+      "name": "施法",
       "description": "<p>The [[lookup @name lowercase]] casts one of the following spells, requiring no {type} components and using [[lookup @attributes.spell.abilityLabel]] as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):</p><p><strong>At will:</strong></p><p><strong>3/day each:</strong></p><p><strong>2/day each:</strong></p><p><strong>1/day each:</strong></p>"
     },
     "Absorb Flesh": {
@@ -3789,7 +3789,7 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]].</p><p>The target is &amp;Reference[grappled apply=false]{grappled} (escape DC [[lookup @skills.ath.passive]]) if it is a Medium or smaller creature and the [[lookup @name lowercase]] doesn’t have another creature grappled.</p>",
       "activities": {
         "Escape Check": {
-          "name": "Escape Check",
+          "name": "逃脱检定",
           "condition": "If grappled by the rime worm",
           "affects": {
             "special": "Grappled by the rime worm"
@@ -3798,7 +3798,7 @@
       },
       "effects": {
         "Grappled": {
-          "name": "Grappled",
+          "name": "受擒",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled} if it is a Medium or smaller creature</p>"
         }
       }
@@ -3828,7 +3828,7 @@
       "description": "<p>The ash [[lookup @name lowercase]] blistering hot, choking ash in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in the area must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[poisoned apply=false]{poisoned} for 1 minute.</p><p>On a success, a creature takes half the damage and isn’t poisoned.</p><p>A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} for 1 minute. A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -3838,7 +3838,7 @@
       "description": "<p>The [[lookup @name lowercase]] burps intoxicating gas in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in the area must make a [[/save format=long]].</p><p>On a failure, a creature takes 7 ([[/r 2d6]]) poison damage and is &amp;Reference[poisoned apply=false]{poisoned} for 1 minute.</p><p>On a success, a creature takes half the damage and isn’t poisoned.</p><p>A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} for 1 minute. A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -3882,7 +3882,7 @@
       "description": "<p>Each creature of the [[lookup @name lowercase]]’s choice that is within 120 feet of the [[lookup @name lowercase]] and aware of it must succeed on a [[/save format=long]] or &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p><p>If a creature’s saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]'s Frightful Presence for the next 24 hours.</p>",
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute, and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -3925,15 +3925,15 @@
       "description": "<p>The [[lookup @name lowercase]] doesn’t provoke an &amp;Reference[OpportunityAttacks] when it flies out of an enemy’s reach.</p>"
     },
     "Water Breathing": {
-      "name": "Water Breathing",
-      "description": "<p>The [[lookup @name lowercase]] can breathe only underwater.</p>"
+      "name": "水下呼吸",
+      "description": "<p>[[lookup @name lowercase]] 只能在水下呼吸。</p>"
     },
     "Poisoned Claw": {
       "name": "Poisoned Claw",
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or be &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p><p></p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p>"
         }
       }
@@ -4031,7 +4031,7 @@
       }
     },
     "Fey Ancestry": {
-      "name": "Fey Ancestry",
+      "name": "妖精血统",
       "description": "<p>The [[lookup @name lowercase]] has <strong>advantage</strong> on saving throws against being charmed, and magic can’t put it to sleep.</p>"
     },
     "Spread Madness": {
@@ -4046,7 +4046,7 @@
     },
     "Talon": {
       "name": "Talon",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Web Walker": {
       "name": "Web Walker",
@@ -4061,7 +4061,7 @@
       "description": "<p>The [[lookup @name lowercase]] sings a magical song to one creature it can see within [[lookup @range.value activity=dnd5eactivity000]] feet of it.</p><p>The target must succeed on a [[/save format=long]] on fall &amp;Reference[unconscious apply=false]{unconscious} for 1 minute.</p><p>The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p><p>If the [[lookup @name lowercase]] uses a bonus action on its subsequent turns to continue singing, the target has <strong>disadvantage</strong> on this saving throw. Otherwise, the effect ends for a target if the target takes damage while below half its hp maximum.</p><p>If a creature’s saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]'s Slumbering Song for the next 24 hours.</p><p>The [[lookup @name lowercase]] can have up to two creatures unconscious from its song at a time.</p>",
       "effects": {
         "Unconscious": {
-          "name": "Unconscious",
+          "name": "昏迷",
           "description": "<p>The target is &amp;Reference[unconscious apply=false]{unconscious} for 1 minute.</p><p>The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -4081,7 +4081,7 @@
       "description": "<p>The [[lookup @name lowercase]] magically assaults the minds of up to three creatures it can see within 30 feet of it.</p><p>Each target must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[incapacitated apply=false]{incapacitated} for 1 minute as its mind fills with thoughts of eldritch terrors and otherworldly entities.</p><p>On a success, a creature takes half the damage and isn’t incapacitated.</p><p>An incapacitated creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Incapacitated": {
-          "name": "Incapacitated",
+          "name": "失能",
           "description": "<p>The target is &amp;Reference[incapacitated apply=false]{incapacitated} for 1 minute as its mind fills with thoughts of eldritch terrors and otherworldly entities.</p>"
         }
       }
@@ -4100,11 +4100,11 @@
       "description": "<p>The poisonous vines growing from the [[lookup @name lowercase]] entwine around its weapon.</p><p>When the [[lookup @name lowercase]] hits with any weapon, the weapon deals an extra 2d4 poison damage (included in the attack).</p>"
     },
     "Tail Attack": {
-      "name": "Tail Attack",
+      "name": "扫尾攻击",
       "description": "<p>The [[lookup @name lowercase]] makes one [[/item Tail]] attack.</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
@@ -4126,7 +4126,7 @@
       },
       "effects": {
         "Exhaustion": {
-          "name": "Exhaustion",
+          "name": "力竭",
           "description": "<p>If the saving throw fails by 5 or more, the creature also suffers one level of &amp;Reference[exhaustion apply=false]{exhaustion}.</p>"
         }
       }
@@ -4161,12 +4161,12 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]]., and the target is &amp;Reference[grappled apply=false]{grappled} (escape DC 16).</p><p>Until the grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}</p><p>The [[lookup @name lowercase]] has four roots, each of which can grapple only one target.</p>",
       "activities": {
         "Escape Check": {
-          "name": "Escape Check"
+          "name": "逃脱检定"
         }
       },
       "effects": {
         "Grappled & Restrained": {
-          "name": "Grappled & Restrained",
+          "name": "受擒并束缚",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled}. </p><p>Until the grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}.</p>"
         }
       }
@@ -4213,23 +4213,23 @@
       "description": "<p>Each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of [[lookup @name lowercase]] and that can hear the demon must succeed on a [[/save format=long]] or be &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "activities": {
         "Save: End of Turn": {
-          "name": "Save: End of Turn"
+          "name": "豁免：回合结束"
         }
       },
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p>"
         }
       }
     },
     "Stinger": {
-      "name": "Stinger",
+      "name": "诡刺",
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or be &amp;Reference[poisoned apply=false]{poisoned} for 1 hour.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
-          "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} for 1 hour.</p>"
+          "name": "中毒",
+          "description": "<p>你陷入&amp;Reference[poisoned apply=false]{中毒}  1 分钟。</p>"
         }
       }
     },
@@ -4238,7 +4238,7 @@
       "description": "<p>[[lookup @name]] makes one attack with [[/item Drain Life]].</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
@@ -4247,14 +4247,14 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or become &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p>"
         }
       }
     },
     "Unholy Trident": {
       "name": "Unholy Trident",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Speak with Beasts": {
       "name": "Speak with Beasts",
@@ -4265,16 +4265,16 @@
       "description": "<p>The [[lookup @name lowercase]] uses [[/item Call Blood]].</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
     "Skitter": {
-      "name": "Skitter",
+      "name": "窜行",
       "description": "<p>[[lookup @name lowercase]] moves up to half their speed and makes one [[/item Claw]] attack.</p><p>This movement doesn’t provoke &amp;Reference[OpportunityAttacks]</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
@@ -4287,11 +4287,11 @@
       "description": "<p>The [[lookup @name lowercase]] deals double damage to objects and structures made of wood or lighter materials.</p>"
     },
     "Amphibious": {
-      "name": "Amphibious",
-      "description": "<p>The [[lookup @name lowercase]] can breathe air and water.</p>"
+      "name": "水陆两栖",
+      "description": "<p>[[lookup @name lowercase]]可以在空气和水中呼吸。</p>"
     },
     "Blood Frenzy": {
-      "name": "Blood Frenzy",
+      "name": "尸山血河",
       "description": "<p>The [[lookup @name lowercase]] has <strong>advantage</strong> on melee attack rolls against any creature that doesn’t have all of its hp.</p><section class=\"secret\" id=\"secret-m6ZHBHqR1G4o2ioy\"><p><strong>Foundry Note</strong></p><p>This feature includes an <strong>Active Effect (AE)</strong> that can be used as a reminder by the target but does not automate the benefit above.</p></section>",
       "activities": {
         "utility": {
@@ -4316,7 +4316,7 @@
       "description": "<p>The [[lookup @name lowercase]] releases a puff of psychotropic spores around itself.</p><p>Each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of the [[lookup @name lowercase]] must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[incapacitated apply=false]{incapacitated} for 1 minute.</p><p>On a success, a creature takes half the damage and isn’t incapacitated.</p><p>When an incapacitated creature moves, it moves in a random direction.</p><p>An incapacitated creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Incapacitated": {
-          "name": "Incapacitated",
+          "name": "失能",
           "description": "<p>The target is &amp;Reference[incapacitated apply=false]{incapacitated} for 1 minute.</p>"
         }
       }
@@ -4336,7 +4336,7 @@
       "description": "<p>A creature that starts its turn within [[lookup @range.value activity=dnd5eactivity000]] feet of the [[lookup @name lowercase]] must succeed on a [[/save format=long]] or be &amp;Reference[poisoned apply=false]{poisoned} for 1 minute.</p><p>A poisoned creature that fails this saving throw is also &amp;Reference[incapacitated apply=false]{incapacitated} while poisoned in this way.</p><p>A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p><p>If a creature’s saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]'s Nauseating Stench for the next 24 hours.</p>",
       "effects": {
         "Poisoned & Incapacitated": {
-          "name": "Poisoned & Incapacitated",
+          "name": "中毒并失能",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} for 1 minute.</p><p>A poisoned creature that fails this saving throw is also &amp;Reference[incapacitated apply=false]{incapacitated} while poisoned in this way.</p><p>A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -4410,7 +4410,7 @@
     },
     "Burning Claw (Humanoid Form Only)": {
       "name": "Burning Claw (Humanoid Form Only)",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Undead Fortitude": {
       "name": "Undead Fortitude",
@@ -4433,7 +4433,7 @@
       "description": "<p>The [[lookup @name lowercase]] doesn’t require air, food, drink, sleep, or ambient pressure.</p>"
     },
     "Dark Devotion": {
-      "name": "Dark Devotion",
+      "name": "献身黑暗",
       "description": "<p>The [[lookup @name lowercase]] has <strong>advantage</strong> on saving throws against being charmed or frightened.</p>"
     },
     "Warden’s Reach": {
@@ -4449,7 +4449,7 @@
       "description": "<p>Each creature the [[lookup @name lowercase]] can see within 50 feet of it must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is knocked &amp;Reference[prone apply=false]{prone}</p><p>On a success, a creature takes half the damage and isn’t knocked prone.</p>",
       "effects": {
         "Prone": {
-          "name": "Prone"
+          "name": "倒地"
         }
       }
     },
@@ -4475,11 +4475,11 @@
       "description": "<p>The [[lookup @name lowercase]] doesn’t require air.</p>"
     },
     "Devour": {
-      "name": "Devour",
+      "name": "吞噬",
       "description": "<p>[[lookup @name lowercase]] makes one [[/item Bite]] attack.</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
@@ -4527,7 +4527,7 @@
       "description": "<p>One creature grappled by the [[lookup @name lowercase]] must succeed on a [[/save format=long]] or be &amp;Reference[petrified apply=false]{petrified} in ice for 1 minute.</p><p>The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p><p>A petrified creature that takes fire damage has advantage on the saving throw.</p>",
       "effects": {
         "Petrified": {
-          "name": "Petrified",
+          "name": "石化",
           "description": "<p>The target is &amp;Reference[petrified apply=false]{petrified} in ice for 1 minute.</p><p>The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -4541,11 +4541,11 @@
       "description": "<p>The [[lookup @name lowercase]] opens all of its eyes and emits a burst of blinding light.</p><p>Each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of it must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[blinded apply=false]{blinded} for 1 minute.</p><p>On a success, a creature takes half the damage and isn’t blinded.</p><p>A creature that fails the saving throw by 5 or more is also &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p><p>A blinded creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is is &amp;Reference[blinded apply=false]{blinded} for 1 minute.</p>"
         },
         "Stunned": {
-          "name": "Stunned",
+          "name": "震慑",
           "description": "<p>The target is &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p>"
         }
       }
@@ -4559,7 +4559,7 @@
       "description": "<p>The [[lookup @name lowercase]] makes one [[/item Tail]] attack.</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
@@ -4576,7 +4576,7 @@
       "description": "<p>The [[lookup @name lowercase]] makes one [[/item Beak]] attack.</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
@@ -4585,12 +4585,12 @@
       "description": "<p>One creature in the [[lookup @name lowercase]]'s space must make a [[/save format=long]].</p><p>On a failure, the target takes [[/damage average]] damage, and if it is Medium or smaller, it is &amp;Reference[grappled apply=false]{grappled} (escape DC 12).</p><p>Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained} and unable to breathe unless it can breathe water.</p><p>If the saving throw is successful, the target takes half the damage and is pushed out of the [[lookup @name lowercase]]'s space.</p><section class=\"secret\" id=\"secret-XaVx1QH8M54o3plX\"><p>Vortex Form Only</p></section>",
       "activities": {
         "Escape Check": {
-          "name": "Escape Check"
+          "name": "逃脱检定"
         }
       },
       "effects": {
         "Grappled & Restrained": {
-          "name": "Grappled & Restrained",
+          "name": "受擒并束缚",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled} (escape DC 12).</p><p>Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained} and unable to breathe unless it can breathe water.</p>"
         }
       }
@@ -4609,7 +4609,7 @@
       "description": "<p>The [[lookup @name lowercase]] exhales pain-inducing, purple-black energy in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]] that is [[lookup @target.template.width activity=dnd5eactivity000]] feet wide.</p><p>Each creature in the line must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p><p>On a success, a creature takes half the damage and isn’t stunned.</p>",
       "effects": {
         "Stunned": {
-          "name": "Stunned",
+          "name": "震慑",
           "description": "<p>The target is &amp;Reference[stunned apply=false]{stunned} until the end of its next turn.</p>"
         }
       }
@@ -4619,7 +4619,7 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]].</p><p>If the target is a creature, it must succeed on a [[/save format=long]] or be &amp;Reference[paralyzed apply=false]{paralyzed} for 1 minute.</p><p>The paralyzed creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p><p>If the [[lookup @name lowercase]] attacks a target that is not in the charger’s space, the target takes half the acid damage and has advantage on the saving throw.</p>",
       "effects": {
         "Tentacles": {
-          "name": "Tentacles",
+          "name": "触须",
           "description": "<p>The target is &amp;Reference[paralyzed apply=false]{paralyzed} for 1 minute.</p><p>The paralyzed creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -4652,7 +4652,7 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or be &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p><p></p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>"
         }
       }
@@ -4672,7 +4672,7 @@
       "description": "<p>When the [[lookup @name lowercase]] takes damage, thousands of tiny salt crystals erupt from the [[lookup @name lowercase]]'s body, and each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of the [[lookup @name lowercase]]  must succeed on a [[/save format=long]] or be &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p><p></p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>"
         }
       }
@@ -4682,7 +4682,7 @@
       "description": "<p>The &amp;Reference[OpportunityAttacks]. uses [[/item Frightful Presence]].</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
@@ -4697,7 +4697,7 @@
       }
     },
     "Elemental Affinity": {
-      "name": "Elemental Affinity",
+      "name": "元素亲合",
       "description": "<p>The [[lookup @name lowercase]] has immunity to a type of damage based on the type of dragon that grew it: acid (black, copper), cold (silver, white), fire (brass, gold, red), lighting (blue, bronze), or poison (green).</p><section class=\"secret\" id=\"secret-xbdm3Nd0dXaP8nmq\"><p><strong>Foundry Note</strong></p><p>An Active Effect is available on the Effects tab of this character sheet to enable the specific damage immunity you choose.</p></section>",
       "effects": {
         "Acid Immunity (Black, Copper)": {
@@ -4773,7 +4773,7 @@
       "description": "<p>The [[lookup @name lowercase]] causes the light radiating from its body to shift color and pattern in a spellbinding display.</p><p>Each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of the [[lookup @name lowercase]] and that can see it must succeed on a [[/save format=long]] or be &amp;Reference[charmed apply=false]{charmed} until the display ends.</p><p>The [[lookup @name lowercase]] must take a bonus action on its subsequent turns to continue the display. It can stop the display at any time, and the display ends if the liosalfar is incapacitated.</p><p>While charmed by the [[lookup @name lowercase]]'s display, a creature is also &amp;Reference[incapacitated apply=false]{incapacitated}, and its speed is reduced to 0, as it is transfixed by the display.</p><p>The effect ends for a charmed creature if it takes any damage or if someone uses an action to shake the creature out of its stupor.</p>",
       "effects": {
         "Charmed & Incapacitated": {
-          "name": "Charmed & Incapacitated",
+          "name": "魅惑并失能",
           "description": "<p>The target is &amp;Reference[charmed apply=false]{charmed} until the display ends.</p><p>While charmed by the liosalfar's display, a creature is also &amp;Reference[incapacitated apply=false]{incapacitated}, and its speed is reduced to 0, as it is transfixed by the display.</p>"
         }
       }
@@ -4789,7 +4789,7 @@
       }
     },
     "Killing Joke": {
-      "name": "Killing Joke",
+      "name": "致命玩笑",
       "description": "<p>The [[lookup @name lowercase]] tells an ancient, nihilistic joke to one creature it can see within 60 feet of it.</p><p>The target must succeed on a [[/save format=long]] or fall &amp;Reference[prone apply=false]{prone} in a fit of laughter, becoming &amp;Reference[incapacitated apply=false]{incapacitated} and unable to stand up for 1 minute.</p><p>A creature that fails this saving throw by 5 or more is reduced to 0 hp instead.</p><p>The incapacitated target can repeat the saving throw at the end of each of its turns, taking [[/damage average activity=X2Rs4cYePu988NmA]] damage on a failed save or ending the effect on itself on a success.</p>",
       "activities": {
         "Save While Incapacitated": {
@@ -4839,7 +4839,7 @@
       },
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} for 1 minute.</p>"
         }
       }
@@ -4879,11 +4879,11 @@
       },
       "effects": {
         "Disoriented": {
-          "name": "Disoriented",
+          "name": "迷失",
           "description": "<p>The target is disoriented until the start of its next turn.</p><p>While disoriented, the target can’t take the &amp;Reference[Dash] or &amp;Reference[Disengage] action, and when it moves for the first time on its turn, it must succeed on another save.</p>"
         },
         "Prone": {
-          "name": "Prone"
+          "name": "倒地"
         }
       }
     },
@@ -4905,11 +4905,11 @@
       "description": "<p>The [[lookup @name lowercase]] frays the strands of fate in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in the area must make a [[/save format=long]], taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.</p><p>If any creature that failed the saving throw is affected by a condition, such as &amp;Reference[incapacitated apply=false]{incapacitated} or &amp;Reference[poisoned apply=false]{poisoned}, those conditions are randomly redistributed among all the creatures that failed the saving throw.</p>",
       "effects": {
         "Incapacitated": {
-          "name": "Incapacitated",
+          "name": "失能",
           "description": "<p>The target is &amp;Reference[incapacitated apply=false]{incapacitated}.</p>"
         },
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned}.</p>"
         }
       }
@@ -4944,13 +4944,13 @@
       "description": "<p>At the end of each of the [[lookup @name lowercase]]'s turns, each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of it must succeed on a [[/save format=long]] or become &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p><p>On a successful saving throw, the creature is immune to the [[lookup @name lowercase]]'s Noxious Aura for 24 hours.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p>"
         }
       }
     },
     "Evasion": {
-      "name": "Evasion",
+      "name": "反射闪避",
       "description": "<p>If the [[lookup @name lowercase]] is subjected to an effect that allows it to make a <strong>Dexterity saving throw</strong> to take only half damage, the [[lookup @name lowercase]] instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.</p>"
     },
     "Collective Mind": {
@@ -4976,7 +4976,7 @@
       },
       "effects": {
         "Cursed": {
-          "name": "Cursed",
+          "name": "诅咒",
           "description": "<p>The cursed target’s speed is halved.</p>"
         }
       }
@@ -5012,7 +5012,7 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target is &amp;Reference[grappled apply=false]{grappled} (escape DC 16) if the [[lookup @name lowercase]] isn’t already grappling a creature.</p><p>Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}, can’t tell a lie, and can’t teleport or be transported to another plane of existence unless the [[lookup @name lowercase]] wills it.</p>",
       "activities": {
         "Escape Check": {
-          "name": "Escape Check",
+          "name": "逃脱检定",
           "condition": "If the creature is grappled & Restrained",
           "affects": {
             "special": "Grappled and restrained creature"
@@ -5021,7 +5021,7 @@
       },
       "effects": {
         "Grappled & Restrained": {
-          "name": "Grappled & Restrained",
+          "name": "受擒并束缚",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled}.</p><p>Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}, can’t tell a lie, and can’t teleport or be transported to another plane of existence unless the attacking creature wills it.</p>"
         }
       }
@@ -5031,7 +5031,7 @@
       "description": "<p>The [[lookup @name lowercase]] speaks a brief, echoing word of power at up to three creatures it can see within [[lookup @range.value activity=dnd5eactivity000]] feet of it.</p><p>Each target must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[stunned apply=false]{stunned} for 1 minute.</p><p>On a success, a creature takes half the damage and isn’t stunned.</p><p>The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Stunned": {
-          "name": "Stunned",
+          "name": "震慑",
           "description": "<p>The target is &amp;Reference[stunned apply=false]{stunned} for 1 minute.</p><p>The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -5045,13 +5045,13 @@
       "description": "<p>The [[lookup @name lowercase]] releases a wave of shadows filled with frightening images of eyes, fangs, and other barely seen and terrifying beasts in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in the area must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>On a success, a creature takes half the damage and isn’t frightened.</p><p>A frightened creature must take the &amp;Reference[Dash] action and move away from the [[lookup @name lowercase]] by the safest available route on each of its turns, unless there is nowhere to move.</p><p>A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p>"
         }
       }
     },
     "gX05eY5rWI6xAo3t": {
-      "name": "Shriek",
+      "name": "尖叫",
       "description": "<p>The [[lookup @name lowercase]] emits a loud shriek that is audible out to 100 feet.</p><p>Each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of the [[lookup @name lowercase]] and that can hear it must make a [[/save format=long]], taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.</p><p></p>"
     },
     "Consume Host": {
@@ -5067,12 +5067,12 @@
       "description": "<p>The [[lookup @name lowercase]] magically teleports, along with any equipment it is wearing or carrying, up to [[lookup @range.value activity=dnd5eactivity000]] feet to an unoccupied space within [[lookup @target.template.size activity=dnd5eactivity000]] feet of a creature that isn’t a Construct or Undead.</p>"
     },
     "Withering Touch": {
-      "name": "Withering Touch",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "name": "凋零之触",
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Shadow Sword (Fiend Form Only)": {
       "name": "Shadow Sword (Fiend Form Only)",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Limited Magic Immunity": {
       "name": "Limited Magic Immunity",
@@ -5088,7 +5088,7 @@
       },
       "effects": {
         "Grappled & Restrained": {
-          "name": "Grappled & Restrained",
+          "name": "受擒并束缚",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled}. Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained} by tendrils of shadow.</p>"
         }
       }
@@ -5145,14 +5145,14 @@
     },
     "Piston-Powered Kick": {
       "name": "Piston-Powered Kick",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Patron’s Might": {
       "name": "Patron’s Might",
       "description": "<p>The [[lookup @name lowercase]] channels its patron’s awe-inspiring presence, terrifying those nearby.</p><p>Each creature within 10 feet of the [[lookup @name lowercase]] must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>On a success, a creature takes half the damage and isn’t frightened.</p><p>A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p>"
         }
       }
@@ -5162,10 +5162,10 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]]., and the target is &amp;Reference[grappled apply=false]{grappled} (escape DC 13).</p><p>Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained} by the [[lookup @name lowercase]], it can’t breathe, it takes [[/damage average average=8RoH8VG0jYyK41C3]] damage at the start of each of the [[lookup @name lowercase]]'s turns, and the [[lookup @name lowercase]] can’t use its Coils on another target.</p>",
       "activities": {
         "Escape Check": {
-          "name": "Escape Check"
+          "name": "逃脱检定"
         },
         "Damage: Start of Turn": {
-          "name": "Damage: Start of Turn",
+          "name": "伤害：回合开始",
           "affects": {
             "special": "The restrained creature"
           }
@@ -5173,7 +5173,7 @@
       },
       "effects": {
         "Grappled & Restrained": {
-          "name": "Grappled & Restrained",
+          "name": "受擒并束缚",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled} (escape DC 13).</p>"
         }
       }
@@ -5244,7 +5244,7 @@
       "description": "<p>The [[lookup @name lowercase]]'s semi-solid form emits poisonous gases.</p><p>Any creature that starts its turn within [[lookup @target.template.size activity=dnd5eactivity000]] feet of the [[lookup @name lowercase]] must succeed on a [[/save format=long]] or be &amp;Reference[poisoned apply=false]{poisoned}</p><p>A creature that succeeds on this saving throw by 5 or more is immune to the [[lookup @name lowercase]]'s Foul Form for the next 24 hours.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned}.</p>"
         }
       }
@@ -5255,11 +5255,11 @@
     },
     "Khopesh": {
       "name": "Khopesh",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Necrotic Burst": {
       "name": "Necrotic Burst",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Prophetic Tactics": {
       "name": "Prophetic Tactics",
@@ -5273,7 +5273,7 @@
       },
       "effects": {
         "Initiative Advantage": {
-          "name": "Initiative Advantage"
+          "name": "先攻优势"
         },
         "Adv. First Attack Roll": {
           "name": "Adv. First Attack Roll",
@@ -5295,23 +5295,23 @@
       "description": "<p>The [[lookup @name lowercase]] has the following flaws:</p><details><summary><strong>MORE</strong></summary><ul><li><p><em>Stake to the Heart</em>. If a piercing weapon made of wood is driven into the vampire’s heart while the vampire is incapacitated in its resting place, the vampire is &amp;Reference[paralyzed apply=false]{paralyzed} until the stake is removed.</p></li><li><p><em>Sunlight Hypersensitivity</em>. The vampire takes 10 radiant damage when it starts its turn in sunlight. While in sunlight, it has <strong>disadvantage</strong> on attack rolls and ability checks.</p></li></ul></details><p></p><section class=\"secret\" id=\"secret-Mvpb6h69SGTtC8dR\"><p><strong>Foundry Note</strong></p><p>This feature includes an <strong>Active Effect</strong> that can be enabled in the <strong>Effects tab</strong>, providing disadvantage on checks. However, there is currently no automation to apply disadvantage to attack rolls at this time.</p></section>",
       "activities": {
         "Stake to the Heart": {
-          "name": "Stake to the Heart",
+          "name": "桩刺",
           "condition": "If the vampire is incapacitated in its resting place",
           "affects": {
             "special": "The incapacitated vampire in their resting place"
           }
         },
         "Sunlight Hypersensitivity": {
-          "name": "Sunlight Hypersensitivity"
+          "name": "日照超敏"
         }
       },
       "effects": {
         "Paralyzed": {
-          "name": "Paralyzed",
+          "name": "麻痹",
           "description": "<p>The incapacitated vampire is &amp;Reference[paralyzed apply=false]{paralyzed} until the stake is removed.</p>"
         },
         "Sunlight Hypersensitivity": {
-          "name": "Sunlight Hypersensitivity",
+          "name": "日照超敏",
           "description": "<p>The target has <strong>disadvantage</strong> on attack rolls and ability checks while in sunlight.</p>"
         }
       }
@@ -5326,7 +5326,7 @@
     },
     "Moonsilver Ring": {
       "name": "Moonsilver Ring",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Deathly Doom": {
       "name": "Deathly Doom",
@@ -5342,7 +5342,7 @@
       "description": "<p>The [[lookup @name lowercase]] releases built-up electricity in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in the area must make a [[/save format=long]], taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.</p><p>A creature that fails this saving throw by 5 or more is also &amp;Reference[stunned apply=false]{stunned} for 1 minute.</p><p>A stunned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Stunned": {
-          "name": "Stunned",
+          "name": "震慑",
           "description": "<p>A creature that fails this saving throw by 5 or more is &amp;Reference[stunned apply=false]{stunned} for 1 minute.</p><p>A stunned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -5352,7 +5352,7 @@
       "description": "<p>If a [[lookup @name lowercase]] takes 10 or more damage from a single attack, it has advantage on its Claws attack and gains a +2 bonus to damage with its Claws until the end of its next turn.</p><section class=\"secret\" id=\"secret-HhEpCMaVAydf3MUv\"><p><strong>Foundry Note</strong></p><p>An <strong>Active Effect (AE)</strong> can be applied to this actor's selected token in the scene from chat, granting a +2 bonus to the Claw Attack while raging.</p><p>Although Advantage on the claw attack is not automated, this <strong>AE</strong> can also serve as a reminder.</p></section>",
       "activities": {
         "Rage": {
-          "name": "Rage"
+          "name": "狂暴"
         }
       },
       "effects": {
@@ -5367,13 +5367,13 @@
       "activities": {
         "save": {
           "affects": {
-            "special": "Restrained creature"
+            "special": "束缚生物"
           }
         }
       },
       "effects": {
         "Restrained": {
-          "name": "Restrained"
+          "name": "束缚"
         }
       }
     },
@@ -5398,7 +5398,7 @@
       "description": "<p>If the [[lookup @name lowercase]] jumps at least 10 feet straight toward a target and then hits it with a [[/item Claw]] attack on the same turn, the target must succeed on a [[/save format=long]] or be knocked &amp;Reference[prone apply=false]{prone}</p><p>If the target is prone, the [[lookup @name lowercase]] can make one [[/item Constrict]] attack against it as a bonus action.</p>",
       "effects": {
         "Prone": {
-          "name": "Prone"
+          "name": "倒地"
         }
       }
     },
@@ -5414,7 +5414,7 @@
       },
       "effects": {
         "Incapacitated": {
-          "name": "Incapacitated",
+          "name": "失能",
           "description": "<p>On a failure on the save, the target is &amp;Reference[incapacitated apply=false]{incapacitated} and disappears, as it takes a quick trip through the nightmarish landscapes of Hell.</p>"
         }
       }
@@ -5424,7 +5424,7 @@
       "description": "<p>The [[lookup @name lowercase]] throws magical sand in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in that area must succeed on a [[/save format=long]] or fall &amp;Reference[unconscious apply=false]{unconscious} for 10 minutes.</p><p>This effect ends for a creature if the creature takes damage or another creature uses an action to wake it.</p>",
       "effects": {
         "Unconscious": {
-          "name": "Unconscious"
+          "name": "昏迷"
         }
       }
     },
@@ -5433,13 +5433,13 @@
       "description": "<p>The [[lookup @name lowercase]] intensifies the heat and light it sheds to withering levels.</p><p>Each creature in the bright light shed by the [[lookup @name lowercase]]'s Blistering Radiance trait must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and suffers one level of &amp;Reference[exhaustion apply=false]{exhaustion}</p><p>On a success, a creature takes half the damage and doesn’t suffer exhaustion.</p>",
       "effects": {
         "Exhaustion": {
-          "name": "Exhaustion",
+          "name": "力竭",
           "description": "<p>The target suffers one level of &amp;Reference[exhaustion apply=false]{exhaustion}.</p>"
         }
       }
     },
     "Limited Telepathy": {
-      "name": "Limited Telepathy",
+      "name": "有限感应",
       "description": "<p>The [[lookup @name lowercase]] can magically transmit simple messages and images to any creature within 120 feet of it that can understand a language. This form of telepathy doesn’t allow the receiving creature to telepathically respond.</p>"
     },
     "House Guardian": {
@@ -5448,7 +5448,7 @@
     },
     "Freezing Water Bolt": {
       "name": "Freezing Water Bolt",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Wyrmblood Venom": {
       "name": "Wyrmblood Venom",
@@ -5503,7 +5503,7 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or be &amp;Reference[poisoned apply=false]{poisoned} and &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>",
       "effects": {
         "Poisoned & Blinded": {
-          "name": "Poisoned & Blinded",
+          "name": "中毒并目盲",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} and &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>"
         }
       }
@@ -5514,14 +5514,14 @@
     },
     "Ice Blade": {
       "name": "Ice Blade",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Fiery Wing Beat": {
       "name": "Fiery Wing Beat",
       "description": "<p>[[lookup @name lowercase]] beats their wings, extinguishing mundane and magical light sources.</p><p>Each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of [[lookup @name lowercase]] must succeed on a [[/save format=long]] or take [[/damage average]] damage and be knocked &amp;Reference[prone apply=false]{prone}.</p>",
       "effects": {
         "Prone": {
-          "name": "Prone"
+          "name": "倒地"
         }
       }
     },
@@ -5534,7 +5534,7 @@
       "description": "<p>The stars on the [[lookup @name lowercase]]'s gown pulse with brilliant starlight.</p><p>Each creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of her must succeed on a [[/save format=long]] or be &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p><p></p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>"
         }
       }
@@ -5578,7 +5578,7 @@
       "description": "<p>When the kobold [[lookup @name lowercase]] is wielding its shield and is hit by a melee attack within 5 feet of it, the [[lookup @name lowercase]] can fire one of its shield spikes at the attacker.</p><p>The attacker takes [[/damage average]] damage.</p><p></p>"
     },
     "Gore": {
-      "name": "Gore",
+      "name": "角刺",
       "description": "<p>[[/attack extended]]. [[/damage average extended]]., and the target creature must succeed on a [[/save format=long]] or be knocked &amp;Reference[prone apply=false]{prone}.</p><p></p>",
       "effects": {
         "Prone": {
@@ -5592,22 +5592,22 @@
     },
     "Keen Smell": {
       "name": "Keen Smell",
-      "description": "<p>The [[lookup @name lowercase]] has advantage on Wisdom (Perception) checks that rely on smell.</p>"
+      "description": "<p>[[lookup @name lowercase]]进行依赖嗅觉的感知（察觉）检定时具有优势。</p>"
     },
     "Keen Hearing and Sight": {
-      "name": "Keen Hearing and Sight",
+      "name": "敏锐视听",
       "description": "<p>The [[lookup @name lowercase]] has <strong>advantage</strong> on Wisdom (Perception) checks that rely on hearing or sight.</p>"
     },
     "Rune Blast": {
       "name": "Rune Blast",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Void Warping": {
       "name": "Void Warping",
       "description": "<p>The area around the [[lookup @name lowercase]] is warped by its connection to the Void.</p><p>A creature that starts its turn within 20 feet of the [[lookup @name lowercase]] must succeed on a [[/save format=long]] or its speed is halved until the start of its next turn.</p>",
       "effects": {
         "Half Speed": {
-          "name": "Half Speed",
+          "name": "速度减半",
           "description": "<p>The target's speed is halved until the start of its next turn.</p>"
         }
       }
@@ -5661,11 +5661,11 @@
       "description": "<p>The [[lookup @name lowercase]] can pinpoint, by scent, the location of precious metals and stones, such as coins and gems, within 60 feet of it.</p>"
     },
     "Arcane Bolt": {
-      "name": "Arcane Bolt",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "name": "奥术箭",
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Fling": {
-      "name": "Fling",
+      "name": "抛掷术",
       "description": "<p>One Large or smaller object held or creature grappled by the [[lookup @name lowercase]] is thrown up to 60 feet in a random direction and knocked &amp;Reference[prone apply=false]{prone}.</p><p>If a thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown.</p><p>If the target is thrown at another creature, that creature must succeed on a [[/save format=long]] or take the same damage and be knocked &amp;Reference[prone apply=false]{prone}.</p><section class=\"secret\" id=\"secret-2DXmQUTGYVckQ9O0\"><p><span class=\"s1\"><strong>Foundry Note</strong></span></p><p class=\"p2\"><strong>Scaling</strong> for the <strong>Damage activity</strong> is available to set the damage value, with each scaling value corresponding to 5 feet of movement. For example, a value of 1 represents 10 feet, 2 represents 20 feet, and so on.</p></section>",
       "activities": {
         "save": {
@@ -5688,7 +5688,7 @@
       }
     },
     "Danger Sense": {
-      "name": "Danger Sense",
+      "name": "危机感应",
       "description": "<p>While conscious, the [[lookup @name lowercase]] has <strong>advantage</strong> on Dexterity saving throws.</p>"
     },
     "Heated Body": {
@@ -5701,14 +5701,14 @@
     },
     "Enervating Slam": {
       "name": "Enervating Slam",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Unnerving Gaze": {
       "name": "Unnerving Gaze",
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or have <strong>disadvantage</strong> on the next attack roll, ability check, or saving throw it makes before the start of the [[lookup @name lowercase]]'s next turn.</p><section id=\"secret-BXBzOU542gqdHVpv\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>This feature includes an <strong>Active Effect (AE)</strong> that can be used as a reminder by the target but does not automate the benefits above.</p></section>",
       "effects": {
         "Disadvantage": {
-          "name": "Disadvantage",
+          "name": "劣势",
           "description": "<p>The target has  disadvantage on the next attack roll, ability check, or saving throw it makes before the start of the automaton's next turn.</p>"
         }
       }
@@ -5732,7 +5732,7 @@
     },
     "Tail": {
       "name": "Tail",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>",
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>",
       "activities": {
         "attack": {
           "condition": "Undead Form Only"
@@ -5740,7 +5740,7 @@
       }
     },
     "Devil’s Sight": {
-      "name": "Devil’s Sight",
+      "name": "魔鬼视界",
       "description": "<p>Magical darkness doesn’t impede [[lookup @name lowercase]]'s darkvision.</p>"
     },
     "Death’s Embrace": {
@@ -5752,22 +5752,22 @@
           "chatFlavor": "The grappled creature is hit on a result of 1"
         },
         "Escape Check": {
-          "name": "Escape Check"
+          "name": "逃脱检定"
         }
       },
       "effects": {
         "Grappled & Restrained": {
-          "name": "Grappled & Restrained",
+          "name": "受擒并束缚",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled} (escape DC [[lookup @skills.ath.passive]]) if it is a Large or smaller creature.</p><p>Until this grapple ends, the creature is &amp;Reference[restrained apply=false]{restrained} .</p>"
         }
       }
     },
     "Bind": {
-      "name": "Bind",
+      "name": "铐捆",
       "description": "<p>The [[lookup @name lowercase]] chooses a creature it can see within [[lookup @range.value activity=dnd5eactivity000]] feet of it that has an Intelligence of 6 or higher.</p><p>The target must succeed on a [[/save format=long]] or the [[lookup @name lowercase]] psychically binds itself to the target.</p><p>If the target succeeds on the saving throw by 5 or more, it knows the [[lookup @name lowercase]] attempted to bind to it. Otherwise, the target is unaware of the attempt.</p><p>While bound to the [[lookup @name lowercase]], the creature has resistance to psychic damage, but it has <strong>disadvantage</strong> on saving throws against the [[lookup @name lowercase]]'s [[/item Compulsion]].</p><p>The [[lookup @name lowercase]] can be bound to only one target at a time. If it binds to another, the effect on the previous target ends.</p>",
       "effects": {
         "Bound": {
-          "name": "Bound",
+          "name": "连接",
           "description": "<p>The target has resistance to psychic damage while bound to them.</p>"
         }
       }
@@ -5787,7 +5787,7 @@
       "description": "<p>A creature that starts its turn within [[lookup @range.value activity=dnd5eactivity000]] feet of the [[lookup @name lowercase]] must succeed on a [[/save format=long]] or take [[/damage average]] damage and be &amp;Reference[poisoned apply=false]{poisoned} until the start of its next turn.</p><p></p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} until the start of its next turn.</p>"
         }
       }
@@ -5821,7 +5821,7 @@
       "description": "<p>The [[lookup @name lowercase]] exhales a cone of black, poisonous gas in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each target in that area must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[poisoned apply=false]{poisoned} until cured by the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{greater restoration} spell or similar magic.</p><p>On a success, a creature takes half the damage and isn’t poisoned.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} until cured.</p>"
         }
       }
@@ -5832,7 +5832,7 @@
     },
     "Logic Razor": {
       "name": "Logic Razor",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Water Mastery": {
       "name": "Water Mastery",
@@ -5844,13 +5844,13 @@
       "activities": {
         "save": {
           "affects": {
-            "special": "Humanoid"
+            "special": "类人"
           }
         }
       },
       "effects": {
         "Incapacitated": {
-          "name": "Incapacitated",
+          "name": "失能",
           "description": "<p>The target is &amp;Reference[incapacitated apply=false]{incapacitated} until the start of its next turn.</p>"
         }
       }
@@ -5872,14 +5872,14 @@
       },
       "effects": {
         "Cursed": {
-          "name": "Cursed",
+          "name": "诅咒",
           "description": "<p>The target is cursed.  Every 24 hours that elapse, the cursed target must succeed on a saving throw or they take damage and their hp maximum is reduced by that amount.</p>"
         }
       }
     },
     "Vættir’s Greataxe": {
       "name": "Vættir’s Greataxe",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Keen Senses": {
       "name": "Keen Senses",
@@ -5890,7 +5890,7 @@
       "description": "<p>The [[lookup @name lowercase]] exhales sharp shreds of paper in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in the area must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p><p>On a success, a creature takes half the damage and isn’t blinded.</p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>"
         }
       }
@@ -5908,25 +5908,25 @@
       "description": "<p>While within 1 mile of its burial mound, the [[lookup @name lowercase]] creates an invisible sensor within 5 miles of the mound for 1 minute.</p><p>When it uses this bonus action and as a bonus action on each of its turns for the duration, the [[lookup @name lowercase]] can switch between using its own senses and projecting its senses through the sensor.</p><p>While projecting its senses through the sensor, it can see, hear, telepathically communicate, and cast spells as if it was in the sensor’s space, and it is &amp;Reference[blinded apply=false]{blinded} and &amp;Reference[deafened apply=false]{deafened} with regard to its own senses.</p><p>The sensor can be dispelled (<strong>DC 14</strong>).</p>",
       "effects": {
         "Blinded & Deafened": {
-          "name": "Blinded & Deafened",
+          "name": "目盲并耳聋",
           "description": "<p>The haugbui is &amp;Reference[blinded apply=false]{blinded} and &amp;Reference[deafened apply=false]{deafened} with regard to its own senses, while projecting its senses through the sensor.</p>"
         }
       }
     },
     "Chain Tail": {
       "name": "Chain Tail",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Light Blast": {
       "name": "Light Blast",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Slam": {
-      "name": "Slam",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]]. </p>",
+      "name": "巨木崩槌",
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>",
       "effects": {
         "Exhaustion": {
-          "name": "Exhaustion",
+          "name": "力竭",
           "description": "<p>The target suffers one level of &amp;Reference[exhaustion apply=false]{exhaustion}.</p>"
         }
       }
@@ -5938,7 +5938,7 @@
         "Turning Defiance": {
           "name": "Turning Defiance",
           "affects": {
-            "special": "Undead"
+            "special": "亡灵"
           }
         }
       }
@@ -5993,17 +5993,17 @@
       },
       "effects": {
         "Prone": {
-          "name": "Prone",
+          "name": "倒地",
           "description": "<p>If the target is a Large or smaller creature, the are knocked &amp;Reference[prone apply=false]{prone}.</p><p></p>"
         }
       }
     },
     "Peck": {
       "name": "Peck",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Freedom of Movement": {
-      "name": "Freedom of Movement",
+      "name": "行动自如",
       "description": "<p>The [[lookup @name lowercase]] ignores &amp;Reference[difficult terrain], and magical effects can’t reduce its speed or cause it to be restrained. It can spend 5 feet of movement to escape from nonmagical restraints or being grappled.</p>"
     },
     "Scorpion Walk": {
@@ -6023,7 +6023,7 @@
     },
     "Scorching Blast": {
       "name": "Scorching Blast",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Ruff Spikes": {
       "name": "Ruff Spikes",
@@ -6039,7 +6039,7 @@
       "description": "<p>The [[lookup @name lowercase]] beats her wings and creates a cloud of glittering, golden particles.</p><p>Each non-tosculi creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of her must succeed on a [[/save format=long]] or be &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>"
         }
       }
@@ -6049,44 +6049,44 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]]., and the [[lookup @name lowercase]] impales the target on one of its bone spurs, &amp;Reference[grappling apply=false]{grappling} the target (escape DC 16).</p><p>The [[lookup @name lowercase]] can have no more than two creatures impaled at a time.</p>",
       "activities": {
         "Escape Check": {
-          "name": "Escape Check",
+          "name": "逃脱检定",
           "condition": "If grappled",
           "affects": {
-            "special": "Grappled creature"
+            "special": "受擒生物"
           }
         }
       },
       "effects": {
         "Grappled": {
-          "name": "Grappled"
+          "name": "受擒"
         }
       }
     },
     "oQTqnPwmRQ8Kkeba": {
-      "name": "Stinger",
+      "name": "诡刺",
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or become &amp;Reference[poisoned apply=false]{poisoned} for 1 minute.</p><p>A poisoned creature must repeat the saving throw at the end of each of its turns. On a failure, the creature takes [[/damage average activity=Ibj9UP1IEf3GXJVM]] damage. On a success, the condition ends. </p><p>When <em>@UUID[Compendium.dnd5e.spells.Item.oyE5nVppa5mde5gT]{animate dead}</em> is cast on one or more creatures killed by this poison, the spellcaster requires no material components and can cast the spell as an action.</p>",
       "activities": {
         "save": {
           "condition": "On a hit"
         },
         "Save: End of Turn": {
-          "name": "Save: End of Turn",
+          "name": "豁免：回合结束",
           "condition": "While under the poisoned condition"
         }
       },
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} for 1 minute.  A poisoned creature must repeat the saving throw at the end of each of its turns.</p>"
         }
       }
     },
     "Multiattack": {
-      "name": "Multiattack"
+      "name": "多重攻击"
     },
     "Scepter": {
       "name": "Scepter",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Whiptail Stinger": {
       "name": "Whiptail Stinger",
@@ -6098,8 +6098,8 @@
       },
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
-          "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} for 1 minute.</p>"
+          "name": "中毒",
+          "description": "<p>你陷入&amp;Reference[poisoned apply=false]{中毒}  1 分钟。</p>"
         }
       }
     },
@@ -6118,7 +6118,7 @@
               "name": "Devils"
             },
             "Devil": {
-              "name": "Devil"
+              "name": "魔鬼"
             }
           }
         },
@@ -6129,7 +6129,7 @@
       }
     },
     "Ram": {
-      "name": "Ram",
+      "name": "攻城槌",
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and if the target is a Large or smaller creature, it must succeed on a [[/save format=long]] or be knocked &amp;Reference[prone apply=false]{prone}</p><p>If the charger moved at least 10 feet straight toward the target immediately before the hit, the target has disadvantage on the saving throw.</p>",
       "effects": {
         "Prone": {
@@ -6142,13 +6142,13 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or become &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} until the end of its next turn.</p>"
         }
       }
     },
     "Keen Hearing and Smell": {
-      "name": "Keen Hearing and Smell",
+      "name": "敏锐嗅听觉",
       "description": "<p>The [[lookup @name lowercase]] has <strong>advantage</strong> on Wisdom (Perception) checks that rely on hearing or smell.</p>"
     },
     "Sleeping Song": {
@@ -6163,7 +6163,7 @@
       },
       "effects": {
         "Unconscious": {
-          "name": "Unconscious",
+          "name": "昏迷",
           "description": "<p>The target falls &amp;Reference[unconscious apply=false]{unconscious} until the song ends.</p>"
         }
       }
@@ -6223,7 +6223,7 @@
       "description": "<p>While in contact with water, the [[lookup @name lowercase]] can create a [[lookup @target.template.size activity=dnd5eactivity000]]-foot-radius [[lookup @target.template.type activity=dnd5eactivity000]] of fog centered on a point it can see within [[lookup @range.value activity=dnd5eactivity000]] feet of it for 1 minute.</p><p>The sphere spreads around corners, and its area is heavily obscured.</p><p>A creature that enters the fog for the first time on a turn or starts its turn there must succeed on a [[/save format=long]] or be &amp;Reference[poisoned apply=false]{poisoned} and unable to breathe, unless it can breathe water, for 1 minute.</p><p>The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} and unable to breathe, unless it can breathe water, for 1 minute.</p><p>The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -6240,7 +6240,7 @@
       },
       "effects": {
         "Restrained": {
-          "name": "Restrained",
+          "name": "束缚",
           "description": "<p>The target is &amp;Reference[restrained apply=false]{restrained} by wisps of magical shadow for 1 minute.</p><p>The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -6257,7 +6257,7 @@
       },
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} until the end of its turn.</p>"
         }
       }
@@ -6283,7 +6283,7 @@
       "description": "<p>The [[lookup @name lowercase]] has <strong>advantage</strong> on attack rolls against creatures wielding divine or celestial power, such as clerics, paladins, or aasimars.</p>"
     },
     "Drain Life": {
-      "name": "Drain Life",
+      "name": "吸取生命",
       "description": "<p>[[/attack extended]]. [[/damage average extended]].</p><p>The target must succeed on a [[/save format=long]] or its hit point maximum is reduced by an amount equal to the damage taken from this attack, and [[lookup @name]] regains an equal number of hit points.</p><p>This reduction lasts until the target finishes a long rest.</p><p>The target dies if this effect reduces its hit point maximum to 0.</p>",
       "activities": {
         "save": {
@@ -6304,14 +6304,14 @@
       },
       "effects": {
         "Grappled & Restrained": {
-          "name": "Grappled & Restrained",
+          "name": "受擒并束缚",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled}.</p><p>Until this grapple ends, the target is &amp;Reference[restrained apply=false]{restrained} and takes damage at the start of each of its turns.</p>"
         }
       }
     },
     "Psychic Blast": {
       "name": "Psychic Blast",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Shadow Shape": {
       "name": "Shadow Shape",
@@ -6370,7 +6370,7 @@
           "description": "<p>An infected creature develops the first symptoms of White Ghose Shivers</p><p>Symptoms include a mild chill that escalates to a fever and frightful hallucinations that give the disease its name.</p><p>At the end of each long rest, the infected creature must succeed on a saving throw.</p>"
         },
         "Exhaustion": {
-          "name": "Exhaustion",
+          "name": "力竭",
           "description": "<p>After failing a save after a long rest, you gain one level of &amp;Reference[exhaustion apply=false]{exhaustion}.</p>"
         }
       }
@@ -6384,7 +6384,7 @@
       "description": "<p>The [[lookup @name lowercase]] moves up to half its speed without provoking &amp;Reference[OpportunityAttacks].</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
@@ -6401,8 +6401,8 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or be pushed up to 30 feet away from the [[lookup @name]] and knocked &amp;Reference[prone apply=false]{prone}.</p><p></p>",
       "effects": {
         "Prone": {
-          "name": "Prone",
-          "description": "<p>The target is knocked &amp;Reference[prone apply=false]{prone}.</p>"
+          "name": "倒地",
+          "description": "<p>你应击&Reference[Prone apply=false]{倒地}。</p>"
         }
       }
     },
@@ -6444,7 +6444,7 @@
           "roll": "STR Score Reduction"
         },
         "Shadow Rises": {
-          "name": "Shadow Rises",
+          "name": "唤起暗影",
           "condition": "If the target died after its Strength score was reduced to 0",
           "affects": {
             "special": "A creature that died after their Strength was reduced to 0"
@@ -6475,13 +6475,13 @@
       "description": "<p>[[lookup @name lowercase]] uses [[/item Spellcasting]].</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
     "Mystical Blast": {
       "name": "Mystical Blast",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Riparian Weapons": {
       "name": "Riparian Weapons",
@@ -6505,12 +6505,12 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target is &amp;Reference[grappled apply=false]{grappled} (escape DC 17) if it is a Large or smaller creature.</p><p>The [[lookup @name lowercase]] has four Grasping Claws, each of which can grapple only one target.</p><p></p>",
       "activities": {
         "Escape Check": {
-          "name": "Escape Check"
+          "name": "逃脱检定"
         }
       },
       "effects": {
         "Grappled": {
-          "name": "Grappled",
+          "name": "受擒",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled} if it is a Large or smaller creature.</p>"
         }
       }
@@ -6535,7 +6535,7 @@
           }
         },
         "Check: Stanch Wound": {
-          "name": "Check: Stanch Wound"
+          "name": "检定：缝合创口"
         }
       }
     },
@@ -6545,7 +6545,7 @@
     },
     "Necrotic Bolt": {
       "name": "Necrotic Bolt",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Corruption’s Bond": {
       "name": "Corruption’s Bond",
@@ -6556,12 +6556,12 @@
       "description": "<p>If the [[lookup @name lowercase]] moves at least [[lookup @range.value activity=IIWsrQAo8vksHGJS]] feet straight toward a target and then hits it with a [[/item Bite]] attack on the same turn, the target takes an extra [[/damage average]] damage.</p><p>If the target is a creature, it must succeed on a [[/save format=long]] or be knocked &amp;Reference[prone apply=false]{prone}.</p><p></p>",
       "activities": {
         "Extra Damage": {
-          "name": "Extra Damage"
+          "name": "额外伤害"
         }
       },
       "effects": {
         "Prone": {
-          "name": "Prone"
+          "name": "倒地"
         }
       }
     },
@@ -6590,7 +6590,7 @@
       },
       "effects": {
         "Frightening": {
-          "name": "Frightening",
+          "name": "恐慌之音",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -6600,7 +6600,7 @@
       "description": "<p>The [[lookup @name lowercase]] vomits forth the leeches, stinging insects, and other swamp vermin infesting its innards in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type activity=dnd5eactivity000]].</p><p>Each creature in the area must make a [[/save format=long]].</p><p>On a failure, a creature takes [[/damage average]] damage and is &amp;Reference[poisoned apply=false]{poisoned} for 1 minute. On a success, a creature takes half the damage and isn’t poisoned.</p><p>A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is &amp;Reference[poisoned apply=false]{poisoned} for 1 minute.</p><p>A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -6632,7 +6632,7 @@
       },
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -6642,7 +6642,7 @@
       "description": "<p>The [[lookup @name lowercase]] locks eyes with one creature it can see within [[lookup @range.value activity=dnd5eactivity000]] feet of it.</p><p>The target must succeed on a [[/save format=long]] or be &amp;Reference[incapacitated apply=false]{incapacitated} 1 minute.</p><p>While incapacitated, the creature moves in a random direction when it moves.</p><p>An incapacitated creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p><p>If a creature’s saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]'s Disorienting Gaze for the next 24 hours.</p>",
       "effects": {
         "Incapacitated": {
-          "name": "Incapacitated",
+          "name": "失能",
           "description": "<p>The target is &amp;Reference[incapacitated apply=false]{incapacitated} 1 minute.</p><p>While incapacitated, the creature moves in a random direction when it moves.</p><p>An incapacitated creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -6657,7 +6657,7 @@
     },
     "Tail Slap": {
       "name": "Tail Slap",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Heated Weapons": {
       "name": "Heated Weapons",
@@ -6689,7 +6689,7 @@
       },
       "effects": {
         "Restrained": {
-          "name": "Restrained",
+          "name": "束缚",
           "description": "<p>The target is &amp;Reference[restrained apply=false]{restrained} by the sticky snares.</p>"
         }
       }
@@ -6725,7 +6725,7 @@
     },
     "Shadow Slam": {
       "name": "Shadow Slam",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "tbZG45gow4f1RrV0": {
       "name": "Call Blood",
@@ -6739,13 +6739,13 @@
       },
       "effects": {
         "Exhaustion": {
-          "name": "Exhaustion",
+          "name": "力竭",
           "description": "<p>The target suffers one level of &amp;Reference[exhaustion apply=false]{exhaustion}.</p>"
         }
       }
     },
     "Improvised Weapon": {
-      "name": "Improvised Weapon",
+      "name": "临时武器",
       "description": "<p>[[/attack extended]]. [[/damage average extended]], depending on the weapon.</p>"
     },
     "Hazesight": {
@@ -6757,7 +6757,7 @@
       "description": "<p>At the start of each of the [[lookup @name lowercase]]'s turns, each creature within [[lookup @target.template.size activity=0LyNK7GFNmQDKU2o]] feet of it and that can see it must succeed on a [[/save format=long]] or be &amp;Reference[incapacitated apply=false]{incapacitated} until the end of its next turn.</p><p></p>",
       "effects": {
         "Incapacitated": {
-          "name": "Incapacitated",
+          "name": "失能",
           "description": "<p>The target is &amp;Reference[incapacitated apply=false]{incapacitated} until the end of its next turn.</p>"
         }
       }
@@ -6786,7 +6786,7 @@
       "description": "<p>The [[lookup @name lowercase]] spews a noxious stream of bog filth mixed with stomach acid at one creature it can see within 20 feet of it.</p><p>The target must make a [[/save format=long]]. </p><p>On a failure, the target takes [[/damage average]] damage and is &amp;Reference[blinded apply=blind]{blinded} until the end of its next turn.</p><p>On a success, the target takes half the damage and isn’t blinded.</p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=blind]{blinded} until the end of its next turn.</p>"
         }
       }
@@ -6833,7 +6833,7 @@
           "description": "<p>The alchemist has resistance to lighting damage.</p>"
         },
         "Poison Damage Resistance": {
-          "name": "Poison Damage Resistance",
+          "name": "毒素伤害抗性",
           "description": "<p>The alchemist has resistance to poison damage.</p>"
         }
       }
@@ -6852,7 +6852,7 @@
     },
     "Mocking Chortle": {
       "name": "Mocking Chortle",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Shadow Traveler": {
       "name": "Shadow Traveler",
@@ -6877,7 +6877,7 @@
       },
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -6898,7 +6898,7 @@
       "description": "<p>The [[lookup @name lowercase]] covers the ground in a [[lookup @target.template.size activity=dnd5eactivity000]]-foot [[lookup @target.template.type capitalize activity=dnd5eactivity000]] centered on a point it can see within [[lookup @range.value activity=dnd5eactivity000]] feet of it with its slippery spittle.</p><p>Each creature standing in that area must succeed on a [[/save format=long]] or fall &amp;Reference[prone apply=false]{prone}</p><p>A creature that enters the area or ends its turn there must also succeed on a [[/save format=long]] or fall &amp;Reference[prone apply=false]{prone}.</p><p>The spittle remains on the ground for 1 minute.</p>",
       "effects": {
         "Prone": {
-          "name": "Prone"
+          "name": "倒地"
         }
       }
     },
@@ -6920,7 +6920,7 @@
     },
     "Poisoned Thorn": {
       "name": "Poisoned Thorn",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Shadow’s Vigil": {
       "name": "Shadow’s Vigil",
@@ -6936,7 +6936,7 @@
       },
       "effects": {
         "Exhaustion": {
-          "name": "Exhaustion",
+          "name": "力竭",
           "description": "<p>The red cap suffers one level of &amp;Reference[exhaustion apply=false]{exhaustion}.</p>"
         }
       }
@@ -6950,7 +6950,7 @@
       "description": "<p>The [[lookup @name lowercase]] never willingly attacks a reptilian Humanoid, such as a lizardfolk or dragonborn, unless attacked first.</p><p>If magically forced to attack such a creature, the [[lookup @name lowercase]] has disadvantage on attack rolls against it.</p><p>This trait doesn’t function if the [[lookup @name lowercase]]'s rider or tamer directs it to attack.</p>"
     },
     "Ethereal Sight": {
-      "name": "Ethereal Sight",
+      "name": "缥缈视域",
       "description": "<p>The [[lookup @name lowercase]] can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa.</p>"
     },
     "Ghost Wings": {
@@ -6958,7 +6958,7 @@
       "description": "<p>The [[lookup @name lowercase]] furiously “beats” a set of phantasmal wings.</p><p>Each creature within 5 feet of the [[lookup @name lowercase]] must succeed on a [[/save format=long]] or be &amp;Reference[blinded apply=false]{blinded} until the start of its next turn.</p><p></p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} until the start of its next turn.</p>"
         }
       }
@@ -6977,7 +6977,7 @@
       "description": "<p>The [[lookup @name lowercase]] lets out a blood-curdling roar.</p><p>Each hostile creature within [[lookup @target.template.size activity=dnd5eactivity000]] feet of the [[lookup @name lowercase]] and that can hear the roar must succeed on a [[/save format=long]] or be &amp;Reference[frightened apply=false]{frightened} until the end of its next turn.</p><p></p>",
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} until the end of its next turn.</p>"
         }
       }
@@ -6995,11 +6995,11 @@
       },
       "effects": {
         "Poisoned": {
-          "name": "Poisoned",
+          "name": "中毒",
           "description": "<p>The target is poisoned for 1 minute. It can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         },
         "Unconscious": {
-          "name": "Unconscious",
+          "name": "昏迷",
           "description": "<p>The target falls unconscious for 1 minute. The target wakes up if it takes damage or if another creature takes an action to shake it awake.</p>"
         }
       }
@@ -7051,7 +7051,7 @@
       "description": "<p>If the [[lookup @name lowercase]] hasn’t eaten a Huge creature in the last 24 hours, it can easily move through any open large enough for a Large creature, and it can squeeze through any opening large enough for a Medium creature.</p><p>The [[lookup @name lowercase]]'s destination must still have suitable room to accommodate its volume.</p>"
     },
     "Variable Illumination": {
-      "name": "Variable Illumination",
+      "name": "多变照明",
       "description": "<p>The [[lookup @name lowercase]] sheds bright light in a 5- to 20-foot radius and dim light for an additional number of feet equal to the chosen radius.</p><p>The [[lookup @name lowercase]] can alter the radius as a bonus action.</p><section id=\"secret-UOsnBr0oEukcRcYU\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>The creature's illumination is set at the smallest radius by default.</p></section>"
     },
     "Towering Strength": {
@@ -7063,7 +7063,7 @@
       "description": "<p>The [[lookup @name lowercase]] doesn’t require air, food, drink, sleep, or ambient pressure. While traveling in the Void, the [[lookup @name lowercase]] magically glides on solar winds, covering immense distances in short times.</p>"
     },
     "Shadow Sight": {
-      "name": "Shadow Sight",
+      "name": "暗影视界 ",
       "description": "<p>The [[lookup @name lowercase]] has <strong>advantage</strong> on Wisdom (Perception) checks made while in dim light or darkness, and magical darkness doesn’t impede the [[lookup @name lowercase]]'s darkvision.</p>"
     },
     "Mighty Swing": {
@@ -7104,11 +7104,11 @@
     },
     "Spore-Coated Fist": {
       "name": "Spore-Coated Fist",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Wing Blades": {
       "name": "Wing Blades",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Ring Magic": {
       "name": "Ring Magic",
@@ -7129,7 +7129,7 @@
       },
       "effects": {
         "Restrained": {
-          "name": "Restrained",
+          "name": "束缚",
           "description": "<p>The target is &amp;Reference[restrained apply=false]{restrained} by magical rings until the end of its next turn.</p>"
         },
         "Adv. Melee Attacks": {
@@ -7149,13 +7149,13 @@
         "transform": {
           "profiles": {
             "Salamander": {
-              "name": "Salamander"
+              "name": "火蜥蜴"
             },
             "Magma Mephit": {
-              "name": "Magma Mephit"
+              "name": "熔岩魔蝠"
             },
             "Fire Elemental": {
-              "name": "Fire Elemental"
+              "name": "火元素"
             }
           }
         }
@@ -7194,7 +7194,7 @@
           "name": "Defend"
         },
         "Attack": {
-          "name": "Attack"
+          "name": "攻击"
         },
         "Reposition": {
           "name": "Reposition"
@@ -7245,18 +7245,18 @@
       },
       "effects": {
         "Frightened": {
-          "name": "Frightened",
+          "name": "恐慌",
           "description": "<p>The target is &amp;Reference[frightened apply=false]{frightened} for 1 minute.</p><p>A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         },
         "Inspired": {
-          "name": "Inspired",
+          "name": "激励",
           "description": "<p>Whenever an inspired creature makes an attack roll or saving throw, the creature can roll a [[/r d4]] and add the number rolled to the attack roll or saving throw.</p>"
         }
       }
     },
     "Long Axe": {
       "name": "Long Axe",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Deceptive Advice": {
       "name": "Deceptive Advice",
@@ -7281,7 +7281,7 @@
       "description": "<p>[[/attack extended]]. [[/damage average extended]], and the target must succeed on a [[/save format=long]] or fall &amp;Reference[unconscious apply=false]{unconscious} for 1 minute.</p><p>The target wakes up if it takes damage or if another creature takes an action to shake it awake.</p>",
       "effects": {
         "Unconscious": {
-          "name": "Unconscious",
+          "name": "昏迷",
           "description": "<p>The target is &amp;Reference[unconscious apply=false]{unconscious} for 1 minute.</p>"
         }
       }
@@ -7307,7 +7307,7 @@
           "description": "<p>Because the target's mouth and nose are sewn shut, it can’t breathe.</p>"
         },
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>Because both the target's eyes are sewn shut, it is &amp;Reference[blinded apply=false]{blinded}.</p>"
         }
       }
@@ -7336,10 +7336,10 @@
     },
     "Trimming Blade": {
       "name": "Trimming Blade",
-      "description": "<p>[[/attack extended]]. [[/damage average extended]].</p>"
+      "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
     },
     "Lightning Absorption": {
-      "name": "Lightning Absorption",
+      "name": "吞雷饮电",
       "description": "<p>Whenever the [[lookup @name lowercase]] is subjected to lightning damage, it takes no damage and instead regains a number of hp equal to the lightning damage dealt.</p>"
     },
     "Snake Breath": {
@@ -7362,7 +7362,7 @@
           "name": "Damage: Movement/Splashed"
         },
         "Damage: Start of Turn": {
-          "name": "Damage: Start of Turn"
+          "name": "伤害：回合开始"
         }
       }
     },
@@ -7375,7 +7375,7 @@
       "description": "<p>When a creature that can smell the [[lookup @name lowercase]]'s sweet fragrance starts its turn within 30 feet of the [[lookup @name lowercase]], the creature must succeed on a [[/save format=long]] or be &amp;Reference[charmed apply=false]{charmed} for 1 minute.</p><p>While charmed, the creature must move on its turn toward the [[lookup @name lowercase]] by the safest available route to get within 5 feet of the plant and drink its water.</p><p>If a creature’s saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]'s Sweet Fragrance for the next 24 hours.</p>",
       "effects": {
         "Charmed": {
-          "name": "Charmed",
+          "name": "魅惑",
           "description": "<p>The target is &amp;Reference[charmed apply=false]{charmed} for 1 minute.</p>"
         }
       }
@@ -7412,7 +7412,7 @@
       },
       "effects": {
         "Grappled & Restrained": {
-          "name": "Grappled & Restrained",
+          "name": "受擒并束缚",
           "description": "<p>The target is &amp;Reference[grappled apply=false]{grappled}. Until the grapple ends, the target is &amp;Reference[restrained apply=false]{restrained}.</p>"
         }
       }
@@ -7430,7 +7430,7 @@
       "description": "<p>The [[lookup @name lowercase]] beats its wings, filling the area within [[lookup @target.template.size activity=dnd5eactivity000]] feet of it with ash for 1 minute.</p><p>The ash spreads around corners, and its area is &amp;Reference[heavily obscured].</p><p>Each creature that isn’t an [[lookup @name lowercase]] and that enters the cloud for the first time on its turn or starts its turn there must succeed on a [[/save format=long]] or become &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p><p>The ash moves with the [[lookup @name lowercase]], remaining centered on it for the duration.</p>",
       "effects": {
         "Blinded": {
-          "name": "Blinded",
+          "name": "目盲",
           "description": "<p>The target is &amp;Reference[blinded apply=false]{blinded} until the end of its next turn.</p>"
         }
       }
