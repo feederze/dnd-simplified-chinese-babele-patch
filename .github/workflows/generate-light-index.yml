@@ -5,21 +5,27 @@ on:
     branches: [ main ]
   workflow_dispatch: {}
 
+# 赋予 Actions 写入权限
 permissions:
   contents: write
 
+# 防止并发运行导致推送冲突
 concurrency:
   group: generate-light-index-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   generate:
-    # 避免死循环，不响应机器人自己的提交
+    # 避免机器人自循环触发
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # 默认只拉取最近一次提交，fetch-depth: 0 可确保历史完整（通常默认即可）
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,13 +35,12 @@ jobs:
       - name: Generate labels.json / titles.json
         env:
           SCRIPT_PATH: tools/generate-light-index.mjs
-          # 修改此处：支持多行，填入你的翻译文件所在目录
           INPUT_DIRS: |
-            dnd-simplified-chinese-babele-patch/translation/cn
+            zh-CN
         run: |
           set -euo pipefail
           if [ ! -f "$SCRIPT_PATH" ]; then
-            echo "Error: Script not found at $SCRIPT_PATH"
+            echo "错误: 脚本文件不存在于 $SCRIPT_PATH"
             exit 1
           fi
           
@@ -43,24 +48,32 @@ jobs:
           while IFS= read -r dir; do
             [ -z "$dir" ] && continue
             if [ ! -d "$dir" ]; then
-              echo "Warning: Input dir not found: $dir"
+              echo "警告: 找不到输入目录: $dir"
               continue
             fi
-            echo "Processing: $dir"
+            echo "正在处理目录: $dir"
             node "$SCRIPT_PATH" --input "$dir" --include-folders
           done <<< "$INPUT_DIRS"
 
-      - name: Commit changes
+      - name: Commit and Push changes
         run: |
           set -euo pipefail
-          # 检查是否有文件变动
-          if git diff --quiet; then
-            echo "No changes detected."
+          
+          # 1. 配置 Git 身份
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # 2. 将所有更改（包括新生成的文件）添加到暂存区
+          git add -A
+          
+          # 3. 检查暂存区是否有变动 (--cached 检查已 add 的内容)
+          # 如果没有变动，git diff 会返回 0，此时执行 echo 并正常退出
+          if git diff --cached --quiet; then
+            echo "未检测到任何文件变动，跳过提交。"
             exit 0
           fi
           
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          # 4. 执行提交并推送
+          echo "检测到变动，正在提交更改..."
           git commit -m "chore: regenerate light index [skip ci]"
-          git push
+          git push origin main
