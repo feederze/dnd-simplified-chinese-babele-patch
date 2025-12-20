@@ -33,16 +33,38 @@ jobs:
           mv module.json.tmp dnd-simplified-chinese-babele-patch/module.json
 
       - name: download translation from ParaTranz
-        # Note paratranz release archives once an hour
         run: |
           curl -L -o "translation.zip" --header "Authorization: ${{ secrets.PARATRANZAPITOKEN }}" "https://paratranz.cn/api/projects/13245/artifacts/download"
-          rm -rf dnd-simplified-chinese-babele-patch/translation/cn
-          unzip -q -j translation.zip -d dnd-simplified-chinese-babele-patch/translation/cn
+          
+          TARGET_DIR="dnd-simplified-chinese-babele-patch/translation/cn"
+          BACKUP_DIR=$(mktemp -d)
+          
+          if [ -f "$TARGET_DIR/labels.json" ]; then
+            cp "$TARGET_DIR/labels.json" "$BACKUP_DIR/"
+          fi
+          if [ -f "$TARGET_DIR/titles.json" ]; then
+            cp "$TARGET_DIR/titles.json" "$BACKUP_DIR/"
+          fi
+          
+          rm -rf "$TARGET_DIR"
+          
+          unzip -q -j translation.zip -d "$TARGET_DIR"
           rm -f translation.zip
+          
+          if [ -f "$BACKUP_DIR/labels.json" ]; then
+            mv -f "$BACKUP_DIR/labels.json" "$TARGET_DIR/"
+          fi
+          if [ -f "$BACKUP_DIR/titles.json" ]; then
+            mv -f "$BACKUP_DIR/titles.json" "$TARGET_DIR/"
+          fi
 
       - name: trim mapping
         run: |
           for file in dnd-simplified-chinese-babele-patch/translation/cn/*.json; do
+            filename=$(basename "$file")
+            if [[ "$filename" == "labels.json" || "$filename" == "titles.json" ]]; then
+              continue
+            fi
             jq 'del(.mapping)' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
           done
 
@@ -52,7 +74,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git status
           git add .
-          git commit -am "Automated commit"
+          git commit -am "Automated commit" || echo "No changes to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
