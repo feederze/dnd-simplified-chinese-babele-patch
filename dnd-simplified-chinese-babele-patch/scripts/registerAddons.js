@@ -32,7 +32,8 @@ async function registerCustomMappings(babele) {
 function effectsConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
     logDebug("advancementConverter: originalValues:", originalValues);
     logDebug("advancementConverter: translations:", translations);
-    if (!translations) return data;
+    if (!translations) return originalValues;
+    if (!Array.isArray(originalValues)) return originalValues;
 
     return originalValues.map(data => {
         const translation = translations[data.name];
@@ -52,9 +53,20 @@ function effectsConverter(originalValues, translations, data, translatedCompendi
 function advancementConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
     logDebug("advancementConverter: originalValues:", originalValues);
     logDebug("advancementConverter: translations:", translations);
-    if (!translations) return data;
+    if (!translations) return originalValues;
+    if (!Array.isArray(originalValues)) return originalValues;
     return originalValues.map(data => {
-        const translation = translations[data.title];
+        const keyCandidates = [
+            data?.title,
+            data?.configuration?.identifier,
+            data?.id,
+            data?._id
+        ].filter(v => typeof v === "string" && v.length);
+        let translation = null;
+        for (const key of keyCandidates) {
+            translation = translations[key];
+            if (translation) break;
+        }
         if (!translation) return data;
         logDebug("advancementConverter: translation:", translation);
 
@@ -65,8 +77,8 @@ function advancementConverter(originalValues, translations, data, translatedComp
                     data.configuration,
                     { identifier: data.configuration.identifier ?? data.title.slugify() }
                 ),
-                title: translation.title ?? data.title,
-                hint: translation.hint ?? data.description
+                title: translation.title ?? translation.name ?? data.title,
+                hint: translation.hint ?? translation.condition ?? data.description
             }
         );
     });
@@ -75,7 +87,10 @@ function advancementConverter(originalValues, translations, data, translatedComp
 function activitiesConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
     logDebug("activitiesConverter: originalValues:", originalValues);
     logDebug("activitiesConverter: translations:", translations);
-    if (!translations) return data;
+    if (!translations) return originalValues;
+    if (!originalValues || typeof originalValues !== "object" || Array.isArray(originalValues)) {
+        return originalValues;
+    }
     return Object.fromEntries(
         Object.entries(originalValues).map(([key, activity]) => {
             const translation = translations[activity.name];
@@ -110,7 +125,7 @@ function nameConverter(originalValues, translations, data, translatedCompendium,
     let isActive = game.settings.get(MODULE_ID, 'namesetting')
     if (!translations) 
     {
-        return data;
+        return originalValues ?? data?.name;
     }
     const original = originalValues ?? data?.name;
     if (isActive) {
@@ -121,8 +136,9 @@ function nameConverter(originalValues, translations, data, translatedCompendium,
 }
 function itemsConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
     const babele = game.babele;
-    if (!translations) return data;
-    if (!babele) return data;
+    if (!translations) return originalValues;
+    if (!babele) return originalValues;
+    if (!Array.isArray(originalValues)) return originalValues;
 
     // 打印快照，防止引用问题！！！！！！！
     const valuesToTranslate = JSON.parse(JSON.stringify(originalValues));
