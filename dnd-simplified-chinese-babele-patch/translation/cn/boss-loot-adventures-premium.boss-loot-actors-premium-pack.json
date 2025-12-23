@@ -15,7 +15,6 @@
   "entries": {
     "Ghost Knight": {
       "name": "幽魂骑士",
-      "tokenName": "幽魂骑士",
       "items": {
         "Ethereal Sight": {
           "name": "以太视界",
@@ -38,9 +37,7 @@
           "description": "<p>幽魂周边60尺内能看见它的非不死生物必须分别进行一次<strong>DC 13 的感知豁免</strong>，豁免失败者将陷入 1 分钟的恐慌状态。若豁免失败且差值为 5 或更低，则目标还将衰老 1d4×10 年。</p><p>该受恐慌目标可以在每个其自身回合结束时重复进行一次该豁免，豁免成功则终止自身的恐慌状态，而该目标也将在未来 24 小时内免疫该幽魂的恐惧面容。该衰老效应产生后的 24 小时内，可用高等复原术抵消。</p><section id=\"secret-D0U8OSR9YzACaR2k\" class=\"secret\"><p>GM Note：在使用此能力前，请确保所选择的目标都是无相应状态免疫的（即那些尚未在豁免检定中成功通过的生物）。这样做可以避免将效应再次施加给已经具有免疫特性的生物。</p></section>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -71,7 +68,6 @@
     },
     "Soul Servant": {
       "name": "魂仆",
-      "tokenName": "魂仆",
       "description": "<p>魂仆是受折磨灵魂的残留，被束缚以侍奉更强大的亡灵主人。它们呈现为小型鬼魅光芒，在空中无声飘荡。其接触可释放强力的电击与暗蚀冲击。</p>",
       "items": {
         "Ethereal Sight": {
@@ -103,7 +99,6 @@
     },
     "Drow Leader": {
       "name": "卓尔首领",
-      "tokenName": "卓尔首领",
       "items": {
         "Fey Ancestry": {
           "name": "精类血统",
@@ -128,9 +123,6 @@
         "Dancing Lights": {
           "name": "舞光术",
           "description": "<p>你在施法距离内创造四个火把大小的光源。法术持续时间内，光源能够以火把，灯笼或光球的形态显现并在空中悬浮。你也可以将四个光源合为一个中型类人生物的模糊光影。无论选择哪种方式，每处光源都可以发出半径 10 尺的微光光照。</p><p>你在自己回合可以用一个附赠动作令这些光源在施法距离内移动至多 60 尺。每个光源必需在另一个光源周边 20 尺内，而离开施法距离的光源会随即熄灭。</p>",
-          "materials": {
-            "value": "一点磷或光榆木，或者一只萤火虫"
-          },
           "activities": {
             "Create Lights": {
               "name": "创造光源"
@@ -140,9 +132,6 @@
         "Darkness": {
           "name": "黑暗术",
           "description": "<p>你在施法距离内指定一点，并在法术持续时间内使魔法的黑暗充斥该点半径 15 尺的球状区域。该黑暗会绕过拐角扩散，连拥有黑暗视觉的生物也无法看穿这这种黑暗，而非魔法的光照也无法在区域内提供照明。</p><p>如果你选择的是你所持有的物品上的一点，或是一个没有被穿戴或携带的物体，光芒就从该物体发出，并随之移动。用不透明的物体（例如碗或头盔）完全遮住该物体将阻挡光芒的照射。</p><p>若该法术区域与 2 环或更低法术创造的光亮区域重叠，则创造该光亮的法术将被解除。</p>",
-          "materials": {
-            "value": "蝙蝠毛发，以及一滴沥青或一小块煤"
-          },
           "activities": {
             "Use (Template)": {
               "name": "使用（测量模板）"
@@ -210,7 +199,6 @@
     },
     "Drow": {
       "name": "卓尔",
-      "tokenName": "卓尔",
       "items": {
         "Fey Ancestry": {
           "name": "精类血统",
@@ -235,9 +223,6 @@
         "Dancing Lights": {
           "name": "舞光术",
           "description": "<p>你在施法距离内创造四个火把大小的光源。法术持续时间内，光源能够以火把，灯笼或光球的形态显现并在空中悬浮。你也可以将四个光源合为一个中型类人生物的模糊光影。无论选择哪种方式，每处光源都可以发出半径 10 尺的微光光照。</p><p>你在自己回合可以用一个附赠动作令这些光源在施法距离内移动至多 60 尺。每个光源必需在另一个光源周边 20 尺内，而离开施法距离的光源会随即熄灭。</p>",
-          "materials": {
-            "value": "一点磷或光榆木，或者一只萤火虫"
-          },
           "activities": {
             "Create Lights": {
               "name": "创造光源"
@@ -247,9 +232,6 @@
         "Darkness": {
           "name": "黑暗术",
           "description": "<p>你在施法距离内指定一点，并在法术持续时间内使魔法的黑暗充斥该点半径 15 尺的球状区域。该黑暗会绕过拐角扩散，连拥有黑暗视觉的生物也无法看穿这这种黑暗，而非魔法的光照也无法在区域内提供照明。</p><p>如果你选择的是你所持有的物品上的一点，或是一个没有被穿戴或携带的物体，光芒就从该物体发出，并随之移动。用不透明的物体（例如碗或头盔）完全遮住该物体将阻挡光芒的照射。</p><p>若该法术区域与 2 环或更低法术创造的光亮区域重叠，则创造该光亮的法术将被解除。</p>",
-          "materials": {
-            "value": "蝙蝠毛发，以及一滴沥青或一小块煤"
-          },
           "activities": {
             "Use (Template)": {
               "name": "使用（测量模板）"
@@ -318,7 +300,6 @@
     },
     "Voidling Elemental": {
       "name": "虚空元素",
-      "tokenName": "虚空元素",
       "items": {
         "Incorporeal Movement": {
           "name": "虚体移动",
@@ -334,24 +315,36 @@
         }
       }
     },
+    "Animated Armor": {
+      "name": "活化盔甲",
+      "description": "<img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/073-adv-assets-mirror-swift/Animated_Armor_1_STATIC_TOKEN_PORTRAIT_1200x1200.webp\" /><h1>Animated Armor</h1><blockquote><p>“If you see a pristine suit of plate on display in a place that shouldn’t have one… don’t assume it’s decoration.”</p></blockquote>",
+      "items": {
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item 猛击]] 攻击。</p>",
+          "activities": {
+            "Use": {
+              "name": "使用"
+            }
+          }
+        },
+        "Slam": {
+          "name": "猛击",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
+        }
+      }
+    },
     "The Architect": {
       "name": "创造者",
-      "tokenName": "创造者",
       "description": "<img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/Class_Wizard_5_Possessed_STATIC_TOKEN_COLOR_1_600x600.webp\" /><h1>创造者语录</strong></h1><blockquote><h3>不稳定时</h3><p><strong>总体方针（受任何人格影响）：</strong></p><ol><li><p>\"这……这不对！碎片……缺失……裂痕太多，无法拼合！\"</p></li><li><p>\"我感觉到了！它们在拉扯我……太吵了，太吵了！\" \"你为什么要这么做？为什么不听我的？都坏了——全坏了！\"</p></li></ol><p><strong>具体影响：</strong></p><ol><li><p>学者影响：\"逻辑……崩坏了。知识从我手中溜走！你为什么没修好？\"</p></li><li><p>先知者的影响：\"你拖了我的后腿！太胆小，太盲目，看不到必须做的事！我本可以达到完美的！\"</p></li><li><p>梦旅者影响：\"梦……缠绕着我。那些本可能实现的回忆。你本该放手的！\"</p></li><li><p>好奇者的影响：\"我不禁要问……还有什么？本可如何？太多疑问——无解！\"</p></li><li><p>怯懦鬼的影响：\"恐惧……淹没了我。你为什么不阻止？为什么让这种事发生？\"</p></li></ol><h3>稳定时</h3><ol><li><p>\"你救了我……谢谢你把我从无底深渊中拉了出来。\"</p></li><li><p>\"你在这里所做的一切……肯定不容易。为此，我对你表示敬意。\"</p></li><li><p>\"您给了我继续前行的机会，为此我感激不尽。\"</p></li></ol></blockquote>",
       "items": {
         "Lightning Bolt": {
           "name": "闪电束",
-          "description": "<p>一束 100 尺长，5 尺宽的线状闪电从你的位置向你指定的任意方向爆发迸出。在线状区域内的每个生物必须进行一次敏捷豁免，豁免失败者将受到 8d6 的闪电伤害，豁免成功则伤害减半。</p><p>闪电会将区域内未被着装或携带的可燃物件点燃。</p><p><strong>升环施法：</strong> 使用四环或更高法术位施展该法术时，你使用的法术位每比三环高一环，伤害就增加 1d6。</p>",
-          "materials": {
-            "value": "一些毛皮和琥珀质、水晶质或玻璃质的一根棒子"
-          }
+          "description": "<p>一束 100 尺长，5 尺宽的线状闪电从你的位置向你指定的任意方向爆发迸出。在线状区域内的每个生物必须进行一次敏捷豁免，豁免失败者将受到 8d6 的闪电伤害，豁免成功则伤害减半。</p><p>闪电会将区域内未被着装或携带的可燃物件点燃。</p><p><strong>升环施法：</strong> 使用四环或更高法术位施展该法术时，你使用的法术位每比三环高一环，伤害就增加 1d6。</p>"
         },
         "Mage Armor": {
           "name": "法师护甲",
           "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础AC变为 13 + 它的敏捷调整值。当目标穿上护甲时，此法术将提前终止。</p>",
-          "materials": {
-            "value": "一块鞣制过的皮革"
-          },
           "effects": {
             "Mage Armor": {
               "name": "法师护甲"
@@ -375,9 +368,6 @@
         "Shield": {
           "name": "护盾术",
           "description": "<p>一道看不见的力场制护盾浮现在你身旁，保护着你。在你的下一回合开始前，你的 AC 具有 +5 加值（在触发该法术的攻击之前生效），并且不会受到魔法飞弹的伤害。</p>",
-          "activation": {
-            "condition": "当你被攻击命中或被作为魔法飞弹的目标时执行"
-          },
           "effects": {
             "Shield": {
               "name": "护盾",
@@ -396,10 +386,7 @@
         },
         "Counterspell": {
           "name": "法术反制",
-          "description": "<p>你试图打断一个生物正在施展的一个法术。如果该生物正在施展三环或更低环阶法术，则其法术失败且不产生任何效应。如果该生物正在施展四环或更高环阶法术，则你以施法属性进行一次属性检定，其检定 DC 等于 10 + 目标法术的环阶。检定成功则目标法术失败且不产生任何效应。</p><p><strong>升环施法：</strong>使用四环或更高法术位施展该法术时，如果被打断法术的环阶不高于你所用的法术位环阶，则该目标法术直接被打断。</p>",
-          "activation": {
-            "condition": "当你看见身边 60 尺范围内一个生物施展法术时执行"
-          }
+          "description": "<p>你试图打断一个生物正在施展的一个法术。如果该生物正在施展三环或更低环阶法术，则其法术失败且不产生任何效应。如果该生物正在施展四环或更高环阶法术，则你以施法属性进行一次属性检定，其检定 DC 等于 10 + 目标法术的环阶。检定成功则目标法术失败且不产生任何效应。</p><p><strong>升环施法：</strong>使用四环或更高法术位施展该法术时，如果被打断法术的环阶不高于你所用的法术位环阶，则该目标法术直接被打断。</p>"
         },
         "Greater Invisibility": {
           "name": "高等隐形术",
@@ -424,9 +411,7 @@
           "description": "<p>怯懦者释放出一股暗蚀魔法。半径 15 尺内的所有生物必须进行一次DC 14 的体质豁免检定。<span style=\"font-family:'Roboto Condensed', sans-serif\">若失败，目标受到 1d10 点暗蚀伤害，若成功，则受半伤。</span></p><p><em>提示：</em>仅在怯懦鬼于实验之外时使用此能力。</p>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
@@ -508,7 +493,6 @@
     },
     "Tiefling Warlock": {
       "name": "提夫林魔契师",
-      "tokenName": "提夫林魔契师",
       "items": {
         "Eldritch Armor": {
           "name": "魔能护甲",
@@ -540,11 +524,6 @@
         "Arms of the Void": {
           "name": "虚空之臂",
           "description": "<p>你召唤触须从你身上蔓延而出。以你为源点的 10 尺光环区域内，所有生物都必须进行一次力量豁免。豁免失败的生物将受到 [[/damage 2d6 type=necrotic]] 伤害，并陷入倒地状态。豁免成功的生物仅受到一半伤害。</p><p><strong>升环施法：</strong>你使用的法术位每比一环高一环，法术的伤害就增加 1d6 点。</p>",
-          "target": {
-            "affects": {
-              "special": "self"
-            }
-          },
           "effects": {
             "Prone": {
               "name": "倒地",
@@ -565,9 +544,6 @@
         "Frostguard": {
           "name": "霜冻护卫",
           "description": "<p>一层防护性的魔法寒霜包裹着你。持续时间内，你获得[[/heal formula=5 type=temphp]]。在法术结束之前，若有生物以近战攻击检定命中了你，该生物将受到 [[/damage 2 type=cold]]伤害且速度降低 10 尺，直至其下一回合开始。</p><p><strong>升环施法：</strong> 你使用的法术位每比一环高一环，临时生命和寒冷伤害就各提升 5。</p>",
-          "materials": {
-            "value": "一滴水"
-          },
           "activities": {
             "Cast": {
               "name": "施展"
@@ -614,7 +590,6 @@
     },
     "Zal'murak": {
       "name": "扎尔·穆拉克",
-      "tokenName": "扎尔·穆拉克",
       "description": "<img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/067-adv-assets/Zal%27murak_1_STATIC_TOKEN_PORTRAIT_1_1200x1200.webp\" /><blockquote><p>它并非神明。它是被遗留在造物之外的记忆。</p></blockquote><p>—— 奎拉思·伊森，线界编年史家</p><h1>阿萨鲁姆，超越光明的轮回</h1><p>阿萨鲁姆并非神明，也不是一个领域，更非邪恶之物。它不捕猎。它只是存在，而随着它的存在，其他一切事物都变得愈发虚幻。它是一种宇宙力量，是苍穹中的一道脉冲，在漫长的岁月里螺旋式地回归现实。无人知晓它是被引发、被创造，还是原本就一直存在。但当它临近时，存在的法则都会扭曲，世界也会忘却它曾存在过。</p><p>阿萨鲁姆投射出碎片，投射出自身的化身，这些化身诞生于光的弯曲、时间与记忆之中。</p><h2>扎尔·穆拉克，首位化身</h2><blockquote><p>它所经之处，名字消逝，声音破碎。</p></blockquote><p>扎尔·穆拉克是首位，是侦察这，是崩塌前的涟漪。它看似类人，只是因为心智需要形状才能存活。尽管以凡人的标准来看它极其可怕，但这只是阿克萨鲁姆回归的开端。当世界那无形的锚链拉扯着异常的轨道时，它便被向下牵引。扎尔·穆拉克令人恐惧，但它并非终结。它是先兆。</p><h2>舒尔-阿克萨尔, 𐌸𐌷𐌴 𐍃𐌹𐌺𐌴𐌍𐌳 𐌰𐍅𐌰𐍄𐌰𐍂</h2><blockquote><p>𐌸𐌷𐌴 𐌔𐌺𐌹 𐍅𐌹𐌻𐌻 𐌽𐌰𐌏 𐌱𐍂𐌴𐌰𐌺. 𐌸𐌷𐌴 𐌔𐌺𐌹 𐍇𐌿𐍂𐌽𐌲 𐌹𐌽𐍔𐌹𐌳𐍴 𐌰𐌽𐌳 𐌹𐍉𐌿𐌽𐌳.</p></blockquote><p>𐍄𐌷𐌴 𐍃𐌷𐌿𐍂-𐌰𐌲𐍂 𐌹𐍔 𐌸𐌷𐌴 𐌳𐌴𐌴𐍀 𐍂𐌿𐍀𐌿𐌷𐌹𐍃𐌹𐌽𐍃𐌴, 𐌸𐌷𐌴 𐌰𐍂𐍂𐌹𐌳𐌝𐌰𐌻 𐌾𐌿𐍋𐌸 𐌾𐌿𐍂𐌾𐍈𐍃𐌹𐍂𐍃𐍃 𐌿𐍃 𐌼𐌰𐌽𐍂𐌰𐌽𐌹𐌰𐌻 𐍅𐌹𐌻𐌻.<br>𐌸𐌷𐌴 𐌼𐌴𐌼𐌾𐌾𐌸𐌻𐌴 𐍃𐌸𐌴𐍂𐍃 𐌿𐍅𐌴𐌰𐌻 𐌽𐌰𐌼𐌴𐍕𐍃 𐌹𐌳𐌴𐌽𐍔𐌹𐍃 𐌿𐍍𐍁𐌼𐌿𐌷𐌴𐌳 𐌹𐍂𐌻𐍉𐌲𐍃 𐍃𐍅𐌸𐌹𐌯𐌻𐍉𐌳𐍁.</p><p>𐌲𐌿𐍂𐌴𐌺𐌲𐌿𐍄 𐌵𐍄𐌴𐌲𐍂𐍉𐌹𐌴𐍄:</p><blockquote><p>𐌾𐌿𐌽𐌴 𐍃𐌷𐌰𐌮𐌴 𐍅𐌰𐌻𐌺𐍃.<br>𐌾𐌿𐌽𐌴 𐍃𐌷𐌰𐌮𐌴 𐍆𐌿𐍇𐌻𐌻𐌿𐍎.<br>𐌾𐌿𐌽𐌴 𐍃𐌷𐌰𐌮𐌴 𐌽𐌴𐌷𐌴𐍂 𐌻𐌴𐌰𐌢𐌴𐍎.<br>𐍅𐌷𐌴𐌽 𐌸𐌷𐌴 𐍃𐌴𐍂𐌿𐌾𐌹𐍁 𐌹𐍕 𐌽𐌰𐌼𐌴𐌳, 𐌸𐌷𐌴 𐌵𐌹𐍂𐍃𐌸 𐍹𐌰𐍎 𐌿𐍍𐍆𐌱𐍂𐌲𐌿𐍄𐌸𐍁.<br>𐍅𐌷𐌴𐽄 𐌸𐌷𐌴 𐌸𐌷𐌹𐍂𐌳 𐍃𐌴𐍇𐌽 𐌽𐌴𐌰𐍎, 𐌽𐍉𐌽𐌴 𐍂𐌴𐌼𐌰𐌹𐌽 𐍈𐌾𐌹𐍕𐍄 𐍈𐌽𐍄𐌴𐍕.</p></blockquote>",
       "items": {
         "Hover": {
@@ -644,9 +619,7 @@
           "description": "<p>以一个附赠动作，[[lookup @name]] 在 15 尺半径内释放出一个引力异常，该异常持续 1 分钟或直至[[lookup @name]]死亡。在该领域生效期间，处于该区域内的生物无法说话或施展有语言成分的法术。此外，当生物在其回合开始时处于该领域内，它会受到时间扭曲影响直至其回合结束。受影响的生物，其速度减半，回合中仅可以执行一个动作或一个附赠动作，但不能同时执行二者，且无法执行反应。</p>",
           "activities": {
             "utility": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -664,9 +637,7 @@
           "description": "<p>（充能 5-6）。20 尺范围内的生物必须进行一次[[/save con 15]]检定，若失败，则受到 27（6d8）点力场伤害，若成功则半伤，陷入目盲状态持续 1 分钟，并被拉向[[lookup @name]] 10 尺（其每回合结束时可以重新进行这次豁免，豁免成功则终止其身上目盲效应）。</p>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -680,7 +651,6 @@
     },
     "Skeleton One Sword": {
       "name": "单剑骷髅",
-      "tokenName": "单剑骷髅",
       "items": {
         "Shortsword": {
           "name": "短剑",
@@ -690,7 +660,7 @@
     },
     "Prisoner Headsack": {
       "name": "套头人质",
-      "tokenName": "套头人质"
+      "alignment": "任意"
     },
     "Human Survivor (Tomm)": {
       "name": "人类幸存者（汤姆）",
@@ -698,7 +668,7 @@
     },
     "Villager Female": {
       "name": "女性平民",
-      "tokenName": "女性平民"
+      "alignment": "任意"
     },
     "Ogre Whipmaster: Grak": {
       "name": "食人魔鞭笞大师：格拉克",
@@ -761,7 +731,6 @@
     },
     "Shur-Axar": {
       "name": "舒尔-阿克萨尔",
-      "tokenName": "舒尔-阿克萨尔",
       "description": "<img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/068-adv-assets/Shur_Axar_1_STATIC_TOKEN_PORTRAIT_1_1200x1200.webp\" /><h1>复原铭文</h1><p>“它毫无预兆地出现在广场上空，缓缓降落。那是一个完美的形态，毫无意图。高阶先知称其为‘沉默之神’。学者们则称之为‘舒尔-阿克萨尔’（苍白的化身）。人们仰望、祈祷，又惊恐万分。</p><p>日子一天天过去。没有声音，没有火焰，没有审判。然而，我们开始分崩离析。言语失去了分量。父亲不再认得自己的女儿。行会忘却了宗旨。甚至我们星图上的星辰也移位了，或者彻底消失。</p><p>一场战争随之而来，不是与那个存在体作战，而是彼此相斗。信仰对抗恐惧。教义对抗记忆。我们为了给它下定义而战，却在这一过程中，彻底迷失了自我。</p><p>当最后一批法师试图摧毁它时，或许是出于绝望，或许是出于清醒，它回应了。不是出于愤怒，而是出于纠正。</p><p>如今已空无一物，我们城市的名称如灰烬般四散。我只写下还能记得的：它未曾渴望。它未曾祈求。它只是存在。</p><p>所以我们，不复存在了。”</p><h1>舒尔-阿克萨尔，第二位化身</h1><p>舒尔-阿克萨尔是阿萨鲁姆的第二种已知显现形式，阿萨鲁姆是一种超越时间和记忆的宇宙力量。它并非传统意义上的存在，而是阿萨鲁姆在现实中的投影——一种印记。与首位化身扎尔·穆拉克不同，扎尔·穆拉克是削弱身份、扭曲记忆的先驱，而舒尔-阿克萨尔则是更深层次的汇聚：现实忘却如何保持形态的崩溃点。</p><p>舒尔-阿克萨尔没有欲望也没有意图。除非受到挑衅，否则它不会行动。但它的存在本身就会让记忆消散，在其附近的事物都会腐朽。有人认为它并非生灵，而是某种太过宏大而难以名状的真理的回响。</p><p>舒尔-阿克萨尔的出现往往会造成灾难。它被高认知密度的区域所吸引——那些生命、知识或魔法共鸣聚集的地方。虽然它可能会被迫撤退，但它与阿萨鲁姆的联系保证了它最终会回来——除非其轨道本身被切断。</p><p>有些邪教将其尊为神的匡正。另一些人则视其为宇宙中的异象，有待研究、遏制或消灭。但凡与之交锋过的人，没有一个能说得确切。大多数情况下，他们甚至不再开口。</p>",
       "items": {
         "Memory Erosion Field": {
@@ -820,9 +789,7 @@
           "description": "<p>以一个附赠动作，[[lookup @name]] 在 30 尺光环区域内释放碎心光环持续 1 分钟或直至 [[lookup @name]] 生命值降至 0。光环生效期间，在该区域内开始回合的每名生物必须通过一次[[/save wis 18]]检定，否则其在下一回合开始前都会处于迷失状态。处于迷失状态的生物在所有攻击检定和豁免检定中获得 1d4 减值。</p><section class=\"secret\" id=\"secret-RvjeUqbFiQZuCZUq\"><p>此能力仅在光环主动效果应用于 [[lookup @name]] 后生效。</p></section>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             },
             "Activate Aura": {
               "name": "激活灵光"
@@ -868,9 +835,7 @@
           "description": "<p>[[lookup @name]] 身上向外散发出一道道光芒，半径 15 尺。该区域内的每名生物必须进行一次DC 19 的体质豁免检定。若失败，目标将受到 17（3d10）点光耀伤害并陷入目盲状态，直至其下一回合结束。若成功，则仅受半伤。</p><p>这种光芒能够穿透魔法和非魔法造成的黑暗。</p>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -884,7 +849,6 @@
     },
     "Shard of Power": {
       "name": "威能碎片",
-      "tokenName": "威能碎片",
       "items": {
         "Power Beam": {
           "name": "威能光束",
@@ -907,8 +871,7 @@
       }
     },
     "Dancing Light (Medium)": {
-      "name": "舞光（中型）",
-      "tokenName": "舞光（中型）"
+      "name": "舞光（中型）"
     },
     "Volcathar the Flameborn CR10": {
       "name": "焚世者伏尔卡萨",
@@ -949,7 +912,6 @@
     },
     "Skeleton Sword & Shield": {
       "name": "剑盾骷髅",
-      "tokenName": "剑盾骷髅",
       "items": {
         "Shortsword": {
           "name": "短剑",
@@ -963,7 +925,6 @@
     },
     "Skeleton Two Swords": {
       "name": "双剑骷髅",
-      "tokenName": "双剑骷髅",
       "items": {
         "Shortsword (Main-Hand)": {
           "name": "短剑（主手）",
@@ -977,7 +938,7 @@
     },
     "Villager Male": {
       "name": "男性平民",
-      "tokenName": "男性平民"
+      "alignment": "任意"
     },
     "Orc (Greataxe)": {
       "name": "兽人（巨斧）",
@@ -1000,12 +961,10 @@
       }
     },
     "Raft": {
-      "name": "筏",
-      "tokenName": "筏"
+      "name": "筏"
     },
     "Cultist Masked": {
       "name": "蒙面邪教徒",
-      "tokenName": "蒙面邪教徒",
       "items": {
         "Unarmed Strike": {
           "name": "徒手打击",
@@ -1089,9 +1048,7 @@
           "description": "<p><strong>炼狱怒涛（充能 5-6）。</strong>烈焰暴君可以以一次动作，猛击地面，引发一波波强烈的热浪向外扩散，使地面燃烧起烈焰，持续 1 分钟。在 15 尺半径范围内的所有生物，以及在持续时间内进入该区域的任何生物，都必须进行一次敏捷豁免。豁免失败则只要还位于该区域内就将具有火焰伤害易伤。成功豁免则物不会受其影响。</p>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -1133,7 +1090,6 @@
     },
     "Flame Elemental": {
       "name": "烈焰元素",
-      "tokenName": "烈焰元素",
       "items": {
         "Death Nova": {
           "name": "死亡新星",
@@ -1141,9 +1097,7 @@
           "activities": {
             "save": {
               "condition": "death",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
@@ -1171,9 +1125,7 @@
           "activities": {
             "save": {
               "condition": "dead",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
@@ -1275,9 +1227,6 @@
         "Mage Armor": {
           "name": "法师护甲",
           "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础AC变为 13 + 它的敏捷调整值。当目标穿上护甲时，此法术将提前终止。</p>",
-          "materials": {
-            "value": "一块鞣制过的皮革"
-          },
           "effects": {
             "Mage Armor": {
               "name": "法师护甲",
@@ -1288,9 +1237,6 @@
         "Sleep": {
           "name": "睡眠术",
           "description": "<p>以施法距离内一点为源点，5 尺半径球状区域内每个你选择的生物都必须成功通过一次感知豁免否则直到其下个回合结束陷入&Reference[incapacitated apply=false]状态。在其下个回合结束时，它必须重复此豁免。如果目标第二次豁免失败，目标在持续时间内陷入&Reference[unconscious]如果目标受到伤害，或其 5 尺内有人用一个动作将它摇醒，目标身上的法术结束。</p><p>不会睡眠的生物，比如精灵或免疫力竭状态的生物自动成功通过对抗此法术的豁免。</p>",
-          "materials": {
-            "value": "一把细沙或玫瑰花瓣"
-          },
           "effects": {
             "Sleeping": {
               "name": "昏睡",
@@ -1301,9 +1247,6 @@
         "Detect Thoughts": {
           "name": "侦测思想",
           "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
-          "materials": {
-            "value": "一块铜片"
-          },
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -1316,9 +1259,6 @@
         "Hold Person": {
           "name": "定身类人",
           "description": "<p>指定施法距离内一个你能看见的类人生物。该目标必须进行一次感知豁免，豁免失败则其在法术持续时间内陷入 &Reference[paralyzed apply=false] 状态。目标在其每回合结束时可以重新进行这次豁免，豁免成功则终止其身上该法术的效应。</p><p><strong>升环施法：</strong> 使用三环或更高法术位施展该法术时，你使用的法术位每比二环高一环，就可以额外指定一个生物作为目标。</p>",
-          "materials": {
-            "value": "一片直的铁片"
-          },
           "effects": {
             "Paralyzed": {
               "name": "麻痹",
@@ -1342,9 +1282,6 @@
         "Bane": {
           "name": "灾祸术",
           "description": "<p>你选择施法距离内至多三个你可见的生物，迫使其分别进行一次魅力豁免。若有目标在此次豁免中失败，则在法术结束前，该目标进行的攻击检定或豁免检定都必须从检定结果中减去 1d4。</p><p><strong>升环施法：</strong>使用高于一环的法术位施展此法术时，你使用的法术位每比一环高一环，就能多指定一个生物。</p>",
-          "materials": {
-            "value": "一滴血"
-          },
           "effects": {
             "Bane": {
               "name": "灾祸",
@@ -1355,9 +1292,6 @@
         "Bless": {
           "name": "祝福术",
           "description": "<p>你祝福施法范围内至多 3 个生物。在法术终止前，每当受术目标进行攻击检定或豁免检定时，都可以在检定结果中额外加入 1d4。</p><p><strong>升环施法：</strong> 使用高于一环的法术位施展此法术时，你使用的法术位每比一环高一环，就能多指定一个生物。</p>",
-          "materials": {
-            "value": "一枚价值 5+GP 的圣徽"
-          },
           "effects": {
             "Blessed": {
               "name": "祝福",
@@ -1438,8 +1372,8 @@
     },
     "Goblin Lollipop Dancer": {
       "name": "地精棒棒糖舞者",
-      "tokenName": "地精棒棒糖舞者",
       "description": "<img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/071-adv-assets-charging-bull/Goblin_Lollipops_1_STATIC_TOKEN_PORTRAIT_1200x1200.webp\" /><h1>棒棒糖舞者</h1><p>被迫随军出征，棒棒糖舞者背着一袋草药和一瓶糖浆，而非刀锋。他酷爱甜食，能将采集来的植物和菌类制成糖果。</p><p>起初遭人嘲笑，但当他的糖果让疲惫的战士恢复精力时，他变得不可或缺。如今，战团将他视若珍宝般保护起来。</p>",
+      "alignment": "善良",
       "items": {
         "Nimble Escape": {
           "name": "迅捷逃逸",
@@ -1518,8 +1452,7 @@
       }
     },
     "Dancing Light (Tiny)": {
-      "name": "舞光（微型）",
-      "tokenName": "舞光（微型）"
+      "name": "舞光（微型）"
     },
     "Giant Abomination CR7": {
       "name": "巨人憎恶 CR7",
@@ -1540,9 +1473,7 @@
           "activities": {
             "damage": {
               "condition": "回合开始",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
@@ -1587,7 +1518,6 @@
     },
     "Obsidian Sentinel": {
       "name": "黑曜石哨卫",
-      "tokenName": "黑曜石哨卫",
       "items": {
         "Multiattack": {
           "name": "多重攻击",
@@ -1623,9 +1553,7 @@
           "activities": {
             "Dreadful Protector": {
               "name": "惊骇守护",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -1639,7 +1567,6 @@
     },
     "Drow Warrior": {
       "name": "卓尔武者",
-      "tokenName": "卓尔武者",
       "items": {
         "Fey Ancestry": {
           "name": "精类血统",
@@ -1664,9 +1591,6 @@
         "Dancing Lights": {
           "name": "舞光术",
           "description": "<p>你在施法距离内创造四个火把大小的光源。法术持续时间内，光源能够以火把，灯笼或光球的形态显现并在空中悬浮。你也可以将四个光源合为一个中型类人生物的模糊光影。无论选择哪种方式，每处光源都可以发出半径 10 尺的微光光照。</p><p>你在自己回合可以用一个附赠动作令这些光源在施法距离内移动至多 60 尺。每个光源必需在另一个光源周边 20 尺内，而离开施法距离的光源会随即熄灭。</p>",
-          "materials": {
-            "value": "一点磷或光榆木，或者一只萤火虫"
-          },
           "activities": {
             "Create Lights": {
               "name": "创造光源"
@@ -1676,9 +1600,6 @@
         "Darkness": {
           "name": "黑暗术",
           "description": "<p>你在施法距离内指定一点，并在法术持续时间内使魔法的黑暗充斥该点半径 15 尺的球状区域。该黑暗会绕过拐角扩散，连拥有黑暗视觉的生物也无法看穿这这种黑暗，而非魔法的光照也无法在区域内提供照明。</p><p>如果你选择的是你所持有的物品上的一点，或是一个没有被穿戴或携带的物体，光芒就从该物体发出，并随之移动。用不透明的物体（例如碗或头盔）完全遮住该物体将阻挡光芒的照射。</p><p>若该法术区域与 2 环或更低法术创造的光亮区域重叠，则创造该光亮的法术将被解除。</p>",
-          "materials": {
-            "value": "蝙蝠毛发，以及一滴沥青或一小块煤"
-          },
           "activities": {
             "Use (Template)": {
               "name": "使用（测量模板）"
@@ -1746,7 +1667,6 @@
     },
     "Rot Vampire": {
       "name": "腐化吸血鬼",
-      "tokenName": "腐化吸血鬼",
       "items": {
         "Multiattack": {
           "name": "多重攻击",
@@ -1797,9 +1717,7 @@
           "description": "<section id=\"secret-tLZqgWTiXozWkKuc\" class=\"secret\"><p>[[lookup @name lowercase]]喷射具有感染性的腐化物质并覆盖 20 尺锥状区域。区域内的每名生物需进行一次DC 15 的体质豁免检定：若失败，则受到18（6d6）点毒素伤害并陷入中毒状态，持续 1 分钟。若成功，则仅受半伤。中毒目标在其每回合结束时可以重新进行这次豁免，豁免成功则终止其身上的中毒状态。</p></section><p>[[lookup @name lowercase]]向 20 尺锥形区域喷射具有感染性的腐化物质。</p>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -1889,9 +1807,7 @@
           "description": "<section class=\"secret\" id=\"secret-1n1kjGcA293X6yAT\"><p>红龙挥动它的翅膀。<strong>红龙 10 尺内的每个生物</strong>需进行一次<strong>DC 22 敏捷豁免检定</strong>，失败则受到<strong>15（2d6 + 8）钝击</strong>伤害并<strong>陷入倒地状态</strong>。红龙还可以<strong>飞行至多等于其飞行速度一半的距离</strong>。</p></section><p>红龙挥动它的翅膀！</p>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
@@ -1955,9 +1871,7 @@
           "activities": {
             "damage": {
               "condition": "回合开始",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
@@ -1984,6 +1898,7 @@
     "Drider (Sword)": {
       "name": "蛛化卓尔（剑）",
       "tokenName": "蛛化卓尔",
+      "alignment": "混乱邪恶",
       "items": {
         "Fey Ancestry": {
           "name": "精类血统",
@@ -2020,9 +1935,6 @@
         "Dancing Lights": {
           "name": "舞光术",
           "description": "<p>你在施法距离内创造四个火把大小的光源。法术持续时间内，光源能够以火把，灯笼或光球的形态显现并在空中悬浮。你也可以将四个光源合为一个中型类人生物的模糊光影。无论选择哪种方式，每处光源都可以发出半径 10 尺的微光光照。</p><p>你在自己回合可以用一个附赠动作令这些光源在施法距离内移动至多 60 尺。每个光源必需在另一个光源周边 20 尺内，而离开施法距离的光源会随即熄灭。</p>",
-          "materials": {
-            "value": "一点磷或光榆木，或者一只萤火虫"
-          },
           "activities": {
             "Create Lights": {
               "name": "创造光源"
@@ -2032,9 +1944,6 @@
         "Darkness": {
           "name": "黑暗术",
           "description": "<p>你在施法距离内指定一点，并在法术持续时间内使魔法的黑暗充斥该点半径 15 尺的球状区域。该黑暗会绕过拐角扩散，连拥有黑暗视觉的生物也无法看穿这这种黑暗，而非魔法的光照也无法在区域内提供照明。</p><p>如果你选择的是你所持有的物品上的一点，或是一个没有被穿戴或携带的物体，光芒就从该物体发出，并随之移动。用不透明的物体（例如碗或头盔）完全遮住该物体将阻挡光芒的照射。</p><p>若该法术区域与 2 环或更低法术创造的光亮区域重叠，则创造该光亮的法术将被解除。</p>",
-          "materials": {
-            "value": "蝙蝠毛发，以及一滴沥青或一小块煤"
-          },
           "activities": {
             "Use (Template)": {
               "name": "使用（测量模板）"
@@ -2095,9 +2004,7 @@
           "activities": {
             "save": {
               "condition": "dead",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
@@ -2115,7 +2022,6 @@
     },
     "Soulbound Knight": {
       "name": "魂缚骑士",
-      "tokenName": "魂缚骑士",
       "description": "<img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/057-soulbound-knight/Soulbound_Knight_STATIC_TOPDOWN_TOKEN_COLOR_1_1200x1200.webp\" /><h1>魂缚骑士语录</h1><blockquote><h3>战前：</h3><ol><li>“你闯入了圣地。无人能全身而退。”</li><li>“我的灵魂被这悲惨之地束缚。你将与我一同陷入永恒的痛苦。”</li><li>“巫妖的意志命令我，我必须服从。准备迎接毁灭吧。”</li></ol><h3>战斗中：</h3><ol><li>“你们的命运已定，就像我的一样。”</li><li>“你无法逃脱亡者的掌控！”</li><li>“见证收割者的力量！”</li><li>“这里绝无庇护。”</li><li>“停下徒劳的挣扎吧；我的仆从们渴望你的灵魂。”</li></ol><h3>使用虚幻打击时：</h3><ol><li>“看啊，生与死之间的领域！”</li><li>“感受以太的触碰！”</li><li>“你会体验到夹缝中的绝望。”</li></ol><h3>使用灵魂复生治疗时：</h3><ol><li>“你的挣扎徒劳无功；我已然重新强大！”</li><li>“你越是挣扎，我就越强大！”</li><li>“他们的牺牲让我更加强大！”</li></ol><h3>使用灵魂召唤时：</h3><ol><li>“当心被遗忘的怨灵！”</li><li>“他们的折磨将是你的终结！”</li><li>“面对被遗忘灵魂的愤怒！”</li></ol></li><li>“被遗忘者的灵魂将是你的最终宿命。”</li><li>“拥抱前人的绝望吧。”</li></ol><h3>重伤时：</h3><ol><li>“黑暗……正收紧它的魔爪。”</li><li>“我的末日将至，但你的也不远了！”</li></ol><h3>战败时：</h3><ol><li>“终于……从这折磨中解脱了……”</li><li>“诅咒……终于……解除了……”</li><li>“在死亡中……我找到了安宁……”</li></ol></blockquote>",
       "items": {
         "Plate Armor": {
@@ -2174,9 +2080,7 @@
             "Soul Reap": {
               "name": "Soul Reap",
               "chatFlavor": "Soul Reap",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
@@ -2191,9 +2095,7 @@
             "Soul Reap": {
               "name": "Soul Reap",
               "chatFlavor": "Soul Reap",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -2206,7 +2108,7 @@
     },
     "Prisoner Blindfolded": {
       "name": "蒙眼人质",
-      "tokenName": "蒙眼人质"
+      "alignment": "任意"
     },
     "Goblin Warrior (Sword)": {
       "name": "地精武者（剑）",
@@ -2245,7 +2147,6 @@
     },
     "Sir Emil Corvian": {
       "name": "埃米尔·科维安爵士",
-      "tokenName": "埃米尔·科维安爵士",
       "description": "<img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/063-paladin-tomb/assets/portrait-sir-emil-1200x1200.webp\" /><h1>埃米尔·科维安爵士语录</h1> <blockquote> <h3>职责与荣耀：</h3> <ol> <li>“骑士的职责不是追求荣耀，而是守护无辜者于灾厄之前。\"</li> </ol><h3>圣武士之道：</h3> <ol> <li>\"不必做最睿智之人，但求成为危难时最后一个倒下者。\"</li> <li>\"若提尔并不垂青于我，那我便以血汗证明之。\"</li> </ol><h3>箴言集：</h3> <ol> <li>\"思虑过甚反成桎梏，持守正道则万事自通。\"</li> <li>\"我虽不知万事答案，然明辨是非足矣。\"</li> <li>\"察人危难无需聪颖，但凭赤诚足矣。\"</li> </ol> </blockquote>",
       "items": {
         "Chain Mail": {
@@ -2264,7 +2165,6 @@
     },
     "Cultist Leader": {
       "name": "邪教徒头目",
-      "tokenName": "邪教徒头目",
       "items": {
         "Unarmored Defense": {
           "name": "无甲防御",
@@ -2301,9 +2201,7 @@
           "description": "<p><em>奇物，非普通（需同调）</em></p><div class=\"block purple\" id=\"book\" style=\"background:#aa88aa55\"><p><em>\"凡火岂敢比龙炎\"</em></p><p><em>\"凡焰焉能敌龙息\"</em></p><p><em>\"凡烬怎堪承龙怒\"</em></p></div><hr /><p>这些护腕由一条青年红龙的龙鳞制成。鳞片炽热依旧，但佩戴起来却很舒适。</p><hr /><p><strong>狂焰袭。</strong> 穿戴该对护腕时，你的徒手攻击和近战武器攻击会额外造成 [[/roll 1d4]] 点火焰伤害。</p><p><strong>炽火爆。</strong>作为一个动作，你可以用将双腕猛烈相击，释放半径 10 尺的环状烈焰。范围内所有生物需进行一次 DC 14 敏捷豁免，失败：受到 [[/roll 4d6]] 火焰伤害，成功：半伤。一旦使用，此特性在下一次长休前都无法再次使用。</p><img src=\"modules/boss-loot-adventures-premium/artwork/059-red-dragon/art-static-bracers-of-ignition-1200x1200.webp\" alt=\"Bracers of Ignition\" />",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -2317,7 +2215,6 @@
     },
     "Shard of Vitality": {
       "name": "活力碎片",
-      "tokenName": "活力碎片",
       "items": {
         "Vitality Beam": {
           "name": "活力光束",
@@ -2341,7 +2238,6 @@
     },
     "Skeleton Archer": {
       "name": "骷髅弓手",
-      "tokenName": "骷髅弓手",
       "items": {
         "Shortbow": {
           "name": "短弓",
@@ -2361,9 +2257,34 @@
         }
       }
     },
+    "Animated Plate": {
+      "name": "活化板甲",
+      "description": "<img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/073-adv-assets-mirror-swift/Animated_Plate_1_STATIC_TOKEN_PORTRAIT_1200x1200.webp\" /><h1>Animated Armor</h1><blockquote><p>“If you see a pristine suit of plate on display in a place that shouldn’t have one… don’t assume it’s decoration.”</p></blockquote>",
+      "items": {
+        "Multiattack": {
+          "name": "多重攻击",
+          "description": "<p>[[lookup @name lowercase]] 发动两次 [[/item 猛击]] 攻击。</p>",
+          "activities": {
+            "Use": {
+              "name": "使用"
+            }
+          }
+        },
+        "Plate Armor": {
+          "name": "板甲"
+        },
+        "Slam": {
+          "name": "猛击",
+          "description": "<p>[[/attack extended]]。[[/damage average extended]]。</p>"
+        },
+        "Reactive Guard": {
+          "name": "Reactive Guard",
+          "description": "<p>The Animated Plate can take one reaction on every turn in combat, not just on its own turn. It can use these reactions only to make opportunity attacks.</p>"
+        }
+      }
+    },
     "Doppelganger": {
       "name": "变形怪",
-      "tokenName": "变形怪",
       "items": {
         "Multiattack": {
           "name": "多重攻击",
@@ -2383,9 +2304,7 @@
           "description": "<p><em>感知豁免检定：</em> DC 12，源自[[lookup @name lowercase]]的 15 尺光环区域内的每名能看见[[lookup @name lowercase]]的生物。</p><p class=\"feature\"><em>失败：</em>目标陷入&Reference[Frightened apply=false]状态，并在其每个回合结束时重复豁免，成功则终止其身上的此效应。1 分钟后，其豁免自动成功。</p>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -2402,14 +2321,6 @@
         "Detect Thoughts": {
           "name": "侦测思想",
           "description": "<p>你激活下述效应之一。直到法术结束为止，你可以在你随后的回合用一个魔法动作以激活下述任意效应之一。</p><p><strong>感知思想。</strong> 你感知距你 30 尺内，知晓语言或能够心灵感应的思想的存在。你并不会阅读这些思想，但你知道这里存在一名有理智的生物。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p><p><strong>阅读思想。</strong> 选择一名距你 30 尺内的可见生物，或一名距你 30 尺内被感知思想侦测到的生物。你了解到此时目标最关心的事情。如果目标不知晓任何语言也不会心灵感应，则你不能得到任何信息。</p><p>在你的下一回合，用一个魔法动作，你可以尝试深入目标的心灵。如果你选择这么做，目标进行一次感知豁免。豁免失败，则你了解到他的逻辑推理、情绪状态以及他头脑中的一些大事（比如忧虑、挚爱和仇恨的事物）。豁免成功，法术终止。无论哪种情况，目标都会知道你正在窥探其心灵，且直到你的注意力从它的心灵上移开为止，目标均可以在其回合内使用动作进行一次 [[/check ability=int skill=arc dc=@attributes.spelldc]] 检定，对抗你的法术豁免DC，目标胜出对抗时，法术终止。</p>",
-          "materials": {
-            "value": "一块铜片"
-          },
-          "target": {
-            "affects": {
-              "special": "self"
-            }
-          },
           "activities": {
             "Probe Deeper": {
               "name": "深入探查"
@@ -2429,9 +2340,7 @@
           "description": "<p>[[lookup @name lowercase]] 变形为中型或更小型的类人生物，或变回其真实形态。除体型以外，其各形态下游戏数据均相同。变形怪着装或携带的任何装备都不会随之变化。</p><section class=\"secret\" id=\"secret-HBGLsGqQVoymFjTo\"><p><strong>提示：</strong>要恢复为原始形态，可以：</p><ul><li><p>选择自己的指示物并使用该能力，</p></li><li><p>在没有选择目标的情况下使用该能力，</p></li><li><p>或对之前变形的目标再次使用该能力。</p></li></ul><p>变形时，以下指示物属性会从目标复制：<strong>指示物图像、指示物属性和指示物环。</strong></p><p>恢复时，原始指示物属性会从原型指示物中恢复。如果你想自定义指示物的默认外观或设置，请确保也更新其指示物令牌。</p></section>",
           "activities": {
             "utility": {
-              "affects": {
-                "special": "不超过中型"
-              }
+              "target": "不超过中型"
             }
           }
         }
@@ -2439,7 +2348,6 @@
     },
     "Shard of Protection": {
       "name": "防护碎片",
-      "tokenName": "防护碎片",
       "items": {
         "Resistance Beam": {
           "name": "抵抗光束",
@@ -2516,9 +2424,7 @@
           "description": "<p><strong>炼狱怒涛（充能 5-6）。</strong>烈焰暴君可以以一次动作，猛击地面，引发一波波强烈的热浪向外扩散，使地面燃烧起烈焰，持续 1 分钟。在 15 尺半径范围内的所有生物，以及在持续时间内进入该区域的任何生物，都必须进行一次敏捷豁免。豁免失败则只要还位于该区域内就将具有火焰伤害易伤。成功豁免则物不会受其影响。</p>",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -2532,7 +2438,6 @@
     },
     "wHY2BUIC6hvlgeej": {
       "name": "邪教徒头目",
-      "tokenName": "邪教徒头目",
       "items": {
         "Unarmored Defense Leader": {
           "name": "无甲防御：头目",
@@ -2565,9 +2470,7 @@
           "description": "<p><em>奇物，非普通（需同调）</em></p><div class=\"block purple\" id=\"book\" style=\"background:#aa88aa55\"><p><em>\"凡火岂敢比龙炎\"</em></p><p><em>\"凡焰焉能敌龙息\"</em></p><p><em>\"凡烬怎堪承龙怒\"</em></p></div><hr /><p>这些护腕由一条青年红龙的龙鳞制成。鳞片炽热依旧，但佩戴起来却很舒适。</p><hr /><p><strong>狂焰袭。</strong> 穿戴该对护腕时，你的徒手攻击和近战武器攻击会额外造成 [[/roll 1d4]] 点火焰伤害。</p><p><strong>炽火爆。</strong>作为一个动作，你可以用将双腕猛烈相击，释放半径 10 尺的环状烈焰。范围内所有生物需进行一次 DC 14 敏捷豁免，失败：受到 [[/roll 4d6]] 火焰伤害，成功：半伤。一旦使用，此特性在下一次长休前都无法再次使用。</p><img src=\"modules/boss-loot-adventures-premium/artwork/059-red-dragon/art-static-bracers-of-ignition-1200x1200.webp\" alt=\"Bracers of Ignition\" />",
           "activities": {
             "save": {
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           },
           "effects": {
@@ -2582,6 +2485,7 @@
     "Drider (Bow)": {
       "name": "蛛化卓尔（弓）",
       "tokenName": "蛛化卓尔",
+      "alignment": "混乱邪恶",
       "items": {
         "Fey Ancestry": {
           "name": "精类血统",
@@ -2618,9 +2522,6 @@
         "Dancing Lights": {
           "name": "舞光术",
           "description": "<p>你在施法距离内创造四个火把大小的光源。法术持续时间内，光源能够以火把，灯笼或光球的形态显现并在空中悬浮。你也可以将四个光源合为一个中型类人生物的模糊光影。无论选择哪种方式，每处光源都可以发出半径 10 尺的微光光照。</p><p>你在自己回合可以用一个附赠动作令这些光源在施法距离内移动至多 60 尺。每个光源必需在另一个光源周边 20 尺内，而离开施法距离的光源会随即熄灭。</p>",
-          "materials": {
-            "value": "一点磷或光榆木，或者一只萤火虫"
-          },
           "activities": {
             "Create Lights": {
               "name": "创造光源"
@@ -2630,9 +2531,6 @@
         "Darkness": {
           "name": "黑暗术",
           "description": "<p>你在施法距离内指定一点，并在法术持续时间内使魔法的黑暗充斥该点半径 15 尺的球状区域。该黑暗会绕过拐角扩散，连拥有黑暗视觉的生物也无法看穿这这种黑暗，而非魔法的光照也无法在区域内提供照明。</p><p>如果你选择的是你所持有的物品上的一点，或是一个没有被穿戴或携带的物体，光芒就从该物体发出，并随之移动。用不透明的物体（例如碗或头盔）完全遮住该物体将阻挡光芒的照射。</p><p>若该法术区域与 2 环或更低法术创造的光亮区域重叠，则创造该光亮的法术将被解除。</p>",
-          "materials": {
-            "value": "蝙蝠毛发，以及一滴沥青或一小块煤"
-          },
           "activities": {
             "Use (Template)": {
               "name": "使用（测量模板）"
@@ -2681,7 +2579,6 @@
     },
     "yFfLN1XvvTmqVB7i": {
       "name": "蒙面邪教徒",
-      "tokenName": "蒙面邪教徒",
       "items": {
         "Unarmored Defense": {
           "name": "无甲防御",
@@ -2721,9 +2618,7 @@
           "activities": {
             "save": {
               "condition": "dead",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
@@ -2757,9 +2652,7 @@
           "activities": {
             "save": {
               "condition": "dead",
-              "affects": {
-                "special": "self"
-              }
+              "target": "self"
             }
           }
         },
