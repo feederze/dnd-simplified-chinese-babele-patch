@@ -51,7 +51,7 @@
       "name": "反冲术",
       "description": "<p>你将破坏性的能量抵御并弹开，令该次你受到的伤害降低 4d6 + 你的施法属性调整值点。</p><p>若触发该次反应的伤害来自一名位于施法距离内的生物，则你可以迫使该生物进行一次体质豁免。豁免失败则其受到 4d6 力场伤害，豁免成功则仅受半伤。</p><p><em><strong>升环施法。</strong></em> 你使用的法术位每比四环高一环，法术能减免的伤害量和造成的力场伤害就都增加 1d6 。</p>",
       "activation": {
-        "condition": "in response to taking damage"
+        "condition": "受到伤害时"
       },
       "activities": {
         "Cast": {
@@ -59,8 +59,8 @@
           "roll": "伤害减免"
         },
         "Creature Backlash": {
-          "name": "Creature Backlash",
-          "condition": "triggering damage was from a creature within range"
+          "name": "反冲生物",
+          "condition": "触发伤害来自射程内的生物"
         }
       }
     },
@@ -145,10 +145,10 @@
     },
     "Blade of Disaster": {
       "name": "灾厄之刃",
-      "description": "<p>You create a 3-foot-long blade-shaped planar rift that lasts for the duration. The rift appears within range in a space of your choice, and you can immediately make up to two melee spell attacks, each one against a creature or object within 5 feet of the rift. On a hit, the target takes 10d6 Force damage. This attack scores a Critical Hit if the number on the d20 is 18 or higher.</p><p>As a Bonus Action on your later turns, you can move the rift up to 60 feet and repeat the two attacks against a creature or an object within 5 feet of it. You can direct the attacks at the same target or at different ones.</p><p>The blade can harmlessly pass through any barrier, including ones created by spells like <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofForc]{Wall of Force}</em>.</p>",
+      "description": "<p>你创造一道 3 尺长、形如剑刃的位面裂隙，持续直至法术结束。裂隙出现在施法距离内由你选择的一处空间，且你可以立即发动至多两次近战法术攻击，每次攻击针对裂隙 5 尺内的一名生物或物件。若命中，则目标受到 10d6 力场伤害。该攻击在 d20 投出 18 或更高时即算作掷出重击。</p><p>在你的后续回合中，你可以用一个附赠动作将裂隙移动至多 60 尺，并对其 5 尺内的一名生物或物件重复上述两次攻击。你可以将这两次攻击指向同一个目标，也可以指向不同的目标。</p><p>该剑刃可以无害地穿过任何屏障，包括由类似 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofForc]{力场墙}</em> 的法术所创造的屏障。</p>",
       "activities": {
         "Cast": {
-          "name": "Cast"
+          "name": "施展"
         }
       }
     },
@@ -227,240 +227,240 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase one ability score of your choice by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你选择的一项属性提升 1，至多提升至 30。"
         }
       }
     },
     "Boon of Bountiful Health": {
-      "name": "Boon of Bountiful Health",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><em><strong>Augmented Health.</strong></em> When you gain Temporary Hit Points, increase the number of Temporary Hit Points you gain by 5.</p><p><em><strong>Superior Recuperation.</strong></em> When you spend one or more Hit Point Dice to regain Hit Points, you can instead use the highest number possible for each die.</p><section id=\"secret-7TCmUUwJyXSUFkkF\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>Multiple <strong>Superior Recuperation</strong> activities are provided, which can be used in lieu of the standard Hit Dice rolling application and will use the highest possible roll for each die size.</p></section>",
+      "name": "生机勃发之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你选择的一项属性提升 1，至多提升至 30。</p><p><em><strong>超健康。</strong></em>当你获得临时生命值时，该临时生命值数值提升 5。</p><p><em><strong>超恢复。</strong></em>当你消耗一枚或更多生命骰恢复生命值时，你能够以每枚骰子可能掷出的最高值替代其骰值。</p><section id=\"secret-7TCmUUwJyXSUFkkF\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>提供了多个<strong>超恢复</strong>小队，可以代替标准的掷生命骰应用，并将为每种骰子大小使用可能的最高骰值。</p></section>",
       "activities": {
         "Augmented Health": {
-          "name": "Augmented Health",
-          "condition": "you gain Temporary Hit Points"
+          "name": "超健康",
+          "condition": "你获得临时生命值"
         },
         "Superior Recuperation (d12)": {
-          "name": "Superior Recuperation (d12)",
-          "condition": "you spend one or more d12 Hit Point Dice to regain Hit Points"
+          "name": "超恢复（d12）",
+          "condition": "你消耗一个或多个 d12 生命值骰来恢复生命值。"
         },
         "Superior Recuperation (d10)": {
-          "name": "Superior Recuperation (d10)",
-          "condition": "you spend one or more d10 Hit Point Dice to regain Hit Points"
+          "name": "超恢复（d10）",
+          "condition": "你消耗一个或多个 d10 生命值骰来恢复生命值。"
         },
         "Superior Recuperation (d8)": {
-          "name": "Superior Recuperation (d8)",
-          "condition": "you spend one or more d8 Hit Point Dice to regain Hit Points"
+          "name": "超恢复（d8）",
+          "condition": "你消耗一个或多个 d8 生命值骰来恢复生命值。"
         },
         "Superior Recuperation (d6)": {
-          "name": "Superior Recuperation (d6)",
-          "condition": "you spend one or more d6 Hit Point Dice to regain Hit Points"
+          "name": "超恢复（d6）",
+          "condition": "你消耗一个或多个 d6 生命值骰来恢复生命值。"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase one ability score of your choice by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你选择的一项属性提升 1，至多提升至 30。"
         }
       }
     },
     "Boon of Communication": {
-      "name": "Boon of Communication",
-      "description": "<p><em>Epic Boon Feat (Prerequisite: Level 19+)</em></p><p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.</p><p><em><strong>Cunning Speaker.</strong></em> You don’t have Disadvantage on ability checks to influence Hostile creatures.</p><p><em><strong>Gifted Interpreter.</strong></em> You understand the literal meaning of any language you hear or see signed, and you can understand the literal meaning of any written language you see.</p><p><em><strong>Mental Communication.</strong></em> You gain telepathy with a range of 120 feet.</p>",
+      "name": "八面玲珑之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你的智力、感知或魅力提升 1，至多提升至 30。</p><p><em><strong>巧妙讲演。</strong></em>你影响敌对生物时进行的属性检定不具有劣势。</p><p><em><strong>天赐译员。</strong></em>你理解你看见或听见的任意语言手势的字面意思，并且你理解你看见的任意语言文字的字面意思。</p><p><em><strong>心灵沟通。</strong></em>你获得 120 尺心灵感应。</p>",
       "effects": {
         "Mental Communication": {
-          "name": "Mental Communication",
-          "description": "<p>You gain telepathy with a range of 120 feet.</p>"
+          "name": "心灵沟通",
+          "description": "<p>你获得 120 尺心灵感应。</p>"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你的智力、感知或魅力提升 1，至多提升至 30。"
         }
       }
     },
     "Boon of Desperate Resilience": {
-      "name": "Boon of Desperate Resilience",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase your Strength or Constitution score by 1, to a maximum of 30.</p><p><em><strong>Defense of Body and Mind.</strong></em> While you are Bloodied, you have Resistance to every damage type except Force.</p><section class=\"secret\" id=\"secret-OwHxhu5eLRikQpVO\"><p><strong>Foundry Note</strong></p><p>This feature provides an <strong>Active Effect (AE)</strong> that will modify your damage resistances. You can enable this damage resistances on your sheet's <strong>Effects Tab</strong>, or apply it via the provided Activity, when Bloodied</p></section>",
+      "name": "绝境逢生之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你的力量或体质提升1，至多提升至30。</p><p><em><strong>心体防护。</strong></em>当你处于浴血状态时，你对除力场以外的每种伤害类型都具有抗性。</p><section class=\"secret\" id=\"secret-OwHxhu5eLRikQpVO\"><p><strong>Foundry Note</strong></p><p>此专长提供了一个<strong>主动效应（AE）</strong>，用于修改你的伤害抗性。当你处于浴血状态时，你可以在角色卡的<strong>效应选项卡</strong>中启用此伤害抗性，或通过提供的行动来应用它。</p></section>",
       "activities": {
         "Defense of Body and Mind": {
-          "name": "Defense of Body and Mind",
-          "condition": "when you are Bloodied"
+          "name": "心体防护",
+          "condition": "当你浴血期间"
         }
       },
       "effects": {
         "Damage Resistance (Bloodied)": {
-          "name": "Damage Resistance (Bloodied)",
-          "description": "<p>While you are Bloodied, you have Resistance to every damage type except Force.</p>"
+          "name": "伤害抗性（浴血）",
+          "description": "<p>浴血期间，你对除力场伤害外的所有类型伤害具有抗性。</p>"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase your Strength or Constitution score by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你的力量或体质提升 1，至多提升至 30。"
         }
       }
     },
     "Boon of Exquisite Radiance": {
-      "name": "Boon of Exquisite Radiance",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><em><strong>Eternal Rest.</strong></em> Creatures you reduce to 0 Hit Points can’t become Undead.</p><p><em><strong>Powerful Radiance.</strong></em> When you make a damage roll that deals Radiant damage, you can instead use the highest number possible for each damage die. Once you use this benefit, you can’t do so again until you finish a Long Rest.</p>",
+      "name": "熠熠生辉之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你选择的一项属性提升 1，至多提升至 30。</p><p><em><strong>永恒安眠。</strong></em>被你降至 0 生命值的生物无法变为亡灵。</p><p><em><strong>磊落光明。</strong></em>当你进行一次造成光耀伤害的伤害掷骰时，你能够以每枚骰子可能掷出的最高值替代其骰值。此增益一经使用，直至完成长休你都无法再次使用。</p>",
       "activities": {
         "Powerful Radiance": {
-          "name": "Powerful Radiance",
-          "condition": "you make a damage roll that deals Radiant damage"
+          "name": "磊落光明",
+          "condition": "当你进行一次造成光耀伤害的伤害掷骰时"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase one ability score of your choice by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你选择的一项属性提升 1，至多提升至 30。"
         }
       }
     },
     "Boon of Fluid Forms": {
-      "name": "Boon of Fluid Forms",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.</p><p><em><strong>Shapechanger.</strong></em> You can take a Magic action to shape-shift into a Beast, Humanoid, or Monstrosity with a Challenge Rating no higher than 10. When you shape-shift, you gain a number of Temporary Hit Points equal to the Hit Points of the form. The shape-shifting effect lasts for 1 hour, and it ends early if you have no Temporary Hit Points left or if you take a Magic action to return to your true form.</p><p>Your game statistics are replaced by the stat block of the chosen form, but you retain your creature type; alignment; personality; Intelligence, Wisdom, and Charisma scores; Hit Points; Hit Point Dice; proficiencies; and ability to communicate. If you have the Spellcasting or Pact Magic feature, you retain it too. Upon shape-shifting, you determine whether your equipment drops to the ground or changes in size and shape to fit the new form while you’re in it.</p><p>Once you use this benefit, you can’t do so again until you finish a Long Rest.</p><p><em><strong>Hardy Transformation.</strong></em> When you gain Temporary Hit Points when you shape-shift, increase that number of Temporary Hit Points by 20.</p><section class=\"secret\" id=\"secret-y7018g5gKljzmUqN\"><p><strong>Foundry Note</strong></p><p>The additional 20 temporary hit points from <strong>Hardy Transformation</strong> is included with the <strong>Shapechanger</strong> activity.</p></section>",
+      "name": "变幻无常之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你的智力、感知或魅力提升 1，至多提升至 30。</p><p><em><strong>变形生物。</strong></em>你能够以魔法动作变形为挑战等级不高于 10 的野兽、类人或怪兽。当你变形时，你获得等于新形态生命值的临时生命值。变形效应持续 1 小时，并在你不具有剩余的临时生命值时或在你执行魔法动作变回真实形态时提前结束。</p><p>你的游戏数据被你选择形态的数据卡所替换，但你保留你的生物类型；阵营；个性；智力、感知和魅力属性值；生命值；生命骰；熟练项；交流能力。若你具有施法或契约魔法特性，你同样保留之。变形时，由你决定着装或携带的每件装备是掉落在地上或是适应你的新形态调整大小与形状（仅当你置身其中期间）。</p><p>此增益一经使用，直至完成长休你都无法再次使用。</p><p><em><strong>变化适性。</strong></em>当你在变形时获得临时生命值时，该临时生命值数值提升 20。</p><section class=\"secret\" id=\"secret-y7018g5gKljzmUqN\"><p><strong>Foundry Note</strong></p><p><strong>变化适性</strong>提供的额外 20 点临时生命值已包含在<strong>变形生物</strong>行动中。</p></section>",
       "activities": {
         "Shapechanger": {
-          "name": "Shapechanger"
+          "name": "变形生物"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你的智力、感知或魅力提升 1，至多提升至 30。"
         }
       }
     },
     "Boon of Fortune’s Favor": {
-      "name": "Boon of Fortune’s Favor",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><em><strong>Saving Throw Reroll.</strong></em> When you fail a saving throw, you can reroll it and must use the new roll. Once you use this benefit, you can’t do so again until the start of your next turn.</p>",
+      "name": "命运眷顾之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你选择的一项属性提升 1，至多提升至 30。</p><p><em><strong>豁免重骰。</strong></em>当你的豁免检定失败时，你能够重新掷骰但必须使用新的结果。此增益一经使用，直至你的下个回合开始你都无法再次使用。</p>",
       "activities": {
         "Saving Throw Reroll": {
-          "name": "Saving Throw Reroll",
-          "condition": "you fail a saving throw"
+          "name": "豁免重骰",
+          "condition": "当你的豁免检定失败时"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase one ability score of your choice by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你选择的一项属性提升 1，至多提升至 30。"
         }
       }
     },
     "Boon of Poison Mastery": {
-      "name": "Boon of Poison Mastery",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><em><strong>Antitoxic.</strong></em> You have Immunity to Poison damage and the Poisoned condition.</p><p><em><strong>Perfect Poisoner.</strong></em> Once per turn, when you roll dice to determine Poison damage a creature takes from your attack, spell, or feature, you can instead use the highest number possible for each die.</p>",
+      "name": "毒手殁心之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你选择的一项属性提升 1，至多提升至 30。</p><p><em><strong>百毒不侵。</strong></em>你具有对毒素伤害和中毒状态的免疫。</p><p><em><strong>完美毒师。</strong></em>每回合一次，当你掷骰以决定生物因你的攻击、法术或特性受到的毒素伤害时，你能够以每枚骰子可能掷出的最高值替代其骰值。</p>",
       "activities": {
         "Perfect Poisoner": {
-          "name": "Perfect Poisoner",
-          "condition": "you roll dice to determine Poison damage"
+          "name": "完美毒师",
+          "condition": "当你掷骰以决定生物因你的攻击、法术或特性受到的毒素伤害时"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase one ability score of your choice by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你选择的一项属性提升 1，至多提升至 30。"
         },
         "Antitoxic": {
-          "title": "Antitoxic",
-          "hint": "You have Immunity to Poison damage and the Poisoned condition."
+          "title": "百毒不侵",
+          "hint": "你具有对毒素伤害和中毒状态的免疫。"
         }
       }
     },
     "Boon of Revelry": {
-      "name": "Boon of Revelry",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.</p><p><em><strong>Inspire Dance.</strong></em> You always have the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplOttosIrres]{Otto’s Irresistible Dance}</em> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.</p><p>When you cast the spell, it requires no spell components, and taking damage doesn’t break your Concentration on it.</p><p><em><strong>Sing Out.</strong></em> While a creature that failed its saving throw against your <em>Otto’s Irresistible Dance</em> has the Charmed condition from that spell, it can’t cast spells with Verbal components, and it sings delightful nonsense if it can sing.</p>",
+      "name": "夜宴狂欢之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你的智力、感知或魅力提升1，至多提升至30。</p><p><em><strong>舞动灵感。</strong></em>你始终准备着 <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplOttosIrres]{奥图迷舞}</em> 法术。你可以无需法术位地施展该法术一次，当你完成长休时，你重获以此法施展该法术的能力。你也能够以你拥有的合适环阶的法术位施展该法术。</p><p>当你施展该法术时，无需法术成分，且受到伤害不会打断你对该法术的专注。</p><p><em><strong>放声歌唱。</strong></em>当受你 <em>奥图迷舞</em> 豁免失败的生物处于该法术的魅惑状态期间，其无法施展具有言语成分的法术，且若其能够唱歌，其将哼唱无意义的悦耳小调。</p>",
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你的智力、感知或魅力提升 1，至多提升至 30。"
         },
         "Feat Spell": {
-          "title": "Feat Spell",
-          "hint": "You can also cast this spell using any spell slots you have of the appropriate level. When you cast the spell, it requires no spell components, and taking damage doesn’t break your Concentration on it."
+          "title": "专长法术",
+          "hint": "你可以无需法术位地施展该法术一次，当你完成长休时，你重获以此法施展该法术的能力。你也能够以你拥有的合适环阶的法术位施展该法术。当你施展该法术时无需法术成分，且受到伤害不会打断你该法术的专注。"
         }
       }
     },
     "Boon of Terror": {
-      "name": "Boon of Terror",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase your Charisma score by 1, to a maximum of 30.</p><p><em><strong>Fearless.</strong></em> You have Immunity to the Frightened condition.</p><p><em><strong>Flee, Fools!</strong></em> When a creature with the Frightened condition starts its turn within 60 feet of you, you can take a &amp;Reference[reaction]{Reaction} to stoke its terror, provided you can see the creature and it isn’t behind &amp;Reference[totalcover]. If you do so, the creature must succeed on a Wisdom saving throw (DC 8 plus your Charisma modifier and your Proficiency Bonus) or spend its turn moving away from you by the fastest available means. Once you use this benefit, you can’t use it again until you finish a Short or Long Rest.</p><p><em><strong>Intimidating.</strong></em> You gain Proficiency in the Intimidation skill if you don’t already have it. You also gain Expertise in Intimidation.</p>",
+      "name": "惊魂落魄之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你的魅力提升 1，至多提升至 30。</p><p><em><strong>无所畏惧。</strong></em>你具有对恐慌状态的免疫。</p><p><em><strong>逃吧，蠢货！</strong></em>当一名陷入恐慌状态的生物在你 60 尺内开始其回合时，只要你可以看见该生物且其未身处&Reference[totalcover]之后，你就能执行一个&Reference[reaction]{反应}来加剧其恐惧。若你如此做，该生物必须成功通过一次感知豁免（DC = 8 + 你的魅力调整值 + 你的熟练加值），否则必须在其回合内以可用的最快方式远离你。此增益一经使用，直至完成短休或长休你都无法再次使用。</p><p><em><strong>令人生畏。</strong></em>若你尚未获得威吓技能的熟练，你获得之。你还会获得威吓专精。</p>",
       "activities": {
         "Flee, Fools!": {
-          "name": "Flee, Fools!",
-          "condition": "a target with the Frightened condition starts its turn within range"
+          "name": "逃吧，蠢货！",
+          "condition": "一名陷入恐慌状态的生物在你 60 尺内开始其回合时"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase your Charisma score by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你的魅力提升 1，至多提升至 30。"
         },
         "Feat Skill": {
-          "title": "Feat Skill",
-          "hint": "Your feat grants you Proficiency in the Intimidation skill if you don’t already have it. You also gain Expertise in Intimidation."
+          "title": "专长技能",
+          "hint": "若你不具有威吓技能的熟练，你获得之。你还会获得威吓专精。"
         },
         "Feat Condition Immunity": {
-          "title": "Feat Condition Immunity"
+          "title": "专长状态免疫"
         }
       }
     },
     "Boon of the Bright Sun": {
-      "name": "Boon of the Bright Sun",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase your Constitution, Wisdom, or Charisma score by 1, to a maximum of 30.</p><p><em><strong>Daylight Presence.</strong></em> As a Bonus Action, you radiate a 30-foot Emanation of Bright Light that is sunlight. If any of the Emanation’s area overlaps with an area of Darkness created by a spell, that spell is dispelled. The Emanation lasts until you dismiss it (no action required), die, or have the Incapacitated condition.</p><p><em><strong>Fortifying Light.</strong></em> When your Daylight Presence is active, at the start of each of your turns, you and allies you can see in your Daylight Presence gain 10 Temporary Hit Points.</p>",
+      "name": "旭日骄阳之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你的体质、感知或魅力提升 1，至多提升至 30。</p><p><em><strong>如日当空。</strong></em>以一个附赠动作，你散发出半径 30 尺的阳光明亮光照区域。若该光照区域与法术创造的黑暗区域重叠，该法术被解除。该效果持续至你将其解除（无需动作）、你死亡或你陷入失能状态。</p><p><em><strong>守御之光。</strong></em>当你的如日当空激活时，在你的每个回合开始，你和如日当空区域内你可见的盟友获得 10 点临时生命值。</p>",
       "activities": {
         "Fortifying Light": {
-          "name": "Fortifying Light",
-          "condition": "Daylight Presence is active",
+          "name": "守御之光",
+          "condition": "如日当空已激活",
           "affects": {
-            "special": "including self"
+            "special": "包含自身"
           }
         },
         "Toggle Daylight Presence": {
-          "name": "Toggle Daylight Presence"
+          "name": "切换如日当空"
         }
       },
       "effects": {
         "Daylight Presence": {
-          "name": "Daylight Presence",
+          "name": "如日当空",
           "changes": {
-            "name": "{} (Active)"
+            "name": "{}（激活）"
           }
         },
         "Xemk0WJIPaPsL6lx": {
-          "name": "Daylight Presence",
-          "description": "<p>The Emanation lasts until you dismiss it (no action required), die, or have the Incapacitated condition.</p>"
+          "name": "如日当空",
+          "description": "<p>光环持续至你解除之（无需动作）、你死亡或你陷入失能状态。</p>"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase your Constitution, Wisdom, or Charisma score by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你的体质、感知或魅力提升 1，至多提升至 30。"
         }
       }
     },
     "Boon of the Furious Storm": {
-      "name": "Boon of the Furious Storm",
-      "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.</p><p><em><strong>Eye of the Storm.</strong></em> You have Resistance to Lightning and Thunder damage. While you are Bloodied, you have Immunity to Lightning and Thunder damage.</p><p><em><strong>Storm’s Strength.</strong></em> Creatures have Disadvantage on saving throws against your spells that deal Lightning or Thunder damage.</p>",
+      "name": "暴风骤岚之恩惠",
+      "description": "<p>你获得以下增益。</p><p><em><strong>属性值提升。</strong></em>你的智力、感知或魅力提升 1，至多提升至 30。</p><p><em><strong>暴风之眼。</strong></em>你对闪电和雷鸣伤害具有抗性。当你处于浴血状态时，你对闪电和雷鸣伤害具有免疫。</p><p><em><strong>风暴之力。</strong></em>生物在对抗你造成闪电或雷鸣伤害的法术时进行的豁免检定具有劣势。</p>",
       "activities": {
         "Eye of the Storm": {
-          "name": "Eye of the Storm"
+          "name": "暴风之眼"
         }
       },
       "effects": {
         "Damage Immunity (Bloodied)": {
-          "name": "Damage Immunity (Bloodied)",
-          "description": "<p>While you are Bloodied, you have Immunity to Lightning and Thunder damage.</p>"
+          "name": "暴风之眼（浴血）",
+          "description": "<p>浴血期间，你对闪电和雷鸣伤害具有免疫。</p>"
         }
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你的智力、感知或魅力提升 1，至多提升至 30。"
         },
         "Feat Damage Resistance": {
-          "title": "Feat Damage Resistance"
+          "title": "专长伤害抗性"
         }
       }
     },
@@ -475,11 +475,11 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
-          "hint": "Your feat allows you to increase one ability score of your choice by 1, to a maximum of 30."
+          "title": "专长属性值提升",
+          "hint": "你选择的一项属性提升 1，至多提升至 30。"
         },
         "Feat Damage Resistance": {
-          "title": "Feat Damage Resistance"
+          "title": "专长伤害抗性"
         }
       }
     },
@@ -534,11 +534,11 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20."
         },
         "Feat Spell": {
-          "title": "Feat Spell",
+          "title": "专长法术",
           "hint": "You learn the Ray of Frost cantrip. If you already know it, you learn a different Wizard cantrip of your choice."
         }
       }
@@ -845,11 +845,11 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Constitution score by 1, to a maximum of 20."
         },
         "Feat Damage Resistance": {
-          "title": "Feat Damage Resistance",
+          "title": "专长伤害抗性",
           "hint": "When you gain this feat, choose Acid, Cold, Fire, Lightning, or Poison. You have Resistance to the chosen damage type."
         }
       }
@@ -941,7 +941,7 @@
       "description": "<p>You gain the following benefits.</p><p><em><strong>Speak with Animals.</strong></em> You always have the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]{Speak with Animals} </em>spell prepared and can cast it with any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat). When you cast this spell as a Ritual, its duration is 8 hours.</p><p><em><strong>Tag Team.</strong></em> When you take the &amp;Reference[Help] action, you can switch places with a willing ally within 5 feet of yourself as part of that same action. This movement doesn’t provoke &amp;Reference[Opportunity Attacks]. You can’t use this benefit if the ally has the Incapacitated condition.</p>",
       "advancement": {
         "Feat Spell": {
-          "title": "Feat Spell",
+          "title": "专长法术",
           "hint": "You always have the Speak with Animals spell prepared and can cast it with any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat). When you cast this spell as a Ritual, its duration is 8 hours."
         }
       }
@@ -951,7 +951,7 @@
       "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p><p><em><strong>Friend to Animals.</strong></em> You have Advantage on ability checks when taking the Influence action with Beasts.</p><p><em><strong>Two Hearts, One Mind.</strong></em> You always have the <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBeastSense]{Beast Sense} </em>spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. When you cast it without a spell slot using this feature, it doesn’t require Concentration. You can also cast the spell using any spell slots you have of the appropriate level. The spell’s spellcasting ability is the ability increased by this feat.</p>",
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20."
         },
         "v8L2aht8ThvZAW3r": {
@@ -978,7 +978,7 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Dexterity or Charisma score by 1, to a maximum of 20."
         }
       }
@@ -1015,7 +1015,7 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20."
         }
       }
@@ -1091,7 +1091,7 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Dexterity or Charisma score by 1, to a maximum of 20."
         }
       }
@@ -1282,7 +1282,7 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Strength or Charisma  score by 1, to a maximum of 20."
         }
       }
@@ -1365,7 +1365,7 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20."
         }
       }
@@ -1542,7 +1542,7 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Strength, Wisdom, or Charisma score by 1, to a maximum of 20."
         }
       }
@@ -1638,7 +1638,7 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Strength or Dexterity score by 1, to a maximum of 20."
         }
       }
@@ -1893,7 +1893,7 @@
       },
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20."
         }
       }
@@ -1951,7 +1951,7 @@
       },
       "advancement": {
         "Feat Spell": {
-          "title": "Feat Spell",
+          "title": "专长法术",
           "hint": "You learn the Sacred Flame cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat)."
         }
       }
@@ -2009,7 +2009,7 @@
         "Crown of Spellfire": {
           "name": "Crown of Spellfire",
           "changes": {
-            "name": "{} (Active)"
+            "name": "{}（激活）"
           }
         }
       }
@@ -2053,7 +2053,7 @@
       "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase. </strong></em>Increase your Strength or Dexterity score by 1, to a maximum of 20.</p><p><em><strong>Headlock.</strong></em> Your allies have Advantage on attack rolls against a creature Grappled by you.</p><p><em><strong>Sturdy Knot.</strong></em> When you use Chain, Manacles, or Rope to bind a creature, add your Proficiency Bonus to the DC to escape or burst the Chain, Manacles, or Rope.</p><p><em><strong>Tough Talk.</strong></em> A creature’s Hostile attitude doesn’t impose Disadvantage on your Charisma (Intimidation) checks to influence that creature.</p>",
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Strength or Dexterity score by 1, to a maximum of 20."
         }
       }
@@ -2205,7 +2205,7 @@
         "Frozen Haunt": {
           "name": "Frozen Haunt",
           "changes": {
-            "name": "{} (Active)"
+            "name": "{}（激活）"
           }
         },
         "Frozen Soul": {
@@ -2277,7 +2277,7 @@
       "description": "<p>You gain the following benefits.</p><p><em><strong>Ability Score Increase.</strong></em> Increase your Dexterity or Charisma score by 1, to a maximum of 20.</p><p><em><strong>Retaliate.</strong></em> Immediately after a creature within 5 feet of you hits you with a melee attack, you can make an &amp;Reference[OpportunityAttacks] against that creature.</p><p><em><strong>Versatile Merc.</strong></em> When you finish a Long Rest, choose a skill in which you have proficiency. You have Expertise in that skill until you finish your next Long Rest.</p>",
       "advancement": {
         "Feat Ability Score Improvement": {
-          "title": "Feat Ability Score Improvement",
+          "title": "专长属性值提升",
           "hint": "Your feat allows you to increase your Strength or Dexterity score by 1, to a maximum of 20."
         },
         "Versatile Merc (Long Rest)": {
