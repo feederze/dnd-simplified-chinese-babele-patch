@@ -35,6 +35,16 @@ Hooks.on('init', () => {
         requiresReload: true
     });
 
+    game.settings.register(MODULE_ID, 'ItemNameSetting', {
+        name: '物品名称双语转换器开关',
+        hint: '',
+        scope: 'world',
+        config: true,
+        default: true,
+        type: Boolean,
+        requiresReload: true
+    });
+
     game.settings.register(MODULE_ID, 'PackStatus', {
         name: '汉化状态',
         hint: '',
