@@ -1,5 +1,6 @@
 import { registerAddons } from './registerAddons.js';
 import { TranslateBlacklistMenu } from './BlacklistMenu.js';
+import './flowcontrol.js';
 export const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
 
 
