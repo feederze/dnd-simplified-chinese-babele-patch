@@ -14,7 +14,8 @@ export async function registerAddons(babele) {
         "advancement": advancementConverter,
         "activities": activitiesConverter,
         "dynamicname": nameConverter,
-        "itemsConverter": itemsConverter
+        "itemsConverter": itemsConverter,
+        "advancementitemsConverter":advancementitemsConverter
     });
     await registerCustomMappings(babele);
     logDebug("registerCustomConverters: Done");
@@ -121,6 +122,7 @@ function activitiesConverter(originalValues, translations, data, translatedCompe
     );
 }
 
+// 角色名称双语
 function nameConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
     let isActive = game.settings.get(MODULE_ID, 'namesetting')
     if (!translations) 
@@ -134,6 +136,8 @@ function nameConverter(originalValues, translations, data, translatedCompendium,
         return translations;
     }
 }
+
+// 角色卡物品双语
 function itemsConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
     const babele = game.babele;
     if (!translations) return originalValues;
@@ -175,4 +179,19 @@ function makeBilingualNames(outputs, originalValues) {
             name: `${translatedName} ${originalName}`
         });
     });
+}
+
+// 冒险物品双语
+function advancementitemsConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
+    let isActive = game.settings.get(MODULE_ID, 'ItemNameSetting')
+    if (!translations) 
+    {
+        return originalValues ?? data?.name;
+    }
+    const original = originalValues ?? data?.name;
+    if (isActive) {
+        return `${translations} ${original}`;
+    } else {
+        return translations;
+    }
 }
