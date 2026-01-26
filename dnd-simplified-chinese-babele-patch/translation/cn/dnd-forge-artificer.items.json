@@ -4,7 +4,7 @@
     "Magic Items": "Magic Items",
     "Upgrades": "Upgrades",
     "Crew Stations": "Crew Stations",
-    "Airships": "Airships",
+    "Airships": "飞艇",
     "Loot": "Loot"
   },
   "entries": {
@@ -13,10 +13,10 @@
       "description": "<p><em>Small Object</em></p><p><strong>Armor Class:</strong> [[lookup @item.armor.value]] <strong>Hit Points:</strong> [[lookup @item.hp.max]]</p><p><em><strong>Harpoon.</strong></em> [[/attack extended]]. [[/damage average extended]], and the target is harpooned. While harpooned, the target and the ship can’t move more than 100 feet away from each other, and if the target is a Medium or smaller creature, it has the &amp;Reference[Grappled] condition. The crew member operating this station can release a harpooned target (no action required).</p><p><em><strong>Reel (Requires Elemental Core).</strong></em> A target Grappled by this station’s Harpoon is pulled up to 50 feet in a straight line toward the ship.</p><p>This station consists of a compact grappling hook, reinforced rope, and launcher. One creature can operate this station at a time. The crew member operating this station can take the Harpoon and Reel actions.</p>",
       "activities": {
         "Harpoon": {
-          "name": "Harpoon"
+          "name": "鱼叉"
         },
         "Reel": {
-          "name": "Reel",
+          "name": "拖拽",
           "chatFlavor": "Requires Elemental Core",
           "affects": {
             "special": "harpooned target"
@@ -34,7 +34,7 @@
           "name": "Harpooned"
         },
         "Grappled": {
-          "name": "Grappled",
+          "name": "受擒",
           "description": "<p>If the target is a Medium or smaller creature, it is &amp;Reference[Grappled apply=false].</p>"
         }
       }
@@ -126,7 +126,7 @@
       "description": "<p><em>Medium Object</em></p><p><strong>Armor Class:</strong> [[lookup @item.armor.value]] <strong>Hit Points:</strong> [[lookup @item.hp.max]]</p><p><em><strong>Charge (Requires Elemental Core).</strong></em> A crew member must expend one level 1+ spell slot to charge the Sky Veil.</p><p><em><strong>Cloak (Requires Elemental Core and Charge).</strong></em> The ship has the &amp;Reference[Invisible] condition, and while on board it, creatures are also Invisible. These effects last for 1 hour, until this station is destroyed, or until the crew member that took this action loses &amp;Reference[Concentration] or leaves this station.</p><p>This marvel of arcane engineering sits on the prow of an airship and channels powerful illusion magic to allow a ship and its passengers to pass undetected. It can accommodate up to one Medium creature. The crew member operating this station can take the Charge action and then take the Cloak action.</p><p><em><strong>Mark of Shadows.</strong></em> If a creature with the Mark of Shadows occupies this crew station, that creature can take the Cloak action as a Bonus Action.</p>",
       "activities": {
         "Charge": {
-          "name": "Charge",
+          "name": "冲锋",
           "condition": "crew member expends one level 1+ spell slot",
           "chatFlavor": "Requires Elemental Core"
         },
@@ -151,7 +151,7 @@
       "activities": {
         "utility": {
           "affects": {
-            "special": "Unoccupied"
+            "special": "未占据"
           }
         }
       }
@@ -189,12 +189,12 @@
       "description": "<p><em>Wondrous Item, Uncommon</em></p><p>While wearing this helmet, you have Advantage on Initiative rolls.</p>",
       "effects": {
         "Initiative Advantage": {
-          "name": "Initiative Advantage"
+          "name": "先攻优势"
         }
       }
     },
     "Helm": {
-      "name": "Helm",
+      "name": "头盔",
       "description": "<p><em>Small Object</em></p><p><strong>Armor Class:</strong> [[lookup @item.armor.value]] <strong>Hit Points:</strong> [[lookup @item.hp.max]]</p><p><em><strong>Drive (Requires Mark of Storm).</strong></em> The ship moves up to its Fly Speed in any direction.</p><p><em><strong>Shift Engine (Requires Mark of Storm).</strong></em> The ship’s elemental core is suppressed or reengaged.</p><p>The helm of an airship consists of a specialized wheel, levers, and other controls. One creature can operate this station at a time.</p><p>The pilot (the crew member operating an airship’s Helm) must have the Mark of Storm to interface with the controls. While operating the Helm, a crew member can take the station’s Drive and Shift Engine actions.</p><p><em><strong>Tilt and Roll.</strong></em> When taking the Helm’s Drive action, a crew member can spend an amount of movement equal to half the ship’s Fly Speed to invert the ship on its axis, either turning it upside down or righting it. All creatures and objects on the ship that aren’t anchored fall when the ship moves in this way. A creature that succeeds on a [[/save format=long]] can grab a fixed object within reach to avoid falling.</p><section class=\"notable\"><h4>Piloting without a Dragonmark</h4><p>Helming an airship that typically requires a dragonmarked pilot is difficult—but not impossible. At your DM’s discretion, you can use the following rules for piloting a ship without a dragonmark.</p><p>On its turn, a creature without the @UUID[Compendium.dnd-forge-artificer.options.Item.efaMarkStorm0000]{Mark of Storm} occupying the Helm can attempt to take the Drive or Shift Engine action and make a [[/check]] check to command the engine’s elemental spirit. On a successful check, the action happens. On a failed check, nothing happens, and the creature’s action is wasted.</p><p>Magic can make an airship’s elemental spirit more receptive to commands. Casting <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmMonst]{Charm Monster}</em> targeting the elemental spirit gives you Advantage on checks made to command the spirit for the spell’s duration. If you instead cast <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDominateMo]{Dominate Monster} </em>targeting the elemental spirit, any checks you make to command the spirit for the spell’s duration automatically succeed. The elemental spirit automatically fails its saving throw against these spells, and you do not need to see the spirit to target it if you’re occupying the Helm.</p></section>",
       "activities": {
         "Drive": {
@@ -231,16 +231,16 @@
       "description": "<p>Iridescent conch shell, carved with Giant runes, that echoes with the sounds of a maelstrom.</p>"
     },
     "Mace of Terror": {
-      "name": "Mace of Terror",
-      "description": "<p><em>Weapon (@UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepMace000000]{Mace}). Rare (Requires Attunement)</em></p><p>This magic weapon has 3 charges and regains 1d3 expended charges daily at dawn. While holding the weapon, you can take a Magic action and expend 1 charge to release a wave of terror from it. Each creature of your choice within 30 feet of you must succeed on a DC 15 Wisdom saving throw or have the &amp;Reference[Frightened apply=false] condition for 1 minute. While Frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can’t make Opportunity Attacks. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can take the Dodge action. At the end of each of its turns, a creature repeats the save, ending the effect on itself on a success.</p>",
+      "name": "恐惧之锤",
+      "description": "<p><em>武器（@UUID[Compendium.dnd-players-handbook.equipment.Item.phbwepMace000000]{Mace}），珍稀（需同调）</em></p><p>这把魔法武器具有 3 充能，并在每日黎明时重获 1d3 已消耗的充能。持握这把武器期间，你可以使用一个魔法动作并消耗 1 充能，来从该武器中释放出一股恐惧波动。30 尺内每个你所选择的生物都必须成功通过一次DC 15 的感知豁免，否则将陷入 &Reference[Frightened apply=false] 状态，持续 1 分钟。以这种方式陷入恐慌的生物在其回合内必须尽可能的向远离你的方向移动，并且它不能发动借机攻击。它只能选择进行疾走动作，或尝试摆脱一个阻止其移动的效应。如果无处可逃，则它可以执行回避 动作。该生物在每个自己的回合结束时可以再次进行此豁免，豁免成功则其身上的该效应提前结束。</p>",
       "activities": {
         "Wave of Terror": {
-          "name": "Wave of Terror"
+          "name": "恐惧波动"
         }
       },
       "effects": {
         "Frightened": {
-          "name": "Frightened"
+          "name": "恐慌"
         }
       }
     },
@@ -253,17 +253,17 @@
       "description": "<p><em>Ring, Uncommon (Requires Attunement)</em></p><p>The item has 4 charges.</p><p>When you fail a Constitution saving throw to maintain Concentration, you can take a Reaction and expend 1 of the item’s charges to succeed instead.</p><p>The item regains 1d4 expended charges daily at dawn.</p>",
       "activities": {
         "Expend Use": {
-          "name": "Expend Use"
+          "name": "耗用"
         }
       }
     },
     "Periapt of Wound Closure": {
-      "name": "Periapt of Wound Closure",
-      "description": "<p><em>Wondrous Item, Uncommon (Requires Attunement)</em></p><p>While wearing this pendant, you gain the following benefits.</p><p><em><strong>Life Preservation.</strong></em> Whenever you make a Death Saving Throw, you can change a roll of 9 or lower to a 10, turning a failed save into a successful one.</p><p><em><strong>Natural Healing Boost.</strong></em> Whenever you roll a Hit Point Die to regain Hit Points, double the number of Hit Points it restores.</p>"
+      "name": "保健护符",
+      "description": "<p><em>奇物，非普通（需同调）</em></p><p>佩戴此吊坠期间，你获得以下增益：</p><p><em><strong>维持生命。</strong></em> 每当你进行死亡豁免时，你都可以将掷骰中 9 及以下的出目改为 10，以此让失败的豁免改为成功。</p><p><em><strong>加速自愈。</strong></em> 每当你投掷一颗生命骰来恢复生命值时，其生命值恢复量翻倍。</p>"
     },
     "Pot of Awakening": {
-      "name": "Pot of Awakening",
-      "description": "<p><em>Wondrous Item, Common</em></p><p>If you plant an ordinary shrub in this 10-pound clay pot and let it grow for 30 days, the shrub magically transforms into an <strong>@UUID[Compendium.dnd-dungeon-masters-guide.actors.Actor.gaSTr7DFZJLmgI2J]{Awakened Shrub}</strong> at the end of that time. When the shrub awakens, its roots break the pot, destroying it.</p><p>The awakened shrub is Friendly toward you and obeys your commands. Absent commands from you, it does nothing.</p>"
+      "name": "启蒙花盆",
+      "description": "<p><em>奇物，普通</em></p><p>你可以在这个 10 磅重的黏土花盆里种植一株普通灌木，待其生长30天后，这株灌木会魔法性的转化为一株 <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmAwakenedShrub0]{启蒙灌木}</strong>。当灌木被启蒙时，它的根系会打碎花盆，并导致花盆被摧毁。</p><p>这株启蒙灌木会对你友好并服从你的命令。如果没有你的命令，它会什么也不做。</p>"
     },
     "Repeating Shot": {
       "name": "Repeating Shot",
@@ -326,7 +326,7 @@
       "description": "<p><em>Medium Object</em></p><p><strong>Armor Class:</strong> 17 <strong>Hit Points:</strong> 30</p><p><em><strong>Energy Blast (Requires Elemental Core).</strong></em> [[/attack extended]]. [[/damage average extended]].</p><p>This miniature cannon shoots bursts of magical force. A creature operating the Arcane Launcher can take the Energy Blast action to aim and fire the cannon.</p>",
       "activities": {
         "Energy Blast": {
-          "name": "Energy Blast",
+          "name": "光能爆",
           "chatFlavor": "Requires Elemental Core"
         }
       }
