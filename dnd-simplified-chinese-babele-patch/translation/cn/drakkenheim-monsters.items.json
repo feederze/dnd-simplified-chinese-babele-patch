@@ -1,198 +1,204 @@
 {
   "label": "魔法物品",
+  "folders": {
+    "Wondrous Items": "Wondrous Items",
+    "Tools": "Tools",
+    "Weapons": "Weapons",
+    "Consumable": "Consumable",
+    "Treasures & Resources": "Treasures & Resources",
+    "Armor": "Armor"
+  },
   "entries": {
     "Frozen Armor": {
       "name": "霜冻护甲",
-      "description": "<p><em>{护甲 任何}, {珍稀 Rare} (需要同调)</em></p><p>这副护甲通过沿着其框架内侧精心制造的元素流体脉络引导寒冷能量。在其成型过程中，元素粉尘与黄金混合，被污染的腐液被用作催化剂来增强魔法效应。置于其中心的灵核宝石必须注入霜巨人的能量。</p><p>当你与此护甲同调时，你具有对冷冻伤害的抗性，并且免疫 &reference[Frozen apply=false] 状态。</p><p>这副魔法护甲拥有6点充能，并在每天拂晓恢复所有已消耗的充能。当你被一次近战攻击命中时，你可以用你的反应并消耗护甲的1点充能，将你的攻击者原地冻结。该生物必须进行一次DC15体质豁免，否则将被 &reference[Frozen] (DC15)。</p><p><em><strong>{制作 Crafting}.</strong></em> 制作 <em>{冻结护甲 Frozen Armor}</em> 需要一个珍稀工坊和以下珍稀部件：</p><ul><li><p><strong>[灵核]</strong> 来自霜巨人的灵核</p></li><li><p><strong>[粉尘]</strong> 元素粉尘</p></li><li><p><strong>[流体]</strong> 被污染的腐液</p></li><li><p><strong>[流体]</strong> 元素流体</p></li></ul>",
+      "description": "<p><em>Armor (Any), Rare (Requires Attunement)</em></p><p>This armor channels cold energy through carefully manufactured veins of elemental fluid that run along the inside of its frame. Elemental dust is mixed with the gold in its forming, and contaminated ichor is used as a catalyst to magnify the magical effects. The animus gem placed centrally upon it must be infused with the energy of a frost giant.</p><p>While attuned to this armor you have Resistance to Cold damage and are Immune to the &amp;reference[Frozen apply=false] condition.</p><p>This magical armor has six charges, and regains all expended charges each day at dawn. When you are hit by a melee attack, you can use your Reaction and expend 1 charge from the armor to freeze your attacker in pace. The creature must make a DC 15 Constitution saving throw or be &amp;reference[Frozen] (DC 15).</p><p><em><strong>Crafting.</strong></em> Creating <em>Frozen Armor</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Frost Giant</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
-        "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
-        },
         "Icy Retaliation": {
-          "name": "冰霜回击",
-          "condition": "当你被一次近战攻击命中时。"
+          "name": "Icy Retaliation",
+          "condition": "When you are hit by a melee attack."
+        },
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Frozen Armor: Cold Resistance": {
-          "name": "冰冻护甲：寒冷抗性",
-          "description": "<p>当你调谐此护甲时，你具有对寒冷伤害的抗性，并且免疫于&amp;reference[Frozen]状态。</p>"
+          "name": "Frozen Armor: Cold Resistance",
+          "description": "<p>While attuned to this armor you have Resistance to Cold damage and are Immune to the &amp;reference[Frozen] condition.</p>"
         },
         "Frozen Armor": {
           "name": "霜冻护甲",
           "changes": {
-            "name": "冰冻 {}",
+            "name": "Frozen {}",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.4ETD2uWHPA4T4IRh inline]"
           }
         },
         "Frozen (DC 15)": {
-          "name": "冰冻 (DC15)",
-          "description": "<p>你被部分封入冰中：</p><ul><li><p>你处于&amp;reference[Immobilized apply=false]与&amp;reference[Defenseless apply=false]状态。</p></li><li><p>对造成{钝击伤害 bludgeoning damage}的武器攻击，你将处于&amp;reference[Helpless apply=false]状态。</p></li><li><p>你或其他生物可以执行一个{动作 Action}来破除冰层。为此，你必须进行一个[[/check 15 str ath]]检定。</p></li></ul>"
+          "name": "Frozen (DC 15)",
+          "description": "<p>You're partially encased in ice:</p><ul><li><p>You are &amp;reference[Immobilized apply=false] &amp; &amp;reference[Defenseless apply=false].</p></li><li><p>You're &amp;reference[Helpless apply=false] against attacks made with a weapon that deals bludgeoning damage.</p></li><li><p>You or another creature can take an action to break the ice away. To do so, you must succeed on a [[/check 15 str ath]] check.</p></li></ul>"
         }
       }
     },
     "Pelt of the Pack Lord": {
-      "name": "群狼君主之皮",
-      "description": "<p><em>奇物, 珍稀 (需同调)</em></p><p>这件毛皮斗篷由加尔米尔兽的毛皮精心缝制而成, 以鼠人的皮革为基底, 饰以鸟妖的利爪, 并用受污染的腐液抛光至闪亮。</p><p>当你与此毛皮同调且处于敌对生物5尺范围内时, 你的盟友对该生物进行的攻击检定具有优势。</p><p><em><strong>制造。</strong></em> 制造一件<em>兽群君主毛皮</em>需要一个珍稀工坊和以下珍稀部件：</p><p><strong>[精魄]</strong> 怪兽精魄</p><p><strong>[液体]</strong> 受污染的腐液</p><p><strong>[毛发]</strong> 来自加尔米尔兽的毛皮</p><p><strong>[皮革]</strong> 来自鼠人的皮肤</p><p><strong>[天生武器]</strong> 来自鸟妖的利爪</p>"
+      "name": "Pelt of the Pack Lord",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>This pelt cape is made from the fur of a Garmyr stitched care fully into the leathers of a ratling, decorated with the talons of a harpy, and polished to a shine with contaminated ichor.</p><p>While you are attuned to this pelt and are within 5 feet of a hostile creature, your allies have Advantage on attack rolls against that creature.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Pelt of the Pack Lord</em> requires a Rare Workshop and the following Rare Components:</p><p><strong>[Animus]</strong> Monstrosity Animus</p><p><strong>[Fluid]</strong> Contaminated Ichor</p><p><strong>[Hair]</strong> Fur from a Garmyr</p><p><strong>[Hide]</strong> Skin from a Ratling</p><p><strong>[Natural Weapon]</strong> Claws from a Harpy</p>"
     },
     "Tentacle Whip": {
-      "name": "触须鞭",
-      "description": "<p><em>武器（鞭）, 珍稀</em></p><p>这条鞭子由异怪生物的触须和内脏制成，缝合了有翼野兽的蹼状膜，并融合了植物生物的树皮。一旦放置了灵魂精华，触须就会开始扭动和蠕动，鞭子能够以不可思议的力量抓住并拖拽生物在地面上移动。</p><p>你用这把魔法鞭进行攻击和伤害掷骰时获得+2加值，其触及范围为20尺。</p><p>每回合一次，当你用此武器的攻击命中一个大型或更小的生物时，你可以将其朝你的方向拉动10尺。</p><p><em><strong>制造。</strong></em> 制造一条<em>触须鞭</em>需要一个珍稀工坊和以下珍稀部件：</p><ul><li><p><strong>[灵魂精华]</strong> 任意灵魂精华</p></li><li><p><strong>[毛发]</strong> 缝合线</p></li><li><p><strong>[皮革]</strong> 树皮</p></li><li><p><strong>[皮革]</strong> 蹼状膜</p></li><li><p><strong>[天生武器]</strong> 来自异怪的触须</p></li></ul>",
+      "name": "Tentacle Whip",
+      "description": "<p><em>Weapon (Whip), Rare</em></p><p>This whip is made from the tentacles and guts of aberrant creatures, stitched to the webbed membranes of winged beasts and fused to the bark of a plant creature. Once the animus is placed, the tentacles begin to writhe and wriggle and the whip can latch and drag creatures along the ground with uncanny strength.</p><p>You gain a +2 bonus to attack and damage rolls made with this magic whip, which has a reach of 20 feet.</p><p>Once per turn when you hit a Large or smaller creature with an attack using this weapon, you can pull it 10 feet towards you.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Tentacle Whip</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Hair]</strong> Stitches</p></li><li><p><strong>[Hide]</strong> Bark</p></li><li><p><strong>[Hide]</strong> Webbed Membrane</p></li><li><p><strong>[Natural Weapons]</strong> Tentacles from an Aberration</p></li></ul>",
       "activities": {
         "Pull Creature": {
-          "name": "拉回生物",
-          "condition": "当你使用此武器的攻击命中大型或更小的生物时。"
+          "name": "Pull Creature",
+          "condition": "When you hit a Large or smaller creature with an attack using this weapon."
         }
       }
     },
     "Rat Tooth Dagger": {
-      "name": "鼠牙匕首",
-      "description": "<p><em>武器 (匕首), 珍稀 (需游荡者同调)</em></p><p>当你使用这把魔法匕首作为攻击动作的一部分进行攻击并命中，且将你的偷袭Sneak Attack应用于伤害骰时，你可以在同一动作中额外使用这把匕首进行一次攻击。若该攻击命中且满足你的偷袭Sneak Attack条件，你可以将半数偷袭Sneak Attack骰（向下取整）加入该攻击的伤害。</p><p><em><strong>制造。</strong></em> 制造<em>鼠牙匕首</em>需要珍稀工坊及以下珍稀部件：</p><ul><li><p><strong>[精魄]</strong> 任意精魄</p></li><li><p><strong>[流体]</strong> 毒液</p></li><li><p><strong>[表皮]</strong> 树皮</p></li><li><p><strong>[天生武器]</strong> 鼠人的爪击</p></li></ul>",
+      "name": "Rat Tooth Dagger",
+      "description": "<p><em>Weapon (Dagger), Rare (Requires Attunement by a Rogue)</em></p><p>When you hit with an attack as part of an Attack action using this magic dagger and apply your Sneak Attack to the damage roll, you can make an additional attack using this dagger as part of the same action. If that attack hits and meets the criteria for your Sneak Attack, you can apply half your Sneak Attack dice (rounded down) to the attack’s damage.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Rat Tooth Dagger</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Venom</p></li><li><p><strong>[Hide]</strong> Bark</p></li><li><p><strong>[Natural Weapons]</strong> Claws from a Ratling</p></li></ul>",
       "activities": {
         "Rat Tooth Extra Damage": {
-          "name": "鼠牙额外伤害"
+          "name": "Rat Tooth Extra Damage"
         }
       }
     },
     "Cold Snap Circlet": {
-      "name": "寒霜头环",
-      "description": "<p><em>奇物, 珍稀</em></p><p>这顶冰霜头环由冻结的污染腐液制成, 由天生寒冷生物的心脏维持永久冻结状态, 内衬亡灵冰冻骨骼, 全部由元素生物的灵魄驱动。即使处于永久冻结状态, 佩戴起来也十分舒适。</p><p>每回合一次, 当你使用法术位施展一个造成冷冻伤害的法术时, 你可以选择一个受到该法术冷冻伤害的目标获得&reference[Frozen]状态。逃脱DC等于你的法术豁免DC。</p><p><em><strong>制造。</strong></em> 制造<em>寒霜头环</em>需要一个珍稀工坊和以下珍稀部件:</p><ul><li><p><strong>[灵魄]</strong> 来自元素生物的灵魄</p></li><li><p><strong>[骨骼]</strong> 来自亡灵的肋骨</p></li><li><p><strong>[液体]</strong> 污染腐液</p></li><li><p><strong>[器官]</strong> 来自白龙, 银龙, 冬巨魔, 或任何免疫冷冻伤害的怪物的心脏。</p></li></ul>",
+      "name": "Cold Snap Circlet",
+      "description": "<p><em>Wondrous Item, Rare</em></p><p>This icy circlet is made from frozen contaminated ichor, kept in a state of permafrost by the heart of a naturally cold creature, and lined with frozen bones of undead, all powered by the animus of an elemental. Even in its permanently frozen state, it is comfortable to wear.</p><p>Once per turn, when you cast a spell that deals Cold damage using a spell slot, you can choose one target that was dealt Cold damage by the spell to gain the &amp;reference[Frozen] condition. The escape DC equals your spell save DC.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Cold Snap Circlet</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from an Elemental</p></li><li><p><strong>[Bones]</strong> Ribs from an Undead</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Organ]</strong> Heart from a White Dragon, Silver Dragon, Winter Troll, or any monster Immune to Cold damage.</p></li></ul>",
       "activities": {
         "Cold Snap": {
-          "name": "寒流突袭",
-          "condition": "当你使用法术位施展一个造成冷冻伤害的法术时。",
-          "affects": {
-            "special": "一个被该法术造成冷冻伤害的目标。"
-          }
+          "name": "Cold Snap",
+          "condition": "When you cast a spell that deals Cold damage using a spell slot.",
+          "target": "A target that was dealt Cold damage by the spell."
         }
       },
       "effects": {
         "Frozen (Spell Save DC)": {
-          "name": "冰冻 (法术豁免DC)",
-          "description": "<p>你部分被冰封：</p><ul><li><p>你处于&amp;reference[Immobilized apply=false]与&amp;reference[Defenseless apply=false]状态。</p></li><li><p>对造成钝击伤害的武器攻击，你处于&amp;reference[Helpless apply=false]状态。</p></li><li><p>你或其他生物可以执行动作破除冰封。为此，你必须进行[[/check str ath]]检定对抗施法者的法术豁免DC。</p></li></ul>"
+          "name": "Frozen (Spell Save DC)",
+          "description": "<p>You're partially encased in ice:</p><ul><li><p>You are &amp;reference[Immobilized apply=false] &amp; &amp;reference[Defenseless apply=false].</p></li><li><p>You're &amp;reference[Helpless apply=false] against attacks made with a weapon that deals bludgeoning damage.</p></li><li><p>You or another creature can take an action to break the ice away. To do so, you must succeed on a [[/check str ath]] check against the spellcaster's Spell Save DC.</p></li></ul>"
         }
       }
     },
     "Scroll of Spell Power": {
-      "name": "法术能量卷轴",
-      "description": "<p><em>卷轴, 非普通</em></p><p>当你为1环或更高环阶的法术进行伤害掷骰时，可以消耗此卷轴来重掷最多等同于该法术环阶数量的伤害骰。你必须使用新的掷骰结果。</p><p><em><strong>制造。</strong></em> 制造<em>法术威能卷轴</em>需要一间非普通工坊和以下非普通部件：</p><ul><li><p><strong>[灵质]</strong> 任意</p></li><li><p><strong>[流体]</strong> 来自精类生物、龙类或巨人的怪物血液</p></li><li><p><strong>[皮革]</strong> 来自怪兽的皮肤</p></li></ul>",
+      "name": "Scroll of Spell Power",
+      "description": "<p><em>Scroll, Uncommon</em></p><p>When you roll damage for a spell of level 1 or higher, you can expend this scroll to re-roll a number of the damage dice up to the level of the spell cast. You must use the new rolls.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Scroll of Spell Power</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Fey, Dragon, or Giant</p></li><li><p><strong>[Hide]</strong> Skin from a Monstrosity</p></li></ul>",
       "activities": {
         "Empower Spell": {
-          "name": "强效法术",
-          "condition": "当你为一个1环或更高的法术骰伤害时。"
+          "name": "Empower Spell",
+          "condition": "When you roll damage for a spell of level 1 or higher."
         }
       }
     },
     "Champion's Weapon": {
-      "name": "勇士武器",
-      "description": "<p><em>武器 (任何简易或军用), 非普通</em></p><p>使用此{魔化武器 magic weapon}进行{攻击 Attack}骰时, 在d20上掷出19或20即可造成{重击 critical hit}。</p><p><em><strong>制造。</strong></em> 制造<em>勇士武器</em>需要非普通工坊和以下非普通部件：</p><ul><li><p><strong>[灵质]</strong> 任意</p></li><li><p><strong>[骨骼]</strong> 骨骼</p></li><li><p><strong>[液体]</strong> 汁液</p></li><li><p><strong>[躲藏 Hide]</strong> 甲片</p></li></ul>",
+      "name": "Champion's Weapon",
+      "description": "<p><em>Weapon (Any Simple or Martial), Uncommon</em></p><p>Attack rolls made using this magic weapon can score a Critical Hit on a roll of 19 or 20 on the d20.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Champion’s Weapon</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Bones]</strong> Bones</p></li><li><p><strong>[Fluid]</strong> Sap</p></li><li><p><strong>[Hide]</strong> Plates</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Champion's Weapon": {
-          "name": "勇士武器",
+          "name": "Champion's Weapon",
           "changes": {
-            "name": "勇士的 {}",
+            "name": "Champion's {}",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.DPDHIpGBisEfAZUx inline]"
           }
         }
       }
     },
     "Necromancer's Armor": {
-      "name": "死灵师护甲",
-      "description": "<p><em>护甲（轻甲）, 珍稀（需由施法者同调）</em></p><p>这套护甲由死者的骨头制成，并覆盖在黑色编织织物上。护甲肩部有两个头骨作为肩甲，有一条加固的脊柱，以及覆盖前部的肋骨笼，整个结构装饰着倒下的野兽的獠牙。这些骨头被魔法注入了异界能量，由一个强大的亡灵意志驱动。</p><p>当你与此护甲同调时，即使你不具备轻甲熟练项，你也能熟练使用此护甲。</p><p>当你处于你控制下的一个亡灵生物30尺范围内时，你获得除光耀伤害外的全伤害抗性。然而，每当你受到伤害时，选择你30尺范围内一个你控制下的亡灵生物。该生物受到等量的伤害，此伤害无法以任何方式减免或阻止。</p><p><em><strong>制造。</strong></em> 制造<em>死灵师护甲</em>需要一个珍稀工坊和以下珍稀部件：</p><ul><li><p><strong>[意志]</strong> 亡灵意志</p></li><li><p><strong>[骨头]</strong> 肋骨</p></li><li><p><strong>[骨头]</strong> 头骨</p></li><li><p><strong>[骨头]</strong> 脊柱</p></li><li><p><strong>[液体]</strong> 受污染的腐液</p></li><li><p><strong>[天生武器]</strong> 牙齿</p></li></ul>",
+      "name": "Necromancer's Armor",
+      "description": "<p><em>Armor (Light), Rare (Requires Attunement by a spellcaster)</em></p><p>This suit of armor is constructed from the bones of the dead and outfitted over black woven fabric. The armor has two skulls as pauldrons upon the shoulders, a reinforced spine, and a rib cage that covers the front, and the entire structure is ornately decorated with the fangs of fallen beasts. The bones are magically imbued with otherworldly energy, powered by a powerful undead animus.</p><p>While attuned to this armor, you are proficient with this armor even if you lack proficiency with light armor.</p><p>While you are within 30 feet of an Undead creature under your control, you gain Resistance to all damage except Radiant. However, each time you take damage, choose an Undead creature under your control within 30 feet of you. That creature takes the same amount of damage, which can’t be reduced or prevented in any way.</p><p><em><strong>Crafting.</strong></em> Creating <em>Necromancer’s Armor</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Undead Animus</p></li><li><p><strong>[Bones]</strong> Ribs</p></li><li><p><strong>[Bones]</strong> Skull</p></li><li><p><strong>[Bones]</strong> Spine</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Natural Weapon]</strong> Teeth</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Necromancer's Armor": {
-          "name": "死灵师护甲",
+          "name": "Necromancer's Armor",
           "changes": {
-            "name": "死灵师的 {}",
+            "name": "Necromancer's {}",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.Ducwx0AyK76XbkjL inline]"
           }
         },
         "Necromancer's Resistance": {
-          "name": "死灵师抗性",
-          "description": "<p>当你处于你控制下的一个亡灵生物30尺范围内时，你获得除光耀伤害外的全部伤害抗性。但每当你受到伤害时，选择你30尺范围内你控制下的一个亡灵生物。该生物受到等量伤害，此伤害无法以任何方式减免或阻止。</p>"
+          "name": "Necromancer's Resistance",
+          "description": "<p>While you are within 30 feet of an Undead creature under your control, you gain Resistance to all damage except Radiant. However, each time you take damage, choose an Undead creature under your control within 30 feet of you. That creature takes the same amount of damage, which can’t be reduced or prevented in any way.</p>"
         }
       }
     },
     "Injector's Crossbow": {
-      "name": "注射者弩",
-      "description": "<p><em>武器 (任意弩), 珍稀 (需要调谐)</em></p><p>这把弩覆盖着金属板，橡木制的弩身和前握把上装饰着精致尖锐的金属尖端。弩臂和弩身用构装体的钢板加固，握把则由怪物皮革制成的染色皮革包裹。它的兽筋弓弦和皮革固定带将一系列注射器固定到位。弩托上伸出一系列不同的管子，连接到武器侧面的一个炼金腔室。一个机械轮在填充飞镖时将其送入位置，自动装填弩以便轻松发射。</p><p>你用这把魔法弩进行攻击和伤害掷骰时获得+1加值。此弩忽略{装填 Loading}属性，并且你不需要空手即可为其装填一发{弹药 Ammunition}。</p><p>每回合一次，当你使用此弩以{远程攻击 Ranged Attack}命中一个{生物 Creature}时，你可以施加以下一种{毒素 Poison}。</p><ul><li><p><strong>剧毒 Virulent.</strong> 该{目标 target}额外受到2d6{毒素伤害 Poison damage}。</p></li><li><p><strong>衰弱 Weakening.</strong> 该{目标 target}必须进行一次DC15的{体质豁免 Constitution saving throw}。{豁免失败 On a failed save}，其被{削弱 Weakened}直到你的下一个回合开始。</p></li><li><p><strong>定身 Immobilizing.</strong> 该{目标 target}必须进行一次DC15的{力量豁免 Strength saving throw}。{豁免失败 On a failed save}，其被{ immobilized  immobilized}直到你的下一个回合开始。</p></li></ul><p><em><strong>制造 Crafting.</strong></em> 制造一把<em>注射器弩 Injector Crossbow</em>需要一个珍稀工坊和以下珍稀{部件 components}：</p><ul><li><p><strong>[灵质 Animus]</strong> 任意灵质</p></li><li><p><strong>[流体 Fluid]</strong> 化学溶液</p></li><li><p><strong>[毛发 Hair]</strong> 毛发</p></li><li><p><strong>[皮甲 Hide]</strong> 板甲</p></li><li><p><strong>[皮甲 Hide]</strong> 皮肤</p></li><li><p><strong>[天生武器 natural weapons]</strong> 注射器的针头</p></li></ul>",
+      "name": "Injector's Crossbow",
+      "description": "<p><em>Weapon (Any Crossbow), Rare (Requires Attunement)</em></p><p>This crossbow is covered in metal plating, decorative and refined pointed metal tips along an oak wood body, and foregrip. The barrel and limb are reinforced with the steel plates from a con struct, with a stained leather grip made from a monster’s hide. Its hair strung bowstring and leather fasteners hold a series of syringes in place. The crossbow’s stock has a series of various tubes extruding from it that connect to an alchemical chamber on the side of the weapon. A mechanical wheel feeds the darts into place upon filling them, auto-loading the crossbow for easy firing.</p><p>You gain a +1 bonus to attack and damage rolls made with this magic crossbow. This crossbow ignores the Loading property, and you don’t need a free hand to load a piece of ammunition into it.</p><p>Once per turn when you hit a creature with a ranged attack using this crossbow, you can apply one of the following poisons.</p><ul><li><p><strong>Virulent.</strong> The target takes an extra 2d6 Poison damage.</p></li><li><p><strong>Weakening.</strong> The target must make a DC 15 Constitution saving throw. On a failed save, it is Weakened until the start of your next turn.</p></li><li><p><strong>Immobilizing.</strong> The target must make a DC 15 Strength saving throw. On a failed save, it is Immobilized until the start of your next turn.</p></li></ul><p><em><strong>Crafting.</strong></em> Creating an <em>Injector Crossbow</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Chemical Solution</p></li><li><p><strong>[Hair]</strong> Hair</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Hide]</strong> Skin</p></li><li><p><strong>[Natural Weapons]</strong> Needles from an Injector</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
-        "Virulent Poison": {
-          "name": "剧毒毒素"
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
         },
         "Weakening Poison": {
-          "name": "虚弱毒素"
+          "name": "Weakening Poison"
+        },
+        "Virulent Poison": {
+          "name": "Virulent Poison"
         },
         "Immobilizing Poison": {
-          "name": "麻痹毒素"
-        },
-        "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Immobilizing Poison"
         }
       },
       "effects": {
         "Injector's Crossbow": {
-          "name": "注射者弩",
+          "name": "Injector's Crossbow",
           "changes": {
-            "name": "注射者的{}",
+            "name": "Injector's {}",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.GDBSNXV8Ho1oCKCl inline]"
           }
         },
         "Immobilizing Poison": {
-          "name": "麻痹毒素",
-          "description": "<p>你陷入&amp;reference[immobilized apply=false]状态，直至该生物的下一回合开始。</p>"
+          "name": "Immobilizing Poison",
+          "description": "<p>You are &amp;reference[immobilized apply=false] until the start of the creature's next turn.</p>"
         },
         "Weakening Poison": {
-          "name": "弱化毒素",
-          "description": "<p>你陷入&amp;reference[weakened apply=false]状态，直至该生物的下一回合开始。</p>"
+          "name": "Weakening Poison",
+          "description": "<p>You are &amp;reference[weakened apply=false] until the start of the creature's next turn.</p>"
         }
       }
     },
     "Manual of Occult Anatomy": {
-      "name": "神秘解剖手册",
-      "description": "<p><em>奇物, 多种稀有度 (需由药剂师或魔契师同调)</em></p><p>这本记载着奇异医学知识的书籍充满了描绘具有异形特征人类的图解，它以注入龙语粉尘的怪物血液墨水书写，然后蚀刻在用异怪皮肤制成的羊皮纸页上。手稿装订在覆有鳞片的封面中。</p><p>你可以将此手册用作你药剂师或魔契师法术的施法法器。当你使用该手册作为施法法器时，你的药剂师或魔契师法术的法术攻击骰和法术豁免DC获得加值。加值由书籍的稀有度决定（见下表）。</p><p>此外，该书记载着一项药剂师秘学理论或魔契师诡术祈唤的知识，其最高等级由手册的稀有度决定并在物品创建时选择，你在同调该物品时获得此知识。这决定了同调该物品所需的职业。</p><table><caption>秘奥解剖学手册稀有度</caption><thead><tr><th>稀有度</th><th>加值</th><th>最高等级</th></tr></thead><tbody style=\"text-align:center\"><tr><td>珍稀</td><td>+1</td><td>6环</td></tr><tr><td>极珍稀</td><td>+2</td><td>10环</td></tr><tr><td>传说</td><td>+3</td><td>15环</td></tr></tbody></table><p><em><strong>制造。</strong></em>制造一本<em>秘奥解剖学手册</em>需要一间工坊和与所造物品同等稀有度的部件。所需部件包括：</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[粉尘]</strong> 任意龙类粉尘</p></li><li><p><strong>[流体]</strong> 来自怪兽的怪物血液</p></li><li><p><strong>[表皮]</strong> 鳞片</p></li><li><p><strong>[表皮]</strong> 来自异怪的皮肤</p></li></ul>",
+      "name": "Manual of Occult Anatomy",
+      "description": "<p><em>Wondrous Item, Rarity Varies (Requires Attunement by an Apothecary or Warlock)</em></p><p>Filled with diagrams showing humans with alien features, this book of strange medical lore is written in monster-blood ink infused with draconic dust and then etched onto parchment pages made from aberration skin. The manuscript is bound in a scale-clad cover.</p><p>You can use this manual as a Spellcasting Focus for your Apothecary or Warlock spells. When you use the manual as a Spellcasting Focus, you gain a bonus to spell attack rolls and spell save DCs of your Apothecary or Warlock spells. The bonus is determined by the book’s rarity (see the table below).</p><p>In addition, the book contains the knowledge of an Apothecary Esoteric Theory or Warlock Eldritch Invocation up to a level determined by the manual’s rarity and chosen when the item is created, which you gain while you are attuned to it. This determines which class is required to attune to the item.</p><table><caption>Manual of Occult Anatomy Rarities</caption><thead><tr><th>Rarity</th><th>Bonus</th><th>Maximum Level</th></tr></thead><tbody style=\"text-align:center\"><tr><td>Rare</td><td>+1</td><td>6th</td></tr><tr><td>Very Rare</td><td>+2</td><td>10th</td></tr><tr><td>Legendary</td><td>+3</td><td>15th</td></tr></tbody></table><p><em><strong>Crafting.</strong></em> Creating a <em>Manual of Occult Anatomy</em> requires a Workshop and Components of equal rarity to the item created. The Components required are:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Any Dragon Dust</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Monstrosity</p></li><li><p><strong>[Hide]</strong> Scales</p></li><li><p><strong>[Hide]</strong> Skin from an Aberration</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Manual of Occult Anatomy +1": {
-          "name": "神秘解剖手册 +1",
-          "description": "<p>当你使用该手册作为{法器 Spellcasting focus}时，你的{炼金术师 Apothecary}或{魔契师 Warlock}法术的{法术攻击检定 spell attack rolls}和{法术豁免DC spell save DCs}获得+1加值。</p>"
+          "name": "Manual of Occult Anatomy +1",
+          "description": "<p>When you use the manual as a Spellcasting Focus, you gain a +1 bonus to spell attack rolls and spell save DCs of your Apothecary or Warlock spells.</p>"
         },
         "Manual of Occult Anatomy +2": {
-          "name": "秘学解剖手册 +2",
-          "description": "<p>当你使用该手册作为{法器 Spellcasting focus}时，你的{药剂师 Apothecary}或{魔契师 Warlock}法术的{法术攻击检定 spell attack rolls}和{法术豁免DC spell save DCs}获得+2加值。</p>"
+          "name": "Manual of Occult Anatomy +2",
+          "description": "<p>When you use the manual as a Spellcasting Focus, you gain a +2 bonus to spell attack rolls and spell save DCs of your Apothecary or Warlock spells.</p>"
         },
         "Manual of Occult Anatomy +3": {
-          "name": "密教解剖手册 +3",
-          "description": "<p>当你将该手册用作{法器 Spellcasting focus}时，你的药剂师或魔契师法术的{法术攻击攻击检定 spell attack rolls}和{法术豁免DC spell save DCs}获得+3加值。</p>"
+          "name": "Manual of Occult Anatomy +3",
+          "description": "<p>When you use the manual as a Spellcasting Focus, you gain a +3 bonus to spell attack rolls and spell save DCs of your Apothecary or Warlock spells.</p>"
         },
         "rcwE5BnZipl6GMp2": {
-          "name": "秘学解剖手册 +1",
+          "name": "Manual of Occult Anatomy +1",
           "changes": {
             "name": "{} +1"
           }
         },
         "wTSNc2sRYanpPrew": {
-          "name": "秘学解剖手册 +2",
+          "name": "Manual of Occult Anatomy +2",
           "changes": {
             "name": "{} +2"
           }
         },
         "NO5cEWQUwfbzFy4r": {
-          "name": "秘学解剖手册 +3",
+          "name": "Manual of Occult Anatomy +3",
           "changes": {
             "name": "{} +3"
           }
@@ -200,267 +206,267 @@
       }
     },
     "Bracers of Arc Lightning": {
-      "name": "闪电弧臂甲",
-      "description": "<p><em>奇物, 珍稀 (需同调)</em></p><p>这些护腕由精美的皮革制成, 饰有魔法鳞片, 并浸染了元素流体, 元素尘埃和受污染的腐液。所使用的灵髓必须来自能造成闪电伤害的生物, 使护腕能够引导该元素。</p><p>佩戴这些魔法护腕时, 你获得对闪电伤害的抗性以及对&reference[Shocked apply=false]状态的免疫。</p><p>这些魔法护腕拥有6充能, 并在每天拂晓恢复所有已消耗的充能。每回合一次, 当你以远程武器攻击命中一个生物时, 你可以消耗护腕的1充能, 对目标造成额外的3d6闪电伤害。受到此伤害的目标将获得&reference[Shocked]状态, 持续至你的下个回合开始。</p><p><em><strong>制造。</strong></em> 制造<em>电弧护腕</em>需要一间珍稀工坊以及以下珍稀部件:</p><ul><li><p><strong>[灵髓]</strong> 来自能造成闪电伤害的生物的灵髓 (例如一条蓝龙)</p></li><li><p><strong>[尘埃]</strong> 元素尘埃</p></li><li><p><strong>[流体]</strong> 元素流体</p></li><li><p><strong>[流体]</strong> 受污染的腐液</p></li><li><p><strong>[皮革]</strong> 皮肤</p></li><li><p><strong>[皮革]</strong> 鳞片</p></li></ul>",
+      "name": "Bracers of Arc Lightning",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>These bracers are crafted with fine leathers decorated with magical scales, washed in elemental fluids, elemental dust, and contaminated ichor. The animus used must be from a creature that deals Lightning damage, allowing the bracers to channel the element.</p><p>While wearing these magic bracers you gain Resistance to Lightning damage and Immunity to the &amp;reference[Shocked apply=false] condition.</p><p>These magic bracers have six charges, and regain all expended charges each day at dawn. Once per turn when you hit a creature with a ranged weapon attack, you can expend one charge from the bracers to deal an extra 3d6 Lightning damage to the target. A target which takes this damage has the &amp;reference[Shocked] condition until the start of your next turn.</p><p><em><strong>Crafting.</strong></em> Creating <em>Bracers of Arc Lightning</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a creature that deals Lightning damage (such as a Blue Dragon)</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Hide]</strong> Skin</p></li><li><p><strong>[Hide]</strong> Scales</p></li></ul>",
       "activities": {
         "Arc Lightning": {
-          "name": "弧光闪电",
-          "condition": "当你以一次远程武器攻击命中一个生物时。"
+          "name": "Arc Lightning",
+          "condition": "When you hit a creature with a ranged weapon attack."
         }
       },
       "effects": {
         "Shocked": {
-          "name": "电击",
-          "description": "<p>你将陷入&amp;reference[shocked apply=false]状态，直到佩戴闪电护腕的生物下一回合开始。</p>"
+          "name": "Shocked",
+          "description": "<p>You are &amp;reference[shocked apply=false] until the start of the creature wearing the Bracers of Arc Lightning's next turn.</p>"
         },
         "Bracers of Arc Lightning: Lightning Resistance": {
-          "name": "奥术闪电护腕：闪电抗性",
-          "description": "<p>佩戴这些魔法护腕时，你获得对闪电伤害的抗性以及对&reference[Shocked apply=false]状态的免疫。</p>"
+          "name": "Bracers of Arc Lightning: Lightning Resistance",
+          "description": "<p>While wearing these magic bracers you gain Resistance to Lightning damage and Immunity to the &amp;reference[Shocked apply=false] condition.</p>"
         }
       }
     },
     "Vampire Blood Potion": {
-      "name": "吸血鬼血药水",
-      "description": "<p><em>药水, 极珍稀</em></p><p>这瓶药水是一种深红色冒泡的酿造物, 尝起来有明显的铜味。当你饮用此药水时, 你在接下来的一分钟内获得以下效益:</p><ul><li><p>你在力量, 敏捷和魅力的攻击检定, 属性检定和豁免上获得优势。</p></li><li><p>如果伤害将你降至0生命值, 你必须进行一次体质豁免, DC为5 + 所受伤害的一半, 除非该伤害是光耀伤害或来自重击。若成功, 你将改为降至1生命值, 并且此药水的效果结束。</p></li><li><p>如果你受到光耀伤害或进入阳光, 此药水的效果提前结束。</p></li></ul><p><em><strong>制造。</strong></em> 制造一瓶<em>吸血鬼血药水</em>需要一个极珍稀工坊和以下极珍稀部件。</p><ul><li><p><strong>[灵质]</strong> 亡灵灵质</p></li><li><p><strong>[尘]</strong> 来自任何吸血鬼的亡灵尘</p></li><li><p><strong>[液]</strong> 灵质精华</p></li><li><p><strong>[液]</strong> 来自吸血鬼的怪物血</p></li></ul>",
+      "name": "Vampire Blood Potion",
+      "description": "<p><em>Potion, Very Rare</em></p><p>This potion is a crimson-red bubbling brew that tastes distinctly of copper. When you drink this potion, you gain the following benefits for the next minute:</p><ul><li><p>You gain Advantage on Strength, Dexterity, and Charisma attack rolls, ability checks, and saving throws.</p></li><li><p>If damage reduces you to 0 Hit Points, you must make a Constitution saving throw with a DC of 5 + half the damage taken, unless the damage is Radiant or from a Critical Hit. On a success, you drop to 1 Hit Point instead, and the effects of this potion end.</p></li><li><p>The effects of this potion end early if you take Radiant damage or enter sunlight.</p></li></ul><p><em><strong>Crafting.</strong></em> Creating a <em>Vampire Blood Potion</em> requires a Very Rare Workshop and the following Very Rare Components.</p><ul><li><p><strong>[Animus]</strong> Undead Animus</p></li><li><p><strong>[Dust]</strong> Undead Dust from any Vampire</p></li><li><p><strong>[Fluid]</strong> Ectoplasm</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Vampire</p></li></ul>",
       "activities": {
         "Drink Potion": {
-          "name": "饮用药水"
+          "name": "Drink Potion"
         }
       },
       "effects": {
         "Vampire Blood Potion": {
-          "name": "吸血鬼血药水",
-          "description": "<p>你在接下来的1分钟内获得以下效益：</p><ul><li><p>你在力量, 敏捷, 和魅力的攻击检定, 属性检定, 和豁免上获得优势。</p></li><li><p>如果伤害将你的生命值降至0, 你必须进行一次体质豁免, DC为5 + 所受伤害的一半, 除非该伤害是光耀伤害或来自重击。若豁免成功, 你将生命值降至1点, 且此药水的效果结束。</p></li><li><p>如果你受到光耀伤害或进入阳光, 此药水的效果提前结束。</p></li></ul>"
+          "name": "Vampire Blood Potion",
+          "description": "<p>You gain the following benefits for the next minute:</p><ul><li><p>You gain Advantage on Strength, Dexterity, and Charisma attack rolls, ability checks, and saving throws.</p></li><li><p>If damage reduces you to 0 Hit Points, you must make a Constitution saving throw with a DC of 5 + half the damage taken, unless the damage is Radiant or from a Critical Hit. On a success, you drop to 1 Hit Point instead, and the effects of this potion end.</p></li><li><p>The effects of this potion end early if you take Radiant damage or enter sunlight.</p></li></ul>"
         }
       }
     },
     "Aqua Expurgo": {
-      "name": "抗污药剂",
-      "description": "<p><em>药水, 珍稀</em></p><p>这种亮橙色液体储存于注射器中，并充溢着奥秘魔法。你可以使用一个{操作动作}将此注射剂直接注入自己或其他自愿生物的心脏。</p><p>在接收一剂净水后六{小时}内，你受到针对&reference[drakkenheimContamination]的保护。在此期间，每当你对抗会导致你获得一个或多个污染等级的效果的{豁免}失败时，你可以选择改为成功。你可以{使用此能力}三次，之后净水的效果消失。</p><p>如果净水的效果以此方式消失，你立即受到[[/damage 3d6 暗蚀]]{伤害}，并因剧烈呕吐腐败胆汁而陷入&reference[Incapacitated]状态1{分钟}。你的{生命值上限}减少一个{等于}所受到{伤害}的数值。此减少持续到你完成一次{长休}为止。如果此效果将你的{生命值上限}降低至0，你会死亡。该{暗蚀伤害}无法以任何方式减少或阻止。</p><p><em><strong>制造。</strong></em> 制造<em>净水</em>需要一个珍稀工坊和以下珍稀{部件}：</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[尘埃]</strong> 异怪尘埃</p></li><li><p><strong>[液体]</strong> 污染{腐液}</p></li><li><p><strong>[器官]</strong> 来自{植物}的花（传统上为一株邪异百合）</p></li></ul>",
+      "name": "Aqua Expurgo",
+      "description": "<p><em>Potion, Rare</em></p><p>This bright orange fluid is stored in a syringe and charged with arcane magic. You can use a Utilize action to administer the shot directly to the heart of yourself or another willing creature.</p><p>You are protected against &amp;reference[drakkenheimContamination] for six hours after receiving a dose of Aqua Expurgo. During this time, whenever you fail a saving throw against an effect which would cause you to gain one or more Contamination levels, you can choose to succeed instead. You can use this ability three times, after which the effects of Aqua Expurgo expire.</p><p>If the effects of Aqua Expurgo expire in this manner, you immediately take [[/damage 3d6 necrotic]] damage and become &amp;reference[Incapacitated] for 1 minute while you violently retch corrupt bile. Your Hit Point maximum is reduced by an amount equal to the damage taken. This reduction lasts until you finish a Long Rest. You die if this effect reduces your Hit Point maximum to 0. The Necrotic damage can’t be reduced or prevented by any means.</p><p><em><strong>Crafting.</strong></em> Creating <em>Aqua Expurgo</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Aberrant Dust</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Organ]</strong> Flower from a Plant (traditionally an Eldritch Lily)</p></li></ul>",
       "activities": {
         "Administer Aqua Expurgo": {
-          "name": "净化之水"
+          "name": "Administer Aqua Expurgo"
         }
       },
       "effects": {
         "Aqua Expurgo": {
-          "name": "抗污药剂",
-          "description": "<p>你已服用了净化之水，并在接下来的六小时内受其影响。</p><p>你受到针对&reference[drakkenheimContamination]的保护。在此期间，每当你对抗一个会让你获得一个或多个污染等级的效果的豁免检定失败时，你可以选择改为成功。你可以使用此能力三次，之后净化之水的效果消失。</p><p>如果净化之水的效果以此方式消失，你会立即受到[[/damage 3d6 necrotic]]伤害，并陷入&reference[Incapacitated]状态1分钟，同时剧烈呕吐出腐败的胆汁。你的生命值上限减少的数值等于所受到的伤害值。此减少效果持续到你完成一次长休为止。如果此效果将你的生命值上限降低至0，你会死亡。该暗蚀伤害无法以任何方式减免或阻止。</p>"
+          "name": "Aqua Expurgo",
+          "description": "<p>You have been administered Aqua Expurgo, and are under its effects for the next six hours.</p><p>You are protected against &amp;reference[drakkenheimContamination]. During this time, whenever you fail a saving throw against an effect which would cause you to gain one or more Contamination levels, you can choose to succeed instead. You can use this ability three times, after which the effects of Aqua Expurgo expire.</p><p>If the effects of Aqua Expurgo expire in this manner, you immediately take [[/damage 3d6 necrotic]] damage and become &amp;reference[Incapacitated] for 1 minute while you violently retch corrupt bile. Your Hit Point maximum is reduced by an amount equal to the damage taken. This reduction lasts until you finish a Long Rest. You die if this effect reduces your Hit Point maximum to 0. The Necrotic damage can’t be reduced or prevented by any means.</p>"
         }
       }
     },
     "Delerium Crystal": {
-      "name": "谵妄水晶",
-      "description": "<p>一个[[lookup @item.name lowercase]]拥有21的护甲等级和20点生命值。提取一个[[lookup @item.name lowercase]]需要30分钟。</p>"
+      "name": "Delerium Crystal",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 21 and 20 Hit points. Extracting a [[lookup @item.name lowercase]] takes 30 minutes.</p>"
     },
     "Fractal Key": {
-      "name": "分形凯",
-      "description": "<p>这把螺旋骨钥允许使用者穿越位面。作为一个动作，身处{薄暮之地 Thin Place}的生物可以创建一个通往{以太位面 Ethereal Plane}的{异界之门 gate}，持续1分钟，之后钥匙会化为尘埃。</p><p>制作这把分形钥匙需要一座{珍稀 Rare}熔炉和以下部件：</p><ul><li><p><strong>[灵质 Animus]</strong> 来自一个@UUID[Compendium.drakkenheim-monsters.monsters.Actor.DdRPPArJOsslUmaA]。</p></li></ul><ul><li><p><strong>[骸骨 Bones]</strong> 来自任意{珍稀 Rare}生物。</p></li></ul>",
+      "name": "Fractal Key",
+      "description": "<p>This spiral bone key allows the user to traverse the planes. As an action, a creature in a Thin Place can create a gate to the Ethereal Plane for 1 minute, after which the key crumbles to dust.</p><p>Creating the Fractal Key requires a Rare forge and the following components:</p><ul><li><p><strong>[Animus]</strong> from a @UUID[Compendium.drakkenheim-monsters.monsters.Actor.DdRPPArJOsslUmaA].</p></li></ul><ul><li><p><strong>[Bones]</strong> of any Rare creature.</p></li></ul>",
       "activities": {
         "Access Thin Place": {
-          "name": "进入稀薄之地"
+          "name": "Access Thin Place"
         }
       }
     },
     "Scythed Arm Blades": {
-      "name": "镰刃臂刃",
-      "description": "<p><em>武器 (短剑), 珍稀 (需调谐)</em></p><p>这些钢制臂刃是锋利无比的4尺长镰刀, 固定于两个由脊柱骨制成的锁扣护腕上。固定件采用精良皮甲与钢扣制成。臂带中嵌有谵妄水晶, 为刀刃灌注能量。</p><p>这些魔法短剑需成对使用, 必须同时持握才能发挥其魔法特性。调谐这对短剑视为调谐一件魔法物品。</p><p>使用这些魔法短剑进行{攻击 Attack}与{伤害 damage}检定时, 你获得+2加值。调谐这些武器时, 除了你正在使用的其他精通词条外, 还可激活&reference[Nick]精通词条。</p><p><em><strong>制造。</strong></em> 制作<em>镰刃臂铠</em>需要珍稀工坊及以下珍稀部件:</p><ul><li><p><strong>[灵髓]</strong> 任意灵髓</p></li><li><p><strong>[骨骼]</strong> 脊柱</p></li><li><p><strong>[皮质]</strong> 板甲</p></li><li><p><strong>[皮质]</strong> 任意野兽或怪兽的外皮</p></li><li><p><strong>[天生武器]</strong> 两个再造机傀的利刃</p></li></ul>"
+      "name": "Scythed Arm Blades",
+      "description": "<p><em>Weapons (Shortsword), Rare (Requires Attunement)</em></p><p>These steel arm blades are razor sharp, 4-foot-long scythes that are fastened to two locking bracers made of spinal bones. The fasteners are made from fine leather with steel buckles. Delerium crystals are embedded in the armbands, infusing the blades with energy.</p><p>These magic shortswords function as a pair and must be wield ed together for their magic properties to function. Attuning to the shortswords counts as being attuned to one magic item.</p><p>You gain a +2 bonus to attack and damage rolls made with these magic shortswords. While attuned to these weapons, you can activate the &amp;reference[Nick] mastery property in addition to a different mastery property you’re using with these weapons.</p><p><em><strong>Crafting.</strong></em> Creating <em>Scythed Arm Blades</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Spine</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Hide]</strong> Skin from any Beast or Monstrosity</p></li><li><p><strong>[Natural Weapons]</strong> Two Blades from a Reautomata</p></li></ul>"
     },
     "Familiar Figurine": {
-      "name": "魔宠雕像",
-      "description": "<p><em>奇物, 非普通</em></p><p>每天一次, 以一个魔法动作, 你可以使用这个精雕细琢的小雕像来施展 @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili]{寻找魔宠 Find Familiar}。</p><p><em><strong>制造.</strong></em> 制造一个<em>魔宠雕像</em>需要一个非普通工坊和以下非普通部件：</p><ul><li><p><strong>[生命源]</strong> 任意</p></li><li><p><strong>[骸骨]</strong> 来自一个巨人的骸骨</p></li><li><p><strong>[粉尘]</strong> 来自一个元素生物或精类生物的粉尘</p></li></ul>"
+      "name": "Familiar Figurine",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>Once per day as a Magic action, you can use this finely-carved figurine to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili].</p><p><em><strong>Crafting.</strong></em> Creating a <em>Familiar Figurine</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Bones]</strong> Bones from a Giant</p></li><li><p><strong>[Dust]</strong> Dust from an Elemental or Fey</p></li></ul>"
     },
     "Giant Femur Club": {
-      "name": "巨人股骨短棒",
-      "description": "<p><em>武器(巨棒), 珍稀(需调谐)</em></p><p>这根短棒由巨人的股骨经清洁抛光后精心制成, 可作双手武器使用。其锥形握柄包裹着染色的皮革。棒顶固定着一个巨大的巨魔头骨, 头骨上嵌有多颗畸形牙齿, 如同骨质钉头锤, 赋予这件武器狰狞的外观。短棒注入了用于驱动武器的精魄所蕴含的元素力量, 使其表面跃动着元素能量。</p><p>使用这把魔法巨棒进行攻击检定和伤害检定时你获得+1加值, 且对巨人发动的攻击检定具有优势。</p><p>调谐此短棒期间, 你造成的额外伤害为2d6点, 伤害类型与注入其中的元素尘种类相关。</p><p><em><strong>制造。</strong></em> 制作<em>巨人股骨短棒</em>需要珍稀工坊及以下珍稀部件:</p><ul><li><p><strong>[精魄]</strong> 巨魔的巨人精魄</p></li><li><p><strong>[骨骼]</strong> 巨魔头骨</p></li><li><p><strong>[骨骼]</strong> 巨人之骨</p></li><li><p><strong>[尘晶]</strong> 巨魔的元素尘</p></li><li><p><strong>[皮革]</strong> 怪兽外皮</p></li><li><p><strong>[天生武器]</strong> 巨人、野兽或怪兽的牙齿</p></li></ul><p>尘晶部件决定短棒造成的额外伤害类型。例如: 暴风巨魔的尘晶造成闪电伤害, 邪术巨魔则使短棒造成暗蚀伤害。</p>",
+      "name": "Giant Femur Club",
+      "description": "<p><em>Weapon (Greatclub), Rare (Requires Attunement)</em></p><p>This club is made from the cleaned and polished femur of a giant, crafted finely into a usable two-handed club. Its tapered hilt is wrapped in stained leather. Fastened to the top of the club is a large troll skull with several monstrous teeth embedded into it like a bone morningstar, giving the weapon a grim appearance. The club is imbued with elemental power from the animus used to power the weapon, which causes it to crackle with elemental power.</p><p>You gain a +1 bonus to attack and damage rolls made with this magic greatclub, and you have Advantage on attack rolls made against Giants.</p><p>While attuned to this club you deal an additional 2d6 damage of the type associated with the elemental dust infused into it.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Giant Femur Club</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Giant Animus from a Troll</p></li><li><p><strong>[Bone]</strong> Skull from a Troll</p></li><li><p><strong>[Bone]</strong> Bone from a Giant</p></li><li><p><strong>[Dust]</strong> Elemental Dust from a Troll</p></li><li><p><strong>[Hide]</strong> Skin from a Monstrosity</p></li><li><p><strong>[Natural Weapons]</strong> Teeth from a Giant, Beast, or Monstrosity</p></li></ul><p>The dust Component determines the additional damage the club deals. For example, dust from a Storm Troll deals Lightning damage. Eldritch Trolls cause the club to deal Necrotic damage.</p><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Giant Femur Club (Lightning)": {
-          "name": "巨人股骨短棒（闪电）",
+          "name": "Giant Femur Club (Lightning)",
           "changes": {
-            "name": "电击巨人股骨短棒",
+            "name": "Shocking Giant Femur Club",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
           }
         },
         "Giant Femur Club (Acid)": {
-          "name": "巨人股骨短棒（强酸）",
+          "name": "Giant Femur Club (Acid)",
           "changes": {
-            "name": "酸性巨人股骨短棒",
+            "name": "Acidic Giant Femur Club",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
           }
         },
         "Giant Femur Club (Cold)": {
-          "name": "巨人股骨短棒 (寒冷)",
+          "name": "Giant Femur Club (Cold)",
           "changes": {
-            "name": "冻结巨人股骨短棒",
+            "name": "Freezing Giant Femur Club",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
           }
         },
         "Giant Femur Club (Fire)": {
-          "name": "巨人股骨短棒 (火焰)",
+          "name": "Giant Femur Club (Fire)",
           "changes": {
-            "name": "炽热巨人股骨短棒",
+            "name": "Fiery Giant Femur Club",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
           }
         },
         "Giant Femur Club (Necrotic)": {
-          "name": "巨人股骨短棒（暗蚀）",
+          "name": "Giant Femur Club (Necrotic)",
           "changes": {
-            "name": "魔能巨人股骨短棒",
+            "name": "Eldritch Giant Femur Club",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
           }
         },
         "Giant Femur Club (Poison)": {
-          "name": "巨人股骨短棒 (毒素)",
+          "name": "Giant Femur Club (Poison)",
           "changes": {
-            "name": "毒巨人大腿骨短棒",
+            "name": "Poisonous Giant Femur Club",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.MGIkck4yNNJpOSYF inline]"
           }
         }
       }
     },
     "Delerium Geode": {
-      "name": "谵妄晶洞",
-      "description": "<p>一个[[lookup @item.name lowercase]]拥有{护甲等级： AC 23}和{生命值： Hit Points 25}。提取一个[[lookup @item.name lowercase]]需要一小时。</p>"
+      "name": "Delerium Geode",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 23 and 25 Hit points. Extracting a [[lookup @item.name lowercase]] takes an hour.</p>"
     },
     "Greater Rejuvenation Potion": {
-      "name": "高等复生药水",
-      "description": "<p><em>药水, 传说</em></p><p>当你消耗此药水时, 你立即获得一次长休 Long Rest 的效益。</p><p>一旦你消耗了一瓶高等复生药水, 在你完成[[/r 3d6]]次长休 Long Rest 之前, 你无法从消耗另一瓶中获益。</p><p><em><strong>制造。</strong></em> 制造一瓶<em>高等复生药水</em>需要一个传说工坊和以下传说部件。</p><ul><li><p><strong>[生命源]</strong> 任意生命源</p></li><li><p><strong>[骨骼]</strong> 任意巨人</p></li><li><p><strong>[粉尘]</strong> 精类生物粉尘</p></li><li><p><strong>[液体]</strong> 任意元素生物液体</p></li><li><p><strong>[液体]</strong> 来自任意龙类怪物的血液</p></li><li><p><strong>[毛发]</strong> 任意天族</p></li><li><p><strong>[器官]</strong> 来自异怪的脑</p></li><li><p><strong>[器官]</strong> 来自邪魔的心脏</p></li></ul>",
+      "name": "Greater Rejuvenation Potion",
+      "description": "<p><em>Potion, Legendary</em></p><p>When you consume this potion, you immediately gain the benefits of a Long Rest.</p><p>Once you consume a Greater Rejuvenation Potion, you can’t benefit from consuming another until you finish [[/r 3d6]] Long Rests.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Greater Rejuvenation Potion</em> requires a Legendary Workshop and the following Legendary Components.</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Any Giant</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Any Elemental Fluid</p></li><li><p><strong>[Fluid]</strong> Monster Blood from any Dragon</p></li><li><p><strong>[Hair]</strong> Any Celestial</p></li><li><p><strong>[Organ]</strong> Brain from an Aberration</p></li><li><p><strong>[Organ]</strong> Heart from a Fiend</p></li></ul>",
       "activities": {
         "Drink Potion": {
-          "name": "饮用药水",
-          "roll": "长休冷却"
+          "name": "Drink Potion",
+          "roll": "Long Rest Cooldown"
         }
       }
     },
     "Talon Gloves": {
-      "name": "利爪手套",
-      "description": "<p><em>奇物, 珍稀 (需同调)</em></p><p>这些皮甲手套装配着堕落野兽的利爪, 并用炼金造物的奥秘针线缝合而成。手套随后被元素生物魔法赋能, 用骨头加固, 并由一个灵魂驱动。</p><p>穿戴这些手套时, 你获得等于你速度的攀爬速度, 并且你的徒手打击在命中时造成额外1d6点穿刺伤害。</p><p><em><strong>制造。</strong></em> 制造<em>利爪手套</em>需要一个非普通工坊和以下非普通部件:</p><ul><li><p><strong>[灵魂]</strong> 任意灵魂</p></li><li><p><strong>[流体]</strong> 元素流体</p></li><li><p><strong>[毛发]</strong> 缝线</p></li><li><p><strong>[皮革]</strong> 表皮</p></li><li><p><strong>[天生武器]</strong> 爪击</p></li></ul><fieldset><legend>Foundry 注</legend><p>装备时, 该物品将你的攀爬速度提升至30尺。如果你的速度高于30尺, 请调整该物品提供的主动效应以补偿。</p><p>此外, 该物品上的附魔行动可应用于一件徒手打击武器, 赋予其额外的1d6穿刺伤害。</p></fieldset>",
+      "name": "Talon Gloves",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>These leather gloves are outfitted with the talons of fallen beasts and stitched together with the arcane stitching of apothecary creations. The gloves are then empowered by elemental magic, reinforced with bone, and powered by an animus.</p><p>While wearing these gloves, you gain Climb Speed equal to your Speed, and your Unarmed Strikes deal an additional 1d6 Piercing damage on a hit.</p><p><em><strong>Crafting.</strong></em> Creating <em>Talon Gloves</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hair]</strong> Stitches</p></li><li><p><strong>[Hide]</strong> Skin</p></li><li><p><strong>[Natural Weapons]</strong> Claws</p></li></ul><section class=\"secret\" id=\"secret-1nQLhyxpfxzen5ih\"><p><strong>Foundry Note</strong></p><p>The Enchant activity on this item can be applied to an Unarmed Strike weapon, granting the additional 1d6 piercing damage.</p></section>",
       "effects": {
         "Talon Gloves": {
-          "name": "利爪手套"
+          "name": "Talon Gloves"
         }
       }
     },
     "Delerium Chip": {
-      "name": "谵妄碎片",
-      "description": "<p>一个[[lookup @item.name lowercase]]拥有15护甲等级：和5生命值：。提取一个[[lookup @item.name lowercase]]需要消耗一个动作。</p>"
+      "name": "Delerium Chip",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 15 and 5 Hit points. Extracting a [[lookup @item.name lowercase]] takes an action.</p>"
     },
     "Pendant of Prismatic Protection": {
-      "name": "虹光防护坠饰",
-      "description": "<p><em>奇物, 非普通</em></p><p>这件镶宝石的坠饰拥有3点充能, 在你完成一次长休后充能会恢复。当你受到强酸、寒冷、火焰、闪电或毒素伤害时, 你可以使用反应消耗1点坠饰的充能, 获得对该伤害类型的抗性直到你的下个回合结束。</p><p><em><strong>制造。</strong></em> 制造一件<em>棱光防护坠饰</em>需要一个非普通工坊和以下非普通部件:</p><ul><li><p><strong>[灵质]</strong> 任意来自元素生物的灵质</p></li><li><p><strong>[尘]</strong> 元素之尘</p></li><li><p><strong>[液]</strong> 任意两种来自不同元素生物的元素液</p></li></ul>",
+      "name": "Pendant of Prismatic Protection",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>The jeweled pendant has 3 charges, which are replenished when you finish a Long Rest. When you take Acid, Cold, Fire, Lightning, or Poison damage, you can use a Reaction to expend 1 charge from the pendant to gain resistance to that damage type until the end of your next turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Pendant of Prismatic Protection</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus from an Elemental</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Any two Elemental Fluids from different Elementals</p></li></ul>",
       "activities": {
         "Prismatic Protection": {
-          "name": "虹光防护",
-          "condition": "当你受到强酸，寒冷，火焰，闪电或毒素伤害时。"
+          "name": "Prismatic Protection",
+          "condition": "When you take Acid, Cold, Fire, Lightning, or Poison damage."
         }
       },
       "effects": {
         "Prismatic Protection: Acid": {
-          "name": "虹光防护：强酸",
-          "description": "<p>直到你的下个回合开始前，你具有强酸伤害的抗性。</p>"
+          "name": "Prismatic Protection: Acid",
+          "description": "<p>You have resistance to Acid damage until the start of your next turn.</p>"
         },
         "Prismatic Protection: Cold": {
-          "name": "虹光防护：寒冷",
-          "description": "<p>你具有对寒冷伤害的抗性，直到你的下个回合开始。</p>"
+          "name": "Prismatic Protection: Cold",
+          "description": "<p>You have resistance to Cold damage until the start of your next turn.</p>"
         },
         "Prismatic Protection: Fire": {
-          "name": "虹光防护：火焰",
-          "description": "<p>你具有火焰伤害抗性，直到你的下个回合开始。</p>"
+          "name": "Prismatic Protection: Fire",
+          "description": "<p>You have resistance to Fire damage until the start of your next turn.</p>"
         },
         "Prismatic Protection: Lightning": {
-          "name": "虹光防护：闪电",
-          "description": "<p>直到你的下个回合开始前，你具有闪电伤害的抗性。</p>"
+          "name": "Prismatic Protection: Lightning",
+          "description": "<p>You have resistance to Lightning damage until the start of your next turn.</p>"
         },
         "Prismatic Protection: Poison": {
-          "name": "虹光防护：毒素",
-          "description": "<p>你获得对毒素伤害的抗性，直到你的下个回合开始。</p>"
+          "name": "Prismatic Protection: Poison",
+          "description": "<p>You have resistance to Poison damage until the start of your next turn.</p>"
         }
       }
     },
     "Mantle of Otherworldly Charisma": {
-      "name": "异界魅力光环",
-      "description": "<p><em>奇物, 珍稀 (需同调)</em></p><p>这件斗篷由怪兽的毛皮与邪魔的犄角构筑而成，并覆以精类生物的粉尘，浸透着魅惑能量。</p><p>穿戴这件魔法斗篷时，你的魅力值为19。若你未穿戴时魅力已达19或更高，则此物对你无效。</p><p><em><strong>造物。</strong></em> 制作一件<em>异界魅力斗篷</em>需要一间珍稀工坊及以下珍稀部件：</p><ul><li><p><strong>[生灵精华]</strong> 任意生灵精华</p></li><li><p><strong>[毛发]</strong> 取自怪兽的毛皮</p></li><li><p><strong>[表皮]</strong> 取自怪兽的皮肤</p></li><li><p><strong>[天生武器]</strong> 取自邪魔的犄角</p></li><li><p><strong>[粉尘]</strong> 精类生物粉尘</p></li></ul>",
+      "name": "Mantle of Otherworldly Charisma",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>Structured from the fur and skin of a monstrosity and the horns of a fiend, and coated in the dust of fey creatures, this mantle is imbued with charming energies.</p><p>Your Charisma score is 19 while you wear this magic cape. It has no effect on you if your Charisma is 19 or higher without it.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Mantle of Otherworldly Charisma</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Hair]</strong> Fur from a Monstrosity</p></li><li><p><strong>[Hide]</strong> Skin from a Monstrosity</p></li><li><p><strong>[Natural Weapons]</strong> Horns from a Fiend</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li></ul>",
       "effects": {
         "Otherworldly Charisma": {
-          "name": "异界魅力",
-          "description": "<p>当你佩戴这枚魔法护符时，你的魅力值为19。若未佩戴时你的魅力值已达19或更高，则此护符对你无效。</p>"
+          "name": "Otherworldly Charisma",
+          "description": "<p>Your Charisma score is 19 while you wear this magic amulet. It has no effect on you if your Charisma is 19 or higher without it.</p>"
         }
       }
     },
     "Swashbuckler’s Boots": {
-      "name": "游荡剑客之靴",
-      "description": "<p><em>奇物, 非普通</em></p><p>穿着这双柔软的皮甲靴子时, 针对你的借机攻击具有劣势。</p><p><em><strong>制造.</strong></em> 制造<em>游荡剑客之靴</em>需要一个非普通工坊和以下非普通部件:</p><ul><li><p><strong>[灵质]</strong> 任意</p></li><li><p><strong>[尘晶]</strong> 精类生物尘晶</p></li><li><p><strong>[液质]</strong> 元素生物液质</p></li><li><p><strong>[皮料]</strong> 任意</p></li></ul>"
+      "name": "Swashbuckler’s Boots",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>While wearing these supple leather boots, Opportunity Attacks against you have Disadvantage.</p><p><em><strong>Crafting.</strong></em> Creating <em>Swashbuckler’s Boots</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hide]</strong> Any</p></li></ul>"
     },
     "Rejuvenation Potion": {
-      "name": "复生药水",
-      "description": "<p><em>药水, 极珍稀</em></p><p>当你喝下这瓶亮紫色药水时, 你立即获得一次短休的效益。</p><p>在你消耗一瓶复生药水后, 直到你完成[[/r 1d4]]次长休前, 你无法从消耗另一瓶中获得效益。</p><p><em><strong>制造。</strong></em> 制造一瓶<em>复生药水</em>需要一间极珍稀工坊和以下极珍稀部件:</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[粉尘]</strong> 精类生物粉尘</p></li><li><p><strong>[液体]</strong> 任意元素生物液体</p></li><li><p><strong>[液体]</strong> 来自龙类的怪物血液</p></li><li><p><strong>[器官]</strong> 来自邪魔的心脏</p></li></ul>",
+      "name": "Rejuvenation Potion",
+      "description": "<p><em>Potion, Very Rare</em></p><p>When you drink this bright purple potion, you immediately gain the benefits of a short rest.</p><p>After you consume a Rejuvenation Potion, you can’t benefit from consuming another until you finish a [[/r 1d4]] Long Rests.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Rejuvenation Potion</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Any Elemental Fluid</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Dragon</p></li><li><p><strong>[Organ]</strong> Heart from a Fiend</p></li></ul>",
       "activities": {
         "Drink Potion": {
-          "name": "饮用药水",
-          "roll": "长休冷却时间"
+          "name": "Drink Potion",
+          "roll": "Long Rest Cooldown"
         }
       }
     },
     "Monster Hunter's Weapon": {
-      "name": "怪物猎人的武器",
-      "description": "<p><em>武器 (任意), 多种稀有度 (需游侠调谐)</em></p><p>这些武器由树皮雕刻而成, 核心为魔法汁液, 并以魔法植物的叶片装饰。它们的握柄与箭杆以精类生物的毛发缠绕。这件魔化武器能够引导自然界元素中蕴含的魔法力量。</p><p>持握此魔化武器时, 你使用它进行的攻击检定与伤害掷骰获得加值, 并且你的法术攻击检定与游侠法术的豁免DC也获得加值。该加值由武器的稀有度决定。此外, 你可以将此武器作为你游侠法术的施法法器。</p><p>当你使用此武器的攻击命中时, 你可以消耗一个游侠法术位, 作为发动该攻击动作的一部分, 对目标施展 @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{猎人印记hunter's mark}。当你以此方式施展猎人印记hunter's mark时, 它不需要专注。此外, 该法术持续一分钟, 或直至目标死亡, 或你再次通过此武器或其他方式施展猎人印记hunter's mark。</p><table><caption>怪物猎人武器稀有度</caption><thead><tr><th>稀有度</th><th>加值</th></tr></thead><tbody style=\"text-align:center\"><tr><td>珍稀</td><td>+1</td></tr><tr><td>极珍稀</td><td>+2</td></tr><tr><td>传说</td><td>+3</td></tr></tbody></table><p><em><strong>制造。</strong></em> 制造一件<em>怪物猎人武器</em>需要一间工坊以及以下稀有度等于该物品稀有度的部件:</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[流体]</strong> 汁液</p></li><li><p><strong>[毛发]</strong> 精类生物毛发</p></li><li><p><strong>[毛发]</strong> 叶片</p></li><li><p><strong>[皮]</strong> 树皮</p></li></ul>",
+      "name": "Monster Hunter's Weapon",
+      "description": "<p><em>Weapon (Any), Rarity Varies (Requires Attunement by a Ranger)</em></p><p>These weapons are carved from bark, with a core of magical sap, and decorated with leaves from magical plants. Their hilts and shafts are bound in hair from a fey creature. This magic weapon channels the natural magic found in the elements of nature.</p><p>While holding this magic weapon, you gain a bonus to attack and damage rolls made with it, and you gain a bonus to spell attack rolls and the saving throw DCs of your Ranger spells. The bonus is determined by the weapon’s rarity. In addition, you can use the weapon as a Spellcasting Focus for your Ranger spells.</p><p>When you hit with an attack using this weapon, you can expend a Ranger spell slot to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{Hunter's Mark} on the target as part of the same action used to make the attack. When you cast Hunter’s Mark in this way it does not require Concentration. Additionally, the spell lasts for one minute or until the target dies or you cast Hunter’s Mark again using either the weapon or otherwise.</p><table><caption>Monster Hunter's Weapon Rarities</caption><thead><tr><th>Rarity</th><th>Bonus</th></tr></thead><tbody style=\"text-align:center\"><tr><td>Rare</td><td>+1</td></tr><tr><td>Very Rare</td><td>+2</td></tr><tr><td>Legendary</td><td>+3</td></tr></tbody></table><p><em><strong>Crafting.</strong></em> Creating a <em>Monster Hunter’s Weapon</em> requires a Workshop and the following Components of rarity equal to the item’s rarity:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Sap</p></li><li><p><strong>[Hair]</strong> Hair from a Fey</p></li><li><p><strong>[Hair]</strong> Leaves</p></li><li><p><strong>[Hide]</strong> Bark</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Monster Hunter's Weapon +1": {
-          "name": "怪物猎人武器 +1",
+          "name": "Monster Hunter's Weapon +1",
           "changes": {
-            "name": "怪物猎人的 {} +1",
+            "name": "Monster Hunter's {} +1",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.U1x7AFxZTHUVcE5b inline]"
           }
         },
         "Monster Hunter's Weapon +2": {
-          "name": "怪物猎人武器 +2",
+          "name": "Monster Hunter's Weapon +2",
           "changes": {
-            "name": "怪物猎人的{} +2",
+            "name": "Monster Hunter's {} +2",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.U1x7AFxZTHUVcE5b inline]"
           }
         },
         "Monster Hunter's Weapon +3": {
-          "name": "怪物猎人的武器 +3",
+          "name": "Monster Hunter's Weapon +3",
           "changes": {
-            "name": "怪物猎手 {} +3",
+            "name": "Monster Hunter's {} +3",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.U1x7AFxZTHUVcE5b inline]"
           }
         },
         "VqEOlIgvpiQnkUnX": {
-          "name": "怪物猎人武器 +1",
-          "description": "<p>你可以使用这把魔法武器作为你游侠法术的{法器 Spellcasting focus}。与这件物品调谐时，你的法术攻击检定和{法术豁免DC spell save DC}获得+1加值。</p>"
+          "name": "Monster Hunter's Weapon +1",
+          "description": "<p>You can use this magical weapon as a Spellcasting Focus for your Ranger spells. While attuned to this item, you gain a +1 bonus to your spell attack rolls and spell save DC.</p>"
         },
         "UNrg1ksOprsZL6Xn": {
-          "name": "怪物猎手武器 +2",
-          "description": "<p>你可以将这把魔法武器用作你游侠法术的施法法器。当你与该物品调谐时，你的法术攻击检定和法术豁免DC获得+2加值。</p>"
+          "name": "Monster Hunter's Weapon +2",
+          "description": "<p>You can use this magical weapon as a Spellcasting Focus for your Ranger spells. While attuned to this item, you gain a +2 bonus to your spell attack rolls and spell save DC.</p>"
         },
         "FOeYsQeszBKGHNiz": {
-          "name": "怪物猎手武器 +3",
-          "description": "<p>你可以将这把魔法武器用作你游侠法术的{法器 Spellcasting focus}。当你与此物品调谐时, 你的法术攻击检定和法术豁免DC获得+3加值。</p>"
+          "name": "Monster Hunter's Weapon +3",
+          "description": "<p>You can use this magical weapon as a Spellcasting Focus for your Ranger spells. While attuned to this item, you gain a +3 bonus to your spell attack rolls and spell save DC.</p>"
         }
       }
     },
     "Hammer of Chaos": {
-      "name": "混乱之锤",
-      "description": "<p><em>武器（巨锤或战锤），传说（需同调）</em></p><p>混乱之锤通过熔炼异界构装生物的魔法板甲，并注入元素生物的流体与粉尘锻造而成。随后，这把武器被浸泡在异怪大脑的灰质中。这把钢制锤头被安装在一根由邪魔皮草与龙类肋骨制成的握柄上。</p><p>使用此武器进行攻击检定和伤害掷骰时，你获得+3加值。此锤具有投掷属性，正常射程30尺，最大射程90尺。当你使用此武器命中攻击时，选择强酸、寒冷、火焰、闪电、毒素或雷鸣。该锤造成2d8点所选类型的额外伤害。</p><p>当你使用此武器进行远程攻击命中时，若你在两颗或更多d8骰上掷出相同数字，该锤会弹射至目标30尺内你指定的另一个目标。对新目标进行一次攻击检定，若攻击命中则进行新的伤害掷骰。完成此次攻击后，该锤飞回你手中。</p><p><em><strong>制造。</strong></em> 制作<em>混乱之锤</em>需要传说级工坊及以下传说级部件：</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[骸骨]</strong> 龙类脊骨</p></li><li><p><strong>[粉尘]</strong> 元素粉尘</p></li><li><p><strong>[流体]</strong> 元素流体</p></li><li><p><strong>[皮质]</strong> 构装生物板甲</p></li><li><p><strong>[皮质]</strong> 邪魔外皮</p></li><li><p><strong>[器官]</strong> 异怪大脑</p></li></ul>",
+      "name": "Hammer of Chaos",
+      "description": "<p><em>Weapon (Maul or Warhammer), Legendary (Requires Attunement)</em></p><p>A hammer of chaos is crafted by melting down the magical plates of otherworldly constructs, infused with both the fluid and dust of elementals. The weapon is then soaked in the grey matter of an aberrant brain. This steel hammer is fitted into a shaft made from fiend skin leather and the ribs of a dragon.</p><p>You gain a +3 bonus to attack rolls and damage rolls made with this weapon. This hammer has the Thrown property with a normal range of 30 feet and a long range of 90 feet. When you hit with an attack using this weapon, choose Acid, Cold, Fire, Lightning, Poison, or Thunder. The hammer deals 2d8 extra damage of the chosen type.</p><p>When you hit with a ranged attack using this weapon, if you roll the same number on two or more of the d8s, the hammer ricochets to a different target of your choice within 30 feet of the target. Make an attack roll against the new target, and make a new damage roll if the attack hits. After making this attack, the hammer flies back to your hand.</p><p><em><strong>Crafting.</strong></em> Creating the <em>Hammer of Chaos</em> requires a Legendary Workshop and the following Legendary Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Spine from a Dragon</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hide]</strong> Plates from a Construct</p></li><li><p><strong>[Hide]</strong> Skin from a Fiend</p></li><li><p><strong>[Organ]</strong> Brain from an Aberration</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Hammer of Chaos": {
-          "name": "混乱之锤",
+          "name": "Hammer of Chaos",
           "changes": {
             "name": "{} of Chaos",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.UWbbDR4bQzI8pA1q inline]"
@@ -469,106 +475,106 @@
       }
     },
     "Sword Between Worlds": {
-      "name": "界域之剑",
-      "description": "<p>武器（任意剑），极珍稀（需调谐）</p><p>这把异界刀锋由星陨钢制成；这是一种通过将铁与从强大异怪生物骨骼中提取的碳结合而产生的强效合金。在锻造过程中，刀锋在远居者的脊髓液中淬火以汲取异界力量。由此产生的金属呈现出一种八色光泽，映照出可能的世界和其他现实。握柄和护手装饰着扭曲掠夺者的倒刺和皮革，而柄头则镶嵌着一颗蕴含远居者邪异精华的谵妄水晶，为武器的魔法提供能量。</p><p>你使用这把{魔化武器 magic weapon}进行的{攻击 Attack}和{伤害 damage}检定获得+2{加值 bonus}。</p><p>每{回合 turn}一次，当你使用此武器造成{重击 critical hit}或将一个{生物 Creature}的生命值降至0时，在{攻击 Attack}后立即，你可以传送到你能看见的120{尺 feet}内一个{未占据 unoccupied}的{空间 space}。</p><p>此外，每{回合 turn}一次，当你持握此武器传送到另一个{生物 Creature}5{尺 feet}内的一个{未占据 unoccupied}{空间 space}时，作为进行传送的同一{动作 Action}或{附赠动作 Bonus Action}的一部分，你可以使用此武器对该{生物 Creature}发动一次{武器攻击 Weapon Attack}。</p><p>持握此{刀锋 Blade}时，你可以使用一个{魔法 Magic}{动作 Action}来施展 @UUID[Compendium.dnd5e.spells24.Item.phbsplDimensionD]。一旦你这样做，你必须完成一次{短休或长休 short or long rest}才能再次使用此{特性 Feature}。</p><p><strong>诅咒。</strong> 你对任何会强制传送你或将你送往其他存在位面的{法术 Spell}或{其他 other}效应进行的{豁免 Saving Throws}具有{劣势 disadvantage}。</p><p><em><strong>制造。</strong></em> 制造一把<em>界间之剑</em>需要一个极珍稀工坊和以下极珍稀{部件 components}：</p><ul><li><p><strong>[灵质]</strong> {异怪 Aberration}灵质</p></li><li><p><strong>[骨骼]</strong> 来自一个{异怪 aberration}的头骨、脊柱或肋骨。</p></li><li><p><strong>[体液]</strong> 来自远居者的污染{腐液 ichor}</p></li><li><p><strong>[皮革]</strong> 来自一个{异怪 aberration}的皮肤</p></li><li><p><strong>[{天生武器 natural weapon}]</strong> 来自扭曲掠夺者的触手</p></li></ul>",
+      "name": "Sword Between Worlds",
+      "description": "<p>Weapon (Any Sword), Very Rare (Requires Attunement)</p><p>This otherworldly blade is made from starmetal steel; a potent alloy produced by combining iron with carbon extracted from the bones of powerful aberrant creatures. During the forging process, the blade is quenched in the spinal fluids of a Far Dweller to draw out extraplanar forces. The resulting metal has an octarine sheen that reflects possible worlds and other realities. The grip and crossguard are decorated with the barbs and leather of a Warp Marauder, and the pommel is set with a delerium crystal containing the eldritch essence of a Far Dweller that powers the weapon’s magic.</p><p>You gain a +2 bonus to attack and damage rolls made using this magic weapon.</p><p>Once per turn when you score a Critical Hit or reduce a creature to 0 Hit Points using this weapon, immediately after the attack you can teleport to an unoccupied space within 120 feet you can see.</p><p>Additionally, once per turn when you teleport to an unoccupied space within 5 feet of another creature while wielding this weapon, you can make one weapon attack against that creature with this weapon as part of the same action or Bonus Action made to teleport.</p><p>While holding the blade, you can use a Magic action to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplDimensionD]. Once you do, you must finish a short or Long Rest before you can use this feature again.</p><p><strong>Curse.</strong> You have Disadvantage on saving throws against any spell or other effect which would forcibly teleport you or send you to another plane of existence.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Sword Between Worlds</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Aberration Animus</p></li><li><p><strong>[Bones]</strong> Skull, Spine, or Ribs from an Aberration.</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor from a Far Dweller</p></li><li><p><strong>[Hide]</strong> Skin from an Aberration</p></li><li><p><strong>[Natural Weapon]</strong> Tentacles from a Warp Marauder</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
-        },
-        "Critical Strike Teleport": {
-          "name": "致命一击传送",
-          "condition": "当你使用这把武器造成一次重击或将一个生物的生命值降低至0时，在攻击之后立即生效。"
+          "name": "Apply Magic Item Template"
         },
         "Teleport Strike": {
-          "name": "传送打击",
-          "condition": "当你持用此武器传送至另一生物5尺内一处未占据空间时。"
+          "name": "Teleport Strike",
+          "condition": "When you teleport to an unoccupied space within 5 feet of another creature while holding this weapon."
+        },
+        "Critical Strike Teleport": {
+          "name": "Critical Strike Teleport",
+          "condition": "When you score a Critical Hit or reduce a creature to 0 Hit Points using this weapon, immediately after the attack."
         }
       },
       "effects": {
         "Sword Between Worlds": {
-          "name": "世界之剑",
+          "name": "Sword Between Worlds",
           "changes": {
-            "name": "世界之剑",
+            "name": "Sword Between Worlds",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.V43MzYGux5zAQZPo inline]"
           }
         }
       }
     },
     "Retracer Boots": {
-      "name": "回溯之靴",
-      "description": "<p><em>奇物, 珍稀</em></p><p>这双靴子由龙类的血肉与鳞片制成，饰以鸟妖的羽毛和飞行生物的蹼状膜。靴底注入了粘稠的泥怪黏液，使穿戴者能在时空中跳跃回溯。</p><p>在你的回合中，你可以使用一个附赠动作将靴跟相互叩击。当你这样做时，只要该空间当前未占据，你将传送回本回合开始时你所占据的空间。</p><p><em><strong>制造。</strong></em> 制造<em>回溯之靴</em>需要珍稀工坊及以下珍稀部件：</p><ul><li><p><strong>[精魄]</strong> 任意精魄</p></li><li><p><strong>[流体]</strong> 粘稠泥怪黏液</p></li><li><p><strong>[表皮]</strong> 龙类鳞片</p></li><li><p><strong>[表皮]</strong> 蹼状膜</p></li><li><p><strong>[毛发]</strong> 鸟妖羽毛</p></li><li><p><strong>[器官]</strong> 龙类血肉</p></li></ul>",
+      "name": "Retracer Boots",
+      "description": "<p><em>Wondrous Item, Rare</em></p><p>These boots are crafted from the flesh and scales of a dragon and decorated with Harpy feathers and the webbed membranes of flying creatures. The soles are injected with goopy ooze, allowing their wearer to jump back in time and space.</p><p>You can use a Bonus Action on your turn to click the heels of these boots together. When you do, you teleport to the space you occupied at the start of your turn so long as it is currently unoccupied.</p><p><em><strong>Crafting.</strong></em> Creating <em>Retracer Boots</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Goopy Ooze</p></li><li><p><strong>[Hide]</strong> Scales from a Dragon</p></li><li><p><strong>[Hide]</strong> Webbed Membrane</p></li><li><p><strong>[Hair]</strong> Feathers from a Harpy</p></li><li><p><strong>[Organ]</strong> Flesh from a Dragon</p></li></ul>",
       "activities": {
         "Retrace Steps": {
-          "name": "重寻足迹"
+          "name": "Retrace Steps"
         }
       }
     },
     "Whirling Bonesaw": {
-      "name": "旋转骨锯",
-      "description": "<p><em>{武器 巨斧}, {极珍稀 Very Rare} (需调谐)</em></p><p>这把大型巨斧的刀锋取自一只裂躯兽，并重新安装在一个由构装生物甲板制成、用怪兽肋骨加固的框架中。刀锋上配备了一条皮甲带，连接着一个由极珍稀生灵驱动的元素燃料马达。</p><p>使用这把{魔化武器 magic weapon}进行{攻击 Attack}和{伤害 damage}检定时，你获得+3{加值 bonus}。</p><p>在你的{回合 turn}中，当你使用此{武器 Weapon}{命中 hit}一个&amp;reference[Bloodied]{生物 Creature}时，你可以作为同一{动作 Action}的一部分，用此{武器 Weapon}进行一次额外{攻击 Attack}。</p><p><em><strong>制造.</strong></em> 制造<em>旋骨锯</em>需要一个{极珍稀 Very Rare}工坊和以下{极珍稀 Very Rare}{部件 components}：</p><ul><li><p><strong>[生灵]</strong> 任意生灵</p></li><li><p><strong>[骨骼]</strong> 肋骨</p></li><li><p><strong>[流体]</strong> 元素流体</p></li><li><p><strong>[甲壳]</strong> 甲板</p></li><li><p><strong>[表皮]</strong> 任意{怪兽 monstrosity}的皮肤</p></li><li><p><strong>[天生武器 natural weapon]</strong> 裂躯兽的{刀锋 Blade}</p></li></ul>"
+      "name": "Whirling Bonesaw",
+      "description": "<p><em>Weapon (Greataxe), Very Rare (Requires Attunement)</em></p><p>This large greataxe is made from a blade taken off a Ripper and refitted into a housing made from the plates of constructs and reinforced with the rib bones of a monstrosity. The blade is equipped with a leather belt that connects to an elemental-fueled motor powered by a Very Rare Animus.</p><p>You gain a +3 bonus to attack and damage rolls made with this magic weapon.</p><p>Once on your turn when you hit a &amp;reference[Bloodied] creature using this weapon, you can make one additional attack with this weapon as part of the same action.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Whirling Bonesaw</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Ribs</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Hide]</strong> Skin from any Monstrosity</p></li><li><p><strong>[Natural Weapon]</strong> Blade from a Ripper</p></li></ul>"
     },
     "Ghost Sight Bow": {
-      "name": "幽魂视界弓",
-      "description": "<p><em>武器（长弓），极珍稀（需要同调）</em></p><p>这把弓由树精的骨头精心手工雕刻而成，并浸染了吸血鬼的亡灵之血。弓弦由女妖的头发制成，弓柄内注入了强大的缚灵精魄。制作完成后，弓会从实体形态转变为半实体形态。</p><p>你用这把魔法长弓进行攻击和伤害掷骰时获得+2加值。</p><p>弓会自行产生幽灵弹药，这些弹药造成力场伤害而非穿刺伤害。弹药在命中或未命中目标后消失。</p><p>当你与此武器同调时，你可以使用一个附赠动作窥视以太位面，并看见所有&amp;reference[invisible apply=false]生物和物体，直到你的回合结束。此外，你可以看穿60尺内所有的墙壁和固体物体，直到你的回合结束。在此期间，从此弓射出的弹药会穿透固体物体，并且你可以用你的远程攻击瞄准60尺内的敌人，即使他们处于&amp;reference[totalcover]之后。只有在你本回合未移动的情况下才能使用此附赠动作。使用此附赠动作后，你的速度变为0，直到你的回合结束。</p><p><em><strong>制造。</strong></em> 制造<em>幽魂视界长弓</em>需要一个极珍稀工坊和以下极珍稀部件：</p><ul><li><p><strong>[精魄]</strong> 来自缚灵的亡灵精魄</p></li><li><p><strong>[骨头]</strong> 树精的头骨</p></li><li><p><strong>[粉尘]</strong> 亡灵尘</p></li><li><p><strong>[流体]</strong> 灵质</p></li><li><p><strong>[流体]</strong> 来自亡灵的怪物之血</p></li><li><p><strong>[毛发]</strong> 女妖的头发</p></li></ul>",
+      "name": "Ghost Sight Bow",
+      "description": "<p><em>Weapon (Longbow), Very Rare (Requires Attunement)</em></p><p>This bow is hand-carved carefully from the bones of a dryad and stained in the undead blood of vampires. Strung with the hair of a banshee with a powerful wraith animus is placed with in the handle. Once the bow’s crafting is complete, it fades from its physical form into a semi-corporeal form.</p><p>You gain a +2 bonus to attack and damage rolls made with this magic longbow.</p><p>The bow produces its own spectral ammunition which deals Force damage instead of Piercing damage. The ammunition disappears when it hits or misses a target.</p><p>While attuned to this weapon, you can use a Bonus Action to see into the Ethereal Plane and see all &amp;reference[invisible apply=false] creatures and objects until the end of your turn. Additionally, you can see through all walls and solid objects within 60 feet of you until the end of your turn. During this time, ammunition fired from this bow passes through solid objects, and you can target enemies within 60 feet of you with your ranged attacks, even if they are behind &amp;reference[totalcover]. You can use this Bonus Action only if you haven’t moved during your turn. After you use the Bonus Action, your Speed becomes 0 until the end of your turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Ghost Sight Bow</em> requires a Very Rare Workshop and the following Very Rare components:</p><ul><li><p><strong>[Animus]</strong> Undead Animus from a Wraith</p></li><li><p><strong>[Bones]</strong> Skull from a Dryad</p></li><li><p><strong>[Dust]</strong> Undead Dust</p></li><li><p><strong>[Fluid]</strong> Ectoplasm</p></li><li><p><strong>[Fluid]</strong> Monster Blood from an Undead</p></li><li><p><strong>[Hair]</strong> Hair from a Banshee</p></li></ul>",
       "activities": {
         "Ghost Sight": {
-          "name": "幽魂视界"
+          "name": "Ghost Sight"
         }
       },
       "effects": {
         "Ghost Sight": {
-          "name": "幽魂视界",
-          "description": "<p>你可以看入以太位面，并看到所有&reference[invisible apply=false]生物和物体，直到你的回合结束。此外，你可以看穿所有在你60尺内的墙壁和固体物体，直到你的回合结束。在此期间，从此弓射出的弹药会穿过固体物体，并且你可以用你的远程攻击瞄准你60尺内的敌人，即使他们处于&reference[totalcover]之后。你只能在你本回合未移动的情况下使用这个附赠动作。</p><p>在你使用此特性后，你的速度变为0，直到你的回合结束。</p>"
+          "name": "Ghost Sight",
+          "description": "<p>You can see into the Ethereal Plane and see all &amp;reference[invisible apply=false] creatures and objects until the end of your turn. Additionally, you can see through all walls and solid objects within 60 feet of you until the end of your turn. During this time, ammunition fired from this bow passes through solid objects, and you can target enemies within 60 feet of you with your ranged attacks, even if they are behind &amp;reference[totalcover]. You can use this Bonus Action only if you haven’t moved during your turn.</p><p>After you use this feature, your Speed becomes 0 until the end of your turn.</p>"
         }
       }
     },
     "Circlet of Valor": {
-      "name": "勇气头环",
-      "description": "<p><em>奇物, 珍稀 (需施法者同调)</em></p><p>这顶钢质头环由构装生物锻造而成，并镶嵌着一颗含有邪魔的宝石魂核。在龙类吐息的火焰中净化后，这件神圣头环闪烁着光耀能量。</p><p>当你施展1环或更高阶且能恢复生物生命值的法术时，该生物获得&amp;reference[英勇] (1d4) 直到其下一回合结束。</p><p><em><strong>制造。</strong></em> 制造<em>英勇头环</em>需要珍稀工坊及以下珍稀部件：</p><ul><li><p><strong>[魂核]</strong> 邪魔魂核</p></li><li><p><strong>[粉尘]</strong> 任意粉尘</p></li><li><p><strong>[甲壳]</strong> 构装生物甲板</p></li><li><p><strong>[器官]</strong> 龙类腺体</p></li></ul>",
+      "name": "Circlet of Valor",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a spellcaster)</em></p><p>This steel circlet is forged from a construct and set with a gemstone animus containing a fiend. After being cleansed in the fires of a dragon’s breath, this holy circlet glimmers with radiant energy.</p><p>When you cast a spell of level 1 or higher that restores Hit Points to a creature, that creature gains &amp;reference[Valor] (1d4) until the end of its next turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Circlet of Valor</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Fiend</p></li><li><p><strong>[Dust]</strong> Any Dust</p></li><li><p><strong>[Hide]</strong> Plates from a Construct</p></li><li><p><strong>[Organ]</strong> Glands from a Dragon</p></li></ul>",
       "activities": {
         "Grant Valor": {
-          "name": "授予勇气",
-          "condition": "当你施展一个1环或更高环阶法术以恢复一个生物的生命值时。"
+          "name": "Grant Valor",
+          "condition": "When you cast a spell of level 1 or higher that restores Hit Points to a creature."
         }
       },
       "effects": {
         "Valor (1d4)": {
-          "name": "勇气 (1d4)",
-          "description": "<p>直到你的下一个回合结束前，你在攻击检定和豁免检定中获得1d4加值。</p>"
+          "name": "Valor (1d4)",
+          "description": "<p>Until the end of your next turn, you add 1d4 to your attack rolls and saving throws.</p>"
         }
       }
     },
     "Helm of Burning Rage": {
-      "name": "燃烧狂暴船舵",
-      "description": "<p><em>奇物, 珍稀 (需由野蛮人同调)</em></p><p>这项头盔是在用元素粉尘点燃的火焰中锻造而成, 使用了构装生物的甲板和红龙的心脏。这些甲板在安装蕴含火巨人能量的灵核宝石前, 会先浸泡在元素流体中。</p><p>当你的狂暴处于激活状态时, 你获得火焰伤害抗性。此外, 每回合一次, 当你处于狂暴状态并使用受益于鲁莽攻击特性的近战武器命中目标时, 目标陷入燃烧 (2d4 火焰)。</p><p><em><strong>制造。</strong></em> 制造一件狂暴燃烧头盔需要一间珍稀工坊和以下珍稀部件:</p><ul><li><p><strong>[灵核]</strong> 来自火巨人的灵核</p></li><li><p><strong>[粉尘]</strong> 元素粉尘</p></li><li><p><strong>[流体]</strong> 元素流体</p></li><li><p><strong>[皮革]</strong> 甲板</p></li><li><p><strong>[器官]</strong> 来自红龙的心脏</p></li></ul>",
+      "name": "Helm of Burning Rage",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Barbarian)</em></p><p>This helm is forged in fires ignited with elemental dust, using plates from a construct and the heart of a red dragon. The plates are then soaked in elemental fluid before having an animus gem installed that contains the energy of a Fire Giant.</p><p>While your Rage is active, you gain Resistance to Fire damage. In addition, once per turn, while you are Raging, when you hit a target with a Melee weapon that benefitted from your Reckless Attack feature, the target becomes Burning (2d4 Fire).</p><p><em><strong>Crafting.</strong></em> Creating a <em>Helm of Burning Rage</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Fire Giant</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Organ]</strong> Heart from a Red Dragon</p></li></ul>",
       "activities": {
         "Flaming Reckless Strike": {
-          "name": "烈焰鲁莽打击",
-          "condition": "当你狂暴期间使用{鲁莽攻击 Reckless Attack}特性并以此{近战 Melee}{武器 Weapon}{命中 hit}一个{目标 target}时。"
+          "name": "Flaming Reckless Strike",
+          "condition": "When you hit a target with a Melee weapon that benefitted from your Reckless Attack feature while you are Raging."
         }
       },
       "effects": {
         "Burning (2d4 Fire)": {
-          "name": "燃烧 (2d4 火焰)",
-          "description": "<p>你正处于&reference[Burning apply=false]状态，浑身被火焰覆盖。</p><ul><li><p>在你的每个回合结束时，你受到[[/damage average fire 2d4]]火焰伤害。</p></li><li><p>若你或5尺内的另一个生物花费动作扑灭火焰，或其他效应（例如浸入水中）移除此状态，则该状态结束。</p></li></ul>"
+          "name": "Burning (2d4 Fire)",
+          "description": "<p>You are &amp;reference[burning apply=false] from being covered in fire.</p><ul><li><p>At the end of each of your turns, you take [[/damage average fire 2d4]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to douse the fire or if some other effect removes it such as submerging yourself in water.</p></li></ul>"
         },
         "Burning Rage Resistance": {
-          "name": "燃烧狂暴抗性",
-          "description": "<p>狂暴期间，你获得{火焰伤害抗性 resistance to fire damage}。</p>"
+          "name": "Burning Rage Resistance",
+          "description": "<p>While you are Raging, you have Resistance to Fire damage.</p>"
         }
       }
     },
     "Blade of Retribution": {
-      "name": "报应刀锋",
-      "description": "<p><em>武器（任意剑）, 珍稀（需圣武士调谐）</em></p><p>此刀刃的金属以天族之尘锻造，柄部包裹着邪魔皮甲。龙类之眼镶嵌于柄上，并以怪物之血打磨。</p><p>当你使用这把{魔化武器 magic weapon}攻击{生物 Creature}并在{攻击检定 Attack Roll}的d20骰出20时，你可以作为本次{攻击 Attack}所用{动作 Action}的一部分，在不消耗{法术位 spell slot}的情况下施展 @UUID[Compendium.dnd5e.spells24.Item.phbsplDivineSmit]。</p><p><em><strong>锻造。</strong></em> 打造<em>报应刀锋</em>需要珍稀工坊及以下珍稀{部件 components}：</p><ul><li><p><strong>[精魄]</strong> 任意精魄</p></li><li><p><strong>[尘粉]</strong> 天族尘粉</p></li><li><p><strong>[流体]</strong> 怪物之血</p></li><li><p><strong>[皮革]</strong> 邪魔之皮</p></li><li><p><strong>[器官]</strong> 龙类之眼</p></li></ul>",
+      "name": "Blade of Retribution",
+      "description": "<p><em>Weapon (Any Sword), Rare (Requires Attunement by a Paladin)</em></p><p>The metal of this blade is forged in the dust of celestials, with a hilt wrapped in fiend skin leather. The eye of a dragon is placed upon the hilt and polished in monster blood.</p><p>When you use this magic weapon to attack a creature and roll a 20 on the d20 for the attack roll, you can cast @UUID[Compendium.dnd5e.spells24.Item.phbsplDivineSmit] as part of the same action used to make the attack without expending a spell slot.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Blade of Retribution</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Celestial Dust</p></li><li><p><strong>[Fluid]</strong> Monster Blood</p></li><li><p><strong>[Hide]</strong> Skin from a Fiend</p></li><li><p><strong>[Organ]</strong> Eye from a Dragon</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Blade of Retribution": {
-          "name": "报应刀锋",
+          "name": "Blade of Retribution",
           "changes": {
             "name": "{} of Retribution",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.a9ld4WgNddS9rP5A inline]"
@@ -577,363 +583,363 @@
       }
     },
     "Wand of Jinxes": {
-      "name": "厄运魔杖",
-      "description": "<p>魔杖，珍稀（需要魔契师同调）</p><p>这支魔杖由魔法树皮雕刻而成，核心装有亡灵生物毛发，表面覆盖着粘稠泥怪。</p><p>每回合当你使用魔契师戏法对生物造成伤害时，可使该生物陷入&reference[Jinxed]（1d4）状态直至你下个回合开始。</p><p><em><strong>制造。</strong></em> 制作<em>厄运魔杖</em>需要珍稀工坊与以下珍稀部件：</p><ul><li><p><strong>[精魄]</strong> 任意精魄</p></li><li><p><strong>[流体]</strong> 粘稠泥怪</p></li><li><p><strong>[毛发]</strong> 亡灵毛发</p></li><li><p><strong>[表皮]</strong> 树皮</p></li></ul>",
+      "name": "Wand of Jinxes",
+      "description": "<p><em>Wand, Rare (Requires Attunement by a Warlock)</em></p><p>This wand is carved from magical bark, with the hair of an undead creature in its core and finished in goopy ooze.</p><p>Once per turn when you deal damage with a Warlock cantrip to a creature, you can make that creature &amp;reference[Jinxed] (1d4) until the start of your next turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Wand of Jinxes</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Goopy Ooze</p></li><li><p><strong>[Hair]</strong> Hair from an Undead</p></li><li><p><strong>[Hide]</strong> Bark</p></li></ul>",
       "activities": {
         "Jinx Creature": {
-          "name": "厄运生物",
-          "condition": "当你使用魔契师戏法对生物造成伤害时。"
+          "name": "Jinx Creature",
+          "condition": "When you deal damage with a Warlock cantrip to a creature."
         }
       },
       "effects": {
         "Jinxed (1d4)": {
-          "name": "厄运缠身 (1d4)",
+          "name": "Jinxed (1d4)",
           "description": "<p>你在攻击检定和豁免上减 1d4。你可以在自己每一回合结束时重复进行针对此效应的豁免检定，成功则终止该效应。</p>"
         }
       }
     },
     "Crimson Blade": {
-      "name": "绯红刀锋",
-      "description": "<p><em>武器（任意剑）, 极珍稀（需同调）</em></p><p>暗色钢制剑身上流淌着血红色的腐液。此剑浸染了猩红女巫之血，亡故吸血鬼的骨灰熔铸于剑刃之中，赋予其幽暗光泽。刃锋更由龙类心脏赋能。黄金剑柄包裹着猩红皮革，并镶嵌一颗从猩红女巫尸骸中取出的血红色红宝石。吸血鬼獠牙装饰着剑柄末端。</p><p>使用这把魔法武器进行{攻击 Attack}与{伤害 damage}检定时，你获得+2{加值 bonus}。</p><p>被此武器命中的非{构装生物 construct}或{亡灵 undead}{生物 Creature}，将额外受到3d6{暗蚀 Necrotic}伤害，且你恢复等同于所造成{暗蚀 Necrotic}伤害数值的{生命值：Hit Points}。</p><p><strong>诅咒。</strong> 与此剑同调期间，未经住户邀请你无法进入任何居所。</p><p><em><strong>锻造。</strong></em> 锻造<em>猩红刀锋</em>需要极珍稀工坊及以下极珍稀{部件 components}：</p><ul><li><p><strong>[灵魂]</strong> 猩红女巫的亡灵精魄</p></li><li><p><strong>[尘屑]</strong> 任意吸血鬼的亡灵骨灰</p></li><li><p><strong>[体液]</strong> 亡灵{怪物 Monster}之血</p></li><li><p><strong>[天生武器]</strong> 任意吸血鬼的牙齿</p></li><li><p><strong>[器官]</strong> 龙类心脏</p></li></ul>",
+      "name": "Crimson Blade",
+      "description": "<p><em>Weapon (Any Sword), Very Rare (Requires Attunement)</em></p><p>A blood-red ichor drips down this sword’s darkened steel blade. The sword is coated in sanguine witch blood. The dust of dead vampires is forged into the steel of the blade, giving it its blackened sheen. The edge is then empowered by the heart of a dragon. Its gold hilt wrapped in crimson leathers and a blood red ruby plucked from the corpse of a Sanguine Witch. The fangs of vampires decorate the pommel.</p><p>You gain a +2 bonus to attack and damage rolls made with this magic sword.</p><p>Any a creature you hit with this weapon that isn’t a Construct or Undead takes an extra 3d6 Necrotic damage, and you regain Hit Points equal to the Necrotic damage dealt.</p><p><strong>Curse.</strong> While attuned to this blade, you can’t enter a residence without an invitation from one of its occupants.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Crimson Blade</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Undead Animus from a Sanguine Witch</p></li><li><p><strong>[Dust]</strong> Undead Dust from any Vampire</p></li><li><p><strong>[Fluid]</strong> Monster Blood from an Undead</p></li><li><p><strong>[Natural Weapons]</strong> Teeth from any Vampire</p></li><li><p><strong>[Organ]</strong> Heart from a Dragon</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
-        "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
-        },
         "Drain Life: Extra Damage": {
-          "name": "吸取生命：额外伤害",
-          "condition": "当你命中一个不是构装生物或亡灵的生物时。"
+          "name": "Drain Life: Extra Damage",
+          "condition": "When you hit a creature that isn't a Construct or Undead."
+        },
+        "Apply Magic Item Template": {
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Crimson Blade": {
-          "name": "绯红刀锋",
+          "name": "Crimson Blade",
           "changes": {
-            "name": "猩红",
+            "name": "Crimson {}",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.erxRUvC6v8fglMw2 inline]"
           }
         }
       }
     },
     "Aqua Delerium": {
-      "name": "妄质汁",
-      "description": "<p><em>药水, 珍稀</em></p><p>这瓶紫色药水泛着微弱的八色光。它在带塞的小瓶中旋动闪烁。</p><p>当你饮用此药水时，你恢复已消耗的法术位。投掷[[/r 1d6]]。你选择恢复的法术位，其环阶总和等于或小于投掷结果。所有法术位均不能高于5环。</p><p>饮用狂喜之水后一小时内，每当你施展1环或更高环阶法术时，投掷1d20。若结果为1，你将触发随机的@UUID[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{奥秘异象}。</p><p>若你在完成一次长休前消耗超过一剂狂喜之水，则从第二剂恢复的每个法术位环阶都会使你受到1d12暗蚀伤害，且你的生命值上限减少等同于所受伤害的数值，直至你完成一次长休。此伤害无法以任何方式减免或避免。</p><p>当无法用法术位施展法术的生物饮用狂喜之水时，它受到[[/damage average]]伤害并获得一级&amp;reference[drakkenheimContamination]。</p><p><em><strong>制造。</strong></em> 制作<em>狂喜之水</em>需要珍稀工坊及以下珍稀部件：</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[粉尘]</strong> 畸变粉尘</p></li><li><p><strong>[液体]</strong> 污染腐液</p></li><li><p><strong>[器官]</strong> 任意腺体</p></li></ul>",
+      "name": "Aqua Delerium",
+      "description": "<p><em>Potion, Rare</em></p><p>This purple potion glows dimly with octarine light. It swirls and sparkles in its small, stoppered bottle.</p><p>When you drink this potion, you regain expended spell slots. Roll [[/r 1d6]]. You choose spell slots to regain which have a combined level equal to or less than the result. None of the slots can be higher than level 5.</p><p>For one hour after drinking Aqua Delerium, roll 1d20 each time you cast a spell of level 1 or higher. On a 1, you trigger a random @UUID[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{Arcane Anomaly}.</p><p>If you consume more than one dose of Aqua Delerium before finishing a Long Rest, you take 1d12 Necrotic damage for each spell slot level regained from the second dose, and your Hit Point maximum is reduced by an amount equal to the damage taken until you finish a Long Rest. This damage can’t be reduced or prevented in any way.</p><p>When a creature who cannot cast spells using spell slots drinks Aqua Delerium, it takes [[/damage average]] damage and gains one level of &amp;reference[drakkenheimContamination].</p><p><em><strong>Crafting.</strong></em> Creating <em>Aqua Delerium</em> requires a Rare Work shop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Dust]</strong> Aberrant Dust</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Organ]</strong> Any Glands</p></li></ul>",
       "activities": {
-        "Drink Potion": {
-          "name": "饮用药水",
-          "roll": "恢复的法术位环阶"
-        },
         "Drink Potion: No Spell Slots": {
-          "name": "饮用药水：无需法术位"
+          "name": "Drink Potion: No Spell Slots"
+        },
+        "Drink Potion": {
+          "name": "Drink Potion",
+          "roll": "Spell Slot Level Regained"
         }
       },
       "effects": {
         "Aqua Delerium": {
-          "name": "妄质汁",
-          "description": "<p>接下来的1小时内，每当你施展一环或更高环阶的法术时，骰一次d20。若结果为1，你将触发一个@{UUID}[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{奥秘异常 Arcane Anomaly}。</p><p>若你在完成一次{长休 Long Rest}前消耗额外一剂阿夸谵妄，你每从第二剂中恢复一个法术位环阶，就会受到[[/damage 1d12 暗蚀]]伤害，且你的{生命值上限 hit point maximum}减少等同于所受伤害的数值，直至你完成一次{长休 Long Rest}。此伤害无法以任何方式减免或阻止。</p>"
+          "name": "Aqua Delerium",
+          "description": "<p>For the next hour, each time you cast a spell of level 1 or higher, roll a d20. On a 1, you trigger an @UUID[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{Arcane Anomaly}.</p><p>If you consume an additional dose of Aqua Delerium before you finish a Long Rest, you take [[/damage 1d12 necrotic]] damage for each spell slot level you regain from the second dose, and your Hit Point maximum is reduced by an amount equal to the damage take until you finish a Long Rest. This damage can't be reduced or prevented in any way.</p>"
         }
       }
     },
     "Amulet of Incineration": {
-      "name": "焚化护符",
-      "description": "<p><em>奇物, 珍稀</em></p><p>这件护符由熵焰元素粉尘制成的宝石打造而成，宝石镶嵌在骨质护身符中，并涂有异怪之血，其内部闪烁着永不熄灭的火焰。</p><p>每回合一次，当你使用法术位施展一个造成火焰伤害的法术时，可以选择一个受到该法术火焰伤害的单一目标获得&amp;reference[Burning] (3d6 火焰)状态。</p><p><em><strong>制造。</strong></em> 制作{焚灭护符 Amulet of Incineration}需要珍稀工坊及以下珍稀部件：</p><ul><li><p><strong>[精魄]</strong> 来自元素生物的精魄</p></li><li><p><strong>[骸骨]</strong> 来自怪兽的脊柱</p></li><li><p><strong>[尘晶]</strong> 来自熵焰的元素粉尘</p></li><li><p><strong>[体液]</strong> 来自异怪的怪物血液</p></li></ul>",
+      "name": "Amulet of Incineration",
+      "description": "<p><em>Wondrous Item, Rare</em></p><p>Crafted from a gem made from the elemental dust of an entropic flame set within a bone talisman, and glazed in the blood of an aberration, this amulet shimmers with an internal, ever-burning fire.</p><p>Once per turn, when you cast a spell that deals Fire damage using a spell slot, you can choose one target that was dealt Fire damage by the spell to gain the &amp;reference[Burning] (3d6 Fire) condition.</p><p><em><strong>Crafting.</strong></em> Creating an <em>Amulet of Incineration</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from an Elemental</p></li><li><p><strong>[Bones]</strong> Spine from a Monstrosity</p></li><li><p><strong>[Dust]</strong> Elemental Dust from an Entropic Flame</p></li><li><p><strong>[Fluid]</strong> Monster Blood from an Aberration</p></li></ul>",
       "activities": {
         "Incinerate Creature": {
-          "name": "焚灭生物",
-          "condition": "当你使用法术位施展一个造成火焰伤害的法术时。"
+          "name": "Incinerate Creature",
+          "condition": "When you cast a spell that deals Fire damage using a spell slot."
         }
       },
       "effects": {
         "Burning (3d6 Fire)": {
-          "name": "燃烧 (3d6 火焰)",
-          "description": "<p>你处于&reference[burning apply=false]状态，全身被火焰覆盖。</p><ul><li><p>在你的每个回合结束时，你受到[[/damage average fire 3d6]]火焰伤害。</p></li><li><p>若你或5尺内的另一个生物花费动作扑灭火焰，或其他效应（例如浸入水中）移除此状态，则该状态结束。</p></li></ul>"
+          "name": "Burning (3d6 Fire)",
+          "description": "<p>You are &amp;reference[burning apply=false] from being covered in fire.</p><ul><li><p>At the end of each of your turns, you take [[/damage average fire 3d6]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to douse the fire or if some other effect removes it such as submerging yourself in water.</p></li></ul>"
         }
       }
     },
     "Charged Gauntlets": {
-      "name": "充能拳套",
-      "description": "<p><em>奇物, 极珍稀 (需武僧同调)</em></p><p>这副轻质手套由邪魔毛发编织的布料制成, 并以龙类的鳞片加固。手套用一种由元素生物体液和亡灵粉尘制成的炼金配方洗涤, 然后用从异怪身上收集的稀有精魂赋能。</p><p>当你同调这些魔法手套时, 每次以徒手打击命中都会为其充能1点。手套最多可储存10点充能。当你进行长休或骰先攻时, 所有未消耗的充能都会消失。</p><p>当手套至少有1点充能时, 你的徒手打击造成闪电伤害而非原本的伤害类型。</p><p>当手套有5点或更多充能时, 你的徒手打击额外造成2d6闪电伤害, 并在命中时将目标推开10尺。</p><p>你可以消耗2点充能来施展 @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000] 法术。</p><p>你可以消耗10点充能来施展<em>湮灭波Destructive Wave</em>或 @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc], 使用你的武僧专注豁免DC。</p><p><em><strong>制造。</strong></em> 制造<em>充能手套</em>需要极珍稀工坊和以下极珍稀部件:</p><ul><li><p><strong>[精魂]</strong> 异怪精魂</p></li><li><p><strong>[粉尘]</strong> 亡灵粉尘</p></li><li><p><strong>[体液]</strong> 元素生物体液</p></li><li><p><strong>[毛发]</strong> 邪魔毛发</p></li><li><p><strong>[皮革]</strong> 蓝龙或青铜龙鳞片</p></li></ul><p></p>",
+      "name": "Charged Gauntlets",
+      "description": "<p><em>Wondrous Item, Very Rare (Requires Attunement by a Monk)</em></p><p>These light gauntlets are made from cloth woven from the hair of a fiend and reinforced with the scales of a dragon. The gauntlets are washed with an alchemical formula made from elemental fluid and undead dust. They are then powered with a rare animus collected from an aberration.</p><p>Each time you hit with an Unarmed Strike while attuned to these magic gauntlets they gain one charge. The gauntlets can have up to 10 charges. Any unexpended charges disappear when you take a Long Rest or roll Initiative.</p><p>While the gauntlets have at least one charge, your Unarmed Strikes deal Lightning damage instead of its normal damage type.</p><p>While the gauntlets have 5 or more charges, your Unarmed Strikes deal an additional 2d6 Lightning damage and push the target 10 feet away from you on a hit.</p><p>You can expend 2 charges from the gauntlets to cast the @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000] spell.</p><p>You can expend 10 charges from the gauntlets to cast <em>Destructive Wave</em> or @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc], using your monk’s focus saving throw DC.</p><p><em><strong>Crafting.</strong></em> Creating <em>Charged Gauntlets</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Aberrant Animus</p></li><li><p><strong>[Dust]</strong> Undead Dust</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li><li><p><strong>[Hair]</strong> Hair from a Fiend</p></li><li><p><strong>[Hide]</strong> Scales from a Blue or Bronze Dragon</p></li></ul><p></p>",
       "activities": {
         "Charged Gauntlets: Wall of Force": {
-          "name": "充能拳套：力场墙 Wall of Force"
-        },
-        "Charged Gauntlets: Shield": {
-          "name": "充能手套: {护盾术 Shield}"
+          "name": "Charged Gauntlets: Wall of Force"
         },
         "Enchant Unarmed Strike": {
-          "name": "附魔徒手打击"
+          "name": "Enchant Unarmed Strike"
+        },
+        "Charged Gauntlets: Shield": {
+          "name": "Charged Gauntlets: Shield"
         },
         "Charged Gauntlets: Gain Charge": {
-          "name": "充能战拳：获得充能",
-          "condition": "当你调谐充能护手时，用{徒手打击 unarmed strike}{命中 hit}一个{生物 Creature}。"
+          "name": "Charged Gauntlets: Gain Charge",
+          "condition": "When you hit a creature with an Unarmed Strike while attuned to the Charged Gauntlets."
         }
       },
       "effects": {
         "Charged Gauntlets": {
-          "name": "充能拳套",
+          "name": "Charged Gauntlets",
           "changes": {
-            "system.description.value": "{} <fieldset>     <legend>充能拳套</legend>     <p>当你与这些魔法拳套调谐时，每次以徒手打击命中，拳套就会获得1点充能。拳套最多可拥有10点充能。当你进行长休或骰先攻时，任何未消耗的充能都会消失。</p>     <p>当拳套拥有至少1点充能时，你的徒手打击造成闪电伤害，而非其正常伤害类型。</p>     <p>当拳套拥有5点或更多充能时，你的徒手打击额外造成2d6闪电伤害，并在命中时将目标推开10尺。</p>     <p>你可以消耗拳套的2点充能来施展 @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000] 法术。你可以消耗拳套的10点充能来施展<em>湮灭波 Destructive Wave</em>或 @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]，使用你武僧的专注豁免DC。</p> </fieldset>"
+            "system.description.value": "{} <fieldset>     <legend>Charged Gauntlets</legend>     <p>Each time you hit with an Unarmed Strike while attuned to these magic gauntlets they gain one charge. The gauntlets can have up to 10 charges. Any unexpended charges disappear when you take a Long Rest or roll Initiative.</p>     <p>While the gauntlets have at least one charge, your Unarmed Strikes deal Lightning damage instead of its normal damage type.</p>     <p>While the gauntlets have 5 or more charges, your Unarmed Strikes deal an additional 2d6 Lightning damage and push the target 10 feet away from you on a hit.</p>     <p>You can expend 2 charges from the gauntlets to cast the @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000] spell. You can expend 10 charges from the gauntlets to cast <em>Destructive Wave</em> or @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc], using your monk’s focus saving throw DC.</p> </fieldset>"
           }
         }
       }
     },
     "Reflector Shield": {
-      "name": "反射护盾",
-      "description": "<p><em>护甲 (护盾术shield), 珍稀 (需要调谐)</em></p><p>这面魔法护盾由异怪壳与异怪皮革结合制成，手柄采用异怪皮革。它被融合在一起，涂覆着受污染的腐液，并镶嵌着一颗稀有的灵髓。完成后，甲壳会散发出异界色调，呈现出万花筒般闪烁的图案。该护盾可以反射攻击和魔法。</p><p>当你从60尺内可见的生物处受到强酸、寒冷、火焰、力场、闪电或雷鸣伤害时，你可以用你的反应使该生物受到等量伤害（你仍会受到该伤害）。</p><p><em><strong>制造。</strong></em> 制造一面<em>反射护盾</em>需要珍稀工坊及以下珍稀部件：</p><ul><li><p><strong>[灵髓]</strong> 任意灵髓</p></li><li><p><strong>[流体]</strong> 受污染的腐液</p></li><li><p><strong>[甲壳]</strong> 异怪壳</p></li><li><p><strong>[皮革]</strong> 异怪皮</p></li></ul>",
+      "name": "Reflector Shield",
+      "description": "<p><em>Armor (Shield), Rare (Requires Attunement)</em></p><p>This magic shield is formed from the shell of an Anomollusk combined with leather from an aberration as its handle. It’s fused together and coated in contaminated ichor and inset with a rare animus. Once complete, the shell gives off an otherworldly hue that shimmers in kaleidoscopic patterns. The shield can reflect attacks and magic.</p><p>When you take Acid, Cold, Fire, Force, Lightning, or Thunder damage from a creature you can see within 60 feet of you, you can use your Reaction to cause the creature to take the same damage (you still take the damage).</p><p><em><strong>Crafting.</strong></em> Creating a <em>Reflector Shield</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Contaminated Ichor</p></li><li><p><strong>[Hide]</strong> Shell from an Anomollusk</p></li><li><p><strong>[Hide]</strong> Skin from an Aberration</p></li></ul>",
       "activities": {
         "Reflect Elements": {
-          "name": "反射元素",
-          "condition": "当你受到一个位于你60尺内可见生物所造成的强酸、寒冷、火焰、力场、闪电、或雷鸣伤害时。"
+          "name": "Reflect Elements",
+          "condition": "When you take Acid, Cold, Fire, Force, Lightning, or Thunder Damage from a creature you can see within 60 feet of you."
         }
       }
     },
     "Inexhaustible Armor": {
-      "name": "无尽护甲",
-      "description": "<p><em>护甲 (任意), 极珍稀 (需由战士调谐)</em></p><p>这件护甲由精类生物皮革与魔法板片制成，注入了某些构装生物体内的化学溶液，并以石化牛的心脏赋能。</p><p>当你调谐此护甲时，你可额外使用一次你的职业特性{回气 Second Wind}。此外，当你使用{回气 Second Wind}时，你额外恢复3d6{生命值 Hit Points}，并可从自身移除以下一个状态：&reference[Blinded apply=false], &reference[Charmed apply=false], &reference[Dazed apply=false], &reference[Deafened apply=false], &reference[Frightened apply=false], &reference[Immobilized apply=false], &reference[Poisoned apply=false], &reference[Slowed apply=false], 或&reference[Staggered apply=false]。</p><p><em><strong>制造。</strong></em> 制作<em>无尽护甲</em>需要极珍稀工坊及以下极珍稀部件：</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[流体]</strong> 构装生物的化学溶液</p></li><li><p><strong>[皮革]</strong> 精类生物的皮毛</p></li><li><p><strong>[皮革]</strong> 板片</p></li><li><p><strong>[器官]</strong> 石化牛的心脏</p></li></ul>",
+      "name": "Inexhaustible Armor",
+      "description": "<p><em>Armor (Any), Very Rare (Requires Attunement by a Fighter)</em></p><p>This armor is made from fey leathers and magical plates, infused with the chemical solutions found in some constructs and empowered with the heart of a gorgon.</p><p>While attuned to this armor, you gain an additional use of your Second Wind class feature. In addition, when you use your Second Wind, you regain an additional 3d6 Hit Points and can remove one of the following conditions from yourself: &amp;reference[Blinded apply=false], &amp;reference[Charmed apply=false], &amp;reference[Dazed apply=false], &amp;reference[Deafened apply=false], &amp;reference[Frightened apply=false], &amp;reference[Immobilized apply=false], &amp;reference[Poisoned apply=false], &amp;reference[Slowed apply=false], or &amp;reference[Staggered apply=false].</p><p><em><strong>Crafting.</strong></em> Creating <em>Inexhaustible Armor</em> requires a Very Rare Workshop and the following Very Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Chemical solution from a Construct</p></li><li><p><strong>[Hide]</strong> Skin from a Fey</p></li><li><p><strong>[Hide]</strong> Plates</p></li><li><p><strong>[Organ]</strong> Heart from a Gorgon</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         },
         "Inexhaustible Healing": {
-          "name": "无尽治疗",
-          "condition": "当你使用你的职业特性{回气 Second Wind}时。"
+          "name": "Inexhaustible Healing",
+          "condition": "When you use your Second Wind class feature."
         }
       },
       "effects": {
         "Inexhaustible Armor": {
-          "name": "无尽护甲",
+          "name": "Inexhaustible Armor",
           "changes": {
-            "name": "无穷无尽",
+            "name": "Inexhaustible {}",
             "system.description.value": "@embed[Compendium.drakkenheim-monsters.items.Item.h3IjCxkmRNyAnYCg inline]"
           }
         },
         "Inexhaustible Wind": {
-          "name": "无尽风势",
-          "description": "<p>你获得一次额外的{回气 Second Wind}职业特性使用次数。</p>"
+          "name": "Inexhaustible Wind",
+          "description": "<p>You gain an additional use of your Second Wind class feature.</p>"
         }
       }
     },
     "Time Dilation Medallion": {
-      "name": "时间膨胀护符",
-      "description": "<p><em>奇物, 传说</em></p><p>这件发条装置的内在工作原理由构装生物身上采集的齿轮构成，它们围绕着一块聚焦透镜锻造而成，并由魔法生物的针状物仔细固定在一起。所使用的灵核利用了算法The Algorithm的能量，这是一个秩序与因果的存在，其对时间和空间的控制从徽章奇异的发条结构中荡漾而出。</p><p>这枚徽章有3发充能。当你消耗掉最后一发充能时，它会化为尘埃。</p><p>你可以在你的回合中消耗徽章的1发充能来获得一个额外的动作。每次你这样做时，你可以投掷1d6。若结果为1，在你的回合结束时，你会因徽章对你施放了@UUID[Compendium.dnd5e.spells24.Item.phbsplMaze000000]法术而脱离时间和空间的束缚。若结果为6，徽章恢复1d3发充能。</p><p><em><strong>制造。</strong></em> 制造<em>时间膨胀徽章 Time Dilation Medallion</em>需要一个传说工坊以及以下传说部件：</p><ul><li><p><strong>[灵核 Animus]</strong> 来自算法The Algorithm*的灵核</p></li><li><p><strong>[甲壳 Hide]</strong> 来自构装生物的甲板</p></li><li><p><strong>[天生武器 Natural Weapon]</strong> 任何针状物</p></li><li><p><strong>[器官 Organ]</strong> 来自构装生物的眼睛</p></li></ul><p><em>* 根据游戏主持人的判断，该灵核也可以是任何其他传说构装生物。</em></p>",
+      "name": "Time Dilation Medallion",
+      "description": "<p><em>Wondrous Item, Legendary</em></p><p>The inner workings of this clockwork device are formed from gears forged from magical constructs gathered around a focusing lens, held together carefully by the needles of magical creatures. The animus used harnesses the energy of The Algorithm, a being of order and consequence, whose control over time and space ripples from the strange clockworks of the medallion.</p><p>This medallion has 3 charges. It crumbles to dust when you expend the final charge.</p><p>You can expend 1 charge from the medallion to take an extra action on your turn. Each time you do, you can roll 1d6. On a 1, at the end of your turn, you become unstuck in time and space as the medallion casts the @UUID[Compendium.dnd5e.spells24.Item.phbsplMaze000000] spell on you. On a 6, the medallion regains 1d3 charges.</p><p><em><strong>Crafting.</strong></em> Creating the <em>Time Dilation Medallion</em> requires a Legendary Workshop and the following Legendary Components:</p><ul><li><p><strong>[Animus]</strong> Animus from The Algorithm*</p></li><li><p><strong>[Hide]</strong> Plates from a Construct</p></li><li><p><strong>[Natural Weapon]</strong> Any Needles</p></li><li><p><strong>[Organ]</strong> Eye from a Construct</p></li></ul><p><em>* At the Game Master’s discretion, the animus could be any other Legendary Construct instead.</em></p>",
       "activities": {
         "Take Extra Turn": {
-          "name": "获得额外回合"
-        },
-        "Roll 1D6": {
-          "name": "骰1d6",
-          "condition": "当你从时间延展护符中消耗一次充能时。"
+          "name": "Take Extra Turn"
         },
         "Regain Charges": {
-          "name": "恢复充能",
-          "condition": "当你每次使用时延护符消耗充能时，若在1d6上骰出6点。"
+          "name": "Regain Charges",
+          "condition": "When you roll a 6 on the 1d6 you roll each time you expend a charge from the Time Dilation Medallion."
+        },
+        "Roll 1D6": {
+          "name": "Roll 1D6",
+          "condition": "When you expend a charge from the Time Dilation Medallion."
         }
       }
     },
     "Hazewind Cape": {
-      "name": "雾风斗篷",
-      "description": "<p><em>奇物, 非普通</em></p><p>这件猩红与金色相间的带兜帽斗篷缝有陨落鸟妖的羽毛并以它们的血液染色, 这赋予穿戴者对鸟妖之歌的一些抗性。斗篷随后与精类生物粉尘融合, 赋予其由灵质驱动的强大反魅惑效果。</p><p>穿戴此斗篷时, 你在对抗&amp;reference[Charmed apply=false]和&amp;reference[Frightened apply=false]状态的豁免上具有优势。</p><p><em><strong>制造。</strong></em> 制作一件<em>迷雾风斗篷</em>需要一个非普通工坊和以下非普通部件:</p><ul><li><p><strong>[灵质]</strong> 来自鸟妖的灵质</p></li><li><p><strong>[粉尘]</strong> 精类生物粉尘</p></li><li><p><strong>[液体]</strong> 来自鸟妖的怪物血液</p></li><li><p><strong>[毛发]</strong> 来自鸟妖的羽毛</p></li><li><p><strong>[皮革]</strong> 皮肤</p></li></ul>",
+      "name": "Hazewind Cape",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>This crimson and gold hooded cape is fitted with the feathers of fallen Harpies and dyed in their blood, this grants the wearer some resistance to the songs of Harpies. The cape is then in fused with the dust of a fey creature which grants it a powerful anti-charm effect powered by an animus.</p><p>While wearing this cape, you have Advantage on saving throws against the &amp;reference[Charmed apply=false] and &amp;reference[Frightened apply=false] conditions.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Hazewind Cape</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Harpy</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Harpy</p></li><li><p><strong>[Hair]</strong> Feathers from a Harpy</p></li><li><p><strong>[Hide]</strong> Skin</p></li></ul>",
       "effects": {
         "Hazewind Courage": {
-          "name": "雾风勇气",
-          "description": "<p>当你穿着这件斗篷时，你在对抗&amp;reference[Charmed apply=false]和&amp;reference[Frightened apply=false]状态的豁免检定上具有优势。</p>"
+          "name": "Hazewind Courage",
+          "description": "<p>You While wearing this cape, you have Advantage on saving throws against the &amp;reference[Charmed apply=false] and &amp;reference[Frightened apply=false] conditions.</p>"
         }
       }
     },
     "Potion of Controlled Mutation": {
-      "name": "可控突变药水",
-      "description": "<p><em>药水, 非普通</em></p><p>这瓶看起来病恹恹的药水内含一团蠕动的触手，饮用时会活化并令人不适地沿着饮用者的喉咙向下匍匐。其味道刺鼻且带有鱼腥味，并会导致随机但暂时的突变突然爆发。</p><p>当你消耗这瓶药水时，你会获得一个随机决定的突变效果，直到你开始一次短休或长休。你可以在 @UUID[Compendium.drakkenheim-monsters.tables.RollTable.Q88HO4Z779FyUvma]{突变 Mutations} 表上骰两次，选择显现哪个突变。你不会因这个突变获得任何污染等级。当效果结束时，你的身体会恢复正常。</p><p><em><strong>制造。</strong></em> 制造一瓶<em>可控突变药水 Potion of Controlled Mutation</em>需要一个非普通工坊以及以下非普通部件：</p><p><strong>[灵质 Animus]</strong> 来自一个异怪的灵质</p><p><strong>[流体 Fluid]</strong> 受污染的腐液</p><p><strong>[器官 Organs]</strong> 来自一个异怪的任意两个器官。</p>",
+      "name": "Potion of Controlled Mutation",
+      "description": "<p><em>Potion, Uncommon</em></p><p>This sickly-looking potion contains a writhing mass of tentacles that animate and uncomfortably crawl down the imbiber’s throat when consumed. The taste is pungent and fishy, and results in the sudden outbreak of random, but temporary, mutations.</p><p>When you consume this potion, you gain the effects of one randomly determined Mutation until you start a Short or Long Rest. You can roll on the @UUID[Compendium.drakkenheim-monsters.tables.RollTable.Q88HO4Z779FyUvma]{Mutations} table twice, choosing which mutation manifests. You don’t gain any Contamination levels as a result of this Mutation. When the effect ends, your body returns to normal.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Potion of Controlled Mutation</em> requires an Uncommon Workshop and the following Uncommon Components:</p><p><strong>[Animus]</strong> Animus from an Aberration</p><p><strong>[Fluid]</strong> Contaminated Ichor</p><p><strong>[Organs]</strong> Any two Organs from an Aberration.</p>",
       "activities": {
         "Drink Potion": {
-          "name": "饮用药水"
+          "name": "Drink Potion"
         }
       }
     },
     "Everhot Stew Pot": {
-      "name": "恒热炖锅",
-      "description": "<p><em>奇物, 非普通</em></p><p>这个火盆由构装生物的镀铁制成，并注入了元素生物的灰烬。所使用的魂灵必须来自龙类，这为潜在的元素魔法增添了控制力和效力。用来搅拌火盆的勺子由魔法生物骨骼雕刻而成。这个火盆只需填满食材并搅拌即可加热至沸腾温度，无需火焰，它所炖煮的汤羹总是美味而丰盛。</p><p>在长休期间，你可以烹煮足够喂养三个生物的炖汤。所有食用此锅炖汤的生物获得10点临时生命值。当生物拥有这些临时生命值时，他们获得英勇(1d4)。</p><p><em><strong>制造。</strong></em> 制造<em>恒热炖锅</em>需要非普通工坊及以下非普通部件：</p><ul><li><p><strong>[魂灵]</strong> 龙类魂灵</p></li><li><p><strong>[骨骼]</strong> 怪兽肋骨</p></li><li><p><strong>[尘屑]</strong> 元素尘屑</p></li><li><p><strong>[皮革]</strong> 甲板</p></li></ul>",
+      "name": "Everhot Stew Pot",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>This cauldron is made using the plated iron from a construct infused with the ash of an elemental. The animus used must be from a dragon which adds both control and potency to the latent elemental magics. The spoon used to stir the cauldron is carved from the bone of a magical creature. This cauldron can heat to boiling temperatures without requiring fire simply by being filled and stirred, and the stews and soups it produces are always delicious and hearty.</p><p>During a Long Rest, you can cook enough stew to feed up to three creatures. All creatures who eat a stew from this pot gain 10 Temporary Hit Points. While a creature has these Temporary Hit Points, they gain Valor (1d4).</p><p><em><strong>Crafting.</strong></em> Creating an <em>Everhot Stew Pot</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Dragon</p></li><li><p><strong>[Bone]</strong> Ribs from a Monstrosity</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Hide]</strong> Plates</p></li></ul>",
       "activities": {
         "Cook Stew": {
-          "name": "厨师炖菜"
+          "name": "Cook Stew"
         }
       },
       "effects": {
         "Ever Hot Stew Pot: Valor (1d4)": {
-          "name": "恒热炖锅：勇气 (1d4)",
-          "description": "<p>你的攻击检定和豁免获得1d4加值。</p><p>此效果仅在你拥有恒热炖锅炖菜的临时生命值时生效。</p>"
+          "name": "Ever Hot Stew Pot: Valor (1d4)",
+          "description": "<p>You add 1d4 to your attack rolls and saving throws.</p><p>This effect is only active while you have Temporary Hit Points from the Everhot Stew Pot's stew.</p>"
         }
       }
     },
     "Delerium Fragment": {
-      "name": "谵妄碎片",
-      "description": "<p>一个[[lookup @item.name lowercase]]拥有17护甲等级：和10生命值：。提取一个[[lookup @item.name lowercase]]需要一分钟。</p>"
+      "name": "Delerium Fragment",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 17 and 10 Hit points. Extracting a [[lookup @item.name lowercase]] takes one minute.</p>"
     },
     "Crest of the Sacred Flame": {
-      "name": "圣火术之冠",
-      "description": "<p><em>奇物, 珍稀 (需圣武士调谐)</em></p><p>这枚纹章由被圣火术sacred flame摧毁并净化的邪魔压缩粉尘制成,并在取自龙类的元素生物体液点燃的火焰中烧灼。这枚简易纹章由浸泡在酸性怪物胆汁室中的亡灵生物骨骼制成。</p><p>当你调谐这枚魔法纹章时,你的守护灵光Aura of Protection光环范围增加10尺。</p><p><em><strong>制造。</strong></em> 制造<em>圣火术sacred flame纹章</em>需要珍稀工坊及以下珍稀部件:</p><ul><li><p><strong>[精魄]</strong> 任意精魄</p></li><li><p><strong>[骨骼]</strong> 脊椎或肋骨</p></li><li><p><strong>[粉尘]</strong> 邪魔粉尘</p></li><li><p><strong>[体液]</strong> 酸性胆汁室</p></li><li><p><strong>[体液]</strong> 元素生物体液</p></li></ul>",
+      "name": "Crest of the Sacred Flame",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Paladin)</em></p><p>This crest is crafted from the compressed dust of fiends destroyed and sanctified by the Sacred Flame and torched in fires ignited by the elemental fluid taken from a dragon. This simple crest is made from the bones of undead creatures washed in acidic monster bile.</p><p>While attuned to this magic crest you increase the Emanation of your Aura of Protection by 10 feet.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Crest of the Sacred Flame</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Bones]</strong> Spine or Ribs</p></li><li><p><strong>[Dust]</strong> Fiend Dust</p></li><li><p><strong>[Fluid]</strong> Acidic Bile</p></li><li><p><strong>[Fluid]</strong> Elemental Fluid</p></li></ul>",
       "effects": {
         "Crest of the Sacred Flame": {
-          "name": "圣火术之冠",
-          "description": "<p>当你调谐此魔法纹章时，你的{守护灵光 Aura of Protection}的{光环 emanation}范围增加10尺。</p>"
+          "name": "Crest of the Sacred Flame",
+          "description": "<p>While attuned to this magic crest you increase the Emanation of your Aura of Protection by 10 feet.</p>"
         }
       }
     },
     "Amulet of Primal Wisdom": {
-      "name": "原初感知护符",
-      "description": "<p><em>奇物, 珍稀 (需同调)</em></p><p>这件护符由魔法植物的干枯叶片制成, 并注入了它们的粉尘, 装饰着一朵独特的干花, 然后被树脂包裹。吊坠散发着春日般柔和的光芒, 闻起来像盛开的花田。</p><p>当你佩戴这件魔法护符时, 你的感知属性为19。如果你的感知在不佩戴它时已达19或更高, 则此护符对你无效。</p><p><em><strong>制造。</strong></em> 制造一件<em>原始智慧护符</em>需要一个珍稀工坊以及以下珍稀部件:</p><ul><li><p><strong>[精魄]</strong> 植物精魄</p></li><li><p><strong>[粉尘]</strong> 植物粉尘</p></li><li><p><strong>[液体]</strong> 树脂</p></li><li><p><strong>[毛发]</strong> 叶片</p></li><li><p><strong>[器官]</strong> 花朵</p></li></ul>",
+      "name": "Amulet of Primal Wisdom",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>Crafted from the dried leaves of magical plants and imbued with their dust, this amulet is decorated with a singular dried flower and then encased in sap. The pendant glows softly with the light of springtime and smells of floral fields in bloom.</p><p>Your Wisdom score is 19 while you wear this magic amulet. It has no effect on you if your Wisdom is 19 or higher without it.</p><p><em><strong>Crafting.</strong></em> Creating an <em>Amulet of Primal Wisdom</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Plant Animus</p></li><li><p><strong>[Dust]</strong> Plant Dust</p></li><li><p><strong>[Fluid]</strong> Sap</p></li><li><p><strong>[Hair]</strong> Leaves</p></li><li><p><strong>[Organ]</strong> Flower</p></li></ul>",
       "effects": {
         "Amulet of Primal Wisdom": {
-          "name": "原初感知护符",
-          "description": "<p>当你佩戴这枚魔法护符时，你的感知值为19。若未佩戴时你的感知已达19或更高，则此护符对你无效。</p>"
+          "name": "Amulet of Primal Wisdom",
+          "description": "<p>Your Wisdom score is 19 while you wear this magic amulet. It has no effect on you if your Wisdom is 19 or higher without it.</p>"
         }
       }
     },
     "Charm of Swarms": {
-      "name": "集群魅惑",
-      "description": "<p><em>奇物, 非普通</em></p><p>该魅惑物形似一只大型蚊蚋。它由死亡蘑菇的孢子制成；一个昆虫类生物的下颚被安置其上。魅惑物表面覆盖着酸性胆汁，并由干燥的黏液粘合。它散发着虫类与腐烂的气味。</p><p>当一个距离你5尺内的敌人在对你发动的攻击中打出重击时，你可以使该敌人陷入&amp;reference[燃烧] (2d6 暗蚀)。当目标以此方式燃烧时，你对目标的攻击具有优势。</p><p><em><strong>制造。</strong></em> 制造一个<em>集群魅惑</em>需要一个非普通工坊以及以下非普通部件：</p><ul><li><p><strong>[灵质]</strong> 任意灵质</p></li><li><p><strong>[流体]</strong> 酸性胆汁室</p></li><li><p><strong>[流体]</strong> 黏液</p></li><li><p><strong>[天生武器]</strong> 孢子</p></li><li><p><strong>[天生武器]</strong> 下颚</p></li></ul>",
+      "name": "Charm of Swarms",
+      "description": "<p><em>Wondrous Item, Uncommon</em></p><p>T is charm resembles a large gnat. It is made of the spores of dead mushrooms; the mandibles of an insectoid creature are placed upon it. The charm is coated in an acidic bile and held together by dried mucus. It smells of bugs and rot.</p><p>When an enemy within 5 feet of you scores a Critical Hit on an attack made against you, you can cause the enemy to become &amp;reference[Burning] (2d6 Necrotic). While the target is Burning in this way, you have Advantage on attacks against the target.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Charm of Swarms</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Fluid]</strong> Acidic Bile</p></li><li><p><strong>[Fluid]</strong> Mucus</p></li><li><p><strong>[Natural Weapon]</strong> Spores</p></li><li><p><strong>[Natural Weapon]</strong> Mandibles</p></li></ul>",
       "activities": {
         "Coat in Insects": {
-          "name": "昆虫涂层",
-          "condition": "当5尺内的敌人对你发起的攻击造成重击时。"
+          "name": "Coat in Insects",
+          "condition": "When an enemy within 5 feet of you scores a Critical Hit on an attack made against you."
         }
       },
       "effects": {
         "Burning (2d6 Necrotic)": {
-          "name": "燃烧 (2d6 暗蚀)",
-          "description": "<p>你因被昆虫覆盖而处于&amp;reference[燃烧 apply=false]状态。</p><ul><li><p>在你的每个回合结束时，你受到[[/damage average necrotic 2d6]]点暗蚀伤害。</p></li><li><p>若你或5尺内的另一生物花费动作刮除昆虫，或其他效应移除它们，则该状态结束。</p></li></ul>"
+          "name": "Burning (2d6 Necrotic)",
+          "description": "<p>You are &amp;reference[burning apply=false] from being covered in insects.</p><ul><li><p>At the end of each of your turns, you take [[/damage average necrotic 2d6]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to scrape off the insects or if some other effect removes them.</p></li></ul>"
         }
       }
     },
     "Wand of the Precocious Apprentice": {
-      "name": "早慧学徒魔杖",
-      "description": "<p><em>魔杖, 非普通</em></p><p>每回合一次, 当你持用此魔杖使用戏法对生物造成伤害时, 该戏法的单一目标额外受到1d4点该法术造成的伤害类型。</p><p><em><strong>制造。</strong></em> 制造一根<em>早慧学徒魔杖</em>需要一间非普通工坊和以下非普通部件:</p><ul><li><p><strong>[灵质]</strong> 任意</p></li><li><p><strong>[骸骨]</strong> 亡灵骸骨</p></li><li><p><strong>[粉尘]</strong> 精类生物粉尘</p></li><li><p><strong>[液体]</strong> 灵质浆</p></li></ul>",
+      "name": "Wand of the Precocious Apprentice",
+      "description": "<p><em>Wand, Uncommon</em></p><p>Once per turn when you deal damage to a creature using a cantrip while holding this wand, one target of that cantrip takes an extra 1d4 damage of type dealt by the spell.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Wand of the Precocious Apprentice</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Bones]</strong> Bones from an Undead</p></li><li><p><strong>[Dust]</strong> Fey Dust</p></li><li><p><strong>[Fluid]</strong> Ectoplasm</p></li></ul>",
       "activities": {
         "Precocious Damage": {
-          "name": "早熟伤害",
-          "condition": "当你持握此魔杖时使用戏法对一个生物造成伤害。"
+          "name": "Precocious Damage",
+          "condition": "When you deal damage to a creature using a cantrip while holding this wand."
         }
       }
     },
     "Electric Charge Ring": {
-      "name": "电击充能戒指",
+      "name": "Electric Charge Ring",
       "description": "<p><em>Ring, Rare</em></p><p>This ring, composed of living lightning, is forged from elemental dust compressed into a gem around the lens eye of a construct, washed in the acidic glands of a monster before being set into an animus of an elemental.</p><p>When you cast a spell using a spell slot that deals Lightning damage, choose one target that failed its first saving throw against that spell. That creature is &amp;reference[Shocked] until the start of your next turn.</p><p>Crafting. Creating an Electric Charge Ring requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from an Elemental</p></li><li><p><strong>[Dust]</strong> Elemental Dust</p></li><li><p><strong>[Organ]</strong> Eye from a Construct</p></li><li><p><strong>[Organ]</strong> Glands</p></li></ul>",
       "activities": {
         "Shock Creature": {
-          "name": "震荡生物",
-          "condition": "当你使用一个法术位施展一道造成闪电伤害的法术时。"
+          "name": "Shock Creature",
+          "condition": "When you cast a spell using a spell slot that deals Lightning damage."
         }
       },
       "effects": {
         "Shocked": {
-          "name": "电击",
-          "description": "<p>你陷入&amp;reference[shocked apply=false]状态，直到施法者的下一回合开始。</p>"
+          "name": "Shocked",
+          "description": "<p>You are &amp;reference[shocked apply=false] until the start of the caster's next turn.</p>"
         }
       }
     },
     "Hag-Stitched Troll Leather Armor": {
-      "name": "鬼婆缝合巨魔皮甲",
-      "description": "<p><em>护甲 (皮甲或躲藏), 珍稀 (需调谐)</em></p><p>穿着这件魔法护甲时, 你的{护甲等级 Armor Class}获得+1加值。</p><p>这件魔法护甲拥有50点充能。它于每日拂晓恢复所有已消耗的充能。当你穿着并调谐此护甲时, 在你的回合开始时, 你可以消耗1至10点护甲充能 (无需动作)。你每以此方式消耗1点充能, 就恢复1点{生命值 Hit Point}。若你在穿着此护甲时受到{强酸 Acid}或{火焰 Fire}伤害, 则每受到1点{强酸 Acid}或{火焰 Fire}伤害, 护甲就失去1点充能。</p><p><em><strong>制造。</strong></em> 制造<em>鬼婆缝合巨魔皮甲</em>需要一间珍稀工坊及以下珍稀{部件 components}:</p><ul><li><p><strong>[灵魂]</strong> 来自一名{巨人 giant}的灵魂</p></li><li><p><strong>[骨骼]</strong> 任意两只{巨魔 Trolls}的头骨</p></li><li><p><strong>[液体]</strong> 来自任意{巨魔 Troll}的{怪物 Monster}之血</p></li><li><p><strong>[毛皮]</strong> 缝合线</p></li><li><p><strong>[皮革]</strong> 来自任意{巨魔 Troll}的皮肤</p></li></ul>",
+      "name": "Hag-Stitched Troll Leather Armor",
+      "description": "<p><em>Armor (Leather or Hide), Rare (Requires Attunement)</em></p><p>You gain a +1 bonus to Armor Class while wearing this magic armor.</p><p>This magic armor has 50 charges. It regains all expend ed charges each day at dawn. While wearing this armor and attuned to it, at the start of your turn you can expend between 1 and 10 charges from the armor (no action required). You regain 1 Hit Point for each charge expended in this way. If you take Acid or Fire damage while wearing this armor, it loses 1 charge for each point of Acid or Fire damage taken.</p><p><em><strong>Crafting.</strong></em> Creating <em>Hag-Stitched Troll Leather Armor</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a Giant</p></li><li><p><strong>[Bones]</strong> Skulls of any two Trolls</p></li><li><p><strong>[Fluid]</strong> Monster Blood from any Troll</p></li><li><p><strong>[Fur]</strong> Stitches</p></li><li><p><strong>[Hide]</strong> Skin of any Troll</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
-        "Troll Regeneration": {
-          "name": "巨魔再生"
-        },
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
+        },
+        "Troll Regeneration": {
+          "name": "Troll Regeneration"
         }
       },
       "effects": {
         "Hag-Stitched Troll Leather Armor": {
-          "name": "鬼婆缝合巨魔皮甲",
+          "name": "Hag-Stitched Troll Leather Armor",
           "changes": {
-            "name": "鬼婆缝合巨魔 {}",
+            "name": "Hag-Stitched Troll {}",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.wiSk7rdkYAZLph9l inline]"
           }
         }
       }
     },
     "Delerium Shard": {
-      "name": "谵妄碎片",
-      "description": "<p>一个[[lookup @item.name lowercase]]拥有19的护甲等级和10点生命值。提取一个[[lookup @item.name lowercase]]需要五分钟。</p>"
+      "name": "Delerium Shard",
+      "description": "<p>A [[lookup @item.name lowercase]] has an AC of 19 and 10 Hit points. Extracting a [[lookup @item.name lowercase]] takes five minutes.</p>"
     },
     "Heart String Harp": {
-      "name": "心弦竖琴",
-      "description": "<p><em>乐器(竖琴或里拉琴), 珍稀(需吟游诗人同调)</em></p><p>当演奏时, 这件乐器会回荡着龙语的低语和附魔, 它们微妙地飘荡在敲击的音符中, 赋予音乐一种不祥的预感和可感知的魅惑。这件竖琴由精心打磨的象牙制成, 并注入了精类生物的灵魄, 其真正的魔法来自于精心制作的琴弦, 这些琴弦由龙类心弦的肌腱和精类生物出于善意自愿赠予的头发结合而成。</p><p>你可以使用这件魔法竖琴作为你吟游诗人法术的法器。当你与此物品同调时, 你的法术攻击骰和法术豁免DC获得+1加值。</p><p>当你使用此竖琴作为法器施展一个1环至5环、仅以单一生物为目标的附魔系法术时, 你可以以法术射程内的第二个生物为目标。</p><p><em><strong>制造。</strong></em> 制造一把<em>心弦竖琴</em>需要一个珍稀工坊和以下珍稀部件:</p><ul><li><p><strong>[灵魄]</strong> 精类灵魄</p></li><li><p><strong>[毛发]</strong> 精类生物的头发*</p></li><li><p><strong>[天生武器]</strong> 任何精类生物、怪兽或龙类的角或牙齿</p></li><li><p><strong>[器官]</strong> 龙类的心脏</p></li></ul><p>*根据游戏主持人的决定, 此头发并非从被杀死的精类生物身上采集, 而必须由精类生物自愿赠予。</p>",
+      "name": "Heart String Harp",
+      "description": "<p><em>Instrument (Harp or Lyre), Rare (Requires Attunement by a Bard)</em></p><p>When played, this instrument reverberates with draconic whispers and enchantment that drift subtly within the notes that are struck, giving the music a sense of foreboding and palpable charm. Crafted from finely polished ivory and imbued with the animus of a fey creature, the true magic of this harp comes from the finely crafted strings made from combining the sinew of a dragon’s heart chords and the hair of a fey, willingly given out of kindness.</p><p>You can use this magical harp as a Spellcasting Focus for your Bard spells. While attuned to this item, you gain a +1 bonus to your spell attack rolls and spell save DC.</p><p>When you cast an Enchantment spell of level 1 to level 5 that targets only one creature using this harp as the Spellcasting Focus, you can target a second creature within the spell’s range.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Heart String Harp</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Fey Animus</p></li><li><p><strong>[Hair]</strong> Hair from a Fey*</p></li><li><p><strong>[Natural Weapon]</strong> Horns or Teeth of any Fey, Monstrosity, or Dragon</p></li><li><p><strong>[Organ]</strong> Heart from a Dragon</p></li></ul><p>*At the Game Master’s option, rather than being harvested from a slain fey, this hair must be willingly gifted by a fey creature.</p><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Heart String Harp": {
-          "name": "心弦竖琴",
+          "name": "Heart String Harp",
           "changes": {
-            "name": "心弦 {}",
+            "name": "Heart String {}",
             "system.description.value": "@embed[Compendium.drakkenheim-monsters.items.Item.x8lzD0SevX3P3mPX inline]"
           }
         },
         "udj39RyKZAZCLr5E": {
-          "name": "心弦竖琴",
-          "description": "<p>你可以使用这把魔法竖琴作为你吟游诗人法术的{法器 Spellcasting Focus}。与这件物品调谐时，你的法术攻击检定和法术豁免DC获得+1加值。</p>"
+          "name": "Heart String Harp",
+          "description": "<p>You can use this magical harp as a Spellcasting Focus for your Bard spells. While attuned to this item, you gain a +1 bonus to your spell attack rolls and spell save DC.</p>"
         }
       }
     },
     "Dazing Hammer": {
-      "name": "晕眩之锤",
-      "description": "<p><em>武器 (战锤 或 巨锤), 非普通</em></p><p>这把锤子由巨人骨头制成，并在亡灵之尘中锻造。骨头随后被怪物血液染色。</p><p>你用这把魔法锤进行攻击和伤害检定时获得+1加值。</p><p>当你用此锤造成重击时，目标直到你的下个回合开始前陷入&amp;reference[Dazed]状态。</p><p><em><strong>制造。</strong></em> 制造一把<em>眩晕之锤</em>需要一个非普通工坊及以下非普通部件：</p><ul><li><p><strong>[灵质]</strong> 任意</p></li><li><p><strong>[骸骨]</strong> 巨人头骨</p></li><li><p><strong>[粉尘]</strong> 亡灵之尘</p></li><li><p><strong>[流体]</strong> 怪物血液</p></li></ul>",
+      "name": "Dazing Hammer",
+      "description": "<p><em>Weapon (Warhammer or Maul), Uncommon</em></p><p>This hammer is made from giant bones and forged in undead dust. The bones are then stained with monster blood.</p><p>You gain a +1 bonus to attack and damage rolls with this magic hammer.</p><p>When you score a Critical Hit with this hammer, the target is &amp;reference[Dazed] until the start of your next turn.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Dazing Hammer</em> requires an Uncommon Workshop and the following Uncommon Components:</p><ul><li><p><strong>[Animus]</strong> Any</p></li><li><p><strong>[Bones]</strong> Skull from a Giant</p></li><li><p><strong>[Dust]</strong> Undead Dust</p></li><li><p><strong>[Fluid]</strong> Monster Blood</p></li></ul><p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef02.JournalEntryPage.i0NgP8t0eUtQYpZw inline]</p>",
       "activities": {
         "Apply Magic Item Template": {
-          "name": "应用魔法物品模板"
+          "name": "Apply Magic Item Template"
         }
       },
       "effects": {
         "Dazing Hammer": {
-          "name": "晕眩之锤",
+          "name": "Dazing Hammer",
           "changes": {
-            "name": "晕眩 {}",
+            "name": "Dazing {}",
             "system.description.value": "{} @embed[Compendium.drakkenheim-monsters.items.Item.xWNW8PE8pfHZuzrA inline]"
           }
         }
       }
     },
     "Gloves of Ratling Agility": {
-      "name": "鼠人敏捷手套",
-      "description": "<p><em>奇物, 珍稀 (需同调)</em></p><p>当你佩戴这双鼠人敏捷手套时, 你的{敏捷 敏捷}属性变为19。如果你的{敏捷 敏捷}在不佩戴它们时已达19或更高, 则它们对你无效。</p><p><em><strong>制造。</strong></em> 制造<em>鼠人敏捷手套</em>需要一个珍稀工坊和以下珍稀部件:</p><ul><li><p><strong>[Animus]</strong> 任意Animus</p></li><li><p><strong>[Hair]</strong> 任意鼠人的毛皮</p></li><li><p><strong>[躲藏 Hide]</strong> 任意鼠人的皮肤</p></li><li><p><strong>[Organ]</strong> 任意怪兽的内脏</p></li></ul>",
+      "name": "Gloves of Ratling Agility",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>Your Dexterity score is 19 while you wear these ratling hide gloves. They have no effect on you if your Dexterity is 19 or higher without them.</p><p><em><strong>Crafting.</strong></em> Creating <em>Gloves of Ratling Agility</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Any Animus</p></li><li><p><strong>[Hair]</strong> Fur from any Ratling</p></li><li><p><strong>[Hide]</strong> Skin from any Ratling</p></li><li><p><strong>[Organ]</strong> Guts from any Monstrosity</p></li></ul>",
       "effects": {
         "Ratling Agility": {
-          "name": "鼠人敏捷",
-          "description": "<p>当你佩戴这双鼠人躲藏手套时，你的敏捷值为19。如果你的敏捷值在不佩戴时已达19或更高，则此物对你无效。</p>"
+          "name": "Ratling Agility",
+          "description": "<p>Your Dexterity score is 19 while you wear this ratling hide gloves. It has no effect on you if your Dexterity is 19 or higher without it.</p>"
         }
       }
     },
     "Eldritch Lily": {
-      "name": "魔能百合",
-      "description": "<p>奥秘百合是一种粉紫色的花朵,生长在深雾笼罩的自然区域中被污染的水池里。</p><p>一朵奥秘百合价值100 gp。其花瓣是强效的炼金试剂,可作为恢复性法术和许多药剂的部件。</p>"
+      "name": "Eldritch Lily",
+      "description": "<p>An eldritch lily is a pink-purple flower that grows in pools of contaminated water within natural areas covered by the Deep Haze.</p><p>A single eldritch lily is worth 100 gp. The petals are potent alchemical reagents, and can be used as a component for restorative spells and many potions.</p>"
     },
     "Mask of Monstrous Forms": {
-      "name": "畸形形态面具",
-      "description": "<p><em>奇物, 珍稀 (需德鲁伊同调)</em></p><p>这个魔法面具由特定怪兽(挑战等级6或更低)的头骨制成。头骨被雕刻成面具,用异怪粉尘雕刻,然后在装有拟身怪粘液、变形怪血肉和酸性胆汁的大桶中煮沸。最后,将装有任意具有变形生物特性的生物精魂的容器放置在面具前额,引导其变形魔法。</p><p>当你与面具同调时,你可以消耗两次{荒野形态 Wild Shape}特性使用次数,变形成与该面具相关的怪兽,而非野兽。</p><p><em><strong>制造。</strong></em> 制造<em>畸形形态面具</em>需要珍稀工坊和以下珍稀部件:</p><ul><li><p><strong>[精魂]</strong> 来自具有变形生物特性的生物的精魂</p></li><li><p><strong>[骨骼]</strong> 怪兽头骨*</p></li><li><p><strong>[粉尘]</strong> 异怪粉尘</p></li><li><p><strong>[液体]</strong> 酸性胆汁</p></li><li><p><strong>[液体]</strong> 拟身怪粘液</p></li><li><p><strong>[器官]</strong> 变形怪血肉</p></li></ul><p><em>* 用于此面具的怪兽决定了形体变化的形式。</em></p>",
+      "name": "Mask of Monstrous Forms",
+      "description": "<p><em>Wondrous Item, Rare (Requires Attunement by a Druid)</em></p><p>This magic mask is made from the skull of a particular monstrosity (with a Challenge Rating of 6 or lower). The skull is carved into a mask, engraved with aberrant dust, and then boiled in a vat of mimic mucus, the flesh of a doppelganger, and acidic bile. Finally, a vessel containing the animus of any creature with the Shapechanger trait is placed upon the forehead of the mask, channeling its shapechanging magic.</p><p>While attuned to the mask, you can expend two uses of your Wild Shape feature to transform into the monstrosity associated with the mask, instead of a Beast.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Mask of Monstrous Forms</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Animus from a creature that has the Shapechanger trait</p></li><li><p><strong>[Bones]</strong> Skull of a Monstrosity*</p></li><li><p><strong>[Dust]</strong> Aberrant Dust</p></li><li><p><strong>[Fluid]</strong> Acidic Bile</p></li><li><p><strong>[Fluid]</strong> Mucus from a Mimic</p></li><li><p><strong>[Organ]</strong> Flesh from a Doppelganger</p></li></ul><p><em>* The Monstrosity used for this mask determines the form of the shapechange.</em></p>",
       "activities": {
         "Monstrous Wild Shape": {
-          "name": "畸形荒野形态",
+          "name": "Monstrous Wild Shape",
           "profiles": {
             "Monstrous Wild Shape": {
-              "name": "畸形荒野形态"
+              "name": "Monstrous Wild Shape"
             }
           }
         }
       }
     },
     "Trollblood Potion": {
-      "name": "巨魔血药水",
-      "description": "<p><em>药水, 珍稀</em></p><p>这种药水是一种冒着气泡、令人作呕的绿褐色粘稠液体，质地类似粘液。一个看似巨魔腐烂的眼球漂浮在药水中。它闻起来刺鼻恶心，尝起来比看起来更糟。</p><p>当你喝下这瓶药水后，在接下来的一分钟内，你会在你的回合开始时恢复5生命值。如果你受到火焰或强酸伤害，此药水的效果会提前结束。</p><p><em><strong>制造。</strong></em> 制作一瓶<em>巨魔血药水</em>需要一个珍稀工坊和以下珍稀部件：</p><ul><li><p><strong>[灵魂]</strong> 精类生物灵魂</p></li><li><p><strong>[液体]</strong> 来自巨魔的怪物血液</p></li><li><p><strong>[器官]</strong> 巨魔的眼球</p></li></ul>",
+      "name": "Trollblood Potion",
+      "description": "<p><em>Potion, Rare</em></p><p>This potion is a bubbling, sickly, green-brown viscous soup that has the consistency of mucus. What appears to be the rotting eye of a troll floats in the potion. It smells acrid and nauseating and tastes even worse than it looks.</p><p>When you drink this potion, for the next minute, you regain 5 Hit Points at the start of your turn. The effects of this potion end early if you take Fire or Acid damage.</p><p><em><strong>Crafting.</strong></em> Creating a <em>Trollblood Potion</em> requires a Rare Workshop and the following Rare Components:</p><ul><li><p><strong>[Animus]</strong> Fey Animus</p></li><li><p><strong>[Fluid]</strong> Monster Blood from a Troll</p></li><li><p><strong>[Organ]</strong> Eyes from a Troll</p></li></ul>",
       "activities": {
         "Drink Potion": {
-          "name": "饮用药水"
+          "name": "Drink Potion"
         }
       },
       "effects": {
         "Trollblood Potion": {
-          "name": "巨魔血药水",
-          "description": "<p>下1分钟内，你在自己回合开始时恢复5点生命值。如果你受到火焰或强酸伤害，此药水的效果提前结束。</p>"
+          "name": "Trollblood Potion",
+          "description": "<p>For the next minute, you regain 5 Hit Points at the start of your turn. The effects of this potion end early if you take Fire or Acid damage.</p>"
         }
       }
     }

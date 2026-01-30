@@ -1,156 +1,157 @@
 {
   "label": "特性",
+  "folders": {
+    "Mutations": "Mutations",
+    "Spells": "Spells",
+    "Generic Monster Features": "Generic Monster Features"
+  },
   "entries": {
     "Regenerative Flesh": {
-      "name": "再生血肉",
-      "description": "<p>在你的每个回合开始时，若你处于&amp;reference[Bloodied]状态且至少有1点生命值，则你恢复等同于两倍熟练加值的生命值。愈合的皮肉会重新生长为多节、带鳞的异怪外皮。</p>",
+      "name": "Regenerative Flesh",
+      "description": "<p>At the start of each of your turns, if you are &amp;reference[Bloodied] and have at least 1 Hit Point, you regain Hit Points equal to twice your Proficiency Bonus. The healed flesh regrows as knobby, scaled, alien hide.</p>",
       "activities": {
         "Regenerate": {
-          "name": "再生术",
-          "condition": "如果你处于浴血状态且至少有1点生命值。"
+          "name": "Regenerate",
+          "condition": "If you are Bloodied and have at least 1 Hit Point."
         }
       }
     },
     "Abrupt Contaminant": {
-      "name": "突发污染",
-      "description": "<p>[[lookup @name]] 以60尺内一个拥有一个或多个污染等级的生物为目标。该生物每有一个污染等级就受到[[/damage average]]伤害。</p>"
+      "name": "Abrupt Contaminant",
+      "description": "<p>The [[lookup @name]]{creature} targets a creature within 60 feet who has one or more levels of &amp;reference[drakkenheimContamination]. That creature takes [[/damage average]] damage for each level of Contamination it has.</p>"
     },
     "Anomaly Locus": {
-      "name": "异常位点",
-      "description": "<p>当你在一项d20检定中失败时，你可以重掷该d20。当你如此做时，会触发一个@{UUID...}{奥秘异象 Arcane Anomaly}。你必须完成一次{短休 Short Rest}才能再次使用此能力。</p>",
+      "name": "Anomaly Locus",
+      "description": "<p>When you fail a d20 test, you can reroll the d20. When you do, you trigger an @UUID[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{Arcane Anomaly}. You must finish a Short Rest before you can do so again.</p>",
       "activities": {
         "Trigger Arcane Anomaly": {
-          "name": "触发奥秘异象",
-          "condition": "当你进行一次d20检定失败时。"
+          "name": "Trigger Arcane Anomaly",
+          "condition": "When you fail a d20 test."
         }
       }
     },
     "Electric Discharge": {
-      "name": "电涌",
-      "description": "<p>你的身体上浮现出充满噼啪能量的奇异腺体。你获得对闪电伤害的抗性。在你的每个回合开始时，你对距离你5尺内的每个生物造成闪电伤害。</p><p>伤害骰等同于你的熟练加值个d6。若你拥有4个或更多污染等级，伤害骰变为d10，且范围扩展至10尺。</p>",
+      "name": "Electric Discharge",
+      "description": "<p>Strange glands filled with crackling energy appear on your body. You gain Resistance to Lightning damage. At the start of each of your turns, you deal Lightning damage to each creature within 5 feet of you.</p><p>The damage equals a number of d6s equal to your Proficiency Bonus. If you have 4 or more Contamination levels, the dice become d10s, and the range increases to 10 feet.</p>",
       "effects": {
         "Electric Discharge": {
-          "name": "电击释放",
-          "description": "<p>你的身体上出现了充满爆裂能量的奇怪腺体。你获得对闪电伤害的抗性。</p>"
+          "name": "Electric Discharge",
+          "description": "<p>Strange glands filled with crackling energy appear on your body. You gain Resistance to Lightning damage.</p>"
         }
       }
     },
     "Terrible Stench": {
-      "name": "恐怖恶臭",
-      "description": "<p>你的身体散发出一种刺鼻的气味，闻起来像是死亡和硫磺。在其回合结束时位于你5尺范围内的生物获得&amp;Reference[poisoned]状态，直至其下一回合结束。生物在用于定位或追踪你的感知（察觉）检定时具有优势。</p>"
+      "name": "Terrible Stench",
+      "description": "<p>Your body emits a pungent odor which reeks of death and sulfur. Creatures who end their turn within 5 feet of you have gain the &amp;Reference[poisoned] condition until the end of their next turn. Creatures have Advantage on Wisdom (Perception) checks made to locate or track you.</p>"
     },
     "Epic Resistance": {
-      "name": "史诗抗性",
+      "name": "Epic Resistance",
       "description": "<p>[[lookup @name]]选选择一个正影响其的状态、法术或其他效应，并投掷[[/r 1d20]]。若结果为 11 或更高，其身上的该效应终止。即使[[lookup @name]]无法执行动作、被其他生物控制动作或被法术或效应改变其游戏数据卡，其也可以执行该动作。</p>"
     },
     "Haze Dependence": {
-      "name": "迷雾依赖",
-      "description": "<p>该生物每在迷雾外度过24小时，就会获得一级&amp;reference[Exhaustion]。当该生物处于迷雾之外时，这些力竭等级无法被移除。</p>"
+      "name": "Haze Dependence",
+      "description": "<p>This creature gains one level of &amp;reference[Exhaustion] for every 24 hours it spends outside the Haze. These Exhaustion levels cannot be removed while the creature is outside the Haze.</p>"
     },
     "Otherworldly Resistance: Necrotic": {
-      "name": "异界抗性：暗蚀",
-      "description": "<p>在你体内滋长的污染使你奇怪地对类似力量产生了抵抗力。你获得暗蚀伤害抗性。</p>",
+      "name": "Otherworldly Resistance: Necrotic",
+      "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Necrotic damage.</p>",
       "effects": {
         "Otherworldly Resistance: Necrotic": {
-          "name": "异界抗性：暗蚀",
-          "description": "<p>在你体内滋生的污染让你对类似力量产生了奇异的抵抗力。你获得暗蚀伤害抗性。</p>"
+          "name": "Otherworldly Resistance: Necrotic",
+          "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Necrotic damage.</p>"
         }
       }
     },
     "Mutant Fortitude": {
-      "name": "突变体强韧",
-      "description": "<p>如果伤害将[[lookup @name lowercase]]的生命值降至0，除非该伤害为光耀伤害或来自重击，否则它将进行一次体质豁免（DC 5，外加所受到的伤害）。豁免成功时，[[lookup @name lowercase]]的生命值将降至1点而非0。</p><fieldset><legend>Foundry 注</legend><p>使用此特性时，请在扩展字段中输入[[lookup @name lowercase]]所受到的伤害数值，以自动调整豁免DC。</p></fieldset>",
+      "name": "Mutant Fortitude",
+      "description": "<p>If damage reduces the [[lookup @name lowercase]]{creature} to 0 Hit Points, it makes a Constitution saving throw (DC 5 plus the damage taken) unless the damage is Radiant or from a Critical Hit. On a successful save, the [[lookup @name lowercase]]{creature} drops to 1 Hit Point instead.</p><fieldset><legend>Foundry Note</legend><p>Input the amount of damage taken by the [[lookup @name lowercase]]{creature} into the scaling field when using this feature to automatically adjust the saving throw DC.</p></fieldset>",
       "activities": {
         "save": {
-          "condition": "当除光耀伤害或重击之外的其他伤害将该生物的生命值降低至0点时。"
+          "condition": "When damage other than Radiant or from a Critical Hit reduces the creature to 0 hit point."
         }
       }
     },
     "Wretched Bile": {
-      "name": "恶臭胆汁室",
-      "description": "<p>翻腾的污染腐液在你的内脏中异常积聚，你可以定期将其呕吐而出。当你在你的回合执行一个攻击动作时，你可以将其中一次攻击替换为一次15尺锥形区域的喷吐。该区域内的每个生物必须进行一次体质豁免（DC 8，外加你的体质调整值和熟练加值）。</p><p>豁免失败，生物受到相当于你所获污染等级数值的1d10暗蚀伤害。豁免成功，生物受到一半伤害。你可以使用你的污秽胆汁室的次数等于你的污染等级，并在你完成一次长休后重新获得所有已使用的次数。</p>",
+      "name": "Wretched Bile",
+      "description": "<p>Bubbling contaminated ichor unconformably builds up in your guts, which you can vomit forth periodically. When you take the Attack action on your turn, you can replace one of your attacks with an exhalation in a 15-foot Cone. Each creature in that area must make a Constitution saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus).</p><p>On a failed save, a creature takes 1d10 Necrotic damage for each Contamination level you have gained. On a successful save, a creature takes half as much damage. You can use your Wretched Bile a number of times equal to your Contamination level, and regain all expended uses when you finish a Long Rest.</p>",
       "activities": {
         "save": {
-          "condition": "当你执行一个攻击动作时。"
+          "condition": "When you take the Attack action."
         }
       }
     },
     "Sanguine Appetite": {
-      "name": "绯红食欲",
-      "description": "<p>你培养出了对鲜血的嗜好，这种嗜好在你受伤时会愈发强烈。当你处于&amp;Reference[Bloodied apply=false]或&amp;Reference[Bleeding apply=false]状态时，你对其他处于浴血或流血状态的生物进行的近战攻击检定获得优势。</p>"
+      "name": "Sanguine Appetite",
+      "description": "<p>You develop a taste for blood which intensifies when you’re wounded. While you have the &amp;Reference[Bloodied apply=false] or &amp;Reference[Bleeding apply=false] conditions, you gain Advantage on melee attack rolls against other creatures with the Bloodied or Bleeding conditions.</p>"
     },
     "Misty Camouflage": {
-      "name": "迷雾伪装",
-      "description": "<p>该[[lookup @name lowercase]]在雾气或薄雾（包括德拉克肯海姆的深霾）笼罩的任何区域进行躲藏时，其敏捷（隐匿）检定具有优势。</p>"
+      "name": "Misty Camouflage",
+      "description": "<p>The [[lookup @name lowercase]]{creature} has Advantage on Dexterity (Stealth) checks to hide in any area obscured by mist or fog, including the Deep Haze of Drakkenheim.</p>"
     },
     "Arcane Blood": {
-      "name": "奥秘之血",
-      "description": "<p>你获得一个额外法术位，其环阶等同于你可施展的最高环阶（最高为5环）。若你没有法术位，你的生命值上限将增加等同于你等级的量。若你有四个或更多污染等级，你将获得两个法术位而非一个，或将你的生命值增加两倍于你等级的量。</p><fieldset><legend>Foundry 注</legend><p>当你获得此突变时，你可以选择授予自己额外的生命值，或在角色卡处于编辑模式时于法术标签页手动覆盖你所拥有的法术位数量。</p></fieldset>",
+      "name": "Arcane Blood",
+      "description": "<p>You gain an additional spell slot of the highest level you can cast (to a maximum of 5th level). If you don't have spell slots, your Hit Point maximum increases by an amount equal to your level. If you have four or more Contamination levels, you gain two spell slots instead of one or increase your Hit Points by twice your level.</p><fieldset><legend>Foundry Note</legend><p>When you gain this Mutation, you can choose to grant yourself the additional Hit Points or manually override the amount of spell slots yo have in the Spells tab of your character sheet while in Edit Mode.</p></fieldset>",
       "activities": {
         "Grant Additional Health": {
-          "name": "赋予额外生命值"
+          "name": "Grant Additional Health"
         }
       },
       "effects": {
         "Arcane Blood: Additional Health": {
-          "name": "奥秘之血：额外生命值",
-          "description": "<p>你的生命值上限增加等于你等级的数值。如果你有四个或更多污染等级，则改为你的生命值增加你等级的两倍。</p>"
+          "name": "Arcane Blood: Additional Health",
+          "description": "<p>Your Hit Point maximum increases by an amount equal to your level. If you have four or more Contamination levels, this increases your Hit Points by twice your level instead.</p>"
         }
       }
     },
     "Vampire Weaknesses": {
-      "name": "吸血鬼弱点",
-      "description": "<p>作为吸血鬼, 该生物具有以下弱点:</p><ul><li><p><strong>禁制术Forbiddance.</strong> 吸血鬼无法在没有居住者邀请的情况下进入住所。</p></li><li><p><strong>流水所伤.</strong> 当吸血鬼在流水中结束其回合时, 它受到[[/damage activity=TXfKdpwrbcIMoY3l]]伤害。</p></li><li><p><strong>木桩穿心.</strong> 如果当吸血鬼在其休息处处于失能状态时, 一根由木头制成的穿刺武器被刺入其心脏, 则吸血鬼将陷入麻痹状态, 直至木桩被移除。</p></li><li><p><strong>阳光过敏.</strong> 当吸血鬼在阳光下开始其回合时, 它受到[[/damage activity=agngcqt5cICRvCaw]]伤害。在阳光下时, 它在攻击检定和属性检定上具有劣势。</p></li></ul>",
+      "name": "Vampire Weaknesses",
+      "description": "<p>As a vampire, this creature has the following weaknesses:</p><ul><li><p><strong>Forbiddance.</strong> The vampire can't enter a residence without an invitation from one of the occupants.</p></li><li><p><strong>Harmed by Running Water.</strong> The vampire takes [[/damage activity=TXfKdpwrbcIMoY3l]] damage when it ends its turn in running water.</p></li><li><p><strong>Stake to the Heart.</strong> If a Piercing weapon made of wood is driven into the vampire's heart while the vampire is Incapacitated in its resting place, the vampire is Paralyzed until the stake is removed.</p></li><li><p><strong>Sunlight Hypersensitivity.</strong> The vampire takes [[/damage activity=agngcqt5cICRvCaw]] damage when it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.</p></li></ul>",
       "activities": {
+        "Sunlight Hypersensitivity": {
+          "name": "Sunlight Hypersensitivity"
+        },
         "Running Water": {
-          "name": "流水",
-          "condition": "如果该吸血鬼在流水中结束其回合。"
+          "name": "Running Water",
+          "condition": "If the vampire ends their turn in running water."
         },
         "Stake the Heart": {
-          "name": "刺穿心脏"
-        },
-        "Sunlight Hypersensitivity": {
-          "name": "阳光过敏症"
+          "name": "Stake the Heart"
         }
       }
     },
     "Malignancy": {
-      "name": "恶性",
-      "description": "<p>[[lookup @name]]不能被传送或违背其意愿前往另一个位面。</p>"
+      "name": "Malignancy",
+      "description": "<p>The [[lookup @name]]{creature} can't be teleported or travel to another plane against its will.</p>"
     },
     "Contaminated Creature": {
-      "name": "受污染生物",
-      "description": "<p>除非另有说明，在德拉肯海姆遭遇的非类人生物生物均拥有以下特质。这些特质不会改变怪物的挑战等级（CR）。</p><ul><li><p><strong>完全污染。</strong> 该生物免疫&amp;reference[drakkenheimContamination]并在对抗污染法术的豁免上具有优势。该生物可以施展污染法术，即使它不会获得污染等级。</p></li><li><p><strong>薄雾适应。</strong> 该生物可以在薄雾中完成长休并获得效益。它在薄雾和深层雾气中的可视距离是未适应者的两倍。</p></li><li><p><strong>薄雾依赖。</strong> 该生物在薄雾外每度过24小时，就会获得一级&amp;reference[Exhaustion]。这些力竭等级在该生物处于薄雾外时无法被移除。</p></li><li><p><strong>谵妄治疗。</strong> 该生物触摸一块谵妄碎片并恢复10（3d6）生命值：。一旦该生物以这种方式使用过谵妄碎片，它在24小时内无法再次以此方式使用。</p></li></ul>",
+      "name": "Contaminated Creature",
+      "description": "<p>Unless otherwise stated, non-humanoid creatures encountered in Drakkenheim possess the following traits. These do not change the monsters’ Challenge Ratings (CR).</p><ul><li><p><strong>Fully Contaminated.</strong> The creature is immune to &amp;reference[drakkenheimContamination] and has Advantage on saving throws against contaminated spells. The creature may cast contaminated spells even though it does not gain Contamination levels.</p></li><li><p><strong>Haze Adaptation.</strong> This creature may benefit from a Long Rest finished within the Haze. It can see twice as far through the Haze mists and Deep Haze fog as those without this adaption.</p></li><li><p><strong>Haze Dependance.</strong> This creature gains one level of &amp;reference[Exhaustion] for every 24 hours it spends outside the Haze. These Exhaustion levels cannot be removed while the creature is outside the Haze.</p></li><li><p><strong>Delerium Healing.</strong> The creature touches a delerium shard and regains 10 (3d6) Hit Points. Once the creature has used a delerium shard in this way, it can't be used in this manner again for 24 hours.</p></li></ul>",
       "activities": {
         "heal": {
-          "affects": {
-            "special": "一块谵妄碎片"
-          }
+          "target": "a delerium shard"
         }
       }
     },
     "Delerium Healing": {
-      "name": "谵妄治疗",
-      "description": "<p>该[[lookup @name lowercase]]接触一块谵妄碎片并恢复10 (3d6)点生命值。一旦该[[lookup @name lowercase]]以此方式使用过谵妄碎片，该碎片在24小时内无法再次通过此方式使用。</p>",
+      "name": "Delerium Healing",
+      "description": "<p>The [[lookup @name lowercase]]{creature} touches a delerium shard and regains 10 (3d6) Hit Points. Once the [[lookup @name lowercase]] has used a delerium shard in this way, it can't be used in this manner again for 24 hours.</p>",
       "activities": {
         "heal": {
-          "affects": {
-            "special": "一块谵妄碎片"
-          }
+          "target": "a delerium shard"
         }
       }
     },
     "Tentacled Limb": {
-      "name": "触手肢体",
-      "description": "<p>你的一条手臂变成了一条肉质的触须。当你在你的回合发动一次近战攻击时，你的触及增加5尺。</p>"
+      "name": "Tentacled Limb",
+      "description": "<p>One of your arms becomes a fleshy tentacle. When you make a melee attack on your turn, increase your reach by 5 feet</p>"
     },
     "Whispering Voices": {
-      "name": "低语之声",
-      "description": "<p>你获得射程10尺的心灵感应，但其他人听到时感觉像是自己的声音。如果你有四个或更多&amp;reference[drakkenheimContamination]等级，该射程延伸至60尺。</p>"
+      "name": "Whispering Voices",
+      "description": "<p>You gain telepathy to a range of 10 feet, but other people hear it as their own voice. If you have four or more &amp;reference[drakkenheimContamination] levels, the range extends to 60 feet.</p>"
     },
     "Vrykolakas Strain": {
       "name": "Vrykolakas Strain",
-      "description": "<p>来自弗莱科拉卡斯血系的吸血鬼具有以下特质。</p><p><strong>嗜血。</strong> 弗莱科拉卡斯对处于浴血或流血状态的目标进行攻击检定时具有优势。</p><p><strong>侵略性。</strong> 作为一个附赠动作，弗莱科拉卡斯可以向其能看到的敌对生物移动至多等于其速度的距离。</p><p><strong>盲视。</strong> 弗莱科拉卡斯吸血鬼拥有60尺范围的盲视。</p>",
+      "description": "<p>A vampire from the Vrykolakas strain has the following traits.</p><p><strong>Bloodthirsty.</strong> The Vrykolakas has Advantage on attack rolls against targets with the Bloodied or Bleeding conditions.</p><p><strong>Aggressive.</strong> As a Bonus Action, the Vrykolakas can move up to its speed toward a hostile creature that it can see.</p><p><strong>Blindsense.</strong> A Vrykolakas vampire has Blindsense out to a range of 60 feet.</p>",
       "activities": {
         "Aggressive": {
           "name": "好斗"
@@ -158,408 +159,394 @@
       },
       "effects": {
         "Vrykolakas Strain: Blindsense": {
-          "name": "Vrykolakas Strain: {盲视 blindsense}",
-          "description": "<p>一个弗莱克拉斯吸血鬼拥有60尺{盲视 blindsense}。</p>"
+          "name": "Vrykolakas Strain: Blindsense",
+          "description": "<p>A Vrykolakas vampire has Blindsense out to a range of 60 feet.</p>"
         }
       }
     },
     "Spider Climb": {
-      "name": "蛛行术",
-      "description": "<p>你获得等于你速度的攀爬速度。你可以攀爬困难表面，包括倒挂在天花板上，而无需进行属性检定。</p><fieldset><legend>Foundry 注</legend><p>此特性将你的攀爬速度设为30。如果你的基础速度高于30，请修改主动效果以匹配你的速度。</p></fieldset>",
+      "name": "Spider Climb",
+      "description": "<p>You gain a Climb speed equal to your Speed. You can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.</p><fieldset><legend>Foundry Note</legend><p>This feature sets your Climbing speed to 30. If your base Speed is higher than 30, modify the Active Effect to match your speed.</p></fieldset>",
       "effects": {
         "Spider Climb": {
-          "name": "蛛行术",
-          "description": "<p>你获得等于你速度的攀爬速度。你可以攀爬困难表面，包括倒挂在天花板上，而无需进行属性检定。</p>"
+          "name": "Spider Climb",
+          "description": "<p>You gain a Climb speed equal to your Speed. You can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.</p>"
         }
       }
     },
     "Reversed Limbs": {
-      "name": "反转肢体",
-      "description": "<p>你的基础{速度 Speed}增加10尺，并且你的{跳远 Long Jump}距离翻倍。</p>",
+      "name": "Reversed Limbs",
+      "description": "<p>Your base Speed increases by 10 feet and your Long Jump distance is doubled.</p>",
       "effects": {
         "Reversed Limbs": {
-          "name": "反转肢体",
-          "description": "<p>你的基础{速度 Speed}增加10尺，并且你的{跳远 Long Jump}距离翻倍。</p>"
+          "name": "Reversed Limbs",
+          "description": "<p>Your base Speed increases by 10 feet and your Long Jump distance is doubled.</p>"
         }
       }
     },
     "Epic Boss": {
       "name": "史诗 Boss",
-      "description": "<p>该生物是一名史诗首领，一种独特敌人，旨在对整支冒险队伍构成单独威胁。因此，它拥有区别于普通生物的额外游戏规则：</p><p>[[lookup @name]] 总是在先攻值20时行动。在其回合中，它可以如常使用移动和互动。然而，除非被法术或其他效应强制，否则它不会在其回合中执行动作或附赠动作。取而代之的是，[[lookup @name]] 会在每位玩家角色的回合结束时执行下列史诗动作之一。</p><p>此生物的全部动作均为史诗动作。</p>",
+      "description": "<p>This creature is an Epic Boss, a unique foe designed to pose a solo threat to an entire adventuring party. As such, it has additional game rules that sets it apart from normal creatures:</p><p>[[lookup @name]] always takes their turn on Initiative count 20. On their turn, they can use their movement and interaction as normal. However, they do not take an action or Bonus Action on their turn unless forced to do so by a spell or other effect. Instead, [[lookup @name]] takes one of the following Epic Actions at the end of each player character's turn.</p><p>All this creature's actions are Epic Actions.</p>",
       "effects": {
         "Epic Boss": {
           "name": "史诗 Boss",
-          "description": "<p>该生物是一名史诗首领, 一个独特的敌人, 旨在对整个冒险队伍构成单独威胁。因此, 它拥有区别于普通生物的额外游戏规则。</p><p>该生物总是在先攻值 20 时行动。在其回合中, 它可以正常使用移动和互动。然而, 除非被法术或其他效果强制, 否则它在自己的回合中不会执行动作或附赠动作。取而代之的是, 该生物会使用其可用的一个史诗动作。</p>"
+          "description": "<p>This creature is an Epic Boss, a unique foe designed to pose a solo threat to an entire adventuring party. As such, it has additional game rules that sets it apart from normal creatures.</p><p>The creature always takes their turn on Initiative count 20. On their turn, they can use their movement and interaction as normal. However, they do not take an action or Bonus Action on their turn unless forced to do so by a spell or other effect. Instead, the creature takes one of the Epic Actions they have available.</p>"
         }
       }
     },
     "Otherworldly Resistance: Thunder": {
-      "name": "异界抗性：雷鸣",
-      "description": "<p>在你体内滋生的污染使你奇怪地对类似力量产生了抵抗力。你获得对雷鸣伤害的抗性。</p>",
+      "name": "Otherworldly Resistance: Thunder",
+      "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Thunder damage.</p>",
       "effects": {
         "Otherworldly Resistance: Thunder": {
-          "name": "异界抗性：雷鸣",
-          "description": "<p>在你体内滋生的污染使你奇怪地对类似力量产生抵抗力。你获得对雷鸣伤害的抗性。</p>"
+          "name": "Otherworldly Resistance: Thunder",
+          "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Thunder damage.</p>"
         }
       }
     },
     "Absorption": {
-      "name": "吸收",
-      "description": "<p>当[[lookup @name lowercase]]杀死一个既非构装生物也非亡灵的生物时，它会将尸体吸收进体内并恢复20点生命值。</p>"
+      "name": "Absorption",
+      "description": "<p>When the [[lookup @name lowercase]]{creature} kills a creature that is neither a construct nor undead, it absorbs the corpse into its body and regains 20 Hit Points.</p>"
     },
     "Cryogenic Shift": {
-      "name": "低温转换",
-      "description": "<p>你的身体迅速散发热量，同时冰霜开始在你的皮肤上凝结。你获得对{冷冻伤害 cold damage}的{抗性 resistance}，但如果你在你的{回合 turn}中移动的距离少于你{速度 Speed}的一半，你将陷入&amp;Reference[Frozen]{状态 condition}（{DC15 DC 15}）。</p>",
+      "name": "Cryogenic Shift",
+      "description": "<p>Your body rapidly disperses heat as ice begins forming on your flesh. You gain resistance to Cold damage, but if you don’t move at least half your Speed on your turn, you have the &amp;Reference[Frozen] condition (DC 15).</p>",
       "activities": {
         "Cryogenic Freeze": {
-          "name": "低温冻结"
+          "name": "Cryogenic Freeze"
         }
       },
       "effects": {
         "Frozen (DC 15)": {
-          "name": "冻结 (DC15)",
-          "description": "<p>你被部分冰封：</p><ul><li><p>你处于&amp;reference[Immobilized apply=false]与&amp;reference[Defenseless apply=false]状态。</p></li><li><p>你对于造成{钝击伤害 bludgeoning damage}的武器攻击处于&amp;reference[Helpless apply=false]状态。</p></li><li><p>你或其他{生物 Creature}可以花费一个{动作 Action}来破除冰层。为此，你必须进行[[/check 15 str ath]]{力量 Str}检定。</p></li></ul>"
+          "name": "Frozen (DC 15)",
+          "description": "<p>You're partially encased in ice:</p><ul><li><p>You are &amp;reference[Immobilized apply=false] &amp; &amp;reference[Defenseless apply=false].</p></li><li><p>You're &amp;reference[Helpless apply=false] against attacks made with a weapon that deals bludgeoning damage.</p></li><li><p>You or another creature can take an action to break the ice away. To do so, you must succeed on a [[/check 15 str ath]] check.</p></li></ul>"
         }
       }
     },
     "Chitinous Plates": {
-      "name": "几丁质甲板",
-      "description": "<p>甲壳般的增生出现在你全身，使你的AC获得+1加值。如果你有四个或更多&amp;reference[drakkenheimContamination]等级，此加值扩展至+2。</p>",
+      "name": "Chitinous Plates",
+      "description": "<p>Shell-like growths appear all over your body, giving you a +1 bonus to AC. If you have four or more &amp;reference[drakkenheimContamination] levels, this bonus increases to +2.</p>",
       "effects": {
         "Chitinous Plates": {
-          "name": "几丁质甲板",
-          "description": "<p>贝壳状的生长物遍布你的全身，使你的AC获得+1加值。如果你有四个或更多&amp;reference[drakkenheimContamination]等级，此加值扩展至+2。</p>"
+          "name": "Chitinous Plates",
+          "description": "<p>Shell-like growths appear all over your body, giving you a +1 bonus to AC. If you have four or more &amp;reference[drakkenheimContamination] levels, this bonus increases to +2.</p>"
         }
       }
     },
     "Hulking": {
-      "name": "庞大",
-      "description": "<p>如果你为中型或更小的，你的体型增大一级（从小型到中型，或从中型到大型）。当你的体型增大时，你在力量属性检定上具有优势。当你不再拥有&reference[drakkenheimContamination]等级时，你恢复至正常体型。</p>",
+      "name": "Hulking",
+      "description": "<p>If you are Medium or smaller, your size increases by one step (from Small to Medium, or Medium to Large). While your size is increased, you have Advantage on Strength ability checks. You return to your normal size when you no longer have &amp;reference[drakkenheimContamination] levels.</p>",
       "effects": {
         "Hulking": {
-          "name": "魁梧",
-          "description": "<p>如果你是中型或更小的，你的体型增大一级（从小型到中型，或中型到大型）。当你的体型增大时，你在力量属性检定上具有优势。当你不再拥有&reference[drakkenheimContamination]等级时，你恢复至正常体型。</p>"
+          "name": "Hulking",
+          "description": "<p>If you are Medium or smaller, your size increases by one step (from Small to Medium, or Medium to Large). While your size is increased, you have Advantage on Strength ability checks. You return to your normal size when you no longer have &amp;reference[drakkenheimContamination] levels.</p>"
         }
       }
     },
     "Cyclopean Vision": {
-      "name": "独眼巨人视觉",
-      "description": "<p>你的双眼融合成一只位于正中的独眼，你可以用它来施展 @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{火焰箭 Fire Bolt}戏法。你可以从{智力 Intelligence}、{感知 Wisdom}或{魅力 Charisma}中选择一项作为该法术的{施法关键属性 spellcasting ability}。</p>"
+      "name": "Cyclopean Vision",
+      "description": "<p>Your eyes merge into a single central eye, which you can use to cast the @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00] cantrip. You use your choice of Intelligence, Wisdom, or Charisma as the spellcasting ability.</p>"
     },
     "Otherworldly Resistance: Psychic": {
-      "name": "异界抗性：心灵",
-      "description": "<p>在你体内滋生的污染使你奇怪地对类似力量产生了抵抗力。你获得对心灵伤害的抗性。</p>",
+      "name": "Otherworldly Resistance: Psychic",
+      "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Psychic damage.</p>",
       "effects": {
         "Otherworldly Resistance: Psychic": {
-          "name": "异界抗性：心灵",
-          "description": "<p>在你体内滋生的污染使你奇怪地对类似力量产生抵抗力。你获得对心灵伤害的抗性。</p>"
+          "name": "Otherworldly Resistance: Psychic",
+          "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Psychic damage.</p>"
         }
       }
     },
     "Magic Resistance": {
-      "name": "魔法抗性",
-      "description": "<p>你在对抗法术和魔法效应的豁免检定中获得优势。</p>"
+      "name": "Magic Resistance",
+      "description": "<p>You gain Advantage on saving throws against spells and magical effects.</p>"
     },
     "Otherworldly Resistance: Radiant": {
-      "name": "异界抗性：光耀",
-      "description": "<p>在你体内滋长的污染让你对类似的力量产生了奇异的抵抗力。你获得光耀伤害的抗性。</p>",
+      "name": "Otherworldly Resistance: Radiant",
+      "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Radiant damage.</p>",
       "effects": {
         "Otherworldly Resistance: Radiant": {
-          "name": "异界抗性：光耀",
-          "description": "<p>在你体内滋生的污染让你对类似力量产生了奇异的抵抗力。你获得对光耀伤害的抗性。</p>"
+          "name": "Otherworldly Resistance: Radiant",
+          "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Radiant damage.</p>"
         }
       }
     },
     "Corrosive Mucus": {
-      "name": "腐蚀性黏液",
-      "description": "<p>你可以用一个{附赠动作 Bonus Action}向30尺内的一个{生物 Creature}喷吐强酸。对该{生物 Creature}进行一次{远程攻击 Ranged Attack}。若{命中 hit}，你造成[[/damage 2d10 Acid]]{伤害 damage}，且该{生物 Creature}陷入&amp;Reference[燃烧 Burning]状态（1d10{强酸 Acid}{伤害 damage}）。</p>",
+      "name": "Corrosive Mucus",
+      "description": "<p>As a Bonus Action, you can spit acid at a creature within 30 feet. Make a ranged attack against the creature. On a hit, you deal [[/damage 2d10 Acid]] damage and the creature is &amp;Reference[Burning] (1d10 Acid).</p>",
       "effects": {
         "Burning (1d10 Acid)": {
-          "name": "燃烧 (1d10 强酸)",
-          "description": "<p>你正处于&amp;reference[燃烧 apply=false]状态，因为你被强酸覆盖。</p><ul><li><p>在你的每个回合结束时，你受到[[/damage average acid 1d10]]点强酸伤害。</p></li><li><p>如果你或5尺内的另一个生物花费一个动作刮掉强酸，或者其他效果移除了它，则该状态结束。</p></li></ul>"
+          "name": "Burning (1d10 Acid)",
+          "description": "<p>You are &amp;reference[burning apply=false] from being covered in acid.</p><ul><li><p>At the end of each of your turns, you take [[/damage average acid 1d10]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to scrape off the acid or if some other effect removes it.</p></li></ul>"
         }
       }
     },
     "Haze Adaptation": {
-      "name": "迷雾适应",
-      "description": "<p>该生物可以在迷雾中完成{长休 Long Rest}并从中获得效益。与没有这种适应性的生物相比，它透过迷雾和深层迷雾的能见距离是它们的两倍。</p>"
+      "name": "Haze Adaptation",
+      "description": "<p>This creature may benefit from a Long Rest finished within the Haze. It can see twice as far through the Haze mists and Deep Haze fog as those without this adaption.</p>"
     },
     "Aerial Maneuver": {
-      "name": "空中战技",
-      "description": "<p>[[lookup @name lowercase]]以其移动速度飞起，且不会引发借机攻击。</p>"
+      "name": "Aerial Maneuver",
+      "description": "<p>The [[lookup @name lowercase]]{creature} flies up to its Speed without provoking &amp;reference[OpportunityAttacks].</p>"
     },
     "Lambent Glow": {
-      "name": "柔和辉光",
-      "description": "<p>你散发出暗淡的八色光芒，范围10尺。如果你拥有四级或更多的&amp;reference[drakkenheimContamination]等级，则改为散发出30尺范围的明亮光照。</p>"
+      "name": "Lambent Glow",
+      "description": "<p>You emit a dim octarine glow to a range of 10 feet. If you have four or more &amp;reference[drakkenheimContamination] levels, you instead emit Bright Light to a range of 30 feet.</p>"
     },
     "Explosive Demise": {
-      "name": "爆裂终局",
-      "description": "<p>你感觉到体内不稳定的增生散发出强烈的热量。你获得{火焰伤害抗性 resistance to fire damage}。如果你在拥有&Reference[drakkenheimContamination]状态时生命值降至0，你会死亡并在血肉横飞中可怕地爆炸。</p><p>20尺半径内的生物必须进行一次[[/save]]。<em>失败：</em>[[/damage average]]伤害。<em>成功：</em>半额伤害。</p>",
+      "name": "Explosive Demise",
+      "description": "<p>You feel volatile growths inside your body radiating intense heat. You gain Resistance to Fire damage. If you are reduced to 0 Hit Points while you have the &amp;Reference[drakkenheimContamination] condition, you die and explode horribly in a shower of gore.</p><p>Creatures within a 20-foot-radius must make a [[/save]]. <em>Failure:</em> [[/damage average]] damage. <em>Success:</em> Half damage.</p>",
       "activities": {
         "save": {
-          "condition": "如果你在拥有{污染 contaminated}状态时生命值降至0。"
+          "condition": "If you are reduced to 0 Hit Points while you have Contaminated condition."
         }
       },
       "effects": {
         "Explosive Demise: Fire Resistance": {
-          "name": "爆裂终局：火焰抗性",
-          "description": "<p>你感觉到体内不稳定的增生散发出强烈的热量。你获得火焰伤害抗性。</p>"
+          "name": "Explosive Demise: Fire Resistance",
+          "description": "<p>You feel volatile growths inside your body radiating intense heat. You gain Resistance to Fire damage.</p>"
         }
       }
     },
     "Shrinking": {
-      "name": "缩小",
-      "description": "<p>如果你是小型或更大体型，你的体型缩小一级（从小型到微型，从大型到中型）。当你的体型缩小时，你在力量属性检定中具有劣势。当你不再拥有&reference[drakkenheimContamination]等级时，你恢复至正常体型。</p>",
+      "name": "Shrinking",
+      "description": "<p>If you are Small or Larger, your size decreases by one step (from Small to Tiny, from Large to Medium). While your size is decreased, you have Disadvantage on Strength ability checks. You return to your normal size when you no longer have &amp;reference[drakkenheimContamination] levels.</p>",
       "effects": {
         "Hulking": {
-          "name": "庞大",
-          "description": "<p>如果你的体型为小型或更大，你的体型缩小一级（从小型到微型，从大型到中型）。当你的体型缩小时，你在{力量 属性检定}上具有劣势。当你不再拥有&reference[drakkenheimContamination]等级时，你恢复至正常体型。</p>"
+          "name": "Hulking",
+          "description": "<p>If you are Small or Larger, your size decreases by one step (from Small to Tiny, from Large to Medium). While your size is decreased, you have Disadvantage on Strength ability checks. You return to your normal size when you no longer have &amp;reference[drakkenheimContamination] levels.</p>"
         }
       }
     },
     "Belly Maw": {
-      "name": "贝莉巨口",
-      "description": "<p>你的腹部出现一张布满利齿的嘴。你可以用它作为附赠动作在你的回合内对5尺内的生物进行一次近战攻击。其攻击加值等于你的熟练加值 + 你的力量或敏捷调整值（由你选择）。若命中，则造成等于1d6 + 你的力量或敏捷调整值的穿刺伤害，外加等同于你已获得污染层数每层1d6的暗蚀伤害。</p>"
+      "name": "Belly Maw",
+      "description": "<p>A toothy mouth appears on your stomach. You can use it to make a melee attack as a Bonus Action on your turn against a creature within 5 feet of you. Its attack bonus is equal to your Proficiency Bonus + your Strength or Dexterity modifier (your choice). If you hit with it, you deal Piercing damage equal to 1d6 + your Strength or Dexterity modifier, plus an additional 1d6 Necrotic damage for each Contamination level you have gained.</p>"
     },
     "Multiplied Senses": {
-      "name": "多重感官",
-      "description": "<p>你的脸上长出额外的眼球、耳朵和鼻子。你在先攻检定以及感知（{@skill 察觉}）和智力（{@skill 调查}）检定中获得优势。</p>",
+      "name": "Multiplied Senses",
+      "description": "<p>Your face sprouts additional eyeballs, ears, and noses. You gain Advantage on Initiative checks as well as Wisdom (Perception) and Intelligence (Investigation) checks.</p>",
       "effects": {
         "Multiplied Senses": {
-          "name": "多重感官",
-          "description": "<p>你的脸上长出额外的眼球、耳朵和鼻子。你在先攻检定以及感知（察觉）和智力（调查）检定上获得优势。</p>"
+          "name": "Multiplied Senses",
+          "description": "<p>Your face sprouts additional eyeballs, ears, and noses. You gain Advantage on Initiative checks as well as Wisdom (Perception) and Intelligence (Investigation) checks.</p>"
         }
       }
     },
     "Reactive": {
-      "name": "反应",
-      "description": "<p>该[[lookup @name lowercase]]在战斗中的每个回合可以受到一次反应。</p>"
+      "name": "Reactive",
+      "description": "<p>The [[lookup @name lowercase]]{creature} can take one Reaction on every turn in combat.</p>"
     },
     "Cunning Action": {
-      "name": "灵巧动作",
-      "description": "<p>该[[lookup @name lowercase]]执行疾走、撤离或躲藏动作。</p>"
+      "name": "Cunning Action",
+      "description": "<p>The [[lookup @name lowercase]]{creature} takes the &amp;reference[Dash], &amp;reference[Disengage], or &amp;reference[Hide] action.</p>"
     },
     "Insect Body": {
-      "name": "昆虫之躯",
-      "description": "<p>[[lookup @name]] 可以占据其他生物的空间，反之亦然，并且 [[lookup @name]] 可以穿过任何足够微型昆虫通过的开口。</p>"
+      "name": "Insect Body",
+      "description": "<p>The [[lookup @name]] can occupy another creature's space and vice versa, and the [[lookup @name]] can move through any opening large enough for a Tiny insect.</p>"
     },
     "Malleable": {
-      "name": "可塑",
-      "description": "<p>该[[lookup @name lowercase]]可以穿过窄至6英寸宽的空间而无需为此消耗额外移动力。</p>"
+      "name": "Malleable",
+      "description": "<p>The [[lookup @name lowercase]]{creature} can move through a space as narrow as 6 inches wide without expending extra movement to do so.</p>"
     },
     "Nosferatu Strain": {
-      "name": "诺斯费拉图血脉",
-      "description": "<p>来自诺斯费拉图血系的吸血鬼具有以下特质。</p><p><strong>诅咒缠身 Cursed By Sunlight.</strong> 诺斯费拉图在日光下开始其回合时，受到[[/damage]]伤害。在日光下，其攻击骰和属性检定具有劣势。如果诺斯费拉图因日光而生命值降至0，它会在数秒内燃起火焰并化为灰烬，只留下一堆灰烬。此特质取代阳光过敏。</p><p><strong>暗影生物 Creature of Shadows.</strong> 当诺斯费拉图处于&amp;reference[darkness]中时，除光耀伤害外，对所有伤害具有抵抗力。</p><p><strong>施法Spellcasting.</strong> 诺斯费拉图施展以下法术之一，使用魅力作为其施法关键属性：</p><p><strong>随意：</strong> @UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]{次级幻影 Minor Illusion}</p><p><strong>各2/日：</strong> @UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{伪装术 Disguise Self}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSuggestion]{暗示术 Suggestion}</p><p><strong>各1/日：</strong> @UUID[Compendium.dnd5e.spells24.Item.phbsplDominatePe]{支配人类 Dominate Person}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMajorImage]{高等幻影 Major Image}</p>",
+      "name": "Nosferatu Strain",
+      "description": "<p>A vampire from the Nosferatu strain has the following traits.</p><p><strong>Cursed By Sunlight.</strong> The Nosferatu takes [[/damage]] damage when it starts its turn in sunlight. While in sunlight, it has Disadvantage on at tack rolls and ability checks. If the Nosferatu is reduced to 0 Hit Points by sunlight, it erupts in flames and disintegrates in a matter of seconds, leaving nothing but a pile of ash. This trait replaces Sunlight Hypersensitivity.</p><p><strong>Creature of Shadows.</strong> The Nosferatu is resistant to all damage except Radiant when they are in &amp;reference[darkness].</p><p><strong>Spellcasting.</strong> The Nosferatu casts one of the following spells, using Charisma as their spellcasting ability:</p><p><strong>At-Will:</strong> @UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]</p><p><strong>2/Day Each:</strong> @UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe], @UUID[Compendium.dnd5e.spells24.Item.phbsplSuggestion]</p><p><strong>1/Day Each:</strong> @UUID[Compendium.dnd5e.spells24.Item.phbsplDominatePe], @UUID[Compendium.dnd5e.spells24.Item.phbsplMajorImage]</p>",
       "activities": {
         "Cursed by Sunlight": {
-          "name": "受阳光诅咒"
+          "name": "Cursed by Sunlight"
         }
       },
       "effects": {
         "Nosferatu Strain: Creature of Shadow": {
-          "name": "诺斯费拉图血统：暗影生物",
-          "description": "<p>诺斯费拉图在处于&amp;reference[darkness]期间，对除光耀外的所有伤害具有抵抗力。</p>"
+          "name": "Nosferatu Strain: Creature of Shadow",
+          "description": "<p>The Nosferatu is resistant to all damage except Radiant when they are in &amp;reference[darkness].</p>"
         }
       }
     },
     "Shell Reflection": {
-      "name": "甲壳反射",
-      "description": "<p><em>触发：</em>[[lookup @name lowercase]]受到来自法术或魔法攻击的伤害。<em>回应：</em>攻击者受到等于触发伤害的光耀伤害，并引发一次奥秘异变。</p>",
+      "name": "Shell Reflection",
+      "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]]{creature} takes damage from a spell or magical attack. <em>Response:</em> The attacker takes Radiant damage equal to the triggering damage and causes an @UUID[Compendium.drakkenheim-monsters.tables.RollTable.ho3p6IgN9keG8cPp]{Arcane Anomaly}.</p>",
       "activities": {
         "damage": {
-          "condition": "当该生物受到来自法术或魔法攻击的伤害时。"
+          "condition": "When the creature takes damage from a spell or magical attack."
         }
       }
     },
     "Spiked Growths": {
-      "name": "尖刺生长",
-      "description": "<p>在你的每个回合开始时，你对你所擒抱的每个生物造成[[/damage 1d10 type=piercing average]]点穿刺伤害，此数值等同于你已获得的污染等级数。</p>",
+      "name": "Spiked Growths",
+      "description": "<p>At the start of each of your turns, you deal [[/damage 1d10 type=piercing average]] for each Contamination level you have gained to any creature you are grappling.</p>",
       "activities": {
         "damage": {
-          "affects": {
-            "special": "你正在擒抱的生物"
-          }
+          "target": "A creature you are grappling"
         }
       }
     },
     "Fledgling Wings": {
-      "name": "雏翼",
-      "description": "<p>蝙蝠般的翅膀痛苦地从你的背部爆裂而出。在你的回合中，你获得40尺的{飞行速度 Fly Speed}。如果你回合结束时处于空中，你会坠落。如果你拥有4个或更多污染等级，你的翅膀会扩展，你的{飞行速度 Fly Speed}扩展至60尺，并且你回合结束时处于空中不再坠落。</p><fieldset><legend>Foundry 注</legend><p>此特性行动所授予的主动效果会将你的飞行速度设置为40。如果你拥有4个或更多污染等级，请改为授予自己“悬浮之翼”主动效果。</p></fieldset>",
+      "name": "Fledgling Wings",
+      "description": "<p>Bat-like wings painfully explode from your back. You gain a Fly speed of 40 feet during your turn. If you end your turn aloft, you fall. If you have 4 or more Contamination levels, your wings expand and your Fly speed increases to 60 feet, and you no longer fall when you end your turn aloft.</p><fieldset><legend>Foundry Note</legend><p>The Active Effect granted by this feature's activity sets your Flying speed to 40. If you have 4 or more Contamination levels, grant yourself the \"Hovering Wings\" Active Effect instead.</p></fieldset>",
       "activities": {
         "Sprout Wings": {
-          "name": "芽苗飞翼"
+          "name": "Sprout Wings"
         }
       },
       "effects": {
         "Fledgling Wings": {
-          "name": "雏翼",
-          "description": "<p>蝙蝠般的翅膀痛苦地从你背后爆出。你在你的回合中获得40尺{飞行术fly Fly}速度。如果你在回合结束时仍处于空中，你将坠落。</p>"
+          "name": "Fledgling Wings",
+          "description": "<p>Bat-like wings painfully explode from your back. You gain a Fly speed of 40 feet during your turn. If you end your turn aloft, you fall.</p>"
         },
         "Hovering Wings": {
-          "name": "悬浮飞翼",
-          "description": "<p>蝙蝠般的翅膀痛苦地从你背后爆裂而出。你获得60尺{飞行术fly}速度。</p>"
+          "name": "Hovering Wings",
+          "description": "<p>Bat-like wings painfully explode from your back. You gain a Fly speed of 60 feet.</p>"
         }
       }
     },
     "Bounding Leap": {
-      "name": "弹跃",
-      "description": "<p>该[[lookup @name lowercase]]跳跃20尺。此移动不计入其本轮的移动力总额。</p>"
+      "name": "Bounding Leap",
+      "description": "<p>The [[lookup @name lowercase]]{creature} jumps 20 feet. This movement does not count toward its total movement for the round.</p>"
     },
     "Eyeless Sight": {
-      "name": "无目视界",
-      "description": "<p>你的眼睛变成乳白色的球体。你获得10尺范围的&amp;reference[Blindsight]。如果你拥有四级或更多的&amp;reference[drakkenheimContamination]，你的眼睛会腐烂脱落，而黯淡的八色光芒在眼窝中燃烧。你的盲视扩展至30尺。</p><fieldset><legend>Foundry 注</legend><p>当你拥有4级或更多污染等级时，修改此突变赋予的主动效果并将数值提升至\"30\"。</p></fieldset>",
+      "name": "Eyeless Sight",
+      "description": "<p>Your eyes become milky orbs. You gain &amp;reference[Blindsight] to a range of 10 feet. If you have four or more &amp;reference[drakkenheimContamination] levels, your eyes rot out, and dim octarine light burns in the sockets. Your Blindsight increases to 30 feet.</p><fieldset><legend>Foundry Note</legend><p>When you have 4 or more levels of Contamination, modify the Active Effect granted by this Mutation and increase the value to \"30\".</p></fieldset>",
       "effects": {
         "Eyeless Sight": {
-          "name": "无目视界"
+          "name": "Eyeless Sight"
         }
       }
     },
     "Carapace Parry": {
-      "name": "甲壳格挡Parry",
-      "description": "<p><em>触发：</em> 一个[[lookup @name lowercase]]可见的生物以一次攻击命中它。<em>反应：</em> [[lookup @name lowercase]]针对该攻击将其[[lookup @prof]]加至其AC，可能使其失手。</p>",
+      "name": "Carapace Parry",
+      "description": "<p><em>Trigger:</em> A creature the [[lookup @name lowercase]]{creature} can see hits it with an attack. <em>Response:</em> The [[lookup @name lowercase]]{creature} adds [[lookup @prof]] to its AC against that attack, possibly causing it to miss.</p>",
       "activities": {
         "utility": {
-          "condition": "当该怪物能看见的一个生物以一次攻击命中它时。"
+          "condition": "When a creature the monster can see hits it with an attack."
         }
       }
     },
     "Ocular Tumors": {
-      "name": "眼瘤",
-      "description": "<p>你每获得一级污染等级，身体某处就会睁开一只眼睛。如果你拥有四级或更高的污染等级，你就能看到所有方向。</p>"
+      "name": "Ocular Tumors",
+      "description": "<p>An eyeball opens somewhere on your body for each Contamination level you have gained. If you have four or more Contamination levels, you can see in all directions.</p>"
     },
     "Ultimate Corruption": {
-      "name": "终极腐败",
-      "description": "<p>由[[lookup @name]]造成的暗蚀伤害会忽略抗性，并将免疫视为抗性。</p>"
+      "name": "Ultimate Corruption",
+      "description": "<p>Necrotic damage dealt by the [[lookup @name]]{creature} ignores Resistance and treats Immunity as Resistance instead.</p>"
     },
     "Reckless": {
-      "name": "鲁莽",
-      "description": "<p>在其回合开始时, 该[[lookup @name lowercase]]可以使其所有近战攻击检定具有优势, 直到其下个回合开始, 但在此期间对其发动的攻击检定也具有优势。</p>",
+      "name": "Reckless",
+      "description": "<p>At the start of its turn, this [[lookup @name lowercase]]{creature} can gain Advantage on all melee attack rolls until the start of its next turn, but attack rolls against it have Advantage during that time.</p>",
       "effects": {
         "Reckless": {
-          "name": "鲁莽",
-          "description": "<p>该残渣直到其下个回合开始前，其发动的全部近战攻击检定均具有优势，但在此期间对其发动的攻击检定也具有优势。</p>"
+          "name": "Reckless",
+          "description": "<p>The dreg has Advantage on all melee attack rolls until the start of its next turn, but attack rolls against it have advantage during that time.</p>"
         }
       }
     },
     "Hallucinogenic Visions": {
-      "name": "致幻幻象",
-      "description": "<p>你对周围世界的{察觉 Perception}扭曲成一片由彩虹、鲜花和鲜艳色彩组成的奇迹景观，如同漫步于一场愉快的{托梦术dream}。所有生物在你眼中都显得美丽、友好、微笑且异想天开。</p>"
+      "name": "Hallucinogenic Visions",
+      "description": "<p>Your perception of the world around you twists into a miraculous landscape of rainbows, flowers, and vibrant colors, like walking through a pleasant dream. All creatures appear beautiful, friendly, smiling, and whimsical to you.</p>"
     },
     "Normal Semblance": {
-      "name": "正常表象",
-      "description": "<p>该[[lookup @name lowercase]]在伪装成或冒充类人生物的魅力（欺瞒）检定中具有优势。</p>"
+      "name": "Normal Semblance",
+      "description": "<p>The [[lookup @name lowercase]]{creature} has Advantage on Charisma (Deception) checks to disguise itself as, or impersonate, a humanoid creature.</p>"
     },
     "Forced Mutation": {
-      "name": "强制突变",
-      "description": "<p>[[lookup @name]]以60尺内一个拥有一个或多个突变特性的生物为目标，并魔法性地改变其突变。[[lookup @name]]选择移除目标现有的一个突变特性，并用一个他们选择的不同突变特性来替换它。</p>",
+      "name": "Forced Mutation",
+      "description": "<p>The [[lookup @name lowercase]]{creature} targets a creature within 60 feet who has one or more mutations and magically alters the mutation. The [[lookup @name lowercase]]{creature} chooses one of the target's existing mutations to remove and replaces it with a different one of their choice.</p>",
       "activities": {
         "utility": {
-          "affects": {
-            "special": "拥有一个或多个变异的生物。"
-          }
+          "target": "A creature that has one or more mutations."
         }
       }
     },
     "Chameleon": {
-      "name": "变色龙",
-      "description": "<p>你的皮肤变得半透明，颜色会随周围环境改变。以一个动作，你可以让自己获得&amp;Reference[Invisible]状态，该状态持续到你的下一回合结束，或直到你进行一次攻击检定、造成伤害、或施展一个法术。你只能在本回合未移动的情况下使用此能力，且使用后，你的速度在当前回合结束前变为0。</p>",
+      "name": "Chameleon",
+      "description": "<p>Your skin turns translucent and changes color to match your surroundings. As an action, you can give yourself the &amp;Reference[Invisible] condition, which lasts until the end of your next turn or until you make an attack roll, deal damage, or cast a spell. You can use this ability only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.</p>",
       "activities": {
         "Change Color": {
-          "name": "改变颜色"
+          "name": "Change Color"
         }
       }
     },
     "Aquatic Adaptation": {
-      "name": "水栖适应",
-      "description": "<p>你长出鱼鳍和鳃。你获得等于你速度的游泳速度，并且可以在水下underwater呼吸。如果你有四个或更多&reference[drakkenheimContamination]等级，你只能在水下underwater呼吸。你在水外可以屏住呼吸长达1小时。</p><fieldset><legend>Foundry 注</legend><p>此特性将你的游泳速度设置为30。如果你的基础速度高于30，请修改Active Effect以匹配你的速度。</p></fieldset>",
+      "name": "Aquatic Adaptation",
+      "description": "<p>You sprout fish-like fins and gills. You gain a Swim speed equal to your Speed and can breathe underwater. If you have four or more &amp;reference[drakkenheimContamination] levels, you can only breathe underwater. You can hold your breath outside water for up to 1 hour.</p><fieldset><legend>Foundry Note</legend><p>This feature sets your Swimming speed to 30. If your base Speed is higher than 30, modify the Active Effect to match your speed.</p></fieldset>",
       "effects": {
         "Aquatic Adaptation": {
-          "name": "水栖适应",
-          "description": "<p>你长出鱼一般的鳍和鳃。你获得等于你速度的游泳速度，并且能够在水下underwater呼吸。如果你有四个或更多&amp;reference[drakkenheimContamination]等级，你只能在水下underwater呼吸。你在水外可以憋气长达1小时。</p>"
+          "name": "Aquatic Adaptation",
+          "description": "<p>You sprout fish-like fins and gills. You gain a Swim speed equal to your Speed and can breathe underwater. If you have four or more &amp;reference[drakkenheimContamination] levels, you can only breathe underwater. You can hold your breath outside water for up to 1 hour.</p>"
         }
       }
     },
     "Arcane Hunger": {
-      "name": "奥秘饥渴",
-      "description": "<p>该[[lookup @name lowercase]]对具有一个或多个污染等级的生物发动的攻击检定具有优势。</p>"
+      "name": "Arcane Hunger",
+      "description": "<p>The [[lookup @name lowercase]]{creature} has Advantage on attack rolls against creatures that have one or more levels of &amp;reference[drakkenheimContamination].</p>"
     },
     "Burning Blood": {
-      "name": "血燃赋权",
-      "description": "<p>燃起来吧！你可以用一个{附赠动作 Bonus Action}，使自己获得&amp;Reference[燃烧]状态。火焰伤害的骰子数等于你的{熟练加值 Proficiency Bonus}的一半（向下取整）。当你处于燃烧状态时，你获得等于你{速度 Speed}的{飞行速度 fly speed}。你可以用一个{动作 Action}来结束燃烧状态。如果燃烧伤害将你的{生命值 Hit Points}降至0，你的血肉将被烧尽，只留下一具{骷髅 skeleton}。</p>",
+      "name": "Burning Blood",
+      "description": "<p>FLAME ON! As a Bonus Action, you can give yourself the &amp;Reference[Burning] condition. The Fire damage is a number of d6s equal to half your Proficiency Bonus (rounded down). While you have the Burning condition, you gain a Fly speed equal to your Speed. You can end the Burning condition as an action. If the Burning damage reduces you to 0 Hit Points, your flesh burns away and only a skeleton remains.</p>",
       "activities": {
         "Burning Condition Damage": {
-          "name": "燃烧状态伤害"
+          "name": "Burning Condition Damage"
         },
         "Ignite Self": {
-          "name": "点燃自身"
+          "name": "Ignite Self"
         }
       },
       "effects": {
         "Burning Blood: Burning (Fire)": {
-          "name": "燃烧之血：燃烧（火焰）",
-          "description": "<p>你正处于&reference[burning apply=false]状态，全身被火焰覆盖。</p><ul><li><p>在你的每个回合结束时，你受到火焰伤害。该火焰伤害的骰子数等于你的熟练加值的一半（向下取整）。</p></li><li><p>若你或5尺内的另一生物花费动作扑灭火焰，或其他效果（例如浸入水中）移除了火焰，则该状态结束。</p></li><li><p>若燃烧伤害将你的生命值降至0，你的血肉将焚毁殆尽，仅余一具骷髅。</p></li><li><p>当你处于燃烧状态时，你获得等于你速度的飞行速度。</p></li></ul>"
+          "name": "Burning Blood: Burning (Fire)",
+          "description": "<p>You are &amp;reference[burning apply=false] from being covered in fire.</p><ul><li><p>At the end of each of your turns, you take fire damage. The Fire damage is a number of d6s equal to half your Proficiency Bonus (rounded down).</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to douse the fire or if some other effect removes it such as submerging yourself in water.</p></li><li><p>If the Burning damage reduces you to 0 Hit Points, your flesh burns away and only a skeleton remains.</p></li><li><p>While you have the Burning condition, you gain a Fly speed equal to your Speed.</p></li></ul>"
         }
       }
     },
     "Fully Contaminated": {
-      "name": "完全污染",
-      "description": "<p>该[[lookup @name lowercase]]免疫&amp;reference[drakkenheimContamination]并且在对抗受污染法术的豁免上具有优势。该[[lookup @name lowercase]]可以施展受污染法术，即使它不会获得污染等级。</p>"
+      "name": "Fully Contaminated",
+      "description": "<p>The [[lookup @name lowercase]]{creature} is immune to &amp;reference[drakkenheimContamination] and has Advantage on saving throws against contaminated spells. The [[lookup @name lowercase]] may cast contaminated spells even though it does not gain Contamination levels.</p>"
     },
     "Otherworldly Resistance: Force": {
-      "name": "异界抗性：力场",
-      "description": "<p>在你体内滋生的污染使你奇怪地对类似力量产生抵抗力。你获得对力场伤害的抗性。</p>",
+      "name": "Otherworldly Resistance: Force",
+      "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Force damage.</p>",
       "effects": {
         "Otherworldly Resistance: Force": {
-          "name": "异界抗性：力场",
-          "description": "<p>在你体内滋生的污染使你奇怪地对类似力量产生抵抗力。你获得力场伤害的抗性。</p>"
+          "name": "Otherworldly Resistance: Force",
+          "description": "<p>The Contamination growing in your body makes you strangely resistant to similar forces. You gain resistance to Force damage.</p>"
         }
       }
     },
     "Aberrant Traits": {
-      "name": "畸变异相特质",
-      "description": "<p>鉴于世界间隙空间中存在的污染与谵妄，所有栖息于此的生物都是污染的产物，且不受正常谵妄危险的影响。作为异怪，该生物具有以下特质：</p><ul><li><p><strong>完全污染。</strong> 该生物免疫&amp;reference[drakkenheimContamination] 并在对抗污染法术的豁免中具有优势。该生物可以施展污染法术，即使它不会获得污染等级。</p></li><li><p><strong>谵妄愈合。</strong> 该生物可以用一个动作触及一块谵妄碎片以恢复10 (3d6) 生命值：。一旦该生物以这种方式使用了一块谵妄碎片，该碎片在24小时内无法再次以此方式使用。</p></li><li><p><strong>异形心智。</strong> 该生物免疫任何感知其情绪或读取其思想的效果，以及任何它拒绝的预言术divination法术。为 ascertain 该生物的意图或诚意而进行的感知（洞悉）检定具有劣势。</p></li></ul>",
+      "name": "Aberrant Traits",
+      "description": "<p>Given the contamination and delerium present within the Space Between Worlds, all creatures who dwell there are the product of contamination and unaffected by the normal dangers of delerium. As an aberrant, the this creature has the following traits:</p><ul><li><p><strong>Fully Contaminated.</strong> This creature is immune to &amp;reference[drakkenheimContamination] and has Advantage on saving throws against contaminated spells. This creature may cast contaminated spells even though it does not gain Contamination levels.</p></li><li><p><strong>Delerium Healing.</strong> As an action, the creature can touch a delerium shard to regain 10 (3d6) Hit Points. Once the creature has used a delerium shard in this way, the shard can't be used in this manner again for 24 hours.</p></li><li><p><strong>Alien Intellect.</strong> The creature is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the creature's intentions or sincerity have Disadvantage.</p></li></ul>",
       "activities": {
         "Delerium Healing": {
-          "name": "谵妄治疗",
-          "affects": {
-            "special": "一块谵妄碎片"
-          }
+          "name": "Delerium Healing",
+          "target": "a delerium shard"
         }
       }
     },
     "Amorphous Form": {
-      "name": "不定形态",
-      "description": "<p><strong>不定形态</strong>：你的骨骼和器官变成了胶质。你可以不用挤地穿过 6 寸宽的空间。</p>"
+      "name": "Amorphous Form",
+      "description": "<p>Your bones and organs become gelatinous. You can move through a space as narrow as 6 inches wide without squeezing.</p>"
     },
     "Shadow Stealth": {
-      "name": "幽影隐匿Shadow Stealth。",
-      "description": "<p>在微光光照或黑暗环境下，[[lookup @name lowercase]]执行躲藏动作。</p>"
+      "name": "Shadow Stealth",
+      "description": "<p>While in &amp;Reference[DimLight] or &amp;reference[Darkness], the [[lookup @name lowercase]]{creature} takes the &amp;reference[Hide] action.</p>"
     },
     "Spatial Displacement": {
-      "name": "空间置换",
-      "description": "<p>你可以根据你的&amp;reference[drakkenheimContamination]等级施展@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]一次。你在完成一次长休后恢复这些使用次数。</p>"
+      "name": "Spatial Displacement",
+      "description": "<p>You can cast @UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0] once for each &amp;reference[drakkenheimContamination] level you have. You regain these uses when you finish a Long Rest</p>"
     },
     "Regeneration": {
-      "name": "再生",
-      "description": "<p>只要[[lookup @name lowercase]]位于深雾之中，它就会在回合开始时恢复10点生命值。[[lookup @name lowercase]]仅当回合开始时生命值为0且未触发再生术regenerate时才会死亡。</p>",
+      "name": "Regeneration",
+      "description": "<p>The [[lookup @name lowercase]]{creature} regains 10 Hit Points at the start of its turn as long as it is within the Deep Haze. The [[lookup @name lowercase]]{creature} dies only if it starts its turn with 0 Hit Points and doesn't regenerate.</p>",
       "activities": {
         "Regenerate": {
-          "name": "再生术",
-          "condition": "在深霾之中"
+          "name": "Regenerate",
+          "condition": "While in the Deep Haze"
         }
       }
     },
     "Purge Contamination": {
-      "name": "祛除污染",
-      "description": "<p>你在一个受污染类人生物生物身上涂抹炼金流体或圣水，同时吟诵精确的魔法咒语，从其体内驱逐出异怪污染物。当你完成施放该法术时，该生物的所有&reference[drakkenheimContamination]等级和突变都将被移除。随后，它每通过此法术移除一个污染等级，便获得1级&reference[Exhaustion]。</p>",
-      "materials": {
-        "value": "一块价值 100GP 的炼金液或圣水，作为本法术的耗材"
-      },
-      "target": {
-        "affects": {
-          "special": "一个受污染的生物。"
-        }
-      }
+      "name": "Purge Contamination",
+      "description": "<p>You apply alchemical fluids or holy water to a Contaminated Humanoid creature while reciting an exacting magical chant which expels eldritch contaminants from its body. When you finish casting the spell, all &amp;reference[drakkenheimContamination] levels and mutations are removed from the creature. It then gains 1 level of &amp;reference[Exhaustion] for each Contamination level removed with this spell.</p>"
     }
   }
 }

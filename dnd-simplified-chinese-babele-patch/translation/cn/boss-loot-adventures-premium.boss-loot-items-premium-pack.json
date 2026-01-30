@@ -100,6 +100,33 @@
         }
       }
     },
+    "Yarte Pora (Very Rare) v1": {
+      "name": "Yarte Pora (Very Rare) v1",
+      "description": "<p><em>Weapon (halberd), very rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“The sky lit up with a breathtaking display of light. Glowing figures of titanic power fought above, laying waste to everything in their path, while a single beam of light poured down onto an ancient weapon hovering above the ground. Only the worthy could see this vision, for it was a sign of destiny.”</em></p></div><hr /><p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>You have advantage on melee attacks against fiends and undead creature.</p><hr /><p><strong>Luminous Vitality.</strong> As an action, you can choose a friendly creature within 5ft of you and heal it for a value equal to the amount of hit point you are currently missing. You can use this ability once per long rest.</p><p><strong>Luminous Manifestation.</strong> As a bonus action, you transform into a radiant being for 1 minute. Chose a fiend or undead creature within your line of sight that you can see and focus your attacks on it for the duration. Also when you transform, radiant light erupts from you. Each creature within 10ft must make a DC 15 Constitution saving throw or be @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.0b8N4FymGGfbZGpJ]{Blinded} until the end of its next turn. Nonmagical items you are wearing or carrying are destroyed. Your magical equipment isn’t harmed, but lands in unoccupied spaces within 10ft of you.</p><p>While in Luminous Manifestation form you gain the following benefits:</p><ul><li>You hover a few inches above the ground.</li><li>You shed bright light in a 10ft radius and dim light for an additional 10ft.</li><li>You have resistance to all damage.</li><li>You are immune to the @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.oreoyaFKnvZCrgij]{Frightened} condition.</li><li>You gain a +1 bonus to attack rolls.</li><li>If you roll a 1 on an attack roll, you can reroll the die, and you must use the new roll.</li></ul><p>To use <strong>Luminous Manifestation</strong> ability again, you must spend 12 hours in quiet contemplation and prayer in a secluded place.</p><section class=\"secret\" id=\"secret-Lv7Yrk9LH8jaFD0f\"><p><strong>Boss Loot Note</strong></p><p>When you use <strong>Luminous Manifestation</strong>, apply the following two Active Effects:</p><ul><li><p><strong>Blind.</strong> Apply this Active Effect to each creature within 10ft of you that fails its Constitution saving throw.</p></li><li><p><strong>Luminous Manifestation.</strong> Apply this Active Effect to the item's wearer. After the Active Effect is applied, the item animation plays.</p></li></ul><p>If you are using <strong>Midi-QoL</strong>, open the <strong>Luminous Vitality</strong> and <strong>Luminous Manifestation</strong> activity, go to the Midi-QoL tab, and disable “Other Activity Compatible”.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/2026-pack-01/art-transparent-background-yarte-pora-600x600.webp\" alt=\"Yarte Pora\" />",
+      "activities": {
+        "Luminous Vitality": {
+          "name": "Luminous Vitality"
+        },
+        "Luminous Manifestation": {
+          "name": "Luminous Manifestation",
+          "target": "self"
+        }
+      },
+      "effects": {
+        "Blind": {
+          "name": "Blind",
+          "description": "<p>Creature is blinded until the end of their next turn.</p>"
+        },
+        "Yarte Pora": {
+          "name": "Yarte Pora",
+          "description": "<p>You have advantage on melee attacks against fiends and undead creatures.</p>"
+        },
+        "Luminous Manifestation": {
+          "name": "Luminous Manifestation",
+          "description": "<p>You hover a few inches above the ground.</p><p>You shed bright light in a 10ft radius and dim light for an additional 10ft.</p><p>You have resistance to all damage.</p><p>You are immune to the frightened condition.</p><p>You gain a +1 bonus to attack rolls.</p><p>If you roll a 1 on an attack roll, you can reroll the die, and you must use the new roll.</p>"
+        }
+      }
+    },
     "Stormforger v1": {
       "name": "风暴之铸 v1",
       "description": "<p><em>武器（长棍），传说（需术士、魔契师、德鲁伊或法师同调）</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“看那狂风暴雨的威力！”法师高喊着，法杖顶端的球体开始旋转起来。“感受它的愤怒，畏惧它的力量！”狂风呼啸，一道道闪电从法杖中喷射而出，击中地面，引发阵阵冲击波在空中回荡。</em></p></div><hr /><p>风暴之铸法杖由一块被闪电击中的整木雕刻而成。法杖顶端有一个由纯水晶制成的发光球体，它随着能量的涌动而脉动，并且内部蕴含着微型的风暴。</p><p>此长棍无法用于近战攻击，当你持握长棍时，你的远程法术攻击检定获得 +2 加值。此长棍具有 10 充能，在长休后重获 1d4 + 2 次已消耗的充能。若充能耗尽，掷 d20。骰值为 20 时，长棍重获 2d4 + 2 充能。</p><hr /><p>当你持握长棍时，你可以以一个动作消耗其充能，施展以下法术，其DC和调整值均以你的法术DC和施法属性调整值为准：</p><p><strong>龙卷风来袭</strong>。消耗 2 充能可召唤一个龙卷风，向 60 尺内的一名生物袭去。该生物必须进行敏捷豁免检定。若失败，则受到 [[/r 1d6]] 钝击伤害和 [[/r 2d6]] 闪电伤害，并陷入失能状态直至你的下一回合结束。若成功，则仅受半伤。</p><p><strong>空中升腾</strong>。消耗 5 充能，你能够驾驭风暴之力，在脚下召唤一阵旋风，允许飞行持续 10 分钟。飞行至多高度为 30 尺。</p><p><strong>空中下降</strong>。若使用“空中升腾”后仍处于空中，可以以一个动作安全降落至地面。此动作不消耗任何充能。</p><p><strong>痛苦雷暴</strong>。消耗 9 充能，你可以在自身周围 50 尺半径内召唤一场强大的风暴，持续 1 分钟。风暴内区域视为困难地形，使地面变得湿滑且布满杂物，让效应区域内的生物难以移动。狂风、闪电和暴雨让生物难以看清或听清，使效应区域内的生物进行察觉检定时处于劣势。风暴将释放闪电，区域内的每名生物必须通过一次敏捷豁免检定。若失败，则受到 [[/r 8d6]] 闪电伤害，若成功则仅受半伤。</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/art-transparent-background-for-journal-stormforger-600x600.webp\" alt=\"Stormforger\" />",
@@ -159,9 +186,7 @@
       "activities": {
         "Leaping Grace": {
           "name": "优雅飞跃",
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
@@ -191,9 +216,7 @@
       "activities": {
         "Leaping Grace": {
           "name": "优雅飞跃",
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
@@ -266,9 +289,7 @@
       "activities": {
         "Blood Burst": {
           "name": "血光爆",
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
@@ -350,9 +371,7 @@
       "activities": {
         "Dreadful Protector": {
           "name": "惊骇守护",
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
@@ -382,9 +401,7 @@
       "description": "<div id=\"blfx-embedded-hide-description\"><p><em>奇物，珍稀（需同调）</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“戴上‘电击腰带’，将使身边众人体验名副其实的电流刺激！”</em></p></div><hr><p>“电击腰带”是一件精工细作的配饰，由皮革制成。腰带的搭扣被打造成了一个抽象的闪电形状。</p><hr></div><p><strong>电弧释放。</strong>每短休一次，以一个附赠动作，你可以在自身周围 5 尺半径内释放电弧。范围内的生物必须通过一次DC 10 的敏捷豁免检定。若失败，将受到 1d6 点闪电伤害。若成功，仅受半伤。</p><img style=\"border: none\" src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/art-transparent-background-for-journal-belt-of-hocking-600x600.webp\" alt=\"Belt of Shocking\">",
       "activities": {
         "save": {
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       }
     },
@@ -419,15 +436,40 @@
         }
       }
     },
+    "Yarte Pora (Rare) v1": {
+      "name": "Yarte Pora (Rare) v1",
+      "description": "<p><em>Weapon (halberd), rare (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“The sky lit up with a breathtaking display of light. Glowing figures of titanic power fought above, laying waste to everything in their path, while a single beam of light poured down onto an ancient weapon hovering above the ground. Only the worthy could see this vision, for it was a sign of destiny.”</em></p></div><hr /><p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>You have advantage on melee attacks against fiends and undead creature.</p><hr /><p><strong>Luminous Vitality.</strong> As an action, you can choose a friendly creature within 5ft of you and heal it for a value equal to the amount of hit point you are currently missing. You can use this ability once per long rest.</p><p><strong>Luminous Manifestation.</strong> As a bonus action, you transform into a radiant being for 1 minute. Chose a fiend or undead creature within your line of sight that you can see and focus your attacks on it for the duration. Also when you transform, radiant light erupts from you. Each creature within 10ft must make a DC 13 Constitution saving throw or be @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.0b8N4FymGGfbZGpJ]{Blinded} until the end of its next turn. Nonmagical items you are wearing or carrying are destroyed. Your magical equipment isn’t harmed, but lands in unoccupied spaces within 10ft of you.</p><p>While in Luminous Manifestation form you gain the following benefits:</p><ul><li>You hover a few inches above the ground.</li><li>You shed bright light in a 10ft radius and dim light for an additional 10ft.</li><li>You have resistance to all damage.</li><li>You are immune to the @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.oreoyaFKnvZCrgij]{Frightened} condition.</li><li>If you roll a 1 on an attack roll, you can reroll the die, and you must use the new roll.</li></ul><p>To use <strong>Luminous Manifestation</strong> ability again, you must spend 8 hours in quiet contemplation and prayer in a secluded place.</p><section class=\"secret\" id=\"secret-DKHOCzISvxszLojR\"><p><strong>Boss Loot Note</strong></p><p>When you use <strong>Luminous Manifestation</strong>, apply the following two Active Effects:</p><ul><li><p><strong>Blind.</strong> Apply this Active Effect to each creature within 10ft of you that fails its Constitution saving throw.</p></li><li><p><strong>Luminous Manifestation.</strong> Apply this Active Effect to the item’s wearer. After the Active Effect is applied, the item animation plays.</p></li></ul><p>If you are using <strong>Midi-QoL</strong>, open the <strong>Luminous Vitality</strong> and <strong>Luminous Manifestation</strong> activity, go to the Midi-QoL tab, and disable “Other Activity Compatible”.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/2026-pack-01/art-transparent-background-yarte-pora-600x600.webp\" alt=\"Yarte Pora\" />",
+      "activities": {
+        "Luminous Vitality": {
+          "name": "Luminous Vitality"
+        },
+        "Luminous Manifestation": {
+          "name": "Luminous Manifestation",
+          "target": "self"
+        }
+      },
+      "effects": {
+        "Blind": {
+          "name": "Blind",
+          "description": "<p>Creature is blinded until the end of their next turn.</p>"
+        },
+        "Yarte Pora": {
+          "name": "Yarte Pora",
+          "description": "<p>You have advantage on melee attacks against fiends and undead creatures.</p>"
+        },
+        "Luminous Manifestation": {
+          "name": "Luminous Manifestation",
+          "description": "<p>You hover a few inches above the ground.</p><p>You shed bright light in a 10ft radius and dim light for an additional 10ft.</p><p>You have resistance to all damage.</p><p>You are immune to the frightened condition.</p><p>If you roll a 1 on an attack roll, you can reroll the die, and you must use the new roll.</p>"
+        }
+      }
+    },
     "Blood Shroud Breastplate (Rare) v1": {
       "name": "血衣胸甲（珍稀）v1",
       "description": "<p><em>护甲（中甲），极珍稀（需同调）</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\">    <p><em>“我们全部都由血而生。它是生命的主要元素，然而在其中，我们却能找到死亡的本质。”</em></p></div><hr><p>这件魔法护甲由深暗的血红色金属匠心打造而成。</p><p>着装该护甲期间，你的 AC 具有 +1 加值。</p><hr><p><strong>血之转化。</strong> 以一个动作，你将护甲化为一股如流体一般的血雾。你周围 5 尺半径内的每名生物必须进行一次 DC 13 的体质豁免。豁免失败者受到 2d6 点暗蚀伤害，豁免成功则伤害减半。直至你的下一回合结束，你的速度减半，并且对钝击、穿刺和挥砍伤害免疫。</p><p>你每完成一次长休可使用此能力两次。</p><section class=\"secret\" id=\"secret-c6jYSAFihMKzILMV\">    <p><strong>诅咒。</strong>与此护甲同调将使你受到诅咒，直至你成为<strong>高等复原术</strong>或类似魔法的对象；仅卸下护甲无法解除诅咒。被诅咒期间，你对光耀伤害具有易伤，并且必须在自然光照下将角色扮演为持续烦躁与不适。你的行为应表现出恼怒，使你在明亮环境中的互动更具挑战性，并影响你在游戏过程中的决策。</p></section><img style=\"border: none\" src=\"modules/boss-loot-adventures-premium/artwork/072-adv-assets-blood-shroud/art-transparent-background-blood-shroud-600x600.webp\" alt=\"Blood Shroud\">",
       "activities": {
         "Blood Burst": {
           "name": "血光爆",
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
@@ -482,9 +524,7 @@
       "activities": {
         "Leaping Grace": {
           "name": "优雅飞跃",
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
@@ -609,6 +649,48 @@
         "Destabilizing Attack": {
           "name": "崩离攻击",
           "description": "<p>你被施加者推离 5 尺。</p>"
+        }
+      }
+    },
+    "Mirror Shield of Swapping v1": {
+      "name": "Mirror Shield of Swapping v1",
+      "description": "<p><em>Armor (shield), rare (requires attunement)</em></p><div class=\"block purple\" style=\"background:#aa88aa55\"><p><em>“Across its perfect surface, perception dances with deception.”</em></p></div><hr /><p>The face of this shield is perfectly polished, so that it reflects everything like a mirror.</p><p>While holding this shield, you gain a +1 bonus to AC in addition to the shield’s normal bonus.</p><hr /><p><strong>Mirroring Shift</strong>. As an action, you speak the shield’s command word (<strong>“Swap”</strong>) and choose one humanoid you can see within 40ft of you. The target must be able to see you. The target makes a DC 15 Charisma saving throw. On a fail save you switch places with it.</p><p>After using this ability, you will not be able to use it again until you take a long rest.</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/073-adv-assets-mirror-swift/art-transparent-background-mirror-shield-of-swapping-600x600.webp\" alt=\"Mirror Shield of Swapping\" />",
+      "activities": {
+        "Swap": {
+          "name": "Swap"
+        }
+      },
+      "effects": {
+        "Swap places": {
+          "name": "Swap places",
+          "description": "<p>You and the target creature swap places.</p>"
+        }
+      }
+    },
+    "Yarte Pora (Legendary) v1": {
+      "name": "Yarte Pora (Legendary) v1",
+      "description": "<p><em>Weapon (halberd), legendary (requires attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“The sky lit up with a breathtaking display of light. Glowing figures of titanic power fought above, laying waste to everything in their path, while a single beam of light poured down onto an ancient weapon hovering above the ground. Only the worthy could see this vision, for it was a sign of destiny.”</em></p></div><hr /><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>You have advantage on melee attacks against fiends and undead creature.</p><hr /><p><strong>Luminous Vitality.</strong> As an action, you can choose a friendly creature within 5ft of you and heal it for a value equal to the amount of hit point you are currently missing. You can use this ability once per long rest.</p><p><strong>Luminous Manifestation.</strong> As a bonus action, you transform into a radiant being for 1 minute. Chose a fiend or undead creature within your line of sight that you can see and focus your attacks on it for the duration. Also when you transform, radiant light erupts from you. Each creature within 10ft must make a DC 17 Constitution saving throw or be @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.0b8N4FymGGfbZGpJ]{Blinded} until the end of its next turn. Nonmagical items you are wearing or carrying are destroyed. Your magical equipment isn’t harmed, but lands in unoccupied spaces within 10ft of you.</p><p>While in Luminous Manifestation form you gain the following benefits:</p><ul><li>You hover a few inches above the ground.</li><li>You shed bright light in a 10ft radius and dim light for an additional 10ft.</li><li>You have resistance to all damage.</li><li>You are immune to the @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.oreoyaFKnvZCrgij]{Frightened} condition.</li><li>You gain a +1 bonus to attack rolls.</li><li>When you hit a creature with a melee attack, the target takes an extra [[/damage 1d10 radiant]] damage.</li><li>If you roll a 1 on an attack roll, you can reroll the die, and you must use the new roll.</li></ul><p>To use <strong>Luminous Manifestation</strong> ability again, you must spend 24 hours in quiet contemplation and prayer in a secluded place.</p><section class=\"secret\" id=\"secret-oqnZeDj2haUS3aet\"><p><strong>Boss Loot Note</strong></p><p>When you use <strong>Luminous Manifestation</strong>, apply the following two Active Effects:</p><ul><li><p><strong>Blind.</strong> Apply this Active Effect to each creature within 10ft of you that fails its Constitution saving throw.</p></li><li><p><strong>Luminous Manifestation.</strong> Apply this Active Effect to the item’s wearer. After the Active Effect is applied, the item animation plays.</p></li></ul><p>If you are using <strong>Midi-QoL</strong>, open the <strong>Luminous Vitality</strong> and <strong>Luminous Manifestation</strong> activity, go to the Midi-QoL tab, and disable “Other Activity Compatible”.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/2026-pack-01/art-transparent-background-yarte-pora-600x600.webp\" alt=\"Yarte Pora\" />",
+      "activities": {
+        "Luminous Vitality": {
+          "name": "Luminous Vitality"
+        },
+        "Luminous Manifestation": {
+          "name": "Luminous Manifestation",
+          "target": "self"
+        }
+      },
+      "effects": {
+        "Yarte Pora": {
+          "name": "Yarte Pora",
+          "description": "<p>You have advantage on melee attacks against fiends and undead creatures.</p>"
+        },
+        "Luminous Manifestation": {
+          "name": "Luminous Manifestation",
+          "description": "<p>You hover a few inches above the ground.</p><p>You shed bright light in a 10ft radius and dim light for an additional 10ft.</p><p>You have resistance to all damage.</p><p>You are immune to the frightened condition.</p><p>You gain a +1 bonus to attack rolls.</p><p>When you hit a creature with a melee attack, the target takes an extra 1d10 radiant damage.</p><p>If you roll a 1 on an attack roll, you can reroll the die, and you must use the new roll.</p>"
+        },
+        "Blind": {
+          "name": "Blind",
+          "description": "<p>Creature is blinded until the end of their next turn.</p>"
         }
       }
     },
@@ -785,14 +867,30 @@
         }
       }
     },
+    "Lamp of Ethereal Azure v1": {
+      "name": "Lamp of Ethereal Azure v1",
+      "description": "<p><em>Wondrous item, rare (does not require attunement)</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>\"In realms of blue ethereal light,<br />A wondrous lamp ignites the night.\"</em></p></div><hr /><p>The Lamp of Ethereal Azure is made from a single piece of blue crystal, with an ever burning flame sealed within. The lamp is small and hangs from a silver chain meant to be worn at the waist.</p><p>As a bonus action, you can speak the command word, <strong>\"Luminous Azure\"</strong> while touching the lamp. For 1 minute, the lamp sheds dim blue light in a 30ft radius. Once you use the lamp, you can’t use it again until you finish a short or long rest.</p><p><strong>Vision through the Veil</strong>. While the lamp is active, you know the location of any invisible creature within its light. Your melee weapon attacks deal an extra 2 radiant damage to creatures in the light, but you have disadvantage on attacks against invisible creatures there.</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/2026-pack-01/art-transparent-background-lamp-of-ethereal-azure-600x600.webp\" alt=\"Lamp of Ethereal Azure\" />",
+      "activities": {
+        "Luminos Azure On": {
+          "name": "Luminos Azure On"
+        },
+        "Luminos Azure Off": {
+          "name": "Luminos Azure Off"
+        }
+      },
+      "effects": {
+        "Lamp of Ethereal Azure": {
+          "name": "Lamp of Ethereal Azure",
+          "description": "<p>Emanates light.</p><p>+2 radiant damage.</p>"
+        }
+      }
+    },
     "Belt of Shocking (Very Rare) v2": {
       "name": "电击腰带（极珍稀）v2",
       "description": "<div id=\"blfx-embedded-hide-description\"><p><em>奇物，珍稀（需同调）</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“戴上‘电击腰带’，将使身边众人体验名副其实的电流刺激！”</em></p></div><hr><p>“电击腰带”是一件精工细作的配饰，由皮革制成。腰带的搭扣被打造成了一个抽象的闪电形状。</p><hr></div><p><strong>电弧释放。</strong>每短休一次，以一个附赠动作，你可以在自身周围 5 尺半径内释放电弧。范围内的生物必须通过一次DC 14 的敏捷豁免检定。若失败，将受到 3d6 点闪电伤害，并陷入@UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.ZyZMUwA2rboh4ObS]{震慑}状态直至你的下一回合开始。若成功，仅受半伤。</p><img style=\"border: none\" src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/art-transparent-background-for-journal-belt-of-hocking-600x600.webp\" alt=\"Belt of Shocking\">",
       "activities": {
         "save": {
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
@@ -813,9 +911,7 @@
         "Soul Reap": {
           "name": "Soul Reap",
           "chatFlavor": "Soul Reap",
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
@@ -863,9 +959,7 @@
       "description": "<div id=\"blfx-embedded-hide-description\"><p><em>奇物，珍稀（需同调）</em></p><div class=\"block purple\" id=\" \" style=\"background:#aa88aa55\"><p><em>“戴上‘电击腰带’，将使身边众人体验名副其实的电流刺激！”</em></p></div><hr><p>“电击腰带”是一件精工细作的配饰，由皮革制成。腰带的搭扣被打造成了一个抽象的闪电形状。</p><hr></div><p><strong>电弧释放。</strong>每短休一次，以一个附赠动作，你可以在自身周围 5 尺半径内释放电弧。范围内的生物必须通过一次DC 12 的敏捷豁免检定。若失败，将受到 2d6 点闪电伤害，并陷入@UUID[Compendium.dnd5e.rules.w7eitkpD7QQTB6j0.JournalEntryPage.TpkZgLfxCmSndmpb]{失能}状态直至你的下一回合开始。若成功，仅受半伤。</p><img style=\"border: none\" src=\"modules/boss-loot-adventures-premium/artwork/062-wizard-tower/art-transparent-background-for-journal-belt-of-hocking-600x600.webp\" alt=\"Belt of Shocking\">",
       "activities": {
         "save": {
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
@@ -920,15 +1014,28 @@
       "description": "<div id=\"blfx-embedded-hide-description\"><p><em>奇物，非普通（需同调）</em></p><div class=\"block purple\" id=\"book\" style=\"background:#aa88aa55\"><p><em>\"凡火岂敢比龙炎\"</em></p><p><em>\"凡焰焉能敌龙息\"</em></p><p><em>\"凡烬怎堪承龙怒\"</em></p></div><hr /><p>这些护腕由一条青年红龙的龙鳞制成。鳞片炽热依旧，但佩戴起来却很舒适。</p><hr /></div><p><strong>狂焰袭。</strong> 穿戴该对护腕时，你的徒手攻击和近战武器攻击会额外造成 [[/roll 1d4]] 点火焰伤害。</p><p><strong>炽火爆。</strong> 作为一个动作，你可以用将双腕猛烈相击，释放半径 10 尺的环状烈焰。范围内所有生物需进行一次 DC 14 敏捷豁免，失败：受到 [[/roll 4d6]] 火焰伤害，成功：半伤。一旦使用，此特性在下一次长休前都无法再次使用。</p><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/059-red-dragon/art-transparent-background-bracers-of-ignition-600x600.webp\" alt=\"Bracers of Ignition\" />",
       "activities": {
         "save": {
-          "affects": {
-            "special": "self"
-          }
+          "target": "self"
         }
       },
       "effects": {
         "Fiery Strikes": {
           "name": "狂焰袭",
           "description": "<p>你的徒手攻击和近战武器攻击额外造成 1d4 点火焰伤害。</p>"
+        }
+      }
+    },
+    "Swift Strike v1": {
+      "name": "Swift Strike v1",
+      "description": "<p><em>Weapon (shortsword), rare (requires attunement)</em></p><div class=\"block purple\" style=\"background:#aa88aa55\"><p><em>“If you see the flash, it’s already too late.”</em></p></div><hr /><p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit with an attack using this magic sword, the target takes an extra [[/r 1d6]] lightning damage. In addition, while you hold the sword, you have resistance to lightning damage.</p><hr /><p><strong>Lightning Fast</strong>. As an action, you teleport to an unoccupied space exactly 30 feet away. A line of lightning then flashes from your starting space to your destination. Each creature in the line must make a DC 13 Dexterity saving throw, taking [[/r 2d6]] lightning damage on a failed save, or half as much damage on a successful one.</p><section class=\"secret\" id=\"secret-GPLiLn6eWDAus7Tk\"><p><strong>Boss Loot Note</strong></p><p>If you are using Midi-QoL, open the Lightning Fast activity, go to the Midi-QoL tab, and disable “Other Activity Compatible”. This prevents Midi-QoL from automatically trigger the Lightning Fast activity at the same time as Attack.</p></section><img style=\"border:none\" src=\"modules/boss-loot-adventures-premium/artwork/073-adv-assets-mirror-swift/art-transparent-background-swift-strike-600x600.webp\" alt=\"Swift Strike\" />",
+      "activities": {
+        "Lightning Fast": {
+          "name": "Lightning Fast"
+        }
+      },
+      "effects": {
+        "Swift Strike": {
+          "name": "Swift Strike",
+          "description": "<p>Resistance to lightning damage.</p>"
         }
       }
     },
