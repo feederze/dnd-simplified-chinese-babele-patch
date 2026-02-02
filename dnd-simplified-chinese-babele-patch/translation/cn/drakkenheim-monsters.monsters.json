@@ -585,7 +585,7 @@
           "effects": {
             "Grappled by Tentacle": {
               "name": "受触须擒抱",
-              "description": "<p>你陷入&amp;reference[grappled apply=false]（逃脱DC 25）受擒期间，你陷入&amp;reference[restrained apply=false]状态。</p>"
+              "description": "<p>你陷入&amp;reference[grappled apply=false]（逃脱DC 25）。受擒期间，你陷入&amp;reference[restrained apply=false]状态。</p>"
             }
           }
         }
@@ -1431,10 +1431,10 @@
       "items": {
         "Eldritch Blood": {
           "name": "魔能之血",
-          "description": "<p>在[[lookup @name lowercase]] 5 尺内的生物以穿刺或挥砍伤害命中该生物时受到[[/damage average]]伤害。</p>",
+          "description": "<p>在[[lookup @name lowercase]] 5 尺内的生物对其造成穿刺或挥砍伤害时，该生物受到[[/damage average]]伤害。</p>",
           "activities": {
             "damage": {
-              "condition": "When a creature deals piercing or slashing damage to the Lurker on the Threshold while within 5 feet of it.",
+              "condition": "当一名 5 尺内的生物对阈之潜伏者造成穿刺或挥砍伤害时",
               "target": "A creature within 5 feet of the Lurker on the Threshold."
             }
           }
@@ -1455,128 +1455,128 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes three [[/item .xDmiqzZAfQ8kPaJV]] attacks. It can replace each Tendril attack with a use of [[/item .uJbPITfPGAfA9fvW]].</p>"
+          "description": "<p>[[lookup @name lowercase]]进行三次[[/item .xDmiqzZAfQ8kPaJV]]攻击或者三次[[/item .xDmiqzZAfQ8kPaJV]]攻击。</p>"
         },
         "Tendril": {
-          "name": "Tendril",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and if the target is a Huge or smaller creature, it has the &amp;reference[Grappled] condition (escape DC 16). While Grappled, the target has the &amp;reference[Restrained] condition. The [[lookup @name lowercase]] has ten tendrils, each of which can grapple one creature.</p>",
+          "name": "卷须",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且若目标体型不超过巨型，目标陷入&amp;reference[Grappled]状态（逃脱DC 16）。直至擒抱结束前，目标陷入&amp;reference[Restrained]状态。[[lookup @name lowercase]]拥有十根卷须，每根卷须可以擒抱一个生物。</p>",
           "effects": {
             "Grappled by Tendril": {
-              "name": "Grappled by Tendril",
-              "description": "<p>You are &amp;reference[grappled apply=false] (escape DC 16). While grappled in this way, you are also &amp;reference[restrained apply=false].</p>"
+              "name": "受卷须擒抱",
+              "description": "<p>你陷入&amp;reference[grappled apply=false]（逃脱DC 16）。以此法受擒期间，你陷入&amp;reference[restrained apply=false]状态。</p>"
             }
           }
         },
         "Cosmic Rays": {
-          "name": "Cosmic Rays",
-          "description": "<p>The [[lookup @name lowercase]] randomly shoots one of the following magical rays at a target it can see within 120 feet (roll 1d4; reroll if the [[lookup @name lowercase]] has already used that ray this turn): </p><ol><li><p><strong>Disintegrating Ray.</strong> <em>Dexterity Saving Throw:</em> DC 16. <em>Failure:</em> [[/damage average activity=DZ5XrD2qyZjv3SmH]] damage. If this damage reduces the target to 0 Hit Points, it disintegrates into dust.</p></li><li><p><strong>Memory Lapse Ray.</strong> <em>Intelligence Saving Throw:</em> DC 16. <em>Failure:</em> The target’s memories become distant for 1 minute. While its memories are distant, the target can’t take the Magic action, use class features, or understand language, and has Disadvantage on ability checks. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success.</p></li><li><p><strong>Contaminating Ray.</strong> <em>Constitution Saving Throw:</em> DC 16. <em>Failure:</em> [[/damage average activity=icTaEajBXYRV0Zmi]] damage, and the target gains one Contamination level. Success: Half damage only.</p></li><li><p><strong>Existential Dread Ray.</strong> On the target’s next turn, each time it takes an action other than the Dodge action, moves more than 5 feet, or takes a Bonus Action, it takes [[/damage average activity=S6EUUxSeNTTVK3g2]] damage.</p></li></ol>",
+          "name": "宇宙射线",
+          "description": "<p>[[lookup @name lowercase]]随机向 120 尺内能看见的目标射出一发魔法的射线（投掷 d4；如果[[lookup @name lowercase]]本轮已使用过该射线则重掷）：</p><ol><li><p><strong>解离射线。</strong><em>敏捷豁免检定：</em>DC 16。<em>失败：</em>[[/damage average activity=DZ5XrD2qyZjv3SmH]]伤害。若该伤害使目标生命值降至 0，目标将化为尘土。</p></li><li><p><strong>失忆射线。</strong><em>智力豁免检定：</em>DC 16。<em>失败：</em>目标的记忆变得遥远，持续 1 分钟。记忆遥远期间，目标无法执行魔法动作、使用职业特性或理解语言，且属性检定具有劣势。目标在每个回合结束时重复该豁免，成功则效果结束。</p></li><li><p><strong>污染射线。</strong><em>体质豁免检定：</em>DC 16。<em>失败：</em>[[/damage average activity=icTaEajBXYRV0Zmi]]伤害，且目标获得一层污染。<em>成功：</em>仅承受一半伤害。</p></li><li><p><strong>惧灭射线。</strong>在目标的下个回合中，每次其执行回避动作以外的动作、移动超过 5 尺或执行附赠动作时，受到[[/damage average activity=S6EUUxSeNTTVK3g2]]伤害。</p></li></ol>",
           "activities": {
             "1: Disintegrating Ray": {
-              "name": "1: Disintegrating Ray"
+              "name": "1：解离射线"
             },
             "3: Contaminating Ray": {
-              "name": "3: Contaminating Ray"
+              "name": "3：污染射线"
             },
             "Roll for Cosmic Ray (D4)": {
-              "name": "Roll for Cosmic Ray (D4)"
+              "name": "为宇宙射线掷骰（D4）"
             },
             "2: Memory Lapse Ray": {
-              "name": "2: Memory Lapse Ray"
+              "name": "2：失忆射线"
             },
             "Existential Dread Damage": {
-              "name": "Existential Dread Damage"
+              "name": "惧灭伤害"
             },
             "4: Existential Dread Ray": {
-              "name": "4: Existential Dread Ray"
+              "name": "4：惧灭射线"
             }
           },
           "effects": {
             "Memory Lapse": {
-              "name": "Memory Lapse",
+              "name": "失忆",
               "description": "<p>你的记忆变得遥远。在接下来的 1 分钟内，你不能执行魔法动作，使用职业特性或理解语言，并且在属性检定上具有劣势。</p><p>你可以在自己每一回合结束时重复进行针对此效应的豁免检定，成功则终止该效应。</p>"
             },
             "Existential Dread": {
-              "name": "Existential Dread",
-              "description": "<p>During your next turn, each time you take an action other than the Dodge action, move more than 5 feet, or take a Bonus Action, you take [[/damage average psychic 4d6]] damage.</p>"
+              "name": "惧灭",
+              "description": "<p>在你的下一回合中，每次你执行回避动作以外的动作、移动超过 5 尺或执行附赠动作时，受到[[/damage average psychic 4d6]]伤害。</p>"
             }
           }
         }
       }
     },
     "Hooded Lantern Apothecary": {
-      "name": "Hooded Lantern Apothecary",
+      "name": "覆影明灯药剂师",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.225bioodedlanter inline]</p>",
       "items": {
         "Medical Treatment": {
-          "name": "Medical Treatment",
-          "description": "<p>The [[lookup @name lowercase]] touches another creature. The target regains 20 (4d8 + 2) Hit Points, and the [[lookup @name lowercase]] ends one disease or condition affecting the target, choosing from the &amp;reference[Blinded apply=false], &amp;reference[Deafened apply=false], &amp;reference[Paralyzed apply=false], and &amp;reference[Poisoned apply=false] conditions.</p>"
+          "name": "医疗救护",
+          "description": "<p>[[lookup @name lowercase]]触碰另一个生物。目标恢复 20（4d8+2）生命值，且[[lookup @name lowercase]]解除影响目标的一种疾病或状态，从&amp;reference[Blinded apply=false]、&amp;reference[Deafened apply=false]、&amp;reference[Paralyzed apply=false]和&amp;reference[Poisoned apply=false]状态中选择。</p>"
         },
         "Adrenaline Boost": {
-          "name": "Adrenaline Boost",
-          "description": "<p>One ally within 5 feet of the [[lookup @name lowercase]] can use its Reaction to move up to its Speed and make an attack.</p>"
+          "name": "肾上腺素爆发",
+          "description": "<p>[[lookup @name lowercase]] 5 尺范围内的一个盟友可以执行反应移动至多自身移动速度的距离并进行一次攻击。</p>"
         },
         "Aid": {
-          "name": "Aid",
+          "name": "援助术",
           "description": "<p>选择法术距离内至多三个生物。每个目标的生命值上限和当前生命值 在法术持续时间内提高 5 点。</p><p><strong>升环施法：</strong>使用的法术位每比二环高一环，每个目标的生命值就额外提高 5 点。</p><section class=\"secret\" id=\"secret-u9DpSmufNhFMDGmN\"><p><strong>Foundry Note</strong></p><p>默认的“<strong>治疗”</strong>行为配置了多个动态效果，用以代表该法术所提供的临时最大生命值上限。</p><p>用户应根据施放该法术时所使用的法术位等级，应用相应的动态效果</p></section>",
           "effects": {
             "Level 2: +5 Max HP": {
-              "name": "Level 2: +5 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "2 环：生命值上限 +5",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             },
             "Level 3: +10 Max HP": {
-              "name": "Level 3: +10 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "3 环：生命值上限 +10",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             },
             "Level 4: +15 Max HP": {
-              "name": "Level 4: +15 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "4 环：生命值上限 +15",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             },
             "Level 5: +20 Max HP": {
-              "name": "Level 5: +20 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "5 环：生命值上限 +20",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             },
             "Level 6: +25 Max HP": {
-              "name": "Level 6: +25 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "6 环：生命值上限 +25",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             },
             "Level 7: +30 Max HP": {
-              "name": "Level 7: +30 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "7 环：生命值上限 +30",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             },
             "Level 8: +35 Max HP": {
-              "name": "Level 8: +35 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "8 环：生命值上限 +35",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             },
             "Level 9: +40 Max HP": {
-              "name": "Level 9: +40 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "9 环：生命值上限 +40",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             }
           }
         },
         "Lesser Restoration": {
           "name": "次等复原术",
-          "description": "<p>You touch a creature and end one condition on it: &amp;Reference[blinded], &amp;Reference[deafened], &amp;Reference[paralyzed], or &amp;Reference[poisoned].</p>"
+          "description": "<p>你触碰一个生物，并终止正影响它的一种状态：&Reference[blinded]、&Reference[deafened]、&Reference[paralyzed] 或 &Reference[poisoned]。</p>"
         },
         "Protection from Poison": {
-          "name": "Protection from Poison",
-          "description": "<p>You touch a creature and end the &amp;Reference[poisoned] condition on it. For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.</p>",
+          "name": "防护毒素",
+          "description": "<p>你触及一名生物并结束其陷入的&Reference[poisoned apply=false]{中毒}状态。在持续时间内，目标为避免陷入或结束中毒状态所做的豁免具有优势，且具有毒素伤害的&Reference[resistance]{抗性}。</p>",
           "effects": {
             "Poison Protection": {
-              "name": "Poison Protection",
-              "description": "<p><span style=\"font-family:Signika, sans-serif\">For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.</span></p>"
+              "name": "抵抗毒素",
+              "description": "<p>在持续时间内，你在避免陷入或结束 &Reference[poisoned] 状态的豁免上具有优势，且具有对毒素伤害的抗性。</p>"
             }
           }
         },
         "Purge Contamination": {
-          "name": "Purge Contamination",
-          "description": "<p>You apply alchemical fluids or holy water to a Contaminated Humanoid creature while reciting an exacting magical chant which expels eldritch contaminants from its body. When you finish casting the spell, all &amp;reference[drakkenheimContamination] levels and mutations are removed from the creature. It then gains 1 level of &amp;reference[Exhaustion] for each Contamination level removed with this spell.</p>"
+          "name": "祛除污染",
+          "description": "<p>你将炼金液或圣水涂抹在一个遭受 污染 的类人生物身上，同时严格念诵一大段魔法咒文，以此驱逐目标身上的污染。当你完成此法术的施展后，目标身上所有层数的&amp;reference[drakkenheimContamination]与污染带来的变异都将被移除，但目标将承受移除污染等级等额的&amp;reference[Exhaustion]等级。</p>"
         },
         "Shortsword": {
-          "name": "Shortsword",
+          "name": "短剑",
           "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
         },
         "Hand Crossbow": {
-          "name": "Hand Crossbow",
+          "name": "手弩",
           "description": "<p>[[/attack extended]]. [[/damage extended activity=CJjRI7JX8tziGFSo]]. <em>Constitution Saving Throw:</em> DC 12. <em>Failure:</em> [[/damage average activity=D2gzT1cjVTNGuPZS]] damage. <em>Success:</em> Half damage.</p>"
         },
         "Bolts": {
@@ -1782,7 +1782,7 @@
           "description": "<p>[[/attack extended]]. [[/damage extended]], and if the target is a Huge or smaller creature, it has the &amp;reference[Grappled] condition (escape DC 18). While Grappled, the target has the &amp;reference[Restrained] condition. The [[lookup @name lowercase]] has ten tendrils, each of which can grapple one creature.</p>",
           "effects": {
             "Grappled by Tendril": {
-              "name": "Grappled by Tendril",
+              "name": "受卷须擒抱",
               "description": "<p>You are &amp;reference[grappled apply=false] (escape DC 18). While grappled in this way, you are also &amp;reference[restrained apply=false].</p>"
             }
           }
@@ -2347,12 +2347,12 @@
           "description": "<p>明亮的闪光从你的指间飞驰向施法距离内你指定的一点，并随着一声低吼迸成一片烈焰。目标点周围半径 20 尺球状区域内的每个生物必须进行一次敏捷豁免。豁免失败者将受到 8d6 点火焰伤害，豁免成功则伤害减半。</p><p>区域内所有未被着装或携带的可燃物件会开始燃烧。</p><p><strong>升环施法：</strong> 使用的法术位每比三环高一环，其伤害就增加 1d6。</p>"
         },
         "Aid": {
-          "name": "Aid",
+          "name": "援助术",
           "description": "<p>选择法术距离内至多三个生物。每个目标的生命值上限和当前生命值 在法术持续时间内提高 5 点。</p><p><strong>升环施法：</strong>使用的法术位每比二环高一环，每个目标的生命值就额外提高 5 点。</p><section class=\"secret\" id=\"secret-u9DpSmufNhFMDGmN\"><p><strong>Foundry Note</strong></p><p>默认的“<strong>治疗”</strong>行为配置了多个动态效果，用以代表该法术所提供的临时最大生命值上限。</p><p>用户应根据施放该法术时所使用的法术位等级，应用相应的动态效果</p></section>",
           "effects": {
             "Level 5: +20 Max HP": {
-              "name": "Level 5: +20 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "5 环：生命值上限 +20",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             }
           }
         },
@@ -3068,7 +3068,7 @@
           }
         },
         "Shortsword": {
-          "name": "Shortsword",
+          "name": "短剑",
           "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
         },
         "Multiattack": {
@@ -3393,12 +3393,12 @@
           "description": "<p>You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.</p><p><strong>Altered Eyes.</strong> You alter the appearance of your eyes for 1 minute.</p><p><strong>Booming Voice.</strong> Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on [[/check ability=cha skill=itm]] checks.</p><p><strong>Fire Play.</strong> You cause flames to flicker, brighten, dim, or change color for 1 minute.</p><p><strong>Invisible Hand.</strong> You instantaneously cause an unlocked door or window to fly open or slam shut.</p><p><strong>Phantom Sound.</strong> You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.</p><p><strong>Tremors.</strong> You cause harmless tremors in the ground for 1 minute.</p>"
         },
         "Aid": {
-          "name": "Aid",
+          "name": "援助术",
           "description": "<p>选择法术距离内至多三个生物。每个目标的生命值上限和当前生命值 在法术持续时间内提高 5 点。</p><p><strong>升环施法：</strong>使用的法术位每比二环高一环，每个目标的生命值就额外提高 5 点。</p><section class=\"secret\" id=\"secret-u9DpSmufNhFMDGmN\"><p><strong>Foundry Note</strong></p><p>默认的“<strong>治疗”</strong>行为配置了多个动态效果，用以代表该法术所提供的临时最大生命值上限。</p><p>用户应根据施放该法术时所使用的法术位等级，应用相应的动态效果</p></section>",
           "effects": {
             "Level 9: +40 Max HP": {
-              "name": "Level 9: +40 Max HP",
-              "description": "<p>The target's Hit Point maximum is increased for the duration.</p>"
+              "name": "9 环：生命值上限 +40",
+              "description": "<p>持续时间内，你的生命值上限增加。</p>"
             }
           }
         },
