@@ -1244,12 +1244,12 @@
         },
         "Repeating Crossbow": {
           "name": "连发弩",
-          "description": "<p>[[/attack extended]]. [[/damage extended]] (the [[lookup @name lowercase]]'s choice each time it attacks).</p>"
+          "description": "<p>[[/attack extended]]。[[/damage extended]]（由[[lookup @name lowercase]]在每次攻击时选择）。</p>"
         }
       }
     },
     "Academy Mage": {
-      "name": "Academy Mage",
+      "name": "学院魔法师",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.193bioethystacad inline]</p>",
       "items": {
         "Academy Rings": {
@@ -1257,24 +1257,24 @@
           "description": "<p>[[lookup @name lowercase]]可以无需消耗使用次数的以其施法特质释放一个法术。</p>"
         },
         "Prismatic Blast": {
-          "name": "Prismatic Blast",
-          "description": "<p>[[/attack extended]]. [[/damage extended]] ([[lookup @name lowercase]]'s choice).</p>"
+          "name": "虹光爆裂",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]（由[[lookup @name lowercase]]选择）。</p>"
         },
         "Misty Step": {
-          "name": "Misty Step",
-          "description": "<p>The [[lookup @name lowercase]] casts @UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{Misty Step} using Intelligence as their spellcasting ability.</p>"
+          "name": "迷踪步",
+          "description": "<p>[[lookup @name lowercase]]以智力作为施法属性施放@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{迷踪步}。</p>"
         },
         "Fireball": {
           "name": "火球术",
           "description": "<p>明亮的闪光从你的指间飞驰向施法距离内你指定的一点，并随着一声低吼迸成一片烈焰。目标点周围半径 20 尺球状区域内的每个生物必须进行一次敏捷豁免。豁免失败者将受到 8d6 点火焰伤害，豁免成功则伤害减半。</p><p>区域内所有未被着装或携带的可燃物件会开始燃烧。</p><p><strong>升环施法：</strong> 使用的法术位每比三环高一环，其伤害就增加 1d6。</p>"
         },
         "Slow": {
-          "name": "Slow",
+          "name": "缓慢术",
           "description": "<p>你在施法距离内一处 40 尺立方区域内指定至多六个生物并扭曲其周围的时间流。每个目标都要进行一次感知豁免，豁免失败则受到该法术影响直至法术终止。</p><p>被影响的生物的速度减半，而其 AC 和敏捷豁免都具有 -2 减值，且不能执行反应。该生物在其回合内可以执行一个动作或一个附赠动作，但不能在一回合内同时执行以上两者。当它执行攻击动作时，它只能发动一次攻击。</p><p>如果该生物尝试施展一个具有姿势Somatic成分的法术，有 [[/r 1d100cs&lt;=25#Slowed spell cast success]]{25%} 的可能法术会因为生物的动作太慢而施展失败。</p><p>受术生物在每个其自己回合结束时可以再进行一次该感知豁免，豁免成功则终止其身上的该法术效应。</p><section class=\"secret\" id=\"secret-2RobIVhv3tn7gmU7\">    <p><strong>Foundry Note</strong></p>    <p>上面的内联掷骰如果成功则返回 1，如果失败则返回 0。</p></section>",
           "effects": {
             "Slowed": {
-              "name": "Slowed",
-              "description": "<p>An affected target’s Speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t take Reactions. On its turns, it can take either an action or a Bonus Action, not both, and it can make only one attack if it takes the Attack action. If it casts a spell with a Somatic component, there is a [[/r 1d100cs&gt;25#Slowed spell cast success]]{25 percent} chance the spell fails as a result of the target making the spell’s gestures too slowly.</p><p>An affected target repeats the [[/save ability=wis]] save at the end of each of its turns, ending the spell on itself on a success.</p>"
+              "name": "缓速",
+              "description": "<p>你的速度减半，而其 AC 和敏捷豁免都具有-2 减值，且不能执行反应。你在其回合内可以执行一个动作或一个附赠动作，但不能在一回合内同时执行以上两者。当你执行攻击动作时，你只能发动一次攻击。</p><p>如果你尝试施展一个具有姿势成分的法术，有 [[/r 1d100cs&lt;=25#Slowed spell cast success]]{25%} 的可能法术会因为你的动作太慢而施展失败。</p>"
             }
           }
         },
@@ -1283,8 +1283,8 @@
           "description": "<p>在施法距离内指定一名生物、一个物件或一处魔法效应。所有影响该目标的三环或更低环阶法术即告终止。每个影响目标的四环或更高环阶法术都需要以你的施法属性进行一次属性检定（DC 10 + 目标法术环阶），检定成功时目标法术终止。</p><p><strong>升环施法：</strong> 你直接终止影响目标的小于等于该施法环阶的法术效应。</p>"
         },
         "Invisibility": {
-          "name": "Invisibility",
-          "description": "<p>A creature you touch has the &amp;Reference[invisible apply=false] condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell.</p><p><strong>Using a Higher-Level Spell Slot.</strong> You can target one additional creature for each spell slot level above 2.</p>",
+          "name": "隐形术",
+          "description": "<p>你触碰的一个生物进入 &Reference[invisible apply=false] 状态并维持至法术终止。如果目标进行攻击检定、造成伤害或施展法术，则该法术提前终止。</p><p><strong>升环施法：</strong> 使用三环或更高法术位施展该法术时，你使用的法术位每比二环高一环，就可以额外指定一个生物作为目标。</p>",
           "effects": {
             "Invisible": {
               "name": "隐形",
@@ -1312,17 +1312,17 @@
           }
         },
         "Minor Illusion": {
-          "name": "Minor Illusion",
+          "name": "次级幻象",
           "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
-              "name": "Create Illusion",
+              "name": "制造幻象",
               "profiles": {
                 "Image": {
-                  "name": "Image"
+                  "name": "影像"
                 },
                 "Sound": {
-                  "name": "Sound"
+                  "name": "声响"
                 }
               }
             }
@@ -1334,11 +1334,11 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes two [[/item .KCxJQftLi9jx97yV]] attacks.</p>"
+          "description": "<p>[[lookup @name lowercase]] 发动 [[/item .KCxJQftLi9jx97yV]] 攻击。</p>"
         },
         "fMtARIFyhlyJk9u8": {
-          "name": "Misty Step",
-          "description": "<p>Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space you can see.</p>",
+          "name": "迷踪步",
+          "description": "<p>你短暂地被银白的雾气所笼罩，传送到至多 30 尺内一个你能看见且未被占据的空间。</p>",
           "effects": {
             "Spell Changes": {
               "name": "法术改动"
@@ -1354,20 +1354,20 @@
       }
     },
     "Sentient Planetoid": {
-      "name": "Sentient Planetoid",
+      "name": "知性游星",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.185biotientplane inline]</p>",
       "planarSubtype": "The Space Between Worlds",
       "items": {
         "Beyond Space and Time": {
-          "name": "Beyond Space and Time",
-          "description": "<p>The [[lookup @name lowercase]] always acts on Initiative count 20. Additionally, it can’t be moved, teleported, or sent to another plane of existence against its will.</p>"
+          "name": "超越时空",
+          "description": "<p>[[lookup @name lowercase]]始终以先攻 20 开始行动。此外，它不能违背其意愿被移动，传送或送至另一个存在位面。</p>"
         },
         "Gravitational Pull": {
-          "name": "Gravitational Pull",
-          "description": "<p>The [[lookup @name lowercase]] exerts its own force of gravity in a 100-foot Emanation. A creature that starts its turn in the Emanation falls towards the [[lookup @name lowercase]], taking falling damage as appropriate if it collides with the planetoid. A creature can make a [[/save]] saving throw to grab onto a fixed object it can reach, avoiding the fall on a success.</p>",
+          "name": "引力牵引",
+          "description": "<p>[[lookup @name lowercase]]在其周围 100 尺内释放引力。在该区域内开始其回合的生物会向[[lookup @name lowercase]]落去，如果与游星相撞，会受到相应的坠落伤害。生物可以进行一次[[/save]]豁免，以抓住其可以触及的固定物体，若成功则可避免坠落。</p>",
           "activities": {
             "Grab Fixed Object Save": {
-              "name": "Grab Fixed Object Save"
+              "name": "抓取固定物件豁免"
             }
           }
         },
@@ -1381,34 +1381,34 @@
         },
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes four attacks, only one of which can be an [[/item .fKMeL14el7nes3Pk]] attack.</p>"
+          "description": "<p>该[[lookup @name lowercase]]发动四次攻击，其中只有一次可以为[[/item .fKMeL14el7nes3Pk]]攻击。</p>"
         },
         "Unfathomable Knowledge": {
-          "name": "Unfathomable Knowledge",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and the target has the &amp;reference[Addled] and &amp;reference[Weakened] conditions until the end of its next turn.</p>",
+          "name": "不可名智",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标陷入&amp;reference[Addled]和&amp;reference[Weakened]状态，直至其下一回合结束。</p>",
           "effects": {
             "Unfathomable Knowledge": {
-              "name": "Unfathomable Knowledge",
-              "description": "<p>You are &amp;reference[addled apply=false] and &amp;reference[weakened apply=false] until the end of your next turn.</p>"
+              "name": "不可名智",
+              "description": "<p>你陷入&amp;reference[Addled]和&amp;reference[Weakened]状态，直至你的下一回合结束。</p>"
             }
           }
         },
         "Crashing Comet": {
-          "name": "Crashing Comet",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], and the target has the &amp;reference[Burning] condition (3d8 Fire).</p>",
+          "name": "坠星",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标陷入&amp;reference[Burning]（3d8火焰）状态。</p>",
           "effects": {
             "Burning (3d8 Fire)": {
-              "name": "Burning (3d8 Fire)",
-              "description": "<p>You are &amp;reference[burning apply=false] from being covered in fire.</p><ul><li><p>At the end of each of your turns, you take [[/damage average fire 3d8]] damage.</p></li><li><p>The condition ends if you or another creature within 5 feet of you spends an action to douse the fire or if some other effect removes it such as submerging yourself in water.</p></li></ul>"
+              "name": "灼烧（3d8 火焰）",
+              "description": "<p>你身上因附着着火焰而&amp;reference[burning apply=false]。</p><ul><li><p>在你的每个回合结束时，你会受到[[/damage average fire 3d8]]伤害。</p></li><li><p>周围 5 尺内的另一生物，可以使用其动作扑灭你身上的火焰（无需检定），以此结束此状态。或者，当别的效应扑灭你身上的火焰（例如被水淹没），此状态也会结束。</p></li></ul>"
             }
           }
         },
         "All-Knowing Magic": {
-          "name": "All-Knowing Magic",
-          "description": "<p>The [[lookup @name lowercase]] casts any spell of level 5 or lower, using Intelligence as its spellcasting ability (spell save DC 22, +14 to spell attacks).</p>",
+          "name": "全知魔法",
+          "description": "<p>[[lookup @name lowercase]]施展任意一道 5 环或更低环阶的法术，使用智力作为施法属性（法术豁免 DC 22，法术攻击命中 +14）。</p>",
           "activities": {
             "Cast Spell": {
-              "name": "Cast Spell"
+              "name": "施法"
             }
           }
         },
@@ -1425,13 +1425,13 @@
       }
     },
     "Lurker on the Threshold": {
-      "name": "Lurker on the Threshold",
+      "name": "阈之潜伏者",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.178biokerontheth inline]</p>",
       "planarSubtype": "The Space Between Worlds",
       "items": {
         "Eldritch Blood": {
-          "name": "Eldritch Blood",
-          "description": "<p>A creature that deals Piercing or Slashing damage to the [[lookup @name lowercase]] while within 5 feet of it takes [[/damage average]] damage.</p>",
+          "name": "魔能之血",
+          "description": "<p>在[[lookup @name lowercase]] 5 尺内的生物以穿刺或挥砍伤害命中该生物时受到[[/damage average]]伤害。</p>",
           "activities": {
             "damage": {
               "condition": "When a creature deals piercing or slashing damage to the Lurker on the Threshold while within 5 feet of it.",
@@ -1641,11 +1641,11 @@
           "description": "<p>一只漂浮的幽灵手出现在施法距离内你指定的一点。幽灵手持续存在至法术终止。如果幽灵手距你的距离超过 30 尺，或者当你再次施展了该法术时，则现存的幽灵手消失不见。</p><p>你可以在施展该法术时使用幽灵手实施一个行为：你可以操控一个物件，或者打开一扇未上锁的门或容器，或者将一件物品放入或取出一个打开的容器，或者将小瓶中的内容物倾倒出来。</p><p>在后续的回合中，以一个魔法动作，你可以控制幽灵手再次实施一个行为。作为那个动作的一部分，你可以令幽灵手移动至多 30 尺。</p><p>该幽灵手不能攻击，也不能激活魔法物品或承载超过 10 磅重的物质。</p>"
         },
         "Minor Illusion": {
-          "name": "Minor Illusion",
+          "name": "次级幻象",
           "description": "<p>你在施法距离内创造一段声响或一个物件的影像，并使之维持至法术持续时间结束，详见以下对应效应的描述。你可以再次施展该法术来终止幻象。</p><p>生物用研究动作调查该声响或影像时，其必须进行一次对抗该法术豁免 DC 的[[/check ability=int skill=inv dc=@attributes.spelldc]]检定，检定成功则判断出是幻象。对于识破幻象的生物而言，幻象会变得模糊不清。</p><p><strong>声响。</strong> 如果你创造一段声响，其音量可以是低声耳语也可以是高声尖叫。它可以是你或其他任何人的嗓音，或者是一头狮子的咆哮、一段鼓声以及任何你指定的其他声响。声响在持续时间内不会减弱，或者你也可以于法术终止前在不同的时间段创造几段分散的声响。</p><p><strong>影像。</strong> 如果你创造一个物件的影像，比如一把椅子、泥泞的脚印、一个小箱子等，则该物件各方向上大小不得大于 5 尺立方区域。该影像不具有声音、光亮、味道或任何其他的感官效应。由于影像可以被任何物体穿透，因此与之进行物理互动时都会揭露其幻象的本质。</p>",
           "activities": {
             "Create Illusion": {
-              "name": "Create Illusion",
+              "name": "制造幻象",
               "profiles": {
                 "Image": {
                   "name": "影像"
