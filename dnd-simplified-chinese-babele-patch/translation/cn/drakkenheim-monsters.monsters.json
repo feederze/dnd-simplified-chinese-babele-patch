@@ -849,7 +849,7 @@
         },
         "Epic Boss": {
           "name": "史诗 Boss",
-          "description": "<p>This creature is an Epic Boss, a unique foe designed to pose a solo threat to an entire adventuring party. As such, it has additional game rules that sets it apart from normal creatures:</p><p>[[lookup @name]] always takes their turn on Initiative count 20. On their turn, they can use their movement and interaction as normal. However, they does not take an action or Bonus Action on their turn unless forced to do so by a spell or other effect. Instead, [[lookup @name]] takes one of the following Epic Actions at the end of each player character's turn.</p><p>All this creature's actions are Epic Actions.</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.JIxMSHrqwtBQwOIo]{Claws &amp; Talons}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.YQnK52PJiLktKm1I]{Contaminated Bite}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.HbXwjydKuD75GSJB]{Lamprey Tail}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.dgFVt6xVKSDAilKo]{Aerial Maneuver}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.dPfvfCw6VoZkhnFd]{Cacophony}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.tMjHPhtkIE0KT4eQ]{Wing Blast}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.X0PPVA4jnYvm5llj]{Epic Resistance}</p></li></ul>"
+          "description": "<p>该生物是史诗首领，其旨在对整个冒险队伍构成单独威胁。因其具备独特能力，史诗首领拥有不同于普通怪物的特殊游戏规则：</p><p>[[lookup @name lowercase]]总是在先攻序列20时进行其回合。在其回合内，[[lookup @name lowercase]]能够如常交流和使用移动力。然而，[[lookup @name lowercase]]在其回合内只会在被法术或其他效应强迫执行某个动作或附赠动作时执行之，否则其不会执行动作或附赠动作。作为替代，[[lookup @name lowercase]]会在每个玩家角色的回合结束时选择执行以下史诗动作之一：</p><ul><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.JIxMSHrqwtBQwOIo]{利爪撕扯}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.YQnK52PJiLktKm1I]{污染之咬}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.HbXwjydKuD75GSJB]{鳗尾}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.dgFVt6xVKSDAilKo]{空中机动}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.dPfvfCw6VoZkhnFd]{刺耳音波}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.tMjHPhtkIE0KT4eQ]{翼爆}</p></li><li><p>@UUID[Compendium.drakkenheim-monsters.monsters.Actor.3GyiTiyeMxJ8rXM5.Item.X0PPVA4jnYvm5llj]{史诗抗性}</p></li></ul>"
         },
         "Epic Resistance": {
           "name": "史诗抗性",
@@ -864,7 +864,7 @@
           "description": "<p>[[/attack extended]]。 [[/damage extended]]。 <em>体质豁免检定：</em> DC 17。失败：目标获得一个污染等级。</p>",
           "activities": {
             "Contamination Save": {
-              "name": "Contamination Save"
+              "name": "污染豁免"
             }
           }
         },
@@ -873,7 +873,7 @@
           "description": "<p>[[/attack extended]]。[[/damage extended]]，且目标陷入&amp;reference[bleeding]状态（2d4）。</p>",
           "effects": {
             "Bleeding (2d4)": {
-              "name": "Bleeding (2d4)",
+              "name": "流血（2d4）",
               "description": "<p>你正因开放性伤口而不断失血。</p><ul><li><p><strong>持续伤害：</strong>在每个你的回合结束时，你会损失 [[/r 2d4]] 点生命值。</p></li><li><p><strong>恢复生命值：</strong>如果你恢复任意数量的生命值，此状态结束。</p></li><li><p><strong>急救处理：</strong>你或 5 尺内的另一名生物可以花费一个动作并使用医疗包来为你止血（无需检定），以此结束此状态。</p></li></ul>"
             }
           }
@@ -885,7 +885,7 @@
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.84biormyr0000000 inline]</p>",
       "items": {
         "Pack Tactics": {
-          "name": "Pack Tactics",
+          "name": "集群战术",
           "description": "<p>若[[lookup @name lowercase]]的攻击目标生物周围 5 尺范围内存在有至少一个未失能的盟友，则[[lookup @name lowercase]]对该生物进行的攻击检定具有优势。</p>"
         },
         "Multiattack": {
@@ -901,45 +901,45 @@
           "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
         },
         "Spear": {
-          "name": "Spear",
+          "name": "矛",
           "description": "<p>[[/attack extended]]。[[/damage extended]]，或使用双手发动近战攻击时[[/damage 1d8 + 3 piercing average]] 。</p>"
         },
         "Hide Armor": {
-          "name": "Hide Armor"
+          "name": "兽皮甲"
         }
       }
     },
     "Academy Grandmaster": {
-      "name": "Academy Grandmaster",
+      "name": "学院宗师",
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.195bioethystacad inline]</p>",
       "items": {
         "Multiattack": {
           "name": "多重攻击",
-          "description": "<p>The [[lookup @name lowercase]] makes four [[/item .Sco7Nv2jBlEVTBwq]] attacks.</p>"
+          "description": "<p>[[lookup @name lowercase]] 发动四次 [[/item .Sco7Nv2jBlEVTBwq]] 攻击。</p>"
         },
         "Contingency": {
-          "name": "Contingency",
-          "description": "<p><em>Trigger:</em> The [[lookup @name lowercase]] would become &amp;reference[Incapacitated apply=false] from a spell. <em>Response:</em> The [[lookup @name lowercase]] casts @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi] (level 5 version) targeting itself.</p>",
+          "name": "应急预案",
+          "description": "<p><em>触发：</em>[[lookup @name lowercase]]将因一道法术而陷入&amp;reference[Incapacitated apply=false]状态。<em>响应：</em>[[lookup @name lowercase]]以自身为目标施展@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{解除魔法}（五环版本）。</p>",
           "activities": {
             "6dUjMBVeEC87WKB6": {
-              "condition": "When the mage would become Incapacitated from a spell."
+              "condition": "法师将因一道法术而陷入失能状态。"
             }
           }
         },
         "Prismatic Blast": {
-          "name": "Prismatic Blast",
-          "description": "<p>[[/attack extended]]. [[/damage extended]] ([[lookup @name lowercase]]'s choice).</p>"
+          "name": "虹光爆裂",
+          "description": "<p>[[/attack extended]]。[[/damage extended]]（由[[lookup @name lowercase]]选择）。</p>"
         },
         "Misty Step": {
-          "name": "Misty Step",
-          "description": "<p>The [[lookup @name lowercase]] casts @UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{Misty Step} using Intelligence as their spellcasting ability.</p>"
+          "name": "迷踪步",
+          "description": "<p>[[lookup @name lowercase]]以智力作为施法属性施放@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{迷踪步}。</p>"
         },
         "EciEiCH7TENaKoyp": {
-          "name": "Misty Step",
-          "description": "<p>Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space you can see.</p>",
+          "name": "迷踪步",
+          "description": "<p>你短暂地被银白的雾气所笼罩，传送到至多 30 尺内一个你能看见且未被占据的空间。</p>",
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
@@ -956,41 +956,41 @@
           }
         },
         "Academy Rings": {
-          "name": "Academy Rings",
-          "description": "<p>The [[lookup @name lowercase]] can cast a spell they know without expending a use of it.</p>"
+          "name": "学院戒指",
+          "description": "<p>[[lookup @name lowercase]]可以无需消耗使用次数的以其施法特质释放一个法术。</p>"
         },
         "Detect Magic": {
-          "name": "Detect Magic",
+          "name": "侦测魔法",
           "description": "<p>在法术持续时间内，你感受到距你 30 尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p>",
           "effects": {
             "Detect Magic": {
-              "name": "Detect Magic"
+              "name": "侦测魔法"
             }
           }
         },
         "Find Familiar": {
-          "name": "Find Familiar",
+          "name": "寻获魔宠",
           "description": "<p>你获得一只为你服务的魔宠，魔宠精魄可以采用下述你选择的动物形态之一：<strong>蝙蝠</strong>、<strong>猫</strong>、<strong>青蛙</strong>、<strong>鹰</strong>、<strong>蜥蜴</strong>、<strong>章鱼</strong>、<strong>猫头鹰</strong>、<strong>老鼠</strong>、<strong>渡鸦</strong>、<strong>蜘蛛</strong>、<strong>鼬</strong>，你也可以选择其他挑战等级为 0 的野兽作为魔宠的形态。魔宠出现在施法距离内一处未被占据的空间，虽然有着所选的生物属性数据，但其生物种类为天族，妖精或邪魔（由你选择）而非野兽。你的魔宠可脱离你独立行动，不过它会一直遵循你的命令行事。</p><p><strong>心灵连接。</strong> 你的魔宠距你 100 尺内期间，你可以与其进行心灵交流。此外，你还可以用一个附赠动作将自己的视觉和听觉切换到魔宠的感官，并一持续至你下一回合开始。在此期间，你同时享有该魔宠自身的特殊感官。</p><p>最后，当你施展施法距离为触碰的法术时，你的魔宠可以帮你传递这道触碰法术。此时你的魔宠必须距你 100 尺内，且其必须在你施展这道法术时执行一个反应将其传递。</p><p><strong>战斗。</strong> 魔宠是你和你盟友的盟友。战斗时，它为自己骰先攻，并在自己回合里行动。魔宠无法攻击，但是它能如常执行其他动作。</p><p><strong>魔宠的消失。</strong> 当魔宠生命值降至 0 点时，它会消失。它会在你再次施展此法术后重新出现。你可以用一个魔法动作，暂时解散你的魔宠，将其送入一个口袋位面。你也可以选择永久解散它。暂时解散时，你可以用一个魔法动作使其重新出现于距你 30 尺内任意未占空间中。当魔宠生命值归 0 或消失进入了口袋位面时，它都会将自己穿着或携带的任何物品留在自己曾占据的空间中。</p><p><strong>独一无二。</strong> 你在同一时间不能拥有多于一只魔宠。如果你在已拥有一只魔宠期间施展此法术，作为替代，你会使其采用一个新的符合条件的形态。</p>",
           "activities": {
             "summon": {
               "profiles": {
                 "CR 0 Beast": {
-                  "name": "CR 0 Beast"
+                  "name": "CR 0 野兽"
                 }
               }
             }
           }
         },
         "Light": {
-          "name": "Light",
-          "description": "<p>You touch one Large or smaller object that isn't being worn or carried by someone else. Until the spell ends, the object sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The light can be colored as you like.</p><p>Covering the object with something opaque blocks the light. The spell ends if you cast it again.</p>"
+          "name": "光亮术",
+          "description": "<p>你触碰一个大型或者更小，且未被他人携带或着装的物件。在法术终止前，物件将在其 20 尺半径范围内发出明亮光照，并在其外 20 尺范围发出微光光照。光的颜色由你决定。</p><p>该物件被不透明的东西完全遮盖时，其光照被遮挡。如果你再次施展该法术，则该法术终止。</p>"
         },
         "Mage Armor": {
-          "name": "Mage Armor",
+          "name": "法师护甲",
           "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础AC变为 13 + 它的敏捷调整值。当目标穿上护甲时，此法术将提前终止。</p>",
           "effects": {
             "Mage Armor": {
-              "name": "Mage Armor",
+              "name": "法师护甲",
               "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
             }
           }
@@ -1004,7 +1004,7 @@
           "description": "<p>你在施法距离内创造一个魔法效应。从下述效应中选择一项。如果你多次施展该法术，则可以同时维持至多三个不同的非即时效应。</p><p><strong>感官效应。</strong> 你创造一个立即生效的，无害的感官效应，比如一束火花，一阵风，微弱音乐或古怪的臭味。</p><p><strong>玩火。</strong>你立即点亮或熄灭一根蜡烛、一根火把或一处小篝火。</p><p><strong>清洁或弄脏。</strong> 你立即清洁或弄脏一个不大于 1 立方尺的物件。</p><p><strong>次级感官。</strong> 你使一个不大于 1 立方尺的无生命物质变冷、变暖或对其调味，持续 1 小时。</p><p><strong>魔法印记。</strong> 你在一个物件或一个表面上创造一块色斑，一个小印记，或者一个徽记，持续 1 小时。</p><p><strong>次级造物。</strong> 你创造出一个非魔法小饰品或一张虚幻图像，其大小不能超过你的手掌大小，它会持续存在至下个你的回合结束为止。一个小饰品不能造成伤害，也不值钱。</p>"
         },
         "Cone of Cold": {
-          "name": "Cone of Cold",
+          "name": "寒冰锥",
           "description": "<p>You unleash a blast of cold air. Each creature in a 60-foot Cone originating from you makes a Constitution saving throw, taking 8d8 Cold damage on a failed save or half as much damage on a successful one. A creature killed by this spell becomes a frozen statue until it thaws.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 5.</p>"
         },
         "Dimension Door": {
@@ -1114,7 +1114,7 @@
       },
       "effects": {
         "Mage Armor": {
-          "name": "Mage Armor",
+          "name": "法师护甲",
           "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
         }
       }
@@ -1253,8 +1253,8 @@
       "description": "<p>@Embed[Compendium.drakkenheim-monsters.guide.JournalEntry.drakkenheimRef01.JournalEntryPage.193bioethystacad inline]</p>",
       "items": {
         "Academy Rings": {
-          "name": "Academy Rings",
-          "description": "<p>The [[lookup @name lowercase]] can cast a spell they know without expending a use of it.</p>"
+          "name": "学院戒指",
+          "description": "<p>[[lookup @name lowercase]]可以无需消耗使用次数的以其施法特质释放一个法术。</p>"
         },
         "Prismatic Blast": {
           "name": "Prismatic Blast",
@@ -1293,20 +1293,20 @@
           }
         },
         "Detect Magic": {
-          "name": "Detect Magic",
+          "name": "侦测魔法",
           "description": "<p>在法术持续时间内，你感受到距你 30 尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p>",
           "effects": {
             "Detect Magic": {
-              "name": "Detect Magic"
+              "name": "侦测魔法"
             }
           }
         },
         "Mage Armor": {
-          "name": "Mage Armor",
+          "name": "法师护甲",
           "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础AC变为 13 + 它的敏捷调整值。当目标穿上护甲时，此法术将提前终止。</p>",
           "effects": {
             "Mage Armor": {
-              "name": "Mage Armor",
+              "name": "法师护甲",
               "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
             }
           }
@@ -1341,14 +1341,14 @@
           "description": "<p>Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space you can see.</p>",
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         }
       },
       "effects": {
         "Mage Armor": {
-          "name": "Mage Armor",
+          "name": "法师护甲",
           "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
         }
       }
@@ -1628,11 +1628,11 @@
           "description": "<p>[[/attack extended]]。[[/damage extended]]。</p>"
         },
         "Detect Magic": {
-          "name": "Detect Magic",
+          "name": "侦测魔法",
           "description": "<p>在法术持续时间内，你感受到距你 30 尺内的魔法效应。若你感知到了此类效应，则你可以用一个魔法动作以看到任何带有此魔法的可见生物或物件周围环绕着微弱的灵光，且若此魔法属于被法术创造的效应，则你可分辨出其所属的魔法学派。</p><p>此法术会被 1 尺厚的岩石、泥土或木头，1 寸厚的金属，或薄薄一层铅阻隔。</p>",
           "effects": {
             "Detect Magic": {
-              "name": "Detect Magic"
+              "name": "侦测魔法"
             }
           }
         },
@@ -1666,13 +1666,13 @@
           "description": "<p>你向前喷射出一片火焰。处于 15 尺锥状区域内的生物必须进行一次敏捷豁免。豁免失败者受到 [[/damage 3d6 type=fire]]伤害，豁免成功者受到一半伤害。</p><p>在此锥状区域内的未被着装或携带的易燃物件会开始燃烧。</p><p><strong>升环施法：</strong>你使用的法术位每比一环高一环，此法术的伤害就会提升 1d6。</p>"
         },
         "Find Familiar": {
-          "name": "Find Familiar",
+          "name": "寻获魔宠",
           "description": "<p>你获得一只为你服务的魔宠，魔宠精魄可以采用下述你选择的动物形态之一：<strong>蝙蝠</strong>、<strong>猫</strong>、<strong>青蛙</strong>、<strong>鹰</strong>、<strong>蜥蜴</strong>、<strong>章鱼</strong>、<strong>猫头鹰</strong>、<strong>老鼠</strong>、<strong>渡鸦</strong>、<strong>蜘蛛</strong>、<strong>鼬</strong>，你也可以选择其他挑战等级为 0 的野兽作为魔宠的形态。魔宠出现在施法距离内一处未被占据的空间，虽然有着所选的生物属性数据，但其生物种类为天族，妖精或邪魔（由你选择）而非野兽。你的魔宠可脱离你独立行动，不过它会一直遵循你的命令行事。</p><p><strong>心灵连接。</strong> 你的魔宠距你 100 尺内期间，你可以与其进行心灵交流。此外，你还可以用一个附赠动作将自己的视觉和听觉切换到魔宠的感官，并一持续至你下一回合开始。在此期间，你同时享有该魔宠自身的特殊感官。</p><p>最后，当你施展施法距离为触碰的法术时，你的魔宠可以帮你传递这道触碰法术。此时你的魔宠必须距你 100 尺内，且其必须在你施展这道法术时执行一个反应将其传递。</p><p><strong>战斗。</strong> 魔宠是你和你盟友的盟友。战斗时，它为自己骰先攻，并在自己回合里行动。魔宠无法攻击，但是它能如常执行其他动作。</p><p><strong>魔宠的消失。</strong> 当魔宠生命值降至 0 点时，它会消失。它会在你再次施展此法术后重新出现。你可以用一个魔法动作，暂时解散你的魔宠，将其送入一个口袋位面。你也可以选择永久解散它。暂时解散时，你可以用一个魔法动作使其重新出现于距你 30 尺内任意未占空间中。当魔宠生命值归 0 或消失进入了口袋位面时，它都会将自己穿着或携带的任何物品留在自己曾占据的空间中。</p><p><strong>独一无二。</strong> 你在同一时间不能拥有多于一只魔宠。如果你在已拥有一只魔宠期间施展此法术，作为替代，你会使其采用一个新的符合条件的形态。</p>",
           "activities": {
             "summon": {
               "profiles": {
                 "CR 0 Beast": {
-                  "name": "CR 0 Beast"
+                  "name": "CR 0 野兽"
                 }
               }
             }
@@ -2312,14 +2312,14 @@
         },
         "Light": {
           "name": "Light",
-          "description": "<p>You touch one Large or smaller object that isn't being worn or carried by someone else. Until the spell ends, the object sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The light can be colored as you like.</p><p>Covering the object with something opaque blocks the light. The spell ends if you cast it again.</p>"
+          "description": "<p>你触碰一个大型或者更小，且未被他人携带或着装的物件。在法术终止前，物件将在其 20 尺半径范围内发出明亮光照，并在其外 20 尺范围发出微光光照。光的颜色由你决定。</p><p>该物件被不透明的东西完全遮盖时，其光照被遮挡。如果你再次施展该法术，则该法术终止。</p>"
         },
         "Mage Armor": {
-          "name": "Mage Armor",
+          "name": "法师护甲",
           "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础AC变为 13 + 它的敏捷调整值。当目标穿上护甲时，此法术将提前终止。</p>",
           "effects": {
             "Mage Armor": {
-              "name": "Mage Armor",
+              "name": "法师护甲",
               "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
             }
           }
@@ -2384,7 +2384,7 @@
       },
       "effects": {
         "Mage Armor": {
-          "name": "Mage Armor",
+          "name": "法师护甲",
           "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
         }
       }
@@ -2966,11 +2966,11 @@
           "description": "<p>The [[lookup @name lowercase]] doesn’t have the standard Aberrant Traits other creatures in the Space Between Worlds have.</p>"
         },
         "Mage Armor": {
-          "name": "Mage Armor",
+          "name": "法师护甲",
           "description": "<p>你触碰一个未着装护甲的自愿生物。直至法术终止前，目标的基础AC变为 13 + 它的敏捷调整值。当目标穿上护甲时，此法术将提前终止。</p>",
           "effects": {
             "Mage Armor": {
-              "name": "Mage Armor",
+              "name": "法师护甲",
               "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
             }
           }
@@ -3044,7 +3044,7 @@
       },
       "effects": {
         "Mage Armor": {
-          "name": "Mage Armor",
+          "name": "法师护甲",
           "description": "<p>你的基础 AC 变为 13 + 你的敏捷调整值。着装护甲则该法术提前终止。</p>"
         }
       }
@@ -3092,7 +3092,7 @@
           },
           "effects": {
             "Spell Changes": {
-              "name": "Spell Changes"
+              "name": "法术改动"
             }
           }
         },
@@ -3386,7 +3386,7 @@
         },
         "Light": {
           "name": "Light",
-          "description": "<p>You touch one Large or smaller object that isn't being worn or carried by someone else. Until the spell ends, the object sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The light can be colored as you like.</p><p>Covering the object with something opaque blocks the light. The spell ends if you cast it again.</p>"
+          "description": "<p>你触碰一个大型或者更小，且未被他人携带或着装的物件。在法术终止前，物件将在其 20 尺半径范围内发出明亮光照，并在其外 20 尺范围发出微光光照。光的颜色由你决定。</p><p>该物件被不透明的东西完全遮盖时，其光照被遮挡。如果你再次施展该法术，则该法术终止。</p>"
         },
         "Thaumaturgy": {
           "name": "Thaumaturgy",
