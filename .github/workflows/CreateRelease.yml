@@ -3,10 +3,6 @@ name: Create Release
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - main
-
   schedule:
     - cron: "0 19 * * *"  # 每天北京时间 03:00 运行一次
 
@@ -23,30 +19,69 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: 获取版本
         id: version
         run: |
           version=$(jq -r '.version' dnd-simplified-chinese-babele-patch/module.json)
           echo "version=$version" >> $GITHUB_OUTPUT
 
+      - name: 下载翻译
+        env:
+          PARATRANZ_TOKEN: ${{ secrets.PARATRANZAPITOKEN }}
+        run: |
+          set -euo pipefail
+          curl -L -o "translation.zip" --header "Authorization: $PARATRANZ_TOKEN" "https://paratranz.cn/api/projects/13245/artifacts/download"
+
+          TARGET_DIR="dnd-simplified-chinese-babele-patch/translation/cn"
+          rm -rf "$TARGET_DIR"
+          mkdir -p "$TARGET_DIR"
+
+          unzip -q -j translation.zip -d "$TARGET_DIR"
+          rm -f translation.zip
+
+      - name: 修剪 mapping 字段
+        run: |
+          set -euo pipefail
+          for file in dnd-simplified-chinese-babele-patch/translation/cn/*.json; do
+            filename=$(basename "$file")
+            if [[ "$filename" == "labels.json" || "$filename" == "titles.json" ]]; then
+              continue
+            fi
+            jq 'del(.mapping)' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+          done
+
+      - name: 生成 labels.json / titles.json
+        env:
+          SCRIPT_PATH: tools/generate-light-index.mjs
+          INPUT_DIRS: |
+            dnd-simplified-chinese-babele-patch/translation/cn
+        run: |
+          set -euo pipefail
+          if [ ! -f "$SCRIPT_PATH" ]; then
+            echo "错误: 脚本文件不存在于 $SCRIPT_PATH"
+            exit 1
+          fi
+
+          while IFS= read -r dir; do
+            [ -z "$dir" ] && continue
+            if [ ! -d "$dir" ]; then
+              echo "警告: 找不到输入目录: $dir"
+              continue
+            fi
+            echo "正在处理目录: $dir"
+            node "$SCRIPT_PATH" --input "$dir" --include-folders
+          done <<< "$INPUT_DIRS"
+
       - name: 压缩
         run: |
           if [ ! -f "dnd-simplified-chinese-babele-patch.zip" ]; then
             zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
           fi
-
-      - name: 创建release
-        run: |
-          TAG_NAME="latest"
-          # 如果 latest 已存在，移动到当前 HEAD
-          if git rev-parse "$TAG_NAME" >/dev/null 2>&1; then
-            echo "Tag $TAG_NAME exists, moving it to current HEAD."
-            git tag -f "$TAG_NAME"
-          else
-            echo "Tag $TAG_NAME does not exist, creating it."
-            git tag "$TAG_NAME"
-          fi
-          git push origin "$TAG_NAME" --force
 
       - name: 更新Latest Tag
         uses: softprops/action-gh-release@v2
