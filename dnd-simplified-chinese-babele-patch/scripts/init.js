@@ -1,6 +1,6 @@
 import { registerAddons } from './registerAddons.js';
 import { TranslateBlacklistMenu } from './BlacklistMenu.js';
-import './flowcontrol.js';
+import'./flowcontrol.js'
 export const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
 
 
@@ -17,26 +17,6 @@ Hooks.on('init', () => {
 
     game.settings.register(MODULE_ID, 'namesetting', {
         name: '名称双语转换器开关',
-        hint: '',
-        scope: 'world',
-        config: true,
-        default: true,
-        type: Boolean,
-        requiresReload: true
-    });
-
-    game.settings.register(MODULE_ID, 'ActorItemsetting', {
-        name: '角色物品名称双语转换器开关',
-        hint: '',
-        scope: 'world',
-        config: true,
-        default: false,
-        type: Boolean,
-        requiresReload: true
-    });
-
-    game.settings.register(MODULE_ID, 'ItemNameSetting', {
-        name: '物品名称双语转换器开关',
         hint: '',
         scope: 'world',
         config: true,

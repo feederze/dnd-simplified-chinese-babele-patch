@@ -1,5 +1,5 @@
 export const MODULE_ID = 'dnd-simplified-chinese-babele-patch';
-const DEBUG = true;
+const DEBUG = false;
 
 
 function logDebug(...args) {
@@ -137,23 +137,62 @@ function nameConverter(originalValues, translations, data, translatedCompendium,
     }
 }
 
-// 角色卡物品双语
+// 角色卡物品双语 —— 通过 fromPack (DocumentConverter) 递归翻译内嵌 Item
 function itemsConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
-    const babele = game.babele;
     if (!translations) return originalValues;
-    if (!babele) return originalValues;
     if (!Array.isArray(originalValues)) return originalValues;
 
-    // 打印快照，防止引用问题！！！！！！！
-    const valuesToTranslate = JSON.parse(JSON.stringify(originalValues));
-    let outputs = babele.converters["fromPack"](valuesToTranslate, translations);
+    const babele = game.babele;
+    if (!babele) return originalValues;
 
-    let isActive = game.settings.get(MODULE_ID, 'ActorItemsetting')
-    if (!isActive) {
-        return outputs;
-    }
-    return makeBilingualNames(outputs, originalValues);
+    // 取 Babele 内置的 fromPack 转换器
+    const fromPack = babele.converters?.["fromPack"];
+
+
+    // 手动构建 converter context；必须补 runtime 与 mapping，
+    // 否则 EmbeddedCompendium 找不到 documentMappings / fallback 翻译包
+    const context = {
+        value: foundry.utils.deepClone(originalValues),
+        translation: translations,
+        source: data,
+        field: "items",
+        path: "items",
+        params: {
+            converter: "document",
+            documentType: "Item",
+            cardinality: "many",
+            // 显式传入 Item 的 mapping，让 DocumentConverter 知道要翻译哪些字段
+            mapping: translatedCompendium?.customMapping?.Item ?? babele.documentMappings?.hierarchyFor?.("Item")?.all ?? null,
+        },
+        allTranslations: allTranslations ?? {},
+        contextCompendium: translatedCompendium ?? null,
+        runtime: {
+            // currentCompendium 用于确定当前翻译上下文
+            currentCompendium: translatedCompendium ?? null,
+            // globalPacks 让 fallback 翻译（如 dnd-monster-manual.features）能被检索到
+            globalPacks: babele.mappedCompendiums ?? new foundry.utils.Collection(),
+        },
+        sourceKey: null,
+    };
+
+    let outputs= fromPack.translate(context);
+
+    // fromPack 对 primitive 字段（如 description）依赖 identity extractor 匹配 key，
+    // 而 Item 的 identity 可能用 _id 导致匹配失败；手动补 description
+    outputs = outputs.map((out, idx) => {
+        const t = translations[originalValues[idx]?.name];
+        if (!t?.description) return out;
+        const clone = foundry.utils.deepClone(out);
+        foundry.utils.setProperty(clone, "system.description.value", t.description);
+        return clone;
+    });
+
+    logDebug("[Babele汉化]|角色卡详细-输出", outputs);
+    const isActive = game.settings.get(MODULE_ID, 'namesetting');
+    if (!isActive) return outputs;
+    return outputs;
 }
+
 
 function makeBilingualNames(outputs, originalValues) {
     if (!Array.isArray(outputs) || !Array.isArray(originalValues)) return outputs;
@@ -183,7 +222,7 @@ function makeBilingualNames(outputs, originalValues) {
 
 // 冒险物品双语
 function advancementitemsConverter(originalValues, translations, data, translatedCompendium, allTranslations) {
-    let isActive = game.settings.get(MODULE_ID, 'ItemNameSetting')
+    let isActive = game.settings.get(MODULE_ID, 'namesetting')
     if (!translations) 
     {
         return originalValues ?? data?.name;
