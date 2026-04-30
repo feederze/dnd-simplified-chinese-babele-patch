@@ -24,11 +24,24 @@ jobs:
         with:
           node-version: "20"
 
-      - name: 获取版本
+      - name: 获取并递增版本
         id: version
         run: |
-          version=$(jq -r '.version' dnd-simplified-chinese-babele-patch/module.json)
-          echo "version=$version" >> $GITHUB_OUTPUT
+          release_url="https://github.com/${{ github.repository }}/releases/download/latest/module.json"
+          if curl -sL --fail -o module_release.json "$release_url" 2>/dev/null; then
+            version=$(jq -r '.version' module_release.json)
+            echo "从 release 获取版本: $version"
+          else
+            version=$(jq -r '.version' dnd-simplified-chinese-babele-patch/module.json)
+            echo "从仓库获取版本: $version"
+          fi
+          major=$(echo "$version" | cut -d. -f1)
+          minor=$(echo "$version" | cut -d. -f2)
+          patch=$(echo "$version" | cut -d. -f3)
+          new_patch=$((patch + 1))
+          new_version="$major.$minor.$new_patch"
+          echo "version=$new_version" >> $GITHUB_OUTPUT
+          echo "新版本: $new_version"
 
       - name: 下载翻译
         env:
@@ -77,8 +90,11 @@ jobs:
             node "$SCRIPT_PATH" --input "$dir" --include-folders
           done <<< "$INPUT_DIRS"
 
-      - name: 压缩
+      - name: 更新 module.json 版本并压缩
         run: |
+          set -euo pipefail
+          jq --arg v "${{ steps.version.outputs.version }}" '.version = $v' dnd-simplified-chinese-babele-patch/module.json > dnd-simplified-chinese-babele-patch/module.json.tmp && mv dnd-simplified-chinese-babele-patch/module.json.tmp dnd-simplified-chinese-babele-patch/module.json
+          echo "已更新打包用 module.json 版本为 ${{ steps.version.outputs.version }}"
           if [ ! -f "dnd-simplified-chinese-babele-patch.zip" ]; then
             zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
           fi
@@ -96,5 +112,6 @@ jobs:
           prerelease: false
           files: |
             dnd-simplified-chinese-babele-patch.zip
+            dnd-simplified-chinese-babele-patch/module.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
