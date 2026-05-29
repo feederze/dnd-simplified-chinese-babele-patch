@@ -70,9 +70,7 @@ export class TranslateBlacklistMenu extends BlacklistMenuBase {
     },
   };
 
-  override async _prepareContext(
-    options: PrepareOptions,
-  ): Promise<PrepareContext & { groups: MenuGroup[] }> {
+  override async _prepareContext(options: PrepareOptions): Promise<PrepareContext> {
     const context = await super._prepareContext(options);
     const packStatus = (game.settings.get(MODULE_ID, SETTINGS.PACK_STATUS) ?? {}) as PackStatus;
     const displayRows = formatPackStatusForDisplay(packStatus);
@@ -97,7 +95,9 @@ export class TranslateBlacklistMenu extends BlacklistMenuBase {
       collapsed: false, // 默认展开
       groupChecked: g.items.every((it) => it.checked), // 组选择：全禁用则视为选中
     }));
-    return { ...context, groups };
+    // Cast at the boundary: the framework's render-context type is an open/weak
+    // type, so the extra `groups` we add for the template must be asserted.
+    return { ...context, groups } as unknown as PrepareContext;
   }
 
   override async _onRender(context: RenderContext, options: PrepareOptions): Promise<void> {
