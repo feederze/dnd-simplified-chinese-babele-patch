@@ -33,6 +33,8 @@ export interface ConverterMap {
   dynamicname: BabeleConverter;
   itemsConverter: BabeleConverter;
   advancementitemsConverter: BabeleConverter;
+  /** Index signature so the map is assignable to `Babele.registerConverters`. */
+  [name: string]: BabeleConverter;
 }
 
 /**

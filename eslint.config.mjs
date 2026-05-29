@@ -9,9 +9,9 @@ export default tseslint.config(
       'tools/*.mjs',
     ],
   },
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
+    files: ['**/*.ts', '**/*.mts', '**/*.mjs'],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     languageOptions: {
       globals: {
         game: 'readonly',
@@ -20,6 +20,9 @@ export default tseslint.config(
         foundry: 'readonly',
         ui: 'readonly',
         FormApplication: 'readonly',
+        JQuery: 'readonly',
+        process: 'readonly',
+        console: 'readonly',
       },
     },
     rules: {
