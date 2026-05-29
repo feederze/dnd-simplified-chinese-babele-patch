@@ -103,16 +103,11 @@ export function createConverters({ mergeObject, isBilingual }: ConverterDeps): C
             description: translation.description ?? activity.description,
             hint: translation.hint ?? activity.hint,
             condition: translation.condition ?? activity.condition,
-            // NOTE: this merges the affects-special result onto the top level of
-            // `target` (producing `target.special`) rather than into
-            // `target.affects.special`. Preserved verbatim from the original JS;
-            // see docs/superpowers/specs for the known-quirk note.
-            target: mergeObject(
-              activity.target,
-              mergeObject(activity.target.affects, {
+            target: mergeObject(activity.target, {
+              affects: {
                 special: translation.affectsSpecial ?? activity.target.affects.special,
-              }),
-            ),
+              },
+            }),
             range: mergeObject(activity.range, {
               special: translation.rangeSpecial ?? activity.range.special,
             }),

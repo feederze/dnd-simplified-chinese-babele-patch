@@ -102,11 +102,10 @@ describe('activities converter', () => {
       ctx,
     );
     expect(out.atk.name).toBe('攻击');
-    // NOTE (preserved quirk): the original converter merges the translated
-    // affects-special onto the TOP level of `target` (target.special), not into
-    // target.affects.special. Kept identical to avoid behaviour drift.
-    expect(out.atk.target.special).toBe('特殊');
-    expect(out.atk.target.affects.special).toBe('en-special');
+    // The translated affects-special must land in target.affects.special.
+    expect(out.atk.target.affects.special).toBe('特殊');
+    // and must NOT leak onto the top level of target.
+    expect(out.atk.target.special).toBeUndefined();
     expect(out.atk.range.special).toBe('范围');
   });
 });

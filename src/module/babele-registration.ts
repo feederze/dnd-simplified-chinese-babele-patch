@@ -71,9 +71,6 @@ export function handleBabeleDataLoaded(): void {
   if (game.ready) {
     savePackStatus();
   } else {
-    // NOTE: the original code listens for the (non-existent) 'game.ready' hook
-    // name rather than 'ready'. Preserved verbatim to avoid behaviour drift; the
-    // cast is required precisely because it is not a real hook name.
-    Hooks.once('game.ready' as Hooks.HookName, savePackStatus);
+    Hooks.once('ready', savePackStatus);
   }
 }
