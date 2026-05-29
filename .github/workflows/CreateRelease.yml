@@ -22,7 +22,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
+          cache: "npm"
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 运行测试与类型检查
+        run: |
+          npm run typecheck
+          npm test
+
+      - name: 构建 TypeScript
+        run: npm run build
 
       - name: 获取并递增版本
         id: version

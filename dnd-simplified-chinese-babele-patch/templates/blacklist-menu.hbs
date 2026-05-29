@@ -14,14 +14,14 @@
     .blacklist-menu .items { padding-left: 8px; }
     .blacklist-menu .items[data-collapsed="true"] { display: none; }
     .blacklist-menu label.item-row { display: flex; align-items: center; gap: 6px; margin: 4px 0; }
-    .blacklist-menu .save { margin-top: 10px; }
+    .blacklist-menu .form-footer { margin-top: 10px; }
   </style>
   <p>勾选需要屏蔽的 Compendium 集合（按命名空间分组）。</p>
   <div class="groups">
     {{#each groups}}
       <div class="group">
         <div class="group-header">
-          <button type="button" class="group-toggle" title="收缩/展开">▸</button>
+          <button type="button" class="group-toggle" data-action="toggleGroup" title="收缩/展开">▸</button>
           <h3>{{this.namespace}}</h3>
           <label style="display:flex; align-items:center; gap:6px; margin:0;">
             <input type="checkbox" class="group-check" {{#if this.groupChecked}}checked{{/if}} />
@@ -39,7 +39,7 @@
       </div>
     {{/each}}
   </div>
-  <footer style="margin-top: 10px;">
-    <button type="button" class="save">保存</button>
+  <footer class="form-footer">
+    <button type="submit"><i class="fa-solid fa-floppy-disk"></i> 保存</button>
   </footer>
 </section>

@@ -1,0 +1,161 @@
+name: Create Prerelease
+
+# Publishes a GitHub *prerelease* bundling the real translation, so people can
+# test a branch build without touching the stable `latest` release.
+#
+# Triggered either by:
+#   - pushing a tag `ts-pre.*` (e.g. `ts-pre.1`), or
+#   - pushing/creating a branch under `prerelease/**` (e.g. `prerelease/1`),
+#     which publishes under the derived tag `ts-pre.<suffix>`.
+# The published prerelease uses its own manifest/download URLs.
+
+on:
+  push:
+    tags:
+      - "ts-pre.*"
+    branches:
+      - "prerelease/**"
+  workflow_dispatch:
+
+jobs:
+  create-prerelease:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 运行测试与类型检查
+        run: |
+          npm run typecheck
+          npm test
+
+      - name: 构建 TypeScript
+        run: npm run build
+
+      - name: 确定预发布标签与版本
+        id: meta
+        run: |
+          set -euo pipefail
+          # Tag name drives the prerelease. From a `prerelease/<suffix>` branch we
+          # derive `ts-pre.<suffix>`; from a tag we use it directly; otherwise we
+          # fall back to a timestamp for manual runs.
+          if [[ "${GITHUB_REF_TYPE:-}" == "tag" ]]; then
+            tag="${GITHUB_REF_NAME}"
+          elif [[ "${GITHUB_REF_NAME:-}" == prerelease/* ]]; then
+            tag="ts-pre.${GITHUB_REF_NAME#prerelease/}"
+          else
+            tag="ts-pre.$(date -u +%Y%m%d%H%M%S)"
+          fi
+          base_version=$(jq -r '.version' dnd-simplified-chinese-babele-patch/module.json)
+          # Encode the prerelease tag into the module version for in-app clarity.
+          version="${base_version}-${tag}"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "预发布标签: $tag  版本: $version"
+
+      - name: 下载翻译
+        env:
+          PARATRANZ_TOKEN: ${{ secrets.PARATRANZAPITOKEN }}
+        run: |
+          set -euo pipefail
+          curl -L -o "translation.zip" --header "Authorization: $PARATRANZ_TOKEN" "https://paratranz.cn/api/projects/13245/artifacts/download"
+
+          TARGET_DIR="dnd-simplified-chinese-babele-patch/translation/cn"
+          rm -rf "$TARGET_DIR"
+          mkdir -p "$TARGET_DIR"
+
+          unzip -q -j translation.zip -d "$TARGET_DIR"
+          rm -f translation.zip
+
+      - name: 修剪 mapping 字段
+        run: |
+          set -euo pipefail
+          for file in dnd-simplified-chinese-babele-patch/translation/cn/*.json; do
+            filename=$(basename "$file")
+            if [[ "$filename" == "labels.json" || "$filename" == "titles.json" ]]; then
+              continue
+            fi
+            jq 'del(.mapping)' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+          done
+
+      - name: 生成 labels.json / titles.json
+        env:
+          SCRIPT_PATH: tools/generate-light-index.mjs
+          INPUT_DIRS: |
+            dnd-simplified-chinese-babele-patch/translation/cn
+        run: |
+          set -euo pipefail
+          if [ ! -f "$SCRIPT_PATH" ]; then
+            echo "错误: 脚本文件不存在于 $SCRIPT_PATH"
+            exit 1
+          fi
+
+          while IFS= read -r dir; do
+            [ -z "$dir" ] && continue
+            if [ ! -d "$dir" ]; then
+              echo "警告: 找不到输入目录: $dir"
+              continue
+            fi
+            echo "正在处理目录: $dir"
+            node "$SCRIPT_PATH" --input "$dir" --include-folders
+          done <<< "$INPUT_DIRS"
+
+      - name: 更新 module.json（版本与预发布直链）并压缩
+        env:
+          TAG: ${{ steps.meta.outputs.tag }}
+          VERSION: ${{ steps.meta.outputs.version }}
+        run: |
+          set -euo pipefail
+          base="https://github.com/${{ github.repository }}/releases/download/${TAG}"
+          # Point the bundled manifest/download at this prerelease tag so testers
+          # can install (and the module self-identifies) without hitting `latest`.
+          jq \
+            --arg v "$VERSION" \
+            --arg manifest "$base/module.json" \
+            --arg download "$base/dnd-simplified-chinese-babele-patch.zip" \
+            '.version = $v | .manifest = $manifest | .download = $download' \
+            dnd-simplified-chinese-babele-patch/module.json > dnd-simplified-chinese-babele-patch/module.json.tmp
+          mv dnd-simplified-chinese-babele-patch/module.json.tmp dnd-simplified-chinese-babele-patch/module.json
+          echo "已更新预发布 module.json 版本为 $VERSION"
+          rm -f dnd-simplified-chinese-babele-patch.zip
+          zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
+
+      - name: 发布预发布
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.tag }}
+          name: Prerelease ${{ steps.meta.outputs.version }}
+          body: |
+            ⚠️ 测试用预发布版本（TypeScript 重构分支），包含真实翻译内容。
+            ⚠️ Test prerelease (TypeScript refactor branch), bundled with real translation.
+
+            版本 / Version: ${{ steps.meta.outputs.version }}
+            提交 / Commit: ${{ github.sha }}
+
+            安装清单 / Install manifest:
+            `https://github.com/${{ github.repository }}/releases/download/${{ steps.meta.outputs.tag }}/module.json`
+
+            需先安装 Babele。请勿用于生产世界。
+            Requires Babele. Not intended for production worlds.
+          draft: false
+          prerelease: true
+          files: |
+            dnd-simplified-chinese-babele-patch.zip
+            dnd-simplified-chinese-babele-patch/module.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
