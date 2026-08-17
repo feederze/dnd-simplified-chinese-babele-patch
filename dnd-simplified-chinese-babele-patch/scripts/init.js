@@ -44,10 +44,40 @@ Hooks.on('init', () => {
     });
 
     if (game.settings.get(MODULE_ID, 'autoRegisterBabel')) {
+        registerSelectiveBrowse();
         autoRegisterBabel();
     }
     console.log(`${MODULE_ID} | 初始化完成`);
 });
+
+const TRANSLATION_DIR = `modules/${MODULE_ID}/translation/cn`;
+
+function registerSelectiveBrowse() {
+    if (typeof libWrapper !== 'function') {
+        console.warn(`${MODULE_ID} | libWrapper 不可用，回退为全量加载翻译文件`);
+        return;
+    }
+    try {
+        libWrapper.register(MODULE_ID, 'foundry.applications.apps.FilePicker.browse', async function (wrapped, source, target, ...args) {
+            const result = await wrapped(source, target, ...args);
+            const normalized = String(target ?? '').replace(/\\/g, '/').replace(/\/+$/, '');
+            if (source === 'data' && normalized === TRANSLATION_DIR) {
+                result.files = (result.files ?? []).filter((file) => shouldLoadTranslationFile(file));
+            }
+            return result;
+        }, 'WRAPPER');
+    } catch (error) {
+        console.warn(`${MODULE_ID} | 注册选择性加载失败，回退为全量加载翻译文件`, error);
+    }
+}
+
+function shouldLoadTranslationFile(file) {
+    const baseName = String(file).split('/').pop().split('\\').pop();
+    if (baseName === 'mapping.json' || baseName === 'mappings.json') return true;
+    const prefix = baseName.split('.')[0];
+    if (!prefix) return false;
+    return [...game.packs.keys()].some((key) => key.startsWith(`${prefix}.`));
+}
 
 async function autoRegisterBabel() {
     // console.log("5r汉化被加载哩")
