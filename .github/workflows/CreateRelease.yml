@@ -24,21 +24,35 @@ jobs:
         with:
           node-version: "20"
 
-      - name: 获取并递增版本
+      - name: 获取上一版本并递增
         id: version
         run: |
-          release_url="https://github.com/${{ github.repository }}/releases/download/latest/module.json"
-          if curl -sL --fail -o module_release.json "$release_url" 2>/dev/null; then
+          set -euo pipefail
+          # releases/latest 指向最新一次标记为 Latest 的 release（与 tag 名无关）
+          base_url="https://github.com/${{ github.repository }}/releases/latest/download"
+          if curl -sL --fail -o module_release.json "$base_url/module.json"; then
             version=$(jq -r '.version' module_release.json)
-            echo "从 release 获取版本: $version"
+            echo "从最新 release 获取版本: $version"
           else
             version=$(jq -r '.version' dnd-simplified-chinese-babele-patch/module.json)
             echo "从仓库获取版本: $version"
           fi
+
+          # 下载上一版本的压缩包，用于判断本次是否有变化
+          mkdir -p prev
+          if curl -sL --fail -o prev.zip "$base_url/dnd-simplified-chinese-babele-patch.zip"; then
+            unzip -q prev.zip -d prev
+          fi
+          rm -f prev.zip module_release.json
+
           major=$(echo "$version" | cut -d. -f1)
           minor=$(echo "$version" | cut -d. -f2)
           patch=$(echo "$version" | cut -d. -f3)
           new_patch=$((patch + 1))
+          # 避免与已有 tag 冲突
+          while git rev-parse -q --verify "refs/tags/v$major.$minor.$new_patch" >/dev/null; do
+            new_patch=$((new_patch + 1))
+          done
           new_version="$major.$minor.$new_patch"
           echo "version=$new_version" >> $GITHUB_OUTPUT
           echo "新版本: $new_version"
@@ -90,26 +104,55 @@ jobs:
             node "$SCRIPT_PATH" --input "$dir" --include-folders
           done <<< "$INPUT_DIRS"
 
-      - name: 更新 module.json 版本并压缩
+      - name: 检查是否有变化
+        id: changes
         run: |
           set -euo pipefail
-          jq --arg v "${{ steps.version.outputs.version }}" '.version = $v' dnd-simplified-chinese-babele-patch/module.json > dnd-simplified-chinese-babele-patch/module.json.tmp && mv dnd-simplified-chinese-babele-patch/module.json.tmp dnd-simplified-chinese-babele-patch/module.json
-          echo "已更新打包用 module.json 版本为 ${{ steps.version.outputs.version }}"
-          if [ ! -f "dnd-simplified-chinese-babele-patch.zip" ]; then
-            zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "手动触发，强制发布"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          elif [ ! -d prev/dnd-simplified-chinese-babele-patch ]; then
+            echo "没有找到上一版本，发布新版本"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          elif diff -rq --exclude=module.json prev/dnd-simplified-chinese-babele-patch dnd-simplified-chinese-babele-patch; then
+            echo "与上一版本相比没有变化，跳过发布"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: 更新Latest Tag
+      - name: 更新 module.json 版本并压缩
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+          REPO_URL: https://github.com/${{ github.repository }}
+        run: |
+          set -euo pipefail
+          MODULE_JSON=dnd-simplified-chinese-babele-patch/module.json
+          jq --arg v "$VERSION" \
+             --arg manifest "$REPO_URL/releases/latest/download/module.json" \
+             --arg download "$REPO_URL/releases/download/v$VERSION/dnd-simplified-chinese-babele-patch.zip" \
+             '.version = $v | .manifest = $manifest | .download = $download' \
+             "$MODULE_JSON" > "$MODULE_JSON.tmp" && mv "$MODULE_JSON.tmp" "$MODULE_JSON"
+          echo "已更新打包用 module.json 版本为 $VERSION"
+          rm -f dnd-simplified-chinese-babele-patch.zip
+          zip -r dnd-simplified-chinese-babele-patch.zip dnd-simplified-chinese-babele-patch
+
+      - name: 创建新 Release
+        if: steps.changes.outputs.changed == 'true'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: latest
-          name: Latest release ${{ steps.version.outputs.version }}
+          tag_name: v${{ steps.version.outputs.version }}
+          target_commitish: ${{ github.sha }}
+          name: v${{ steps.version.outputs.version }}
           body: |
             自动构建的翻译更新。
             版本：${{ steps.version.outputs.version }}
-            直链：https://github.com/${{ github.repository }}/releases/download/latest/dnd-simplified-chinese-babele-patch.zip
+            Manifest：https://github.com/${{ github.repository }}/releases/latest/download/module.json
+            直链：https://github.com/${{ github.repository }}/releases/download/v${{ steps.version.outputs.version }}/dnd-simplified-chinese-babele-patch.zip
           draft: false
           prerelease: false
+          make_latest: true
           files: |
             dnd-simplified-chinese-babele-patch.zip
             dnd-simplified-chinese-babele-patch/module.json
