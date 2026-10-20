@@ -6,6 +6,11 @@ on:
   schedule:
     - cron: "0 19 * * *"  # 每天北京时间 03:00 运行一次
 
+# 同一时间只允许一个发布任务运行，避免两个任务算出同一个版本号
+concurrency:
+  group: create-release
+  cancel-in-progress: false
+
 jobs:
   create-release:
     runs-on: ubuntu-latest
@@ -153,6 +158,25 @@ jobs:
           draft: false
           prerelease: false
           make_latest: true
+          files: |
+            dnd-simplified-chinese-babele-patch.zip
+            dnd-simplified-chinese-babele-patch/module.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 旧版本的 manifest 指向名为 latest 的 tag，同步更新它以兼容老用户
+      - name: 同步旧版 latest Release
+        if: steps.changes.outputs.changed == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Legacy latest（当前版本 v${{ steps.version.outputs.version }}）
+          body: |
+            此 release 仅为兼容旧版 manifest 地址而保留，内容与 v${{ steps.version.outputs.version }} 相同。
+            新的 Manifest 地址：https://github.com/${{ github.repository }}/releases/latest/download/module.json
+          draft: false
+          prerelease: false
+          make_latest: false
           files: |
             dnd-simplified-chinese-babele-patch.zip
             dnd-simplified-chinese-babele-patch/module.json
